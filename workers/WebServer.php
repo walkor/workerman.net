@@ -1,6 +1,6 @@
 <?php
 require_once WORKERMAN_ROOT_DIR . 'man/Core/SocketWorker.php';
-require_once WORKERMAN_ROOT_DIR . 'applications/Common/Protocols/Http.php';
+require_once WORKERMAN_ROOT_DIR . 'applications/Common/Protocols/Http/Http.php';
 
 /**
  * 
@@ -39,7 +39,9 @@ class WebServer extends Man\Core\SocketWorker
         // 初始化HttpCache
         App\Common\Protocols\Http\HttpCache::init();
         // 初始化mimeMap
-        self::initMimeTypeMap();
+        $this->initMimeTypeMap();
+        // 初始化ServerRoot
+        $this->initServerRoot();
     }
     
     /**
@@ -49,7 +51,7 @@ class WebServer extends Man\Core\SocketWorker
     public function initMimeTypeMap()
     {
         $mime_file = \Man\Core\Lib\Config::get($this->workerName.'.include');
-        if(!is_file)
+        if(!is_file($mime_file))
         {
             $this->notice("$mime_file mime.type file not fond");
             return;
@@ -62,7 +64,7 @@ class WebServer extends Man\Core\SocketWorker
         }
         foreach($items as $content)
         {
-            if(preg_match("/\s*(\S)+\s+(\S)+/", $content, $match))
+            if(preg_match("/\s*(\S+)\s+(\S.+)/", $content, $match))
             {
                 $mime_type = $match[1];
                 $extension_var = $match[2];
@@ -79,7 +81,7 @@ class WebServer extends Man\Core\SocketWorker
      * 初始化ServerRoot
      * @return void
      */
-    public static function initServerRoot()
+    public  function initServerRoot()
     {
         self::$serverRoot = \Man\Core\Lib\Config::get($this->workerName.'.root');
     }
@@ -117,7 +119,7 @@ class WebServer extends Man\Core\SocketWorker
         $extension = pathinfo($file, PATHINFO_EXTENSION);
         if($extension == '')
         {
-            $dir_name = $file;
+            $dir_name = $file == '/' ? '' : $file;
         }
         else 
         {
@@ -133,6 +135,7 @@ class WebServer extends Man\Core\SocketWorker
         {
             // 从定向到index.php
             $file = $root_dir.'/'.$dir_name.'/index.php';
+            $extension = 'php';
         }
         // 请求的文件存在
         if(is_file($file))
