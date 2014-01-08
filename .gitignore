@@ -1,0 +1,5 @@
+logs
+.buildpath
+.project
+.settings
+applications/Wordpress/wp-config.php
