@@ -12,6 +12,24 @@ require_once WORKERMAN_ROOT_DIR . 'applications/Common/Protocols/Http/Http.php';
 class WebServer extends Man\Core\SocketWorker
 {
     /**
+     * 缓存最多多少静态文件
+     * @var integer
+     */
+    const MAX_CACHE_FILE_COUNT = 100;
+    
+    /**
+     * 大于这个值则文件不缓存
+     * @var integer
+     */
+    const MAX_CACHE_FILE_SIZE = 300000;
+    
+    /**
+     * 缓存静态文件内容
+     * @var array
+     */
+    public static $fileCache = array();
+    
+    /**
      * 默认mime类型
      * @var string
      */
@@ -92,7 +110,7 @@ class WebServer extends Man\Core\SocketWorker
      */
     public function dealInput($recv_str)
     {
-        return App\Common\Protocols\Http\http_input($recv_str); 
+        return App\Common\Protocols\Http\http_input($recv_str);
     }
 
     /**
@@ -103,10 +121,7 @@ class WebServer extends Man\Core\SocketWorker
     {
          // http请求处理开始。解析http协议，生成$_POST $_GET $_COOKIE
         App\Common\Protocols\Http\http_start($recv_str);
-        // 开启session
-        App\Common\Protocols\Http\session_start();
-        // 缓冲输出
-        ob_start();
+       
         // 请求的文件
         $file = $_SERVER['REQUEST_URI'];
         $pos = strpos($file, '?');
@@ -131,18 +146,30 @@ class WebServer extends Man\Core\SocketWorker
         
         // 得到文件真实路径
         $file = "$root_dir/$file";
+        
+        // 命中缓存，直接返回
+        if(isset(self::$fileCache[$file]) )
+        {
+                $file_content = self::$fileCache[$file];
+                // 发送给客户端
+                return $this->sendToClient(App\Common\Protocols\Http\http_end($file_content));
+        }
+        
         if(!is_file($file))
         {
             // 从定向到index.php
             $file = $root_dir.'/'.$dir_name.'/index.php';
             $extension = 'php';
         }
+        
         // 请求的文件存在
         if(is_file($file))
         {
             // 如果请求的是php文件
             if($extension == 'php')
             {
+                // 缓冲输出
+                ob_start();
                 // 载入php文件
                 try 
                 {
@@ -164,28 +191,75 @@ class WebServer extends Man\Core\SocketWorker
                         echo $e;
                     }
                 }
+                $content = ob_get_clean();
+                $buffer = App\Common\Protocols\Http\http_end($content);
+                $this->sendToClient($buffer);
+                // 执行php每执行一次就退出(原因是有的业务使用了require_once类似的语句，不能重复加载业务逻辑)
+                return $this->stop();
             }
+            
             // 请求的是静态资源文件
+            if(isset(self::$mimeTypeMap[$extension]))
+            {
+                App\Common\Protocols\Http\header('Content-Type: '. self::$mimeTypeMap[$extension]);
+            }
+            else 
+            {
+                App\Common\Protocols\Http\header('Content-Type: '. self::$defaultMimeType);
+            }
+            
+            // 获取文件信息
+            $info = stat($file);
+            
+            $modified_time = $info ? date('D, d M Y H:i:s', $info['mtime']) . ' GMT' : '';
+            
+            // 如果有$_SERVER['HTTP_IF_MODIFIED_SINCE']
+            if(!empty($_SERVER['HTTP_IF_MODIFIED_SINCE']) && $info)
+            {
+                // 文件没有更改则直接304
+                if($modified_time === $_SERVER['HTTP_IF_MODIFIED_SINCE'])
+                {
+                    // 304
+                    App\Common\Protocols\Http\header('HTTP/1.1 304 Not Modified');
+                    // 发送给客户端
+                    return $this->sendToClient(App\Common\Protocols\Http\http_end(''));
+                }
+            }
+            
+            if(!isset(self::$fileCache[$file]) )
+            {
+                $file_content = file_get_contents($file);
+                // 缓存文件
+                if($info['size'] < self::MAX_CACHE_FILE_SIZE && $file_content)
+                {
+                    self::$fileCache[$file] = $file_content;
+                    // 缓存满了删除一个文件
+                    if(count(self::$fileCache) > self::MAX_CACHE_FILE_COUNT)
+                    {
+                        // 删除第一个缓存的文件
+                        reset(self::$fileCache);
+                        unset(self::$fileCache[key(self::$fileCache)]);
+                    }
+                }
+            }
             else
             {
-                if(isset(self::$mimeTypeMap[$extension]))
-                {
-                    App\Common\Protocols\Http\header('Content-Type: '. self::$mimeTypeMap[$extension]);
-                }
-                else 
-                {
-                    App\Common\Protocols\Http\header('Content-Type: '. self::$defaultMimeType);
-                }
-                // 发送文件
-                readfile($file);
+                $file_content = self::$fileCache[$file];
             }
+            
+            if($modified_time)
+            {
+                App\Common\Protocols\Http\header('Last-Modified: $modified_time');
+            }
+            
+            // 发送给客户端
+           return $this->sendToClient(App\Common\Protocols\Http\http_end($file_content));
         }
         else 
         {
-            echo $dir_name.'/index.php miss';
+            // 404
+            App\Common\Protocols\Http\header("HTTP/1.1 404 Not Found");
+            return $this->sendToClient(App\Common\Protocols\Http\http_end(''));
         }
-        $content = ob_get_clean();
-        $buffer = App\Common\Protocols\Http\http_end($content);
-        $this->sendToClient($buffer);
     }
 }
