@@ -249,7 +249,7 @@ class WebServer extends Man\Core\SocketWorker
             
             if($modified_time)
             {
-                App\Common\Protocols\Http\header('Last-Modified: $modified_time');
+                App\Common\Protocols\Http\header("Last-Modified: $modified_time");
             }
             
             // 发送给客户端
