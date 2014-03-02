@@ -123,44 +123,34 @@ class WebServer extends Man\Core\SocketWorker
         App\Common\Protocols\Http\http_start($recv_str);
        
         // 请求的文件
-        $file = $_SERVER['REQUEST_URI'];
-        $pos = strpos($file, '?');
-        if($pos !== false)
+        $url_info = parse_url($_SERVER['REQUEST_URI']);
+        if(!$url_info)
         {
-            // 去掉文件名后面的querystring
-            $file = substr($file, 0, $pos);
+            App\Common\Protocols\Http\header('HTTP1.1/ 400 Bad Request');
+            return $this->sendToClient(App\Common\Protocols\Http\http_end(''));
         }
         
-        $extension = pathinfo($file, PATHINFO_EXTENSION);
+        $path = $url_info['path'];
+        
+        $path_info = pathinfo($path);
+        $extension = isset($path_info['extension']) ? $path_info['extension'] : '' ;
         if($extension == '')
         {
-            $dir_name = $file == '/' ? '' : $file;
+            $path = ($len = strlen($path)) && $path[$len -1] == '/' ? $path.'index.php' : $path . '/index.php';
+            $extension = 'php';
         }
-        else 
-        {
-            $dir_name = pathinfo($file, PATHINFO_DIRNAME);
-        }
-        
-        // rootDir
-        $root_dir = isset(self::$serverRoot[$_SERVER['HTTP_HOST']]) ? self::$serverRoot[$_SERVER['HTTP_HOST']] : current(self::$serverRoot);
-        
-        // 得到文件真实路径
-        $file = "$root_dir/$file";
         
         // 命中缓存，直接返回
-        if(isset(self::$fileCache[$file]) )
+        if(isset(self::$fileCache[$path]) )
         {
-                $file_content = self::$fileCache[$file];
+                $file_content = self::$fileCache[$path];
                 // 发送给客户端
                 return $this->sendToClient(App\Common\Protocols\Http\http_end($file_content));
         }
         
-        if(!is_file($file))
-        {
-            // 从定向到index.php
-            $file = $root_dir.'/'.$dir_name.'/index.php';
-            $extension = 'php';
-        }
+        $root_dir = isset(self::$serverRoot[$_SERVER['HTTP_HOST']]) ? self::$serverRoot[$_SERVER['HTTP_HOST']] : current(self::$serverRoot);
+        
+        $file = "$root_dir/$path";
         
         // 请求的文件存在
         if(is_file($file))
@@ -168,14 +158,14 @@ class WebServer extends Man\Core\SocketWorker
             // 如果请求的是php文件
             if($extension == 'php')
             {
+                ini_set('display_errors', 'off');
                 // 缓冲输出
                 ob_start();
                 // 载入php文件
                 try 
                 {
-                    global $action,$active_signup,$admin_body_class,$admin_page_hooks,$akismet_api_host,$akismet_api_port,$akismet_caught,$akismet_last_comment,$akismet_nonce,$all_links,$allowedentitynames,$allowedposttags,$allowedtags,$authordata,$auth_secure_cookie,$avail_post_mime_types,$avail_post_stati,$blog_id,$blogname,$blog_title,$cat,$cat_id,$charset_collate,$comment,$comment_alt,$comment_depth,$comments,$comment_status,$comment_thread_alt,$comment_type,$compress_css,$compress_scripts,$concatenate_scripts,$content_width,$cookie_domain,$currentcat,$currentday,$currentmonth,$current_screen,$current_site,$current_user,$custom_background,$custom_image_header,$default_menu_order,$descriptions,$domain,$editor_styles,$error,$errors,$EZSQL_ERROR,$feeds,$GETID3_ERRORARRAY,$hook_suffix,$HTTP_RAW_POST_DATA,$id,$in_comment_loop,$interim_login,$is_apache,$is_chrome,$is_gecko,$is_IE,$is_IIS,$is_iis7,$is_macIE,$is_opera,$is_safari,$is_winIE,$l10n,$link,$link_id,$_links_add_base,$_links_add_target,$locale,$locked_post_status,$lost,$m,$man,$map,$mcLogger,$menu,$_menu_item_sort_prop,$menu_order,$merged_filters,$mode,$monthnum,$more,$multipage,$names,$_nav_menu_placeholder,$nav_menu_selected_id,$_new_bundled_files,$new_whitelist_options,$numpages,$_old_files,$one_theme_location_no_menus,$opml,$order,$orderby,$overridden_cpage,$page,$paged,$pagenow,$pagenow,$pages,$parent_file,$_parent_pages,$pass_allowed_html,$pass_allowed_protocols,$path,$per_page,$phpmailer,$PHP_SELF,$plugin_page,$plugins,$post,$post_default_category,$post_default_title,$post_id,$post_ID,$post_mime_types,$posts,$post_type,$post_type_object,$preview,$previouscat,$previousday,$previousweekday,$redir_tab,$_registered_pages,$required_mysql_version,$required_php_version,$rnd_value,$role,$s,$search,$self,$shortcode_tags,$show_admin_bar,$sidebars_widgets,$sites,$status,$submenu,$submenu_file,$super_admins,$tab,$table_prefix,$tabs,$tag,$targets,$tax,$taxnow,$taxonomy,$term,$text_direction,$theme_field_defaults,$themes_allowedtags,$timeend,$timestart,$tinymce_version,$title,$totals,$type,$typenow,$updated_timestamp,$_updated_user_settings,$upgrading,$urls,$userdata,$user_email,$user_id,$user_ID,$user_identity,$user_level,$user_login,$usersearch,$user_url,$var,$whitelist_options,$withcomments,$wp,$wp_actions,$_wp_additional_image_sizes,$wp_admin_bar,$_wp_admin_css_colors,$wp_cockneyreplace,$wpcom_api_key,$wpcommentsjavascript,$wpcommentspopupfile,$wp_current_db_version,$wp_current_filter,$wp_customize,$wp_dashboard_control_callbacks,$wpdb,$wp_db_version,$_wp_default_headers,$_wp_deprecated_widgets_callbacks,$wp_did_header,$wp_embed,$wp_file_descriptions,$wp_filesystem,$wp_filter,$wp_hasher,$wp_header_to_desc,$wp_importers,$wp_json,$_wp_last_object_menu,$_wp_last_utility_menu,$wp_list_table,$wp_locale,$wp_local_package,$_wp_menu_nopriv,$wp_meta_boxes,$_wp_nav_menu_max_depth,$wp_object_cache,$wp_post_statuses,$_wp_post_type_features,$wp_post_types,$wp_queries,$wp_query,$_wp_real_parent_file,$_wp_registered_nav_menus,$wp_registered_sidebars,$wp_registered_widget_controls,$wp_registered_widgets,$wp_registered_widget_updates,$wp_rewrite,$wp_rich_edit,$wp_rich_edit_exists,$wp_roles,$wp_scripts,$wp_settings_errors,$wp_settings_fields,$wp_settings_sections,$_wp_sidebars_widgets,$wp_smiliessearch,$wpsmiliestrans,$wp_styles,$_wp_submenu_nopriv,$_wp_suspend_cache_invalidation,$wp_taxonomies,$wp_theme_directories,$_wp_theme_features,$wp_themes,$wp_the_query,$wp_user_roles,$_wp_using_ext_object_cache,$wp_version,$wp_version,$wp_widget_factory,$wp_xmlrpc_server,$year;
                     // $_SERVER变量
-                    $_SERVER['SCRIPT_NAME'] = str_replace($root_dir, '', $file);
+                    $_SERVER['SCRIPT_NAME'] = $path;
                     $_SERVER['REMOTE_ADDR'] = $this->getRemoteIp();
                     $_SERVER['REMOTE_PORT'] = $this->getRemotePort();
                     $_SERVER['SERVER_ADDR'] = $this->getLocalIp();
@@ -192,10 +182,12 @@ class WebServer extends Man\Core\SocketWorker
                     }
                 }
                 $content = ob_get_clean();
+                ini_set('display_errors', 'on');
                 $buffer = App\Common\Protocols\Http\http_end($content);
                 $this->sendToClient($buffer);
                 // 执行php每执行一次就退出(原因是有的业务使用了require_once类似的语句，不能重复加载业务逻辑)
-                return $this->stop();
+                //return $this->stop();
+                return ;
             }
             
             // 请求的是静态资源文件
@@ -259,7 +251,7 @@ class WebServer extends Man\Core\SocketWorker
         {
             // 404
             App\Common\Protocols\Http\header("HTTP/1.1 404 Not Found");
-            return $this->sendToClient(App\Common\Protocols\Http\http_end(''));
+            return $this->sendToClient(App\Common\Protocols\Http\http_end('<html><head><title>页面不存在</title></head><body><h3>WorkerMan提醒你，文件不存在</h3></body></html>'));
         }
     }
 }

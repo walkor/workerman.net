@@ -377,7 +377,7 @@ function session_write_close()
     {
         return \session_write_close();
     }
-    if(HttpCache::$instance->sessionStarted && !empty($_SESSION))
+    if(!empty(HttpCache::$instance->sessionStarted) && !empty($_SESSION))
     {
        $session_str = session_encode();
        if($session_str && HttpCache::$instance->sessionFile)
