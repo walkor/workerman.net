@@ -60,8 +60,8 @@
 										Workerman-ThriftRpc
 									</h4>
 									<p>
-										<strong>Workerman作为进程管理器，并结合Thrift的一款Rpc远程调用框架。</strong>
-										内置统计监控模块，支持平滑重启，支持故障ip自动踢出及恢复等诸多特性。
+										<strong>Workerman结合Thrift</strong>
+										内置统计监控模块，支持平滑重启，支持故障ip自动踢出。
 									</p>
 								</div>
 							</div>
@@ -114,10 +114,7 @@
 								高性能
 							</h3>
 							<p>
-								基于libevent事件轮询库，支持每秒4W的吞吐量，支持几万的并发连接。
-							</p>
-							<p>
-								<a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a>
+								支持多进程，支持TCP/UDP，基于高性能的libevent事件轮询库，支持每秒4W的吞吐量，支持几万的并发连接。
 							</p>
 						</div>
 					</div>
@@ -130,10 +127,7 @@
 								高可用
 							</h3>
 							<p>
-								Wokerman已经被很多公司证实其高可用性，这些公司不乏日营业额过亿的电子商务公司用于订单系统的开发，以及知名网游公司用于游戏后台的开发。
-							</p>
-							<p>
-								<a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a>
+								已被多家公司证实其高可用性，这些公司不乏日营业额过亿的电子商务公司用于订单系统的开发，以及知名网游公司用于游戏后台的开发。
 							</p>
 						</div>
 					</div>
@@ -147,10 +141,6 @@
 							</h3>
 							<p>
 								Workerman已经有很多成熟的网络应用，只要你会PHP，你就可以在这些应用框架的基础上，快速的开发出自己的Socket应用服务程序。
-								使用Workerman，你无需安装PHP-FPM、Apache或者Nginx，只要你安装了PHP就可以直接运行。
-							</p>
-							<p>
-								<a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a>
 							</p>
 						</div>
 					</div>
@@ -167,7 +157,7 @@
 							<h4 class="media-heading">
 								Workerman-ThriftRpc
 							</h4>
-							 Workerman和Thrift框架相结合开发的一款Rpc框架，目的是解决异构系统与PHP通信的问题。使用Thrift你可以方便的用各种语言调用PHP提供的服务了。
+							 Workerman和Thrift框架相结合，目的是解决异构系统与PHP通信的问题，使你的服务更方便的被其它语言调用。
 						</div>
 					</div>
 					<div class="media">
@@ -176,7 +166,7 @@
 							<h4 class="media-heading">
 								Workerman-JsonRpc
 							</h4>
-							 使用Workerman以Json作为协议的一个轻量级高性能的Rpc框架。JsonRpc的目标是简单、快速。开发者只要写好需要的类和方法，使用提供的客户端便可以方便的远程调用。
+							JsonRpc的目标是简单、快速。开发者只要写好需要的类和方法，使用现成的客户端便可以方便的远程调用。
 						</div>
 					</div>
 					<div class="media">
@@ -185,8 +175,7 @@
 							<h4 class="media-heading">
 								Workerman-Statistic
 							</h4>
-							Workerman-Statistic是一款分布式统计监控系统，纯PHP开发、无需安装Mysql、Nginx、Apache等软件，只要你安装了PHP就能直接运行。Workerman-Statistic目的是用来监控系统关键节点运行情况，包括调用量、耗时、成功率、错误日志。
-							最后以曲线图和表格的形式将这些数据展示出来。
+							一款分布式统计监控系统，纯PHP开发、无需安装Mysql、Nginx、Apache等软件，只要你安装了PHP就行，需要Linux系统哦。
 						</div>
 					</div>
 				</div>
