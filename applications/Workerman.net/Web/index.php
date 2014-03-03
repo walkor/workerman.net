@@ -1,7 +1,7 @@
 <?php
 require_once WORKERMAN_ROOT_DIR .'applications/Workerman.net/Web/_init.php';
 
-$url_info = parse_url(REQUEST_URI);
+$url_info = parse_url($_SERVER['REQUEST_URI']);
 $path = isset($url_info['path']) ? $url_info['path'] : 'workerman';
 $func = str_replace('/', '', $path);
 if(empty($func))
