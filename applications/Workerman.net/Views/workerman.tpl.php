@@ -42,7 +42,7 @@
 				
 			</nav>
 			<div class="row clearfix">
-				<div class="col-md-7column">
+				<div class="col-md-7 column">
 					<h2>
 						什么是Workerman
 					</h2>
@@ -55,14 +55,18 @@
 					</p>
 				</div>
 				<div class="col-md-5 column">
-				<h3>Workerman支持的特性</h3>
-					<ol>
-						<li>使用PHP开发，多进程支持</li>
-						<li>支持TCP/UDP，支持TCP长连接</li>
-						<li>使用libevent事件轮询库，支持高并发</li>
-						<li>支持服务器平滑重启</li>
-						<li>支持文件更新检测</li>
-				</ol>
+					<div class="thumbnail">
+						<div class="caption">
+							<h3>Workerman支持的特性</h3>
+							<ol>
+								<li>使用PHP开发，多进程支持</li>
+								<li>支持TCP/UDP，支持TCP长连接</li>
+								<li>使用libevent事件轮询库，支持高并发</li>
+								<li>支持服务器平滑重启</li>
+								<li>支持文件更新检测</li>
+							</ol>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="row clearfix">
