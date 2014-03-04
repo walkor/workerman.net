@@ -1,4 +1,8 @@
-.slide
+strong
 {
-	z-index:-1000;
+	color:#1372A2;
+}
+
+html {
+  font-family: Microsoft YaHei, SimSun, sans-serif;
 }
