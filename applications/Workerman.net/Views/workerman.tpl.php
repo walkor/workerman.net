@@ -42,19 +42,20 @@
 				
 			</nav>
 			<div class="row clearfix">
-				<div class="col-md-6 column">
+				<div class="col-md-7column">
 					<h2>
 						什么是Workerman
 					</h2>
 					<p>
-						Workerman是一个高性能的PHP socket 服务器框架。已经被多家公司用于Rpc服务器、聊天室服务器、网络游戏服务器、手机游戏等后台开发。
+						Workerman是一个<strong>高性能</strong>的<strong>PHP socket 服务器框架</strong>。已经被多家公司用于Rpc服务器、聊天室服务器、网络游戏服务器、手机游戏等后台开发。
 						只要会PHP，你就可以基于Workerman轻而易举的开发出你想要的网络应用，不必再为底层Socket开发而烦恼。
 					</p>
 					<p>
 						<a class="btn" href="#">查看更多 »</a>
 					</p>
 				</div>
-				<div class="col-md-6 column">
+				<div class="col-md-5 column">
+				<h3>Workerman支持的特性</h3>
 					<ol>
 						<li>使用PHP开发，多进程支持</li>
 						<li>支持TCP/UDP，支持TCP长连接</li>
