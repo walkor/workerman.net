@@ -71,7 +71,7 @@
 			</div>
 			<div class="row clearfix">
 				<div class="col-md-12 column">
-					<nav role="navigation" class="navbar navbar-default text-center" >The <b>Workerman</b> Framework</nav>
+					<nav role="navigation" class="navbar navbar-default text-center the-workerman-framework" >The <b>Workerman</b> Framework</nav>
 					<div class="div-shadow3"></div><div class="div-shadow2"></div><div class="div-shadow1"></div>
 				</div>
 			</div>
