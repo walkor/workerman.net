@@ -3,7 +3,7 @@
 		<div class="col-md-12 column">
 			<nav class="navbar navbar-default" role="navigation">
 				<div class="navbar-header">
-					Workerman
+					<img src="/img/the-workerman-logo.png" />
 				</div>
 				
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
