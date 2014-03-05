@@ -3,7 +3,7 @@
 		<div class="col-md-12 column">
 			<nav class="navbar navbar-default" role="navigation">
 				<div class="navbar-header">
-					 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only"></span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> <a class="navbar-brand" href="#">Brand</a>
+					Workerman
 				</div>
 				
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -71,7 +71,8 @@
 			</div>
 			<div class="row clearfix">
 				<div class="col-md-12 column">
-					<img src="/img/The-Workerman-framwork.png" />
+					<nav role="navigation" class="navbar navbar-default text-center" >The <b>Workerman</b> Framework</nav>
+					<div class="div-shadow3"></div><div class="div-shadow2"></div><div class="div-shadow1"></div>
 				</div>
 			</div>
 			<div class="row">

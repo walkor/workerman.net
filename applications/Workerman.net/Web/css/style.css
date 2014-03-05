@@ -19,4 +19,19 @@ h6,
 .h6 {
   font-family: "Microsoft YaHei", SimSun, sans-serif;
 }
-
+.the-workerman-framework
+{
+	border-color:#1372A2;background-color:#1372A2;color:white;font-size:32px;margin-bottom:0px;
+}
+.div-shadow3
+{
+	border-top:2px solid #B1B1B1;border-bottom:1px solid #C1C1C1;margin:0 5px;
+}
+.div-shadow2
+{
+    border-top:1px solid #D1D1D1;border-bottom:1px solid #E1E1E1;margin:0 6px;
+}
+.div-shadow1
+{
+    border-top:1px solid #F1F1F1;border-bottom:1px solid #F8F8F8;margin:0 7px;
+}
