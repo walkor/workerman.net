@@ -39,3 +39,27 @@ h3 img
 {
 	margin-right:8px;
 }
+
+f14
+{
+	font-size:14px;
+}
+.navbar-default .navbar-nav > li > a 
+{
+    color: #1E455E;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus
+{
+    background-color: #428BCA;
+    color: #FFFFFF;
+}
+
+.navbar-default .navbar-nav > li > a:hover, 
+.navbar-default .navbar-nav > li > a:focus 
+{
+    background-color: #428BCA;
+    color: #FFFFFF;
+}
