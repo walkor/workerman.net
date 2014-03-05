@@ -5,28 +5,13 @@
 				<div class="navbar-header">
 					<img src="/img/the-workerman-logo.png" />
 				</div>
-				
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
 						<li class="active">
 							<a href="/">首页</a>
 						</li>
-						<li class="dropdown">
-							 <a href="#" class="dropdown-toggle" data-toggle="dropdown">相关应用<strong class="caret"></strong></a>
-							<ul class="dropdown-menu">
-								<li>
-									<a href="/workerman_thriftrpc">Thrift Rpc</a>
-								</li>
-								<li>
-									<a href="/workerman_jsonrpc">Json Rpc</a>
-								</li>
-								<li>
-									<a href="/workerman_statistics">分布式监控系统</a>
-								</li>
-								<li>
-									<a href="#">聊天室</a>
-								</li>
-							</ul>
+						<li>
+							 <a href="/applications" >相关应用</a>
 						</li>
 						<li>
 							<a href="/download">下载</a>

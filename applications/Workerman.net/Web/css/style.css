@@ -33,7 +33,7 @@ h6,
 }
 .div-shadow1
 {
-    border-top:1px solid #F1F1F1;border-bottom:1px solid #F8F8F8;margin:0 7px;
+    border-top:1px solid #F1F1F1;border-bottom:1px solid #F8F8F8;margin:0 7px 5px;
 }
 h3 img
 {
@@ -62,4 +62,9 @@ f14
 {
     background-color: #428BCA;
     color: #FFFFFF;
+}
+
+.navbar-header img
+{
+	margin-right:8px;
 }
