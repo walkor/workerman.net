@@ -151,6 +151,11 @@
 					</ul>
 				</div>
 			</div>
+			<div class="row clearfix">
+				<div class="col-md-12 column">
+					<address> <b>www.workerman.net</b><br /> worker-man@qq.com<br /> 中国四川成都<br /> QQ:2202055656<br/>蜀ICP备13029294号</address>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
