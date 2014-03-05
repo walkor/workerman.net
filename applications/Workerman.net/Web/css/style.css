@@ -68,3 +68,11 @@ f14
 {
 	margin-right:8px;
 }
+
+.layout-main-footer {
+    background-color:#202020;
+    color: #CCCCCC;
+    font-size: 0.9em;
+    margin: 2em 0 0;
+    padding: 20px 0;
+}
