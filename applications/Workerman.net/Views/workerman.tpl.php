@@ -119,12 +119,12 @@
 						</div>
 					</div>
 					<div class="media">
-						 <a href="#" class="pull-left"><img src="http://lorempixel.com/300/167/" class="media-object" alt='' /></a>
+						 <a href="#" class="pull-left"><img src="/img/workerman-chat.png" class="media-object" alt='' /></a>
 						<div class="media-body">
 							<h4 class="media-heading">
 								Workerman-chat
 							</h4>
-							JsonRpc的目标是简单、快速。开发者只要写好需要的类和方法，使用现成的客户端便可以方便的远程调用。
+							一个可扩展的基于Websocket协议的聊天室，服务端采用workerman作为Socket服务器框架，客户端支持多浏览器统一接口，支持浏览器原生Websocket同时支持Flash实现的Websocket。
 						</div>
 					</div>
 					<div class="media">
@@ -133,7 +133,7 @@
 							<h4 class="media-heading">
 								Workerman-Statistic
 							</h4>
-							一款分布式统计监控系统，纯PHP开发、无需安装Mysql、Nginx、Apache等软件，只要你安装了PHP就行，需要Linux系统哦。
+							基于workerman socket框架开发的一款分布式统计监控系统，纯PHP开发、无需安装Mysql、Nginx、Apache等软件，只要你安装了PHP就行，需要Linux系统哦。
 						</div>
 					</div>
 				</div>
