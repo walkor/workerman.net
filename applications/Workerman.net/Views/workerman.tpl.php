@@ -105,12 +105,12 @@
 				</div>
 			</div>
 			<div class="row clearfix">
-				<div class="col-md-6 column">
+				<div class="col-md-7 column">
 					<h3>
-						基于Workerman开发的应用程序
+						应用程序
 					</h3>
 					<div class="media">
-						 <a href="#" class="pull-left"><img src="http://lorempixel.com/64/64/" class="media-object" alt='' /></a>
+						 <a href="#" class="pull-left"><img src="/img/workerman-thrift.png" class="media-object" alt='' /></a>
 						<div class="media-body">
 							<h4 class="media-heading">
 								Workerman-ThriftRpc
@@ -119,16 +119,16 @@
 						</div>
 					</div>
 					<div class="media">
-						 <a href="#" class="pull-left"><img src="http://lorempixel.com/64/64/" class="media-object" alt='' /></a>
+						 <a href="#" class="pull-left"><img src="http://lorempixel.com/300/167/" class="media-object" alt='' /></a>
 						<div class="media-body">
 							<h4 class="media-heading">
-								Workerman-JsonRpc
+								Workerman-chat
 							</h4>
 							JsonRpc的目标是简单、快速。开发者只要写好需要的类和方法，使用现成的客户端便可以方便的远程调用。
 						</div>
 					</div>
 					<div class="media">
-						 <a href="#" class="pull-left"><img src="http://lorempixel.com/64/64/" class="media-object" alt='' /></a>
+						 <a href="#" class="pull-left"><img src="/img/workerman-statistics.png" class="media-object" alt='' /></a>
 						<div class="media-body">
 							<h4 class="media-heading">
 								Workerman-Statistic
@@ -137,7 +137,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-6 column">
+				<div class="col-md-5 column">
 					<h3>
 						最近更新
 					</h3>
