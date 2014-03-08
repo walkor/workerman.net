@@ -152,6 +152,12 @@ class WebServer extends Man\Core\SocketWorker
         
         $file = "$root_dir/$path";
         
+        // 对应的php文件不存在则直接使用根目录的index.php
+        if($extension == 'php' && !is_file($file))
+        {
+            $file = "$root_dir/index.php";
+        }
+        
         // 请求的文件存在
         if(is_file($file))
         {
@@ -251,7 +257,7 @@ class WebServer extends Man\Core\SocketWorker
         {
             // 404
             App\Common\Protocols\Http\header("HTTP/1.1 404 Not Found");
-            return $this->sendToClient(App\Common\Protocols\Http\http_end('<html><head><title>页面不存在</title></head><body><h3>WorkerMan提醒你，文件不存在</h3></body></html>'));
+            return $this->sendToClient(App\Common\Protocols\Http\http_end('<html><head><title>页面不存在</title></head><body><center><h3>页面不存在</h3></center></body></html>'));
         }
     }
 }
