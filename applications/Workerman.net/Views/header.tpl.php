@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
   <meta charset="utf-8">
-  <title><?php if(isset($html_title))echo $html_title;else echo 'Workerman 一个高性能的php socket 服务器框架';?></title>
+  <title><?php if(isset($html_title))echo $html_title;else echo 'workerman 一个高性能的php socket 服务器框架';?></title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="<?php if(isset($html_desc))echo $html_desc;?>">
   <meta name="author" content="">
@@ -34,3 +34,36 @@
 	 <script type="text/javascript" src="/js/highcharts.js"></script>
 </head>
 <body>
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="navbar-header">
+					 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					  <span class="sr-only">Toggle navigation</span>
+					  <span class="icon-bar"></span>
+					  <span class="icon-bar"></span>
+					  <span class="icon-bar"></span>
+					  </button>
+					  <img src="/img/the-workerman-logo.png" />
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="/" <?php if($html_nav == 'workerman')echo 'class="active" ';?>>首页</a>
+						</li>
+						<li>
+							 <a href="/applications" <?php if($html_nav == 'applications')echo 'class="active" ';?>>相关应用</a>
+						</li>
+						<li>
+							<a href="/download" <?php if($html_nav == 'download"')echo 'class="active" ';?>>下载</a>
+						</li>
+						<li>
+							<a href="/documentation" <?php if($html_nav == 'documentation"')echo 'class="active" ';?>>文档</a>
+						</li>
+						<li>
+							<a href="/group" <?php if($html_nav == 'group')echo 'class="active" ';?>>社区</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
