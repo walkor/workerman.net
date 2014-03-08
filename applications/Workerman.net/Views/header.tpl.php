@@ -49,20 +49,20 @@
 				</div>
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
-						<li>
-							<a href="/" <?php if($html_nav == 'workerman')echo 'class="active" ';?>>首页</a>
+						<li <?php if($html_nav == 'workerman')echo 'class="active" ';?>>
+							<a href="/">首页</a>
 						</li>
-						<li>
-							 <a href="/applications" <?php if($html_nav == 'applications')echo 'class="active" ';?>>相关应用</a>
+						<li <?php if($html_nav == 'applications')echo 'class="active" ';?>>
+							 <a href="/applications">相关应用</a>
 						</li>
-						<li>
-							<a href="/download" <?php if($html_nav == 'download"')echo 'class="active" ';?>>下载</a>
+						<li <?php if($html_nav == 'download"')echo 'class="active" ';?>>
+							<a href="/download">下载</a>
 						</li>
-						<li>
-							<a href="/documentation" <?php if($html_nav == 'documentation"')echo 'class="active" ';?>>文档</a>
+						<li <?php if($html_nav == 'documentation"')echo 'class="active" ';?>>
+							<a href="/documentation">文档</a>
 						</li>
-						<li>
-							<a href="/group" <?php if($html_nav == 'group')echo 'class="active" ';?>>社区</a>
+						<li <?php if($html_nav == 'group')echo 'class="active" ';?>>
+							<a href="/group">社区</a>
 						</li>
 					</ul>
 				</div>
