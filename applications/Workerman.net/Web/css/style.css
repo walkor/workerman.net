@@ -86,3 +86,8 @@ ul .sub
 {
 	margin-left:10px;
 }
+
+.breadcrumb {
+    background-color: #FFFFFF;
+    border:1px solid #DDDDDD;
+}
