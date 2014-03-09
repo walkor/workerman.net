@@ -9,14 +9,14 @@
 <div class="row clearfix">
 	<div class="col-md-8 column">
 		<div class="jumbotron">
-			<h1>
+			<h3>
 				下载workerman
-			</h1>
+			</h3>
 			<p>
 				workerman是一款开源的高性能PHP Socket 服务器框架，您可以免费使用。
 			</p>
 			<p>
-				<a class="btn btn-primary btn-large" href="/download/workerman/zip">下载</a>
+				<a class="btn btn-primary btn-large" href="/download/workerman/zip">下载workerman2.0.1</a> 下载<?php echo $workerman_download_count;次?>
 			</p>
 		</div>
 		<table class="table table-bordered">

@@ -5,6 +5,8 @@ function download()
 {
     $html_title = 'workerman相关相关下载';
     $html_nav = 'download';
+    $download_workerman_count_key = 'download_workerman_count';
+    $workerman_download_count =  \WorkerMan\Lib\Store::get($download_workerman_count_key);
     include NET_ROOT . '/Views/header.tpl.php';
     include NET_ROOT . '/Views/download.tpl.php';
     include NET_ROOT . '/Views/footer.tpl.php';
