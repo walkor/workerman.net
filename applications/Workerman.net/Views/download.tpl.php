@@ -7,7 +7,17 @@
 		</li>
 </ul>
 <div class="row clearfix">
-	<div class="col-md-8 column">
+	<div class="col-md-3 column">
+		<div class="list-group">
+			<div class="list-group-item active">
+				workerman
+			</div>
+			<a class="list-group-item" href="/download/thrift">Thrift远程调用框架</a>
+			<a class="list-group-item" href="/download/chat">聊天室框架</a>
+			<a class="list-group-item" href="/download/statistics">统计服务框架</a>
+		</div>
+	</div>
+	<div class="col-md-9 column">
 		<div class="jumbotron">
 			<h3>
 				下载workerman
@@ -106,13 +116,11 @@
 						</td>
 						<td>
 							<p>测试环境: ubuntu 12.04 LTS 64位 CPU:3.30GHz × 4</p>
-							<p>短链接：吞吐量：3W/S ， cpu：60% ， 内存占用：4*8M = 32M</p>
-							<p>吞吐量：9.7W/S ， cpu：68% ， 内存占用：4*8M = 32M</p>
+							<p>短链接：吞吐量：<b>3W/S</b> ， cpu：60% ， 内存占用：4*8M = 32M</p>
+							<p>长连接：吞吐量：<b>9.7W/S</b> ， cpu：68% ， 内存占用：4*8M = 32M</p>
 						</td>
 				</tr>
 		</tbody>
 		</table>
-	</div>
-	<div class="col-md-4 column">
 	</div>
 </div>
