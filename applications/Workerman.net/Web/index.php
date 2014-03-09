@@ -48,7 +48,7 @@ if(!function_exists($func))
 
 if(!function_exists($func))
 {
-    return \App\Common\Protocols\Http\header('Location :/');
+    return \App\Common\Protocols\Http\header('Location: /');
     $func = "\\Workerman\\Modules\\workerman";
 }
 
