@@ -91,3 +91,29 @@ ul .sub
     background-color: #FFFFFF;
     border:1px solid #DDDDDD;
 }
+
+.jumbotron {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-szie:12px;
+}
+
+.f13
+{
+	font-size:13px;
+}
+
+.f12
+{
+	font-size:12px;
+}
+
+.f11
+{
+	font-size:11px;
+}
+
+.gray
+{
+	color:#AAAAAA;
+}

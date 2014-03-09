@@ -16,7 +16,7 @@
 				workerman是一款开源的高性能PHP Socket 服务器框架，您可以免费使用。
 			</p>
 			<p>
-				<a class="btn btn-primary btn-large" href="/download/workerman/zip">下载workerman2.0.1</a> 下载<?php echo $workerman_download_count;次?>
+				<a class="btn btn-primary btn-large" href="/download/workerman/zip">下载workerman2.0.1</a> <font class='f11 gray'>下载<?php echo $workerman_download_count;?>次</font>
 			</p>
 		</div>
 		<table class="table table-bordered">
@@ -44,7 +44,7 @@
 								源代码
 						</td>
 						<td>
-								<a" href="/download/workerman/zip">workerman.2.0.1.zip</a>
+								<a href="/download/workerman/zip">workerman.2.0.1.zip</a>
 						</td>
 				</tr>
 				<tr>
@@ -55,13 +55,13 @@
 								php-cli >=5.3
 						</td>
 				</tr>
-				<tr class="warning">
+				<tr>
 						<td>
 								Git 地址
 						</td>
 						<td>
-								你可以从下面的github地址中获得源码
-								https://github.com/walkor/workerman
+								<p>你可以从下面的github地址中获得源码</p>
+								<p>https://github.com/walkor/workerman</p>
 						</td>
 				</tr>
 		</tbody>
