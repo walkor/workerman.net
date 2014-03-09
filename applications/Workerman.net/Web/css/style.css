@@ -120,5 +120,6 @@ ul .sub
 
 .list-group .active {
     background-color: #3276B1;
-    color:FFFFFF;
+    color:#FFFFFF;
+    font-weight:bold;
 }
