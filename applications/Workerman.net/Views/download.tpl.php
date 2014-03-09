@@ -52,7 +52,7 @@
 								环境
 						</td>
 						<td>
-								php-cli >=5.3
+								php-cli >=5.3 不支持Win系统
 						</td>
 				</tr>
 				<tr>
@@ -62,6 +62,52 @@
 						<td>
 								<p>你可以从下面的github地址中获得源码</p>
 								<p>https://github.com/walkor/workerman</p>
+						</td>
+				</tr>
+				<tr>
+						<td>
+								安装
+						</td>
+						<td>
+								无需安装，下载下来即可使用
+						</td>
+				</tr>
+				<tr>
+						<td>
+								相关命令
+						</td>
+						<td>
+							<ul>
+								<li>启动: ./bin/workermand start</li>
+								<li>停止: ./bin/workermand stop</li>
+								<li>平滑重启: ./bin/workermand reload</li>
+								<li>查看状态: ./bin/workermand status</li>
+							</ul>
+						</td>
+				</tr>
+				<tr>
+						<td>
+								支持的特性
+						</td>
+						<td>
+							<ul>
+								<li>纯PHP开发</li>
+								<li>多进程支持</li>
+								<li>支持TCP/UDP，自定义应用层协议</li>
+								<li>支持libevent扩展，支持高并发</li>
+								<li>支持平滑重启</li>
+								<li>支持PHP文件更新自动检测及加载</li>
+							</ul>
+						</td>
+				</tr>
+				<tr>
+						<td>
+								性能
+						</td>
+						<td>
+							<p>测试环境: ubuntu 12.04 LTS 64位 CPU:3.30GHz × 4</p>
+							<p>短链接：吞吐量：3W/S ， cpu：60% ， 内存占用：4*8M = 32M</p>
+							<p>吞吐量：9.7W/S ， cpu：68% ， 内存占用：4*8M = 32M</p>
 						</td>
 				</tr>
 		</tbody>
