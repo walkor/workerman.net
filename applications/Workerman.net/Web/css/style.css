@@ -117,3 +117,7 @@ ul .sub
 {
 	color:#AAAAAA;
 }
+
+.list-group-item .active {
+    background-color: #3276B1;
+}
