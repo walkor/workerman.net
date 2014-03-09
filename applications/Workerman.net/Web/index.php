@@ -47,7 +47,7 @@ if(!function_exists($func))
 
 if(!function_exists($func))
 {
-    \App\Common\Protocols\Http\header('Location: /'.(!empty($_GET) ? '?'.http_build_query($_GET) : ''));
+    return \App\Common\Protocols\Http\header('Location: /'.(!empty($_GET) ? '?'.http_build_query($_GET) : ''));
 }
 
 call_user_func_array($func, $tmp_arr);
