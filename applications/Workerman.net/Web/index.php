@@ -24,8 +24,7 @@ if(isset($tmp_arr[0]))
 {
     if($tmp_arr[0] == 'workerman')
     {
-        \App\Common\Protocols\Http\header('Location: /'.(!empty($_GET) ? '?'.http_build_query($_GET) : ''));
-        return \App\Common\Protocols\Http\header('HTTP/1.1 301 Moved Permanently');
+        return \App\Common\Protocols\Http\header('Location: /'.(!empty($_GET) ? '?'.http_build_query($_GET) : ''), true, 301);
     }
     $func = "\\Workerman\\Modules\\{$tmp_arr[0]}";
     if(isset($tmp_arr[1]))
@@ -48,8 +47,7 @@ if(!function_exists($func))
 
 if(!function_exists($func))
 {
-    return \App\Common\Protocols\Http\header('Location: /');
-    $func = "\\Workerman\\Modules\\workerman";
+    \App\Common\Protocols\Http\header('Location: /'.(!empty($_GET) ? '?'.http_build_query($_GET) : ''));
 }
 
 call_user_func_array($func, $tmp_arr);
