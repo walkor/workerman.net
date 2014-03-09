@@ -77,7 +77,7 @@ class Store
         {
             touch(self::$dataFile);
         }
-        $cache = include WORKERMAN_LOG_DIR . self::$dataFile;
+        $cache = include self::$dataFile;
         if(is_array($cache))
         {
             self::$dataCache = $cache;
