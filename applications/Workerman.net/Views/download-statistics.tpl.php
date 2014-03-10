@@ -2,6 +2,9 @@
 		<li>
 				<a href="/">首页</a> <span class="divider"></span>
 		</li>
+		<li>
+				<a href="/download">下载</a> <span class="divider"></span>
+		</li>
 		<li class="active">
 				下载
 		</li>
@@ -13,17 +16,17 @@
 			<a class="list-group-item" href="/download/thrift">Thrift远程调用框架</a>
 			<a class="list-group-item" href="/download/chat">聊天室框架</a>
 			<div class="list-group-item active">
-				监控统计系统
+				统计监控系统
 			</div>
 		</div>
 	</div>
 	<div class="col-md-9 column">
 		<div class="jumbotron">
 			<h3>
-				下载workerman监控统计系统
+				下载workerman统计监控系统
 			</h3>
 			<p>
-				workerman-statistics是一款开源的监控统计系统，只要安装了PHP-Cli即可运行，不依赖Mysql等其他软件。
+				workerman-statistics是一款开源的统计监控系统，只要安装了PHP-Cli即可运行，不依赖Mysql等其他软件。
 			</p>
 			<p>
 				<a class="btn btn-primary btn-large" href="/download/statisticszip">下载workerman-statistics</a> <font class='f11 gray'>下载<?php echo $thrift_download_count;?>次</font>

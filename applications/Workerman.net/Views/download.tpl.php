@@ -14,7 +14,7 @@
 			</div>
 			<a class="list-group-item" href="/download/thrift">Thrift远程调用框架</a>
 			<a class="list-group-item" href="/download/chat">聊天室框架</a>
-			<a class="list-group-item" href="/download/statistics">监控统计系统</a>
+			<a class="list-group-item" href="/download/statistics">统计监控系统</a>
 		</div>
 	</div>
 	<div class="col-md-9 column">

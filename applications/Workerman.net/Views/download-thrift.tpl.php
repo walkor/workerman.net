@@ -2,8 +2,11 @@
 		<li>
 				<a href="/">首页</a> <span class="divider"></span>
 		</li>
+		<li>
+				<a href="/download">下载</a> <span class="divider"></span>
+		</li>
 		<li class="active">
-				下载
+				
 		</li>
 </ul>
 <div class="row clearfix">
@@ -14,7 +17,7 @@
 				Thrift远程调用框架
 			</div>
 			<a class="list-group-item" href="/download/chat">聊天室框架</a>
-			<a class="list-group-item" href="/download/statistics">监控统计系统</a>
+			<a class="list-group-item" href="/download/statistics">统计监控系统</a>
 		</div>
 	</div>
 	<div class="col-md-9 column">
