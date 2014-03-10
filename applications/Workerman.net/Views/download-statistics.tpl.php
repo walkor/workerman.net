@@ -9,24 +9,24 @@
 <div class="row clearfix">
 	<div class="col-md-3 column">
 		<div class="list-group">
-			<div class="list-group-item active">
-				workerman
-			</div>
-			<a class="list-group-item" href="/download/thrift">Thrift远程调用框架</a>
+			<a class="list-group-item" href="/download">workerman</a>
+			<a class="list-group-item" href="/download/chat">Thrift远程调用框架</a>
 			<a class="list-group-item" href="/download/chat">聊天室框架</a>
-			<a class="list-group-item" href="/download/statistics">监控统计系统</a>
+			<div class="list-group-item active">
+				监控统计系统
+			</div>
 		</div>
 	</div>
 	<div class="col-md-9 column">
 		<div class="jumbotron">
 			<h3>
-				下载workerman
+				下载workerman监控统计系统
 			</h3>
 			<p>
-				workerman是一款开源的高性能PHP Socket 服务器框架，您可以免费使用。
+				workerman-statistics是一款开源的监控统计系统，只要安装了PHP-Cli即可运行，不依赖Mysql等其他软件。
 			</p>
 			<p>
-				<a class="btn btn-primary btn-large" href="/download/workermanzip">下载workerman2.0.1</a> <font class='f11 gray'>下载<?php echo $workerman_download_count;?>次</font>
+				<a class="btn btn-primary btn-large" href="/download/statisticszip">下载workerman-statistics</a> <font class='f11 gray'>下载<?php echo $thrift_download_count;?>次</font>
 			</p>
 		</div>
 		<table class="table table-bordered">
@@ -36,7 +36,7 @@
 								
 						</th>
 						<th>
-								workerman
+								workerman-statistics
 						</th>
 				</tr>
 		</thead>
@@ -46,7 +46,7 @@
 								最新版本
 						</td>
 						<td>
-								2.0.1 
+								1.0.1 
 						</td>
 				</tr>
 				<tr>
@@ -54,7 +54,7 @@
 								源代码
 						</td>
 						<td>
-								<a href="/download/workermanzip">workerman.2.0.1.zip</a>
+								<a href="/download/statisticszip">workerman-statistics.zip</a>
 						</td>
 				</tr>
 				<tr>
@@ -71,7 +71,7 @@
 						</td>
 						<td>
 								<p>你可以从下面的github地址中获得源码</p>
-								<p>https://github.com/walkor/workerman</p>
+								<p>https://github.com/walkor/workerman-statistics</p>
 						</td>
 				</tr>
 				<tr>
@@ -101,12 +101,12 @@
 						</td>
 						<td>
 							<ul>
-								<li>纯PHP开发</li>
-								<li>多进程支持</li>
-								<li>支持TCP/UDP，自定义应用层协议</li>
-								<li>支持libevent扩展，支持高并发</li>
-								<li>支持平滑重启</li>
-								<li>支持PHP文件更新自动检测及加载</li>
+								<li>纯PHP开发，无需安装Mysql、Apache、nginx等软件</li>
+								<li>支持访问量、耗时、成功率、错误日志的统计与查询</li>
+								<li>支持分布式部署，性能极高</li>
+								<li>分布式部署时服务节点自动感知，查询时自动汇总数据</li>
+								<li>客户端使用UDP上报统计数据，不影响正常业务</li>
+								<li>可本机部署，不占用带宽</li>
 							</ul>
 						</td>
 				</tr>
@@ -115,9 +115,7 @@
 								性能
 						</td>
 						<td>
-							<p>测试环境: ubuntu 12.04 LTS 64位 CPU:3.30GHz × 4</p>
-							<p>短链接：吞吐量：<b>3W/S</b> ， cpu：60% ， 内存占用：4*8M = 32M</p>
-							<p>长连接：吞吐量：<b>9.7W/S</b> ， cpu：68% ， 内存占用：4*8M = 32M</p>
+							<p>恐怖</p>
 						</td>
 				</tr>
 		</tbody>

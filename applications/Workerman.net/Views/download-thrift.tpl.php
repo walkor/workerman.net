@@ -9,10 +9,10 @@
 <div class="row clearfix">
 	<div class="col-md-3 column">
 		<div class="list-group">
+			<a class="list-group-item" href="/download">workerman</a>
 			<div class="list-group-item active">
-				workerman
+				Thrift远程调用框架
 			</div>
-			<a class="list-group-item" href="/download/thrift">Thrift远程调用框架</a>
 			<a class="list-group-item" href="/download/chat">聊天室框架</a>
 			<a class="list-group-item" href="/download/statistics">监控统计系统</a>
 		</div>
@@ -20,13 +20,13 @@
 	<div class="col-md-9 column">
 		<div class="jumbotron">
 			<h3>
-				下载workerman
+				下载workerman Thrift Rpc远程调用框架
 			</h3>
 			<p>
-				workerman是一款开源的高性能PHP Socket 服务器框架，您可以免费使用。
+				workerman Thrift Rpc是一款开源的Rpc远程调用框架，该框架使用workerman作为进程管理器，基于thrift协议，支持跨语言调用。
 			</p>
 			<p>
-				<a class="btn btn-primary btn-large" href="/download/workermanzip">下载workerman2.0.1</a> <font class='f11 gray'>下载<?php echo $workerman_download_count;?>次</font>
+				<a class="btn btn-primary btn-large" href="/download/thriftzip">下载workerman-thrift-rpc</a> <font class='f11 gray'>下载<?php echo $thrift_download_count;?>次</font>
 			</p>
 		</div>
 		<table class="table table-bordered">
@@ -36,7 +36,7 @@
 								
 						</th>
 						<th>
-								workerman
+								workerman-thrift-rpc
 						</th>
 				</tr>
 		</thead>
@@ -46,7 +46,7 @@
 								最新版本
 						</td>
 						<td>
-								2.0.1 
+								1.0.1 
 						</td>
 				</tr>
 				<tr>
@@ -54,7 +54,7 @@
 								源代码
 						</td>
 						<td>
-								<a href="/download/workermanzip">workerman.2.0.1.zip</a>
+								<a href="/download/thriftzip">workerman-thrift-rpc.zip</a>
 						</td>
 				</tr>
 				<tr>
@@ -71,7 +71,7 @@
 						</td>
 						<td>
 								<p>你可以从下面的github地址中获得源码</p>
-								<p>https://github.com/walkor/workerman</p>
+								<p>https://github.com/walkor/workerman-thrift</p>
 						</td>
 				</tr>
 				<tr>
@@ -103,10 +103,14 @@
 							<ul>
 								<li>纯PHP开发</li>
 								<li>多进程支持</li>
-								<li>支持TCP/UDP，自定义应用层协议</li>
 								<li>支持libevent扩展，支持高并发</li>
 								<li>支持平滑重启</li>
 								<li>支持PHP文件更新自动检测及加载</li>
+								<li>支持原生thrift协议，自动生成c/c++/java等各种语言的客户端</li>
+								<li>集成统计监控模块</li>
+								<li>PHP客户端支持异步</li>
+								<li>PHP客户端支持故障节点自动踢出</li>
+								<li>PHP客户端支持故障节点恢复检测</li>
 							</ul>
 						</td>
 				</tr>
@@ -115,9 +119,19 @@
 								性能
 						</td>
 						<td>
-							<p>测试环境: ubuntu 12.04 LTS 64位 CPU:3.30GHz × 4</p>
-							<p>短链接：吞吐量：<b>3W/S</b> ， cpu：60% ， 内存占用：4*8M = 32M</p>
-							<p>长连接：吞吐量：<b>9.7W/S</b> ， cpu：68% ， 内存占用：4*8M = 32M</p>
+							<p>系统：Debian GNU/Linux 6.0<br/>
+cpu ：Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz * 24<br/>
+内存：64G<br/>
+
+WorkerMan：开启24个Worker进程处理业务请求<br/>
+压测软件：loadrunner<br/></p>
+							<p>吞吐量：平均8200/S<br/>
+内存占用：24*12M=288M<br/>
+cpu平均使用率：55%<br/>
+load：16<br/>
+流量：15M/S<br/>
+<br/>
+处理曲线平稳，无内存泄漏，无流量抖动</p>
 						</td>
 				</tr>
 		</tbody>

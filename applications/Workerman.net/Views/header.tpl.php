@@ -55,7 +55,7 @@
 						<li<?php if($html_nav == 'applications')echo ' class="active" ';?>>
 							<a href="/applications">相关应用</a>
 						</li>
-						<li<?php if($html_nav == 'download"')echo ' class="active" ';?>>
+						<li<?php if($html_nav == 'download')echo ' class="active" ';?>>
 							<a href="/download">下载</a>
 						</li>
 						<li<?php if($html_nav == 'documentation"')echo ' class="active" ';?>>
