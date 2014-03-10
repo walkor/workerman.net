@@ -3,7 +3,7 @@
 				<a href="/">首页</a> <span class="divider"></span>
 		</li>
 		<li class="active">
-				下载
+				下载workerman
 		</li>
 </ul>
 <div class="row clearfix">
