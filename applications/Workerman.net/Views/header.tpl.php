@@ -49,19 +49,19 @@
 				</div>
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
-						<li <?php if($html_nav == 'workerman')echo 'class="active" ';?>>
+						<li<?php if($html_nav == 'workerman')echo ' class="active" ';?>>
 							<a href="/">首页</a>
 						</li>
-						<li <?php if($html_nav == 'applications')echo 'class="active" ';?>>
-							 <a href="/applications">相关应用</a>
+						<li<?php if($html_nav == 'applications')echo ' class="active" ';?>>
+							<a href="/applications">相关应用</a>
 						</li>
-						<li <?php if($html_nav == 'download"')echo 'class="active" ';?>>
+						<li<?php if($html_nav == 'download"')echo ' class="active" ';?>>
 							<a href="/download">下载</a>
 						</li>
-						<li <?php if($html_nav == 'documentation"')echo 'class="active" ';?>>
+						<li<?php if($html_nav == 'documentation"')echo ' class="active" ';?>>
 							<a href="/documentation">文档</a>
 						</li>
-						<li <?php if($html_nav == 'group')echo 'class="active" ';?>>
+						<li<?php if($html_nav == 'group')echo ' class="active" ';?>>
 							<a href="/group">社区</a>
 						</li>
 					</ul>
