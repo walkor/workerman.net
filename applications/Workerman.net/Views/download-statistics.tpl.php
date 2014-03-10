@@ -10,7 +10,7 @@
 	<div class="col-md-3 column">
 		<div class="list-group">
 			<a class="list-group-item" href="/download">workerman</a>
-			<a class="list-group-item" href="/download/chat">Thrift远程调用框架</a>
+			<a class="list-group-item" href="/download/thrift">Thrift远程调用框架</a>
 			<a class="list-group-item" href="/download/chat">聊天室框架</a>
 			<div class="list-group-item active">
 				监控统计系统
