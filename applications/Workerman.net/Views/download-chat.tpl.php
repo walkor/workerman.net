@@ -2,31 +2,34 @@
 		<li>
 				<a href="/">首页</a> <span class="divider"></span>
 		</li>
+		<li>
+				<a href="/download">下载</a> <span class="divider"></span>
+		</li>
 		<li class="active">
-				下载
+				聊天室框架
 		</li>
 </ul>
 <div class="row clearfix">
 	<div class="col-md-3 column">
 		<div class="list-group">
-			<div class="list-group-item active">
-				workerman
-			</div>
+			<a class="list-group-item" href="/download">workerman</a>
 			<a class="list-group-item" href="/download/thrift">Thrift远程调用框架</a>
-			<a class="list-group-item" href="/download/chat">聊天室框架</a>
+			<div class="list-group-item active">
+				聊天室框架
+			</div>
 			<a class="list-group-item" href="/download/statistics">统计监控系统</a>
 		</div>
 	</div>
 	<div class="col-md-9 column">
 		<div class="jumbotron">
 			<h3>
-				下载workerman
+				下载workerman 聊天室框架
 			</h3>
 			<p>
-				workerman是一款开源的高性能PHP Socket 服务器框架，您可以免费使用。
+				workerman-chat是一款开源的PHP聊天室框架，使用改框架可以轻而易举的开发出自己的聊天室，采用Websocket协议，拥有更好的性能，支持分布式部署，可以自由扩展。
 			</p>
 			<p>
-				<a class="btn btn-primary btn-large" href="/download/workermanzip">下载workerman2.0.1</a> <font class='f11 gray'>下载<?php echo $workerman_download_count;?>次</font>
+				<a class="btn btn-primary btn-large" href="/download/thriftzip">下载workerman-chat</a> <font class='f11 gray'>下载<?php echo $chat_download_count;?>次</font>
 			</p>
 		</div>
 		<table class="table table-bordered">
@@ -36,7 +39,7 @@
 								
 						</th>
 						<th>
-								workerman
+								workerman-chat
 						</th>
 				</tr>
 		</thead>
@@ -46,7 +49,7 @@
 								最新版本
 						</td>
 						<td>
-								2.0.1 
+								1.0.1 
 						</td>
 				</tr>
 				<tr>
@@ -54,7 +57,7 @@
 								源代码
 						</td>
 						<td>
-								<a href="/download/workermanzip">workerman.2.0.1.zip</a>
+								<a href="/download/chatzip">workerman-chat.zip</a>
 						</td>
 				</tr>
 				<tr>
@@ -71,7 +74,7 @@
 						</td>
 						<td>
 								<p>你可以从下面的github地址中获得源码</p>
-								<p>https://github.com/walkor/workerman</p>
+								<p>https://github.com/walkor/workerman-chat</p>
 						</td>
 				</tr>
 				<tr>
@@ -102,11 +105,11 @@
 						<td>
 							<ul>
 								<li>纯PHP开发</li>
-								<li>多进程支持</li>
-								<li>支持TCP/UDP，自定义应用层协议</li>
+								<li>多进程支持，每个进程可以承受上万的连接</li>
 								<li>支持libevent扩展，支持高并发</li>
-								<li>支持平滑重启</li>
-								<li>支持PHP文件更新自动检测及加载</li>
+								<li>采用gateway worker模型，稳定可靠</li>
+								<li>采用websocket协议，更小带宽，更好的性能</li>
+								<li>支持分布式部署，可以横向扩展</li>
 							</ul>
 						</td>
 				</tr>
@@ -115,9 +118,7 @@
 								性能
 						</td>
 						<td>
-							<p>测试环境: ubuntu 12.04 LTS 64位 CPU:3.30GHz × 4</p>
-							<p>短链接：吞吐量：<b>3W/S</b> ， cpu：60% ， 内存占用：4*8M = 32M</p>
-							<p>长连接：吞吐量：<b>9.7W/S</b> ， cpu：68% ， 内存占用：4*8M = 32M</p>
+							
 						</td>
 				</tr>
 		</tbody>

@@ -6,7 +6,7 @@
 				<a href="/download">下载</a> <span class="divider"></span>
 		</li>
 		<li class="active">
-				下载
+				统计监控系统
 		</li>
 </ul>
 <div class="row clearfix">
@@ -29,7 +29,7 @@
 				workerman-statistics是一款开源的统计监控系统，只要安装了PHP-Cli即可运行，不依赖Mysql等其他软件。
 			</p>
 			<p>
-				<a class="btn btn-primary btn-large" href="/download/statisticszip">下载workerman-statistics</a> <font class='f11 gray'>下载<?php echo $thrift_download_count;?>次</font>
+				<a class="btn btn-primary btn-large" href="/download/statisticszip">下载workerman-statistics</a> <font class='f11 gray'>下载<?php echo $statistics_download_count;?>次</font>
 			</p>
 		</div>
 		<table class="table table-bordered">
@@ -65,7 +65,7 @@
 								环境
 						</td>
 						<td>
-								php-cli >=5.3 不支持Win系统
+								php-cli &gt;=5.3 不支持Win系统
 						</td>
 				</tr>
 				<tr>

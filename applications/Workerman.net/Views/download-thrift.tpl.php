@@ -6,7 +6,7 @@
 				<a href="/download">下载</a> <span class="divider"></span>
 		</li>
 		<li class="active">
-				
+				Thrift远程调用框架
 		</li>
 </ul>
 <div class="row clearfix">
@@ -65,7 +65,7 @@
 								环境
 						</td>
 						<td>
-								php-cli >=5.3 不支持Win系统
+								php-cli &gt;=5.3 不支持Win系统
 						</td>
 				</tr>
 				<tr>

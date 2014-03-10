@@ -63,6 +63,32 @@ function download_thriftzip()
 }
 
 /**
+ * 下载workerman-chat页面
+ */
+function download_chat()
+{
+    $html_title = 'workerman-chat下载|一个高性能的PHP 聊天室框架';
+    $html_nav = 'download';
+    $download_chat_count_key = 'download_chat_count';
+    $chat_download_count =  \WorkerMan\Lib\Store::get($download_chat_count_key);
+    include NET_ROOT . '/Views/header.tpl.php';
+    include NET_ROOT . '/Views/download-chat.tpl.php';
+    include NET_ROOT . '/Views/footer.tpl.php';
+}
+
+/**
+ * 下载workerman-chat.zip
+ */
+function download_chatzip()
+{
+    $download_chat_count_key = 'download_chat_count';
+    $count = \WorkerMan\Lib\Store::get($download_chat_count_key);
+    $count = $count >= 0 ? intval($count) : 0;
+    \WorkerMan\Lib\Store::set($download_chat_count_key, ++$count);
+    return \App\Common\Protocols\Http\header('Location: https://github.com/walkor/workerman-chat/archive/master.zip');
+}
+
+/**
  * 下载workerman-statistics页面
  */
 function download_statistics()
