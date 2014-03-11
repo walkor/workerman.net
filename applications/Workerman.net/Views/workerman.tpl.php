@@ -73,7 +73,7 @@
 <div class="row clearfix">
 	<div class="col-md-7 column">
 		<h3>
-			应用程序
+			相关应用
 		</h3>
 		<div class="media">
 			 <a href="/workerman-thrift" class="pull-left"><img src="/img/workerman-thrift.png" class="media-object" alt='' /></a>

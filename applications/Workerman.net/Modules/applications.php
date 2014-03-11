@@ -9,3 +9,4 @@ function applications()
     include NET_ROOT . '/Views/applications.tpl.php';
     include NET_ROOT . '/Views/footer.tpl.php';
 }
+

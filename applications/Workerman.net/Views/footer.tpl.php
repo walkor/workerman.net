@@ -20,13 +20,14 @@
 						<b>下载</b>
 						<ul class="sub">
 						<li><a href="/download/workerman">Workerman</a></li>
-						<li><a href="/download/workerman-thriftrpc">Workerman-ThriftRpc</a></li>
-						<li><a href="/download/workerman-jsonrpc">Workerman-JsonRpc</a></li>
-						<li><a href="/download/workerman-statistics">Workerman-Statistics</a></li>
+						<li><a href="/download/thrift">Workerman-ThriftRpc</a></li>
+						<li><a href="/download/jsonrpc">Workerman-JsonRpc</a></li>
+						<li><a href="/download/jsonrpc">Workerman-chat</a></li>
+						<li><a href="/download/statistics">Workerman-Statistics</a></li>
 						</ul>
 					</div>
 					<div class="col-md-3 column">
-						<address> <b>网址：www.workerman.net</b><br/> 邮箱：worker-man@qq.com<br/> 地址：中国四川成都<br/> QQ：2202055656<br/>QQ群：257046084<br/>蜀ICP备13029294号</address>
+						<address> <b>网址：www.workerman.net</b><br/> 邮箱：worker-man@qq.com<br/> QQ：2202055656<br/>QQ群：257046084<br/>蜀ICP备13029294号</address>
 					</div>
 					<div class="col-md-1 column">
 					</div>
