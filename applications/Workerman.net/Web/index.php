@@ -37,6 +37,7 @@ if(isset($tmp_arr[0]))
 {
     $func = "\\Workerman\\Modules\\workerman";
 }
+$func = str_replace('-', '_', $func);
 if(!function_exists($func))
 {
     foreach(glob(NET_ROOT . "/Modules/*") as $php_file)
