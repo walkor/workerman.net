@@ -63,6 +63,32 @@ function download_thriftzip()
 }
 
 /**
+ * 下载workerman-json-rpc页面
+ */
+function download_jsonrpc()
+{
+    $html_title = 'workerman-json-rpc下载|一个高性能的PHP Json Rpc框架';
+    $html_nav = 'download';
+    $download_jsonrpc_count_key = 'download_jsonrpc_count';
+    $jsonrpc_download_count =  \WorkerMan\Lib\Store::get($download_jsonrpc_count_key);
+    include NET_ROOT . '/Views/header.tpl.php';
+    include NET_ROOT . '/Views/download-jsonrpc.tpl.php';
+    include NET_ROOT . '/Views/footer.tpl.php';
+}
+
+/**
+ * 下载workerman-json-rpc.zip
+ */
+function download_jsonrpczip()
+{
+    $download_jsonrpc_count_key = 'download_jsonrpc_count';
+    $count = \WorkerMan\Lib\Store::get($download_jsonrpc_count_key);
+    $count = $count >= 0 ? intval($count) : 0;
+    \WorkerMan\Lib\Store::set($download_jsonrpc_count_key, ++$count);
+    return \App\Common\Protocols\Http\header('Location: https://github.com/walkor/workerman-jsonrpc/archive/master.zip');
+}
+
+/**
  * 下载workerman-chat页面
  */
 function download_chat()
@@ -93,7 +119,7 @@ function download_chatzip()
  */
 function download_statistics()
 {
-    $html_title = 'workerman下载';
+    $html_title = 'workerman-statistics下载 | PHP开发的一个分布式统计监控系统';
     $html_nav = 'download';
     $download_statistics_count_key = 'download_statistics_count';
     $statistics_download_count =  \WorkerMan\Lib\Store::get($download_statistics_count_key);

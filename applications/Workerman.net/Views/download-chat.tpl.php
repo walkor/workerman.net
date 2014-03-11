@@ -14,6 +14,7 @@
 		<div class="list-group">
 			<a class="list-group-item" href="/download">workerman</a>
 			<a class="list-group-item" href="/download/thrift">Thrift远程调用框架</a>
+			<a class="list-group-item" href="/download/jsonrpc">JsonRpc远程调用框架 下载</a>
 			<div class="list-group-item active">
 				聊天室框架
 			</div>
@@ -29,7 +30,7 @@
 				workerman-chat是一款开源的PHP聊天室框架，使用改框架可以轻而易举的开发出自己的聊天室，采用Websocket协议，拥有更好的性能，支持分布式部署，可以自由扩展。
 			</p>
 			<p>
-				<a class="btn btn-primary btn-large" href="/download/thriftzip">下载workerman-chat</a> <font class='f11 gray'>下载<?php echo $chat_download_count;?>次</font>
+				<a class="btn btn-primary btn-large" href="/download/chatzip">下载workerman-chat</a> <font class='f11 gray'>下载<?php echo $chat_download_count;?>次</font>
 			</p>
 		</div>
 		<table class="table table-bordered">

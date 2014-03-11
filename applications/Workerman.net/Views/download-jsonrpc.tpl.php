@@ -6,31 +6,31 @@
 				<a href="/download">下载</a> <span class="divider"></span>
 		</li>
 		<li class="active">
-				统计监控系统
+				Thrift远程调用框架
 		</li>
 </ul>
 <div class="row clearfix">
 	<div class="col-md-3 column">
 		<div class="list-group">
-			<a class="list-group-item" href="/download">workerman 下载</a>
+			<a class="list-group-item" href="/download">workerman下载</a>
 			<a class="list-group-item" href="/download/thrift">Thrift远程调用框架 下载</a>
-			<a class="list-group-item" href="/download/jsonrpc">JsonRpc远程调用框架 下载</a>
-			<a class="list-group-item" href="/download/chat">聊天室框架 下载</a>
 			<div class="list-group-item active">
-				统计监控系统 下载
+				JsonRpc远程调用框架 下载
 			</div>
+			<a class="list-group-item" href="/download/chat">聊天室框架 下载</a>
+			<a class="list-group-item" href="/download/statistics">统计监控系统 下载</a>
 		</div>
 	</div>
 	<div class="col-md-9 column">
 		<div class="jumbotron">
 			<h3>
-				下载workerman统计监控系统
+				下载workerman JsonRpc远程调用框架
 			</h3>
 			<p>
-				workerman-statistics是一款开源的统计监控系统，只要安装了PHP-Cli即可运行，不依赖Mysql等其他软件。
+				workerman Json Rpc是一款开源的Rpc远程调用框架，该框架使用workerman作为进程管理器，基于Json协议，开发使用都非常简单。
 			</p>
 			<p>
-				<a class="btn btn-primary btn-large" href="/download/statisticszip">下载workerman-statistics</a> <font class='f11 gray'>下载<?php echo $statistics_download_count;?>次</font>
+				<a class="btn btn-primary btn-large" href="/download/jsonrpczip">下载workerman-json-rpc</a> <font class='f11 gray'>下载<?php echo $jsonrpc_download_count;?>次</font>
 			</p>
 		</div>
 		<table class="table table-bordered">
@@ -40,7 +40,7 @@
 								
 						</th>
 						<th>
-								workerman-statistics
+								workerman-json-rpc
 						</th>
 				</tr>
 		</thead>
@@ -58,7 +58,7 @@
 								源代码
 						</td>
 						<td>
-								<a href="/download/statisticszip">workerman-statistics.zip</a>
+								<a href="/download/jsonrpczip">workerman-json-rpc.zip</a>
 						</td>
 				</tr>
 				<tr>
@@ -75,7 +75,7 @@
 						</td>
 						<td>
 								<p>你可以从下面的github地址中获得源码</p>
-								<p>https://github.com/walkor/workerman-statistics</p>
+								<p>https://github.com/walkor/workerman-jsonrpc</p>
 						</td>
 				</tr>
 				<tr>
@@ -105,12 +105,14 @@
 						</td>
 						<td>
 							<ul>
-								<li>纯PHP开发，无需安装Mysql、Apache、nginx等软件</li>
-								<li>支持访问量、耗时、成功率、错误日志的统计与查询</li>
-								<li>支持分布式部署，性能极高</li>
-								<li>分布式部署时服务节点自动感知，查询时自动汇总数据</li>
-								<li>客户端使用UDP上报统计数据，不影响正常业务</li>
-								<li>可本机部署，不占用带宽</li>
+								<li>纯PHP开发</li>
+								<li>多进程支持</li>
+								<li>支持libevent扩展，支持高并发</li>
+								<li>支持平滑重启</li>
+								<li>支持PHP文件更新自动检测及加载</li>
+								<li>使用json协议，开发调试简单</li>
+								<li>集成统计监控模块</li>
+								<li>客户端支持异步</li>
 							</ul>
 						</td>
 				</tr>
@@ -119,7 +121,7 @@
 								性能
 						</td>
 						<td>
-							<p>恐怖</p>
+							
 						</td>
 				</tr>
 		</tbody>
