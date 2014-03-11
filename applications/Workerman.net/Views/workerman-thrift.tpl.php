@@ -3,10 +3,10 @@
 			<h2>
 				workerman-thrift-rpc
 			</h2>
-			<p>
+			<p class="f14">
 				workerman-thrift-rpc是一个以workerman作为服务器容器，使用<a href="http:/thrift.apache.org" target="_blank"><strong>Thrift</strong></a>协议及其传输层模块搭建起来的跨语言的RPC远程调用框架。
 			</p>
-			<p>
+			<p class="f14">
 				workerman-thrift-rpc的目标是解决异构系统之间通信的问题，workerman-thrift-rpc使用PHP开发远程调用服务，
 				然后使用thrift自动生成C++, Java, Python, PHP, Ruby, Erlang, Perl, Haskell, C#, Cocoa, JavaScript, Node.js, Smalltalk, OCaml等这些语言的客户端，
 				通过这些客户端去调用PHP语言开发的服务。
@@ -15,8 +15,8 @@
 		<div class="col-md-4 column text-center">
 			<div class="thumbnail">
 				<div class="caption">
-					<p>下载</p>
-					<a class="btn btn-primary btn-large" href="/download/thriftczip">下载workerman-thrift-rpc</a> <font class='f11 gray'>下载<?php echo $thrift_download_count;?>次</font>
+					<p class="f24">下载</p>
+					<a class="btn btn-primary btn-large" href="/download/thriftczip">下载 </a> <font class='f11 gray'>下载<?php echo $thrift_download_count;?>次</font>
 				</div>
 			</div>
 		</div>
@@ -41,7 +41,7 @@
 			<h3>
 				服务端开发示例
 			</h3>
-			<h4>定义一个Thrift的IDL文件 如HelloWorld.thrift</h4>
+			<h4>1、定义一个Thrift的IDL文件 如HelloWorld.thrift</h4>
 			<pre><code>
 namespace php Services.HelloWorld
 service HelloWorld
@@ -49,16 +49,16 @@ service HelloWorld
     string sayHello(string name);
 }
 			</code></pre>
-			<h4>使用thrift编译生成框架文件</h4>
+			<h4>2、使用thrift编译生成框架文件</h4>
 			<code>thrift -gen php:server HelloWorld.thrift && cp ./gen-php/Services/HelloWorld ./applications/ThriftRpc/Services/ -r</code>
-			<h4>完善框架文件逻辑</h4>
+			<h4>3、完善框架文件逻辑</h4>
 			./applications/ThriftRpc/Services/HelloWorld/HelloWorldHandler.php
 			<pre><code>
 <span style="color: #000000">
 <span style="color: #0000BB">&lt;?php<br /></span><span style="color: #007700">namespace&nbsp;</span><span style="color: #0000BB">Services</span><span style="color: #007700">\</span><span style="color: #0000BB">HelloWorld</span><span style="color: #007700">;<br /><br />class&nbsp;</span><span style="color: #0000BB">HelloWorldHandler&nbsp;</span><span style="color: #007700">implements&nbsp;</span><span style="color: #0000BB">HelloWorldIf&nbsp;</span><span style="color: #007700">{<br />&nbsp;&nbsp;public&nbsp;function&nbsp;</span><span style="color: #0000BB">sayHello</span><span style="color: #007700">(</span><span style="color: #0000BB">$name</span><span style="color: #007700">)<br />&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #DD0000">"Hello&nbsp;</span><span style="color: #0000BB">$name</span><span style="color: #DD0000">"</span><span style="color: #007700">;<br />&nbsp;&nbsp;}<br />}<br /></span>
 </span>
 			</code></pre>
-			<h4>./conf/conf.d/下创建HelloWorld.conf文件如下</h4>
+			<h4>4、./conf/conf.d/下创建HelloWorld.conf文件如下</h4>
 			<pre><code>
 ;Thrift HelloWorld 服务
 ;监听的端口,每个服务设置成一个单独的端口
@@ -78,8 +78,9 @@ thrift_transport = TBufferedTransport
 ;thrift protocol，默认使用二进制协议，可以设置成其它协议（注意不要忘记修改客户端对应的thrift_protocol配置项）
 thrift_protocol  = TBinaryProtocol
 			</code></pre>
-			<h4>启动服务端</h4>
+			<h4>5、启动服务端</h4>
 			<code>./bin/workermand start</code>
+			<br/>
 			<h3>客户端使用示例</h3>
 			<pre><code>
 <span style="color: #000000">
