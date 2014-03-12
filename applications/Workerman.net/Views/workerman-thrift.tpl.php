@@ -22,26 +22,6 @@
 				然后使用thrift自动生成C++, Java, Python, PHP, Ruby, Erlang, Perl, Haskell, C#, Cocoa, JavaScript, Node.js, Smalltalk, OCaml等这些语言的客户端，
 				通过这些客户端去调用PHP语言开发的服务。
 			</p>
-		</div>
-		<div class="col-md-5 column text-center">
-			<div class="list-group">
-				<div class="list-group-item active">
-					Thrift RPC 远程调用框架
-				</div>
-				<a class="list-group-item" href="/workerman-jsonrpc">Json Rpc远程调用框架</a>
-				<a class="list-group-item" href="/workerman-chat">聊天室框架</a>
-				<a class="list-group-item" href="/workerman-statistics">统计监控系统</a>
-			</div>
-			<div class="thumbnail">
-				<div class="caption">
-					<p class="f24">下载</p>
-					<a class="btn btn-primary btn-large" href="/download/thriftczip">下载 </a> <font class='f11 gray'>下载<?php echo $thrift_download_count;?>次</font>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="row clearfix">
-		<div class="col-md-12 column">
 			<h3>
 				特性
 			</h3>
@@ -57,6 +37,28 @@
 			<li>PHP客户端支持故障节点自动踢出</li>
 			<li>PHP客户端支持故障节点恢复检测</li>
 			</ul>
+		</div>
+		<div class="col-md-5 column text-center">
+			<h3>其它应用</h3>
+			<div class="list-group">
+				<div class="list-group-item active">
+					Thrift RPC 远程调用框架
+				</div>
+				<a class="list-group-item" href="/workerman-jsonrpc">Json Rpc远程调用框架</a>
+				<a class="list-group-item" href="/workerman-chat">聊天室框架</a>
+				<a class="list-group-item" href="/workerman-statistics">统计监控系统</a>
+			</div>
+			<div class="thumbnail">
+				<div class="caption">
+					<p class="f24">下载Thrift Rpc远程调用框架</p>
+					<a class="btn btn-primary btn-large" href="/download/thriftczip">下载workerman-thrift-rpc </a> <font class='f11 gray'>下载<?php echo $thrift_download_count;?>次</font>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			
 			<h3>
 				服务端开发示例
 			</h3>
