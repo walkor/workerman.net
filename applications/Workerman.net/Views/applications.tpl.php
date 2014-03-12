@@ -10,7 +10,7 @@
 	 <a href="/workerman-thrift" class="pull-left"><img src="/img/workerman-thrift.png" class="media-object" alt='' /></a>
 	<div class="media-body">
 		<h4 class="media-heading">
-			跨语言的Rpc框架
+			Thrift RPC远程调用框架
 		</h4>
 		 Workerman和Thrift框架相结合，目的是解决异构系统与PHP通信的问题，使你的服务更方便的被其它语言调用。
 	</div>

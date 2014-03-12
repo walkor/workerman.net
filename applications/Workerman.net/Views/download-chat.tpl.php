@@ -13,7 +13,7 @@
 	<div class="col-md-3 column">
 		<div class="list-group">
 			<a class="list-group-item" href="/download">workerman 下载</a>
-			<a class="list-group-item" href="/download/thrift">Thrift远程调用框架 下载</a>
+			<a class="list-group-item" href="/download/thrift">Thrift RPC远程调用框架 下载</a>
 			<a class="list-group-item" href="/download/jsonrpc">JsonRpc远程调用框架 下载</a>
 			<div class="list-group-item active">
 				聊天室框架 下载

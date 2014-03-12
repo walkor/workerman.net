@@ -1,18 +1,37 @@
+<ul class="breadcrumb">
+	<li>
+		<a href="/">首页</a> <span class="divider"></span>
+	</li>
+	<li>
+		<a href="/applications">相关应用</a> <span class="divider"></span>
+	</li>
+	<li class="active">
+		Thrift Rpc远程调用框架
+	</li>
+</ul>
 <div class="row clearfix">
-		<div class="col-md-8 column">
+		<div class="col-md-7 column">
 			<h2>
 				workerman-thrift-rpc
 			</h2>
-			<p class="f14">
-				workerman-thrift-rpc是一个以workerman作为服务器容器，使用<a href="http:/thrift.apache.org" target="_blank"><strong>Thrift</strong></a>协议及其传输层模块搭建起来的跨语言的RPC远程调用框架。
+			<p class="f16">
+				workerman-thrift-rpc是一个以workerman作为服务器容器，使用<a href="http://thrift.apache.org" target="_blank"><strong>Thrift</strong></a>协议及其传输层模块搭建起来的跨语言的RPC远程调用框架。
 			</p>
-			<p class="f14">
+			<p class="f16">
 				workerman-thrift-rpc的目标是解决异构系统之间通信的问题，workerman-thrift-rpc使用PHP开发远程调用服务，
 				然后使用thrift自动生成C++, Java, Python, PHP, Ruby, Erlang, Perl, Haskell, C#, Cocoa, JavaScript, Node.js, Smalltalk, OCaml等这些语言的客户端，
 				通过这些客户端去调用PHP语言开发的服务。
 			</p>
 		</div>
-		<div class="col-md-4 column text-center">
+		<div class="col-md-5 column text-center">
+			<div class="list-group">
+				<div class="list-group-item active">
+					Thrift RPC 远程调用框架
+				</div>
+				<a class="list-group-item" href="/workerman-jsonrpc">Json Rpc远程调用框架</a>
+				<a class="list-group-item" href="/workerman-chat">聊天室框架</a>
+				<a class="list-group-item" href="/workerman-statistics">统计监控系统</a>
+			</div>
 			<div class="thumbnail">
 				<div class="caption">
 					<p class="f24">下载</p>

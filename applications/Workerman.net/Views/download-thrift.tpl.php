@@ -6,7 +6,7 @@
 				<a href="/download">下载</a> <span class="divider"></span>
 		</li>
 		<li class="active">
-				Thrift远程调用框架
+				Thrift RPC远程调用框架
 		</li>
 </ul>
 <div class="row clearfix">
@@ -14,7 +14,7 @@
 		<div class="list-group">
 			<a class="list-group-item" href="/download">workerman 下载</a>
 			<div class="list-group-item active">
-				Thrift远程调用框架 下载
+				Thrift RPC远程调用框架 下载
 			</div>
 			<a class="list-group-item" href="/download/jsonrpc">JsonRpc远程调用框架 下载</a>
 			<a class="list-group-item" href="/download/chat">聊天室框架 下载</a>
