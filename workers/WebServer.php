@@ -127,7 +127,7 @@ class WebServer extends Man\Core\SocketWorker
         if(!$url_info)
         {
             App\Common\Protocols\Http\header('HTTP1.1/ 400 Bad Request');
-            return $this->sendToClient(App\Common\Protocols\Http\http_end(''));
+            return $this->sendToClient(App\Common\Protocols\Http\http_end('<h1>400 Bad Request</h1>'));
         }
         
         $path = $url_info['path'];
@@ -161,6 +161,13 @@ class WebServer extends Man\Core\SocketWorker
         // 请求的文件存在
         if(is_file($file))
         {
+            // 判断是否是站点目录里的文件
+            if((!($request_realpath = realpath($file)) || !($root_dir_realpath = realpath($root_dir))) || 0 !== strpos($request_realpath, $root_dir_realpath))
+            {
+                App\Common\Protocols\Http\header('HTTP1.1/ 400 Bad Request');
+                return $this->sendToClient(App\Common\Protocols\Http\http_end('<h1>400 Bad Request</h1>'));
+            }
+            
             // 如果请求的是php文件
             if($extension == 'php')
             {

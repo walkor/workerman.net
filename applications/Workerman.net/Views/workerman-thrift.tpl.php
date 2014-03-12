@@ -44,13 +44,13 @@
 				<div class="list-group-item active">
 					Thrift RPC 远程调用框架
 				</div>
-				<a class="list-group-item" href="/workerman-jsonrpc">Json Rpc远程调用框架</a>
+				<a class="list-group-item" href="/workerman-jsonrpc">Json RPC远程调用框架</a>
 				<a class="list-group-item" href="/workerman-chat">聊天室框架</a>
 				<a class="list-group-item" href="/workerman-statistics">统计监控系统</a>
 			</div>
 			<div class="thumbnail">
 				<div class="caption">
-					<p class="f24">下载Thrift Rpc远程调用框架</p>
+					<p class="f24">下载Thrift RPC远程调用框架</p>
 					<a class="btn btn-primary btn-large" href="/download/thriftczip">下载workerman-thrift-rpc </a> <font class='f11 gray'>下载<?php echo $thrift_download_count;?>次</font>
 				</div>
 			</div>
