@@ -9,11 +9,11 @@
 					<div class="col-md-3 column">
 						<b>关于</b>
 						<ul class="sub">
-						<li><a href="/about/">Workerman</a></li>
-						<li><a href="/features/">特性</a></li>
-						<li><a href="/performance/">性能</a></li>
-						<li><a href="/license/">许可</a></li>
-						<li><a href="/contact/">联系我们</a></li>
+						<li><a href="/about">Workerman</a></li>
+						<li><a href="/features">特性</a></li>
+						<li><a href="/performance">性能</a></li>
+						<li><a href="/license">许可</a></li>
+						<li><a href="/contact">联系我们</a></li>
 						</ul>
 					</div>
 					<div class="col-md-4 column">
