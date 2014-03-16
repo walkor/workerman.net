@@ -49,7 +49,7 @@
 				</div>
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
-						<li<?php if($html_nav == 'workerman')echo ' class="active" ';?>>
+						<li<?php if($html_nav == 'home')echo ' class="active" ';?>>
 							<a href="/">首页</a>
 						</li>
 						<li<?php if($html_nav == 'applications')echo ' class="active" ';?>>
@@ -58,7 +58,7 @@
 						<li<?php if($html_nav == 'download')echo ' class="active" ';?>>
 							<a href="/download">下载</a>
 						</li>
-						<li<?php if($html_nav == 'documentation"')echo ' class="active" ';?>>
+						<li<?php if($html_nav == 'documentation')echo ' class="active" ';?>>
 							<a href="/documentation">文档</a>
 						</li>
 						<li<?php if($html_nav == 'group')echo ' class="active" ';?>>

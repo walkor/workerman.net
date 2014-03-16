@@ -103,16 +103,16 @@ cpu：Intel® Core™ i3-3220 CPU @ 3.30GHz × 4
 </code></pre>
 
 <h4>业务逻辑</h4>
-<p><code>EchoServer</code></p>
+<code>EchoServer</code>
 <h4>结果</h4>
 
 <pre><code>短链接（每次请求完成后关闭链接，下次请求建立新的链接）:
 条件： 压测脚本开500个线程，每个线程链接Workerman 10W次，每次链接发送1个请求
-结果： 吞吐量：3W/S ， cpu：60% ， 内存占用：4*8M = 32M
+结果： 吞吐量：<b>3W/S</b> ， cpu：60% ， 内存占用：4*8M = 32M
 </code></pre>
 <pre><code>长链接（每次请求后不关闭链接，下次请求继续复用这个链接）:
 条件： 压测脚本开1000个线程，每个线程链接Workerman 1次，每个链接发送10W请求
-结果： 吞吐量：9.7W/S ， cpu：68% ， 内存占用：4*8M = 32M
+结果： 吞吐量：<b>9.7W/S</b> ， cpu：68% ， 内存占用：4*8M = 32M
 </code></pre>
 <pre><code>无流量抖动，无内存泄漏，性能非常强悍</code></pre>
 		</div>
