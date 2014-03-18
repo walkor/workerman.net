@@ -1,6 +1,6 @@
 <ul class="breadcrumb">
 	<li>
-		<a href="/features">关于</a> <span class="divider"></span>
+		<a href="/workerman">关于</a> <span class="divider"></span>
 	</li>
 	<li class="active">
 		workerman
@@ -34,6 +34,7 @@
 			<li>支持telnet远程控制</li>
 			<li>高性能</li>
 			</ul>
+			<a class="btn"  href="/workerman">查看更多 »</a>
 		</div>
 		<div class="col-md-5 column text-center">
 			<h3>workerman相关应用</h3>
