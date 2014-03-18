@@ -7,9 +7,7 @@
 			Workerman是一个<strong>高性能</strong>的<strong>PHP socket 服务器框架</strong>。已经被多家公司用于Rpc服务器、聊天室服务器、网络游戏服务器、手机游戏等后台开发。
 			只要会PHP，你就可以基于Workerman轻而易举的开发出你想要的网络应用，不必再为PHP Socket底层开发而烦恼。
 		</p>
-		<p>
-			<a class="btn" target="_blank" href="/workerman">查看更多 »</a>
-		</p>
+		<a class="btn" target="_blank" href="/workerman">查看更多 »</a><a class="btn" target="_blank" href="/download">下载 »</a>
 	</div>
 	<div class="col-md-5 column">
 		<div class="thumbnail">
@@ -22,6 +20,7 @@
 					<li>支持服务器平滑重启</li>
 					<li>支持文件更新检测</li>
 				</ol>
+				<a class="btn" target="_blank" href="/features">查看更多 »</a>
 			</div>
 		</div>
 	</div>
