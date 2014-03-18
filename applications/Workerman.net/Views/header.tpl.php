@@ -49,8 +49,8 @@
 				</div>
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
-						<li<?php if($html_nav == 'home')echo ' class="active" ';?>>
-							<a href="/">首页</a>
+						<li<?php if($html_nav == 'about')echo ' class="active" ';?>>
+							<a href="/">关于</a>
 						</li>
 						<li<?php if($html_nav == 'applications')echo ' class="active" ';?>>
 							<a href="/applications">相关应用</a>

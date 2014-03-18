@@ -1,8 +1,5 @@
 <ul class="breadcrumb">
 	<li>
-		<a href="/">首页</a> <span class="divider"></span>
-	</li>
-	<li>
 		<a href="/applications">相关应用</a> <span class="divider"></span>
 	</li>
 	<li class="active">

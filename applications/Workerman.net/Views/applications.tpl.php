@@ -1,7 +1,4 @@
 <ul class="breadcrumb">
-	<li>
-		<a href="/">首页</a> <span class="divider"></span>
-	</li>
 	<li class="active">
 		相关应用
 	</li>

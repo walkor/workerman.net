@@ -1,6 +1,6 @@
 <ul class="breadcrumb">
 	<li>
-		<a href="/">文档</a> <span class="divider"></span>
+		<a href="/">关于</a> <span class="divider"></span>
 	</li>
 	<li class="active">
 		workerman
