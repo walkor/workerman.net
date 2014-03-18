@@ -45,7 +45,7 @@
 					  <span class="icon-bar"></span>
 					  <span class="icon-bar"></span>
 					  </button>
-					  <img src="/img/the-workerman-logo.png" />
+					  <a href="/"><img src="/img/the-workerman-logo.png" alt="workerman.net logo" /></a>
 				</div>
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">

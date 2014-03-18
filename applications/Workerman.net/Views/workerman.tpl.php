@@ -1,6 +1,6 @@
 <ul class="breadcrumb">
 	<li>
-		<a href="/">关于</a> <span class="divider"></span>
+		<a href="/features">关于</a> <span class="divider"></span>
 	</li>
 	<li class="active">
 		workerman
@@ -45,7 +45,7 @@
 			</div>
 			<div class="thumbnail">
 				<div class="caption">
-					<p class="f24">下载workerman</p>
+					<b class="f24">下载workerman</b>
 					<a class="btn btn-primary btn-large" href="/download/workermanczip">下载workerman2.0.1 </a> <font class='f11 gray'>下载<?php echo $workerman_download_count;?>次</font>
 				</div>
 			</div>
