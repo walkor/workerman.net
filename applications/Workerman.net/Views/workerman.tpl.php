@@ -45,7 +45,7 @@
 			</div>
 			<div class="thumbnail">
 				<div class="caption">
-					<b class="f24">下载workerman</b>
+					<div class="f24">下载workerman</div>
 					<a class="btn btn-primary btn-large" href="/download/workermanczip">下载workerman2.0.1 </a> <font class='f11 gray'>下载<?php echo $workerman_download_count;?>次</font>
 				</div>
 			</div>
