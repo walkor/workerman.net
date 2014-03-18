@@ -34,7 +34,7 @@
 			<li>支持telnet远程控制</li>
 			<li>高性能</li>
 			</ul>
-			<a class="btn"  href="/workerman">查看更多 »</a>
+			<a class="btn"  href="/features">查看更多 »</a>
 		</div>
 		<div class="col-md-5 column text-center">
 			<h3>workerman相关应用</h3>
