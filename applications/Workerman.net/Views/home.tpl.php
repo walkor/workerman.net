@@ -8,7 +8,7 @@
 			只要会PHP，你就可以基于Workerman轻而易举的开发出你想要的网络应用，不必再为PHP Socket底层开发而烦恼。
 		</p>
 		<a class="btn" target="_blank" href="/workerman">查看更多 »</a>
-		<p><a class="btn btn-primary" target="_blank" type="button" href="/download">下载Workerman »</a></p>
+		<div><a class="btn btn-primary" target="_blank" type="button" href="/download">下载Workerman »</a></div>
 	</div>
 	<div class="col-md-5 column">
 		<div class="thumbnail">
