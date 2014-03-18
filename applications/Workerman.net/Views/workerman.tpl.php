@@ -58,11 +58,11 @@
 			<h3>安装</h3>
 			<p>下载后解压即可</p>
 			<h3>启动停止</h3>
-			<p>启动：./workerman start</p>
-			<p>停止：./workerman stop</p>
-			<p>重启：./workerman restart</p>
-			<p>平滑重启：./workerman reload</p>
-			<p>查看状态：./workerman status</p>
+			<p>启动：./bin/workermand start</p>
+			<p>停止：./bin/workermand stop</p>
+			<p>重启：./bin/workermand restart</p>
+			<p>平滑重启：./bin/workermand reload</p>
+			<p>查看状态：./bin/workermand status</p>
 			<h3>
 				服务端开发示例EchoServer
 			</h3>
