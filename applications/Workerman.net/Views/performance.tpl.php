@@ -11,7 +11,13 @@
 	<h3>
 		为什么workerman拥有卓越的性能
 	</h3>
+	</div>
+</div>
+<div class="row clearfix">
+	<div class="col-md-4 column">
 	<div class="text-center"><img src="/img/workerman-request-map.png" alt="workerman 运行机制" /></div>
+	</div>
+	<div class="col-md-8 column">
 	<div class="thumbnail">
 		<div class="caption">
 			<h4>避免读取磁盘和反复编译</h4>
