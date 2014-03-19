@@ -158,4 +158,8 @@ p
 
 .about-nav > li {
     display: inline-block;
+    margin:0px 8px;
+}
+.about-nav > span {
+    color: #AAAAAA;
 }
