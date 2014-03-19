@@ -3,7 +3,7 @@
 		<a href="/workerman">关于</a> <span class="divider"></span>
 	</li>
 	<li class="active">
-		特性
+		性能
 	</li>
 </ul>
 <div class="row clearfix">
@@ -23,7 +23,7 @@
 			<h4>避免读取磁盘和反复编译</h4>
 			<p>
     			workerman运行过程中，单个进程生命周期内只要PHP文件被载入编译过一次，便会常驻内存，不会再去从磁盘读取或者再去编译。
-    			workerman省去了每次请求中的请求初始化、创建执行环境、词法解析、语法解析、编译生成opcode以及请求关闭等诸多耗时的步骤。
+    			workerman省去了重复的请求初始化、创建执行环境、词法解析、语法解析、编译生成opcode以及请求关闭等诸多耗时的步骤。
     			实际上workerman运行起来后便几乎没有磁盘IO及PHP文件编译开销，剩下的只是简单的计算过程，这使得workerman运行飞快。
 			</p>
 			</div>
