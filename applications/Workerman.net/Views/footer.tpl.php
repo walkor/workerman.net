@@ -20,10 +20,10 @@
 						<b>下载</b>
 						<ul class="sub">
 						<li><a href="/download/workerman">Workerman</a></li>
-						<li><a href="/download/thrift">Workerman-ThriftRpc</a></li>
-						<li><a href="/download/jsonrpc">Workerman-JsonRpc</a></li>
-						<li><a href="/download/jsonrpc">Workerman-chat</a></li>
-						<li><a href="/download/statistics">Workerman-Statistics</a></li>
+						<li><a href="/download/thrift">Thrift Rpc远程调用框架</a></li>
+						<li><a href="/download/jsonrpc">Json Rpc远程调用框架</a></li>
+						<li><a href="/download/jsonrpc">PHP 聊天室</a></li>
+						<li><a href="/download/statistics">分布式统计监控系统</a></li>
 						</ul>
 					</div>
 					<div class="col-md-3 column">
