@@ -1,9 +1,21 @@
 <ul class="breadcrumb">
 	<li>
-		<a href="/workerman">关于</a> <span class="divider"></span>
+		<b>关于</b>
+	</li>
+	<li>
+		<a href="/workerman">workerman</a> <span class="gray">|</span>
 	</li>
 	<li class="active">
-		特性
+		特性 <span class="gray">|</span>
+	</li>
+	<li>
+		<a href="/performance">性能</a><span class="gray">|</span>
+	</li>
+	<li>
+		<a href="/license">许可</a> <span class="gray">|</span>
+	</li>
+	<li>
+		<a href="/contact">联系我们</a> <span class="gray">|</span>
 	</li>
 </ul>
 <div class="row clearfix">
