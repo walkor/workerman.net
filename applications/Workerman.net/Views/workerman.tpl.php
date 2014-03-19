@@ -1,4 +1,4 @@
-<ul class="breadcrumb">
+<ul class="about-nav">
 	<li>
 		<b>关于</b>
 	</li>
@@ -6,7 +6,7 @@
 		workerman <span class="gray">|</span>
 	</li>
 	<li>
-		<a href="/feature">特性</a> <span class="gray">|</span>
+		<a href="/features">特性</a> <span class="gray">|</span>
 	</li>
 	<li>
 		<a href="/performance">性能</a><span class="gray">|</span>

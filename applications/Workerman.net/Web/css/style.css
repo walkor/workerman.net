@@ -143,4 +143,15 @@ p
 {
     text-indent:2em	
 }
+
+.about-nav {
+	background-color: white;
+	border: 1px solid #DDD;
+}
+.about-nav {
+    padding: 8px 15px;
+	margin-bottom: 20px;
+	list-style: none;
+	background-color: whiteSmoke;
+	border-radius: 4px;
 }

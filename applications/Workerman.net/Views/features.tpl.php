@@ -1,4 +1,4 @@
-<ul class="breadcrumb">
+<ul class="about-nav">
 	<li>
 		<b>关于</b>
 	</li>
