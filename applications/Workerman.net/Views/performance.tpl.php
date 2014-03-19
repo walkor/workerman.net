@@ -8,16 +8,16 @@
 </ul>
 <div class="row clearfix">
 	<div class="col-md-12 column">
-	<h3>
+	<h2 class="text-center">
 		为什么workerman拥有卓越的性能
-	</h3>
+	</h2>
 	</div>
 </div>
 <div class="row clearfix">
-	<div class="col-md-4 column">
-	<div class="text-center"><img src="/img/workerman-request-map.png" alt="workerman 运行机制" /></div>
+	<div class="col-md-5 column">
+	<div class="text-center"><img src="/img/workerman-request-map.png" alt="workerman 运行机制"  class="img-thumbnail" /></div>
 	</div>
-	<div class="col-md-8 column">
+	<div class="col-md-7 column">
 	<div class="thumbnail">
 		<div class="caption">
 			<h4>避免读取磁盘和反复编译</h4>
@@ -49,6 +49,10 @@
 			</p>
 		</div>
 	</div>
+	</div>
+</div>
+<div class="row clearfix">
+	<div class="col-md-12 column">
 	<h3>性能测试</h3>
 			<h4>测试环境：</h4>
 <pre><code>系统：ubuntu 12.04 LTS 64位
