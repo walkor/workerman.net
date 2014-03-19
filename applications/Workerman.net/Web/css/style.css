@@ -155,3 +155,7 @@ p
 	background-color: whiteSmoke;
 	border-radius: 4px;
 }
+
+.about-nav > li {
+    display: inline-block;
+}

@@ -1,6 +1,6 @@
 <ul class="about-nav">
 	<li>
-		<b>关于</b>
+		<b>关于</b> <span class="gray">|</span>
 	</li>
 	<li>
 		<a href="/workerman">workerman</a> <span class="gray">|</span>
