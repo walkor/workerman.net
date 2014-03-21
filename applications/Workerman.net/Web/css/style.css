@@ -154,18 +154,19 @@ p
 	border-radius: 4px;
 }
 
-.nav-head
-{
-	border:0px;
-	color:#AAAAAA;
-	font-weight:bold;
-}
-
 .about-nav > li {
     display: inline-block;
     padding:0px 8px;
     border-left:1px solid #CCCCCC;
 }
+
+.nav-head
+{
+    border:0px;
+    color:#AAAAAA;
+    font-weight:bold;
+}
+
 
 .about-nav .active
 {
