@@ -158,9 +158,10 @@ p
     display: inline-block;
     padding:0px 8px;
     border-left:1px solid #CCCCCC;
+    line-height: 1.2;
 }
 
-.about-nav > li > .nav-head
+.about-nav  .nav-head
 {
     border:0px;
     color:#999999;
