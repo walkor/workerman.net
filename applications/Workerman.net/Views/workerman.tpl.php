@@ -1,6 +1,6 @@
 <ul class="about-nav">
-	<li>
-		<b>关于</b> 
+	<li class="nav-head">
+		关于
 	</li>
 	<li class="active">
 		workerman 
