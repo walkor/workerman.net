@@ -160,10 +160,10 @@ p
     border-left:1px solid #CCCCCC;
 }
 
-.about-nav > li .nav-head
+.about-nav > li > .nav-head
 {
     border:0px;
-    color:#AAAAAA;
+    color:#999999;
     font-weight:bold;
 }
 
