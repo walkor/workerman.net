@@ -11,9 +11,11 @@ else
     $path = '';
 }
 
+$host_name = 'www.workerman.net';
+
 if(0 !== strpos($_SERVER['HTTP_HOST'],$host_name))
 {
-    return \App\Common\Protocols\Http\header('Location: http://' . $host_name . '/' .$_SERVER['REQUEST_URI'], true, 301);
+    return \App\Common\Protocols\Http\header('Location: http://' . $host_name .$_SERVER['REQUEST_URI'], true, 301);
 }
 
 $tmp_arr = explode('/', $path);
