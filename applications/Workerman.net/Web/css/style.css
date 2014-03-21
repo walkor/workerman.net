@@ -147,8 +147,6 @@ p
 .about-nav {
 	background-color: white;
 	border: 1px solid #DDD;
-}
-.about-nav {
     padding: 8px 15px;
 	margin-bottom: 20px;
 	list-style: none;
@@ -160,6 +158,13 @@ p
     display: inline-block;
     margin:0px 8px;
 }
-.about-nav > span {
+
+.about-nav  span {
+	display: inline-block;
     color: #AAAAAA;
+}
+
+.about-nav .active
+{
+	color: #AAAAAA;
 }
