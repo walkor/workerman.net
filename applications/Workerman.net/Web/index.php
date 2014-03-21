@@ -11,6 +11,11 @@ else
     $path = '';
 }
 
+if($_SERVER['HTTP_HOST'] !== 'www.workerman.net')
+{
+    return \App\Common\Protocols\Http\header('Location: /' . $_SERVER['REQUEST_URI'], true, 301);
+}
+
 $tmp_arr = explode('/', $path);
 foreach($tmp_arr as $key=>$value)
 {
