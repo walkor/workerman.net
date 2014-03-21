@@ -1,18 +1,18 @@
 <ul class="about-nav">
 	<li>
-		<b>关于</b> <span class="gray">|</span>
+		<b>关于</b> 
 	</li>
 	<li class="active">
-		workerman <span class="gray">|</span>
+		workerman 
 	</li>
 	<li>
-		<a href="/features">特性</a> <span class="gray">|</span>
+		<a href="/features">特性</a> 
 	</li>
 	<li>
-		<a href="/performance">性能</a> <span class="gray">|</span>
+		<a href="/performance">性能</a> 
 	</li>
 	<li>
-		<a href="/license">许可</a> <span class="gray">|</span>
+		<a href="/license">许可</a> 
 	</li>
 	<li>
 		<a href="/contact">联系我们</a>

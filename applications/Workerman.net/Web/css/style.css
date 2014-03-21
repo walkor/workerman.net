@@ -157,6 +157,7 @@ p
 .about-nav > li {
     display: inline-block;
     margin:0px 8px;
+    border-left:1px solid #CCCCCC;
 }
 
 .about-nav  > li >  span {
