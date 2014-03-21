@@ -160,7 +160,7 @@ p
     border-left:1px solid #CCCCCC;
 }
 
-.nav-head
+.about-nav > li .nav-head
 {
     border:0px;
     color:#AAAAAA;
