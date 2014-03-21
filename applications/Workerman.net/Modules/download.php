@@ -6,7 +6,7 @@ namespace WorkerMan\Modules;
  */
 function download()
 {
-    $html_title = 'workerman下载|一个高性能的PHP Socket 服务器框架';
+    $html_title = 'workerman下载  |  workerman PHP Socket 服务器框架';
     $html_nav = 'download';
     $download_workerman_count_key = 'download_workerman_count';
     $workerman_download_count =  \WorkerMan\Lib\Store::get($download_workerman_count_key);
@@ -41,7 +41,7 @@ function download_workerman()
  */
 function download_thrift()
 {
-    $html_title = 'workerman-thrift-rpc下载|一个高性能的PHP Thrift Rpc框架';
+    $html_title = 'workerman-thrift-rpc下载 | 一个高性能的PHP Thrift Rpc框架';
     $html_nav = 'download';
     $download_thrift_count_key = 'download_thrift_count';
     $thrift_download_count =  \WorkerMan\Lib\Store::get($download_thrift_count_key);
@@ -67,7 +67,7 @@ function download_thriftzip()
  */
 function download_jsonrpc()
 {
-    $html_title = 'workerman-json-rpc下载|一个高性能的PHP Json Rpc框架';
+    $html_title = 'workerman-json-rpc下载 | 一个高性能的PHP Json Rpc框架';
     $html_nav = 'download';
     $download_jsonrpc_count_key = 'download_jsonrpc_count';
     $jsonrpc_download_count =  \WorkerMan\Lib\Store::get($download_jsonrpc_count_key);
@@ -93,7 +93,7 @@ function download_jsonrpczip()
  */
 function download_chat()
 {
-    $html_title = 'workerman-chat下载|一个高性能的PHP 聊天室框架';
+    $html_title = 'workerman-chat下载 | 一个高性能的PHP 聊天室框架';
     $html_nav = 'download';
     $download_chat_count_key = 'download_chat_count';
     $chat_download_count =  \WorkerMan\Lib\Store::get($download_chat_count_key);
