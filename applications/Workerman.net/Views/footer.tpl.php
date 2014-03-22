@@ -25,7 +25,13 @@
 						<li><a href="/download/jsonrpc">PHP 聊天室</a></li>
 						<li><a href="/download/statistics">分布式统计监控系统</a></li>
 						</ul>
-						<p class="gray">蜀ICP备13029294号</p>
+						<p class="gray">
+						蜀ICP备13029294号
+						<script type="text/javascript">
+							var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+							document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F609dc2f866ce0133cdf405ea1a45f492' type='text/javascript'%3E%3C/script%3E"));
+						</script>
+						</p>
 					</div>
 					<div class="col-md-3 column">
 						<b>联系我们</b>
@@ -36,10 +42,6 @@
 						</ul>
 					</div>
 					<div class="col-md-1 column">
-					<script type="text/javascript">
-							var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-							document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F609dc2f866ce0133cdf405ea1a45f492' type='text/javascript'%3E%3C/script%3E"));
-					</script>
 					</div>
 			</div>
 		</div>
