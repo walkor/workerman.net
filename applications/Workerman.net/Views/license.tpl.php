@@ -9,7 +9,7 @@
 		<a href="/features">特性</a> 
 	</li>
 	<li>
-		<a href="/license">性能</a>
+		<a href="/performance">性能</a>
 	</li>
 	<li class="active">
 		许可 

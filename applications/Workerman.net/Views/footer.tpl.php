@@ -25,19 +25,25 @@
 						<li><a href="/download/jsonrpc">PHP 聊天室</a></li>
 						<li><a href="/download/statistics">分布式统计监控系统</a></li>
 						</ul>
+						<p class="gray">蜀ICP备13029294号</p>
 					</div>
 					<div class="col-md-3 column">
-						<address> <b>网址：www.workerman.net</b><br/> 邮箱：worker-man@qq.com<br/> QQ：2202055656<br/>QQ群：257046084<br/>蜀ICP备13029294号</address>
+						<b>联系我们</b>
+						<ul class="sub">
+						<li>邮箱：worker-man@qq.com</li>
+						<li>QQ：2202055656</li>
+						<li>QQ群：257046084</li>
+						</ul>
 					</div>
 					<div class="col-md-1 column">
+					<script type="text/javascript">
+							var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+							document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F609dc2f866ce0133cdf405ea1a45f492' type='text/javascript'%3E%3C/script%3E"));
+					</script>
 					</div>
 			</div>
 		</div>
 	</div>
 </div>
-<script type="text/javascript">
-var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F609dc2f866ce0133cdf405ea1a45f492' type='text/javascript'%3E%3C/script%3E"));
-</script>
 </body>
 </html>
