@@ -1,7 +1,7 @@
 <?php
 namespace WorkerMan\Modules;
 
-function features()
+function contact()
 {
     $html_title = '联系我们 | workerman PHP Socket 服务器框架';
     $html_nav = 'about';
