@@ -22,7 +22,7 @@
 						<li><a href="/download/workerman">Workerman</a></li>
 						<li><a href="/download/thrift">Thrift Rpc远程调用框架</a></li>
 						<li><a href="/download/jsonrpc">Json Rpc远程调用框架</a></li>
-						<li><a href="/download/jsonrpc">PHP 聊天室</a></li>
+						<li><a href="/download/chat">PHP 聊天室</a></li>
 						<li><a href="/download/statistics">分布式统计监控系统</a></li>
 						</ul>
 						<p class="gray">
