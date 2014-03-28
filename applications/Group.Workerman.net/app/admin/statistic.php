@@ -15,7 +15,7 @@
 
 if (!defined('IN_ANWSION'))
 {
-	die;
+	\App\Common\Protocols\jump_exit();
 }
 
 class statistic extends AWS_ADMIN_CONTROLLER

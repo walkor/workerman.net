@@ -15,7 +15,7 @@
 
 if (!defined('IN_ANWSION'))
 {
-	die;
+	\App\Common\Protocols\jump_exit();
 }
 
 class reputation_class extends AWS_MODEL

@@ -15,7 +15,7 @@
 
 if (!defined('IN_ANWSION'))
 {
-	die;
+	\App\Common\Protocols\jump_exit();
 }
 
 class ucenter_class extends AWS_MODEL

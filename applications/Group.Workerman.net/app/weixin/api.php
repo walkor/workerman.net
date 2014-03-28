@@ -15,7 +15,7 @@
 
 if (!defined('IN_ANWSION'))
 {
-	die;
+	\App\Common\Protocols\jump_exit();
 }
 
 class api extends AWS_CONTROLLER
@@ -34,13 +34,13 @@ class api extends AWS_CONTROLLER
 	{		
 		if (!$this->model('weixin')->check_signature($_GET['signature'], $_GET['timestamp'], $_GET['nonce']))
 		{
-			die;
+			\App\Common\Protocols\jump_exit();
 		}
 		
 		if ($_GET['echostr'])
 		{
 			echo htmlspecialchars($_GET['echostr']);
-			die;
+			\App\Common\Protocols\jump_exit();
 		}
 		
 		$this->input_message = $this->model('weixin')->fetch_message();

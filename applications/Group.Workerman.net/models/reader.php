@@ -15,7 +15,7 @@
 
 if (!defined('IN_ANWSION'))
 {
-	die;
+	\App\Common\Protocols\jump_exit();
 }
 
 class reader_class extends AWS_MODEL

@@ -7,7 +7,7 @@
  
 if (!defined('IN_ANWSION'))
 {
-	die;
+	\App\Common\Protocols\jump_exit();
 }
 
 /*
@@ -323,7 +323,7 @@ class Services_Tencent_QQConnect_V2 extends Services_Tencent_QQConnect_Oauth
 					}
 					else
 					{
-						die('api调用参数错误: 未传入参数 $tmpKey');
+						\App\Common\Protocols\jump_exit('api调用参数错误: 未传入参数 $tmpKey');
 					}
 				}
 			}
@@ -345,7 +345,7 @@ class Services_Tencent_QQConnect_V2 extends Services_Tencent_QQConnect_Oauth
 			if (! $n)
 			{
 				$str = implode(",", $val);
-				die('api调用参数错误: ' . $str . " 必填一个");
+				\App\Common\Protocols\jump_exit('api调用参数错误: ' . $str . " 必填一个");
 			}
 		}
 		
@@ -378,7 +378,7 @@ class Services_Tencent_QQConnect_V2 extends Services_Tencent_QQConnect_Oauth
 		//如果APIMap不存在相应的api
 		if (empty($this->APIMap[$name]))
 		{
-			die("api调用名称错误: 不存在的API: $name");
+			\App\Common\Protocols\jump_exit("api调用名称错误: 不存在的API: $name");
 		}
 		
 		//从APIMap获取api相应参数
@@ -409,7 +409,7 @@ class Services_Tencent_QQConnect_V2 extends Services_Tencent_QQConnect_Oauth
 		}
 		else
 		{
-			die($response->ret . ': ' . $response->msg);
+			\App\Common\Protocols\jump_exit($response->ret . ': ' . $response->msg);
 		}
 	
 	}

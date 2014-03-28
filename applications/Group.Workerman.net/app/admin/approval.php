@@ -15,7 +15,7 @@
 
 if (!defined('IN_ANWSION'))
 {
-	die;
+	\App\Common\Protocols\jump_exit();
 }
 
 class approval extends AWS_ADMIN_CONTROLLER
@@ -74,7 +74,7 @@ class approval extends AWS_ADMIN_CONTROLLER
 	{
 		if (!$approval_item = $this->model('publish')->get_approval_item($_GET['id']))
 		{
-			die;
+			\App\Common\Protocols\jump_exit();
 		}
 		
 		switch ($approval_item['type'])

@@ -23,11 +23,11 @@ class HTTP
 	 */
 	public static function no_cache_header($type = 'text/html', $charset = 'utf-8')
 	{
-		header('Expires: Mon, 26 Jul 1997 05:00:00 GMT'); // Date in the past
-		header('Last-Modified: ' . gmdate('D, d M Y H:i:s') . ' GMT'); // always modified
-		header('Cache-Control: no-cache, must-revalidate'); // HTTP/1.1
-		header('Pragma: no-cache');
-		header('Content-Type: ' . $type . '; charset=' . $charset . '');
+		\App\Common\Protocols\header('Expires: Mon, 26 Jul 1997 05:00:00 GMT'); // Date in the past
+		\App\Common\Protocols\header('Last-Modified: ' . gmdate('D, d M Y H:i:s') . ' GMT'); // always modified
+		\App\Common\Protocols\header('Cache-Control: no-cache, must-revalidate'); // HTTP/1.1
+		\App\Common\Protocols\header('Pragma: no-cache');
+		\App\Common\Protocols\header('Content-Type: ' . $type . '; charset=' . $charset . '');
 	}
 
 	/**
@@ -66,10 +66,10 @@ class HTTP
 
 	public static function error_404()
 	{
-		header('HTTP/1.1 404 Not Found');
+		\App\Common\Protocols\header('HTTP/1.1 404 Not Found');
 		
 		TPL::output('global/error_404');
-		exit;
+		\App\Common\Protocols\jump_exit();
 	}
 
 	public static function parse_redirect_url($url)
@@ -90,8 +90,8 @@ class HTTP
 	{
 		if ($url = HTTP::parse_redirect_url($url))
 		{
-			header('Location: ' . $url);
-			die;
+			\App\Common\Protocols\header('Location: ' . $url);
+			\App\Common\Protocols\jump_exit();
 		}
 	}
 	
@@ -168,13 +168,13 @@ class HTTP
 		
 		ob_end_clean();
 		
-		header("Cache-Control: no-cache, must-revalidate");
-		header("Pragma: no-cache");
-		header('Date: ' . gmdate('D, d M Y H:i:s', $modifytime) . ' GMT');
-		header('Content-Disposition: attachment; ' . self::download_filename_header($filename));
-		//header("Content-Type: application/octet-stream");	// has bug with IE
-		//header('HTTP/1.1 206 Partial Content');
-		header('Accept-Ranges: bytes');
+		\App\Common\Protocols\header("Cache-Control: no-cache, must-revalidate");
+		\App\Common\Protocols\header("Pragma: no-cache");
+		\App\Common\Protocols\header('Date: ' . gmdate('D, d M Y H:i:s', $modifytime) . ' GMT');
+		\App\Common\Protocols\header('Content-Disposition: attachment; ' . self::download_filename_header($filename));
+		//\App\Common\Protocols\header("Content-Type: application/octet-stream");	// has bug with IE
+		//\App\Common\Protocols\header('HTTP/1.1 206 Partial Content');
+		\App\Common\Protocols\header('Accept-Ranges: bytes');
 		
 		if ($filesize)
 		{
@@ -182,12 +182,12 @@ class HTTP
 			{
 				$rangesize = ($filesize - $range) > 0 ?  ($filesize - $range) : 0;
 			
-				header('Content-Length: ' . $rangesize);
-				header('Content-Range: bytes ' . $range . '-' . ($filesize - 1) . '/' . ($filesize));
+				\App\Common\Protocols\header('Content-Length: ' . $rangesize);
+				\App\Common\Protocols\header('Content-Range: bytes ' . $range . '-' . ($filesize - 1) . '/' . ($filesize));
 			}
 			else
 			{			
-				header('Content-Length: ' . $filesize);
+				\App\Common\Protocols\header('Content-Length: ' . $filesize);
 			}
 		}
 	}

@@ -14,8 +14,8 @@
 
 if (! file_exists(dirname(__FILE__) . '/system/config/database.php') AND ! file_exists(dirname(__FILE__) . '/system/config/install.lock.php') AND !defined('SAE_TMP_PATH'))
 {
-	header('Location: ./install/');
-	exit;
+	\App\Common\Protocols\header('Location: ./install/');
+	\App\Common\Protocols\jump_exit();
 }
 
 include('system/system.php');

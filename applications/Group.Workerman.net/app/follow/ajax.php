@@ -16,7 +16,7 @@ define('IN_AJAX', TRUE);
 
 if (!defined('IN_ANWSION'))
 {
-	die;
+	\App\Common\Protocols\jump_exit();
 }
 
 class ajax extends AWS_CONTROLLER
@@ -30,7 +30,7 @@ class ajax extends AWS_CONTROLLER
 	{
 		if (! $_GET['uid'] OR $_GET['uid'] == $this->user_id)
 		{
-			die;
+			\App\Common\Protocols\jump_exit();
 		}
 		
 		// 首先判断是否存在关注

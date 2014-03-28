@@ -44,7 +44,7 @@ class H
 		//HTTP::no_cache_header('text/javascript');
 		
 		echo str_replace(array("\r", "\n", "\t"), '', json_encode(H::sensitive_words($array)));
-		exit;
+		\App\Common\Protocols\jump_exit();
 	}
 	
 	public static function valid_email($email)
@@ -61,7 +61,7 @@ class H
 		TPL::assign('interval', $interval);
 
 		TPL::output('global/show_message');
-		die;
+		\App\Common\Protocols\jump_exit();
 	}
 
 	/**

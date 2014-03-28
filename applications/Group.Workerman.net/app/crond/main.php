@@ -15,7 +15,7 @@
 
 if (!defined('IN_ANWSION'))
 {
-	die;
+	\App\Common\Protocols\jump_exit();
 }
 
 class main extends AWS_CONTROLLER
@@ -34,10 +34,10 @@ class main extends AWS_CONTROLLER
 	
 	public function run_action()
 	{
-		header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');             // Date in the past
-		header('Last-Modified: ' . gmdate('D, d M Y H:i:s') . ' GMT'); // always modified
-		header('Cache-Control: no-cache, must-revalidate');           // HTTP/1.1
-		header('Pragma: no-cache');                                   // HTTP/1.0
+		\App\Common\Protocols\header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');             // Date in the past
+		\App\Common\Protocols\header('Last-Modified: ' . gmdate('D, d M Y H:i:s') . ' GMT'); // always modified
+		\App\Common\Protocols\header('Cache-Control: no-cache, must-revalidate');           // HTTP/1.1
+		\App\Common\Protocols\header('Pragma: no-cache');                                   // HTTP/1.0
 		
 		@set_time_limit(0);
 		

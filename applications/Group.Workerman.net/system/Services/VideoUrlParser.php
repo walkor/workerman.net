@@ -285,7 +285,7 @@ class Services_VideoUrlParser
 			$str = preg_replace($find, $replace, $matches[1]);
 			//var_dump($str);
 			$json = json_decode($str);
-			//var_dump($json);exit;
+			//var_dump($json);\App\Common\Protocols\jump_exit();
 			if (is_array($json) || is_object($json) && !empty($json))
 			{
 				foreach ($json as $val)

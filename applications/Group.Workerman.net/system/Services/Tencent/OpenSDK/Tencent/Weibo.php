@@ -232,7 +232,7 @@ class Services_Tencent_OpenSDK_Tencent_Weibo extends Services_Tencent_OpenSDK_OA
 	{
 		if(!self::$_appkey || !self::$_appsecret)
 		{
-			exit('app key or app secret not init');
+			\App\Common\Protocols\jump_exit('app key or app secret not init');
 		}
 		
 		if($is_oauth)

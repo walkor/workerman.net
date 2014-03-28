@@ -15,7 +15,7 @@
 
 if (!defined('IN_ANWSION'))
 {
-	die;
+	\App\Common\Protocols\jump_exit();
 }
 
 class main extends AWS_CONTROLLER
@@ -147,10 +147,10 @@ class main extends AWS_CONTROLLER
 		{
 			$sql_query .= "\n\nUPDATE `[#DB_PREFIX#]system_setting` SET `value` = 's:8:\"" . ($_GET['id'] + 1) . "\";' WHERE `varname` = 'db_version';";
 			
-			header('Content-type: text/plain; charset=UTF-8');
+			\App\Common\Protocols\header('Content-type: text/plain; charset=UTF-8');
 			
 			echo str_replace(array('[#DB_PREFIX#]', '[#DB_ENGINE#]'), array(AWS_APP::config()->get('database')->prefix, $this->db_engine), $sql_query);
-			die;
+			\App\Common\Protocols\jump_exit();
 		}
 	}
 	
@@ -185,7 +185,7 @@ class main extends AWS_CONTROLLER
 					TPL::assign('sql_error', $sql_error);
 					TPL::assign('version', $version);
 					TPL::output('install/upgrade_fail');
-					die;
+					\App\Common\Protocols\jump_exit();
 				}
 			}
 		
