@@ -51,7 +51,7 @@ switch ($_POST['step'])
 		
 		if (function_exists('session_start'))
 		{
-			$system_require['session'] = TRUE;
+			$system_require['session'] = FALSE;
 		}
 		
 		if (function_exists('mb_strlen'))
