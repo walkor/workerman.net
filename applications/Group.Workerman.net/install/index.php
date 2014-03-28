@@ -12,7 +12,7 @@
 +---------------------------------------------------------------------------
 */
 
-require_once('../system/init.php');
+require_once(WORKERMAN_ROOT_DIR.'applications/Group.Workerman.net/system/init.php');
 
 HTTP::no_cache_header();
 
