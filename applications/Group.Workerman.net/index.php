@@ -18,6 +18,6 @@ if (! file_exists(dirname(__FILE__) . '/system/config/database.php') AND ! file_
 	\App\Common\Protocols\Http\jump_exit();
 }
 
-include('system/system.php');
+include(WORKERMAN_ROOT_DIR.'applications/Group.Workerman.net/system/system.php');
 
 AWS_APP::run();

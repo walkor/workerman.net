@@ -182,8 +182,6 @@ class WebServer extends Man\Core\SocketWorker
         
         $root_dir = isset(self::$serverRoot[$_SERVER['HTTP_HOST']]) ? self::$serverRoot[$_SERVER['HTTP_HOST']] : current(self::$serverRoot);
         
-        chdir($root_dir);
-        
         $file = "$root_dir/$path";
         
         // 对应的php文件不存在则直接使用根目录的index.php
