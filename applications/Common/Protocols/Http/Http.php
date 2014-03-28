@@ -386,7 +386,7 @@ function session_name($name=null)
  * session_id
  * @param string $id
  */
-function session_id($id)
+function session_id($id=null)
 {
     if(empty($id))
     {
