@@ -23,11 +23,11 @@ class HTTP
 	 */
 	public static function no_cache_header($type = 'text/html', $charset = 'utf-8')
 	{
-		\App\Common\Protocols\header('Expires: Mon, 26 Jul 1997 05:00:00 GMT'); // Date in the past
-		\App\Common\Protocols\header('Last-Modified: ' . gmdate('D, d M Y H:i:s') . ' GMT'); // always modified
-		\App\Common\Protocols\header('Cache-Control: no-cache, must-revalidate'); // HTTP/1.1
-		\App\Common\Protocols\header('Pragma: no-cache');
-		\App\Common\Protocols\header('Content-Type: ' . $type . '; charset=' . $charset . '');
+		\App\Common\Protocols\Http\header('Expires: Mon, 26 Jul 1997 05:00:00 GMT'); // Date in the past
+		\App\Common\Protocols\Http\header('Last-Modified: ' . gmdate('D, d M Y H:i:s') . ' GMT'); // always modified
+		\App\Common\Protocols\Http\header('Cache-Control: no-cache, must-revalidate'); // HTTP/1.1
+		\App\Common\Protocols\Http\header('Pragma: no-cache');
+		\App\Common\Protocols\Http\header('Content-Type: ' . $type . '; charset=' . $charset . '');
 	}
 
 	/**
@@ -61,15 +61,15 @@ class HTTP
 			$domain = G_COOKIE_DOMAIN;
 		}
 		
-		return \App\Common\Protocols\setcookie(G_COOKIE_PREFIX . $name, $value, $expire, $path, $domain, $secure);
+		return \App\Common\Protocols\Http\setcookie(G_COOKIE_PREFIX . $name, $value, $expire, $path, $domain, $secure);
 	}
 
 	public static function error_404()
 	{
-		\App\Common\Protocols\header('HTTP/1.1 404 Not Found');
+		\App\Common\Protocols\Http\header('HTTP/1.1 404 Not Found');
 		
 		TPL::output('global/error_404');
-		\App\Common\Protocols\jump_exit();
+		\App\Common\Protocols\Http\jump_exit();
 	}
 
 	public static function parse_redirect_url($url)
@@ -90,8 +90,8 @@ class HTTP
 	{
 		if ($url = HTTP::parse_redirect_url($url))
 		{
-			\App\Common\Protocols\header('Location: ' . $url);
-			\App\Common\Protocols\jump_exit();
+			\App\Common\Protocols\Http\header('Location: ' . $url);
+			\App\Common\Protocols\Http\jump_exit();
 		}
 	}
 	
@@ -168,13 +168,13 @@ class HTTP
 		
 		ob_end_clean();
 		
-		\App\Common\Protocols\header("Cache-Control: no-cache, must-revalidate");
-		\App\Common\Protocols\header("Pragma: no-cache");
-		\App\Common\Protocols\header('Date: ' . gmdate('D, d M Y H:i:s', $modifytime) . ' GMT');
-		\App\Common\Protocols\header('Content-Disposition: attachment; ' . self::download_filename_header($filename));
-		//\App\Common\Protocols\header("Content-Type: application/octet-stream");	// has bug with IE
-		//\App\Common\Protocols\header('HTTP/1.1 206 Partial Content');
-		\App\Common\Protocols\header('Accept-Ranges: bytes');
+		\App\Common\Protocols\Http\header("Cache-Control: no-cache, must-revalidate");
+		\App\Common\Protocols\Http\header("Pragma: no-cache");
+		\App\Common\Protocols\Http\header('Date: ' . gmdate('D, d M Y H:i:s', $modifytime) . ' GMT');
+		\App\Common\Protocols\Http\header('Content-Disposition: attachment; ' . self::download_filename_header($filename));
+		//\App\Common\Protocols\Http\header("Content-Type: application/octet-stream");	// has bug with IE
+		//\App\Common\Protocols\Http\header('HTTP/1.1 206 Partial Content');
+		\App\Common\Protocols\Http\header('Accept-Ranges: bytes');
 		
 		if ($filesize)
 		{
@@ -182,12 +182,12 @@ class HTTP
 			{
 				$rangesize = ($filesize - $range) > 0 ?  ($filesize - $range) : 0;
 			
-				\App\Common\Protocols\header('Content-Length: ' . $rangesize);
-				\App\Common\Protocols\header('Content-Range: bytes ' . $range . '-' . ($filesize - 1) . '/' . ($filesize));
+				\App\Common\Protocols\Http\header('Content-Length: ' . $rangesize);
+				\App\Common\Protocols\Http\header('Content-Range: bytes ' . $range . '-' . ($filesize - 1) . '/' . ($filesize));
 			}
 			else
 			{			
-				\App\Common\Protocols\header('Content-Length: ' . $filesize);
+				\App\Common\Protocols\Http\header('Content-Length: ' . $filesize);
 			}
 		}
 	}

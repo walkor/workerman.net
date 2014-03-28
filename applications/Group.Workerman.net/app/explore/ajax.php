@@ -15,7 +15,7 @@
 
 if (!defined('IN_ANWSION'))
 {
-	\App\Common\Protocols\jump_exit();
+	\App\Common\Protocols\Http\jump_exit();
 }
 
 class ajax extends AWS_CONTROLLER

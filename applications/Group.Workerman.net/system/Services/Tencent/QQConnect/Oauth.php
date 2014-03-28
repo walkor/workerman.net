@@ -7,7 +7,7 @@
  
 if (!defined('IN_ANWSION'))
 {
-	\App\Common\Protocols\jump_exit();
+	\App\Common\Protocols\Http\jump_exit();
 }
 
 class Services_Tencent_QQConnect_Oauth
@@ -69,7 +69,7 @@ class Services_Tencent_QQConnect_Oauth
 			
 			if (isset($msg->error))
 			{
-				\App\Common\Protocols\jump_exit($msg->error . ': ' . $msg->error_description);
+				\App\Common\Protocols\Http\jump_exit($msg->error . ': ' . $msg->error_description);
 			}
 		}
 		
@@ -106,7 +106,7 @@ class Services_Tencent_QQConnect_Oauth
 		
 		if (isset($user->error))
 		{
-			\App\Common\Protocols\jump_exit($user->error . ': ' . $user->error_description);
+			\App\Common\Protocols\Http\jump_exit($user->error . ': ' . $user->error_description);
 		}
 		
 		return $user->openid;

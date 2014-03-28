@@ -212,9 +212,9 @@ class core_image
 			$output = $im->getimageblob();
   			$outputtype = $im->getFormat();
  
-			\App\Common\Protocols\header("Content-type: $outputtype");
+			\App\Common\Protocols\Http\header("Content-type: $outputtype");
 			echo $output;
-			\App\Common\Protocols\jump_exit();
+			\App\Common\Protocols\Http\jump_exit();
 		}
 		
 		return TRUE;
@@ -412,7 +412,7 @@ class core_image
 				throw new Zend_Exception('HTTP already sent, can\'t output image to browser.');
 			}
 			
-			\App\Common\Protocols\header('Content-Type: image/' . $this->image_type[$this->image_type_index[$this->image_ext]]);
+			\App\Common\Protocols\Http\header('Content-Type: image/' . $this->image_type[$this->image_type_index[$this->image_ext]]);
 			
 			switch ($this->image_type_index[$this->image_ext])
 			{
@@ -426,7 +426,7 @@ class core_image
 				break;
 			}
 			
-			\App\Common\Protocols\jump_exit();
+			\App\Common\Protocols\Http\jump_exit();
 		}
 
 		@imagedestroy($im);

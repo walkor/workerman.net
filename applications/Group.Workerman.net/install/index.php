@@ -390,7 +390,7 @@ switch ($_POST['step'])
 				}
 				catch (Exception $e)
 				{
-					\App\Common\Protocols\jump_exit('SQL Error: ' . $e->getMessage() . '<br /><br />Query: ' . $query_string);
+					\App\Common\Protocols\Http\jump_exit('SQL Error: ' . $e->getMessage() . '<br /><br />Query: ' . $query_string);
 				}
 			}
 		}

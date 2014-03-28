@@ -67,7 +67,7 @@ class core_captcha
 		
 		readfile($this->captcha->getImgDir() . $this->captcha->getId() . $this->captcha->getSuffix());
 		
-		\App\Common\Protocols\jump_exit();
+		\App\Common\Protocols\Http\jump_exit();
 	}
 	
 	public function is_validate($validate_code)

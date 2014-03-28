@@ -462,7 +462,7 @@ function show_error($exception_message, $error_message = '')
 	}
 	
 	echo _show_error($exception_message);
-	\App\Common\Protocols\jump_exit();
+	\App\Common\Protocols\Http\jump_exit();
 }
 
 /**

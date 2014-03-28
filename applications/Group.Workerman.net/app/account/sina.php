@@ -15,7 +15,7 @@
 
 if (!defined('IN_ANWSION'))
 {
-	\App\Common\Protocols\jump_exit();
+	\App\Common\Protocols\Http\jump_exit();
 }
 
 class sina extends AWS_CONTROLLER
@@ -32,7 +32,7 @@ class sina extends AWS_CONTROLLER
 	{
 		if (get_setting('sina_weibo_enabled') != 'Y')
 		{
-			\App\Common\Protocols\jump_exit();
+			\App\Common\Protocols\Http\jump_exit();
 		}
 	}
 

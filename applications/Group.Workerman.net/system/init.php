@@ -18,12 +18,12 @@ define('ENVIRONMENT_PHP_VERSION', '5.2.2');
 
 if (version_compare(PHP_VERSION, ENVIRONMENT_PHP_VERSION, '<'))
 {
-	\App\Common\Protocols\jump_exit('Error: WeCenter require PHP version ' . ENVIRONMENT_PHP_VERSION . ' or newer');
+	\App\Common\Protocols\Http\jump_exit('Error: WeCenter require PHP version ' . ENVIRONMENT_PHP_VERSION . ' or newer');
 }
 
 if (version_compare(PHP_VERSION, '6.0', '>='))
 {
-	\App\Common\Protocols\jump_exit('Error: WeCenter not support PHP version 6 currently');
+	\App\Common\Protocols\Http\jump_exit('Error: WeCenter not support PHP version 6 currently');
 }
 
 define('START_TIME', microtime(TRUE));

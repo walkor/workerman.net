@@ -15,7 +15,7 @@
 
 if (!defined('IN_ANWSION'))
 {
-	\App\Common\Protocols\jump_exit();
+	\App\Common\Protocols\Http\jump_exit();
 }
 
 define('GEO_EARTH_RADIUS', 6378);	// 地球半径
