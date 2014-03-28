@@ -61,7 +61,7 @@ class HTTP
 			$domain = G_COOKIE_DOMAIN;
 		}
 		
-		return setcookie(G_COOKIE_PREFIX . $name, $value, $expire, $path, $domain, $secure);
+		return \App\Common\Protocols\setcookie(G_COOKIE_PREFIX . $name, $value, $expire, $path, $domain, $secure);
 	}
 
 	public static function error_404()
