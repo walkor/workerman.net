@@ -30,7 +30,7 @@ define('X_UA_COMPATIBLE', 'IE=edge,Chrome=1');
 define('G_GZIP_COMPRESS', FALSE);
 
 // Session 存储类型 (db, file)
-define('G_SESSION_SAVE', 'db');
+define('G_SESSION_SAVE', 'file');
 
 // Session 文件存储路径
 define('G_SESSION_SAVE_PATH', '');

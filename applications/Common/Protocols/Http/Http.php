@@ -369,6 +369,37 @@ function session_start()
 }
 
 /**
+ * session_name
+ * @param string $name
+ */
+function session_name($name=null)
+{
+    if(empty($name))
+    {
+        return HttpCache::$sessionName;
+    }
+    HttpCache::$sessionName = $name;
+    return $name;
+}
+
+/**
+ * session_id
+ * @param string $id
+ */
+function session_id($id)
+{
+    if(empty($id))
+    {
+        return substr(basename(HttpCache::$instance->sessionFile), strlen('sess_'));
+    }
+    else
+    {
+        HttpCache::$instance->sessionFile = 'sess_'.$id;
+        return $id;
+    }
+}
+
+/**
  * 保存session
  */
 function session_write_close()
