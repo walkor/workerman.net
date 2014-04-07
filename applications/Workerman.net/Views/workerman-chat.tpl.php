@@ -59,8 +59,12 @@
 		<div class="col-md-12 column">
 			
 			<h3>
-				服务端开发示例
+				安装启动
 			</h3>
-			
+			<p>1、<a href="/download/chatzip" target="_blank">下载</a>workerman-chat，并解压缩到任意目录</p>
+			<p>2、启动workerman<code>./bin/workermand start</code>如下图</p>
+			<img src="/img/workerman-chat-start.png" />
+			<p>3、浏览器访问端口55151，例如<a href="http://workerman.net:55151">workerman.net:55151</a>如图：</p>
+			<img src="/img/workerman-chat-page.png" />
 		</div>
 	</div>
