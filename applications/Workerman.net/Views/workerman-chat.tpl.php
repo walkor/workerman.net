@@ -23,6 +23,7 @@
 				由于采用的是gateway workers 进程模型，gateway和workers之间是无状态的，gateway和workers可以分别部署在不同的物理机上，所以扩容和升级都非常方便。
 				workerman-chat也非常适合游戏后台开发。
 			</p>
+			<p>查看php聊天室demo请点击<a href="http://workerman.net:55151" target="_blank">这里</a></p>
 			<h3>
 				特性
 			</h3>
