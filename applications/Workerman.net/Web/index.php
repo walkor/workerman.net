@@ -11,7 +11,7 @@ else
     $path = '';
 }
 
-$host_name = 'www..workerman.net';
+$host_name = 'www.workerman.net';
 
 if(0 !== strpos($_SERVER['HTTP_HOST'],$host_name))
 {
