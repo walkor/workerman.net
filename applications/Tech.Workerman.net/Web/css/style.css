@@ -1,0 +1,174 @@
+strong
+{
+	color:#1372A2;
+}
+
+html,
+body, 
+ h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: "Microsoft YaHei", SimSun, sans-serif;
+}
+.the-workerman-framework
+{
+	border-color:#1372A2;background-color:#1372A2;color:white;font-size:32px;margin-bottom:0px;
+}
+.div-shadow3
+{
+	border-top:2px solid #B1B1B1;border-bottom:1px solid #C1C1C1;margin:0 5px;
+}
+.div-shadow2
+{
+    border-top:1px solid #D1D1D1;border-bottom:1px solid #E1E1E1;margin:0 6px;
+}
+.div-shadow1
+{
+    border-top:1px solid #F1F1F1;border-bottom:1px solid #F8F8F8;margin:0 7px 5px;
+}
+h3 img
+{
+	margin-right:8px;
+}
+
+f14
+{
+	font-size:14px;
+}
+.navbar-default .navbar-nav > li > a 
+{
+    color: #1E455E;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus
+{
+    background-color: #428BCA;
+    color: #FFFFFF;
+}
+
+.navbar-default .navbar-nav > li > a:hover, 
+.navbar-default .navbar-nav > li > a:focus 
+{
+    background-color: #428BCA;
+    color: #FFFFFF;
+}
+
+.navbar-header img
+{
+	margin-right:8px;
+}
+
+.layout-main-footer {
+    background-color:#202020;
+    color: #CCCCCC;
+    font-size: 0.9em;
+    margin: 2em 0 0;
+    padding: 20px 0;
+}
+
+address
+{
+	margin-left:36px;
+}
+
+ul .sub
+{
+	margin-left:10px;
+}
+
+.breadcrumb {
+    background-color: #FFFFFF;
+    border:1px solid #DDDDDD;
+}
+
+.jumbotron {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-size:17px;
+}
+
+.f24
+{
+	font-size:24px;
+}
+
+.f16
+{
+	font-size:16px;
+}
+
+.f14
+{
+	font-size:14px;
+}
+
+.f13
+{
+	font-size:13px;
+}
+
+.f12
+{
+	font-size:12px;
+}
+
+.f11
+{
+	font-size:11px;
+}
+
+.gray
+{
+	color:#AAAAAA;
+}
+
+.list-group .active {
+    background-color: #3276B1;
+    color:#FFFFFF;
+    font-weight:bold;
+}
+
+p
+{
+    text-indent:2em	
+}
+
+.about-nav {
+	background-color: white;
+	border: 1px solid #DDD;
+    padding: 8px 15px;
+	margin-bottom: 20px;
+	list-style: none;
+	background-color: whiteSmoke;
+	border-radius: 4px;
+}
+
+.about-nav > li {
+    display: inline-block;
+    padding:0px 8px;
+    border-left:1px solid #CCCCCC;
+    line-height: 1.2;
+}
+
+.about-nav  .nav-head
+{
+    border:0px;
+    color:#666666;
+    font-weight:bold;
+}
+
+.about-nav .active
+{
+	color: #AAAAAA;
+}

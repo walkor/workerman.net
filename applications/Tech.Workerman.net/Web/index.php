@@ -11,7 +11,7 @@ else
     $path = '';
 }
 
-$host_name = 'tech.workerman.net';
+$host_name = 'www.workerman.net';
 
 if(0 !== strpos($_SERVER['HTTP_HOST'],$host_name))
 {
@@ -29,6 +29,10 @@ foreach($tmp_arr as $key=>$value)
 $tmp_arr = array_values($tmp_arr);
 if(isset($tmp_arr[0]))
 {
+   /*  if($tmp_arr[0] == 'workerman')
+    {
+        return \App\Common\Protocols\Http\header('Location: /'.(!empty($_GET) ? '?'.http_build_query($_GET) : ''), true, 301);
+    } */
     $func = "\\Workerman\\Modules\\{$tmp_arr[0]}";
     if(isset($tmp_arr[1]))
     {

@@ -50,7 +50,7 @@
 			<div class="thumbnail">
 				<div class="caption">
 					<p class="f24">下载PHP 聊天室框架</p>
-					<a class="btn btn-primary btn-large" href="/download/chatczip">下载workerman-chat </a> <font class='f11 gray'>下载<?php echo $chat_download_count;?>次</font>
+					<a class="btn btn-primary btn-large" href="/download/chatzip">下载workerman-chat </a> <font class='f11 gray'>下载<?php echo $chat_download_count;?>次</font>
 				</div>
 			</div>
 		</div>
