@@ -95,13 +95,13 @@ preread_length=8192</code></pre>
 			<h4>3、启动服务</h4>
 			<code>./bin/workerman start</code>
 			<h4>4、测试</h4>
-			<pre><code>telnet 115.28.44.100 55555
+			<pre><code>telnet 127.0.0.1 55555
 输入任意字符串回车
 服务端会将字符串原封不动的返回</code></pre>
 			<p>结果如下</p>
-			<pre><code>telnet 115.28.44.100 55555
-Trying 115.28.44.100...
-Connected to 115.28.44.100.
+			<pre><code>telnet 127.0.0.1 55555
+Trying 127.0.0.1...
+Connected to 127.0.0.1.
 Escape character is '^]'.
 hello world
 hello world
