@@ -45,13 +45,13 @@
 		</ul>
 		<a class="btn"  href="/features">查看更多 »</a>
 		<h3><a name="env">运行环境</a></h3>
-		<h5>[必须]Linux系统</h5>		
-		<h5>[必须]PHP_CLI>=5.3</h5>
+		<h4>[必须]Linux系统</h4>		
+		<h4>[必须]PHP_CLI>=5.3</h4>
 		<p>需要开启posix、pcntl、sysvshm、sysvmsg模块。如果未安装PHP_CLI在ubuntu系统可使用命令<code>apt-get install php5-cli</code>安装</p>
-		<h5>[可选安装]安装libevent扩展</h5>
+		<h4>[可选安装]安装libevent扩展</h4>
 		<p>为了更好的性能，建议安装libevent扩展。安装libevent扩展的命令:<code>pecl install libevent</code>。
 		安装libevent扩展将使得php可以使用Epoll等高级的事件管理机制，大大的提高程序性能。注意：如果未安装libevent扩展，workerman则使用PHP自带的Select事件管理机制。</p>
-		<h5>[可选安装]安装proctitle扩展</h5>
+		<h4>[可选安装]安装proctitle扩展</h4>
 		<p>PHP>=5.5原生集成可跳过此步。为了方便查看进程信息，建议安装proctitle扩展。安装proctitile扩展命令:<code>pecl install proctitle</code>。
 		使用protitl扩展可以用ps命令看到workerman进程的详细信息如下图:</p>
 		<img src="/img/ps-workerman-game.png" />
