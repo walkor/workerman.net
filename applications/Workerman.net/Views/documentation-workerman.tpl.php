@@ -1,6 +1,6 @@
 <ul class="about-nav">
 	<li class="nav-head">
-		关于
+		文档
 	</li>
 	<li class="active">
 		workerman 
@@ -29,6 +29,7 @@
 		</div>
 	</div>
 	<div class="col-md-9 column">
+	    <h1>workerman 高性能的PHP Socket 框架</h1>
 		<h3><a name="feature">特性</a></h3>
 		<ul>
 		<li>使用PHP开发</li>
@@ -56,7 +57,7 @@
 		使用protitl扩展可以用ps命令看到workerman详细的进程的详细信息包括服务名、ip、端口、协议等如下图:</p>
 		<img src="/img/ps-workerman-game.png" />
 		<h3><a name="install">下载安装</a></h3>
-		<p>下载后解压即可</p>
+		<p>下载后解压即可 <a href="/download/workermanzip" target="_blank">workerman.2.0.1.zip</a></p>
 		<h3><a name="start">启动停止</a></h3>
 		<p>启动：./bin/workermand start</p>
 		<p>停止：./bin/workermand stop</p>
@@ -80,7 +81,7 @@ user=www-data
 ;预读长度
 preread_length=8192</code></pre>
 		<h4>3、启动服务如图</h4>
-		<code>./bin/workerman start</code>
+		<p><code>./bin/workerman start</code></p>
 		<img src="/img/workerman-start.png" />
 		<h4>4、测试</h4>
 		<pre><code>telnet 127.0.0.1 55555
