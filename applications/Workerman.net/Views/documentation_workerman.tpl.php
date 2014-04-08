@@ -6,16 +6,16 @@
 		workerman 
 	</li>
 	<li>
-		<a href="/documentation/php-thrift-rpc">php-thrift-rpc</a> 
+		<a href="/documentation/phpThriftRpc">php-thrift-rpc</a> 
 	</li>
 	<li>
-		<a href="/documentation/php-json-rpc">php-json-rpc</a> 
+		<a href="/documentation/phpJsonRpc">php-json-rpc</a> 
 	</li>
 	<li>
-		<a href="/documentation/php-chat-room">php聊天室</a> 
+		<a href="/documentation/phpChatRoom">php聊天室</a> 
 	</li>
 	<li>
-		<a href="/documentation/php-statistics">php统计监控系统</a>
+		<a href="/documentation/phpStatistics">php统计监控系统</a>
 	</li>
 </ul>
 <div class="row clearfix">
