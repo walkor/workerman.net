@@ -97,28 +97,28 @@ hello world
 Connection closed by foreign host.</code></pre>
     <h3><a name="interface">接口说明</a></h3>
     <p>类<code>Man\Core\SocketWorker</code>预留了4个钩子函数，实现这四个函数方法使得开发者可以在进程启动阶段、有数据到来时、数据接收完毕时、进程退出时加入自己的业务逻辑。</p>
-    <h4>钩子函数onStart</h4>
+    <h4>1、钩子函数onStart</h4>
     <pre><code>bool public onStart();</code></pre>
-    <p><b>[可选实现]</b> 当业务进程启动的时候出发一次，这里可以做一些全局的初始化的工作，例如初始化配置、数据库连接等。<br></p>
-    <h4>钩子函数onStop</h4>
+    <p><b>[可选实现]</b> 当业务进程启动的时候出发一次，这里可以做一些全局的初始化的工作，例如初始化配置、数据库连接等。</p><br>
+    <h4>2、钩子函数onStop</h4>
     <pre><code>bool public onStop();</code></pre>
     <p><b>[可选实现]</b> 当业务进程停止服务准备退出时触发，这里可以做一些全局的收尾工作。引起进程停止服务准备退出的情况或者原因如下：
     <br>1、运行停止命令 ./bin/workermand stop 
     <br>2、运行重启命令 ./bin/workermand restart
     <br>3、平滑重启服务 ./bin/workermand reload
-    <br>4、workerman检测到业务进程内存泄露达到上限值 conf/conf.d/Monitor.conf 中的max_mem_limit重启对应进程<br></p>
-    <h4>钩子函数dealInput</h4>
+    <br>4、workerman检测到业务进程内存泄露达到上限值 conf/conf.d/Monitor.conf 中的max_mem_limit重启对应进程</p><br>
+    <h4>3、钩子函数dealInput</h4>
     <pre><code>int public dealInput(string $bin);</code></pre>
     <p><b>[必须实现]</b>当有数据到达时触发，参数$bin是接受到的全部数据（包括之前接收的未处理的数据）。由于网络延时、本地socket缓冲区大小限制、TCP分片等原因，
     数据包可能不会一次全部到达，这时需要根据选定的协议和已经接收到的数据判断还有多少字节数据没有收到。返回0代表数据全部接收完毕（进入业务处理阶段），
     返回x>0代表还有x字节没有收到（继续等待x字节的数据），返回false表示数据包有错（终止当前请求，等待其它请求），可以通过./bin/workermand status查看每个业务进程的请求量、包错误量等信息。
-    <br></p>
-    <h4>钩子函数dealProcess</h4>
+    </p><br>
+    <h4>4、钩子函数dealProcess</h4>
     <pre><code>int public dealProcess(string $bin);</code></pre>
-    <p><b>[必须实现]</b>当数据全部接收完毕时（既dealInput()返回0时）触发。参数$bin是接收到的全部数据，根据选定协议解析出请求内容做相应的业务处理<br></p>
-    <h4>sendToClient</h4>
+    <p><b>[必须实现]</b>当数据全部接收完毕时（既dealInput()返回0时）触发。参数$bin是接收到的全部数据，根据选定协议解析出请求内容做相应的业务处理</p><br>
+    <h4>5、sendToClient</h4>
     <pre><code>void sendToClient($response_bin);</code></pre>
     <p>sendToClient方法用来将响应数据写到客户端。sendToClient是一个异步的过程，如果因客户端socket缓冲区满等原因无法发送全部数据，
-    则workerman会异步等待，直到客户端可写则继续发送剩下的数据。<br></p>
+    则workerman会异步等待，直到客户端可写则继续发送剩下的数据。</p><br>
 	</div>
 </div>
