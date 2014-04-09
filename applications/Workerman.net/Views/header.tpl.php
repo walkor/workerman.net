@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="<?php if(isset($html_desc))echo $html_desc;?>">
   <meta name="author" content="">
-
+  <meta name="baidu-site-verification" content="jLodbXMgwV" />
 	<!--link rel="stylesheet/less" href="/less/bootstrap.less" type="text/css" /-->
 	<!--link rel="stylesheet/less" href="/less/responsive.less" type="text/css" /-->
 	<!--script src="/js/less-1.3.3.min.js"></script-->
