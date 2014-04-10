@@ -21,7 +21,7 @@
 				下载workerman
 			</h3>
 			<p>
-				workerman是一款开源的高性能PHP Socket 服务器框架，您可以免费使用。
+				workerman是一款开源的高性能PHP Socket 服务器框架，您可以免费使用。<a class="btn"  href="/workerman">详细介绍 »</a>
 			</p>
 			<p>
 				<a class="btn btn-primary btn-large" href="/download/workermanzip">下载workerman2.0.1</a> <font class='f11 gray'>下载<?php echo $workerman_download_count;?>次</font>

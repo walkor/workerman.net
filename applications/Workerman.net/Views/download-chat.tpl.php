@@ -25,6 +25,7 @@
 			</h3>
 			<p>
 				workerman-chat是一款开源的PHP聊天室框架，使用改框架可以轻而易举的开发出自己的聊天室，采用Websocket协议，拥有更好的性能，支持分布式部署，可以自由扩展。
+				<a class="btn"  href="/workerman-chat">详细介绍 »</a>
 			</p>
 			<p>
 				<a class="btn btn-primary btn-large" href="/download/chatzip">下载workerman-chat</a> <font class='f11 gray'>下载<?php echo $chat_download_count;?>次</font>

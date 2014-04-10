@@ -25,6 +25,7 @@
 			</h3>
 			<p>
 				workerman Thrift Rpc是一款开源的Rpc远程调用框架，该框架使用workerman作为进程管理器，基于thrift协议，支持跨语言调用。
+				<a class="btn"  href="/workerman-thrift">详细介绍 »</a>
 			</p>
 			<p>
 				<a class="btn btn-primary btn-large" href="/download/thriftzip">下载workerman-thrift-rpc</a> <font class='f11 gray'>下载<?php echo $thrift_download_count;?>次</font>

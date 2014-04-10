@@ -25,6 +25,7 @@
 			</h3>
 			<p>
 				workerman Json Rpc是一款开源的Rpc远程调用框架，该框架使用workerman作为进程管理器，基于Json协议，开发使用都非常简单。
+				<a class="btn"  href="/workerman-jsonrpc">详细介绍 »</a>
 			</p>
 			<p>
 				<a class="btn btn-primary btn-large" href="/download/jsonrpczip">下载workerman-json-rpc</a> <font class='f11 gray'>下载<?php echo $jsonrpc_download_count;?>次</font>

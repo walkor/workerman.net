@@ -25,6 +25,7 @@
 			</h3>
 			<p>
 				workerman-statistics是一款开源的统计监控系统，只要安装了PHP-Cli即可运行，不依赖Mysql等其他软件。
+				<a class="btn"  href="/workerman-statistics">详细介绍 »</a>
 			</p>
 			<p>
 				<a class="btn btn-primary btn-large" href="/download/statisticszip">下载workerman-statistics</a> <font class='f11 gray'>下载<?php echo $statistics_download_count;?>次</font>
