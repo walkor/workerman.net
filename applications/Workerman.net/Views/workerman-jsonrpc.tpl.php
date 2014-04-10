@@ -14,15 +14,12 @@
 			<p class="f16">
 				JSON  (JavaScript Object Notation)是一种用于在组件间交互信息的数据交换格式，其是以JavaScript 为基础的数据表示语言。既方便于人的读写习惯，又有利于计算机的解析和生成。
 				</p>
-				<p>
+				<p class="f16">
 				RPC（Remote Procedure Call）是远程调用，既客户端通过某种协议向服务器发起请求并获得结果。RPC使得开发分布式网络程序非常方便，并且能极大限度的将网络系统的各个部分解耦，方便后续开发、维护。
 				</p>
-				<p>
+				<p class="f16">
 				workerman-json-rpc是一个以workerman作为服务器容器，使用Json作为协议简单高效的RPC远程调用框架。
 				</p>
-			<p class="f16">
-				workerman-json-rpc的目标是使得用PHP开发Rpc服务更加简单、更加灵活，并且更容易容易调试。
-			</p>
 			<h3>
 				特性
 			</h3>
