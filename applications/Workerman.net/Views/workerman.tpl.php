@@ -92,8 +92,9 @@ start_workers=4
 user=www-data
 ;预读长度
 preread_length=8192</code></pre>
-			<h4>3、启动服务</h4>
+			<h4>3、启动服务如下图：</h4>
 			<code>./bin/workerman start</code>
+			<img src="/img/workerman-start.png"/>
 			<h4>4、测试</h4>
 			<pre><code>telnet 127.0.0.1 55555
 输入任意字符串回车
@@ -106,6 +107,9 @@ Escape character is '^]'.
 hello world
 hello world
 Connection closed by foreign host.</code></pre>
+			<h4>5、查看workerman运行状态类似如下界面：</h4>
+			<code>./bin/workerman status</code>
+			<img src="/img/workerman-status.png" />
 			<h3>性能</h3>
 			<h4>测试环境：</h4>
 <pre><code>系统：ubuntu 12.04 LTS 64位
