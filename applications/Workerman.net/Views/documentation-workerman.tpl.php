@@ -26,6 +26,7 @@
 			<a class="list-group-item" href="#install">下载安装</a>
 			<a class="list-group-item" href="#start">启动停止</a>
 			<a class="list-group-item" href="#dev">服务端开发示例</a>
+			<a class="list-group-item" href="#interface">接口说明</a>
 		</div>
 	</div>
 	<div class="col-md-9 column">
