@@ -85,7 +85,7 @@ user=www-data
 ;socket有数据可读的时候预读长度，一般设置为应用层协议包头的长度，这里设置成尽可能读取更多的数据
 preread_length=84000
 			</code></pre>
-			<h3>workerman-thrift集成的监控界面如下（地址：http://ip:33737 <a href="http://www.workerman.net:55757/">demo</a>）</h3>
+			<h3>workerman-json-rpc集成了统计监控模块，界面如下（地址：http://ip:33737 <a href="http://www.workerman.net:55757/" target="_blank">demo</a>）</h3>
 			<img src="/img/statistics.png" />
 		</div>
 	</div>
