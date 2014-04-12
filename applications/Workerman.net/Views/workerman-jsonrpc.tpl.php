@@ -59,8 +59,9 @@
 			</h3>
 			<h4>创建文件./applications/JsonRpc/Services/User.php</h4>
 			<pre><code><span style="color: #000000"><span style="color: #0000BB">&lt;?php<br /></span><span style="color: #007700">class&nbsp;</span><span style="color: #0000BB">User<br /></span><span style="color: #007700">{<br />&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;static&nbsp;function&nbsp;</span><span style="color: #0000BB">getInfoByUid</span><span style="color: #007700">(</span><span style="color: #0000BB">$uid</span><span style="color: #007700">)<br />&nbsp;&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;....<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">}<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;static&nbsp;function&nbsp;</span><span style="color: #0000BB">getEmail</span><span style="color: #007700">(</span><span style="color: #0000BB">$uid</span><span style="color: #007700">)<br />&nbsp;&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;...<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">}<br />}<br /></span></span></code></pre>
-			<h4>启动服务端</h4>
+			<h4>启动服务如图：</h4>
 			<code>./bin/workermand start</code>
+			<img src="/img/workerman-jsonrpc-start.png" />
 			<br/>
 			<h3>客户端使用示例</h3>
 			<h4>客户端同步调用</h4>
@@ -84,5 +85,7 @@ user=www-data
 ;socket有数据可读的时候预读长度，一般设置为应用层协议包头的长度，这里设置成尽可能读取更多的数据
 preread_length=84000
 			</code></pre>
+			<h3>监控界面如下（http://ip:33737）：</h3>
+			<img src="/img/statistics.png" />
 		</div>
 	</div>
