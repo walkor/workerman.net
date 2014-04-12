@@ -122,5 +122,6 @@
 				</tr>
 		</tbody>
 		</table>
+		<a class="btn"  href="/workerman-chat">workerman-chat详细介绍 »</a>
 	</div>
 </div>

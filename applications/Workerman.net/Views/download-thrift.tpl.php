@@ -138,5 +138,6 @@ load：16<br/>
 				</tr>
 		</tbody>
 		</table>
+		<a class="btn"  href="/workerman-thrift">workerman-thrift详细介绍 »</a>
 	</div>
 </div>

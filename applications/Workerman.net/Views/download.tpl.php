@@ -120,5 +120,6 @@
 				</tr>
 		</tbody>
 		</table>
+		<a class="btn"  href="/workerman">workerman详细介绍 »</a>
 	</div>
 </div>

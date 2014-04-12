@@ -122,5 +122,6 @@
 				</tr>
 		</tbody>
 		</table>
+		<a class="btn"  href="/workerman-statistics">统计监控系统详细介绍 »</a>
 	</div>
 </div>
