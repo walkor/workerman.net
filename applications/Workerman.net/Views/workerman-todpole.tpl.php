@@ -43,7 +43,7 @@
 			<div class="thumbnail">
 				<div class="caption">
 					<p class="f24">下载PHP小蝌蚪游戏</p>
-					<a class="btn btn-primary btn-large" href="/download/todpoleczip">下载workerman-todpole </a> <font class='f11 gray'>下载<?php echo $todpole_download_count;?>次</font>
+					<a class="btn btn-primary btn-large" href="/download/todpolezip">下载workerman-todpole </a> <font class='f11 gray'>下载<?php echo $todpole_download_count;?>次</font>
 				</div>
 			</div>
 		</div>
@@ -60,5 +60,6 @@
 			<img src="/img/workerman-todpole-browser.png" alt="php蝌蚪小游戏浏览器界面" />
 			<h3>说明：</h3>
 			<p>小蝌蚪游戏交互比较简单，只包含了游动和聊天功能，开发者可以基于这个程序开发出自己的更为丰富的游戏应用。</p>
+			<p><a href="http://workerman.net:8383" target="_blank">小蝌蚪游戏DEMO点击这里</a></p>
 		</div>
 	</div>
