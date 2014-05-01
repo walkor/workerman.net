@@ -108,7 +108,7 @@
 				<h4 class="media-heading">
 					<a target="_blank" href="/workerman-todpole">PHP小蝌蚪游戏</a>
 				</h4>
-				<p><a target="_blank" class="btn" href="/workerman-statistics">详情 »</a></p>
+				<p>使用HTML5+WebSocket+Workerman实时推送技术开发的蝌蚪小游戏，游戏中玩家们可以实时互动，并且可以实时聊天，非常有趣。<a target="_blank" class="btn" href="/workerman-todpole">详情 »</a></p>
 			</div>
 		</div>
 	</div>
@@ -117,8 +117,11 @@
 			最近更新
 		</h3>
 		<ul>
+		    <li>
+				2014-5-01 PHP小蝌蚪游戏发布
+			</li>
 			<li>
-				2014-02-25 开始开发基于Websocket的聊天室
+				2014-03-25 基于Websocket的聊天室发布
 			</li>
 			<li>
 				2014-01-03 分布式监控系统发布
