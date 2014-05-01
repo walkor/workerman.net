@@ -43,6 +43,7 @@
 				</div>
 				<a class="list-group-item" href="/workerman-chat">聊天室框架</a>
 				<a class="list-group-item" href="/workerman-statistics">统计监控系统</a>
+				<a class="list-group-item" href="/workerman-todpole">PHP小蝌蚪实时交互游戏</a>
 			</div>
 			<div class="thumbnail">
 				<div class="caption">
