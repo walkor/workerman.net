@@ -51,7 +51,7 @@
 	<div class="row clearfix">
 		<div class="col-md-12 column">
 			<h3>
-				在自己的服务器上安装使用
+				在自己的服务器上安装使用(服务器端不支持windows系统)
 			</h3>
 			<h4>1、下载后直接解压</h4>
 			<h4>2、运行 <code>./bin/workerman start</code>如图：</h4>
