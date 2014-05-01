@@ -53,11 +53,11 @@
 			<h3>
 				在自己的服务器上安装使用
 			</h3>
-			<p>下载后直接解压</p>
-			<p>运行 <code>./bin/workerman start</code>如图：</p>
+			<h4>1、下载后直接解压</h4>
+			<h4>2、运行 <code>./bin/workerman start</code>如图：</h4>
 			<img src="/img/workerman-todpole-start.png" alt="php蝌蚪小游戏启动届满" />
-			<p>浏览器访问 http://ip:8383 如图:</p>
-			<img src="/img/workerman-todpole-browser.png" alt="php蝌蚪小游戏浏览器界面" />
+			<h4>3、浏览器访问 http://ip:8383 如图:</h4>
+			<a href="http://workerman.net:8383" target="_blank"><img src="/img/workerman-todpole-browser.png" alt="php蝌蚪小游戏浏览器界面" /></a>
 			<h3>说明：</h3>
 			<p>小蝌蚪游戏交互比较简单，只包含了游动和聊天功能，开发者可以基于这个程序开发出自己的更为丰富的游戏应用。</p>
 			<p><a href="http://workerman.net:8383" target="_blank">小蝌蚪游戏DEMO点击这里</a></p>
