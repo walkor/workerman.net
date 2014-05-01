@@ -139,3 +139,29 @@ function download_statisticszip()
     \WorkerMan\Lib\Store::set($download_statistics_count_key, ++$count);
     return \App\Common\Protocols\Http\header('Location: https://github.com/walkor/workerman-statistics/archive/master.zip');
 }
+
+/**
+ * 下载workerman-statistics页面
+ */
+function download_todpole()
+{
+    $html_title = 'workerman-todpole下载 | PHP蝌蚪小游戏 HTML5+WebSocket+PHP 服务器实时推送技术';
+    $html_nav = 'download';
+    $download_todpole_count_key = 'download_todpole_count';
+    $todpole_download_count =  \WorkerMan\Lib\Store::get($download_todpole_count_key);
+    include NET_ROOT . '/Views/header.tpl.php';
+    include NET_ROOT . '/Views/download-todpole.tpl.php';
+    include NET_ROOT . '/Views/footer.tpl.php';
+}
+
+/**
+ * 下载workerman-thrift-rpc.zip
+ */
+function download_todpolezip()
+{
+    $download_todpole_count_key = 'download_todpole_count';
+    $count = \WorkerMan\Lib\Store::get($download_todpole_count_key);
+    $count = $count >= 0 ? intval($count) : 0;
+    \WorkerMan\Lib\Store::set($download_todpole_count_key, ++$count);
+    return \App\Common\Protocols\Http\header('Location: https://github.com/walkor/workerman-todpole/archive/master.zip');
+}
