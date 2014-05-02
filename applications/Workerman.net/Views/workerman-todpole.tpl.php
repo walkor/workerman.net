@@ -27,6 +27,7 @@
 			<li>PHP实时推送技术</li>
 			<li>即时互动</li>
 			<li>即时聊天</li>
+			<li>独立运行，不依赖Mysql、apache、nginx等软件</li>
 			</ul>
 		</div>
 		<div class="col-md-5 column text-center">
@@ -60,6 +61,7 @@
 			<a href="http://workerman.net:8383" target="_blank"><img src="/img/workerman-todpole-browser.png" alt="php蝌蚪小游戏浏览器界面" /></a>
 			<h3>说明：</h3>
 			<p>小蝌蚪游戏交互比较简单，只包含了游动和聊天功能，开发者可以基于这个程序开发出自己的更为丰富的游戏应用。</p>
+			<p>游戏原型来自<a href="https://github.com/danielmahal/Rumpetroll">rumpetroll.com</a>，后端代码由原来的ruby改成PHP。整个游戏后台包括Web服务全部由workerman来支撑。</p>
 			<p><a href="http://workerman.net:8383" target="_blank">小蝌蚪游戏DEMO点击这里</a></p>
 		</div>
 	</div>
