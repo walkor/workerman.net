@@ -79,7 +79,7 @@
 			 <a href="/workerman-todpole" class="pull-left"><img src="/img/workerman-todpole.png" class="media-object" alt='PHP 小蝌蚪游戏' /></a>
 			<div class="media-body">
 				<h4 class="media-heading">
-					<a target="_blank" href="/workerman-todpole">PHP小蝌蚪实时交互游戏</a>&nbsp;&nbsp;<font style="font-size:10px;color:red;">new</font>
+					<a target="_blank" href="/workerman-todpole">PHP小蝌蚪实时交互游戏</a>&nbsp;&nbsp;<font style="font-size:12px;color:red;">new</font>
 				</h4>
 				<p>使用HTML5+WebSocket+Workerman实时推送技术开发的蝌蚪小游戏，游戏中玩家们可以实时互动，并且可以实时聊天，非常有趣。<a target="_blank" class="btn" href="/workerman-todpole">详情 »</a></p>
 			</div>

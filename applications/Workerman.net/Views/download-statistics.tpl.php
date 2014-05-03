@@ -16,7 +16,7 @@
 			<div class="list-group-item active">
 				统计监控系统 下载
 			</div>
-			<a class="list-group-item" href="/download/todpole">PHP小蝌蚪实时交互游戏 下载&nbsp;&nbsp;<font style="font-size:10px;color:red;">new</font></a>
+			<a class="list-group-item" href="/download/todpole">PHP小蝌蚪实时交互游戏 下载&nbsp;&nbsp;<font style="font-size:12px;color:red;">new</font></a>
 		</div>
 	</div>
 	<div class="col-md-9 column">
