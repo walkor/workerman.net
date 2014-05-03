@@ -43,7 +43,7 @@
 				<div class="list-group-item active">
 					统计监控系统
 				</div>
-				<a class="list-group-item" href="/workerman-todpole">PHP小蝌蚪实时交互游戏</a>
+				<a class="list-group-item" href="/workerman-todpole">PHP小蝌蚪实时交互游戏</a>&nbsp;&nbsp;<font style="font-size:10px;color:red;">new</font>
 			</div>
 			<div class="thumbnail">
 				<div class="caption">
