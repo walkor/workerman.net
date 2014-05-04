@@ -37,7 +37,7 @@
 		<div class="thumbnail">
 			<div class="caption">
 				<h3>
-					<img src="/img/high-performance.png" /><strong>高性能</strong>
+					<img src="/img/high-performance.png" alt="workerman高性能"/><strong>高性能</strong>
 				</h3>
 				<p>
 					基于高性能的libevent事件轮询库，支持每秒4W的吞吐量，支持几万的并发连接。数据库等对象可以常驻内存，减少解析编译开销。
@@ -49,7 +49,7 @@
 		<div class="thumbnail">
 			<div class="caption">
 				<h3>
-					<img src="/img/high-availability.png" /><strong>高可用</strong>
+					<img src="/img/high-availability.png" alt="workerman高可用性"/><strong>高可用</strong>
 				</h3>
 				<p>
 					已被多家公司证实其高可用性，这些公司不乏日营业额过亿的电子商务公司用于订单系统的开发，以及知名网游公司用于游戏后台的开发。
@@ -61,7 +61,7 @@
 		<div class="thumbnail">
 			<div class="caption">
 				<h3>
-					<img src="/img/so-easy.png" /><strong>开发简单</strong>
+					<img src="/img/so-easy.png" alt="workerman开发使用简单"/><strong>开发简单</strong>
 				</h3>
 				<p>
 					Workerman已经有很多成熟的网络应用，只要你会PHP，你就可以在这些应用的基础上快速的开发出自己的Socket应用服务。
@@ -76,7 +76,7 @@
 			相关应用
 		</h3>
 		<div class="media">
-			 <a href="/workerman-todpole" class="pull-left"><img src="/img/workerman-todpole.png" class="media-object" alt='PHP 小蝌蚪游戏' /></a>
+			 <a href="/workerman-todpole" class="pull-left"><img src="/img/workerman-todpole.png" class="media-object" alt='PHP 小蝌蚪游戏界面' /></a>
 			<div class="media-body">
 				<h4 class="media-heading">
 					<a target="_blank" href="/workerman-todpole">PHP小蝌蚪实时交互游戏</a>&nbsp;&nbsp;<font style="font-size:12px;color:red;">new</font>
@@ -85,7 +85,7 @@
 			</div>
 		</div>
 		<div class="media">
-			 <a href="/workerman-thrift" class="pull-left"><img src="/img/workerman-thrift.png" class="media-object" alt='' /></a>
+			 <a href="/workerman-thrift" class="pull-left"><img src="/img/workerman-thrift.png" class="media-object" alt="workerman thrift RPC模块关系示意图"/></a>
 			<div class="media-body">
 				<h4 class="media-heading">
 					<a target="_blank" href="/workerman-thrift">Thrift RPC远程调用框架</a>
@@ -94,7 +94,7 @@
 			</div>
 		</div>
 		<div class="media">
-			 <a href="/workerman-chat" class="pull-left"><img src="/img/workerman-chat.png" class="media-object" alt='' /></a>
+			 <a href="/workerman-chat" class="pull-left"><img src="/img/workerman-chat.png" class="media-object" alt="PHP聊天室示意图"/></a>
 			<div class="media-body">
 				<h4 class="media-heading">
 					<a target="_blank" href="/workerman-chat">聊天室</a>
@@ -103,7 +103,7 @@
 			</div>
 		</div>
 		<div class="media">
-			 <a href="/workerman-statistics" class="pull-left"><img src="/img/workerman-statistics.png" class="media-object" alt='' /></a>
+			 <a href="/workerman-statistics" class="pull-left"><img src="/img/workerman-statistics.png" class="media-object" alt="PHP统计系统示意图" /></a>
 			<div class="media-body">
 				<h4 class="media-heading">
 					<a target="_blank" href="/workerman-statistics">分布式统计系统</a>

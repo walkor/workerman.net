@@ -62,7 +62,7 @@
 			<pre><code><span style="color: #000000"><span style="color: #0000BB">&lt;?php<br /></span><span style="color: #007700">class&nbsp;</span><span style="color: #0000BB">User<br /></span><span style="color: #007700">{<br />&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;static&nbsp;function&nbsp;</span><span style="color: #0000BB">getInfoByUid</span><span style="color: #007700">(</span><span style="color: #0000BB">$uid</span><span style="color: #007700">)<br />&nbsp;&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;....<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">}<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;static&nbsp;function&nbsp;</span><span style="color: #0000BB">getEmail</span><span style="color: #007700">(</span><span style="color: #0000BB">$uid</span><span style="color: #007700">)<br />&nbsp;&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;...<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">}<br />}<br /></span></span></code></pre>
 			<h4>启动服务如图：</h4>
 			<p><code>./bin/workermand start</code></p>
-			<img src="/img/workerman-jsonrpc-start.png" />
+			<img src="/img/workerman-jsonrpc-start.png" alt="php json rpc 启动界面"/>
 			<br/>
 			<h3>客户端使用示例</h3>
 			<h4>客户端同步调用</h4>
@@ -87,6 +87,6 @@ user=www-data
 preread_length=84000
 			</code></pre>
 			<h3>workerman-json-rpc集成了统计监控模块，界面如下（地址：http://ip:33737 <a href="http://www.workerman.net:55757/" target="_blank">demo</a>）</h3>
-			<img src="/img/statistics.png" />
+			<img src="/img/statistics.png" alt="json rpc统计监控系统界面"/>
 		</div>
 	</div>
