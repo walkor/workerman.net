@@ -62,10 +62,8 @@
 							<a href="/group">社区</a>
 						</li>
 					</ul>
-					<ul class="nav navbar-nav navbar-right">
-						<li>
+					<div class="nav navbar-nav navbar-right">
 							<a href="https://github.com/walkor/workerman"><img src="/img/github-big.png" alt="在github上clone源代码"/></a>
-						</li>
-					</ul>
+					</div>
 				</div>
 			</nav>
