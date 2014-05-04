@@ -94,7 +94,7 @@ user=www-data
 ;预读长度
 preread_length=8192</code></pre>
 			<h4>3、启动服务如下图：</h4>
-			<p><code>./bin/workerman start</code></p>
+			<p><code>./bin/workermand start</code></p>
 			<img src="/img/workerman-start.png"/>
 			<h4>4、测试</h4>
 			<pre><code>telnet 127.0.0.1 55555

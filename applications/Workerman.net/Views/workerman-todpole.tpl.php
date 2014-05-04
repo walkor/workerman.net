@@ -55,7 +55,7 @@
 				在自己的服务器上安装使用(服务器端不支持windows系统)
 			</h3>
 			<h4>1、下载后直接解压</h4>
-			<h4>2、运行 <code>./bin/workerman start</code>如图：</h4>
+			<h4>2、运行 <code>./bin/workermand start</code>如图：</h4>
 			<img src="/img/workerman-todpole-start.png" alt="php蝌蚪小游戏启动届满" />
 			<h4>3、浏览器访问 http://ip:8383 如图:</h4>
 			<a href="http://workerman.net:8383" target="_blank"><img src="/img/workerman-todpole-browser.png" alt="php蝌蚪小游戏浏览器界面" /></a>
