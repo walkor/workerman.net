@@ -48,7 +48,7 @@
 			<div class="thumbnail">
 				<div class="caption">
 					<p class="f24">统计监控系统</p>
-					<a class="btn btn-primary btn-large" href="/download/statisticsczip">下载workerman-statistics </a> <font class='f11 gray'>下载<?php echo $statistics_download_count;?>次</font>
+					<a class="btn btn-primary btn-large" href="/download/statisticszip">下载workerman-statistics </a> <font class='f11 gray'>下载<?php echo $statistics_download_count;?>次</font>
 				</div>
 			</div>
 		</div>
