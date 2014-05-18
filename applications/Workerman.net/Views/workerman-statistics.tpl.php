@@ -56,7 +56,7 @@
 	<div class="row clearfix">
 		<div class="col-md-12 column">
 			<h3>安装启动只需两步</h3>
-			<p>1、<a  href="/download/statisticsczip" target="_blank">下载</a>后解压缩到目标目录</p>
+			<p>1、<a  href="/download/statisticszip" target="_blank">下载</a>后解压缩到目标目录</p>
 			<p>2、运行<code>./bin/workermand start</code></p>
 			<h3>
 				客户端使用方法
