@@ -70,7 +70,7 @@
 			<a href="http://workerman.net:8383" target="_blank"><img src="/img/workerman-todpole-browser.png" alt="php蝌蚪小游戏浏览器界面" /></a>
 			<br><br>
 			<h3>阿里云详细安装教程之centos系统</h3>
-			<h4>1、<code>yum install php-cli.x86_64 php-process.x86_64 git.x86_64</code></h4>
+			<h4>1、<code>yum install php-cli php-process git</code></h4>
 			<h4>2、<code>cd /home/ && git clone https://github.com/walkor/workerman-todpole</code></h4>
 			<h4>3、<code>/home/workerman-todpole/workerman/bin/workermand start</code></h4>
 			<h4>4、大功告成！浏览器访问 http://ip:8383 （如果不知道自己服务器ip，则运行 <code>ip addr | grep eth1 | grep inet</code>查看）</h4>

@@ -56,6 +56,9 @@
 						<li<?php if($html_nav == 'download')echo ' class="active" ';?>>
 							<a href="/download">下载</a>
 						</li>
+						<li<?php if($html_nav == 'install')echo ' class="active" ';?>>
+							<a href="/install">安装</a>
+						</li>
 						<li<?php if($html_nav == 'documentation')echo ' class="active" ';?>>
 							<a href="/documentation">文档</a>
 						</li>
