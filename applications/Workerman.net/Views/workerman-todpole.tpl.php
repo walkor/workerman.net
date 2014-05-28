@@ -47,17 +47,29 @@
 					<a class="btn btn-primary btn-large" href="/download/todpolezip">下载workerman-todpole </a> <font class='f11 gray'>下载<?php echo $todpole_download_count;?>次</font>
 				</div>
 			</div>
+			<br>
+			<a href="http://s.click.taobao.com/t?e=m%3D2%26s%3DGKeTyTP6Ah8cQipKwQzePCperVdZeJviEViQ0P1Vf2kguMN8XjClAhbL5GVocYPX6vFecR8G%2FoXXm6P3uOIyfg86qmwSDD1wfViFRpBEm%2BxEiFpG%2BYiVROdn1BbglxZYxUhy8exlzcq9AmARIwX9K2Zg%2BdzdQFOwfMRvoxSVDSdLyrb2g0H2G5JcxXijM%2BwneEHpPTskRHnPKdU%2FdTrgjbw4MC6y5nKlXF%2B87KN7TKeiZ%2BQMlGz6FQ%3D%3D" target="_blank"><img src="http://gtms01.alicdn.com/tps/i1/T1AMCDFOhaXXcg0_ET-336-280.jpg" /></a>
 		</div>
 	</div>
 	<div class="row clearfix">
 		<div class="col-md-12 column">
+			<h3>如果自己没有服务器建议使用阿里云云主机，不到50块钱，阿里云最近搞活动送现金券点击下面链接</h3>
+			<a href="http://s.click.taobao.com/t?e=m%3D2%26s%3DGKeTyTP6Ah8cQipKwQzePCperVdZeJviEViQ0P1Vf2kguMN8XjClAhbL5GVocYPX6vFecR8G%2FoXXm6P3uOIyfg86qmwSDD1wfViFRpBEm%2BxEiFpG%2BYiVROdn1BbglxZYxUhy8exlzcq9AmARIwX9K2Zg%2BdzdQFOwfMRvoxSVDSdLyrb2g0H2G5JcxXijM%2BwneEHpPTskRHnPKdU%2FdTrgjbw4MC6y5nKlXF%2B87KN7TKeiZ%2BQMlGz6FQ%3D%3D" target="_blank"><img src="http://gtms03.alicdn.com/tps/i3/T1krqHFI0XXXXG_RZI-728-90.jpg" /></a>
 			<h3>
-				在自己的服务器上安装使用(服务器端不支持windows系统)
+				阿里云详细安装教程之debian系统
 			</h3>
-			<h4>1、下载后直接解压</h4>
-			<h4>2、运行 <code>./bin/workermand start</code>如图：</h4>
-			<img src="/img/workerman-todpole-start.png" alt="php蝌蚪小游戏启动界面" />
-			<h4>3、浏览器访问 http://ip:8383 如图:</h4>
+			<h4>终端运行<code>apt-get update</code>如图：</h4>
+			<img src="/img/apt-update.png"  alt="apt-get update 命令"/>
+			<h4>终端运行<code>apt-get install php5-cli</code>如图:</h4>
+			<img src="/img/apt-install-php5-cli.png" alt="apt-get 安装 php5-cli"/>
+			<h4>终端运行<code>apt-get install git</code>如图：</h4>
+			<img src="/img/apt-install-git.png" alt="apt-get 安装 git"/>
+			<h4>终端运行<code>cd /home/</code></h4>
+			<h4>终端运行<code>git clone https://github.com/walkor/workerman-todpole</code>如图：</h4>
+			<img src="/img/git-clone-workerman-todpole.png" alt="git 下载小蝌蚪代码"/>
+			<h4>终端运行<code></code>如图</h4>
+			<img src="/img/workerman-todpole-start-without-libevent.png" alt="php蝌蚪小游戏启动界面" />
+			<h4>浏览器访问 http://ip:8383 如图:（如果不知道自己服务器ip，则运行 <code>ip addr | grep eth1 | grep inet</code>查看）</h4>
 			<a href="http://workerman.net:8383" target="_blank"><img src="/img/workerman-todpole-browser.png" alt="php蝌蚪小游戏浏览器界面" /></a>
 			<h3>说明：</h3>
 			<p>小蝌蚪游戏交互比较简单，只包含了游动和聊天功能，开发者可以基于这个程序开发出自己的更为丰富的游戏应用。</p>
