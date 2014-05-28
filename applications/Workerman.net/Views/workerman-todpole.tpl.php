@@ -65,7 +65,7 @@
 			<h4>4、终端运行<code>cd /home/</code></h4>
 			<h4>5、终端运行<code>git clone https://github.com/walkor/workerman-todpole</code>如图：</h4>
 			<img src="/img/git-clone-workerman-todpole.png" alt="git 下载小蝌蚪代码"/>
-			<h4>6、终端运行<code></code>如图</h4>
+			<h4>6、终端运行<code>/home/workerman-todpole/workerman/bin/workermand start</code>如图</h4>
 			<img src="/img/workerman-todpole-start-without-libevent.png" alt="php蝌蚪小游戏启动界面" />
 			<h4>7、浏览器访问 http://ip:8383 如图:（如果不知道自己服务器ip，则运行 <code>ip addr | grep eth1 | grep inet</code>查看）</h4>
 			<a href="http://workerman.net:8383" target="_blank"><img src="/img/workerman-todpole-browser.png" alt="php蝌蚪小游戏浏览器界面" /></a>
