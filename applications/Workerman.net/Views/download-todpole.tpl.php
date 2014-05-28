@@ -26,7 +26,7 @@
 			</h3>
 			<p>
 				workerman-todpole是一款PHP+HTML5+WebSocket开发的即时交互小游戏，玩家们可以实时互动、即时聊天。
-				<a class="btn"  href="/workerman-todpole">详细介绍 »</a>
+				<a class="btn"  href="/workerman-todpole">安装教程&&详细介绍 »</a>
 			</p>
 			<p>
 				<a class="btn btn-primary btn-large" href="/download/todpolezip">下载workerman-todpole</a> <font class='f11 gray'>下载<?php echo $todpole_download_count;?>次</font>
@@ -116,6 +116,6 @@
 				</tr>
 		</tbody>
 		</table>
-		<a class="btn"  href="/workerman-todpole">PHP小蝌蚪游戏详细介绍 »</a>
+		<a class="btn"  href="/workerman-todpole">PHP小蝌蚪游戏安装教程及详细介绍 »</a>
 	</div>
 </div>
