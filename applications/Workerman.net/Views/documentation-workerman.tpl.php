@@ -57,6 +57,7 @@
 		<p>PHP>=5.5原生集成可跳过此步。为了方便查看进程信息，建议安装proctitle扩展。安装proctitile扩展命令:<code>pecl install proctitle</code>。
 		使用proctitle扩展可以用ps命令看到workerman详细的进程的详细信息包括服务名、ip、端口、协议等如下图:</p>
 		<img src="/img/ps-workerman-game.png" alt="ps workerman 进程示例"/>
+		<br><a href="/install">详细安装教程点击这里</a>
 		<h3><a name="install">下载安装</a></h3>
 		<p>下载后解压即可 <a href="/download/workermanzip" target="_blank">workerman.2.0.1.zip</a></p>
 		<h3><a name="start">启动停止</a></h3>

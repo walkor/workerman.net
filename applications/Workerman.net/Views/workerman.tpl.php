@@ -68,7 +68,7 @@
 	<div class="row clearfix">
 		<div class="col-md-12 column">
 			<h3>环境</h3>
-			<p>PHP>=5.3 非Win系统</p>
+			<p>PHP>=5.3 非Win系统&nbsp;&nbsp;<a href="/install">详细安装教程点击这里</a></p>
 			<h3>安装</h3>
 			<p>下载后解压即可</p>
 			<h3>启动停止</h3>
