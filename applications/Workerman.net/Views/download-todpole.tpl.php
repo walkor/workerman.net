@@ -17,6 +17,7 @@
 			<div class="list-group-item active">
 				PHP小蝌蚪实时交互游戏 下载
 			</div>
+			<a class="list-group-item" href="/download/flappybird">flappy bird 多人在线版 下载&nbsp;&nbsp;<font style="font-size:12px;color:red;">new</font></a>
 		</div>
 	</div>
 	<div class="col-md-9 column">

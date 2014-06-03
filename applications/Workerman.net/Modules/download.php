@@ -165,3 +165,30 @@ function download_todpolezip()
     \WorkerMan\Lib\Store::set($download_todpole_count_key, ++$count);
     return \App\Common\Protocols\Http\header('Location: https://github.com/walkor/workerman-todpole/archive/master.zip');
 }
+
+/**
+ * 下载workerman-flappy-bird页面
+ */
+function download_flappybird()
+{
+    $html_title = 'workerman-flappy-bird下载 | 多人在线flappy bird 源代码下载';
+    $html_nav = 'download';
+    $download_flappybird_count_key = 'download_flappybird_count';
+    $flappybird_download_count =  \WorkerMan\Lib\Store::get($download_flappybird_count_key);
+    include NET_ROOT . '/Views/header.tpl.php';
+    include NET_ROOT . '/Views/download-flappy-bird.tpl.php';
+    include NET_ROOT . '/Views/footer.tpl.php';
+}
+
+
+/**
+ * 下载workerman-flappy-bird
+ */
+function download_flappybirdzip()
+{
+    $download_flappybird_count_key = 'download_flappybird_count';
+    $count = \WorkerMan\Lib\Store::get($download_flappybird_count_key);
+    $count = $count >= 0 ? intval($count) : 0;
+    \WorkerMan\Lib\Store::set($download_flappybird_count_key, ++$count);
+    return \App\Common\Protocols\Http\header('Location: https://github.com/walkor/workerman-flappy-bird/archive/master.zip');
+}

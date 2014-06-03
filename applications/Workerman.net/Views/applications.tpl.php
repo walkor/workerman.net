@@ -4,7 +4,25 @@
 	</li>
 </ul>
 <div class="media">
-	 <a href="/workerman-thrift" class="pull-left"><img src="/img/workerman-thrift.png" class="media-object" alt='' /></a>
+	 <a href="/workerman-flappybird" class="pull-left"><img src="/img/workerman-flappy-bird.png" class="media-object" alt='workerman多人在线 flappy bird 游戏截图' /></a>
+	<div class="media-body">
+		<h4 class="media-heading">
+			<a target="_blank" href="/workerman-flappybird">flappy bird 游戏多人在线版</a>&nbsp;&nbsp;<font style="font-size:12px;color:red;">new</font>
+		</h4>
+		<p>使用HTML5+WebSocket+Workerman实时推送技术开发的多人在线版flappy bird，游戏中你可以看到无数玩家同时控制小鸟前赴后继地向前送死的壮烈(搞笑)场面。<a target="_blank" class="btn" href="/workerman-flappybird">详情 »</a></p>
+	</div>
+</div>
+<div class="media">
+	 <a href="/workerman-todpole" class="pull-left"><img src="/img/workerman-todpole.png" class="media-object" alt='PHP 小蝌蚪游戏界面' /></a>
+	<div class="media-body">
+		<h4 class="media-heading">
+			<a target="_blank" href="/workerman-todpole">PHP小蝌蚪实时交互游戏</a>
+		</h4>
+		<p>使用HTML5+WebSocket+Workerman实时推送技术开发的蝌蚪小游戏，游戏中玩家们可以实时互动，并且可以实时聊天，非常有趣。<a target="_blank" class="btn" href="/workerman-todpole">详情 »</a></p>
+	</div>
+</div>
+<div class="media">
+	 <a href="/workerman-thrift" class="pull-left"><img src="/img/workerman-thrift.png" class="media-object" alt="workerman thrift RPC模块关系示意图"/></a>
 	<div class="media-body">
 		<h4 class="media-heading">
 			<a target="_blank" href="/workerman-thrift">Thrift RPC远程调用框架</a>
@@ -13,7 +31,7 @@
 	</div>
 </div>
 <div class="media">
-	 <a href="/workerman-chat" class="pull-left"><img src="/img/workerman-chat.png" class="media-object" alt='' /></a>
+	 <a href="/workerman-chat" class="pull-left"><img src="/img/workerman-chat.png" class="media-object" alt="PHP聊天室示意图"/></a>
 	<div class="media-body">
 		<h4 class="media-heading">
 			<a target="_blank" href="/workerman-chat">聊天室</a>
@@ -22,20 +40,11 @@
 	</div>
 </div>
 <div class="media">
-	 <a href="/workerman-statistics" class="pull-left"><img src="/img/workerman-statistics.png" class="media-object" alt='' /></a>
+	 <a href="/workerman-statistics" class="pull-left"><img src="/img/workerman-statistics.png" class="media-object" alt="PHP统计系统示意图" /></a>
 	<div class="media-body">
 		<h4 class="media-heading">
 			<a target="_blank" href="/workerman-statistics">分布式统计系统</a>
 		</h4>
 		<p>基于workerman socket框架开发的一款分布式统计监控系统，纯PHP开发、无需安装Mysql、Nginx、Apache等软件，只要你安装了PHP就行，需要Linux系统哦。<a target="_blank" class="btn" href="/workerman-statistics">详情 »</a></p>
-	</div>
-</div>
-<div class="media">
-	 <a href="/workerman-todpole" class="pull-left"><img src="/img/workerman-todpole.png" class="media-object" alt='PHP 小蝌蚪游戏' /></a>
-	<div class="media-body">
-		<h4 class="media-heading">
-			<a target="_blank" href="/workerman-todpole">PHP小蝌蚪实时交互游戏</a>
-		</h4>
-		<p>使用HTML5+WebSocket+Workerman实时推送技术开发的蝌蚪小游戏，游戏中玩家们可以实时互动，并且可以实时聊天，非常有趣。<a target="_blank" class="btn" href="/workerman-todpole">详情 »</a></p>
 	</div>
 </div>

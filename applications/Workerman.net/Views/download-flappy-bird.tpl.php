@@ -3,7 +3,7 @@
 				<a href="/download">下载</a> <span class="divider"></span>
 		</li>
 		<li class="active">
-				统计监控系统
+				flappy bird 多人在线版
 		</li>
 </ul>
 <div class="row clearfix">
@@ -13,24 +13,24 @@
 			<a class="list-group-item" href="/download/thrift">Thrift RPC远程调用框架 下载</a>
 			<a class="list-group-item" href="/download/jsonrpc">JsonRpc远程调用框架 下载</a>
 			<a class="list-group-item" href="/download/chat">聊天室框架 下载</a>
+			<a class="list-group-item" href="/download/statistics">统计监控系统 下载</a>
+			<a class="list-group-item" href="/download/todpole">PHP小蝌蚪实时交互游戏 下载&nbsp;&nbsp;<font style="font-size:12px;color:red;">new</font></a>
 			<div class="list-group-item active">
-				统计监控系统 下载
+				flappy bird 多人在线版 下载
 			</div>
-			<a class="list-group-item" href="/download/todpole">PHP小蝌蚪实时交互游戏 下载</a>
-			<a class="list-group-item" href="/download/flappybird">flappy bird 多人在线版 下载&nbsp;&nbsp;<font style="font-size:12px;color:red;">new</font></a>
 		</div>
 	</div>
 	<div class="col-md-9 column">
 		<div class="jumbotron">
 			<h3>
-				下载workerman统计监控系统
+				多人在线flappy bird 源代码
 			</h3>
 			<p>
-				workerman-statistics是一款开源的统计监控系统，只要安装了PHP-Cli即可运行，不依赖Mysql等其他软件。
-				<a class="btn"  href="/workerman-statistics">详细介绍 »</a>
+				workerman-flappy-bird是一款PHP+HTML5+WebSocket开发的多人在线flappy bird交互小游戏。
+				<a class="btn"  href="/workerman-flappybird">安装教程&&详细介绍 »</a>
 			</p>
 			<p>
-				<a class="btn btn-primary btn-large" href="/download/statisticszip">下载workerman-statistics</a> <font class='f11 gray'>下载<?php echo $statistics_download_count;?>次</font>
+				<a class="btn btn-primary btn-large" href="/download/flappybirdzip">下载workerman-flappy-bird</a> <font class='f11 gray'>下载<?php echo $flappybird_download_count;?>次</font>
 			</p>
 		</div>
 		<table class="table table-bordered">
@@ -40,7 +40,7 @@
 								
 						</th>
 						<th>
-								workerman-statistics
+								workerman-flappy-bird
 						</th>
 				</tr>
 		</thead>
@@ -58,7 +58,7 @@
 								源代码
 						</td>
 						<td>
-								<a href="/download/statisticszip">workerman-statistics.zip</a>
+								<a href="/download/flappybirdzip">workerman-flappy-bird.zip</a>
 						</td>
 				</tr>
 				<tr>
@@ -75,7 +75,7 @@
 						</td>
 						<td>
 								<p>你可以从下面的github地址中获得源码</p>
-								<p>https://github.com/walkor/workerman-statistics</p>
+								<p>https://github.com/walkor/workerman-flappy-bird</p>
 						</td>
 				</tr>
 				<tr>
@@ -105,25 +105,16 @@
 						</td>
 						<td>
 							<ul>
-								<li>纯PHP开发，无需安装Mysql、Apache、nginx等软件</li>
-								<li>支持访问量、耗时、成功率、错误日志的统计与查询</li>
-								<li>支持分布式部署，性能极高</li>
-								<li>分布式部署时服务节点自动感知，查询时自动汇总数据</li>
-								<li>客户端使用UDP上报统计数据，不影响正常业务</li>
-								<li>可本机部署，不占用带宽</li>
+								<li>前端采用HTML5开发</li>
+								<li>以workerman作为后台游戏服务器</li>
+								<li>后端PHP多进程支持</li>
+								<li>采用WebSocket协议</li>
+								<li>PHP实时推送技术</li>
 							</ul>
-						</td>
-				</tr>
-				<tr>
-						<td>
-								性能
-						</td>
-						<td>
-							<p>恐怖</p>
 						</td>
 				</tr>
 		</tbody>
 		</table>
-		<a class="btn"  href="/workerman-statistics">统计监控系统详细介绍 »</a>
+		<a class="btn"  href="/workerman-flappybird">workerman-flappy-bird安装教程及详细介绍 »</a>
 	</div>
 </div>

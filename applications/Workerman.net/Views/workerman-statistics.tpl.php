@@ -43,7 +43,8 @@
 				<div class="list-group-item active">
 					统计监控系统
 				</div>
-				<a class="list-group-item" href="/workerman-todpole">PHP小蝌蚪实时交互游戏&nbsp;&nbsp;<font style="font-size:12px;color:red;">new</font></a>
+				<a class="list-group-item" href="/workerman-todpole">PHP小蝌蚪实时交互游戏</a>
+				<a class="list-group-item" href="/workerman-flappybird">flappy bird 多人在线版游戏&nbsp;&nbsp;<font style="font-size:12px;color:red;">new</font></a>
 			</div>
 			<div class="thumbnail">
 				<div class="caption">
