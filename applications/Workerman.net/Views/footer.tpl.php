@@ -20,6 +20,7 @@
 						<b>下载</b>
 						<ul class="sub">
 						<li><a href="/download/workerman">Workerman</a></li>
+						<li><a href="/download/todpole">flappy bird 多人在线版</a></li>
 						<li><a href="/download/todpole">小蝌蚪聊天室</a></li>
 						<li><a href="/download/thrift">Thrift Rpc远程调用框架</a></li>
 						<li><a href="/download/jsonrpc">Json Rpc远程调用框架</a></li>

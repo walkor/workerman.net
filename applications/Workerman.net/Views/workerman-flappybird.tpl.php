@@ -26,6 +26,7 @@
 			<li>PHP实时推送技术</li>
 			<li>独立运行，不依赖Mysql、apache、nginx等软件</li>
 			</ul>
+			<a href="http://flap.workerman.net" target="_blank"><img src="/img/workerman-flappy-bird.png" alt="php 多人在线flappy bird小游戏浏览器界面" /></a>
 		</div>
 		<div class="col-md-5 column text-center">
 			<h3>其它应用</h3>
