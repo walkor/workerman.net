@@ -126,6 +126,9 @@
 			最近更新
 		</h3>
 		<ul>
+			<li>
+				<a href="/workerman-todpole">2014-6-03 flappy bird 多人在线版发布</a>
+			</li>
 		    <li>
 				<a href="/workerman-todpole">2014-5-01 PHP小蝌蚪游戏发布</a>
 			</li>
