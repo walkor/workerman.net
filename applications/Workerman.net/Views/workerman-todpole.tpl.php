@@ -78,6 +78,10 @@
 			<br>
 			<a href="http://s.click.taobao.com/t?e=m%3D2%26s%3DGKeTyTP6Ah8cQipKwQzePCperVdZeJviEViQ0P1Vf2kguMN8XjClAhbL5GVocYPX6vFecR8G%2FoXXm6P3uOIyfg86qmwSDD1wfViFRpBEm%2BxEiFpG%2BYiVROdn1BbglxZYxUhy8exlzcq9AmARIwX9K2Zg%2BdzdQFOwfMRvoxSVDSdLyrb2g0H2G5JcxXijM%2BwneEHpPTskRHnPKdU%2FdTrgjbw4MC6y5nKlXF%2B87KN7TKeiZ%2BQMlGz6FQ%3D%3D" target="_blank"><img src="http://gtms01.alicdn.com/tps/i1/T1jhmAFQhbXXb34_n6-468-60.jpg" /></a>
 			<br>
+			<h3>网页空间/虚拟空间安装教程</h3>
+			<a href="https://github.com/walkor/workerman-todpole-web">请使用这个安装包</a>
+			<h4>上传文件到根目录，能访问index.html（可以改名）即可</h4>
+			<br>
 			<h3>说明：</h3>
 			<p>小蝌蚪游戏交互比较简单，只包含了游动和聊天功能，开发者可以基于这个程序开发出自己的更为丰富的游戏应用。</p>
 			<p>游戏原型来自<a href="https://github.com/danielmahal/Rumpetroll">rumpetroll.com</a>，后端代码由原来的ruby改成PHP。整个游戏后台包括Web服务全部由workerman来支撑。</p>
