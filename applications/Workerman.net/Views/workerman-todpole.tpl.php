@@ -80,7 +80,7 @@
 			<br>
 			<h3>网页空间/虚拟空间安装教程</h3>
 			<a href="https://github.com/walkor/workerman-todpole-web">请使用这个安装包</a>
-			<h4>上传文件到根目录，能访问index.html（可以改名）即可</h4>
+			<h4>上传文件到根目录，能访问kedou.html即可</h4>
 			<h4 style="color:red">请保留页面上workerman作者的链接，不然会被主机屏蔽，导致不可使用</h4>
 			<br>
 			<h3>说明：</h3>
