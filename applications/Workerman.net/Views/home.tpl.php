@@ -127,6 +127,9 @@
 		</h3>
 		<ul>
 			<li>
+				<a href="http://wenda.phpgame.cn">2014-6-07 workerman社区功能上线</a>
+			</li>
+			<li>
 				<a href="/workerman-todpole">2014-6-03 flappy bird 多人在线版发布</a>
 			</li>
 		    <li>
