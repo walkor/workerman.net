@@ -7,7 +7,6 @@
   <meta name="description" content="<?php if(isset($html_desc))echo $html_desc;?>">
   <meta name="author" content="">
   <meta name="baidu_union_verify" content="e47ae1f37ead6981de7a997096347250">
-  <meta name="baidu_union_verify" content="8534a3eeb6866ceeb476dba6ea0c42fa">
   <meta name="baidu-site-verification" content="jLodbXMgwV" />
 	<!--link rel="stylesheet/less" href="/less/bootstrap.less" type="text/css" /-->
 	<!--link rel="stylesheet/less" href="/less/responsive.less" type="text/css" /-->
