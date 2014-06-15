@@ -50,8 +50,6 @@
 	</div>
 	<div class="row clearfix">
 		<div class="col-md-12 column">
-			<h5>如果自己没有服务器建议使用阿里云云主机，不到50块钱</h5>
-			<a href="http://s.click.taobao.com/t?e=m%3D2%26s%3DGKeTyTP6Ah8cQipKwQzePCperVdZeJviEViQ0P1Vf2kguMN8XjClAhbL5GVocYPX6vFecR8G%2FoXXm6P3uOIyfg86qmwSDD1wfViFRpBEm%2BxEiFpG%2BYiVROdn1BbglxZYxUhy8exlzcq9AmARIwX9K2Zg%2BdzdQFOwfMRvoxSVDSdLyrb2g0H2G5JcxXijM%2BwneEHpPTskRHnPKdU%2FdTrgjbw4MC6y5nKlXF%2B87KN7TKeiZ%2BQMlGz6FQ%3D%3D" target="_blank"><img src="http://gtms01.alicdn.com/tps/i1/T1jhmAFQhbXXb34_n6-468-60.jpg" /></a>
 			<h3>
 				阿里云详细安装教程之debian/ubuntu系统
 			</h3>
@@ -71,8 +69,6 @@
 			<h4>2、<code>cd /home/ && git clone https://github.com/walkor/workerman-flappy-bird</code></h4>
 			<h4>3、<code>/home/workerman-flappy-bird/workerman/bin/workermand start</code></h4>
 			<h4>4、大功告成！浏览器访问 http://ip:8484 （如果不知道自己服务器ip，则运行 <code>ip addr | grep eth1 | grep inet</code>查看）</h4>
-			<br>
-			<a href="http://s.click.taobao.com/t?e=m%3D2%26s%3DGKeTyTP6Ah8cQipKwQzePCperVdZeJviEViQ0P1Vf2kguMN8XjClAhbL5GVocYPX6vFecR8G%2FoXXm6P3uOIyfg86qmwSDD1wfViFRpBEm%2BxEiFpG%2BYiVROdn1BbglxZYxUhy8exlzcq9AmARIwX9K2Zg%2BdzdQFOwfMRvoxSVDSdLyrb2g0H2G5JcxXijM%2BwneEHpPTskRHnPKdU%2FdTrgjbw4MC6y5nKlXF%2B87KN7TKeiZ%2BQMlGz6FQ%3D%3D" target="_blank"><img src="http://gtms01.alicdn.com/tps/i1/T1jhmAFQhbXXb34_n6-468-60.jpg" /></a>
 			<br>
 			<p><a href="http://flap.workerman.net" target="_blank">多人在线 flappy bird DEMO点击这里</a></p>
 		</div>
