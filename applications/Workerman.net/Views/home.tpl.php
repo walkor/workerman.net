@@ -52,7 +52,7 @@
 					<img src="/img/high-availability.png" alt="workerman高可用性"/><strong>高可用</strong>
 				</h3>
 				<p>
-					已被多家公司证实其高可用性，这些公司不乏日营业额过亿的电子商务公司用于订单系统的开发，以及知名网游公司用于游戏后台的开发。
+					已被多家公司证实其高可用性，这些公司不乏日营业额过亿的SNS公司用于服务器后台的开发，以及知名网游公司用于游戏后台的开发。
 				</p>
 			</div>
 		</div>
@@ -142,10 +142,13 @@
 				<a href="/workerman-statistics">2014-01-03 分布式监控系统发布</a>
 			</li>
 			<li>
-				<a href="/workerman-thrift">2013-12-05 Thrif Rpc框架发布</a>
+				<a href="/workerman-thrift">2013-10-05 Thrif Rpc框架发布</a>
 			</li>
 			<li>
-				<a href="/workerman-jsonrpc">2013-11-11 Json Rpc 框架发布</a>
+				<a href="/workerman-jsonrpc">2013-09-11 Json Rpc 框架发布</a>
+			</li>
+			<li>
+				<a href="/workerman">2013-03-01 workerman 框架发布</a>
 			</li>
 		</ul>
 	</div>
