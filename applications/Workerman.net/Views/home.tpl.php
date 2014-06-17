@@ -127,6 +127,9 @@
 		</h3>
 		<ul>
 			<li>
+				<a href="https://github.com/walkor/workerman-for-win">2014-6-10 workerman windows 平台多线程测试版本发布</a>
+			</li>
+			<li>
 				<a href="http://wenda.phpgame.cn">2014-6-07 workerman社区功能上线</a>
 			</li>
 			<li>
