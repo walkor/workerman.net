@@ -34,9 +34,13 @@
 				特性
 			</h3>
 			<ul>
+                        <li>支持HHVM，将PHP性能提高9倍左右</li>
 			<li>使用PHP开发</li>
-			<li>支持PHP多进程</li>
+			<li>支持PHP多进程/多线程（多线程版本）</li>
+                        <li>标准输入输出重定向</li>
+                        <li>守护进程化</li>
 			<li>支持TCP/UDP</li>
+                        <li>支持多端口监听</li>
 			<li>接口上支持各种应用层协议</li>
 			<li>支持libevent事件轮询库，支持高并发</li>
 			<li>支持服务平滑重启</li>

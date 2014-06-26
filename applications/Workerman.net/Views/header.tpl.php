@@ -63,7 +63,7 @@
 							<a href="/documentation">文档</a>
 						</li>
 						<li<?php if($html_nav == 'group')echo ' class="active" ';?>>
-							<a href="http://wenda.phpgame.cn">社区</a>
+							<a href="http://wenda.phpgame.cn">问答</a>
 						</li>
 					</ul>
 					<div class="nav navbar-nav navbar-right">

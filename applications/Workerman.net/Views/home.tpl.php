@@ -15,11 +15,12 @@
 			<div class="caption">
 				<h3>Workerman支持的特性</h3>
 				<ol>
-					<li>使用PHP开发，多进程支持</li>
+                                        <li>支持HHVM，将PHP性能提高9倍左右</li>
+					<li>纯PHP开发，多进程/多线程支持</li>
 					<li>支持TCP/UDP，支持TCP长连接</li>
-					<li>使用libevent事件轮询库，支持高并发</li>
+					<li>支持libevent事件轮询库，支持高并发</li>
 					<li>支持服务器平滑重启</li>
-					<li>支持文件更新检测</li>
+					<li>支持守护进程化</li>
 				</ol>
 				<a class="btn" target="_blank" href="/features">查看更多 »</a>
 			</div>
@@ -40,7 +41,7 @@
 					<img src="/img/high-performance.png" alt="workerman高性能"/><strong>高性能</strong>
 				</h3>
 				<p>
-					基于高性能的libevent事件轮询库，支持每秒4W的吞吐量，支持几万的并发连接。数据库等对象可以常驻内存，减少解析编译开销。
+					基于高性能的libevent事件轮询库，支持每秒4W的吞吐量，支持几万的并发连接。数据库等对象可以常驻内存，减少解析编译及网络开销。
 				</p>
 			</div>
 		</div>
