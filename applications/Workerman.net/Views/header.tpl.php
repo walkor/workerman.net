@@ -66,8 +66,5 @@
 							<a href="http://wenda.phpgame.cn">问答</a>
 						</li>
 					</ul>
-					<div class="nav navbar-nav navbar-right">
-							<iframe src="http://ghbtns.com/github-btn.html?user=walkor&repo=<?php echo isset($github_repo) ? $github_repo : 'workerman';?>&type=watch&count=true&size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowTransparency="true"></iframe>
-					</div>
 				</div>
 			</nav>

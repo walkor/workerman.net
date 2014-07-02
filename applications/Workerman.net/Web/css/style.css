@@ -173,11 +173,11 @@ p
 	color: #AAAAAA;
 }
 
-.navbar-right {
-    padding-top: 8px;
-}
-
 .caption-download {
     padding: 9px 9px 9px 30px;
     text-align: left;
+}
+
+.btn-default {
+    background-color: #f6f6f6;
 }

@@ -50,7 +50,8 @@
 				<div class="caption-download">
 					<h4>统计监控系统</h4>
 					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-statistics&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-statistics&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
-					<a class="btn btn-primary btn-large" href="/download/statisticszip">下载workerman-statistics </a> <font class='f11 gray'>下载<?php echo $statistics_download_count;?>次</font>
+					<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-statistics" target="_blank"><b>Fork on Github</b></a><p></p>
+					<a class="btn btn-default btn-large" href="/download/statisticszip">下载ZIP压缩文件 </a> <font class='f11 gray'>下载<?php echo $statistics_download_count;?>次</font>
 				</div>
 			</div>
 		</div>
