@@ -43,6 +43,7 @@ function download_thrift()
 {
     $html_title = 'workerman-thrift-rpc下载 | 一个高性能的PHP Thrift Rpc框架';
     $html_nav = 'download';
+    $github_repo = 'workerman-thrift';
     $download_thrift_count_key = 'download_thrift_count';
     $thrift_download_count =  \WorkerMan\Lib\Store::get($download_thrift_count_key);
     include NET_ROOT . '/Views/header.tpl.php';
@@ -69,6 +70,7 @@ function download_jsonrpc()
 {
     $html_title = 'workerman-json-rpc下载 | 一个高性能的PHP Json Rpc框架';
     $html_nav = 'download';
+    $github_repo = 'workerman-jsonrpc';
     $download_jsonrpc_count_key = 'download_jsonrpc_count';
     $jsonrpc_download_count =  \WorkerMan\Lib\Store::get($download_jsonrpc_count_key);
     include NET_ROOT . '/Views/header.tpl.php';
@@ -95,6 +97,7 @@ function download_chat()
 {
     $html_title = 'workerman-chat下载 | 一个高性能的PHP 聊天室框架';
     $html_nav = 'download';
+    $github_repo = 'workerman-chat';
     $download_chat_count_key = 'download_chat_count';
     $chat_download_count =  \WorkerMan\Lib\Store::get($download_chat_count_key);
     include NET_ROOT . '/Views/header.tpl.php';
@@ -121,6 +124,7 @@ function download_statistics()
 {
     $html_title = 'workerman-statistics下载 | PHP开发的一个分布式统计监控系统';
     $html_nav = 'download';
+    $github_repo = 'workerman-statistics';
     $download_statistics_count_key = 'download_statistics_count';
     $statistics_download_count =  \WorkerMan\Lib\Store::get($download_statistics_count_key);
     include NET_ROOT . '/Views/header.tpl.php';
@@ -147,6 +151,7 @@ function download_todpole()
 {
     $html_title = 'workerman-todpole下载 | PHP蝌蚪小游戏 HTML5+WebSocket+PHP 服务器实时推送技术';
     $html_nav = 'download';
+    $github_repo = 'workerman-todpole';
     $download_todpole_count_key = 'download_todpole_count';
     $todpole_download_count =  \WorkerMan\Lib\Store::get($download_todpole_count_key);
     include NET_ROOT . '/Views/header.tpl.php';
@@ -173,6 +178,7 @@ function download_flappybird()
 {
     $html_title = 'workerman-flappy-bird下载 | 多人在线flappy bird 源代码下载';
     $html_nav = 'download';
+    $github_repo = 'workerman-flappy-bird';
     $download_flappybird_count_key = 'download_flappybird_count';
     $flappybird_download_count =  \WorkerMan\Lib\Store::get($download_flappybird_count_key);
     include NET_ROOT . '/Views/header.tpl.php';
