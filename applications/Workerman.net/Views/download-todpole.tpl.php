@@ -30,6 +30,7 @@
 				<a class="btn"  href="/workerman-todpole">安装教程&&详细介绍 »</a>
 			</p>
 			<p>
+				<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-todpole&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-todpole&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
 				<a class="btn btn-primary btn-large" href="/download/todpolezip">下载workerman-todpole</a> <font class='f11 gray'>下载<?php echo $todpole_download_count;?>次</font>
 			</p>
 		</div>

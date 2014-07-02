@@ -30,6 +30,7 @@
 				<a class="btn"  href="/workerman-flappybird">安装教程&&详细介绍 »</a>
 			</p>
 			<p>
+				<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-flappy-bird&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-flappy-bird&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
 				<a class="btn btn-primary btn-large" href="/download/flappybirdzip">下载workerman-flappy-bird</a> <font class='f11 gray'>下载<?php echo $flappybird_download_count;?>次</font>
 			</p>
 		</div>
