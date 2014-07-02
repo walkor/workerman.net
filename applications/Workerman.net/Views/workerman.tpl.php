@@ -65,6 +65,7 @@
 			<div class="thumbnail">
 				<div class="caption">
 					<div class="f24">下载workerman</div>
+					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
 					<a class="btn btn-primary btn-large" href="/download/workermanczip">下载workerman2.0.1 </a> <font class='f11 gray'>下载<?php echo $workerman_download_count;?>次</font>
 				</div>
 			</div>
