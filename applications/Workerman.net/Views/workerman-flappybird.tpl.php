@@ -35,7 +35,7 @@
 				<a class="list-group-item" href="/workerman-jsonrpc">Json RPC远程调用框架</a>
 				<a class="list-group-item" href="/workerman-chat">聊天室框架</a>
 				<a class="list-group-item" href="/workerman-statistics">统计监控系统</a>
-				<a class="list-group-item" href="/workerman-todpole">PHP小蝌蚪实时交互游戏</a>
+				<a class="list-group-item" href="/workerman-todpole">PHP小蝌蚪实时交互游戏&nbsp;&nbsp;<font style="font-size:12px;color:red;">hot</font></a>
 				<div class="list-group-item active">
 					flappy bird 多人在线版游戏
 				</div>

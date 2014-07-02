@@ -14,7 +14,7 @@
 			<a class="list-group-item" href="/download/jsonrpc">JsonRpc远程调用框架 下载</a>
 			<a class="list-group-item" href="/download/chat">聊天室框架 下载</a>
 			<a class="list-group-item" href="/download/statistics">统计监控系统 下载</a>
-			<a class="list-group-item" href="/download/todpole">PHP小蝌蚪实时交互游戏 下载&nbsp;&nbsp;<font style="font-size:12px;color:red;">new</font></a>
+			<a class="list-group-item" href="/download/todpole">PHP小蝌蚪实时交互游戏 下载&nbsp;&nbsp;<font style="font-size:12px;color:red;">hot</font></a>
 			<div class="list-group-item active">
 				flappy bird 多人在线版 下载
 			</div>
