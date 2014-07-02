@@ -77,7 +77,7 @@
 			相关应用
 		</h3>
 		<div class="media">
-			 <a href="/workerman-flappybird" class="pull-left"><img src="/img/dou-shou-qi.jpg" class="media-object" alt='斗兽棋游戏' /></a>
+			 <a href="http://dou.xiumeier.com/" class="pull-left"><img src="/img/dou-shou-qi.jpg" class="media-object" alt='斗兽棋游戏' /></a>
 			<div class="media-body">
 				<h4 class="media-heading">
 					<a target="_blank" href="http://dou.xiumeier.com/">斗兽棋</a>&nbsp;&nbsp;<font style="font-size:12px;color:red;">new</font>
