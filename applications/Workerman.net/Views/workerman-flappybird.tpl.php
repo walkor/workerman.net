@@ -41,8 +41,9 @@
 				</div>
 			</div>
 			<div class="thumbnail">
-				<div class="caption">
-					<p class="f24">下载flappy bird 多人在线版游戏源代码</p>
+				<div class="caption-download">
+					<h4>下载flappy bird 多人在线版游戏源代码</h4>
+					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-flappy-bird&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-flappy-bird&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
 					<a class="btn btn-primary btn-large" href="/download/flappybirdzip">下载workerman-flappy-bird </a> <font class='f11 gray'>下载<?php echo $flappybird_download_count;?>次</font>
 				</div>
 			</div>

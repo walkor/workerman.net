@@ -43,9 +43,11 @@
 				<a class="list-group-item" href="/workerman-flappybird">flappy bird 多人在线版游戏&nbsp;&nbsp;<font style="font-size:12px;color:red;">new</font></a>
 			</div>
 			<div class="thumbnail">
-				<div class="caption">
-					<p class="f24">下载PHP小蝌蚪游戏</p>
+				<div class="caption-download">
+					<h4>下载PHP小蝌蚪游戏</h4>
+					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-todpole&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-todpole&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
 					<a class="btn btn-primary btn-large" href="/download/todpolezip">下载workerman-todpole </a> <font class='f11 gray'>下载<?php echo $todpole_download_count;?>次</font>
+					<p></p>
 				</div>
 			</div>
 		</div>
