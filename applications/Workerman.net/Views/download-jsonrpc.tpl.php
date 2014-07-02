@@ -76,7 +76,7 @@
 						</td>
 						<td>
 								<p>你可以从下面的github地址中获得源码</p>
-								<p>https://github.com/walkor/workerman-jsonrpc</p>
+								<p><p><a href="https://github.com/walkor/workerman-jsonrpc" target="_blank">https://github.com/walkor/workerman-jsonrpc</a></p></p>
 						</td>
 				</tr>
 				<tr>

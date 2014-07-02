@@ -76,7 +76,7 @@
 						</td>
 						<td>
 								<p>你可以从下面的github地址中获得源码</p>
-								<p>https://github.com/walkor/workerman-todpole</p>
+								<p><a href="https://github.com/walkor/workerman-todpole" target="_blank">https://github.com/walkor/workerman-todpole</a></p>
 						</td>
 				</tr>
 				<tr>

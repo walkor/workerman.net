@@ -76,7 +76,7 @@
 						</td>
 						<td>
 								<p>你可以从下面的github地址中获得源码</p>
-								<p>https://github.com/walkor/workerman-flappy-bird</p>
+								<p><p><a href="https://github.com/walkor/workerman-flappy-bird" target="_blank">https://github.com/walkor/workerman-flappy-bird</a></p></p>
 						</td>
 				</tr>
 				<tr>

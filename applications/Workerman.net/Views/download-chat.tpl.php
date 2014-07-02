@@ -75,7 +75,7 @@
 						</td>
 						<td>
 								<p>你可以从下面的github地址中获得源码</p>
-								<p>https://github.com/walkor/workerman-chat</p>
+								<p><p><a href="https://github.com/walkor/workerman-chat" target="_blank">https://github.com/walkor/workerman-chat</a></p></p>
 						</td>
 				</tr>
 				<tr>
