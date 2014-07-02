@@ -25,15 +25,11 @@
 			<h3>
 				下载workerman统计监控系统
 			</h3>
-			<p>
 				workerman-statistics是一款开源的统计监控系统，只要安装了PHP-Cli即可运行，不依赖Mysql等其他软件。
 				<a class="btn"  href="/workerman-statistics">详细介绍 »</a>
-			</p>
-			<p>
-				<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-statistics&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-statistics&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
-				<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-statistics" target="_blank"><b>Fork on Github</b></a>
-				<a class="btn btn-default btn-large" href="/download/statisticszip">下载ZIP压缩文件</a> <font class='f11 gray'>下载<?php echo $statistics_download_count;?>次</font>
-			</p>
+				<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-statistics&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-statistics&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table>
+				<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-statistics" target="_blank"><b>Fork on Github</b></a>&nbsp;
+				<a class="btn btn-default btn-large" href="/download/statisticszip"><b>下载ZIP压缩文件</b></a> <font class='f11 gray'>下载<?php echo $statistics_download_count;?>次</font>
 		</div>
 		<table class="table table-bordered">
 		<thead>
