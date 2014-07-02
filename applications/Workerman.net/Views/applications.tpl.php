@@ -4,10 +4,19 @@
 	</li>
 </ul>
 <div class="media">
+	<a href="http://dou.xiumeier.com/" target="_blank" class="pull-left"><img src="/img/dou-shou-qi.jpg" class="media-object" alt='斗兽棋游戏' /></a>
+	<div class="media-body">
+		<h4 class="media-heading">
+			<a target="_blank" href="http://dou.xiumeier.com/">斗兽棋</a>&nbsp;&nbsp;<font style="font-size:12px;color:red;">new</font>
+		</h4>
+		<p>在线斗兽棋:斗兽棋是中国一种棋类游戏,80后儿时的玩具,双方有八只棋子，依大小顺序为象、狮、虎、豹、犬、狼、猫、鼠。较大的可吃较小的，同类可以互吃，而鼠则可吃象，象不能吃鼠。动物走一格，前后左右都可以，极具趣味性。<a target="_blank" class="btn" href="http://dou.xiumeier.com/">本应用由 dou.xiumeier.com 提供</a></p>
+	</div>
+</div>
+<div class="media">
 	 <a href="/workerman-flappybird" class="pull-left"><img src="/img/workerman-flappy-bird.png" class="media-object" alt='workerman多人在线 flappy bird 游戏截图' /></a>
 	<div class="media-body">
 		<h4 class="media-heading">
-			<a target="_blank" href="/workerman-flappybird">flappy bird 游戏多人在线版</a>&nbsp;&nbsp;<font style="font-size:12px;color:red;">new</font>
+			<a target="_blank" href="/workerman-flappybird">flappy bird 游戏多人在线版</a>&nbsp;&nbsp;<font style="font-size:12px;color:red;">推荐</font>
 		</h4>
 		<p>使用HTML5+WebSocket+Workerman实时推送技术开发的多人在线版flappy bird，游戏中你可以看到无数玩家同时控制小鸟前赴后继地向前送死的壮烈(搞笑)场面。<a target="_blank" class="btn" href="/workerman-flappybird">详情 »</a></p>
 	</div>
@@ -16,7 +25,7 @@
 	 <a href="/workerman-todpole" class="pull-left"><img src="/img/workerman-todpole.png" class="media-object" alt='PHP 小蝌蚪游戏界面' /></a>
 	<div class="media-body">
 		<h4 class="media-heading">
-			<a target="_blank" href="/workerman-todpole">PHP小蝌蚪实时交互游戏</a>
+			<a target="_blank" href="/workerman-todpole">PHP小蝌蚪实时交互游戏</a>&nbsp;&nbsp;<font style="font-size:12px;color:red;">推荐</font>
 		</h4>
 		<p>使用HTML5+WebSocket+Workerman实时推送技术开发的蝌蚪小游戏，游戏中玩家们可以实时互动，并且可以实时聊天，非常有趣。<a target="_blank" class="btn" href="/workerman-todpole">详情 »</a></p>
 	</div>
