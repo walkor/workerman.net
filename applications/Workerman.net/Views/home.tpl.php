@@ -164,6 +164,6 @@
 				<a href="/workerman">2013-03-01 workerman 框架发布</a>
 			</li>
 		</ul>
-		<div class="bd-ad"><script type="text/javascript">/*250*250，创建于2014-7-5*/var cpro_id = "u1611641";</script><script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script></div>
+		<div class="bd-ad"><?php global $bd_ad_250_250; echo $bd_ad_250_250;?></div>
 	</div>
 </div>

@@ -69,6 +69,7 @@
 					<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman" target="_blank"><b>Fork on Github</b></a>&nbsp;
 					<a class="btn btn-default btn-large" href="/download/workermanczip"><b>下载ZIP压缩文件</b> </a> <font class='f11 gray'>下载<?php echo $workerman_download_count;?>次</font>
 				</div>
+				<div class="bd-ad"><?php global $bd_ad_250_250; echo $bd_ad_250_250;?></div>
 			</div>
 		</div>
 	</div>
