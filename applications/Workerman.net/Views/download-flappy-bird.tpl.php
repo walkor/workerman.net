@@ -18,7 +18,7 @@
 			<div class="list-group-item active">
 				flappy bird 多人在线版 下载
 			</div>
-			<div class="bd-ad"><?php global $bd_ad_250_250; echo $bd_ad_250_250;?></div>
+			<br><?php global $bd_ad_250_250; echo $bd_ad_250_250;?>
 		</div>
 	</div>
 	<div class="col-md-9 column">
