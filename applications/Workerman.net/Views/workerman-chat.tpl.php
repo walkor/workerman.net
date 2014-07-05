@@ -37,6 +37,7 @@
 			<li>客户端跨浏览器支持（需要浏览器支持html5或者flash）</li>
 			<li>同样非常适合游戏后台开发</li>
 			</ul>
+			<div class="bd-ad"><?php global $bd_ad_468_60; echo $bd_ad_468_60;?></div>
 		</div>
 		<div class="col-md-5 column text-center">
 			<h3>其它应用</h3>

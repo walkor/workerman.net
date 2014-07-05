@@ -16,6 +16,7 @@
 	<h5>5、命令行运行<code>/home/workerman-todpole/workerman/bin/workermand start</code></h5>
 	<br>
 	</div>
+	<div class="bd-ad"><?php global $bd_ad_468_60; echo $bd_ad_468_60;?></div>
 	<div class="col-md-3 column">
 	
 	</div>

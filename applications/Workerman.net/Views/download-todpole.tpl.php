@@ -19,6 +19,7 @@
 			</div>
 			<a class="list-group-item" href="/download/flappybird">flappy bird 多人在线版 下载&nbsp;&nbsp;<font style="font-size:12px;color:red;">new</font></a>
 		</div>
+		<div class="bd-ad"><?php global $bd_ad_250_250; echo $bd_ad_250_250;?></div>
 	</div>
 	<div class="col-md-9 column">
 		<div class="jumbotron">

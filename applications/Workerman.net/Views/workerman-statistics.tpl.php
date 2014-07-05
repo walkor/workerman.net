@@ -33,6 +33,7 @@
 			<li>分布式部署节点自动感知，查询时结果自动汇总展示</li>
 			<li>可以部署在本地，不占用带宽</li>
 			</ul>
+			<div class="bd-ad"><?php global $bd_ad_468_60; echo $bd_ad_468_60;?></div>
 		</div>
 		<div class="col-md-5 column text-center">
 			<h3>其它应用</h3>

@@ -33,6 +33,7 @@
 			<li>集成统计监控模块，方便查看服务调用量、成功率、耗时等情况</li>
 			<li>自带PHP客户端，支持异步并发调用，实现并行计算</li>
 			</ul>
+			<div class="bd-ad"><?php global $bd_ad_468_60; echo $bd_ad_468_60;?></div>
 		</div>
 		<div class="col-md-5 column text-center">
 			<h3>其它应用</h3>

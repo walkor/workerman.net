@@ -28,6 +28,7 @@
 			<a class="list-group-item" href="#dev">服务端开发示例</a>
 			<a class="list-group-item" href="#interface">接口说明</a>
 		</div>
+		<div class="bd-ad"><?php global $bd_ad_250_250; echo $bd_ad_250_250;?></div>
 	</div>
 	<div class="col-md-9 column">
 	    <h1>workerman 高性能的PHP Socket 框架</h1>
