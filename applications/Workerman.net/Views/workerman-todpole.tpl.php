@@ -29,7 +29,7 @@
 			<li>即时聊天</li>
 			<li>独立运行，不依赖Mysql、apache、nginx等软件</li>
 			</ul>
-			<div class="bd-ad"><?php global $bd_ad_568_60; echo $bd_ad_568_60;?></div>
+			<div class="bd-ad"><?php global $bd_ad_468_60; echo $bd_ad_468_60;?></div>
 		</div>
 		<div class="col-md-5 column text-center">
 			<h3>其它应用</h3>
