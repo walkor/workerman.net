@@ -29,6 +29,7 @@
 			<li>即时聊天</li>
 			<li>独立运行，不依赖Mysql、apache、nginx等软件</li>
 			</ul>
+			<div class="bd-ad"><script type="text/javascript">/*468*60，创建于2014-7-5*/var cpro_id = "u1611676";</script><script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script></div>
 		</div>
 		<div class="col-md-5 column text-center">
 			<h3>其它应用</h3>
