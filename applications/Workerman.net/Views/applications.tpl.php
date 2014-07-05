@@ -57,3 +57,5 @@
 		<p>基于workerman socket框架开发的一款分布式统计监控系统，纯PHP开发、无需安装Mysql、Nginx、Apache等软件，只要你安装了PHP就行，需要Linux系统哦。<a target="_blank" class="btn" href="/workerman-statistics">详情 »</a></p>
 	</div>
 </div>
+
+<br><?php global $bd_ad_960_90; echo $bd_ad_960_90;?>
