@@ -4,18 +4,19 @@
 			什么是Workerman
 		</h2>
 		<p class="f14">
-			Workerman是一个<strong>高性能</strong>的<strong>PHP socket 服务器框架</strong>。已经被多家公司用于Rpc服务器、聊天室服务器、网络游戏服务器、手机游戏等后台开发。
-			只要会PHP，你就可以基于Workerman轻而易举的开发出你想要的网络应用，不必再为PHP Socket底层开发而烦恼。
+			Workerman是一个<strong>高性能</strong>的<strong>PHP socket 服务器框架</strong>。已经被多家公司用于移动通讯、手游服务端、网络游戏服务器、聊天室服务器、硬件通讯等后台开发。
+			只要会PHP，你就可以基于Workerman轻而易举的开发出你想要的网络应用，不必再为PHP Socket底层开发而烦恼。<a class="btn" target="_blank" href="/workerman">查看更多 »</a>
 		</p>
-		<a class="btn" target="_blank" href="/workerman">查看更多 »</a>
-		<div class="text-center"><a class="btn btn-info" target="_blank" type="button" href="/download"><b>下载Workerman »</b></a></div>
+		<table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table>
+		<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman" target="_blank"><b>Fork on Github</b></a>&nbsp;
+		<a class="btn btn-default btn-large" href="/download/workermanzip"><b>下载ZIP压缩文件</b></a> <font class='f11 gray'>下载<?php echo $workerman_download_count;?>次</font>
 	</div>
 	<div class="col-md-5 column">
 		<div class="thumbnail">
 			<div class="caption">
 				<h3>Workerman支持的特性</h3>
 				<ol>
-                                        <li>支持HHVM，将PHP性能提高9倍左右</li>
+					<li>支持HHVM，将PHP性能提高9倍左右</li>
 					<li>纯PHP开发，多进程/多线程支持</li>
 					<li>支持TCP/UDP，支持TCP长连接</li>
 					<li>支持libevent事件轮询库，支持高并发</li>
@@ -53,7 +54,7 @@
 					<img src="/img/high-availability.png" alt="workerman高可用性"/><strong>高可用</strong>
 				</h3>
 				<p>
-					已被多家公司证实其高可用性，这些公司不乏日营业额过亿的SNS公司用于服务器后台的开发，以及知名网游公司用于游戏后台的开发。
+					已被多家公司证实其高可用性，这些公司不乏日营业额过亿的电子商务公司用于服务器后台的开发，以及知名网游公司用于游戏后台的开发。
 				</p>
 			</div>
 		</div>
