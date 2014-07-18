@@ -108,7 +108,7 @@
 						</h3>
 						<p>
 							workerman支持Libevent事件轮询库（需要安装<a href="http://www.php.net/manual/en/book.libevent.php" target="_blank">Libevent扩展</a>），
-							使用Libevent在高并发时性能非常卓越，如果没有安装Libevent则么人使用PHP内置的Select相关系统调用。
+							使用Libevent在高并发时性能非常卓越，如果没有安装Libevent则使用PHP内置的Select相关系统调用。
 						</p>
 					</div>
 				</div>
