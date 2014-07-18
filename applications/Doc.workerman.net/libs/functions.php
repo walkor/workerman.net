@@ -16,18 +16,6 @@
 
 require_once DOC_ROOT . '/libs/markdown_extended.php';
 
-// Check for homepage
-$homepage = (get_uri(false) === "") ? true : false;
-
-// Stores the base url under which daux is running
-$base_url = '/';
-
-// Set the base url of where the script is located
-if (isset($_SERVER['SCRIPT_NAME']))
-{
-    $base_url = substr($_SERVER['SCRIPT_NAME'], 0, strrpos($_SERVER['SCRIPT_NAME'] , '/')); // find the full URL to this application from server root
-}
-
 // Daux.io Functions
 function get_options() {
 	$options = array(

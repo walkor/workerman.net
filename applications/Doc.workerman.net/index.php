@@ -65,7 +65,21 @@ software, even if advised of the possibility of such damage.
 
 require_once __DIR__ . '/_init.php';
 
-global $mdwp_hidden_tags, $mdwp_placeholders;
+global $mdwp_hidden_tags, $mdwp_placeholders , $base_url;
+
+// Check for homepage
+$homepage = (get_uri(false) === "") ? true : false;
+
+global $base_url;
+
+// Stores the base url under which daux is running
+$base_url = '/';
+
+// Set the base url of where the script is located
+if (isset($_SERVER['SCRIPT_NAME']))
+{
+    $base_url = substr($_SERVER['SCRIPT_NAME'], 0, strrpos($_SERVER['SCRIPT_NAME'] , '/')); // find the full URL to this application from server root
+}
 
 $options = get_options();
 $tree = get_tree($options['docs_path'], $base_url);
