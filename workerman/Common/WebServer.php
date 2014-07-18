@@ -263,6 +263,7 @@ class WebServer extends Man\Core\SocketWorker
                 {
                     // 304
                     Man\Common\Protocols\Http\header('HTTP/1.1 304 Not Modified');
+                    chdir($cwd);
                     // 发送给客户端
                     return $this->sendToClient(Man\Common\Protocols\Http\http_end(''));
                 }
@@ -293,7 +294,7 @@ class WebServer extends Man\Core\SocketWorker
             {
                 Man\Common\Protocols\Http\header("Last-Modified: $modified_time");
             }
-            
+            chdir($cwd);
             // 发送给客户端
            return $this->sendToClient(Man\Common\Protocols\Http\http_end($file_content));
         }
