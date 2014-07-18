@@ -1,5 +1,5 @@
 <?php
-require_once NET_ROOT . '/libs/markdown.php';
+require_once DOC_ROOT . '/libs/markdown.php';
 define( 'MARKDOWNEXTRAEXTENDED_VERSION',  "0.3" );
 
 function MarkdownExtended($text, $default_claases = array()){
