@@ -14,7 +14,7 @@
 * Learn more about what you can customize here: http://daux.io
 */
 
-require_once('libs/markdown_extended.php');
+require_once NET_ROOT . '/libs/markdown_extended.php';
 
 // Check for homepage
 $homepage = (get_uri(false) === "") ? true : false;
