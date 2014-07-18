@@ -1,5 +1,5 @@
 <?php
-require_once WORKERMAN_ROOT_DIR .'applications/Workerman.net/Web/_init.php';
+require_once __DIR__.'_init.php';
 \WorkerMan\Lib\Store::config(NET_ROOT . '/data/data.php');
 $url_info = parse_url($_SERVER['REQUEST_URI']);
 if(isset($url_info['path']))
