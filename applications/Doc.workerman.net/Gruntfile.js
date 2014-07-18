@@ -16,10 +16,10 @@ module.exports = function(grunt) {
         less: {
           development: {
             files: {
-              "css/daux-blue.css": "less/daux-blue.less",
-              "css/daux-green.css": "less/daux-green.less",
-              "css/daux-navy.css": "less/daux-navy.less",
-              "css/daux-red.css": "less/daux-red.less"
+              "/css/daux-blue.css": "less/daux-blue.less",
+              "/css/daux-green.css": "less/daux-green.less",
+              "/css/daux-navy.css": "less/daux-navy.less",
+              "/css/daux-red.css": "less/daux-red.less"
             }
           }
         },
