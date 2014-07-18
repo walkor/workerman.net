@@ -200,6 +200,8 @@ class WebServer extends Man\Core\SocketWorker
                 return $this->sendToClient(Man\Common\Protocols\Http\http_end('<h1>400 Bad Request</h1>'));
             }
             
+            $file = realpath($file);
+            
             // 如果请求的是php文件
             if($extension == 'php')
             {
