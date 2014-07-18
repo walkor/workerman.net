@@ -1,0 +1,19 @@
+{
+	"title": "DAUX.IO 中文文档",
+	"tagline": "最简单的方式构建你的项目文档",
+	"float": false,
+	"docs_path": "docs",
+	"image": "img/app.png",
+	"theme": "blue",
+	"date_modified": true,
+	"repo": "xin-meng/daux",
+	"timezone": "Europe/London",
+	"twitter": ["xin_meng_1", "todaymade"],
+	"google_analytics": "UA-40931165-2",
+	"links": {
+		"Download 下载": "https://github.com/xin-meng/daux/archive/master.zip",
+		"GitHub Repo 版本控制": "https://github.com/xin-meng/daux",
+		"Help/Support/Bugs 帮助/支持/错误": "https://github.com/xin-meng/daux/issues",
+		"Fix by Xin Meng 由Xin Meng中文汉化": "http://blog.emx2.co.uk"
+	}
+}
