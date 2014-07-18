@@ -66,6 +66,7 @@ software, even if advised of the possibility of such damage.
 require_once __DIR__ . '/_init.php';
 
 global $mdwp_hidden_tags, $mdwp_placeholders;
+
 $options = get_options();
 $tree = get_tree($options['docs_path'], $base_url);
 
@@ -118,43 +119,39 @@ if ($homepage && $homepage_url !== '/') {
     <meta name="description" content="<?php echo $options['tagline'];?>" />
     <meta name="author" content="<?php echo $options['title']; ?>">
     <?php if ($options['colors']) { ?>
-    <link rel="icon" href="<?php echo $base_url ?>/img/favicon.png" type="image/x-icon">
+    <link rel="icon" href="/img/favicon.png" type="image/x-icon">
     <?php } else { ?>
-    <link rel="icon" href="<?php echo $base_url ?>/img/favicon-<?php echo $options['theme'];?>.png" type="image/x-icon">
+    <link rel="icon" href="/img/favicon-<?php echo $options['theme'];?>.png" type="image/x-icon">
     <?php } ?>
     <!-- Mobile -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Font -->
-    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100' rel='stylesheet' type='text/css'>
-
     <!-- LESS -->
     <?php if ($options['colors']) { ?>
         <style type="text/less">
             <?php foreach($options['colors'] as $k => $v) { ?>
             @<?php echo $k;?>: <?php echo $v;?>;
             <?php } ?>
-            @import "<?php echo $base_url ?>/less/import/daux-base.less";
+            @import "/less/import/daux-base.less";
         </style>
-        <script src="<?php echo $base_url ?>/js/less.min.js"></script>
+        <script src="/js/less.min.js"></script>
     <?php } else { ?>
-        <link rel="stylesheet" href="<?php echo $base_url ?>/css/daux-<?php echo $options['theme'];?>.css">
+        <link rel="stylesheet" href="/css/daux-<?php echo $options['theme'];?>.css">
     <?php } ?>
 
     <!-- hightlight.js -->
-    <script src="<?php echo $base_url ?>/js/highlight.min.js"></script>
+    <script src="/js/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 
     <!-- Navigation -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
     <script>
     if (typeof jQuery == 'undefined') {
-        document.write(unescape("%3Cscript src='<?php echo $base_url ?>/js/jquery-1.10.2.min.js' type='text/javascript'%3E%3C/script%3E"));
+        document.write(unescape("%3Cscript src='/js/jquery-1.10.2.min.js' type='text/javascript'%3E%3C/script%3E"));
     }
     </script>
-    <script src="<?php echo $base_url ?>/js/bootstrap.min.js"></script>
-    <script src="<?php echo $base_url ?>/js/custom.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/custom.js"></script>
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
