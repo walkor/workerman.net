@@ -4,7 +4,7 @@
     <head>
         
         <meta charset="UTF-8">
-        <title>系统流程 | WorkerMan文档</title>
+        <title>查看运行状态 | WorkerMan文档</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 0.5.2">
@@ -17,10 +17,10 @@
     
     
     
-    <link rel="next" href="../start/developmentprocess.html" />
+    <link rel="next" href="../configure/README.html" />
     
     
-    <link rel="prev" href="../start/directory.html" />
+    <link rel="prev" href="../start/commend.html" />
     
 
         
@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="1.6" data-basepath=".." data-revision="1405952788731">
+    <div class="book"  data-level="1.10" data-basepath=".." data-revision="1405952788731">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -272,7 +272,7 @@
             <div class="page-wrapper" tabindex="-1">
                 <div class="book-progress">
     <div class="bar">
-        <div class="inner" style="width: 53.333333333333336%;min-width: 46.666666666666664%;"></div>
+        <div class="inner" style="width: 20%;min-width: 13.333333333333334%;"></div>
     </div>
     <div class="chapters">
     
@@ -284,15 +284,15 @@
     
         <a href="../start/workerman.html" title="查看运行状态" class="chapter done " data-progress="1.10" style="left: 20%;"></a>
     
-        <a href="../start/dowhat.html" title="WorkerMan能做什么" class="chapter done " data-progress="1.2" style="left: 26.666666666666668%;"></a>
+        <a href="../start/dowhat.html" title="WorkerMan能做什么" class="chapter  " data-progress="1.2" style="left: 26.666666666666668%;"></a>
     
-        <a href="../start/getworkerman.html" title="WorkerMan安装" class="chapter done " data-progress="1.3" style="left: 33.333333333333336%;"></a>
+        <a href="../start/getworkerman.html" title="WorkerMan安装" class="chapter  " data-progress="1.3" style="left: 33.333333333333336%;"></a>
     
-        <a href="../start/environment.html" title="环境要求" class="chapter done " data-progress="1.4" style="left: 40%;"></a>
+        <a href="../start/environment.html" title="环境要求" class="chapter  " data-progress="1.4" style="left: 40%;"></a>
     
-        <a href="../start/directory.html" title="目录结构" class="chapter done " data-progress="1.5" style="left: 46.666666666666664%;"></a>
+        <a href="../start/directory.html" title="目录结构" class="chapter  " data-progress="1.5" style="left: 46.666666666666664%;"></a>
     
-        <a href="../start/systemprocess.html" title="系统流程" class="chapter done " data-progress="1.6" style="left: 53.333333333333336%;"></a>
+        <a href="../start/systemprocess.html" title="系统流程" class="chapter  " data-progress="1.6" style="left: 53.333333333333336%;"></a>
     
         <a href="../start/developmentprocess.html" title="开发流程" class="chapter  " data-progress="1.7" style="left: 60%;"></a>
     
@@ -313,23 +313,62 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_3456">
+                    <section class="normal" id="section-gitbook_3457">
                     
-                        <h1 id="1-6-">1.6 系统流程</h1>
-<h2 id="1-6-1-">1.6.1 请求处理流程</h2>
-<p>1、客户端发来请求</p>
-<p>2、WorkerMan读取请求数据交给dealInput($recv_buffer)函数</p>
-<p>3、dealInput($recv_buffer)函数判断接收的请求数据$recv_buffer是否是一个完整的请求</p>
-<p>4、不完整则返回一个大于零的数字N，则WorkerMan会继等待N字节的请求数据</p>
-<p>5、数据完整会自动调用dealProcess($recv_buffer)处理请求</p>
-<p>6、请求处理完毕根据需要向客户端发送(sendToClient($response_buffer))数据</p>
-<h2 id="1-6-2-">1.6.2 流程说明</h2>
-<p>1、为什么有个dealInput函数？作用是什么？</p>
-<p>由于TCP是基于流的，也就是连接建立后可以一直不停的发送请求数据，发送的请求之间并没有明确的边界。在请求数据传输过程中由于很多原因（TCP分片、Socket缓冲区满等），请求的数据可能不会一次全部传输到WorkerMan，也有可能多个请求连在一起（粘包）同时到达WorkerMan。</p>
-<p>dealInput就是WorkerMan留给开发者的一个钩子函数，开发者根据自己的协议实现dealInput,用来区分TCP流中每个请求边界，避免由于请求数据接收不全或者粘包导致请求处理异常。</p>
-<p>WorkerMan正是通过这个钩子函数实现了请求边界的划分，并且通过这个函数支持各种应用层协议。</p>
-<p>2、dealProcess($recv_buffer)的作用</p>
-<p>当dealInput($recv_buffer)返回0代表请求接收完整,便进入请求处理流程 dealProcess($recv_buffer),dealProcess根据$recv_buffer中的数据按照与客户端约定的协议规则解析出请求的具体内容进行相应的处理。</p>
+                        <h1 id="1-10-">1.10 查看运行状态</h1>
+<p>运行 <code>./workerman/bin/workermand status</code>
+可以查看到WorkerMan的运行状态，类似如下:</p>
+<pre><code>Hello admin
+---------------------------------------GLOBAL STATUS--------------------------------------------
+WorkerMan version:2.1.1
+start time:2014-07-14 23:37:00   run 6 days 22 hours
+load average: 0, 0, 0
+1 users          8 workers       14 processes
+worker_name       exit_status     exit_count
+BusinessWorker    0                0
+ChatWeb           0                2
+FileMonitor       0                0
+Gateway           0                0
+Monitor           0                0
+StatisticProvider 0                0
+StatisticWeb      0                24
+StatisticWorker   0                0
+---------------------------------------PROCESS STATUS-------------------------------------------
+pid     memory      listening        timestamp  worker_name       total_request packet_err thunder_herd client_close send_fail throw_exception suc/total
+17508   2.25M   tcp://127.0.0.1:7373 1405352220 BusinessWorker    0              0          0            0            0         0               100%
+17509   2.25M   tcp://127.0.0.1:7373 1405352220 BusinessWorker    0              0          0            0            0         0               100%
+17510   2.25M   tcp://127.0.0.1:7373 1405352220 BusinessWorker    0              0          0            0            0         0               100%
+17511   2.5M    tcp://127.0.0.1:7373 1405352220 BusinessWorker    0              0          0            0            0         0               100%
+24345   2.25M   tcp://0.0.0.0:55151  1405950078 ChatWeb           14             0          0            0            0         0               100%
+17514   2.25M   tcp://0.0.0.0:7272   1405352220 Gateway           5              0          0            5            0         0               100%
+17515   2.25M   tcp://0.0.0.0:7272   1405352220 Gateway           17             0          0            16           0         0               100%
+17516   2.25M   tcp://0.0.0.0:7272   1405352220 Gateway           12             0          0            11           0         0               100%
+17517   2.25M   tcp://0.0.0.0:7272   1405352220 Gateway           199            0          0            149          0        0               100%
+17519   4.5M    tcp://0.0.0.0:55858  1405352220 StatisticProvider 32055          0          0            0            0         0               100%
+14256   5M      tcp://0.0.0.0:55757  1405929526 StatisticWeb      676            0          0            23           0         0               100%
+17527   2M      udp://0.0.0.0:55656  1405352220 StatisticWorker   3929424        0          0            0            0         0               100%
+</code></pre><h2 id="-">说明</h2>
+<h3 id="global-status">GLOBAL STATUS</h3>
+<p>从这以栏中我们可以看到</p>
+<p>WorkerMan的版本<code>version:2.1.1</code></p>
+<p>启动时间<code>2014-07-14 23:37:00   run 6 days 22 hours</code></p>
+<p>服务器负载 <code>load average: 0, 0, 0</code></p>
+<p><code>1 users</code>（一个WorkerMan远程登录管理员）          <code>8workers</code>（8种进程，包括Monitor、FileMonitor进程）       <code>14 processes</code>(共14个进程)</p>
+<p><code>worker_name</code>(服务名)       <code>exit_status</code>（退出状态值）     <code>exit_count</code>（该状态的退出次数）</p>
+<p>可以看到其中<code>ChatWeb</code> 退出2次，退出状态码为0（为0一般为正常退出，例如配置设置了max_requests）</p>
+<h2 id="process-status">PROCESS STATUS</h2>
+<p><code>pid</code>：进程pid</p>
+<p><code>memory</code>：该进程占用内存</p>
+<p><code>listening</code>：传输层协议及监听ip端口</p>
+<p><code>timestamp</code>：该进程启动时间戳</p>
+<p><code>worker_name</code>：该进程运行的服务服务名，对应于conf/conf.d下的配置名</p>
+<p><code>total_request</code>：该进程接收多少连接</p>
+<p><code>packet_err</code>：该进程接收的错误包数量</p>
+<p><code>thunder_herd</code>：该进程惊群数，注意多核处理器该值大于1是正常的</p>
+<p><code>client_close</code>：该进程对应的客户端主动关闭连接次数</p>
+<p><code>send_fail</code>：该进程向客户端发送数据失败次数</p>
+<p><code>throw_exception</code>：该进程内业务未捕获的异常数量</p>
+<p><code>suc/total</code>：该进程处理请求成功率</p>
 
                     
                     </section>
@@ -339,10 +378,10 @@
         </div>
 
         
-        <a href="../start/directory.html" class="navigation navigation-prev " aria-label="Previous page: 目录结构"><i class="fa fa-angle-left"></i></a>
+        <a href="../start/commend.html" class="navigation navigation-prev " aria-label="Previous page: 启动与停止"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../start/developmentprocess.html" class="navigation navigation-next " aria-label="Next page: 开发流程"><i class="fa fa-angle-right"></i></a>
+        <a href="../configure/README.html" class="navigation navigation-next " aria-label="Next page: 配置"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

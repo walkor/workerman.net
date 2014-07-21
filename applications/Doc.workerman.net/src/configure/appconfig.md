@@ -32,6 +32,9 @@ no_reload = 1
 
 ;workerman.conf.debug=1 时有效。echo var_dump 等输出是否打印到终端
 no_debug = 1
+
+;接收多少请求后重启进程，这个是gateway进程，不需要设置
+;max_requests = 1000
 ```
 
 ### 1、worker_file选项
@@ -114,4 +117,9 @@ no_reload=1：当运行workermand reload时，该进程不会重启
 ### 10、no_debug选项
 
 当workerman开启debug=1时，开发者不希望某个服务进程打印数据到终端时，可设置对应服务的no_debug=1
+
+
+### 11、max_requests选项
+
+max_requests用来设置对应进程接受多少用户请求后安全重启。次选项主要是为了避免业务代码有内存泄露而导致的内存耗尽。
 
