@@ -60,7 +60,7 @@
 							<a href="/install">安装</a>
 						</li>
 						<li<?php if($html_nav == 'documentation')echo ' class="active" ';?>>
-							<a href="/documentation">文档</a>
+							<a href="http://doc.workerman.net/index.html">文档</a>
 						</li>
 						<li<?php if($html_nav == 'group')echo ' class="active" ';?>>
 							<a href="http://wenda.phpgame.cn">问答</a>
