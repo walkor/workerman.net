@@ -4,7 +4,7 @@
     <head>
         
         <meta charset="UTF-8">
-        <title>安装 | WorkerMan文档</title>
+        <title>制定协议 | WorkerMan文档</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 0.5.2">
@@ -17,10 +17,10 @@
     
     
     
-    <link rel="next" href="../start/commend.html" />
+    <link rel="next" href="../dev/dealinput.html" />
     
     
-    <link rel="prev" href="../start/environment.html" />
+    <link rel="prev" href="../dev/README.html" />
     
 
         
@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="1.4" data-basepath=".." data-revision="1406035290569">
+    <div class="book"  data-level="3.1" data-basepath=".." data-revision="1406035290569">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -323,7 +323,7 @@
             <div class="page-wrapper" tabindex="-1">
                 <div class="book-progress">
     <div class="bar">
-        <div class="inner" style="width: 35%;min-width: 30%;"></div>
+        <div class="inner" style="width: 90%;min-width: 85%;"></div>
     </div>
     <div class="chapters">
     
@@ -343,27 +343,27 @@
     
         <a href="../start/getworkerman.html" title="安装" class="chapter done " data-progress="1.4" style="left: 35%;"></a>
     
-        <a href="../start/commend.html" title="启动与停止" class="chapter  " data-progress="1.5" style="left: 40%;"></a>
+        <a href="../start/commend.html" title="启动与停止" class="chapter done " data-progress="1.5" style="left: 40%;"></a>
     
-        <a href="../start/directory.html" title="目录结构" class="chapter  " data-progress="1.6" style="left: 45%;"></a>
+        <a href="../start/directory.html" title="目录结构" class="chapter done " data-progress="1.6" style="left: 45%;"></a>
     
-        <a href="../start/basicconcept.html" title="基本概念" class="chapter  " data-progress="1.7" style="left: 50%;"></a>
+        <a href="../start/basicconcept.html" title="基本概念" class="chapter done " data-progress="1.7" style="left: 50%;"></a>
     
-        <a href="../start/systemprocess.html" title="系统流程" class="chapter  " data-progress="1.8" style="left: 55%;"></a>
+        <a href="../start/systemprocess.html" title="系统流程" class="chapter done " data-progress="1.8" style="left: 55%;"></a>
     
-        <a href="../start/developmentprocess.html" title="开发流程" class="chapter  " data-progress="1.9" style="left: 60%;"></a>
+        <a href="../start/developmentprocess.html" title="开发流程" class="chapter done " data-progress="1.9" style="left: 60%;"></a>
     
-        <a href="../configure/README.html" title="配置" class="chapter  new-chapter" data-progress="2" style="left: 65%;"></a>
+        <a href="../configure/README.html" title="配置" class="chapter done new-chapter" data-progress="2" style="left: 65%;"></a>
     
-        <a href="../configure/configstandard.html" title="配置规范" class="chapter  " data-progress="2.1" style="left: 70%;"></a>
+        <a href="../configure/configstandard.html" title="配置规范" class="chapter done " data-progress="2.1" style="left: 70%;"></a>
     
-        <a href="../configure/mainconfig.html" title="主配置说明" class="chapter  " data-progress="2.2" style="left: 75%;"></a>
+        <a href="../configure/mainconfig.html" title="主配置说明" class="chapter done " data-progress="2.2" style="left: 75%;"></a>
     
-        <a href="../configure/appconfig.html" title="应用配置说明" class="chapter  " data-progress="2.3" style="left: 80%;"></a>
+        <a href="../configure/appconfig.html" title="应用配置说明" class="chapter done " data-progress="2.3" style="left: 80%;"></a>
     
-        <a href="../dev/README.html" title="基本开发流程" class="chapter  new-chapter" data-progress="3" style="left: 85%;"></a>
+        <a href="../dev/README.html" title="基本开发流程" class="chapter done new-chapter" data-progress="3" style="left: 85%;"></a>
     
-        <a href="../dev/protocols.html" title="制定协议" class="chapter  " data-progress="3.1" style="left: 90%;"></a>
+        <a href="../dev/protocols.html" title="制定协议" class="chapter done " data-progress="3.1" style="left: 90%;"></a>
     
         <a href="../dev/dealinput.html" title="实现dealInput" class="chapter  " data-progress="3.2" style="left: 95%;"></a>
     
@@ -374,28 +374,43 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_20">
+                    <section class="normal" id="section-gitbook_13">
                     
-                        <h1 id="-workerman">获取WorkerMan</h1>
-<h3 id="-">版本说明</h3>
-<p>WorkerMan目前有两个版本，linux平台下的多进程版本和win平台下的<a href="https://github.com/walkor/workerman-for-win" target="_blank">多线程版本</a>。Linux多进程版本是最稳定，功能最完善的版本，完全可用于生产环境。win平台多线程版本目前是测试版本，不建议用在生产环境。本手册适用于Linux多进程版本，在win多线程版本可能有所不同。</p>
-<h2 id="-github-">通过Github安装</h2>
-<h3 id="centos-">centos系统安装教程</h3>
-<p>1、命令行运行<code>yum install php-cli php-process git php-devel php-pear libevent-devel</code></p>
-<p>2、命令行运行<code>pecl install channel://pecl.php.net/libevent-0.1.0</code></p>
-<p>3、命令行运行<code>echo extension=libevent.so &gt; /etc/php.d/libevent.ini</code></p>
-<p>4、命令行运行<code>git clone https://github.com/walkor/workerman</code></p>
-<p>5、命令行运行<code>./workerman/workerman/bin/workermand start</code></p>
-<h3 id="debian-ubuntu-root-sudo-">debian/ubuntu系统安装教程(如果不是root用户请用sudo 后面加命令)</h3>
-<p>1、命令行运行<code>apt-get install php5-cli git php-pear php5-dev libevent-dev</code></p>
-<p>2、命令行运行<code>pecl install channel://pecl.php.net/libevent-0.1.0</code></p>
-<p>3、命令行运行<code>echo extension=libevent.so &gt; /etc/php5/cli/conf.d/libevent.ini</code></p>
-<p>4、命令行运行<code>git clone https://github.com/walkor/workerman</code></p>
-<p>5、命令行运行<code>./workerman/workerman/bin/workermand start</code></p>
-<h2 id="-zip-">下载ZIP文件安装</h2>
-<p>1、前提条件你本地安装了必要的运行环境，安装方法根据你的系统参考上面1-3步骤</p>
-<p>2、通过<a href="http://www.workerman.net/download/workermanzip" target="_blank">http://www.workerman.net/download/workermanzip</a> 连接下载WorkerMan</p>
-<p>3、解压后命令行运行<code>./workerman/workerman/bin/workermand start</code></p>
+                        <h1 id="-">制定协议</h1>
+<p>使用WorkerMan的第一步就是要和客户端商定应用层通信协议。</p>
+<h2 id="-">为什么要制定协议？</h2>
+<p>传统PHP开发都是基于Web的，基本上都是HTTP协议，HTTP协议的解析处理都由WebServer独自承担了，所以开发者不会关心协议方面的事情。然而当我们需要基于非HTTP协议开发时，传统WebServer无法满足我们的需求，这时需要基于WorkerMan开发，就必须考虑协议解析的问题。</p>
+<h2 id="-">如何制定协议？</h2>
+<p>实际上制定自己的协议是比较简单的事情。简单的协议一般包含两部分:</p>
+<ul>
+<li>区分数据边界的标识</li>
+<li>数据格式定义</li>
+</ul>
+<h3 id="1-">1、区分数据边界的标识</h3>
+<h4 id="-">作用</h4>
+<p>数据大小标识主要是为了区分出TCP流中的每个请求边界。由于TCP是基于流的，服务端收到客户端的请求可能是不完整的，也可能是多个请求连在一起的。</p>
+<h4 id="-">一个示例:</h4>
+<p>假如使用&quot;\n&quot;作为区分数据边界的标识，有两个请求&quot;ABC\n&quot; 和 &quot;EFG\n&quot;先后发送给服务端，由于TCP分片等机制，服务端获取的数据可能的情况有以下两种：</p>
+<h5 id="-ab-">收到的数据是&quot;AB&quot;即不完整的</h5>
+<p>对于收到&quot;AB&quot;这种不完整的情况，应该继续等待剩余请求数据到来再处理这个请求（在dealInput中返回1，说明这个请求还要等待一个字节）</p>
+<h5 id="-abc-nefg-n-">收到的数据是&quot;ABC\nEFG\n&quot;，多个请求连在一起的。</h5>
+<p>对于&quot;ABC\nEFG\n&quot;这样的请求，我们需要逐个字节读取（在dealInput中返回1，说明这个请求还要读取一个字节），直到读取到&quot;\n&quot;字符,然后处理这个请求。处理完毕后WorkerMan发现Socket缓冲区还有请求数据没读取，同样逐个字节读取，直到读取到&quot;\n&quot;后处理对应请求。</p>
+<h6 id="-4-pack-int-">区分数据边界的标识没有固定的规定，可以用单个特殊字符放在请求数据结尾来标记，也可以在请求数据头部放置固定4个字节的pack过的int值来标记数据包长度。</h6>
+<h3 id="2-">2、数据格式定义</h3>
+<p>传输的内容是按照商定的能识别格式传递的。例如定义一个通信协议的数据格式是json，区分边界的标识是&quot;\n&quot;，则一个请求的数据包可能是这样的 <code>{&quot;module&quot;:&quot;user&quot;,&quot;action&quot;:&quot;get&quot;}\n</code>。当服务端收到这个请求时，去掉请末尾&quot;\n&quot;，用json_decode便可以得到客户端传递实际请求。</p>
+<h2 id="-">几个示例协议</h2>
+<p>1、&quot;\n&quot;作为数据边界标识，数据格式为json</p>
+<p><code>{&quot;module&quot;:&quot;user&quot;,&quot;action&quot;:&quot;get&quot;}\n</code></p>
+<p>2、首部四个字节是以网络字节序pack的int值，标识请求数据包长度，数据格式为普通文本</p>
+<p>$pack_len = pack(&#39;N&#39;, strlen(&#39;我是要请求的普通文本数据&#39;);</p>
+<p><code>$pack_len.&#39;我是要请求的普通文本数据&#39;</code></p>
+<p>3、首部10个字节明文数字表示数据包长度，空白位以0代替，数据格式为xml</p>
+<pre><code>0000000111&lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;?&gt;
+&lt;request&gt;
+    &lt;module&gt;user&lt;/module&gt;
+    &lt;action&gt;getInfo&lt;/action&gt;
+&lt;/request&gt;
+</code></pre><p>其中000000011代表请求数据长度为111个字节，也就是xml的长度</p>
 
                     
                     </section>
@@ -405,10 +420,10 @@
         </div>
 
         
-        <a href="../start/environment.html" class="navigation navigation-prev " aria-label="Previous page: 环境要求"><i class="fa fa-angle-left"></i></a>
+        <a href="../dev/README.html" class="navigation navigation-prev " aria-label="Previous page: 基本开发流程"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../start/commend.html" class="navigation navigation-next " aria-label="Next page: 启动与停止"><i class="fa fa-angle-right"></i></a>
+        <a href="../dev/dealinput.html" class="navigation navigation-next " aria-label="Next page: 实现dealInput"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

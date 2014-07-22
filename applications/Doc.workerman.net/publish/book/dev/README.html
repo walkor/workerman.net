@@ -4,7 +4,7 @@
     <head>
         
         <meta charset="UTF-8">
-        <title>安装 | WorkerMan文档</title>
+        <title>基本开发流程 | WorkerMan文档</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 0.5.2">
@@ -17,10 +17,10 @@
     
     
     
-    <link rel="next" href="../start/commend.html" />
+    <link rel="next" href="../dev/protocols.html" />
     
     
-    <link rel="prev" href="../start/environment.html" />
+    <link rel="prev" href="../configure/appconfig.html" />
     
 
         
@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="1.4" data-basepath=".." data-revision="1406035290569">
+    <div class="book"  data-level="3" data-basepath=".." data-revision="1406035290569">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -323,7 +323,7 @@
             <div class="page-wrapper" tabindex="-1">
                 <div class="book-progress">
     <div class="bar">
-        <div class="inner" style="width: 35%;min-width: 30%;"></div>
+        <div class="inner" style="width: 85%;min-width: 80%;"></div>
     </div>
     <div class="chapters">
     
@@ -343,25 +343,25 @@
     
         <a href="../start/getworkerman.html" title="安装" class="chapter done " data-progress="1.4" style="left: 35%;"></a>
     
-        <a href="../start/commend.html" title="启动与停止" class="chapter  " data-progress="1.5" style="left: 40%;"></a>
+        <a href="../start/commend.html" title="启动与停止" class="chapter done " data-progress="1.5" style="left: 40%;"></a>
     
-        <a href="../start/directory.html" title="目录结构" class="chapter  " data-progress="1.6" style="left: 45%;"></a>
+        <a href="../start/directory.html" title="目录结构" class="chapter done " data-progress="1.6" style="left: 45%;"></a>
     
-        <a href="../start/basicconcept.html" title="基本概念" class="chapter  " data-progress="1.7" style="left: 50%;"></a>
+        <a href="../start/basicconcept.html" title="基本概念" class="chapter done " data-progress="1.7" style="left: 50%;"></a>
     
-        <a href="../start/systemprocess.html" title="系统流程" class="chapter  " data-progress="1.8" style="left: 55%;"></a>
+        <a href="../start/systemprocess.html" title="系统流程" class="chapter done " data-progress="1.8" style="left: 55%;"></a>
     
-        <a href="../start/developmentprocess.html" title="开发流程" class="chapter  " data-progress="1.9" style="left: 60%;"></a>
+        <a href="../start/developmentprocess.html" title="开发流程" class="chapter done " data-progress="1.9" style="left: 60%;"></a>
     
-        <a href="../configure/README.html" title="配置" class="chapter  new-chapter" data-progress="2" style="left: 65%;"></a>
+        <a href="../configure/README.html" title="配置" class="chapter done new-chapter" data-progress="2" style="left: 65%;"></a>
     
-        <a href="../configure/configstandard.html" title="配置规范" class="chapter  " data-progress="2.1" style="left: 70%;"></a>
+        <a href="../configure/configstandard.html" title="配置规范" class="chapter done " data-progress="2.1" style="left: 70%;"></a>
     
-        <a href="../configure/mainconfig.html" title="主配置说明" class="chapter  " data-progress="2.2" style="left: 75%;"></a>
+        <a href="../configure/mainconfig.html" title="主配置说明" class="chapter done " data-progress="2.2" style="left: 75%;"></a>
     
-        <a href="../configure/appconfig.html" title="应用配置说明" class="chapter  " data-progress="2.3" style="left: 80%;"></a>
+        <a href="../configure/appconfig.html" title="应用配置说明" class="chapter done " data-progress="2.3" style="left: 80%;"></a>
     
-        <a href="../dev/README.html" title="基本开发流程" class="chapter  new-chapter" data-progress="3" style="left: 85%;"></a>
+        <a href="../dev/README.html" title="基本开发流程" class="chapter done new-chapter" data-progress="3" style="left: 85%;"></a>
     
         <a href="../dev/protocols.html" title="制定协议" class="chapter  " data-progress="3.1" style="left: 90%;"></a>
     
@@ -374,28 +374,9 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_20">
+                    <section class="normal" id="section-gitbook_11">
                     
-                        <h1 id="-workerman">获取WorkerMan</h1>
-<h3 id="-">版本说明</h3>
-<p>WorkerMan目前有两个版本，linux平台下的多进程版本和win平台下的<a href="https://github.com/walkor/workerman-for-win" target="_blank">多线程版本</a>。Linux多进程版本是最稳定，功能最完善的版本，完全可用于生产环境。win平台多线程版本目前是测试版本，不建议用在生产环境。本手册适用于Linux多进程版本，在win多线程版本可能有所不同。</p>
-<h2 id="-github-">通过Github安装</h2>
-<h3 id="centos-">centos系统安装教程</h3>
-<p>1、命令行运行<code>yum install php-cli php-process git php-devel php-pear libevent-devel</code></p>
-<p>2、命令行运行<code>pecl install channel://pecl.php.net/libevent-0.1.0</code></p>
-<p>3、命令行运行<code>echo extension=libevent.so &gt; /etc/php.d/libevent.ini</code></p>
-<p>4、命令行运行<code>git clone https://github.com/walkor/workerman</code></p>
-<p>5、命令行运行<code>./workerman/workerman/bin/workermand start</code></p>
-<h3 id="debian-ubuntu-root-sudo-">debian/ubuntu系统安装教程(如果不是root用户请用sudo 后面加命令)</h3>
-<p>1、命令行运行<code>apt-get install php5-cli git php-pear php5-dev libevent-dev</code></p>
-<p>2、命令行运行<code>pecl install channel://pecl.php.net/libevent-0.1.0</code></p>
-<p>3、命令行运行<code>echo extension=libevent.so &gt; /etc/php5/cli/conf.d/libevent.ini</code></p>
-<p>4、命令行运行<code>git clone https://github.com/walkor/workerman</code></p>
-<p>5、命令行运行<code>./workerman/workerman/bin/workermand start</code></p>
-<h2 id="-zip-">下载ZIP文件安装</h2>
-<p>1、前提条件你本地安装了必要的运行环境，安装方法根据你的系统参考上面1-3步骤</p>
-<p>2、通过<a href="http://www.workerman.net/download/workermanzip" target="_blank">http://www.workerman.net/download/workermanzip</a> 连接下载WorkerMan</p>
-<p>3、解压后命令行运行<code>./workerman/workerman/bin/workermand start</code></p>
+                        <h1 id="-">基本开发流程</h1>
 
                     
                     </section>
@@ -405,10 +386,10 @@
         </div>
 
         
-        <a href="../start/environment.html" class="navigation navigation-prev " aria-label="Previous page: 环境要求"><i class="fa fa-angle-left"></i></a>
+        <a href="../configure/appconfig.html" class="navigation navigation-prev " aria-label="Previous page: 应用配置说明"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../start/commend.html" class="navigation navigation-next " aria-label="Next page: 启动与停止"><i class="fa fa-angle-right"></i></a>
+        <a href="../dev/protocols.html" class="navigation navigation-next " aria-label="Next page: 制定协议"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
