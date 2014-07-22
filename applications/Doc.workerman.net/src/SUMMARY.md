@@ -16,5 +16,8 @@
    * [配置规范](configure/configstandard.md)
    * [主配置说明](configure/mainconfig.md)
    * [应用配置说明](configure/appconfig.md)
-* [待续....](continue/README)
+* [基本开发流程](dev/README.md)
+   * [制定协议](dev/protocols.md)
+   * [实现dealInput](dev/dealinput.md)
+* [待续....](continue/README.md)
 
