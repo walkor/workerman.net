@@ -18,6 +18,7 @@
    * [应用配置说明](configure/appconfig.md)
 * [基本开发流程](dev/README.md)
    * [制定协议](dev/protocols.md)
-   * [实现dealInput](dev/dealinput.md)
+   * [配置](dev/configapp.md)
+   * [实现dealInput/dealProcess](dev/dealinput.md)
 * [待续....](continue/README.md)
 
