@@ -18,7 +18,11 @@
    * [应用配置说明](configure/appconfig.md)
 * [基本开发流程](dev/README.md)
    * [制定协议](dev/protocols.md)
-   * [配置](dev/configapp.md)
    * [实现dealInput/dealProcess](dev/dealinput.md)
+   * [配置与启动](dev/configapp.md)
+* [基于Gateway/Worker模型开发](start/gatewaydev.md)
+   * [制定协议](start/protocol.md)
+   * [实现相关接口](start/devapi.md)
+   * [配置与启动](start/config.md)
 * [待续....](continue/README.md)
 
