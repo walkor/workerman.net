@@ -1,4 +1,4 @@
-# 2.2 主配置说明
+# 主配置说明
 
 ### 主配置conf/workerman.conf
 

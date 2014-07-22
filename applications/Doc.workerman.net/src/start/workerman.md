@@ -1,4 +1,4 @@
-# 1.10 查看运行状态
+# 查看运行状态
 
 运行 ```./workerman/bin/workermand status```
 可以查看到WorkerMan的运行状态，类似如下:

@@ -1,4 +1,4 @@
-# 2.1 配置规范
+# 配置规范
 
 1、WorkerMan配置统一放在```workerman/conf/```
 下

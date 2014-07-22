@@ -1,6 +1,6 @@
-# 1.4 环境要求
+# 环境要求
 
-## 1.4.1 运行所需环境
+## 运行所需环境
 
 1、WorkerMan 要求运行在Linux环境下（centos、RedHat、Ubuntu、debian、mac os等）
 
@@ -8,7 +8,7 @@
 
 3、sysvshm、sysvmsg、libevent、proctitle扩展建议安装，但不是必须的
 
-## 1.4.2 详细说明
+## 详细说明
 
 ### 关于PHP-CLI
 
@@ -46,7 +46,7 @@ www-data 10353  0.0  1.2 151484  6128 ?        S    Jun10   0:00 WorkerMan:worke
 www-data 10354  0.0  1.1 151484  6068 ?        S    Jun10   0:00 WorkerMan:worker SenderGateway tcp://127.0.0.1:5252                       ```
 
 
-## 1.4.3 如何扩展
+## 如何安装扩展
 
 正常情况按照1.3安装方法即可满足WorkerMan所需环境。如果发现所需扩展没有安装科尝试以下方法：
 
