@@ -26,5 +26,7 @@
    * [基本流程](start/base.md)
    * [Gateway/Worker接口参考](start/interface.md)
 * [安全](safety/README.md)
+* [高级应用](advanced/README.md)
+   * [telnet远程登录控制](advanced/telnet.md)
 * [待续....](continue/README.md)
 
