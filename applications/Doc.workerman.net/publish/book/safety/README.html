@@ -4,7 +4,7 @@
     <head>
         
         <meta charset="UTF-8">
-        <title>待续.... | Introduction</title>
+        <title>安全 | Introduction</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 0.5.2">
@@ -17,8 +17,10 @@
     
     
     
+    <link rel="next" href="../continue/README.html" />
     
-    <link rel="prev" href="../safety/README.html" />
+    
+    <link rel="prev" href="../start/interface.html" />
     
 
         
@@ -30,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="6" data-basepath=".." data-revision="1406126753434">
+    <div class="book"  data-level="5" data-basepath=".." data-revision="1406126753434">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -390,7 +392,7 @@
             <div class="page-wrapper" tabindex="-1">
                 <div class="book-progress">
     <div class="bar">
-        <div class="inner" style="width: 100%;min-width: 96.29629629629629%;"></div>
+        <div class="inner" style="width: 96.29629629629629%;min-width: 92.5925925925926%;"></div>
     </div>
     <div class="chapters">
     
@@ -448,16 +450,20 @@
     
         <a href="../safety/README.html" title="安全" class="chapter done new-chapter" data-progress="5" style="left: 96.29629629629629%;"></a>
     
-        <a href="../continue/README.html" title="待续...." class="chapter done new-chapter" data-progress="6" style="left: 100%;"></a>
+        <a href="../continue/README.html" title="待续...." class="chapter  new-chapter" data-progress="6" style="left: 100%;"></a>
     
     </div>
 </div>
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_896">
+                    <section class="normal" id="section-gitbook_900">
                     
-                        <h1 id="-">待续....</h1>
+                        <h1 id="-">安全</h1>
+<p>1、配置中除了<code>Monitor.conf</code> <code>FileMonitor.conf</code> 中<code>user=root</code>，其它进程的配置文件中的user应该设置为权限较低的用户，例如<code>www-data</code> <code>nobody</code>等</p>
+<p>2、<code>Monitor.conf</code>中的<code>listen</code>设置的端口是远程登录的端口，如果不想开启远程登录，请将ip设置为<code>127.0.0.1</code>（默认都是配置的<code>127.0.0.1</code>,只允许本机登录），如<code>listen=tcp://127.0.0.1:2009</code>(端口号可以设置成其它值)。</p>
+<p>3、如果要开启远程控制，可将<code>Monitor.conf</code>中的<code>listen</code>中的ip设置为内网ip或者外网ip或者<code>0.0.0.0</code>,例如<code>listen=tcp://127.0.0.1:2009</code>(端口号可以设置成其它值)</p>
+<p>4、如果开启远程控制，记得将<code>Monitor.conf</code>中的<code>password</code>设置成你自己的密码</p>
 
                     
                     </section>
@@ -467,8 +473,10 @@
         </div>
 
         
-        <a href="../safety/README.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 安全"><i class="fa fa-angle-left"></i></a>
+        <a href="../start/interface.html" class="navigation navigation-prev " aria-label="Previous page: Gateway/Worker接口参考"><i class="fa fa-angle-left"></i></a>
         
+        
+        <a href="../continue/README.html" class="navigation navigation-next " aria-label="Next page: 待续...."><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
