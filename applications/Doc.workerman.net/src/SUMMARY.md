@@ -3,7 +3,7 @@
 * [入门](start/README.md)
    * [WorkerMan是什么](start/introduction.md)
    * [WorkerMan能做什么](start/dowhat.md)
-   * [WorkerMan的特性](feature/README.md)
+   * [WorkerMan的特性](start/feature.md)
    * [环境要求](start/environment.md)
    * [安装](start/getworkerman.md)
    * [启动与停止](start/commend.md)
