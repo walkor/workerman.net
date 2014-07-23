@@ -3,6 +3,7 @@
 * [入门](start/README.md)
    * [WorkerMan是什么](start/introduction.md)
    * [WorkerMan能做什么](start/dowhat.md)
+   * [WorkerMan的特性](feature/README.md)
    * [环境要求](start/environment.md)
    * [安装](start/getworkerman.md)
    * [启动与停止](start/commend.md)
@@ -12,6 +13,7 @@
    * [开发流程](start/developmentprocess.md)
    * [相关规范](start/namingconventions.md)
    * [查看运行状态](start/workerman.md)
+   * [调试](start/debug.md)
 * [配置](configure/README.md)
    * [配置规范](configure/configstandard.md)
    * [主配置说明](configure/mainconfig.md)
@@ -23,5 +25,6 @@
 * [Gateway/Worker开发流程](start/gatewaydev.md)
    * [基本流程](start/base.md)
    * [Gateway/Worker接口参考](start/interface.md)
+* [安全](safety/README.md)
 * [待续....](continue/README.md)
 
