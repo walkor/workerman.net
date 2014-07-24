@@ -1,12 +1,12 @@
 # 压力测试
 
 ###测试环境：
-**系统**：debian 6.0 64位
-**内存**：64G
-**cpu**：Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz （2颗物理cpu，6核心，2线程）
-**Workerman**：开启200个Benchark进程
-**压测脚本**：benchmark
-**业务**：发送并返回hello字符串
+* **系统**：debian 6.0 64位
+* **内存**：64G
+* **cpu**：Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz （2颗物理cpu，6核心，2线程）
+* **Workerman**：开启200个Benchark进程
+* **压测脚本**：benchmark
+* **业务**：发送并返回hello字符串
 
 ###普通PHP（版本5.3.10）压测
     短链接（每次请求完成后关闭链接，下次请求建立新的链接）:
