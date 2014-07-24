@@ -28,5 +28,6 @@
 * [安全](safety/README.md)
 * [高级应用](advanced/README.md)
    * [telnet远程登录控制](advanced/telnet.md)
+* [压力测试](stresstest/README.md)
 * [待续....](continue/README.md)
 
