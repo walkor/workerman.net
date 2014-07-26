@@ -138,16 +138,19 @@
 		</h3>
 		<ul>
 			<li>
-				<a href="https://github.com/walkor/workerman-for-win">2014-6-10 workerman windows 平台多线程测试版本发布</a>
+				<a href="http://doc.workerman.net/index.html">2014-07-23 workerman 手册发布</a>
 			</li>
 			<li>
-				<a href="http://wenda.phpgame.cn">2014-6-07 workerman社区功能上线</a>
+				<a href="https://github.com/walkor/workerman-for-win">2014-06-10 workerman windows 平台多线程测试版本发布</a>
 			</li>
 			<li>
-				<a href="/workerman-todpole">2014-6-03 flappy bird 多人在线版发布</a>
+				<a href="http://wenda.phpgame.cn">2014-06-07 workerman社区功能上线</a>
+			</li>
+			<li>
+				<a href="/workerman-todpole">2014-06-03 flappy bird 多人在线版发布</a>
 			</li>
 		    <li>
-				<a href="/workerman-todpole">2014-5-01 PHP小蝌蚪游戏发布</a>
+				<a href="/workerman-todpole">2014-05-01 PHP小蝌蚪游戏发布</a>
 			</li>
 			<li>
 				<a href="/workerman-chat">2014-03-25 基于Websocket的聊天室发布</a>
