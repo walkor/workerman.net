@@ -9,7 +9,7 @@ WorkerMan目前有两个版本，linux平台下的多进程版本和win平台下
 ### centos系统安装教程
 
 1、命令行运行```
-yum install php-cli php-process git php-devel php-pear libevent-devel```
+yum install php-cli php-process git gcc php-devel php-pear libevent-devel```
 
 
 2、命令行运行```
@@ -17,7 +17,8 @@ pecl install channel://pecl.php.net/libevent-0.1.0```
 
 
 3、命令行运行```
-echo extension=libevent.so > /etc/php.d/libevent.ini```
+echo extension=libevent.so > /etc/php.d/libevent.ini```<br>
+　提示libevent installation [autodetect]: 时按回车
 
 
 4、命令行运行```
@@ -31,11 +32,12 @@ git clone https://github.com/walkor/workerman```
 ### debian/ubuntu系统安装教程(如果不是root用户请用sudo 后面加命令)
 
 1、命令行运行```
-apt-get install php5-cli git php-pear php5-dev libevent-dev```
+apt-get install php5-cli git gcc php-pear php5-dev libevent-dev```
 
 
 2、命令行运行```
-pecl install channel://pecl.php.net/libevent-0.1.0```
+pecl install channel://pecl.php.net/libevent-0.1.0```<br>
+　  提示libevent installation [autodetect]: 时按回车
 
 
 3、命令行运行```
