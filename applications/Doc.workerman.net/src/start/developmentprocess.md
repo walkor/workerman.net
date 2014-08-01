@@ -9,14 +9,15 @@
 
 3、实现dealProcess，使得请求完整到达时，能够进行相应的处理。
 
+*详细流程参考后面基本开发流程一章*
 
-## 使用现有例子 ChatDemo
+## 基于Gateway/Worker模型开发
 
 WorkerMan中有一个例子ChatDemo，这个例子虽然是个聊天的例子，但是适合很多长连接相关的应用，例如移动APP通讯、游戏服务器、与硬件通讯等等。
 
 如果你的应用是需要长连接，并且需要向客户端推送数据，那么可以直接使用ChatDemo。
 
-### ChatDemo开发流程
+### Gateway/Worker开发流程
 
 1、和客户端协定请求协议
 
@@ -29,3 +30,5 @@ WorkerMan中有一个例子ChatDemo，这个例子虽然是个聊天的例子，
 
 
 4、实现ChatDemo/Event.php 中的 onClose方法。当客户端主动断开连接时触发此方法。一般在这里做一些状态记录如下线和数据清理工作。
+
+*详细流程参考后面Gateway/Worker开发流程一章*

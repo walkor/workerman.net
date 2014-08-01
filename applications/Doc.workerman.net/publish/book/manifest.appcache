@@ -1,13 +1,14 @@
 CACHE MANIFEST
-# Revision 1406880308491
+# Revision 1406890685000
 
 CACHE:
+devread/README.html
 index.html
 advanced/README.html
 advanced/configrestart.html
 advanced/distributed.html
-configure/README.html
 advanced/telnet.html
+configure/README.html
 configure/appconfig.html
 configure/configstandard.html
 configure/mainconfig.html
@@ -16,18 +17,18 @@ dev/README.html
 dev/configapp.html
 dev/dealinput.html
 dev/protocols.html
-devread/README.html
+license/README.html
+manual/README.html
+manual/preface.html
 safety/README.html
-start/environment.html
+start/feature.html
 start/README.html
-start/basicconcept.html
 start/commend.html
 start/debug.html
 start/developmentprocess.html
 start/directory.html
-start/dowhat.html
+start/environment.html
 start/base.html
-start/feature.html
 start/gatewaydev.html
 start/getworkerman.html
 start/interface.html

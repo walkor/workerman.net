@@ -1,5 +1,3 @@
-# 获取WorkerMan
-
 ###版本说明
 
 WorkerMan目前有两个版本，linux平台下的多进程版本和win平台下的[多线程版本](https://github.com/walkor/workerman-for-win)。Linux多进程版本是最稳定，功能最完善的版本，完全可用于生产环境。win平台多线程版本目前是测试版本，不建议用在生产环境。本手册适用于Linux多进程版本，在win多线程版本可能有所不同。
