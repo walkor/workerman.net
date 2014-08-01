@@ -1,13 +1,13 @@
 CACHE MANIFEST
-# Revision 1406821261486
+# Revision 1406880308491
 
 CACHE:
 index.html
 advanced/README.html
 advanced/configrestart.html
 advanced/distributed.html
-advanced/telnet.html
 configure/README.html
+advanced/telnet.html
 configure/appconfig.html
 configure/configstandard.html
 configure/mainconfig.html
