@@ -16,7 +16,7 @@
 			 <a href="http://www.yuchats.com/" class="pull-left" target="_blank"><img src="/img/app-ya.png" class="media-object" alt='workerman 手机im ya' /></a>
 			<div class="media-body">
 				<h4 class="media-heading">
-					<a target="_blank" href="/workerman-todpole">YA！</a>&nbsp;&nbsp;<font style="font-size:12px;color:red;">新</font>
+					<a target="_blank" href="http://www.yuchats.com/">YA！</a>&nbsp;&nbsp;<font style="font-size:12px;color:red;">新</font>
 				</h4>
 				<p>Ya！是一款极致简单、快速有效的下一代互联网沟通方式！
 用户登录后通过右划好友头像，向对方传递个通知，而对方收到通知后，也可以通过右划进行反馈。整个沟通过程极致有效，并有无数种使用方法。<br>
