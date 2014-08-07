@@ -16,6 +16,8 @@
         
     
     
+    <meta name="author" content="walkor">
+    
     
     <link rel="next" href="../start/interface.html" />
     
@@ -32,12 +34,12 @@
 
 
         
-    <div class="book"  data-level="7.1" data-basepath=".." data-revision="1406897835503">
+    <div class="book" data-github="walkor/workerman.net" data-level="7.1" data-basepath=".." data-revision="1407401870276">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
     
-    <a href="https://github.com/null" target="_blank" class="btn pull-left home-bookmark" aria-label="GitHub home"><i class="fa fa-bookmark-o"></i></a>
+    <a href="https://github.com/walkor/workerman.net" target="_blank" class="btn pull-left home-bookmark" aria-label="GitHub home"><i class="fa fa-bookmark-o"></i></a>
     
     <a href="#" class="btn pull-left toggle-search" aria-label="Toggle search"><i class="fa fa-search"></i></a>
     <span id="font-settings-wrapper">
@@ -80,6 +82,9 @@
     
 
     
+    <a href="https://github.com/walkor/workerman.net/stargazers" target="_blank" class="btn pull-right count-star hidden-xs"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/walkor/workerman.net/watchers" target="_blank" class="btn pull-right count-watch hidden-xs"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+    
 
     <!-- Title -->
     <h1>
@@ -97,11 +102,28 @@
     <ul class="summary">
         
         
-
+        
+        <li>
+            <a href="https://github.com/walkor" target="blank" class="author-link">About the author</a>
+        </li>
         
 
         
+        
+        <li>
+            <a href="https://github.com/walkor/workerman.net/issues" target="blank"class="issues-link">Questions and Issues</a>
+        </li>
+        
 
+        
+        
+        <li>
+            <a href="https://github.com/walkor/workerman.net/edit/master/start/base.md" target="blank" class="contribute-link">Edit and Contribute</a>
+        </li>
+        
+
+        
+        <li class="divider"></li>
         
 
         <li data-level="0" data-path="index.html">
@@ -546,24 +568,23 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_38">
+                    <section class="normal" id="section-gitbook_5935">
                     
                         <h1 id="-">基本流程</h1>
-<p>基于Gateway/Worker模型的长链接应用开发者可以直接使用applications/ChatDemo这个应用框架来做。</p>
-<h3 id="chatdemo-">ChatDemo这个框架提供了以下基本功能。</h3>
+<p>基于Gateway/Worker模型的长链接应用开发者可以直接使用applications/Demo这个应用框架来做。</p>
+<h3 id="applications-demo-">applications/Demo这个框架提供了以下基本功能。</h3>
 <p>1、维持客户端长链接</p>
 <p>2、每个客户端链接到服务端后服务端可以将这个链接和客户端uid绑定，当客户端发来消息时可以识别是哪个客户端uid发来的消息</p>
 <p>3、在服务端可以调用相关接口给其它客户端发送消息数据</p>
 <p>4、提供了定时向客户端发送心跳的功能，用来检测与客户端的联通性</p>
-<p>5、客户端可以是任意的，Demo中的<code>Test/Chat.php</code>是一个PHP的客户端，运行<code>php Chat.php</code> 测试</p>
+<p>5、客户端可以是任意的，Demo中的客户端是telnet应用程序。即在终端运行<code>telnet ip 8480</code></p>
 <h3 id="chatdemo-">ChatDemo的测试方法</h3>
 <ul>
-<li>运行 <code>cd applications/ChatDemoTests/</code></li>
-<li>运行 <code>php Chat.php</code></li>
+<li>终端运行 <code>telnet ip 8480</code> （ip为WorkerMan运行的服务器ip，本机的话可以使用127.0.0.1）</li>
 <li>直接打字回车是向所有人发消息</li>
-<li>$uid:<strong>*</strong> 是向$uid用户发送消息<strong>*</strong></li>
+<li>$uid:xxx 是向$uid用户发送消息xxx，类似私聊</li>
 </ul>
-<h2 id="-chatdemo-">基于ChatDemo开发流程</h2>
+<h2 id="-applications-demo-">基于applications/Demo开发流程</h2>
 <h3 id="1-">1、建立一个新的项目</h3>
 <p>1.1、选定项目名，例如项目名叫ChatRoom，更改<code>applications/ChatDemo</code> 为 <code>applications/ChatRoom</code></p>
 <p>1.2、将配置<code>workerman/conf/conf.d/Gateway.php</code>中的 <code>worker_file</code>设置为新的路径<code>worker_file=../applications/ChatRoom/Bootstrap/Gateway.php</code></p>
@@ -571,20 +592,20 @@
 <p>1.4、重新启动WorkerMan <code>workerman/bin/workermand restart</code></p>
 <p>1.5 至此，一个新的基于Gateway/Worker模型的项目建立好了</p>
 <h3 id="2-">2、选定协议</h3>
-<p>ChatDemo中使用的协议是首部四字节网络字节序int值表示数据长度+json字符串表示传输的数据。</p>
-<p>下面是一个请求数据的样本：<code>****{&quot;module&quot;:&quot;user&quot;,&quot;action&quot;:&quot;getInfo&quot;}</code></p>
-<p>首部四个字节<code>****</code>是值为40的int型二进制数据（表现为乱码），代表<code>****{&quot;module&quot;:&quot;user&quot;,&quot;action&quot;:&quot;getInfo&quot;}</code>整个数据长度为40。</p>
-<p>当然开发者可以订制字节的协议，例如\n为请求结束符 <code>{&quot;module&quot;:&quot;user&quot;,&quot;action&quot;:&quot;getInfo&quot;}\n</code></p>
-<p>协议的订制具体可参考上一章WorkerMan基本开发流程中的订制协议部分</p>
+<p>appplications/Demo中使用的默认应用层协议是文本请求末尾加回车，即 Text+&quot;\n&quot;,协议解析的文件是Procotols\TextProtocol.php</p>
+<p>下面是一个请求数据的样本：<code>Hi,大家好，我是小明\n</code>（注意末尾的\n是回车字符，代表一个请求的结束）</p>
+<p>TextProtocol协议只是一个例子，开发者可以订制自己的协议，具体可参考上一章WorkerMan基本开发流程中的订制协议部分</p>
 <h3 id="3-">3、通过接口实现相关业务逻辑</h3>
 <p>Gateway/Worker模型的业务逻辑入口全部在<code>applications/ChatRoom/Event.php</code>中。接口如下：</p>
-<h4 id="3-1-event-ongatewaymessage-recv_buffer-">3.1、Event::onGatewayMessage($recv_buffer)</h4>
-<p>此接口就是<code>Gateway</code>进程的<code>dealInput</code>函数，被<code>Gateway</code>进程用来区分TCP流中的请求边界。根据协议判断请求是否完整，<code>onGatewayMessage</code>返回数字N，如果<code>N=0</code>，代表<code>Gateway</code>进程当前的请求接收完整，紧接着<code>Gateway</code>进程会将客户端这个请求转发到<code>BusinessWorker</code>处理(<code>onConnect</code>或者<code>onMessage</code>）。<code>onGatewayMessage</code>的实现可以参考基本开发流程章节的实现<code>dealInput/dealProcess</code>小节中的<code>dealInput</code>部分</p>
-<h4 id="3-2-event-onconnect-recv_buffer-">3.2、Event::onConnect($recv_buffer)</h4>
+<h4 id="3-2-event-ongatewayconnect-">3.2、Event::onGatewayConnect()</h4>
+<p>当Gateway进程每收一个客户端链接时触发，如果你的应用需要在此时需要做些操作的话可以在这里实现</p>
+<h4 id="3-2-event-ongatewaymessage-recv_buffer-">3.2、Event::onGatewayMessage($recv_buffer)</h4>
+<p>此接口就是<code>Gateway</code>进程的<code>dealInput</code>函数，<code>Gateway</code>用这个函数来区分TCP流中的请求边界。根据协议判断请求是否完整，<code>onGatewayMessage</code>返回数字N，如果<code>N=0</code>，代表<code>Gateway</code>进程当前的请求接收完整，紧接着<code>Gateway</code>进程会将客户端这个请求转发到<code>BusinessWorker</code>处理(<code>onConnect</code>或者<code>onMessage</code>）。<code>onGatewayMessage</code>的实现可以参考基本开发流程章节的实现<code>dealInput/dealProcess</code>小节中的<code>dealInput</code>部分</p>
+<h4 id="3-3-event-onconnect-recv_buffer-">3.3、Event::onConnect($recv_buffer)</h4>
 <p>当客户端发来请求，并且这个客户端对应的socket并没有绑定uid(使用<code>GateWay::notifyConnectionSuccess($uid)</code>绑定)时，也就是未验证用户发来的数据都触发这个方法。开发者需要实现这个方法，一般在这个方法中通过客户端传递的$recv_buffer中的数据如用户名密码验证用户是否合法，如果合法得到uid（必须为大于0的数字），在gateway上将uid和对应的socket绑定。则这个socket再次发来请求时会触发<code>Event::onMessge($uid, $recv_buffer)</code>，从而直接能获得当前请求是哪个uid发来的。</p>
-<h4 id="3-3-event-onmessage-uid-recv_message-">3.3、Event::onMessage($uid, $recv_message)</h4>
+<h4 id="3-4-event-onmessage-uid-recv_message-">3.4、Event::onMessage($uid, $recv_message)</h4>
 <p>当使用<code>GateWay::notifyConnectionSuccess($uid)</code>绑定的用户发来消息时触发，$uid为对应socket绑定的uid，用来唯一识别客户端。在<code>onMessage</code>里面一般是根据协议解析请求并做处理，如果有需要通过<code>Gateway::sendToAll/sendToUid</code>向其它用户发送消息。</p>
-<h4 id="3-4-event-onclose-uid-">3.4、Event::onClose($uid)</h4>
+<h4 id="3-5-event-onclose-uid-">3.5、Event::onClose($uid)</h4>
 <p>当客户端<strong>主动</strong>断开时触发，一般在这里清理用户的数据，例如更新数据库中的在线状态为下线</p>
 <h3 id="4-">4、与客户端调试</h3>
 <p>调试除了在程序中打断点，还可以通过<code>tcpdump</code>等命令抓取网络的请求来判断网络请求是否整正确。</p>

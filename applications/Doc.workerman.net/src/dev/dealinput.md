@@ -24,7 +24,7 @@ class MyApp extends Man\Core\SocketWorker
         // 如果最后一个字符是\n代表数据读取完整，返回0
         if($recv_buffer[strlen($recv_buffer)-1] === "\n")
         {
-            return 0；
+            return 0;
         }
 
         // 说明还有请求数据没收到，但是由于不知道还有多少数据没收到，所以只能返回1，因为有可能下一个字符就是\n

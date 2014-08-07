@@ -16,6 +16,8 @@
         
     
     
+    <meta name="author" content="walkor">
+    
     
     <link rel="next" href="../stresstest/README.html" />
     
@@ -32,12 +34,12 @@
 
 
         
-    <div class="book"  data-level="9.3" data-basepath=".." data-revision="1406897835503">
+    <div class="book" data-github="walkor/workerman.net" data-level="9.3" data-basepath=".." data-revision="1407401870276">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
     
-    <a href="https://github.com/null" target="_blank" class="btn pull-left home-bookmark" aria-label="GitHub home"><i class="fa fa-bookmark-o"></i></a>
+    <a href="https://github.com/walkor/workerman.net" target="_blank" class="btn pull-left home-bookmark" aria-label="GitHub home"><i class="fa fa-bookmark-o"></i></a>
     
     <a href="#" class="btn pull-left toggle-search" aria-label="Toggle search"><i class="fa fa-search"></i></a>
     <span id="font-settings-wrapper">
@@ -80,6 +82,9 @@
     
 
     
+    <a href="https://github.com/walkor/workerman.net/stargazers" target="_blank" class="btn pull-right count-star hidden-xs"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/walkor/workerman.net/watchers" target="_blank" class="btn pull-right count-watch hidden-xs"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+    
 
     <!-- Title -->
     <h1>
@@ -97,11 +102,28 @@
     <ul class="summary">
         
         
-
+        
+        <li>
+            <a href="https://github.com/walkor" target="blank" class="author-link">About the author</a>
+        </li>
         
 
         
+        
+        <li>
+            <a href="https://github.com/walkor/workerman.net/issues" target="blank"class="issues-link">Questions and Issues</a>
+        </li>
+        
 
+        
+        
+        <li>
+            <a href="https://github.com/walkor/workerman.net/edit/master/advanced/distributed.md" target="blank" class="contribute-link">Edit and Contribute</a>
+        </li>
+        
+
+        
+        <li class="divider"></li>
         
 
         <li data-level="0" data-path="index.html">
@@ -546,9 +568,64 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_8">
+                    <section class="normal" id="section-gitbook_5913">
                     
                         <h1 id="-">分布式部署</h1>
+<p><em>首先确保你的WorkerMan版本大于2.1.1 (运行<code>workerma/bin/workermand status</code>查看)</em></p>
+<p>以applications/Demo为例，假如需要部署三台服务器提供高可用服务。</p>
+<p>1、首先将进程切分，将Gateway进程部署在一台机器上(假设内网ip为192.168.0.1)，BusinessWorker部署在另外两台机器上（内网ip为192.168.0.2/3）</p>
+<p>2、由于192.168.0.1这台机器只部署Gateway进程，所以将该ip上的workerman/conf/conf.d/BusinessWorker.conf删掉，避免运行BusinessWorker进程</p>
+<p>3、配置Gateway服务器(192.168.0.1)上的<code>workerman/conf/conf.d/Gateway.conf</code>中的<code>lan_ip=192.168.0.1</code>与本机ip一致</p>
+<p>3、由于192.168.0.2/3 两台服务器只部署BusinessWorker进程，所以将这两台ip上的workerman/conf/conf.d/Gateway.conf删掉，避免运行Gateway进程</p>
+<p>4、由于物理机之间需要共享一些数据，需要部署一台memcache服务器，假设部署在Gateway（192.168.0.1）这台机器上，memcache服务端口为22322</p>
+<p>5、由于要使用memcache，所以要给三台服务器的PHP添加memcache扩展。ubuntu/debian可使用 <code>sudo apt-get install php5-memcache</code>安装</p>
+<p>6、配置memcache，更改三台服务器上<code>applications/Demo/Config/Store.php</code>中的<code>driver</code>、<code>gateway</code>两项配置如下，</p>
+<pre><code>// 存储驱动改为memcache
+public static $driver = self::DRIVER_MC
+// 更改memcache ip和端口
+public static $gateway = array(
+     &#39;192.168.0.1:22322&#39;,
+);
+</code></pre><p>7、首先启动Gateway服务器192.168.0.1，然后启动BusinessWorker的服务器192.168.0.2/3</p>
+<p><em>至此，WorkerMan分布式部署完毕。</em></p>
+<h2 id="-">一些问题及解答</h2>
+<h3 id="-gateway-businesworker-">一、为什么将Gateway与BusinesWorker分别部署在不同的服务器上？</h3>
+<p>首先说明的是不一定非要将Gateway BusinessWorker分开部署，但是推荐分开部署，原因如下：</p>
+<p>1、由于Gateway只负责网络IO，只要服务器带宽够用，绝大多数情况下Gateway服务器不会成为瓶颈，所以在很长时间我们只需要一台或者少数几台Gateway服务器即可。由于我们不想BusinessWorker影响到Gateway，所以将Gateway和BusinessWorker分开部署</p>
+<p>2、BusinessWorker主要负责业务逻辑。当请求量增大时，由于可能BusinessWorker业务比较复杂，当请求量增大时，负载可能会明显升高，这时我们只要单纯增加BusinessWorker服务器即可，Gateway服务器则一般不许要变动，也就是不用通知客户端Gateway的ip有所变动</p>
+<p>3、当系统BusinessWorker负载较低，需要下线服务器时，我们只需要下线BusinessWorker服务器即可，无需变动GateWay服务器，也就不会导致客户端链接因为服务器下线而断开。</p>
+<h3 id="-gateway-">二、当Gateway服务器集群负载较高时，我们怎么扩容？</h3>
+<p><em>假如memcache扩展已经安装</em></p>
+<h3 id="-gateway-ip-192-168-0-100-">扩容Gateway （假设ip为192.168.0.100）</h3>
+<p>1、删除<code>workerman/conf/conf.d/BusinessWorker.conf</code>，确保BusinessWorker在这台服务器不会运行</p>
+<p>2、配置<code>workerman/conf/conf.d/Gateway.conf</code>中的<code>lan_ip=192.168.0.100</code>与本机内网ip一致</p>
+<p>3、配置<code>applications/Demo/Config/Store.php</code>中的<code>driver</code>、<code>gateway</code>两项配置如下，</p>
+<pre><code>// 存储驱动改为memcache
+public static $driver = self::DRIVER_MC
+// 设置gateway存储ip端口为memcache服务的ip和端口，可以设置多个
+public static $gateway = array(
+     &#39;192.168.0.1:22322&#39;,
+);
+</code></pre><p>4、启动workerman <code>./workerman/bin/workermand start</code></p>
+<p><em>至此Gateway服务器扩容完成。BusinessWorker会自动感知到有Gateway服务器有扩容，并且与该Gateway服务器建立联系，如果Gateway服务器接入LVS则整个扩容过程客户端无感知</em></p>
+<h3 id="-businessworker-">三、当BusinessWorker服务器集群负载较高时，我们怎么扩容？</h3>
+<p><em>假如memcache扩展已经安装</em></p>
+<h3 id="-businessworker-">扩容BusinessWorker：</h3>
+<p>1、删除<code>workerman/conf/conf.d/Gateway.conf</code>，确保Gateway进程不会在该服务器上运行</p>
+<p>2、配置<code>applications/Demo/Config/Store.php</code>中的<code>driver</code>、<code>gateway</code>两项配置如下</p>
+<pre><code>// 存储驱动改为memcache
+public static $driver = self::DRIVER_MC
+// 设置gateway存储ip端口为memcache服务的ip和端口，可以设置多个
+public static $gateway = array(
+     &#39;192.168.0.1:22322&#39;,
+);
+</code></pre><p>3、启动workerman <code>./workerman/bin/workermand start</code></p>
+<p><em>至此BusinessWorker服务器扩容完成。新扩容的BusinessWorker会自动与线上Gateway进程建立联系，整个扩容过程客户端无感知</em></p>
+<h3 id="-businessworker-">当BusinessWorker服务器集群负载较低时，需要下线一些机器怎么实施?</h3>
+<p>只需要停止BusinessWorker的服务，运行<code>./workerman/bin/workermand stop</code>，然后下线即可。Gateway服务器会自动感知有BusinessWorker服务器下线，不会再将请求转发给下线的机器，整个下线过程中不影响服务质量。</p>
+<h3 id="-gateway-">当Gateway服务器集群负载较低时，需要下线一些机器怎么实施?</h3>
+<p><em>首先还是要说明下Gateway服务器一般情况下不会成为系统瓶颈，所以一般你很长时间内Gateway服务器数量是一个稳定的值，一般一台即可</em></p>
+<p>下线Gateway服务器，首先停止服务，运行<code>./workerman/bin/workermand stop</code>，此时会导致该服务器上已有的客户端链接断开，然后下线服务器即可。此时BusinessWorker会感知到有Gateway服务器下线，会自动断开与Gateway进程的联系。</p>
 
                     
                     </section>

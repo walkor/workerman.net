@@ -1,6 +1,6 @@
 # 基于Gateway/Worker模型开发
 
-Gateway/Worker模型一般用来开发长连接应用，例如聊天类、实时推送、即时游戏、与硬件实时通讯等。如果开发者需要开发这类应用，可以直接基于ChatDemo这个应用程序开发，ChatDemo是基于Gateway/Worker模型的一个基本应用框架。
+Gateway/Worker模型一般用来开发长连接应用，例如聊天类、实时推送、即时游戏、与硬件实时通讯等。如果开发者需要开发这类应用，可以直接基于applications/Demo这个应用程序开发，applications/Demo是基于Gateway/Worker模型的一个基本应用框架。
 
 ## 什么是Gateway/Worker模型?
 

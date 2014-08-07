@@ -16,6 +16,8 @@
         
     
     
+    <meta name="author" content="walkor">
+    
     
     <link rel="next" href="../start/README.html" />
     
@@ -32,12 +34,12 @@
 
 
         
-    <div class="book"  data-level="3" data-basepath=".." data-revision="1406897835503">
+    <div class="book" data-github="walkor/workerman.net" data-level="3" data-basepath=".." data-revision="1407401870276">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
     
-    <a href="https://github.com/null" target="_blank" class="btn pull-left home-bookmark" aria-label="GitHub home"><i class="fa fa-bookmark-o"></i></a>
+    <a href="https://github.com/walkor/workerman.net" target="_blank" class="btn pull-left home-bookmark" aria-label="GitHub home"><i class="fa fa-bookmark-o"></i></a>
     
     <a href="#" class="btn pull-left toggle-search" aria-label="Toggle search"><i class="fa fa-search"></i></a>
     <span id="font-settings-wrapper">
@@ -80,6 +82,9 @@
     
 
     
+    <a href="https://github.com/walkor/workerman.net/stargazers" target="_blank" class="btn pull-right count-star hidden-xs"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/walkor/workerman.net/watchers" target="_blank" class="btn pull-right count-watch hidden-xs"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+    
 
     <!-- Title -->
     <h1>
@@ -97,11 +102,28 @@
     <ul class="summary">
         
         
-
+        
+        <li>
+            <a href="https://github.com/walkor" target="blank" class="author-link">About the author</a>
+        </li>
         
 
         
+        
+        <li>
+            <a href="https://github.com/walkor/workerman.net/issues" target="blank"class="issues-link">Questions and Issues</a>
+        </li>
+        
 
+        
+        
+        <li>
+            <a href="https://github.com/walkor/workerman.net/edit/master/devread/README.md" target="blank" class="contribute-link">Edit and Contribute</a>
+        </li>
+        
+
+        
+        <li class="divider"></li>
         
 
         <li data-level="0" data-path="index.html">
@@ -546,7 +568,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_4">
+                    <section class="normal" id="section-gitbook_5909">
                     
                         <h1 id="-">开发前必读</h1>
 <p>使用WorkerMan开发应用，你需要了解以下内容：</p>
@@ -557,7 +579,7 @@
 <li>普通PHP开发一般是基于HTTP应用层协议，WebServer已经帮开发者完成了协议的解析</li>
 <li>用WorkerMan开发非HTTP协议应用程序需要开发者自行解析应用层协议</li>
 </ul>
-<p><em>由于非HTTP协议的应用，所以<code>$_POST</code> <code>$_GET</code> <code>$_REQUEST</code> <code>$_SESSION</code> <code>$_FILE</code> <code>header()</code> <code>setcookie()</code>等变量或者函数无法直接使用</em></p>
+<p><em>由于非HTTP协议的应用，所以<code>header()</code> <code>setcookie()</code> <code>session_start</code>等函数无法直接使用</em></p>
 <h3 id="2-">2、请求周期差异</h3>
 <ul>
 <li>PHP在Web应用中一次请求过后会释放所有的变量与资源</li>
@@ -572,20 +594,22 @@
 <li>由于WorkerMan不会在每次请求后释放全局对象及类的静态成员，在数据库等单例模式中，往往会将数据库实例（内部包含了一个数据库socket链接）保存在数据库静态成员中，使得WorkerMan在进程生命周期内都复用这个数据库socket链接（避免重复链接非常高效），需要注意的是当数据库服务器发现某个链接在一定时间内（一般很长）没有活动后可能会主动关闭socket链接，这时再次使用这个数据库实例时会报错，（错误信息类似mysql gone away）,并且有固定的错误码，这时开发者只需判断错误码并重连数据库即可（也可以在每次请求后自行删除实例）。</li>
 </ul>
 <h2 id="-">二、需要了解的基本概念</h2>
-<h3 id="1-">1、应用层协议</h3>
-<p>应用层协议(application layer protocol)定义了运行在不同端系统上（客户端、服务端）的应用程序进程如何相互传递报文。TCP是基于数据流的，客户端的请求会源源不断的发送给服务端，导致服务端收到的数据可能不是一个完整的请求，也有可能服务端收到的数据是多个请求连在一起。这就需要我们区分请求的边界。而应用层协议主要是为请求边界定义一套规则，避免请求数据混乱。例如一个简单的应用层次协议如下<code>{&quot;module&quot;:&quot;user&quot;,&quot;action&quot;:&quot;getInfo&quot;,&quot;uid&quot;:456}\n&quot;</code>。此协议是以<code>\n</code>标记请求结束。</p>
-<h3 id="2-">2、短连接</h3>
+<h3 id="1-tcp-">1、TCP传输层协议</h3>
+<p>是一种面向连接（连接导向）的、可靠的、基于IP的传输层协议。TCP传输层协议一个重要特点是TCP是基于数据流的，客户端的请求会源源不断的发送给服务端，服务端收到的数据可能不是一个完整的请求，也有可能服务端收到的数据是多个请求连在一起。这就需要我们在这源源不断的数据流中区分每个请求的边界。而应用层协议主要是为请求边界定义一套规则，避免请求数据混乱。例如一个简单的应用层次协议如下<code>{&quot;module&quot;:&quot;user&quot;,&quot;action&quot;:&quot;getInfo&quot;,&quot;uid&quot;:456}\n&quot;</code>。此协议是以<code>\n</code>标记请求结束。</p>
+<h3 id="2-">2、应用层协议</h3>
+<p>应用层协议(application layer protocol)定义了运行在不同端系统上（客户端、服务端）的应用程序进程如何相互传递报文，例如HTTP、WebSocket都属于应用层协议。</p>
+<h3 id="3-">3、短连接</h3>
 <p>短连接是指通讯双方有数据交互时，就建立一个连接，数据发送完成后，则断开此连接，即每次连接只完成一项业务的发送。像WEB网站的HTTP服务一般都用短链接。</p>
-<p>设置服务为短连接则在配置中设置 <code>persistent_connection = 0</code></p>
-<h3 id="3-">3、长连接</h3>
+<p><em>短链接应用程序开发可以参考基本开发流程一章</em></p>
+<h3 id="4-">4、长连接</h3>
 <p>长连接，指在一个连接上可以连续发送多个数据包</p>
 <p>长连接多用于操作频繁，点对点的通讯的情况。每个TCP连接都需要三步握手，这需要时间，如果每个操作都是先连接，再操作的话那么处理速度会降低很多，所以每个操作完后都不断开，下次处理时直接发送数据包就OK了，不用建立TCP连接。例如：数据库的连接用长连接，如果用短连接频繁的通信会造成socket错误，而且频繁的socket 创建也是对资源的浪费。</p>
-<p><em>当需要主动向客户端推送数据时，例如聊天类、即时游戏类、手机推送等应用需要长连接。</em></p>
-<p>设置服务为长连接则在配置中设置 <code>persistent_connection = 1</code></p>
-<h3 id="4-">4、平滑重启</h3>
+<p><em>当需要主动向客户端推送数据时，例如聊天类、即时游戏类、手机推送等应用需要长连接。</em>
+<em>长链接应用程序开发可以参考Gateway/Worker开发流程</em></p>
+<h3 id="5-">5、平滑重启</h3>
 <p>一般的重启的过程是把所有进程全部停止后，再开始创建全新的服务进程。在这个过程中会有一个短暂的时间内是没有进程对外提供服务的，这就会导致服务暂时不可用，这在高并发时势必会导致请求失败。</p>
 <p>而平滑重启则不是一次性的停止所有进程，而是一个进程一个进程的停止，每停止一个进程后马上重新创建一个新的进程顶替，直到所有旧的进程都被替换为止。</p>
-<p>平滑重启WorkerMan可以使用 <code>./workerman/bin/workermand reload</code>命令</p>
+<p>平滑重启WorkerMan可以使用 <code>./workerman/bin/workermand reload</code>命令，能够做到在不影响服务质量的情况下更新应用程序</p>
 
                     
                     </section>

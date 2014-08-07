@@ -14,11 +14,15 @@
 
 3、入口文件必须实现```Man\Core\SocketWorker```中的 ```dealInput```、```dealProcess``` 方法
 
+*在Gateway/Worker模型中入口文件已经写好，开发者可以直接使用*
+
 ## 配置文件
 
 1、配置文件在```workerman/conf/conf.d/```下
 
 2、配置文件名称一般与入口文件名相同并以conf为后缀，如```workerman/conf/conf.d/ChatApp.conf```
+
+*GateWay/Worker模型中配置文件已经配置好，开发者可以直接使用，有必要时可以做相应修改*
 
 
 
