@@ -78,7 +78,7 @@
 			相关应用
 		</h3>
 		<div class="media">
-			 <a href="http://kedou.workerman.net/" class="pull-left"><img src="/img/workerman-todpole.png" class="media-object" alt='PHP 小蝌蚪游戏界面' /></a>
+			 <a href="http://kedou.workerman.net/" class="pull-left" target="_blank" ><img src="/img/workerman-todpole.png" class="media-object" alt='PHP 小蝌蚪游戏界面' /></a>
 			<div class="media-body">
 				<h4 class="media-heading">
 					<a target="_blank" href="http://kedou.workerman.net/">PHP小蝌蚪聊天室</a>&nbsp;&nbsp;<font style="font-size:12px;color:red;">置顶推荐</font>
