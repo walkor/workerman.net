@@ -13,7 +13,7 @@
 
 5、客户端可以是任意的，Demo中的客户端是telnet应用程序。即在终端运行```telnet ip 8480```
 
-### ChatDemo的测试方法
+### Demo的测试方法
 
   * 终端运行 ```telnet ip 8480``` （ip为WorkerMan运行的服务器ip，本机的话可以使用127.0.0.1）
   * 直接打字回车是向所有人发消息
@@ -23,11 +23,11 @@
 
 ### 1、建立一个新的项目
 
-1.1、选定项目名，例如项目名叫ChatRoom，更改```applications/ChatDemo``` 为 ```applications/ChatRoom```
+1.1、选定项目名，例如项目名叫ChatRoom，更改```applications/Demo``` 为 ```applications/ChatRoom```
 
 1.2、将配置```workerman/conf/conf.d/Gateway.php```中的 ```worker_file```设置为新的路径```worker_file=../applications/ChatRoom/Bootstrap/Gateway.php```
 
-1.3、将配置```workerman/conf/conf.d/BusinessWorker.conf```中的```worker_file```设置为新的路径```worker_file = ../applications/ChatDemo/Bootstrap/BusinessWorker.php```
+1.3、将配置```workerman/conf/conf.d/BusinessWorker.conf```中的```worker_file```设置为新的路径```worker_file = ../applications/Demo/Bootstrap/BusinessWorker.php```
 
 1.4、重新启动WorkerMan ```workerman/bin/workermand restart```
 

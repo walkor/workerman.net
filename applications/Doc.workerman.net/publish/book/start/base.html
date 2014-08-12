@@ -578,7 +578,7 @@
 <p>3、在服务端可以调用相关接口给其它客户端发送消息数据</p>
 <p>4、提供了定时向客户端发送心跳的功能，用来检测与客户端的联通性</p>
 <p>5、客户端可以是任意的，Demo中的客户端是telnet应用程序。即在终端运行<code>telnet ip 8480</code></p>
-<h3 id="chatdemo-">ChatDemo的测试方法</h3>
+<h3 id="chatdemo-">applications/Demo的测试方法</h3>
 <ul>
 <li>终端运行 <code>telnet ip 8480</code> （ip为WorkerMan运行的服务器ip，本机的话可以使用127.0.0.1）</li>
 <li>直接打字回车是向所有人发消息</li>
@@ -586,9 +586,9 @@
 </ul>
 <h2 id="-applications-demo-">基于applications/Demo开发流程</h2>
 <h3 id="1-">1、建立一个新的项目</h3>
-<p>1.1、选定项目名，例如项目名叫ChatRoom，更改<code>applications/ChatDemo</code> 为 <code>applications/ChatRoom</code></p>
+<p>1.1、选定项目名，例如项目名叫ChatRoom，更改<code>applications/Demo</code> 为 <code>applications/ChatRoom</code></p>
 <p>1.2、将配置<code>workerman/conf/conf.d/Gateway.php</code>中的 <code>worker_file</code>设置为新的路径<code>worker_file=../applications/ChatRoom/Bootstrap/Gateway.php</code></p>
-<p>1.3、将配置<code>workerman/conf/conf.d/BusinessWorker.conf</code>中的<code>worker_file</code>设置为新的路径<code>worker_file = ../applications/ChatDemo/Bootstrap/BusinessWorker.php</code></p>
+<p>1.3、将配置<code>workerman/conf/conf.d/BusinessWorker.conf</code>中的<code>worker_file</code>设置为新的路径<code>worker_file = ../applications/Demo/Bootstrap/BusinessWorker.php</code></p>
 <p>1.4、重新启动WorkerMan <code>workerman/bin/workermand restart</code></p>
 <p>1.5 至此，一个新的基于Gateway/Worker模型的项目建立好了</p>
 <h3 id="2-">2、选定协议</h3>

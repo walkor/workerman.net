@@ -3,7 +3,7 @@
 ## 一个典型的应用配置 conf/conf.d/Gateway.conf如下
 ```
 ;进程入口文件
-worker_file = ../applications/ChatDemo/Bootstrap/Gateway.php
+worker_file = ../applications/Demo/Bootstrap/Gateway.php
 
 ;传输层协议及监听的ip端口
 listen = tcp://0.0.0.0:8480
