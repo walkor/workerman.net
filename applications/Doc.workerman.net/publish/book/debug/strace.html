@@ -4,7 +4,7 @@
     <head>
         
         <meta charset="UTF-8">
-        <title>telnet远程登录控制 | </title>
+        <title>跟踪系统调用 | </title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 0.5.2">
@@ -19,10 +19,10 @@
     <meta name="author" content="walkor">
     
     
-    <link rel="next" href="../advanced/distributed.html" />
+    <link rel="next" href="../safety/README.html" />
     
     
-    <link rel="prev" href="../start/workerman.html" />
+    <link rel="prev" href="../debug/tcpdump.html" />
     
 
         
@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-github="walkor/workerman.net" data-level="11.2" data-basepath=".." data-revision="1407841563408">
+    <div class="book" data-github="walkor/workerman.net" data-level="9.3" data-basepath=".." data-revision="1407841563408">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -118,7 +118,7 @@
         
         
         <li>
-            <a href="https://github.com/walkor/workerman.net/edit/master/advanced/telnet.md" target="blank" class="contribute-link">Edit and Contribute</a>
+            <a href="https://github.com/walkor/workerman.net/edit/master/debug/strace.md" target="blank" class="contribute-link">Edit and Contribute</a>
         </li>
         
 
@@ -537,7 +537,7 @@
             <div class="page-wrapper" tabindex="-1">
                 <div class="book-progress">
     <div class="bar">
-        <div class="inner" style="width: 92.10526315789474%;min-width: 89.47368421052632%;"></div>
+        <div class="inner" style="width: 81.57894736842105%;min-width: 78.94736842105263%;"></div>
     </div>
     <div class="chapters">
     
@@ -605,13 +605,13 @@
     
         <a href="../debug/strace.html" title="跟踪系统调用" class="chapter done " data-progress="9.3" style="left: 81.57894736842105%;"></a>
     
-        <a href="../safety/README.html" title="安全" class="chapter done " data-progress="10" style="left: 84.21052631578948%;"></a>
+        <a href="../safety/README.html" title="安全" class="chapter  " data-progress="10" style="left: 84.21052631578948%;"></a>
     
-        <a href="../advanced/README.html" title="高级应用" class="chapter done " data-progress="11" style="left: 86.84210526315789%;"></a>
+        <a href="../advanced/README.html" title="高级应用" class="chapter  " data-progress="11" style="left: 86.84210526315789%;"></a>
     
-        <a href="../start/workerman.html" title="查看运行状态" class="chapter done " data-progress="11.1" style="left: 89.47368421052632%;"></a>
+        <a href="../start/workerman.html" title="查看运行状态" class="chapter  " data-progress="11.1" style="left: 89.47368421052632%;"></a>
     
-        <a href="../advanced/telnet.html" title="telnet远程登录控制" class="chapter done " data-progress="11.2" style="left: 92.10526315789474%;"></a>
+        <a href="../advanced/telnet.html" title="telnet远程登录控制" class="chapter  " data-progress="11.2" style="left: 92.10526315789474%;"></a>
     
         <a href="../advanced/distributed.html" title="分布式部署" class="chapter  " data-progress="11.3" style="left: 94.73684210526316%;"></a>
     
@@ -624,58 +624,72 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_2809">
+                    <section class="normal" id="section-gitbook_2817">
                     
-                        <h1 id="telnet-">telnet远程登录控制</h1>
-<p>WorkerMan允许管理员通过Monitor.conf开放的端口远程telnet远程登录WorkerMan（相关的安全信息参见安全章节）。</p>
-<pre><code>输入
-telnet xxx.xxx.xxx.xxx 2009
-远程登录需要输入密码
-输入命令
-status
-展示workerman状态
-status
-Hello admin
+                        <h1 id="-">跟踪系统调用</h1>
+<p>当想知道一个进程在做什么事情的时候，可以通过<code>strace</code>命令跟踪一个进程的所有系统调用。</p>
+<p>1、运行 workermand status 能看到workerman相关进程的信息 如下：</p>
+<pre><code>Hello admin
 ---------------------------------------GLOBAL STATUS--------------------------------------------
-WorkerMan version:2.1.1
-start time:2014-07-14 23:37:00   run 6 days 22 hours
-load average: 0, 0, 0
+WorkerMan version:2.1.2
+start time:2014-08-12 17:42:04   run 0 days 1 hours
+load average: 3.34, 3.59, 3.67
 1 users          8 workers       14 processes
 worker_name       exit_status     exit_count
 BusinessWorker    0                0
-ChatWeb           0                2
+ChatWeb           0                0
 FileMonitor       0                0
 Gateway           0                0
 Monitor           0                0
 StatisticProvider 0                0
-StatisticWeb      0                24
+StatisticWeb      0                0
 StatisticWorker   0                0
 ---------------------------------------PROCESS STATUS-------------------------------------------
-pid     memory      listening        timestamp  worker_name       total_request packet_err thunder_herd client_close send_fail throw_exception suc/total
-17508   2.25M   tcp://127.0.0.1:7373 1405352220 BusinessWorker    0              0          0            0            0         0               100%
-17509   2.25M   tcp://127.0.0.1:7373 1405352220 BusinessWorker    0              0          0            0            0         0               100%
-17510   2.25M   tcp://127.0.0.1:7373 1405352220 BusinessWorker    0              0          0            0            0         0               100%
-17511   2.5M    tcp://127.0.0.1:7373 1405352220 BusinessWorker    0              0          0            0            0         0               100%
-24345   2.25M   tcp://0.0.0.0:55151  1405950078 ChatWeb           14             0          0            0            0         0               100%
-17514   2.25M   tcp://0.0.0.0:7272   1405352220 Gateway           5              0          0            5            0         0               100%
-17515   2.25M   tcp://0.0.0.0:7272   1405352220 Gateway           17             0          0            16           0         0               100%
-17516   2.25M   tcp://0.0.0.0:7272   1405352220 Gateway           12             0          0            11           0         0               100%
-17517   2.25M   tcp://0.0.0.0:7272   1405352220 Gateway           199            0          0            149          0        0               100%
-17519   4.5M    tcp://0.0.0.0:55858  1405352220 StatisticProvider 32055          0          0            0            0         0               100%
-14256   5M      tcp://0.0.0.0:55757  1405929526 StatisticWeb      676            0          0            23           0         0               100%
-17527   2M      udp://0.0.0.0:55656  1405352220 StatisticWorker   3929424        0          0            0            0         0               100%
-</code></pre><h6 id="-status-workerman-bin-workermand-status-status-"><code>status</code>展示的信息与 <code>workerman/bin/workermand status</code>展示的信息相同，status详细信息参见第一章中查看运行状态章节</h6>
-<h2 id="-">远程控制支持的命令</h2>
-<h4 id="1-status-">1、<code>status</code></h4>
-<p>展示WorkerMan运行状态</p>
-<h4 id="2-stop-">2、<code>stop</code></h4>
-<p>停止WorkerMan（注意运行stop后telnet远程控制也将断开）</p>
-<h4 id="3-reload-">3、<code>reload</code></h4>
-<p>平滑重启WorkerMan</p>
-<h4 id="4-kill-pid-">4、<code>kill $pid</code></h4>
-<p>安全重启$pid对应进程。 $pid为<code>status</code>中看到的进程pid，为数字</p>
-<h4 id="5-quit-">5、<code>quit</code></h4>
-<p>断开telnet远程控制</p>
+pid    memory      listening        timestamp  worker_name       total_request packet_err thunder_herd client_close send_fail throw_exception suc/total
+10352    1.5M    tcp://0.0.0.0:55151  1407836524 ChatWeb           12             0          0            2            0         0               100%
+10354    1.25M   tcp://0.0.0.0:7272   1407836524 Gateway           3              0          0            0            0         0               100%
+10355    1.25M   tcp://0.0.0.0:7272   1407836524 Gateway           0              0          1            0            0         0               100%
+10365    1.25M   tcp://0.0.0.0:55757  1407836524 StatisticWeb      0              0          0            0            0         0               100%
+10358    1.25M   tcp://0.0.0.0:7272   1407836524 Gateway           3              0          2            0            0         0               100%
+10364    1.25M   tcp://0.0.0.0:55858  1407836524 StatisticProvider 0              0          0            0            0         0               100%
+10356    1.25M   tcp://0.0.0.0:7272   1407836524 Gateway           3              0          2            0            0         0               100%
+10366    1.25M   udp://0.0.0.0:55656  1407836524 StatisticWorker   55             0          0            0            0         0               100%
+10349    1.25M   tcp://127.0.0.1:7373 1407836524 BusinessWorker    5              0          0            0            0         0               100%
+10350    1.25M   tcp://127.0.0.1:7373 1407836524 BusinessWorker    0              0          0            0            0         0               100%
+10351    1.5M    tcp://127.0.0.1:7373 1407836524 BusinessWorker    5              0          0            0            0         0               100%
+10348    1.25M   tcp://127.0.0.1:7373 1407836524 BusinessWorker    2              0          0            0            0         0               100%
+</code></pre><p>2、例如我们想知道pid为10354的gateway进程在做什么，则可以运行命令 strace -p 10354 (可能需要root权限) 类似如下：</p>
+<pre><code>sudo strace -p 10354
+Process 10354 attached - interrupt to quit
+clock_gettime(CLOCK_MONOTONIC, {118627, 242986712}) = 0
+gettimeofday({1407840609, 102439}, NULL) = 0
+epoll_wait(3, 985f4f0, 32, -1)          = -1 EINTR (Interrupted system call)
+--- SIGUSR2 (User defined signal 2) @ 0 (0) ---
+send(7, &quot;\f&quot;, 1, 0)                     = 1
+sigreturn()                             = ? (mask now [])
+clock_gettime(CLOCK_MONOTONIC, {118627, 699623319}) = 0
+gettimeofday({1407840609, 559092}, NULL) = 0
+epoll_wait(3, {{EPOLLIN, {u32=9, u64=9}}}, 32, -1) = 1
+clock_gettime(CLOCK_MONOTONIC, {118627, 699810499}) = 0
+gettimeofday({1407840609, 559277}, NULL) = 0
+recv(9, &quot;\f&quot;, 1024, 0)                  = 1
+recv(9, 0xb60b4880, 1024, 0)            = -1 EAGAIN (Resource temporarily unavailable)
+epoll_wait(3, 985f4f0, 32, -1)          = -1 EINTR (Interrupted system call)
+--- SIGUSR2 (User defined signal 2) @ 0 (0) ---
+send(7, &quot;\f&quot;, 1, 0)                     = 1
+sigreturn()                             = ? (mask now [])
+clock_gettime(CLOCK_MONOTONIC, {118628, 699497204}) = 0
+gettimeofday({1407840610, 558937}, NULL) = 0
+epoll_wait(3, {{EPOLLIN, {u32=9, u64=9}}}, 32, -1) = 1
+clock_gettime(CLOCK_MONOTONIC, {118628, 699588603}) = 0
+gettimeofday({1407840610, 559023}, NULL) = 0
+recv(9, &quot;\f&quot;, 1024, 0)                  = 1
+recv(9, 0xb60b4880, 1024, 0)            = -1 EAGAIN (Resource temporarily unavailable)
+epoll_wait(3, 985f4f0, 32, -1)          = -1 EINTR (Interrupted system call)
+--- SIGUSR2 (User defined signal 2) @ 0 (0) ---
+send(7, &quot;\f&quot;, 1, 0)                     = 1
+sigreturn()                             = ? (mask now [])
+</code></pre><p>3、其中每一行是一个系统调用，从这个信息中我们很容易看到进程在做一些什么事情，可以定位到进程卡在哪里，卡在链接还是读取网络数据等</p>
 
                     
                     </section>
@@ -685,10 +699,10 @@ pid     memory      listening        timestamp  worker_name       total_request 
         </div>
 
         
-        <a href="../start/workerman.html" class="navigation navigation-prev " aria-label="Previous page: 查看运行状态"><i class="fa fa-angle-left"></i></a>
+        <a href="../debug/tcpdump.html" class="navigation navigation-prev " aria-label="Previous page: 网络抓包"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../advanced/distributed.html" class="navigation navigation-next " aria-label="Next page: 分布式部署"><i class="fa fa-angle-right"></i></a>
+        <a href="../safety/README.html" class="navigation navigation-next " aria-label="Next page: 安全"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

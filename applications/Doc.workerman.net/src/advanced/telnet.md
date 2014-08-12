@@ -1,5 +1,5 @@
 # telnet远程登录控制
-WorkerMan允许管理员通过Monitor.conf开发的端口远程telnet远程登录WorkerMan（相关的安全信息参见安全章节）。
+WorkerMan允许管理员通过Monitor.conf开放的端口远程telnet远程登录WorkerMan（相关的安全信息参见安全章节）。
 
 ```
 输入
