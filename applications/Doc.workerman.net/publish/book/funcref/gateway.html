@@ -1,0 +1,928 @@
+<!DOCTYPE HTML>
+<html lang="en-US" manifest="../manifest.appcache">
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <title>Gateway类 | </title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 0.5.2">
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    
+    
+    
+    <link rel="next" href="../funcref/gatewaysendtoall.html" />
+    
+    
+    <link rel="prev" href="../funcref/socketworkeronreload.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+<link rel="stylesheet" href="../gitbook/style.css">
+
+
+        
+    <div class="book"  data-level="9.2" data-basepath=".." data-revision="1407936885774">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
+    
+    <a href="https://github.com/null" target="_blank" class="btn pull-left home-bookmark" aria-label="GitHub home"><i class="fa fa-bookmark-o"></i></a>
+    
+    <a href="#" class="btn pull-left toggle-search" aria-label="Toggle search"><i class="fa fa-search"></i></a>
+    <span id="font-settings-wrapper">
+        <a href="#" class="btn pull-left toggle-font-settings" aria-label="Toggle font settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="btn-group btn-block">
+        <button id="reduce-font-size" class="btn btn-default">A</button>
+        <button id="enlarge-font-size" class="btn btn-default">A</button>
+    </div>
+
+    <ul class="list-group font-family-list">
+        <li class="list-group-item" data-font="0">Serif</li>
+        <li class="list-group-item" data-font="1">Sans</li>
+    </ul>
+
+    <div class="btn-group btn-group-xs btn-block color-theme-list">
+        <button type="button" class="btn btn-default" id="color-theme-preview-0" data-theme="0">White</button>
+        <button type="button" class="btn btn-default" id="color-theme-preview-1" data-theme="1">Sepia</button>
+        <button type="button" class="btn btn-default" id="color-theme-preview-2" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </span>
+
+    <!-- Actions Right -->
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Share on Google Plus"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Share on Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Share on Twitter"><i class="fa fa-twitter"></i></a>
+    
+
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-spinner fa-spin"></i>
+        <a href="../" ></a>
+    </h1>
+</div>
+
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        
+
+        
+
+        
+
+        
+
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+    
+        <li class="chapter " data-level="1" data-path="license/README.html">
+            
+            <a href="../license/README.html">
+                <i class="fa fa-check"></i> <b>1.</b> 版权信息
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="manual/README.html">
+            
+            <a href="../manual/README.html">
+                <i class="fa fa-check"></i> <b>2.</b> WorkerMan手册
+            </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="manual/preface.html">
+            
+            <a href="../manual/preface.html">
+                <i class="fa fa-check"></i> <b>2.1.</b> 序言
+            </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="start/README.html">
+            
+            <a href="../start/README.html">
+                <i class="fa fa-check"></i> <b>3.</b> 入门指引
+            </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="start/introduction.html">
+            
+            <a href="../start/introduction.html">
+                <i class="fa fa-check"></i> <b>3.1.</b> 简介
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="start/feature.html">
+            
+            <a href="../start/feature.html">
+                <i class="fa fa-check"></i> <b>3.2.</b> WorkerMan的特性
+            </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="devread/README.html">
+            
+            <a href="../devread/README.html">
+                <i class="fa fa-check"></i> <b>4.</b> 开发前必读
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="standards/README.html">
+            
+            <a href="../standards/README.html">
+                <i class="fa fa-check"></i> <b>5.</b> 流程与规范
+            </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="start/directory.html">
+            
+            <a href="../start/directory.html">
+                <i class="fa fa-check"></i> <b>5.1.</b> 目录结构
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="start/systemprocess.html">
+            
+            <a href="../start/systemprocess.html">
+                <i class="fa fa-check"></i> <b>5.2.</b> 系统流程
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="start/developmentprocess.html">
+            
+            <a href="../start/developmentprocess.html">
+                <i class="fa fa-check"></i> <b>5.3.</b> 开发流程
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="start/namingconventions.html">
+            
+            <a href="../start/namingconventions.html">
+                <i class="fa fa-check"></i> <b>5.4.</b> 相关规范
+            </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="configure/README.html">
+            
+            <a href="../configure/README.html">
+                <i class="fa fa-check"></i> <b>6.</b> 安装与配置
+            </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="start/environment.html">
+            
+            <a href="../start/environment.html">
+                <i class="fa fa-check"></i> <b>6.1.</b> 环境要求
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="start/getworkerman.html">
+            
+            <a href="../start/getworkerman.html">
+                <i class="fa fa-check"></i> <b>6.2.</b> 安装
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="start/commend.html">
+            
+            <a href="../start/commend.html">
+                <i class="fa fa-check"></i> <b>6.3.</b> 启动与停止
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="configure/configstandard.html">
+            
+            <a href="../configure/configstandard.html">
+                <i class="fa fa-check"></i> <b>6.4.</b> 配置规范
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="configure/mainconfig.html">
+            
+            <a href="../configure/mainconfig.html">
+                <i class="fa fa-check"></i> <b>6.5.</b> 主配置说明
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="configure/appconfig.html">
+            
+            <a href="../configure/appconfig.html">
+                <i class="fa fa-check"></i> <b>6.6.</b> 应用配置说明
+            </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="dev/README.html">
+            
+            <a href="../dev/README.html">
+                <i class="fa fa-check"></i> <b>7.</b> 基本开发流程
+            </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1" data-path="dev/protocols.html">
+            
+            <a href="../dev/protocols.html">
+                <i class="fa fa-check"></i> <b>7.1.</b> 制定协议
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="dev/dealinput.html">
+            
+            <a href="../dev/dealinput.html">
+                <i class="fa fa-check"></i> <b>7.2.</b> 实现dealInput/dealProcess
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="dev/configapp.html">
+            
+            <a href="../dev/configapp.html">
+                <i class="fa fa-check"></i> <b>7.3.</b> 配置与启动
+            </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="start/gatewaydev.html">
+            
+            <a href="../start/gatewaydev.html">
+                <i class="fa fa-check"></i> <b>8.</b> Gateway/Worker开发流程
+            </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1" data-path="start/base.html">
+            
+            <a href="../start/base.html">
+                <i class="fa fa-check"></i> <b>8.1.</b> 基本流程
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="start/interface.html">
+            
+            <a href="../start/interface.html">
+                <i class="fa fa-check"></i> <b>8.2.</b> Gateway/Worker接口参考
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="advanced/configrestart.html">
+            
+            <a href="../advanced/configrestart.html">
+                <i class="fa fa-check"></i> <b>8.3.</b> 配置与启动
+            </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="funcref/README.html">
+            
+            <a href="../funcref/README.html">
+                <i class="fa fa-check"></i> <b>9.</b> 函数参考
+            </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.1" data-path="funcref/socketworker.html">
+            
+            <a href="../funcref/socketworker.html">
+                <i class="fa fa-check"></i> <b>9.1.</b> SocketWorker类
+            </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.1.1" data-path="funcref/onstart.html">
+            
+            <a href="../funcref/onstart.html">
+                <i class="fa fa-check"></i> <b>9.1.1.</b> SocketWorker::onStart
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.2" data-path="funcref/socketworkerdealinput.html">
+            
+            <a href="../funcref/socketworkerdealinput.html">
+                <i class="fa fa-check"></i> <b>9.1.2.</b> SocketWorker::dealInput
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.3" data-path="funcref/socketworkerdealprocess.html">
+            
+            <a href="../funcref/socketworkerdealprocess.html">
+                <i class="fa fa-check"></i> <b>9.1.3.</b> SocketWorker::dealProcess
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.4" data-path="funcref/socketworkeronstop.html">
+            
+            <a href="../funcref/socketworkeronstop.html">
+                <i class="fa fa-check"></i> <b>9.1.4.</b> SocketWorker::onStop
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.5" data-path="funcref/socketworkeronreload.html">
+            
+            <a href="../funcref/socketworkeronreload.html">
+                <i class="fa fa-check"></i> <b>9.1.5.</b> SocketWorker::onReload
+            </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="funcref/gateway.html">
+            
+            <a href="../funcref/gateway.html">
+                <i class="fa fa-check"></i> <b>9.2.</b> Gateway类
+            </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.2.1" data-path="funcref/gatewaysendtoall.html">
+            
+            <a href="../funcref/gatewaysendtoall.html">
+                <i class="fa fa-check"></i> <b>9.2.1.</b> Gateway::sendToAll
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2.2" data-path="funcref/gatewaysendtouid.html">
+            
+            <a href="../funcref/gatewaysendtouid.html">
+                <i class="fa fa-check"></i> <b>9.2.2.</b> Gateway::sendToUid
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2.3" data-path="funcref/gatewaysendtocurrentuid.html">
+            
+            <a href="../funcref/gatewaysendtocurrentuid.html">
+                <i class="fa fa-check"></i> <b>9.2.3.</b> Gateway::sendToCurrentUid
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2.4" data-path="funcref/gatewaynotifyconnectionsuccess.html">
+            
+            <a href="../funcref/gatewaynotifyconnectionsuccess.html">
+                <i class="fa fa-check"></i> <b>9.2.4.</b> GateWay::notifyConnectionSuccess
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2.5" data-path="funcref/gatewaystoreuid.html">
+            
+            <a href="../funcref/gatewaystoreuid.html">
+                <i class="fa fa-check"></i> <b>9.2.5.</b> GateWay::storeUid
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2.6" data-path="funcref/gatewaykickuid.html">
+            
+            <a href="../funcref/gatewaykickuid.html">
+                <i class="fa fa-check"></i> <b>9.2.6.</b> Gateway::kickUid
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2.7" data-path="funcref/gatewaykickcurrentuser.html">
+            
+            <a href="../funcref/gatewaykickcurrentuser.html">
+                <i class="fa fa-check"></i> <b>9.2.7.</b> Gateway::kickCurrentUser
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2.8" data-path="funcref/gatewayisonline.html">
+            
+            <a href="../funcref/gatewayisonline.html">
+                <i class="fa fa-check"></i> <b>9.2.8.</b> Gateway::isOnline
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2.9" data-path="funcref/gatewaygetonlinestatus.html">
+            
+            <a href="../funcref/gatewaygetonlinestatus.html">
+                <i class="fa fa-check"></i> <b>9.2.9.</b> Gateway::getOnlineStatus
+            </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="funcref/eventphp.html">
+            
+            <a href="../funcref/eventphp.html">
+                <i class="fa fa-check"></i> <b>9.3.</b> Event类
+            </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.3.1" data-path="funcref/eventongatewayconnect.html">
+            
+            <a href="../funcref/eventongatewayconnect.html">
+                <i class="fa fa-check"></i> <b>9.3.1.</b> Event::onGatewayConnect
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3.2" data-path="funcref/eventongatewaymessage.html">
+            
+            <a href="../funcref/eventongatewaymessage.html">
+                <i class="fa fa-check"></i> <b>9.3.2.</b> Event::onGatewayMessage
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3.3" data-path="funcref/eventonconnect.html">
+            
+            <a href="../funcref/eventonconnect.html">
+                <i class="fa fa-check"></i> <b>9.3.3.</b> Event::onConnect
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3.4" data-path="funcref/eventonmessage.html">
+            
+            <a href="../funcref/eventonmessage.html">
+                <i class="fa fa-check"></i> <b>9.3.4.</b> Event::onMessage
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3.5" data-path="funcref/eventonclose.html">
+            
+            <a href="../funcref/eventonclose.html">
+                <i class="fa fa-check"></i> <b>9.3.5.</b> Event::onClose
+            </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="debug/README.html">
+            
+            <a href="../debug/README.html">
+                <i class="fa fa-check"></i> <b>10.</b> 调试
+            </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1" data-path="debug/base_debug.html">
+            
+            <a href="../debug/base_debug.html">
+                <i class="fa fa-check"></i> <b>10.1.</b> 基本调试
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="debug/tcpdump.html">
+            
+            <a href="../debug/tcpdump.html">
+                <i class="fa fa-check"></i> <b>10.2.</b> 网络抓包
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="debug/strace.html">
+            
+            <a href="../debug/strace.html">
+                <i class="fa fa-check"></i> <b>10.3.</b> 跟踪系统调用
+            </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="11" data-path="safety/README.html">
+            
+            <a href="../safety/README.html">
+                <i class="fa fa-check"></i> <b>11.</b> 安全
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12" data-path="advanced/README.html">
+            
+            <a href="../advanced/README.html">
+                <i class="fa fa-check"></i> <b>12.</b> 高级应用
+            </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="12.1" data-path="start/workerman.html">
+            
+            <a href="../start/workerman.html">
+                <i class="fa fa-check"></i> <b>12.1.</b> 查看运行状态
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12.2" data-path="advanced/telnet.html">
+            
+            <a href="../advanced/telnet.html">
+                <i class="fa fa-check"></i> <b>12.2.</b> telnet远程登录控制
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12.3" data-path="advanced/distributed.html">
+            
+            <a href="../advanced/distributed.html">
+                <i class="fa fa-check"></i> <b>12.3.</b> 分布式部署
+            </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="13" data-path="stresstest/README.html">
+            
+            <a href="../stresstest/README.html">
+                <i class="fa fa-check"></i> <b>13.</b> 压力测试
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="14" data-path="continue/README.html">
+            
+            <a href="../continue/README.html">
+                <i class="fa fa-check"></i> <b>14.</b> 待续....
+            </a>
+            
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="http://www.gitbook.io/" target="blank" class="gitbook-link">Generated using GitBook</a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="page-wrapper" tabindex="-1">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 57.377049180327866%;min-width: 55.73770491803279%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../license/README.html" title="版权信息" class="chapter done new-chapter" data-progress="1" style="left: 1.639344262295082%;"></a>
+    
+        <a href="../manual/README.html" title="WorkerMan手册" class="chapter done new-chapter" data-progress="2" style="left: 3.278688524590164%;"></a>
+    
+        <a href="../manual/preface.html" title="序言" class="chapter done " data-progress="2.1" style="left: 4.918032786885246%;"></a>
+    
+        <a href="../start/README.html" title="入门指引" class="chapter done new-chapter" data-progress="3" style="left: 6.557377049180328%;"></a>
+    
+        <a href="../start/introduction.html" title="简介" class="chapter done " data-progress="3.1" style="left: 8.19672131147541%;"></a>
+    
+        <a href="../start/feature.html" title="WorkerMan的特性" class="chapter done " data-progress="3.2" style="left: 9.836065573770492%;"></a>
+    
+        <a href="../devread/README.html" title="开发前必读" class="chapter done new-chapter" data-progress="4" style="left: 11.475409836065573%;"></a>
+    
+        <a href="../standards/README.html" title="流程与规范" class="chapter done new-chapter" data-progress="5" style="left: 13.114754098360656%;"></a>
+    
+        <a href="../start/directory.html" title="目录结构" class="chapter done " data-progress="5.1" style="left: 14.754098360655737%;"></a>
+    
+        <a href="../start/systemprocess.html" title="系统流程" class="chapter done " data-progress="5.2" style="left: 16.39344262295082%;"></a>
+    
+        <a href="../start/developmentprocess.html" title="开发流程" class="chapter done " data-progress="5.3" style="left: 18.0327868852459%;"></a>
+    
+        <a href="../start/namingconventions.html" title="相关规范" class="chapter done " data-progress="5.4" style="left: 19.672131147540984%;"></a>
+    
+        <a href="../configure/README.html" title="安装与配置" class="chapter done new-chapter" data-progress="6" style="left: 21.311475409836067%;"></a>
+    
+        <a href="../start/environment.html" title="环境要求" class="chapter done " data-progress="6.1" style="left: 22.950819672131146%;"></a>
+    
+        <a href="../start/getworkerman.html" title="安装" class="chapter done " data-progress="6.2" style="left: 24.59016393442623%;"></a>
+    
+        <a href="../start/commend.html" title="启动与停止" class="chapter done " data-progress="6.3" style="left: 26.229508196721312%;"></a>
+    
+        <a href="../configure/configstandard.html" title="配置规范" class="chapter done " data-progress="6.4" style="left: 27.868852459016395%;"></a>
+    
+        <a href="../configure/mainconfig.html" title="主配置说明" class="chapter done " data-progress="6.5" style="left: 29.508196721311474%;"></a>
+    
+        <a href="../configure/appconfig.html" title="应用配置说明" class="chapter done " data-progress="6.6" style="left: 31.147540983606557%;"></a>
+    
+        <a href="../dev/README.html" title="基本开发流程" class="chapter done new-chapter" data-progress="7" style="left: 32.78688524590164%;"></a>
+    
+        <a href="../dev/protocols.html" title="制定协议" class="chapter done " data-progress="7.1" style="left: 34.42622950819672%;"></a>
+    
+        <a href="../dev/dealinput.html" title="实现dealInput/dealProcess" class="chapter done " data-progress="7.2" style="left: 36.0655737704918%;"></a>
+    
+        <a href="../dev/configapp.html" title="配置与启动" class="chapter done " data-progress="7.3" style="left: 37.704918032786885%;"></a>
+    
+        <a href="../start/gatewaydev.html" title="Gateway/Worker开发流程" class="chapter done new-chapter" data-progress="8" style="left: 39.34426229508197%;"></a>
+    
+        <a href="../start/base.html" title="基本流程" class="chapter done " data-progress="8.1" style="left: 40.98360655737705%;"></a>
+    
+        <a href="../start/interface.html" title="Gateway/Worker接口参考" class="chapter done " data-progress="8.2" style="left: 42.622950819672134%;"></a>
+    
+        <a href="../advanced/configrestart.html" title="配置与启动" class="chapter done " data-progress="8.3" style="left: 44.26229508196721%;"></a>
+    
+        <a href="../funcref/README.html" title="函数参考" class="chapter done new-chapter" data-progress="9" style="left: 45.90163934426229%;"></a>
+    
+        <a href="../funcref/socketworker.html" title="SocketWorker类" class="chapter done " data-progress="9.1" style="left: 47.540983606557376%;"></a>
+    
+        <a href="../funcref/onstart.html" title="SocketWorker::onStart" class="chapter done " data-progress="9.1.1" style="left: 49.18032786885246%;"></a>
+    
+        <a href="../funcref/socketworkerdealinput.html" title="SocketWorker::dealInput" class="chapter done " data-progress="9.1.2" style="left: 50.81967213114754%;"></a>
+    
+        <a href="../funcref/socketworkerdealprocess.html" title="SocketWorker::dealProcess" class="chapter done " data-progress="9.1.3" style="left: 52.459016393442624%;"></a>
+    
+        <a href="../funcref/socketworkeronstop.html" title="SocketWorker::onStop" class="chapter done " data-progress="9.1.4" style="left: 54.09836065573771%;"></a>
+    
+        <a href="../funcref/socketworkeronreload.html" title="SocketWorker::onReload" class="chapter done " data-progress="9.1.5" style="left: 55.73770491803279%;"></a>
+    
+        <a href="../funcref/gateway.html" title="Gateway类" class="chapter done " data-progress="9.2" style="left: 57.377049180327866%;"></a>
+    
+        <a href="../funcref/gatewaysendtoall.html" title="Gateway::sendToAll" class="chapter  " data-progress="9.2.1" style="left: 59.01639344262295%;"></a>
+    
+        <a href="../funcref/gatewaysendtouid.html" title="Gateway::sendToUid" class="chapter  " data-progress="9.2.2" style="left: 60.65573770491803%;"></a>
+    
+        <a href="../funcref/gatewaysendtocurrentuid.html" title="Gateway::sendToCurrentUid" class="chapter  " data-progress="9.2.3" style="left: 62.295081967213115%;"></a>
+    
+        <a href="../funcref/gatewaynotifyconnectionsuccess.html" title="GateWay::notifyConnectionSuccess" class="chapter  " data-progress="9.2.4" style="left: 63.9344262295082%;"></a>
+    
+        <a href="../funcref/gatewaystoreuid.html" title="GateWay::storeUid" class="chapter  " data-progress="9.2.5" style="left: 65.57377049180327%;"></a>
+    
+        <a href="../funcref/gatewaykickuid.html" title="Gateway::kickUid" class="chapter  " data-progress="9.2.6" style="left: 67.21311475409836%;"></a>
+    
+        <a href="../funcref/gatewaykickcurrentuser.html" title="Gateway::kickCurrentUser" class="chapter  " data-progress="9.2.7" style="left: 68.85245901639344%;"></a>
+    
+        <a href="../funcref/gatewayisonline.html" title="Gateway::isOnline" class="chapter  " data-progress="9.2.8" style="left: 70.49180327868852%;"></a>
+    
+        <a href="../funcref/gatewaygetonlinestatus.html" title="Gateway::getOnlineStatus" class="chapter  " data-progress="9.2.9" style="left: 72.1311475409836%;"></a>
+    
+        <a href="../funcref/eventphp.html" title="Event类" class="chapter  " data-progress="9.3" style="left: 73.77049180327869%;"></a>
+    
+        <a href="../funcref/eventongatewayconnect.html" title="Event::onGatewayConnect" class="chapter  " data-progress="9.3.1" style="left: 75.40983606557377%;"></a>
+    
+        <a href="../funcref/eventongatewaymessage.html" title="Event::onGatewayMessage" class="chapter  " data-progress="9.3.2" style="left: 77.04918032786885%;"></a>
+    
+        <a href="../funcref/eventonconnect.html" title="Event::onConnect" class="chapter  " data-progress="9.3.3" style="left: 78.68852459016394%;"></a>
+    
+        <a href="../funcref/eventonmessage.html" title="Event::onMessage" class="chapter  " data-progress="9.3.4" style="left: 80.32786885245902%;"></a>
+    
+        <a href="../funcref/eventonclose.html" title="Event::onClose" class="chapter  " data-progress="9.3.5" style="left: 81.9672131147541%;"></a>
+    
+        <a href="../debug/README.html" title="调试" class="chapter  " data-progress="10" style="left: 83.60655737704919%;"></a>
+    
+        <a href="../debug/base_debug.html" title="基本调试" class="chapter  " data-progress="10.1" style="left: 85.24590163934427%;"></a>
+    
+        <a href="../debug/tcpdump.html" title="网络抓包" class="chapter  " data-progress="10.2" style="left: 86.88524590163935%;"></a>
+    
+        <a href="../debug/strace.html" title="跟踪系统调用" class="chapter  " data-progress="10.3" style="left: 88.52459016393442%;"></a>
+    
+        <a href="../safety/README.html" title="安全" class="chapter  " data-progress="11" style="left: 90.1639344262295%;"></a>
+    
+        <a href="../advanced/README.html" title="高级应用" class="chapter  " data-progress="12" style="left: 91.80327868852459%;"></a>
+    
+        <a href="../start/workerman.html" title="查看运行状态" class="chapter  " data-progress="12.1" style="left: 93.44262295081967%;"></a>
+    
+        <a href="../advanced/telnet.html" title="telnet远程登录控制" class="chapter  " data-progress="12.2" style="left: 95.08196721311475%;"></a>
+    
+        <a href="../advanced/distributed.html" title="分布式部署" class="chapter  " data-progress="12.3" style="left: 96.72131147540983%;"></a>
+    
+        <a href="../stresstest/README.html" title="压力测试" class="chapter  " data-progress="13" style="left: 98.36065573770492%;"></a>
+    
+        <a href="../continue/README.html" title="待续...." class="chapter  " data-progress="14" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_2193">
+                    
+                        <h1 id="gateway-gateway-worker-">Gateway类 (基于Gateway/Worker模型开发)</h1>
+<p><strong>文件位置:</strong></p>
+<p><code>applications/Demo/Lib/Gateway.php</code></p>
+<p><strong>作用：</strong></p>
+<p>提供了与客户端通讯的基本接口</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../funcref/socketworkeronreload.html" class="navigation navigation-prev " aria-label="Previous page: SocketWorker::onReload"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../funcref/gatewaysendtoall.html" class="navigation navigation-next " aria-label="Next page: Gateway::sendToAll"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

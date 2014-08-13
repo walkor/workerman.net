@@ -78,6 +78,21 @@ public function dealInput($recv_buffer)
 
 HTTP协议包含协议头与包体，二者直接使用\r\n\r\n分割，POST请求协议头中包含```Content-Length```代表包体的长度。
 
+请求样例:
+
+```
+GET / HTTP/1.1\r\n
+Host: www.baidu.com\r\n
+Connection: keep-alive\r\n
+Cache-Control: max-age=0\r\n
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8\r\n
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36\r\n
+Accept-Encoding: gzip,deflate,sdch\r\n
+Accept-Language: zh-CN,zh;q=0.8,en;q=0.6\r\n
+Cookie: uc_login_unique=1fe1b19668b1419d8c45a6ac738fed76;\r\n
+\r\n
+```
+
 **conf配置:** preread_length=65535，由于HTTP协议是短链接的，即一个链接上只发一个请求，所以不会有多个请求连在一起的粘包现象，也就是说不会有读取越界的情况，所以预读长度可以设置为很大的值。短链接请求中主要任务就是判断读取的数据是否是一个完整的请求
 
 ```
