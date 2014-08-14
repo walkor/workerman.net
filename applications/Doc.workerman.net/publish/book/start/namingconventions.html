@@ -16,6 +16,8 @@
         
     
     
+    <meta name="author" content="walkor">
+    
     
     <link rel="next" href="../configure/README.html" />
     
@@ -32,12 +34,12 @@
 
 
         
-    <div class="book"  data-level="5.4" data-basepath=".." data-revision="1407936885774">
+    <div class="book" data-github="walkor/workerman.net" data-level="5.4" data-basepath=".." data-revision="1407986693253">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
     
-    <a href="https://github.com/null" target="_blank" class="btn pull-left home-bookmark" aria-label="GitHub home"><i class="fa fa-bookmark-o"></i></a>
+    <a href="https://github.com/walkor/workerman.net" target="_blank" class="btn pull-left home-bookmark" aria-label="GitHub home"><i class="fa fa-bookmark-o"></i></a>
     
     <a href="#" class="btn pull-left toggle-search" aria-label="Toggle search"><i class="fa fa-search"></i></a>
     <span id="font-settings-wrapper">
@@ -80,6 +82,9 @@
     
 
     
+    <a href="https://github.com/walkor/workerman.net/stargazers" target="_blank" class="btn pull-right count-star hidden-xs"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/walkor/workerman.net/watchers" target="_blank" class="btn pull-right count-watch hidden-xs"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+    
 
     <!-- Title -->
     <h1>
@@ -97,11 +102,28 @@
     <ul class="summary">
         
         
-
+        
+        <li>
+            <a href="https://github.com/walkor" target="blank" class="author-link">About the author</a>
+        </li>
         
 
         
+        
+        <li>
+            <a href="https://github.com/walkor/workerman.net/issues" target="blank"class="issues-link">Questions and Issues</a>
+        </li>
+        
 
+        
+        
+        <li>
+            <a href="https://github.com/walkor/workerman.net/edit/master/start/namingconventions.md" target="blank" class="contribute-link">Edit and Contribute</a>
+        </li>
+        
+
+        
+        <li class="divider"></li>
         
 
         <li data-level="0" data-path="index.html">
@@ -879,7 +901,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_2225">
+                    <section class="normal" id="section-gitbook_67">
                     
                         <h1 id="-">相关规范</h1>
 <h2 id="-">应用程序目录</h2>
@@ -887,7 +909,7 @@
 <h2 id="-">入口文件</h2>
 <p>和nginx+PHP-FPM下的PHP应用程序一样，WorkerMan中的应用程序也需要一个入口文件，但是入口文件一般不叫index.php，而是和项目相关的有意义的名字，如ChatApp.php。入口文件需要满足以下约定：</p>
 <p>1、应用入口文件必须继承<code>Man\Core\SocketWorker</code>类</p>
-<p>2、入口文件名规定和文件里面类名一样，如 <code>class ChatApp extends Man\Core\SocketWorker</code>,则入口文件的名字为MyApp.php</p>
+<p>2、入口文件名规定和文件里面类名一样，如 <code>class ChatApp extends Man\Core\SocketWorker</code>,则入口文件的名字为ChatApp.php</p>
 <p>3、入口文件必须实现<code>Man\Core\SocketWorker</code>中的 <code>dealInput</code>、<code>dealProcess</code> 方法</p>
 <p><em>在Gateway/Worker模型中入口文件已经写好，开发者可以直接使用</em></p>
 <h2 id="-">配置文件</h2>

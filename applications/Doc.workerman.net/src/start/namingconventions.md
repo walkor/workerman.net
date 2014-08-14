@@ -10,7 +10,7 @@
 
 1、应用入口文件必须继承```Man\Core\SocketWorker```类
 
-2、入口文件名规定和文件里面类名一样，如 ```class ChatApp extends Man\Core\SocketWorker```,则入口文件的名字为MyApp.php
+2、入口文件名规定和文件里面类名一样，如 ```class ChatApp extends Man\Core\SocketWorker```,则入口文件的名字为ChatApp.php
 
 3、入口文件必须实现```Man\Core\SocketWorker```中的 ```dealInput```、```dealProcess``` 方法
 
