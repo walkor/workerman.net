@@ -69,7 +69,7 @@
 namespace php Services.HelloWorld
 service HelloWorld
 {
-    string sayHello(string name);
+    string sayHello(1:string name);
 }
 			</code></pre>
 			<h4>2、使用thrift编译生成框架文件</h4>
@@ -80,22 +80,24 @@ service HelloWorld
 			<h4>4、./conf/conf.d/下创建HelloWorld.conf文件如下</h4>
 			<pre><code>
 ;Thrift HelloWorld 服务
-;监听的端口,每个服务设置成一个单独的端口
+;worker_file，worker路口入口文件
+worker_file = ../applications/ThriftRpc/ThriftWorker.php
+;监听的端口
 listen = tcp://0.0.0.0:9090
 ;短连接，每次请求后服务端主动断开
 persistent_connection = 0
-;启动多少worker进程,一般设置成 cpu核数*3
-start_workers=72
+;启动多少worker进程,一般设置成 cpu核数*8
+start_workers=24
 ;接收多少请求后退出
 max_requests=10000
-;以哪个用户运行该服务进程，默认使用www-data用户，如果没有该用户可以改成其它权限较低的用户
-user=www-data
-;worker_file，worker入口文件，统一使用ThriftWorker.php
-worker_file = ./workers/ThriftWorker.php
+;以哪个用户运行该worker进程,为了安全，请使用较低权限的用户,如www-data nobody
+user=root
 ;thrift transport，默认使用TBufferedTransport，可以改成其它transport（注意不要忘记修改客户端对应的thrift_transport配置项）
 thrift_transport = TBufferedTransport
 ;thrift protocol，默认使用二进制协议，可以设置成其它协议（注意不要忘记修改客户端对应的thrift_protocol配置项）
 thrift_protocol  = TBinaryProtocol
+;统计数据上报地址，即StatisticWorker.conf配置的地址
+statistic_address = udp://127.0.0.1:44646
 			</code></pre>
 			<h4>5、启动服务端如下：</h4>
 			<p><code>./bin/workermand start</code></p>
