@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# Revision 1408694437106
+# Revision 1408695901016
 
 CACHE:
 devread/README.html
@@ -49,13 +49,14 @@ manual/README.html
 manual/preface.html
 safety/README.html
 standards/README.html
-start/feature.html
+start/gateway_example.html
 start/README.html
 start/commend.html
 start/developmentprocess.html
 start/directory.html
 start/environment.html
 start/example.html
+start/feature.html
 start/base.html
 start/gatewaydev.html
 start/getworkerman.html

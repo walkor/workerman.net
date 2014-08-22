@@ -85,7 +85,7 @@ preread_length=1
 ```
 启动workerman 运行 ```./workerman/bin/workermand start```
 
-4、测试
+4、测试（以telnet作为客户端）
 运行 telnet
 ```
 telnet 127.0.0.1 8181
@@ -104,8 +104,35 @@ quit
 Connection closed by foreign host.
 ```
 
+### php客户端
+一般我们都是通过php去获取数据，就像在php中读取mysql数据一样。在php调用EchoService服务如下：
+```
+<?php
+// 建立与服务端的链接
+$socket = stream_socket_client("tcp://127.0.0.1:8181", $err_no, $err_msg);
+if(!$socket)
+{
+   exit($err_msg);
+}
+
+// 发送date命令
+stream_socket_sendto($socket, "date\n");
+// 读取服务端返回的数据
+echo stream_socket_recvfrom($socket, 65535);
+
+// 发送load命令
+stream_socket_sendto($socket, "load\n");
+// 读取服务端返回的数据
+echo stream_socket_recvfrom($socket, 65535);
+
+// 关闭链接
+fclose($socket);
+```
+
 ### 说明
 本示例是一个简单的测试示例，是一个长链接应用（即telnet链接后通过这个链接发送多个请求），由于不需要telnet客户端之间传递数据，所有使用基本开发流程开发即可
 
 如果是复杂的长链接应用，例如需要客户端之间通讯，建议使用Gateway/Worker开发流程，能够极大的减少开发工作量。例如```applications/Demo```是一个基于Gateway/Worker模型开发的聊天示例，支持群聊私聊，客户端同样是telnet
+
+
 
