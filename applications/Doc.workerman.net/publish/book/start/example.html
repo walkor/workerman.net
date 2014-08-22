@@ -4,7 +4,7 @@
     <head>
         
         <meta charset="UTF-8">
-        <title>配置与启动 | </title>
+        <title>开始示例 | </title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 0.5.2">
@@ -19,10 +19,10 @@
     <meta name="author" content="walkor">
     
     
-    <link rel="next" href="../funcref/README.html" />
+    <link rel="next" href="../start/gatewaydev.html" />
     
     
-    <link rel="prev" href="../start/interface.html" />
+    <link rel="prev" href="../dev/configapp.html" />
     
 
         
@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-github="walkor/workerman.net" data-level="8.3" data-basepath=".." data-revision="1408694437106">
+    <div class="book" data-github="walkor/workerman.net" data-level="7.4" data-basepath=".." data-revision="1408694437106">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -118,7 +118,7 @@
         
         
         <li>
-            <a href="https://github.com/walkor/workerman.net/edit/master/advanced/configrestart.md" target="blank" class="contribute-link">Edit and Contribute</a>
+            <a href="https://github.com/walkor/workerman.net/edit/master/start/example.md" target="blank" class="contribute-link">Edit and Contribute</a>
         </li>
         
 
@@ -777,7 +777,7 @@
             <div class="page-wrapper" tabindex="-1">
                 <div class="book-progress">
     <div class="bar">
-        <div class="inner" style="width: 45.16129032258065%;min-width: 43.54838709677419%;"></div>
+        <div class="inner" style="width: 38.70967741935484%;min-width: 37.096774193548384%;"></div>
     </div>
     <div class="chapters">
     
@@ -831,13 +831,13 @@
     
         <a href="../start/example.html" title="开始示例" class="chapter done " data-progress="7.4" style="left: 38.70967741935484%;"></a>
     
-        <a href="../start/gatewaydev.html" title="Gateway/Worker开发流程" class="chapter done new-chapter" data-progress="8" style="left: 40.32258064516129%;"></a>
+        <a href="../start/gatewaydev.html" title="Gateway/Worker开发流程" class="chapter  new-chapter" data-progress="8" style="left: 40.32258064516129%;"></a>
     
-        <a href="../start/base.html" title="基本流程" class="chapter done " data-progress="8.1" style="left: 41.935483870967744%;"></a>
+        <a href="../start/base.html" title="基本流程" class="chapter  " data-progress="8.1" style="left: 41.935483870967744%;"></a>
     
-        <a href="../start/interface.html" title="Gateway/Worker接口参考" class="chapter done " data-progress="8.2" style="left: 43.54838709677419%;"></a>
+        <a href="../start/interface.html" title="Gateway/Worker接口参考" class="chapter  " data-progress="8.2" style="left: 43.54838709677419%;"></a>
     
-        <a href="../advanced/configrestart.html" title="配置与启动" class="chapter done " data-progress="8.3" style="left: 45.16129032258065%;"></a>
+        <a href="../advanced/configrestart.html" title="配置与启动" class="chapter  " data-progress="8.3" style="left: 45.16129032258065%;"></a>
     
         <a href="../funcref/README.html" title="函数参考" class="chapter  new-chapter" data-progress="9" style="left: 46.774193548387096%;"></a>
     
@@ -912,12 +912,100 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_1475">
+                    <section class="normal" id="section-gitbook_1525">
                     
-                        <h1 id="-">配置</h1>
-<p>Gateway/Worker模型的配置是现成的，在workerman/conf.conf.d/下的Gateway.conf和BusinessWorker.conf，可以直接复用。</p>
-<h1 id="-">启动</h1>
-<p><code>workerman/bin/workermand restart</code></p>
+                        <h1 id="-">应用开发实例（提供服务器信息）</h1>
+<h3 id="-">本示例功能</h3>
+<ul>
+<li>开放端口8181给外部</li>
+<li>通过这个端口能够返回当前服务器日期</li>
+<li>通过这个端口能够返回当前服务器负载</li>
+<li>你可以返回其它数据...</li>
+</ul>
+<h3 id="-">本示例工作流程</h3>
+<p>1、telnet 到服务端8181端口</p>
+<p>2、输入date回车，回显服务器日期</p>
+<p>3、输入load回车，回显服务器负载</p>
+<p>5、输入quit回车，断开链接</p>
+<h3 id="-">开发流程流程</h3>
+<p>1、订制协议
+由于需要使用telnet客户端，则协议应该是 文本+回车</p>
+<p>2、建立一个文件<code>applications/EchoService/EchoService.php</code>并实现dealInput、dealProces如下</p>
+<pre><code>&lt;?php
+class EchoService extends \Man\Core\SocketWorker
+{
+   /**
+    * 判断telnet客户端发来的数据是否接收完整
+    */
+   public function dealInput($recv_buffer)
+   {
+        // 根据协议,判断最后一个字符是不是回车 \n
+        if($recv_buffer[strlen($recv_buffer)-1] != &quot;\n&quot;)
+        {
+            // 不是回车返回1告诉workerman我还需要再读一个字符
+            return 1;
+        }
+        // 告诉workerman数据完整了
+        return 0;
+   }
+
+   /**
+    * 处理业务逻辑，这里只是按照telnet客户端发来的命令返回对应的数据
+    */
+   public function dealProcess($recv_buffer)
+   {
+        // 判断telnet客户端发来的是什么
+        $cmd = trim($recv_buffer);
+        switch($cmd)
+        {
+            // 获得服务器的日期
+            case &#39;date&#39;:
+            return $this-&gt;sendToClient(date(&#39;Y-m-d H:i:s&#39;).&quot;\n&quot;);
+            // 获得服务器的负载
+            case &#39;load&#39;:
+            return $this-&gt;sendToClient(var_export(sys_getloadavg(), true).&quot;\n&quot;);
+            case &#39;quit&#39;:
+            return $this-&gt;closeClient($this-&gt;currentDealFd);
+            default:
+            return $this-&gt;sendToClient(&quot;unknown cmd\n&quot;);
+        }
+   }
+}
+</code></pre><p>3、配置与启动
+建立配置文件 <code>workerman/conf/conf.d/EchoService.conf</code>,内容如下</p>
+<pre><code>;监听ip及端口
+;进程入口文件
+worker_file = ../applications/EchoService/EchoService.php
+;监听的端口
+listen = tcp://0.0.0.0:8181
+;是否是长连接
+persistent_connection = 1
+;启动多少进程
+start_workers=4
+;以哪个用户运行这个worker进程，应该用权限较低的用户如www-data nobody等
+user=root
+;预读长度，由于协议是 文本+回车 ，最小请求为 回车1个字符，这里设置为1
+preread_length=1
+</code></pre><p>启动workerman 运行 <code>./workerman/bin/workermand start</code></p>
+<p>4、测试
+运行 telnet</p>
+<pre><code>telnet 127.0.0.1 8181
+Trying 127.0.0.1...
+Connected to 127.0.0.1.
+Escape character is &#39;^]&#39;.
+date
+2014-08-22 15:50:17
+load
+array (
+  0 =&gt; 1.83,
+  1 =&gt; 1.69,
+  2 =&gt; 1.65,
+)
+quit
+Connection closed by foreign host.
+</code></pre><h3 id="-">说明</h3>
+<p>本示例是一个简单的测试示例，是一个长链接应用（即telnet链接后通过这个链接发送多个请求），由于不需要telnet客户端之间传递数据，所有使用基本开发流程开发即可</p>
+<p>如果是复杂的长链接应用，例如需要客户端之间通讯，建议使用Gateway/Worker开发流程，能够极大的减少开发工作量。例如<code>applications/Demo</code>是一个基于Gateway/Worker模型开发的聊天示例，支持群聊私聊，客户端同样是telnet</p>
 
                     
                     </section>
@@ -927,10 +1015,10 @@
         </div>
 
         
-        <a href="../start/interface.html" class="navigation navigation-prev " aria-label="Previous page: Gateway/Worker接口参考"><i class="fa fa-angle-left"></i></a>
+        <a href="../dev/configapp.html" class="navigation navigation-prev " aria-label="Previous page: 配置与启动"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../funcref/README.html" class="navigation navigation-next " aria-label="Next page: 函数参考"><i class="fa fa-angle-right"></i></a>
+        <a href="../start/gatewaydev.html" class="navigation navigation-next " aria-label="Next page: Gateway/Worker开发流程"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
