@@ -42,7 +42,7 @@
 					<img src="/img/high-performance.png" alt="workerman高性能"/><strong>高性能</strong>
 				</h3>
 				<p>
-					基于高性能的libevent事件轮询库，支持每秒4W的吞吐量，支持几万的并发连接。数据库等对象可以常驻内存，减少解析编译及网络开销。
+					基于高性能的libevent事件轮询库，长连接吞吐量达到45W/S，支持几万的并发连接。数据库等对象可以常驻内存，减少解析编译及网络开销。
 				</p>
 			</div>
 		</div>
@@ -87,10 +87,21 @@
 			</div>
 		</div>
 		<div class="media">
-			 <a href="http://www.yuchats.com/" class="pull-left" target="_blank"><img src="/img/app-ya.png" class="media-object" alt='workerman 手机im ya' /></a>
+			<a href="http://www.10ss.net/" class="pull-left" target="_blank"><img src="/img/yilianyun.png" class="media-object" alt='workerman 打印机' /></a>
 			<div class="media-body">
 				<h4 class="media-heading">
-					<a target="_blank" href="http://www.yuchats.com/">YA！</a>&nbsp;&nbsp;<font style="font-size:12px;color:red;">新</font>
+					<a target="_blank" href="http://www.10ss.net/">YA！</a>
+				</h4>
+				<p>
+				易联云平台是依托移动互联网的超远程打印解决方案，包含了设备管理中心、互联网API等模块。能够有效的实现易联云和应用之间的对接，帮助用户和开发者方便的使用超远程打印的构架和功能。
+				<a target="_blank" class="btn" href="http://www.10ss.net/">本应用来自www.10ss.net</a></p>
+			</div>
+		</div>
+		<div class="media">
+			<a href="http://www.yuchats.com/" class="pull-left" target="_blank"><img src="/img/app-ya.png" class="media-object" alt='workerman 手机im ya' /></a>
+			<div class="media-body">
+				<h4 class="media-heading">
+					<a target="_blank" href="http://www.yuchats.com/">YA！</a>
 				</h4>
 				<p>Ya！是一款极致简单、快速有效的下一代互联网沟通方式！
 用户登录后通过右划好友头像，向对方传递个通知，而对方收到通知后，也可以通过右划进行反馈。整个沟通过程极致有效，并有无数种使用方法。<br>
