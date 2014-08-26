@@ -52,8 +52,8 @@ class MyApp extends Man\Core\SocketWorker
 // 请求的包体
 $req_data = '{"module":"user","action":"getInfo"}';
 // 整个请求数据长度，首部4字节+包体
-$total_len = 4 + pack('N', strlen($req_data))
-$req_package = $total_len . $req_data;
+$total_len = pack('N', strlen($req_data)+4)
+$req_package =  $total_len . $req_data;
 ```
 
 得到类似这样的请求数据``` ****{"module":"user","action":"getInfo"} ```，由于首部四个字节是pack的二进制数据，所以首部看起来是乱码。要想正确处理这样的请求，需要如下步骤:

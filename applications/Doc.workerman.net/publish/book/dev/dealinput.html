@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-github="walkor/workerman.net" data-level="7.2" data-basepath=".." data-revision="1408695901015">
+    <div class="book" data-github="walkor/workerman.net" data-level="7.2" data-basepath=".." data-revision="1409042517607">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -923,7 +923,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_1716">
+                    <section class="normal" id="section-gitbook_42">
                     
                         <h1 id="-dealinput-dealprocess-">实现dealInput/dealProcess接口</h1>
 <h2 id="dealinput">dealInput</h2>
@@ -965,8 +965,8 @@
 <pre><code>// 请求的包体
 $req_data = &#39;{&quot;module&quot;:&quot;user&quot;,&quot;action&quot;:&quot;getInfo&quot;}&#39;;
 // 整个请求数据长度，首部4字节+包体
-$total_len = 4 + pack(&#39;N&#39;, strlen($req_data))
-$req_package = $total_len . $req_data;
+$total_len = pack(&#39;N&#39;, strlen($req_data)+4)
+$req_package =  $total_len . $req_data;
 </code></pre><p>得到类似这样的请求数据<code>****{&quot;module&quot;:&quot;user&quot;,&quot;action&quot;:&quot;getInfo&quot;}</code>，由于首部四个字节是pack的二进制数据，所以首部看起来是乱码。要想正确处理这样的请求，需要如下步骤:</p>
 <p>1、设置配置文件中preread_length=4，因为通过请求头部的四个字节，我们能获取到整个数据包的长度，进而能够区分出请求的边界。</p>
 <p>2、创建applications/MyApp/MyApp.php并实现dealInput/dealProcess如下</p>
