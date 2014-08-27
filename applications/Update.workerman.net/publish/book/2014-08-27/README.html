@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-github="walkor/workerman.net" data-level="1" data-basepath=".." data-revision="1409135793556">
+    <div class="book" data-github="walkor/workerman.net" data-level="1" data-basepath=".." data-revision="1409135980293">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -180,7 +180,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_1732">
+                    <section class="normal" id="section-gitbook_1756">
                     
                         <h1 id="2014-08-27">2014-08-27</h1>
 <h3 id="-2-1-3">版本号: 2.1.3</h3>
@@ -197,7 +197,7 @@
 <li>废除<code>Gateway::notifyConnectionSuccess</code>方法，该方法的工作由框架内部自动完成，开发者不用再关注</li>
 <li>废除<code>Gateway::deleteUidAddress</code>方法，该方法的工作由框架内部自动完成，开发者不用再关注</li>
 </ul>
-<p><strong>上一版本未验证用户走<code>Gateway::onConnect($message)</code>,已经验证的用户</strong>（<em>调用<code>Gateway::notifyConnectionSuccess($uid)</code>验证</em>）<strong>走<code>Gateway::onMessage($uid, $message)</code>，以后的版本废除了<code>Gateway::onConnect($message)</code>，统一使用<code>Gateway::onMessge($client_id, $message)</code>处理用户请求其中<code>client_id</code>由系统自动生成，唯一标识一个客户端，如果想向这个客户端发送消息，使用<code>Gateway::sendToClient($client_id, $message)</code>。用户是否已经验证可以使用$_SESSION来存储，例如用户合法就设置$_SESSION[&#39;uid&#39;]=$uid，这里的uid才是真正的用户uid，后面的请求就可以通过判断$_SESSION[&#39;uid&#39;]来判断用户是否通过验证</strong></p>
+<p><strong>上一版本未验证用户走<code>Gateway::onConnect($message)</code>,已经验证的用户</strong>（<em>调用<code>Gateway::notifyConnectionSuccess($uid)</code>验证</em>）<strong>走<code>Gateway::onMessage($uid, $message)</code>，以后的版本废除了<code>Gateway::onConnect($message)</code>，统一使用<code>Gateway::onMessge($client_id, $message)</code>处理用户请求其中<code>client_id</code>由系统自动生成，唯一标识一个客户端，如果想向这个客户端发送消息，使用<code>Gateway::sendToClient($client_id, $message)</code>。用户是否已经验证可以使用<code>$_SESSION</code>来存储，例如用户合法就设置<code>$_SESSION[&#39;uid&#39;]=$uid</code>，这里的uid才是真正的用户uid，后面的请求就可以通过判断<code>$_SESSION[&#39;uid&#39;]</code>来判断用户是否通过验证</strong></p>
 
                     
                     </section>
