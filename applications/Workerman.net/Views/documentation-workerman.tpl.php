@@ -60,7 +60,7 @@
 		<img src="/img/ps-workerman-game.png" alt="ps workerman 进程示例"/>
 		<br><a href="/install">详细安装教程点击这里</a>
 		<h3><a name="install">下载安装</a></h3>
-		<p>下载后解压即可 <a href="/download/workermanzip" target="_blank">workerman.2.0.1.zip</a></p>
+		<p>下载后解压即可 <a href="/download/workermanzip" target="_blank">workerman.zip</a></p>
 		<h3><a name="start">启动停止</a></h3>
 		<p>启动：./bin/workermand start</p>
 		<p>停止：./bin/workermand stop</p>

@@ -4,7 +4,7 @@
     <head>
         
         <meta charset="UTF-8">
-        <title>2014-08-06 | WorkerMan历史版本及更新日志</title>
+        <title>2014-08-27 | WorkerMan历史版本及更新日志</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 0.5.2">
@@ -19,8 +19,10 @@
     <meta name="author" content="walkor">
     
     
+    <link rel="next" href="../2014-08-06/README.html" />
     
-    <link rel="prev" href="../2014-08-27/README.html" />
+    
+    <link rel="prev" href="../index.html" />
     
 
         
@@ -32,7 +34,7 @@
 
 
         
-    <div class="book" data-github="walkor/workerman.net" data-level="2" data-basepath=".." data-revision="1409135793556">
+    <div class="book" data-github="walkor/workerman.net" data-level="1" data-basepath=".." data-revision="1409135793556">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -116,7 +118,7 @@
         
         
         <li>
-            <a href="https://github.com/walkor/workerman.net/edit/master/2014-08-06/README.md" target="blank" class="contribute-link">Edit and Contribute</a>
+            <a href="https://github.com/walkor/workerman.net/edit/master/2014-08-27/README.md" target="blank" class="contribute-link">Edit and Contribute</a>
         </li>
         
 
@@ -163,7 +165,7 @@
             <div class="page-wrapper" tabindex="-1">
                 <div class="book-progress">
     <div class="bar">
-        <div class="inner" style="width: 100%;min-width: 50%;"></div>
+        <div class="inner" style="width: 50%;min-width: 0%;"></div>
     </div>
     <div class="chapters">
     
@@ -171,39 +173,31 @@
     
         <a href="../2014-08-27/README.html" title="2014-08-27" class="chapter done new-chapter" data-progress="1" style="left: 50%;"></a>
     
-        <a href="../2014-08-06/README.html" title="2014-08-06" class="chapter done new-chapter" data-progress="2" style="left: 100%;"></a>
+        <a href="../2014-08-06/README.html" title="2014-08-06" class="chapter  new-chapter" data-progress="2" style="left: 100%;"></a>
     
     </div>
 </div>
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_1731">
+                    <section class="normal" id="section-gitbook_1732">
                     
-                        <h1 id="2014-08-06">2014-08-06</h1>
-<h3 id="-2-1-2">版本号: 2.1.2</h3>
-<h3 id="-2-1-2-https-github-com-walkor-workerman-2-1-2-archive-master-zip-">下载地址: <a href="https://github.com/walkor/workerman-2.1.2/archive/master.zip" target="_blank">点击下载版本2.1.2</a></h3>
+                        <h1 id="2014-08-27">2014-08-27</h1>
+<h3 id="-2-1-3">版本号: 2.1.3</h3>
+<h3 id="-2-1-3-https-github-com-walkor-workerman-archive-master-zip-">下载地址: <a href="https://github.com/walkor/workerman/archive/master.zip" target="_blank">点击下载版本2.1.3</a></h3>
 <h3 id="-">特性更新</h3>
+<p><strong>主要是去掉了uid的概念，取而代之使用client_id唯一标志一个客户端（因为一个uid可能发起多个链接，例如聊天室应用中用户登录了多个房间，所以需要client_id唯一标识每个房间的链接，而uid无法唯一标识），注意clien_id是系统自动生成的，为int整型。</strong></p>
 <ul>
-<li>将<code>FileReceiverDemo</code>、<code>BenchMark</code>从<code>applications</code>移出</li>
-<li><code>ChatDemo</code>目录更名为<code>Demo</code></li>
-<li><code>applications/Demo/Event.php</code> 增加 <code>onGatewayConnect</code>事件，即当客户端连接到<code>gateway</code>进程时触发的事件</li>
-<li><code>applications/Demo</code>支持<code>$_SESSION</code>超级变量</li>
-<li><code>applications/Demo</code> 中支持<code>$_SERVER[&#39;REMOTE_ADDR&#39;]</code>(客户端ip)、<code>$_SERVER[&#39;REMOTE_PORT&#39;]</code>（客户端端口）、<code>$_SERVER[&#39;GATEWAY_ADDR&#39;]</code>（gateway进程所在内网通信ip）、<code>$_SERVER[&#39;GATEWAY_PORT&#39;]</code>（gateway进程内网通信端口）、<code>$_SERVER[&#39;GATEWAY_SOCKET_ID&#39;]</code>（对应gateway进程的socketid）超级变量</li>
-<li><code>applications/Demo</code>增加命名空间</li>
-<li><code>applications/Demo</code>支持文件自动加载</li>
-<li><code>applications/Demo</code>中<code>Gateway::sendToAll($message, $uid_array);</code>方法增加<code>$uid_array</code>参数，用来向特定uid群体发送消息</li>
-<li><code>applications/Demo</code>增加<code>Gateway::isOnline($uid)</code>用来判断用户是否在线</li>
-<li><code>applications/Demo</code>增加<code>Gateway::getOnlineStatus()</code>，获取所有在线用户列表</li>
-<li>更改<code>applications/Demo/Lib/Store.php</code>用法，由原来<code>Store::xxx()</code> 更改为 <code>Store::instance(&#39;config_name&#39;)-&gt;xxx();</code> <code>config_name</code> <code>Config/Store.php</code>中配置</li>
+<li>去掉<code>Gateway::onConnect</code>方法，统一使用<code>Gateway::onMessage($client_id, $message)</code></li>
+<li>使用<code>Gateway::sendToClient($client_id, $message)</code>取代原<code>Gateway::sendToUid($uid, $message)</code></li>
+<li>使用<code>Gateway::sendToCurrentClient($message)</code>取代原来的<code>Gateway::sendToCurrentUid($message)</code></li>
+<li>使用<code>Gateway::kickClient($client_id)</code>取代原来<code>Gateway::kickUid($uid)</code></li>
+<li>使用<code>Gateway::kickCurrentClient()</code>取代原来<code>Gateway::kickCurrentUid()</code></li>
+<li>废除<code>Gateway::storeUid</code>方法，该方法的工作由框架内部自动完成，开发者不用再关注</li>
+<li>废除<code>Gateway::notifyConnectionSuccess</code>方法，该方法的工作由框架内部自动完成，开发者不用再关注</li>
+<li>废除<code>Gateway::deleteUidAddress</code>方法，该方法的工作由框架内部自动完成，开发者不用再关注</li>
 </ul>
-<h3 id="-">此更新已经应用于，开发者更新时请注意</h3>
-<ul>
-<li>workerman/applications/Demo</li>
-<li>workerman-chat</li>
-<li>workerman-todpole</li>
-<li>workerman-falppy-bird</li>
-</ul>
+<p><strong>上一版本未验证用户走<code>Gateway::onConnect($message)</code>,已经验证的用户</strong>（<em>调用<code>Gateway::notifyConnectionSuccess($uid)</code>验证</em>）<strong>走<code>Gateway::onMessage($uid, $message)</code>，以后的版本废除了<code>Gateway::onConnect($message)</code>，统一使用<code>Gateway::onMessge($client_id, $message)</code>处理用户请求其中<code>client_id</code>由系统自动生成，唯一标识一个客户端，如果想向这个客户端发送消息，使用<code>Gateway::sendToClient($client_id, $message)</code>。用户是否已经验证可以使用$_SESSION来存储，例如用户合法就设置$_SESSION[&#39;uid&#39;]=$uid，这里的uid才是真正的用户uid，后面的请求就可以通过判断$_SESSION[&#39;uid&#39;]来判断用户是否通过验证</strong></p>
 
                     
                     </section>
@@ -213,8 +207,10 @@
         </div>
 
         
-        <a href="../2014-08-27/README.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 2014-08-27"><i class="fa fa-angle-left"></i></a>
+        <a href="../index.html" class="navigation navigation-prev " aria-label="Previous page: Introduction"><i class="fa fa-angle-left"></i></a>
         
+        
+        <a href="../2014-08-06/README.html" class="navigation navigation-next " aria-label="Next page: 2014-08-06"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

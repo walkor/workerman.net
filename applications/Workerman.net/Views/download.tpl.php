@@ -45,7 +45,7 @@
 								最新版本
 						</td>
 						<td>
-								2.0.1 
+								2.1.3 
 						</td>
 				</tr>
 				<tr>
@@ -53,7 +53,7 @@
 								源代码
 						</td>
 						<td>
-								<a href="/download/workermanzip">workerman.2.0.1.zip</a>
+								<a href="/download/workermanzip">workerman.zip</a>
 						</td>
 				</tr>
 				<tr>

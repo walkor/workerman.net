@@ -1,5 +1,8 @@
 # 2014-08-06
-### 版本号 2.1.2
+
+### 版本号: 2.1.2
+### 下载地址: [点击下载版本2.1.2](https://github.com/walkor/workerman-2.1.2/archive/master.zip)
+### 特性更新
 * 将```FileReceiverDemo```、```BenchMark```从```applications```移出
 * ```ChatDemo```目录更名为```Demo```
 * ```applications/Demo/Event.php``` 增加 ```onGatewayConnect```事件，即当客户端连接到```gateway```进程时触发的事件

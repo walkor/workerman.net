@@ -66,7 +66,7 @@
 							<a href="http://wenda.workerman.net" target="_blank">问答</a>
 						</li>
 						<li<?php if($html_nav == 'update')echo ' class="active" ';?>>
-							<a href="http://update.workerman.net" target="_blank">更新记录</a>
+							<a href="http://update.workerman.net" target="_blank">历史版本</a>
 						</li>
 					</ul>
 				</div>
