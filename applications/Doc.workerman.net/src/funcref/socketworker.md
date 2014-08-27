@@ -2,7 +2,7 @@
 
 **文件位置:**
 
-```workerman/Core/WocketWorker.php```
+```workerman/Core/SocketWorker.php```
 
 
 **基于WorkerMan基础接口开发：**
