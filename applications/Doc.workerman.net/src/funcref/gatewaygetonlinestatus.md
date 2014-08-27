@@ -6,14 +6,14 @@
 array Gateway::getOnlineStatus(void);
 ```
 
-获取当前所有在线id列表，该id与```GateWay::notifyConnectionSuccess($uid)```中的```$uid```相同
+获取当前所有在线client_id列表
 
 
 ## 范例
 ```
 use \Lib\Gateway;
 
-// 打印在线id列表
+// 打印在线client_id列表
 var_export(Gateway::getOnlineStatus());
 ```
 

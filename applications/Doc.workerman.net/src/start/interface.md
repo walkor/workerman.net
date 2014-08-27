@@ -1,55 +1,79 @@
-# Gateway/Worker接口参考
+# Gateway/Worker模型开发快速入门
 
-###### 假如项目名为ChatRoom
+Gateway/Worker模型开发者只需要关注一个文件```Event.php```即可
+## applications/XXX/Event.php
+**Event.php中几乎包含了所有的你需要关注的内容。你需要关注：**
 
-## applications/ChatRoom/Event.php
+###1、当监测到客户端有请求数据到来时我们要做什么
+当客户端发来一个请求消息时，Gateway进程最先探测到有数据流入，这时会调用```Event::onGatewayMessage($recv_buffer)```方法区分数据流中的请求边界，所以开发者最先要实现```Event::onGatewayMessage($recv_buffer)```方法。其实```Event::onGatewayMessage($recv_buffer)```方法就是Gateway进程的dealInput函数，请参考[基本开发流程](dev/README.md)中[制定协议](dev/protocols.md)部分及[dealInput实现](dev/dealinput.md)部分实现```Event::onGatewayMessage($recv_buffer)```
 
-#### Event::onGatewayConnect()
-当Gateway进程每收一个客户端链接时触发，如果你的应用需要在此时需要做些操作的话可以在这里实现
+###2、当接收到一个完整的请求时我们要做什么
+当接收一个完整的请求时，```Event::onMessage($client_id, $recv_buffer)```方法会被自动触发，其中```$recv_buffer```就是客户端发送的消息，如果这个消息是json字符串，则就可以用```json_decode```解码出请求内容，然后做相应的处理。而$client_id是全局唯一的，用来标识当前客户端，每个客户端在连接那一刻框架遍自动为其分配了一个全局唯一的```$client_id```,可以说这个```client_id```就是客户端的身份证（直到这个客户端断开后才失效），给客户端发送消息时就需要这个身份证，例如调用向某一个客户端发送消息就可以用```Gateway::sendToClient($client_id, $buffer)```,向某些客户端发送消息就用```Gateway::sendToAll($buffer, $client_id_array)```，如果$client_id_array为空则是向所有客户端发送消息。
 
-#### Event::onGatewayMessage($recv_buffer)
+###3、如果客户端断开是我们要做什么
+如果客户端断开，不管是客户端主动断开还是服务端主动断开（踢出用户），都会触发```Event::onClose($client_id)```，如果有需要可以在这里做一些数据清理工作，或者这里什么也不做。
 
-此接口就是Gateway进程的dealInput函数，被Gateway进程用来区分TCP流中的请求边界。根据协议判断请求是否完整
+**以上便是Event.php的全部内容，而开发者实现了上面3个方法后便开发出了自己所要的网络服务**
 
-#### Event::onConnect($recv_buffer)
-当客户端发来请求，并且这个客户端对应的socket并没有绑定uid(使用```GateWay::notifyConnectionSuccess($uid)```绑定)时，也就是未验证用户发来的数据都触发这个方法。开发者需要实现这个方法
+## 一个Event.php实现实例
 
-#### Event::onMessage($uid, $recv_message)
-当使用```GateWay::notifyConnectionSuccess($uid)```绑定的用户发来消息时触发，$uid为对应socket绑定的uid，用来唯一识别客户端。
+```
+// 协议为 文本+回车
+class Event
+{
+    /**
+     * 网关有消息时，区分请求边界，判断消息是否完整
+     */
+    public static function onGatewayMessage($buffer)
+    {
+        // 判断最后一个字符是否是回车("\n")
+        if($buffer[strlen($buffer)-1] === "\n")
+        {
+            return 0;
+        }
 
-#### Event::onClose($uid)
-当客户端**主动**断开时触发，一般在这里清理用户的数据，例如更新数据库中的在线状态为下线
+        // 说明还有请求数据没收到，但是由于不知道还有多少数据没收到，所以只能返回1，因为有可能下一个字符就是回车（"\n"）
+        return 1;
+    }
 
-## applications/ChatRoom/Gateway.php类
+   /**
+    * 有消息时触发该方法
+    * @param int $client_id 发消息的client_id
+    * @param string $message 消息
+    * @return void
+    */
+   public static function onMessage($client_id, $message)
+   {
+        // 获得客户端来发的消息具体内容，trim去掉了请求末尾的回车
+        $message_data = trim($message);
 
-### Gateway::sendToUid($uid, $message)
-向客户端uid发送消息，$message是要发的消息字符串（可能是二进制数据流）
+        // ****如果没有$_SESSION['not_first_time']说明是第一次发消息****
+        if(empty($_SESSION['not_first_time']))
+        {
+            $_SESSION['not_first_time'] = true;
 
-### Gateway::sendToCurrentUid($message)
-向当前客户端d发送消息，$message是要发的消息字符串（可能是二进制数据流）
+            // 广播所有用户，xxx come
+            GateWay::sendToAll("client_id:$client_id come\n");
+        }
 
-### Gateway::sendToAll($message, $uid_array = array())
-向所有客户端发送消息，$message是要发的消息字符串（可能是二进制数据流）
-$uid_array是可选参数，用于向特定用户群发送消息，如果不传递则默认是向所有用户发送消息
+        // 向所有人转发消息
+        return GateWay::sendToAll("client[$client_id] said :" . $message));
+   }
 
-### Gateway::kickUid($uid, $message)
-踢掉客户端uid的链接，$message一般留空
+   /**
+    * 当用户断开连接时触发的方法
+    * @param integer $client_id 断开连接的用户id
+    * @return void
+    */
+   public static function onClose($client_id)
+   {
+       // 广播 xxx logout
+       GateWay::sendToAll("client[$client_id] logout\n");
+   }
+}
+```
 
-### Gateway::kickCurrentUser($message)
-踢掉当前用户，$message一般为留空
-
-### Gateway::storeUid($uid)
-当某个链接的客户端是合法用户时，需要调用```GateWay::storeUid($uid)```来保存客户端的uid的通讯地址，以便后续通过 ```Gateway::sendUid($uid, $message)``` 向其发送消息
-
-### Gateway::notifyConnectionSuccess($uid)
-当某个链接的客户端是合法用户时，需要调用```GateWay::notifyConnectionSuccess($uid)```来绑定该链接和客户端的uid，以便后续请求在```Event::onMessage($uid, $message)```能够获得uid
-
-### Gateway::getOnlineStatus()
-获取所有在线用户，此函数返回一个所有在线的uid数组
-
-### Gateway::isOnline($uid)
-判断uid是否在线
-
+**以上便完成了一个简单的聊天室，我们可以通过telent命令使用它，运行```telnet ip port```,运行多个telnet窗口，则窗口之间可以互相聊天了**
 
 
 

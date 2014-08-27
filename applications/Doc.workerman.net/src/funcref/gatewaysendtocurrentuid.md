@@ -1,9 +1,9 @@
-# Gateway::sendToCurrentUid
-(WorkerMan>=2.0)
+# Gateway::sendToCurrentClient
+(WorkerMan>=2.1.3)
 
 ## 说明:
 ```
-void Gateway::sendToCurrentUid(string $send_buffer);
+void Gateway::sendToCurrentClient(string $send_buffer);
 ```
 
 向当前客户端发送```$send_buffer```数据。
@@ -17,7 +17,19 @@ void Gateway::sendToCurrentUid(string $send_buffer);
 ## 范例
 ```
 use \Lib\Gateway;
+class Event
+{
+...
 
-// 向当前客户端发送数据
-Gateway::sendToCurrentUid('{"type":"say","content":"Hi ALL !"}');
+    public static function onMessage($client_id, $message)
+    {
+        if($message == 'tell me the time')
+        {
+           // 向当前客户端发送数据
+           Gateway::sendToCurrentClient(date('Y-m-d H:i:s'));
+        }
+    }
+
+...
+}
 ```

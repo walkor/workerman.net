@@ -1,29 +1,38 @@
-# Gateway::kickUid
-(WorkerMan>=2.0)
+# Gateway::kickClient
+(WorkerMan>=2.1.3)
 
 ## 说明:
 ```
-void Gateway::kickUid(int $uid, string $message);
+void Gateway::kickClient(int $client_id);
 ```
 
-踢掉与$uid绑定的socket连接，使对应的客户端下线
+断开与client_id对应的客户端的连接，使对应的客户端下线
 
 
 ## 参数
 
-* ```$uid```
+* ```$client_id```
 
-该id应该与```GateWay::notifyConnectionSuccess($uid)```中的```$uid```相同
-
-* ``` $message ```
-
-断开连接前，向客户端发送的消息。（注意有可能客户端还没有收到消息时就断开连接了，```$message```可能发不到客户端）
-
+全局唯一标识客户端连接的id
 
 ## 范例
 ```
 use \Lib\Gateway;
 
-// 使得$uid对应的连接下线
-Gateway::kickUid($uid, '');
+class Event
+{
+...
+
+    public static function onMessage($client_id, $message)
+    {
+        // 如果传递的消息不ok就踢掉对应客户端
+        $is_ok = your_check_fun($message);
+        if(!$is_ok)
+        {
+            Gateway::kickClient($client_id);
+        }
+    }
+
+...
+}
 ```

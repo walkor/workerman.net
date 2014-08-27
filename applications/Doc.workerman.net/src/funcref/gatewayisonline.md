@@ -3,7 +3,7 @@
 
 ## 说明:
 ```
-int Gateway::isOnline(int $uid);
+int Gateway::isOnline(int $client_id);
 ```
 
 判断$uid对应的连接是否还在线
@@ -11,9 +11,9 @@ int Gateway::isOnline(int $uid);
 
 ## 参数
 
-* ```$uid```
+* ```$client_id```
 
-该id应该与```GateWay::notifyConnectionSuccess($uid)```中的```$uid```相同
+全局唯一的客户端client_id
 
 ## 返回值
 在线返回1，不在线返回0
@@ -22,7 +22,31 @@ int Gateway::isOnline(int $uid);
 ## 范例
 ```
 use \Lib\Gateway;
+class Event
+{
+...
 
-// 判断$uid对应的连接是否还在线
-Gateway::isOnline($uid);
+    public static function onMessage($client_id, $message)
+    {
+        // $message = '{"type":"say_to_one","to_client_id":100,"content":"hello"}'
+        $req_data = json_decode(trim($message), true);
+        // 如果是向某个客户端发送消息
+        if($req_data['type'] == 'say_to_one'))
+        {
+            // 如果不在线就先存起来
+            if(!Gateway::isOnline($req_data['to_client_id'])
+            {
+                your_store_fun($message);
+            }
+            else
+            {
+                // 在线就转发消息给对应的客户端
+                Gateway::sendToClient($req_data['to_client_id'], $req_data['content']);
+            }
+        }
+    }
+
+...
+}
+
 ```

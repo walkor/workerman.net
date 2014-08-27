@@ -3,10 +3,10 @@
 
 ## 说明:
 ```
-void Gateway::sendToAll(string $send_buffer [, array $uid_array=array()]);
+void Gateway::sendToAll(string $send_buffer [, array $client_id_array=array()]);
 ```
 
-向所有客户端或者指定的uid客户端发送```$send_buffer```数据。
+向所有客户端或者指定的client_id_array客户端发送```$send_buffer```数据。如果指定的$client_id_array中的client_id不存在则自动丢弃对应的client的发送数据
 
 ## 参数
 
@@ -15,20 +15,33 @@ void Gateway::sendToAll(string $send_buffer [, array $uid_array=array()]);
 要发送的数据（可能是二进制数据）
 
 
-* ```$uid_array```
+* ```$client_id_array```
 
 (WorkerMan>=2.1.2)
 
-指定向哪些uid发送，如果不传递该参数或者为空，则是向所有在线用户发送 ```$send_buffer``` 数据
+指定向哪些client_id发送，如果不传递该参数或者为空，则是向所有在线客户端发送 ```$send_buffer``` 数据
 
 ## 范例
 ```
 use \Lib\Gateway;
 
-// 向所有客户端发送数据
-Gateway::sendToAll('{"type":"say","content":"Hi ALL !"}');
+class Event
+{
+...
 
-// 向uid为 101 102 103的客户端发送数据
-Gateway::sendToAll('{"type":"say","content":"Hi ALL !"}', array(101, 102, 103));
+    public static function onMessage($client_id, $message)
+    {
+        // $message = '{"type":"say_to_all","content":"hello"}'
+        $req_data = json_decode(trim($message), true);
+        // 如果是向所有客户端发送消息
+        if($req_data['type'] == 'say_to_all')
+        {
+            // 向所有客户端发送数据
+            Gateway::sendToAll($req_data['content']);
+        }
+    }
+
+...
+}
 
 ```
