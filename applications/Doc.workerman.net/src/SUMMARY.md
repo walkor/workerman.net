@@ -49,6 +49,7 @@
        * [Event::onGatewayMessage](funcref/eventongatewaymessage.md)
        * [Event::onMessage](funcref/eventonmessage.md)
        * [Event::onClose](funcref/eventonclose.md)
+   * [超全局数组$_SESSION](funcref/session.md)
 * [调试](debug/README.md)
    * [基本调试](debug/base_debug.md)
    * [网络抓包](debug/tcpdump.md)
