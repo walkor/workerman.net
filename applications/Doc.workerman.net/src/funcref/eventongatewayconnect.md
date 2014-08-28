@@ -21,12 +21,12 @@ void Gateway::onGatewayConnect(int $client_id);
 ```
 use \Lib\Gateway;
 
-public onGatewayConnect()
+public onGatewayConnect($client)
 {
    // 客户端一旦连接到服务端，服务端便向客户端发送一个token
    // 客户端根据这个token数据生成登录请求凭证
    $salt = '!@#$%^';
-   Gateway::sendToCurrentUid('token='.md5(time().$salt));
+   Gateway::sendToCurrentClient('token='.md5(time().$salt));
 }
 
 ```

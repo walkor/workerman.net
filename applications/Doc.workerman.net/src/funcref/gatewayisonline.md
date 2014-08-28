@@ -6,7 +6,7 @@
 int Gateway::isOnline(int $client_id);
 ```
 
-判断$uid对应的连接是否还在线
+判断$client_id是否还在线
 
 
 ## 参数

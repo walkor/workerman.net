@@ -23,11 +23,7 @@ WorkerMan中有一个例子Demo，这个例子虽然是个聊天的例子（通�
 
 2、根据协议实现Demo/Event.php 中onGatewayMessage($recv_buffer)方法，用来判断请求边界，作用同dealInput($recv_buffer)。
 
-3、实现Demo/Event.php 中onConnect($recv_buffer)方法。当未验证的客户端发来消息触发，一般在这里验证客户端是否合法，合法的话进行客户端id与socket绑定（GateWay::notifyConnectionSuccess），则该socket再次发来消息时触发onMessage($uid, $recv_buffer)。这里也可以在判断客户端合法的情况下更新存储中客户端的在线状态等。
-
-
-4、实现Demo/Event.php 中的onMessage($uid, $recv_buffer)方法。当已经验证的客户端发来数据请求时触发，可以在这里做业务逻辑，比如向其他客户端发送消息(Gateway::sendToUid/sendToAll)
-
+4、实现Demo/Event.php 中的onMessage($client_id, $recv_buffer)方法。当已经验证的客户端发来数据请求时触发，可以在这里做业务逻辑，比如向其他客户端发送消息(Gateway::sendToClient/sendToAll)
 
 4、实现Demo/Event.php 中的 onClose方法。当客户端主动断开连接时触发此方法。一般在这里做一些状态记录如下线和数据清理工作。
 

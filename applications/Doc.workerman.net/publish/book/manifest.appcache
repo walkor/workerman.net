@@ -1,12 +1,12 @@
 CACHE MANIFEST
-# Revision 1409152645656
+# Revision 1409236488826
 
 CACHE:
 devread/README.html
 index.html
 advanced/README.html
-advanced/configrestart.html
 advanced/distributed.html
+advanced/configrestart.html
 advanced/telnet.html
 configure/README.html
 configure/appconfig.html
@@ -16,12 +16,12 @@ continue/README.html
 debug/README.html
 debug/base_debug.html
 debug/strace.html
-debug/tcpdump.html
 dev/README.html
+debug/tcpdump.html
 dev/configapp.html
 dev/dealinput.html
 dev/protocols.html
-funcref/gatewaykickuid.html
+funcref/gatewaysendtocurrentuid.html
 funcref/README.html
 funcref/eventongatewayconnect.html
 funcref/eventongatewaymessage.html
@@ -31,16 +31,20 @@ funcref/gateway.html
 funcref/gatewaygetonlinestatus.html
 funcref/gatewayisonline.html
 funcref/gatewaykickcurrentuser.html
-funcref/eventonclose.html
+funcref/gatewaykickuid.html
 funcref/gatewaysendtoall.html
-funcref/gatewaysendtocurrentuid.html
+funcref/eventonclose.html
 funcref/gatewaysendtouid.html
 funcref/onstart.html
+funcref/how_to_work.html
+funcref/session.html
 funcref/socketworker.html
 funcref/socketworkerdealinput.html
 funcref/socketworkerdealprocess.html
 funcref/socketworkeronreload.html
 funcref/socketworkeronstop.html
+funcref/use_session.html
+funcref/what_is_session.html
 license/README.html
 manual/README.html
 manual/preface.html
@@ -51,15 +55,15 @@ start/README.html
 start/commend.html
 start/developmentprocess.html
 start/directory.html
-start/environment.html
 start/base.html
+start/environment.html
 start/feature.html
 start/gateway_example.html
 start/gatewaydev.html
 start/getworkerman.html
-start/interface.html
 start/introduction.html
 start/namingconventions.html
+start/interface.html
 start/systemprocess.html
 start/workerman.html
 stresstest/README.html
