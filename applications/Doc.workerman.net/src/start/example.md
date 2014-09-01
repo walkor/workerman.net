@@ -20,7 +20,7 @@
 1、订制协议
 由于需要使用telnet客户端，则协议应该是 文本+回车
 
-2、建立一个文件```applications/EchoService/EchoService.php```并实现dealInput、dealProces如下
+2、建立一个文件```applications/EchoService/EchoService.php```并实现dealInput、dealProcess如下
 
 ```
 <?php
@@ -114,6 +114,9 @@ if(!$socket)
 {
    exit($err_msg);
 }
+
+// 设置为阻塞模式
+stream_set_blocking($socket, true);
 
 // 发送date命令
 stream_socket_sendto($socket, "date\n");
