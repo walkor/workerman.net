@@ -23,7 +23,7 @@
 				由于采用的是gateway workers 进程模型，gateway和workers之间是无状态的，gateway和workers可以分别部署在不同的物理机上，所以扩容和升级都非常方便。
 				workerman-chat也非常适合游戏后台开发。
 			</p>
-			<p class="f16">查看php聊天室demo请点击<a href="http://chat.workerman.net" target="_blank"><b>这里</b></a></p>
+			<p class="f16"><a href="http://chat.workerman.net" target="_blank">查看php聊天室demo请点击<b>这里</b></a></p>
 			<h3>
 				特性
 			</h3>
@@ -35,6 +35,9 @@
 			<li>默认使用Websocket协议，更小带宽，更好性能</li>
 			<li>支持分布式部署，可横向扩容</li>
 			<li>客户端跨浏览器支持（需要浏览器支持html5或者flash）</li>
+			<li>多房间支持</li>
+			<li>支持私聊</li>
+			<li>支持心跳检测</li>
 			<li>同样非常适合游戏后台开发</li>
 			</ul>
 			<div class="bd-ad"><?php global $bd_ad_468_60; echo $bd_ad_468_60;?></div>
@@ -70,9 +73,9 @@
 			<p>1、<a href="/download/chatzip" target="_blank">下载</a>workerman-chat，并解压缩到任意目录</p>
 			<p>2、启动workerman<code>./bin/workermand start</code>如下图</p>
 			<img src="/img/workerman-chat-start.png" alt="php聊天室启动示意图"/>
-			<p>3、浏览器访问端口55151，例如<a href="http://workerman.net:55151">workerman.net:55151</a>如图：</p>
+			<p>3、浏览器访问端口55151，例如<a href="http://chat.workerman.net">workerman.net:55151</a>如图：</p>
 			<img src="/img/workerman-chat-page.png" alt="php聊天室使用界面"/>
 			<h3>说明</h3>
-			<p>本聊天室业务逻辑非常简单，业务逻辑都在文件./applications/Chat/Event.php中，开发者可以随意修改，比如增加私聊、表情、分组等功能</p>
+			<p>本聊天室业务逻辑非常简单，业务逻辑都在文件./applications/Chat/Event.php中，开发者可以随意修改，比如增加表情等功能</p>
 		</div>
 	</div>
