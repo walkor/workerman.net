@@ -69,7 +69,7 @@ class MyApp extends Man\Core\SocketWorker
         // 接收到的数据长度
         $recv_len = strlen($recv_buffer);
         // 如果接收的长度还不够四字节，那么要等够四字节才能解包到请求长度
-        if($redv_len < 4)
+        if($recv_len < 4)
         {
             // 不够四字节，等够四字节
             return 4 - $recv_len;
@@ -110,7 +110,7 @@ class MyApp extends Man\Core\SocketWorker
        // 接收到的数据长度
         $recv_len = strlen($recv_buffer);
         // 如果接收的长度还不够十字节，那么要等够十字节才能解包到请求长度
-        if($redv_len < 10)
+        if($recv_len < 10)
         {
             // 不够十字节，等够十字节
             return 10 - $recv_len;
