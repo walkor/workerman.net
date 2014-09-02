@@ -80,11 +80,11 @@
 			<h3>安装</h3>
 			<p>下载后解压即可</p>
 			<h3>启动停止</h3>
-			<p>启动：./bin/workermand start</p>
-			<p>停止：./bin/workermand stop</p>
-			<p>重启：./bin/workermand restart</p>
-			<p>平滑重启：./bin/workermand reload</p>
-			<p>查看状态：./bin/workermand status</p>
+			<p>启动：./workerman/bin/workermand start</p>
+			<p>停止：./workerman/bin/workermand stop</p>
+			<p>重启：./workerman/bin/workermand restart</p>
+			<p>平滑重启：./workerman/bin/workermand reload</p>
+			<p>查看状态：./workerman/bin/workermand status</p>
 			<h3>
 			<a name="dev">服务端开发示例EchoServer</a>
 		</h3>
@@ -105,7 +105,7 @@ user=www-data
 ;预读长度
 preread_length=8192</code></pre>
 			<h4>3、启动服务如下图：</h4>
-			<p><code>./bin/workermand start</code></p>
+			<p><code>./workerman/bin/workermand start</code></p>
 			<img src="/img/workerman-start.png" alt="workerman启动界面"/>
 			<h4>4、测试</h4>
 			<pre><code>telnet 127.0.0.1 55555

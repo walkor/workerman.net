@@ -100,7 +100,7 @@ thrift_protocol  = TBinaryProtocol
 statistic_address = udp://127.0.0.1:44646
 			</code></pre>
 			<h4>5、启动服务端如下：</h4>
-			<p><code>./bin/workermand start</code></p>
+			<p><code>./workerman/bin/workermand start</code></p>
 			<img src="/img/workerman-thrift-start.png" alt="php thrift rpc 启动界面"/>
 			<br/>
 			<h3>客户端使用示例</h3>

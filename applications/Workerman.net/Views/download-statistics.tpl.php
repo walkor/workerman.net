@@ -91,10 +91,10 @@
 						</td>
 						<td>
 							<ul>
-								<li>启动: ./bin/workermand start</li>
-								<li>停止: ./bin/workermand stop</li>
-								<li>平滑重启: ./bin/workermand reload</li>
-								<li>查看状态: ./bin/workermand status</li>
+								<li>启动: ./workerman/bin/workermand start</li>
+								<li>停止: ./workerman/bin/workermand stop</li>
+								<li>平滑重启: ./workerman/bin/workermand reload</li>
+								<li>查看状态: ./workerman/bin/workermand status</li>
 							</ul>
 						</td>
 				</tr>

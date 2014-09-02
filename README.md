@@ -41,19 +41,19 @@ workerman不能运行在Window平台
 以ubuntu为例
 
 启动  
-`sudo ./bin/workermand start`
+`sudo ./workerman/bin/workermand start`
 
 重启启动  
-`sudo ./bin/workermand restart`
+`sudo ./workerman/bin/workermand restart`
 
 平滑重启/重新加载配置  
-`sudo ./bin/workermand reload`
+`sudo ./workerman/bin/workermand reload`
 
 查看服务状态  
-`sudo ./bin/workermand status`
+`sudo ./workerman/bin/workermand status`
 
 停止  
-`sudo ./bin/workermand stop`
+`sudo ./workerman/bin/workermand stop`
 
 
 配置
