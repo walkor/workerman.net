@@ -964,7 +964,7 @@ file_put_contents(&#39;./applications/Chat/ping.data&#39;, \Protocols\Websocket:
 </code></pre><p>然后配置 <code>ping_data = ./applications/Chat/ping.data</code> 即可。<code>ping_data</code>文件按的位置可以随意。注意相对路径是以workerman路径为参考的，例如workerman-chat/workerman。</p>
 <p><strong>假如</strong>生成一个同样内容为<code>{&quot;type&quot;:&quot;ping&quot;}</code>的 jsonProtocol 协议的心跳数据,可以这样生成</p>
 <pre><code>php -a
-include &#39;./applications/Chat/Protocols/WebSocket.php&#39;;
+include &#39;./applications/Chat/Protocols/JsonProtocol.php&#39;;
 file_put_contents(&#39;./applications/Chat/ping.data&#39;, \Protocols\JsonProtocol::encode(array(&#39;type&#39;=&gt;&#39;ping&#39;)));
 </code></pre><p><strong>假如</strong>生成一个内容为<code>{&quot;type&quot;:&quot;ping&quot;}</code>的 json+回车 为协议的心跳检测数据，则可以直接新建一个文件，输入{&quot;type&quot;:&quot;ping&quot;}然后后面打一个回车即可。</p>
 <h2 id="-">技巧</h2>

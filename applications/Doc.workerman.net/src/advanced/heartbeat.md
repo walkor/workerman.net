@@ -49,7 +49,7 @@ file_put_contents('./applications/Chat/ping.data', \Protocols\Websocket::encode(
 
 ```
 php -a
-include './applications/Chat/Protocols/WebSocket.php';
+include './applications/Chat/Protocols/JsonProtocol.php';
 file_put_contents('./applications/Chat/ping.data', \Protocols\JsonProtocol::encode(array('type'=>'ping')));
 ```
 
