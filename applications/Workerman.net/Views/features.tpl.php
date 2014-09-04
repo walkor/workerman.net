@@ -243,5 +243,43 @@
 				</div>
 			</div>
 		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<div class="thumbnail">
+					<div class="caption">
+						<h3>
+							支持分布式部署
+						</h3>
+						<p>
+							WorkerMan支持分布式部署，可以平滑的动态添加减少服务器而不影响服务质量。从而使得WorkerMan集群能够支持相当大的吞吐量或者并发TCP连接。
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="thumbnail">
+					<div class="caption">
+						<h3>
+							支持HHVM
+						</h3>
+						<p>
+							支持HHVM，HHVM官方报告称运行在HHVM环境的PHP程序性能是普通ZEND虚拟机下PHP的9倍。实际经过压力测试确实有明显性能提升效果。
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="thumbnail">
+					<div class="caption">
+						<h3>
+							支持心跳检测
+						</h3>
+						<p>
+							Gateway/Worker开发模型支持服务端的心跳检测，可以定时向客户端发送应用层的心跳，能够及时检测到客户端极端掉线情况（掉电、突发网络故障等）。
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>

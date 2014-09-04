@@ -64,5 +64,8 @@
    * [分布式部署](advanced/distributed.md)
    * [心跳检测](advanced/heartbeat.md)
 * [压力测试](stresstest/README.md)
+* [常见问题](faq/README.md)
+   * [WorkerMan下扩展的安装](faq/extension-install.md)
+   * [WorkerMan日志](faq/debugging.md)
 * [待续....](continue/README.md)
 

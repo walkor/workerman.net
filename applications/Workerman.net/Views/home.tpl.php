@@ -16,11 +16,11 @@
 			<div class="caption">
 				<h3>Workerman支持的特性</h3>
 				<ol>
-					<li>支持HHVM，将PHP性能提高9倍左右</li>
-					<li>纯PHP开发，多进程/多线程支持</li>
-					<li>支持TCP/UDP，支持TCP长连接</li>
-					<li>支持libevent事件轮询库，支持高并发</li>
-					<li>支持服务器平滑重启</li>
+					<li>纯PHP开发，多进程支持</li>
+					<li>支持TCP/UDP，支持几万的TCP长连接</li>
+					<li>支持分布式部署，集群能够提供百万甚至更高的TCP连接</li>
+					<li>支持libevent事件触发的网络库</li>
+					<li>支持热更新及服务器平滑重启</li>
 					<li>支持守护进程化</li>
 				</ol>
 				<a class="btn" target="_blank" href="/features">查看更多 »</a>

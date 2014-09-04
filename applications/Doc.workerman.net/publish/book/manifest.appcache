@@ -1,8 +1,10 @@
 CACHE MANIFEST
-# Revision 1409670167978
+# Revision 1409848251960
 
 CACHE:
-devread/README.html
+faq/README.html
+faq/debugging.html
+faq/extension-install.html
 index.html
 advanced/README.html
 advanced/configrestart.html
@@ -22,19 +24,20 @@ dev/README.html
 dev/configapp.html
 dev/dealinput.html
 dev/protocols.html
+devread/README.html
 funcref/gatewaysendtocurrentuid.html
 funcref/README.html
 funcref/eventongatewayconnect.html
-funcref/eventonmessage.html
 funcref/eventongatewaymessage.html
+funcref/eventonmessage.html
 funcref/eventphp.html
 funcref/gateway.html
 funcref/gatewaygetonlinestatus.html
 funcref/gatewayisonline.html
 funcref/gatewaykickcurrentuser.html
 funcref/gatewaykickuid.html
-funcref/eventonclose.html
 funcref/gatewaysendtoall.html
+funcref/eventonclose.html
 funcref/gatewaysendtouid.html
 funcref/how_to_work.html
 funcref/onstart.html
