@@ -9,8 +9,8 @@ WorkerMan日志记录的是WorkerMan内核运行过程中需要开发者注意�
 
 ### 日志内容及含义举例：
 ```
-2014-09-04 09:26:21 Worker[Gateway]:CLIENT_CLOSE<br>
-CLIENT_IP:222.77.206.126<br>
+2014-09-04 09:26:21 Worker[Gateway]:CLIENT_CLOSE
+CLIENT_IP:222.77.206.126
 BUFFER:[00]
 ```
 
