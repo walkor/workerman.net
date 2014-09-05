@@ -2,7 +2,7 @@
 (WorkerMan>=2.0)
 
 ## 说明:
-```
+```php
 void Gateway::onClose(int $client_id);
 ```
 
@@ -16,7 +16,7 @@ void Gateway::onClose(int $client_id);
 
 ## 范例
 
-```
+```php
 /**
  * 当用户断开连接时触发的方法
  * @param integer $client_id 断开连接的客户端client_id
