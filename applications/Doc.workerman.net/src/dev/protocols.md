@@ -45,7 +45,7 @@ $pack_len = pack('N', strlen('我是要请求的普通文本数据');
 
 3、首部10个字节明文数字表示数据包长度，空白位以0代替，数据格式为xml
 
-```
+```xml
 0000000121<?xml version="1.0" encoding="ISO-8859-1"?>
 <request>
 	<module>user</module>
