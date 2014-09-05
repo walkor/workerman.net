@@ -1,5 +1,5 @@
 # 目录结构
-```
+```sh
 .
 ├── applications  // workerman的应用程序，里每个目录代表一个应用程序
 │
