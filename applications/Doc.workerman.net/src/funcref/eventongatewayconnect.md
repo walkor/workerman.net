@@ -2,7 +2,7 @@
 (WorkerMan>=2.0)
 
 ## 说明:
-```
+```php
 void Gateway::onGatewayConnect(int $client_id);
 ```
 
@@ -18,7 +18,7 @@ void Gateway::onGatewayConnect(int $client_id);
 
 
 ## 范例
-```
+```php
 use \Lib\Gateway;
 
 public onGatewayConnect($client)
