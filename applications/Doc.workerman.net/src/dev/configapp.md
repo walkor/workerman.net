@@ -1,7 +1,7 @@
 # 配置
 
 workerman/conf/conf.d/MyApp.conf如下
-```
+```ini
 ;进程入口文件
 worker_file = ../applications/MyApp/MyApp.php
 
