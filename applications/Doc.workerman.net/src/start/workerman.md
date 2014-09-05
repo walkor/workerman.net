@@ -56,28 +56,28 @@ WorkerMan的版本```version:2.1.1```
 
 ## PROCESS STATUS
 
-```pid```：进程pid
+pid：进程pid
 
-```memory```：该进程占用内存
+memory：该进程占用内存
 
-```listening```：传输层协议及监听ip端口
+listening：传输层协议及监听ip端口
 
-```timestamp```：该进程启动时间戳
+timestamp：该进程启动时间戳
 
-```worker_name```：该进程运行的服务服务名，对应于conf/conf.d下的配置名
+worker_name：该进程运行的服务服务名，对应于conf/conf.d下的配置名
 
-```total_request```：该进程接收多少连接
+total_request：该进程接收多少连接
 
-```packet_err```：该进程接收的错误包数量
+packet_err：该进程接收的错误包数量
 
-```thunder_herd```：该进程惊群数，注意多核处理器该值大于1是正常的
+thunder_herd：该进程惊群数，注意多核处理器该值大于1是正常的
 
-```client_close```：该进程对应的客户端主动关闭连接次数
+client_close：该进程对应的客户端主动关闭连接次数
 
-```send_fail```：该进程向客户端发送数据失败次数
+send_fail：该进程向客户端发送数据失败次数
 
-```throw_exception```：该进程内业务未捕获的异常数量
+throw_exception：该进程内业务未捕获的异常数量
 
-```suc/total```：该进程处理请求成功率
+suc/total：该进程处理请求成功率
 
 
