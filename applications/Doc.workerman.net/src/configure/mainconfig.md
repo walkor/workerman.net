@@ -2,7 +2,7 @@
 
 ### 主配置conf/workerman.conf
 
-```
+```ini
 ;debug=1则var_dump、echo、php notcie等会在终端上打印出来
 debug=1
 ;保存主进程pid的文件
