@@ -1,7 +1,7 @@
 # 应用配置说明
 
 ## 一个典型的应用配置 conf/conf.d/Gateway.conf如下
-```
+```ini
 ;进程入口文件
 worker_file = ../applications/Demo/Bootstrap/Gateway.php
 
