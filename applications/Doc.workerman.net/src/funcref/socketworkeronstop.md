@@ -2,7 +2,7 @@
 (WorkerMan>=2.0)  此方法不是必须实现的
 
 ## 说明:
-```
+```php
 void SocketWorker::onStop(void)
 ```
 
@@ -21,7 +21,7 @@ void SocketWorker::onStop(void)
 
 
 ## 范例
-```
+```php
 /**
  * 进程停止时需要将数据写入磁盘
  * @see Man\Core.SocketWorker::onStop()
