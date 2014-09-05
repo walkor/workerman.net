@@ -18,7 +18,7 @@ php-fpm可能用的是```/etc/php5/fpm/php.ini```
 而 workerman是以cli模式运行的，用的可能是```/etc/php5/cli/php.ini```
 
 
-* 而有时安装扩展的时候是需要在php.ini中配置的，所以即使apache配置了php.ini，你代表cli模式下的的workerman就支持了那个扩展，还是需要在cli 的 php.ini配置一下的
+* 而有时安装扩展的时候是需要在php.ini中配置的，所以即使apache配置了php.ini，不代表cli模式下的的workerman就支持了那个扩展，还是需要在cli 的 php.ini配置一下的
 
 
 ### 现在的问题
