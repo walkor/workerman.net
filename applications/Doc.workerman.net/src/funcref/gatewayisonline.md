@@ -2,7 +2,7 @@
 (WorkerMan>=2.1.2)
 
 ## 说明:
-```
+```php
 int Gateway::isOnline(int $client_id);
 ```
 
@@ -20,7 +20,7 @@ int Gateway::isOnline(int $client_id);
 
 
 ## 范例
-```
+```php
 use \Lib\Gateway;
 class Event
 {
