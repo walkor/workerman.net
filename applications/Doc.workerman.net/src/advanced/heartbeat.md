@@ -17,7 +17,7 @@ WorkerMan支持**服务端**向**客户端**定时发送心跳检测数据
 ## WorkerMan中如何配置心跳检测？
 在workerman/conf/conf.d/Gateway.php中设置心跳检测，主要是如下三个选项
 
-```
+```ini
 ;服务端向客户端发送心跳数据的时间间隔 单位：秒。如果设置为0代表不发送心跳检测
 ping_interval = 10
 
