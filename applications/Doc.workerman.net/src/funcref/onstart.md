@@ -2,7 +2,7 @@
 (WorkerMan>=2.0) 此方法不是必须实现的
 
 ## 说明:
-```
+```php
 void SocketWorker::onStart(void)
 ```
 
@@ -15,7 +15,7 @@ void SocketWorker::onStart(void)
 
 
 ## 范例
-```
+```php
     /**
      * 进程启动时初始化一个定时任务
      * @see Man\Core.SocketWorker::onStart()
