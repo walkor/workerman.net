@@ -38,7 +38,7 @@ workerman会将```ping_data```文件中的内容当作心跳请求发送给客�
 **假如**要生成一个内容为 ```{"type":"ping"}``` 的websocket
 协议的心跳检测数据，可以这样生成：
 
-```
+```php
 php -a
 include './applications/Chat/Protocols/WebSocket.php';
 file_put_contents('./applications/Chat/ping.data', \Protocols\Websocket::encode('{"type":"ping"}'));
@@ -47,7 +47,7 @@ file_put_contents('./applications/Chat/ping.data', \Protocols\Websocket::encode(
 
 **假如**生成一个同样内容为```{"type":"ping"}```的 jsonProtocol 协议的心跳数据,可以这样生成
 
-```
+```php
 php -a
 include './applications/Chat/Protocols/JsonProtocol.php';
 file_put_contents('./applications/Chat/ping.data', \Protocols\JsonProtocol::encode(array('type'=>'ping')));
