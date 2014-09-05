@@ -2,7 +2,7 @@
 (WorkerMan>=2.0)
 
 ## 说明:
-```
+```php
 void Gateway::onMessage(int $client_id, string $recv_buffer);
 ```
 
@@ -20,7 +20,7 @@ void Gateway::onMessage(int $client_id, string $recv_buffer);
 
 ## 范例
 
-```
+```php
 use \Lib\Gateway;
 
 class Event
