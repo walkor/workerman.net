@@ -1,7 +1,7 @@
 # telnet远程登录控制
 WorkerMan允许管理员通过Monitor.conf开放的端口远程telnet远程登录WorkerMan（相关的安全信息参见安全章节）。
 
-```php
+```
 输入
 telnet xxx.xxx.xxx.xxx 2009
 远程登录需要输入密码
