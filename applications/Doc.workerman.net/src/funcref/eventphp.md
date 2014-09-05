@@ -3,7 +3,7 @@
 **文件位置:**
 
 
-```applications/Demo/Event.php```
+applications/Demo/Event.php
 
 
 **作用:**
