@@ -2,7 +2,7 @@
 (WorkerMan>=2.0)  此方法不是必须实现的
 
 ## 说明:
-```
+```php
 void SocketWorker::onReload(void)
 ```
 
@@ -16,7 +16,7 @@ void SocketWorker::onReload(void)
 ## 范例
 
 conf配置中no_reload=1
-```
+```php
 /**
  * 收到reload信号后重新从磁盘加载配置文件
  * @see Man\Core.SocketWorker::onReload()
