@@ -47,10 +47,10 @@ Additional .ini files parsed:      /etc/php5/cli/conf.d/apc.ini,
 ### 最后
 如果你的cli是apt-get install 或者 yum install 安装的，那么扩展也可以通过apt-get 或者 yum安装，php cli的php.ini 会自动配置，非常方便。
 
-apt yum可以通过以下命令查找 扩展，例如memcache 扩展
-apt: apt-cache search memcache | grep php
-yum: yum search memcache | grep php
+apt/yum可以通过以下命令查找扩展，例如memcache 扩展<br>
+apt安装运行: ```apt-cache search memcache | grep php```<br>
+yum安装运行: ```yum search memcache | grep php```<br>
 
 然后
-apt-get install 你搜到的要装的扩展名
-yum install 你搜到的要装的扩展名
+apt-get install 你搜到的要装的扩展名<br>
+yum install 你搜到的要装的扩展名<br>
