@@ -2,7 +2,7 @@
 (WorkerMan>=2.0)
 
 ## 说明:
-```
+```php
 void SocketWorker::dealProcess(string $recv_buffer)
 ```
 
@@ -18,7 +18,7 @@ void SocketWorker::dealProcess(string $recv_buffer)
 
 例如json+回车协议，一个请求 ``` {"type":"say_to_all", "content":"Hello everybody！"}\n ```
 
-```
+```php
 public function dealProcess($recv_str)
 {
     $req_data = json_decode(trim($recv_str));
