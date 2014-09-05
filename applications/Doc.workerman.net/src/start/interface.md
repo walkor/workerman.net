@@ -17,7 +17,7 @@ Gateway/Worker模型开发者只需要关注一个文件```Event.php```即可
 
 ## 一个Event.php实现实例
 
-```
+```php
 // 协议为 文本+回车
 class Event
 {
