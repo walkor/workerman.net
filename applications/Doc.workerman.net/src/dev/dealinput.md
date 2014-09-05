@@ -16,7 +16,7 @@ dealProcess($recv_buffer)接口是WorkerMan给开发者的一个钩子函数，�
 1、设置配置文件preread_length=1，代表一个请求开始时，预先读取的数据1字节长度。为什么是1字节，因为协议规定以```\n```标记一个请求结束，有可能客户端就只发来一个```\n```字符,我们需要处理这种情况，固设置请求到来时先预读一个字符。
 
 2、创建applications/MyApp/MyApp.php并实现dealInput/dealProcess如下
-```
+```php
 class MyApp extends Man\Core\SocketWorker
 {
     public function dealInput($recv_buffer)
@@ -48,7 +48,7 @@ class MyApp extends Man\Core\SocketWorker
 
 如客户端这样打包
 
-```
+```php
 // 请求的包体
 $req_data = '{"module":"user","action":"getInfo"}';
 // 整个请求数据长度，首部4字节+包体
@@ -61,7 +61,7 @@ $req_package =  $total_len . $req_data;
 1、设置配置文件中preread_length=4，因为通过请求头部的四个字节，我们能获取到整个数据包的长度，进而能够区分出请求的边界。
 
 2、创建applications/MyApp/MyApp.php并实现dealInput/dealProcess如下
-```
+```php
 class MyApp extends Man\Core\SocketWorker
 {
     public function dealInput($recv_buffer)
@@ -102,7 +102,7 @@ class MyApp extends Man\Core\SocketWorker
 
 2、创建applications/MyApp/MyApp.php并实现dealInput/dealProcess如下
 
-```
+```php
 class MyApp extends Man\Core\SocketWorker
 {
     public function dealInput($recv_buffer)
