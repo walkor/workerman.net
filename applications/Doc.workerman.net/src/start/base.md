@@ -1,4 +1,6 @@
 # 基本流程
+**(```WorkerMan>=2.0，Gateway/Worker模型```)**
+
 基于Gateway/Worker模型的长链接应用开发者可以直接使用applications/Demo这个应用框架来做。
 
 ### applications/Demo这个框架提供了以下基本功能。

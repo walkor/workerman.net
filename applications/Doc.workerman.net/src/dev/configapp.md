@@ -1,4 +1,5 @@
 # 配置
+(```WorkerMan>=2.0，基础开发模型```)
 
 workerman/conf/conf.d/MyApp.conf如下
 ```ini

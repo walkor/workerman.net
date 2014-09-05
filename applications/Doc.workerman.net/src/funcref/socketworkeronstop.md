@@ -1,5 +1,5 @@
 # SocketWorker::onStop
-(WorkerMan>=2.0)  此方法不是必须实现的
+(```WorkerMan>=2.0，基础开发模型```)   *此方法不是必须实现的*
 
 ## 说明:
 ```php

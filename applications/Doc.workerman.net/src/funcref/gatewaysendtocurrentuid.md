@@ -1,5 +1,5 @@
 # Gateway::sendToCurrentClient
-(WorkerMan>=2.1.3)
+**(```WorkerMan>=2.1.3，Gateway/Worker模型```)**
 
 ## 说明:
 ```php

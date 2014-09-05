@@ -1,4 +1,6 @@
 # Gateway类 (基于Gateway/Worker模型开发)
+**(```WorkerMan>=2.0，Gateway/Worker模型```)**
+
 
 **文件位置:**
 

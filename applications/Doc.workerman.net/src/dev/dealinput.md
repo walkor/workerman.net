@@ -1,4 +1,5 @@
 # 实现dealInput/dealProcess接口
+(```WorkerMan>=2.0，基础开发模型```)
 ## dealInput
 
 dealInput($recv_buffer)接口是WorkerMan给开发者的一个钩子函数，是专门用来处理请求边界问题的。
@@ -134,3 +135,5 @@ class MyApp extends Man\Core\SocketWorker
     }
 }
 ```
+
+#### 当然还有其它非常多种类的协议....

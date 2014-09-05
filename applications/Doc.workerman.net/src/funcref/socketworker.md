@@ -1,4 +1,6 @@
-# SocketWorker类(基本开发流程)
+# SocketWorker类(基础开发模型)
+(```WorkerMan>=2.0，基础开发模型```)
+
 
 **文件位置:**
 

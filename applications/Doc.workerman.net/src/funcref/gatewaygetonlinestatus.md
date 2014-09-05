@@ -1,5 +1,5 @@
 # Gateway::getOnlineStatus
-(WorkerMan>=2.1.2)
+**(```WorkerMan>=2.1.2，Gateway/Worker模型```)**
 
 ## 说明:
 ```php

@@ -1,5 +1,5 @@
 # Gateway::sendToAll
-(WorkerMan>=2.0)
+**(```WorkerMan>=2.0，Gateway/Worker模型```)**
 
 ## 说明:
 ```php

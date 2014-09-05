@@ -1,5 +1,5 @@
 # SocketWorker::dealProcess
-(WorkerMan>=2.0)
+(```WorkerMan>=2.0，基础开发模型```)
 
 ## 说明:
 ```php

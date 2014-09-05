@@ -1,4 +1,6 @@
 # Gateway/Worker模型开发快速入门
+**(```WorkerMan>=2.0，Gateway/Worker模型```)**
+
 
 Gateway/Worker模型开发者只需要关注一个文件```Event.php```即可
 ## applications/XXX/Event.php
