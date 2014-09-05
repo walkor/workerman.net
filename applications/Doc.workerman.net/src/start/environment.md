@@ -40,10 +40,10 @@ libevent扩展使得PHP可以使用系统[Epoll](http://baike.baidu.com/view/138
 
 此扩展不是必须的。proctitle扩展使得WorkerMan可以更改进程的名称，在运行 ps aux 命令时比较有用，可以通过进程名称看到每个进程的比较详细的信息 类似下面
 
-```
-root     10342  0.0  0.8 150684  4332 ?        S    Jun10   5:22 WorkerMan:master with-config:/home/web-msg-sender/conf/workerman.conf
-www-data 10353  0.0  1.2 151484  6128 ?        S    Jun10   0:00 WorkerMan:worker SenderWorker udp://127.0.0.1:3434
-www-data 10354  0.0  1.1 151484  6068 ?        S    Jun10   0:00 WorkerMan:worker SenderGateway tcp://127.0.0.1:5252     ```
+
+    root     10342  0.0  0.8 150684  4332 ?        S    Jun10   5:22 WorkerMan:master with-config:/home/web-msg-sender/conf/workerman.conf
+    www-data 10353  0.0  1.2 151484  6128 ?        S    Jun10   0:00 WorkerMan:worker SenderWorker udp://127.0.0.1:3434
+    www-data 10354  0.0  1.1 151484  6068 ?        S    Jun10   0:00 WorkerMan:worker SenderGateway tcp://127.0.0.1:5252     
 
 
 ## 如何安装扩展
