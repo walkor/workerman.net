@@ -2,7 +2,7 @@
 
 **文件位置:**
 
-```applications/Demo/Lib/Gateway.php```
+applications/Demo/Lib/Gateway.php
 
 **作用：**
 
