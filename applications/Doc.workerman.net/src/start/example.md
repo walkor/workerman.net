@@ -22,7 +22,7 @@
 
 2、建立一个文件```applications/EchoService/EchoService.php```并实现dealInput、dealProcess如下
 
-```
+```php
 <?php
 class EchoService extends \Man\Core\SocketWorker
 {
@@ -68,7 +68,7 @@ class EchoService extends \Man\Core\SocketWorker
 
 3、配置与启动
 建立配置文件 ```workerman/conf/conf.d/EchoService.conf```,内容如下
-```
+```in
 ;监听ip及端口
 ;进程入口文件
 worker_file = ../applications/EchoService/EchoService.php
@@ -106,7 +106,7 @@ Connection closed by foreign host.
 
 ### php客户端
 一般我们都是通过php去获取数据，就像在php中读取mysql数据一样。在php调用EchoService服务如下：
-```
+```php
 <?php
 // 建立与服务端的链接
 $socket = stream_socket_client("tcp://127.0.0.1:8181", $err_no, $err_msg);
