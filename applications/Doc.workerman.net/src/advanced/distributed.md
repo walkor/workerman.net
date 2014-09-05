@@ -18,7 +18,7 @@
 
 6、配置memcache，更改三台服务器上```applications/Demo/Config/Store.php```中的```driver```、```gateway```两项配置如下，
 
-```
+```php
 // 存储驱动改为memcache
 public static $driver = self::DRIVER_MC
 // 更改memcache ip和端口
@@ -55,7 +55,7 @@ public static $gateway = array(
 
 3、配置```applications/Demo/Config/Store.php```中的```driver```、```gateway```两项配置如下，
 
-```
+```php
 // 存储驱动改为memcache
 public static $driver = self::DRIVER_MC
 // 设置gateway存储ip端口为memcache服务的ip和端口，可以设置多个
@@ -78,7 +78,7 @@ public static $gateway = array(
 
 2、配置```applications/Demo/Config/Store.php```中的```driver```、```gateway```两项配置如下
 
-```
+```php
 // 存储驱动改为memcache
 public static $driver = self::DRIVER_MC
 // 设置gateway存储ip端口为memcache服务的ip和端口，可以设置多个
