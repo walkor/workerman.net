@@ -2,7 +2,7 @@
 (WorkerMan>=2.1.3)
 
 ## 说明:
-```
+```php
 void Gateway::kickCurrentClient();
 ```
 
@@ -10,7 +10,7 @@ void Gateway::kickCurrentClient();
 
 
 ## 范例
-```
+```php
 use \Lib\Gateway;
 
 class Event
