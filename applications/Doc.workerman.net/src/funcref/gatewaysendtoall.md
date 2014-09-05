@@ -2,7 +2,7 @@
 (WorkerMan>=2.0)
 
 ## 说明:
-```
+```php
 void Gateway::sendToAll(string $send_buffer [, array $client_id_array=array()]);
 ```
 
@@ -22,7 +22,7 @@ void Gateway::sendToAll(string $send_buffer [, array $client_id_array=array()]);
 指定向哪些client_id发送，如果不传递该参数或者为空，则是向所有在线客户端发送 ```$send_buffer``` 数据
 
 ## 范例
-```
+```php
 use \Lib\Gateway;
 
 class Event
