@@ -5,7 +5,7 @@ Gateway/Worker模型开发者只需要关注一个文件```Event.php```即可
 **Event.php中几乎包含了所有的你需要关注的内容。你需要关注：**
 
 ###1、当监测到客户端有请求数据到来时我们要做什么
-当客户端发来一个请求消息时，Gateway进程最先探测到有数据流入，这时会调用```Event::onGatewayMessage($recv_buffer)```方法区分数据流中的请求边界，所以开发者最先要实现```Event::onGatewayMessage($recv_buffer)```方法。其实```Event::onGatewayMessage($recv_buffer)```方法就是Gateway进程的dealInput函数，请参考[基本开发流程](dev/README.md)中[制定协议](dev/protocols.md)部分及[dealInput实现](dev/dealinput.md)部分实现```Event::onGatewayMessage($recv_buffer)```
+当客户端发来一个请求消息时，Gateway进程最先探测到有数据流入，这时会调用```Event::onGatewayMessage($recv_buffer)```方法区分数据流中的请求边界，所以开发者最先要实现```Event::onGatewayMessage($recv_buffer)```方法。其实```Event::onGatewayMessage($recv_buffer)```方法就是Gateway进程的dealInput函数，请参考[基本开发流程](dev/README.html)中[制定协议](dev/protocols.html)部分及[dealInput实现](dev/dealinput.html)部分实现```Event::onGatewayMessage($recv_buffer)```
 
 ###2、当接收到一个完整的请求时我们要做什么
 当接收一个完整的请求时，```Event::onMessage($client_id, $recv_buffer)```方法会被自动触发，其中```$recv_buffer```就是客户端发送的消息，如果这个消息是json字符串，则就可以用```json_decode```解码出请求内容，然后做相应的处理。而$client_id是全局唯一的，用来标识当前客户端，每个客户端在连接那一刻框架遍自动为其分配了一个全局唯一的```$client_id```,可以说这个```client_id```就是客户端的身份证（直到这个客户端断开后才失效），给客户端发送消息时就需要这个身份证，例如调用向某一个客户端发送消息就可以用```Gateway::sendToClient($client_id, $buffer)```,向某些客户端发送消息就用```Gateway::sendToAll($buffer, $client_id_array)```，如果$client_id_array为空则是向所有客户端发送消息。

@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="14.1" data-basepath=".." data-revision="1409922715721">
+    <div class="book"  data-level="14.1" data-basepath=".." data-revision="1409924828852">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -1011,12 +1011,12 @@ Additional .ini files parsed:      /etc/php5/cli/conf.d/apc.ini,
 </code></pre><p>上面的路径可能因为系统不同而不一样，如果你有扩展的.so文件，只是缺少一个php.ini配置，可以参考上面的规则配置下</p>
 <h3 id="-">最后</h3>
 <p>如果你的cli是apt-get install 或者 yum install 安装的，那么扩展也可以通过apt-get 或者 yum安装，php cli的php.ini 会自动配置，非常方便。</p>
-<p>apt yum可以通过以下命令查找 扩展，例如memcache 扩展
-apt: apt-cache search memcache | grep php
-yum: yum search memcache | grep php</p>
+<p>apt/yum可以通过以下命令查找扩展，例如memcache 扩展<br>
+apt安装运行: <code>apt-cache search memcache | grep php</code><br>
+yum安装运行: <code>yum search memcache | grep php</code><br></p>
 <p>然后
-apt-get install 你搜到的要装的扩展名
-yum install 你搜到的要装的扩展名</p>
+apt-get install 你搜到的要装的扩展名<br>
+yum install 你搜到的要装的扩展名<br></p>
 
                     
                     </section>
