@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="9.1.5" data-basepath=".." data-revision="1409848251958">
+    <div class="book"  data-level="9.1.5" data-basepath=".." data-revision="1409922715721">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -968,27 +968,29 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_1563">
+                    <section class="normal" id="section-gitbook_46">
                     
                         <h1 id="socketworker-onreload">SocketWorker::onReload</h1>
 <p>(WorkerMan&gt;=2.0)  此方法不是必须实现的</p>
 <h2 id="-">说明:</h2>
-<pre><code>void SocketWorker::onReload(void)
-</code></pre><p>当子进程收到reload信号时触发，reload信号主要是为了更新进程或者更新配置。</p>
+<pre><code class="lang-php">void SocketWorker::onReload(void)
+</code></pre>
+<p>当子进程收到reload信号时触发，reload信号主要是为了更新进程或者更新配置。</p>
 <p>当对应子进程conf中没有配置no_realod时，收到reload信号默认操作是子进程自动退出。</p>
 <p>当对应子进程conf中配置no_reload=1时，收到reload信号所做的操作在onReload实现</p>
 <h2 id="-">范例</h2>
 <p>conf配置中no_reload=1</p>
-<pre><code>/**
+<pre><code class="lang-php"><span class="hljs-comment">/**
  * 收到reload信号后重新从磁盘加载配置文件
- * @see Man\Core.SocketWorker::onReload()
- */
-protected function onReload()
-{
-    // 重新从磁盘加载配置文件(updateConfigFromDisk函数实现忽略)
-    $this-&gt;updateConfigFromDisk();
+ *<span class="hljs-phpdoc"> @see</span> Man\Core.SocketWorker::onReload()
+ */</span>
+<span class="hljs-keyword">protected</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onReload</span><span class="hljs-params">()</span>
+{</span>
+    <span class="hljs-comment">// 重新从磁盘加载配置文件(updateConfigFromDisk函数实现忽略)</span>
+    <span class="hljs-variable">$this</span>-&gt;updateConfigFromDisk();
 }
 </code></pre>
+
                     
                     </section>
                 

@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="9.1.1" data-basepath=".." data-revision="1409848251958">
+    <div class="book"  data-level="9.1.1" data-basepath=".." data-revision="1409922715721">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -968,33 +968,35 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_1558">
+                    <section class="normal" id="section-gitbook_41">
                     
                         <h2 id="socketworker-onstart">SocketWorker::onStart</h2>
 <p>(WorkerMan&gt;=2.0) 此方法不是必须实现的</p>
 <h2 id="-">说明:</h2>
-<pre><code>void SocketWorker::onStart(void)
-</code></pre><p>当子进程启动时触发，可以用来设置每个子进程启动后做的工作，例如初始化一个定时任务等。</p>
+<pre><code class="lang-php">void SocketWorker::onStart(void)
+</code></pre>
+<p>当子进程启动时触发，可以用来设置每个子进程启动后做的工作，例如初始化一个定时任务等。</p>
 <p><strong>注意：</strong></p>
 <ul>
 <li>整个进程生命周期只触发一次onStart，只对子进程有效</li>
 <li>多进程时注意并发问题，例如多个进程同时操作一个文件</li>
 </ul>
 <h2 id="-">范例</h2>
-<pre><code>    /**
+<pre><code class="lang-php">    <span class="hljs-comment">/**
      * 进程启动时初始化一个定时任务
-     * @see Man\Core.SocketWorker::onStart()
-     */
-    protected function onStart()
-    {
-        // 初始化任务
-        \Man\Core\Lib\Task::init($this-&gt;event);
+     *<span class="hljs-phpdoc"> @see</span> Man\Core.SocketWorker::onStart()
+     */</span>
+    <span class="hljs-keyword">protected</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onStart</span><span class="hljs-params">()</span>
+    {</span>
+        <span class="hljs-comment">// 初始化任务</span>
+        \Man\Core\Lib\Task::init(<span class="hljs-variable">$this</span>-&gt;event);
 
-        // 每隔10秒清理一次磁盘上的日志文件（clearDiskLog函数的实现这里省略）
-        $time_interval = 10;
-        \Man\Core\Lib\Task::add($time_interval, array($this, &#39;clearDiskLog&#39;));
+        <span class="hljs-comment">// 每隔10秒清理一次磁盘上的日志文件（clearDiskLog函数的实现这里省略）</span>
+        <span class="hljs-variable">$time_interval</span> = <span class="hljs-number">10</span>;
+        \Man\Core\Lib\Task::add(<span class="hljs-variable">$time_interval</span>, <span class="hljs-keyword">array</span>(<span class="hljs-variable">$this</span>, <span class="hljs-string">'clearDiskLog'</span>));
     }
 </code></pre>
+
                     
                     </section>
                 

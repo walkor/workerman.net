@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="8.2" data-basepath=".." data-revision="1409848251958">
+    <div class="book"  data-level="8.2" data-basepath=".." data-revision="1409922715721">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -968,7 +968,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_1583">
+                    <section class="normal" id="section-gitbook_66">
                     
                         <h1 id="gateway-worker-">Gateway/Worker模型开发快速入门</h1>
 <p>Gateway/Worker模型开发者只需要关注一个文件<code>Event.php</code>即可</p>
@@ -982,60 +982,61 @@
 <p>如果客户端断开，不管是客户端主动断开还是服务端主动断开（踢出用户），都会触发<code>Event::onClose($client_id)</code>，如果有需要可以在这里做一些数据清理工作，或者这里什么也不做。</p>
 <p><strong>以上便是Event.php的全部内容，而开发者实现了上面3个方法后便开发出了自己所要的网络服务</strong></p>
 <h2 id="-event-php-">一个Event.php实现实例</h2>
-<pre><code>// 协议为 文本+回车
-class Event
-{
-    /**
+<pre><code class="lang-php"><span class="hljs-comment">// 协议为 文本+回车</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Event</span>
+{</span>
+    <span class="hljs-comment">/**
      * 网关有消息时，区分请求边界，判断消息是否完整
-     */
-    public static function onGatewayMessage($buffer)
-    {
-        // 判断最后一个字符是否是回车(&quot;\n&quot;)
-        if($buffer[strlen($buffer)-1] === &quot;\n&quot;)
+     */</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onGatewayMessage</span><span class="hljs-params">(<span class="hljs-variable">$buffer</span>)</span>
+    {</span>
+        <span class="hljs-comment">// 判断最后一个字符是否是回车("\n")</span>
+        <span class="hljs-keyword">if</span>(<span class="hljs-variable">$buffer</span>[strlen(<span class="hljs-variable">$buffer</span>)-<span class="hljs-number">1</span>] === <span class="hljs-string">"\n"</span>)
         {
-            return 0;
+            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
         }
 
-        // 说明还有请求数据没收到，但是由于不知道还有多少数据没收到，所以只能返回1，因为有可能下一个字符就是回车（&quot;\n&quot;）
-        return 1;
+        <span class="hljs-comment">// 说明还有请求数据没收到，但是由于不知道还有多少数据没收到，所以只能返回1，因为有可能下一个字符就是回车（"\n"）</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
     }
 
-   /**
+   <span class="hljs-comment">/**
     * 有消息时触发该方法
-    * @param int $client_id 发消息的client_id
-    * @param string $message 消息
-    * @return void
-    */
-   public static function onMessage($client_id, $message)
-   {
-        // 获得客户端来发的消息具体内容，trim去掉了请求末尾的回车
-        $message_data = trim($message);
+    *<span class="hljs-phpdoc"> @param</span> int $client_id 发消息的client_id
+    *<span class="hljs-phpdoc"> @param</span> string $message 消息
+    *<span class="hljs-phpdoc"> @return</span> void
+    */</span>
+   <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onMessage</span><span class="hljs-params">(<span class="hljs-variable">$client_id</span>, <span class="hljs-variable">$message</span>)</span>
+   {</span>
+        <span class="hljs-comment">// 获得客户端来发的消息具体内容，trim去掉了请求末尾的回车</span>
+        <span class="hljs-variable">$message_data</span> = trim(<span class="hljs-variable">$message</span>);
 
-        // ****如果没有$_SESSION[&#39;not_first_time&#39;]说明是第一次发消息****
-        if(empty($_SESSION[&#39;not_first_time&#39;]))
+        <span class="hljs-comment">// ****如果没有$_SESSION['not_first_time']说明是第一次发消息****</span>
+        <span class="hljs-keyword">if</span>(<span class="hljs-keyword">empty</span>(<span class="hljs-variable">$_SESSION</span>[<span class="hljs-string">'not_first_time'</span>]))
         {
-            $_SESSION[&#39;not_first_time&#39;] = true;
+            <span class="hljs-variable">$_SESSION</span>[<span class="hljs-string">'not_first_time'</span>] = <span class="hljs-keyword">true</span>;
 
-            // 广播所有用户，xxx come
-            GateWay::sendToAll(&quot;client_id:$client_id come\n&quot;);
+            <span class="hljs-comment">// 广播所有用户，xxx come</span>
+            GateWay::sendToAll(<span class="hljs-string">"client_id:$client_id come\n"</span>);
         }
 
-        // 向所有人转发消息
-        return GateWay::sendToAll(&quot;client[$client_id] said :&quot; . $message));
+        <span class="hljs-comment">// 向所有人转发消息</span>
+        <span class="hljs-keyword">return</span> GateWay::sendToAll(<span class="hljs-string">"client[$client_id] said :"</span> . <span class="hljs-variable">$message</span>));
    }
 
-   /**
+   <span class="hljs-comment">/**
     * 当用户断开连接时触发的方法
-    * @param integer $client_id 断开连接的用户id
-    * @return void
-    */
-   public static function onClose($client_id)
-   {
-       // 广播 xxx logout
-       GateWay::sendToAll(&quot;client[$client_id] logout\n&quot;);
+    *<span class="hljs-phpdoc"> @param</span> integer $client_id 断开连接的用户id
+    *<span class="hljs-phpdoc"> @return</span> void
+    */</span>
+   <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onClose</span><span class="hljs-params">(<span class="hljs-variable">$client_id</span>)</span>
+   {</span>
+       <span class="hljs-comment">// 广播 xxx logout</span>
+       GateWay::sendToAll(<span class="hljs-string">"client[$client_id] logout\n"</span>);
    }
 }
-</code></pre><p><strong>以上便完成了一个简单的聊天室，我们可以通过telent命令使用它，运行<code>telnet ip port</code>,运行多个telnet窗口，则窗口之间可以互相聊天了</strong></p>
+</code></pre>
+<p><strong>以上便完成了一个简单的聊天室，我们可以通过telent命令使用它，运行<code>telnet ip port</code>,运行多个telnet窗口，则窗口之间可以互相聊天了</strong></p>
 
                     
                     </section>

@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="9.2.1" data-basepath=".." data-revision="1409848251958">
+    <div class="book"  data-level="9.2.1" data-basepath=".." data-revision="1409922715721">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -968,13 +968,14 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_1554">
+                    <section class="normal" id="section-gitbook_37">
                     
                         <h1 id="gateway-sendtoall">Gateway::sendToAll</h1>
 <p>(WorkerMan&gt;=2.0)</p>
 <h2 id="-">说明:</h2>
-<pre><code>void Gateway::sendToAll(string $send_buffer [, array $client_id_array=array()]);
-</code></pre><p>向所有客户端或者指定的client_id_array客户端发送<code>$send_buffer</code>数据。如果指定的$client_id_array中的client_id不存在则自动丢弃对应的client的发送数据</p>
+<pre><code class="lang-php">void Gateway::sendToAll(string <span class="hljs-variable">$send_buffer</span> [, <span class="hljs-keyword">array</span> <span class="hljs-variable">$client_id_array</span>=<span class="hljs-keyword">array</span>()]);
+</code></pre>
+<p>向所有客户端或者指定的client_id_array客户端发送<code>$send_buffer</code>数据。如果指定的$client_id_array中的client_id不存在则自动丢弃对应的client的发送数据</p>
 <h2 id="-">参数</h2>
 <ul>
 <li><code>$send_buffer</code></li>
@@ -986,27 +987,28 @@
 <p>(WorkerMan&gt;=2.1.2)</p>
 <p>指定向哪些client_id发送，如果不传递该参数或者为空，则是向所有在线客户端发送 <code>$send_buffer</code> 数据</p>
 <h2 id="-">范例</h2>
-<pre><code>use \Lib\Gateway;
+<pre><code class="lang-php"><span class="hljs-keyword">use</span> \<span class="hljs-title">Lib</span>\<span class="hljs-title">Gateway</span>;
 
-class Event
-{
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Event</span>
+{</span>
 ...
 
-    public static function onMessage($client_id, $message)
-    {
-        // $message = &#39;{&quot;type&quot;:&quot;say_to_all&quot;,&quot;content&quot;:&quot;hello&quot;}&#39;
-        $req_data = json_decode(trim($message), true);
-        // 如果是向所有客户端发送消息
-        if($req_data[&#39;type&#39;] == &#39;say_to_all&#39;)
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onMessage</span><span class="hljs-params">(<span class="hljs-variable">$client_id</span>, <span class="hljs-variable">$message</span>)</span>
+    {</span>
+        <span class="hljs-comment">// $message = '{"type":"say_to_all","content":"hello"}'</span>
+        <span class="hljs-variable">$req_data</span> = json_decode(trim(<span class="hljs-variable">$message</span>), <span class="hljs-keyword">true</span>);
+        <span class="hljs-comment">// 如果是向所有客户端发送消息</span>
+        <span class="hljs-keyword">if</span>(<span class="hljs-variable">$req_data</span>[<span class="hljs-string">'type'</span>] == <span class="hljs-string">'say_to_all'</span>)
         {
-            // 向所有客户端发送数据
-            Gateway::sendToAll($req_data[&#39;content&#39;]);
+            <span class="hljs-comment">// 向所有客户端发送数据</span>
+            Gateway::sendToAll(<span class="hljs-variable">$req_data</span>[<span class="hljs-string">'content'</span>]);
         }
     }
 
 ...
 }
 </code></pre>
+
                     
                     </section>
                 

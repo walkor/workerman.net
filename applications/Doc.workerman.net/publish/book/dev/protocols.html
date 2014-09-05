@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="7.1" data-basepath=".." data-revision="1409848251958">
+    <div class="book"  data-level="7.1" data-basepath=".." data-revision="1409922715721">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -968,7 +968,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_1541">
+                    <section class="normal" id="section-gitbook_24">
                     
                         <h1 id="-">制定协议</h1>
 <p>使用WorkerMan的第一步就是要和客户端商定应用层通信协议。</p>
@@ -999,12 +999,13 @@
 <p>$pack_len = pack(&#39;N&#39;, strlen(&#39;我是要请求的普通文本数据&#39;);</p>
 <p><code>$pack_len.&#39;我是要请求的普通文本数据&#39;</code></p>
 <p>3、首部10个字节明文数字表示数据包长度，空白位以0代替，数据格式为xml</p>
-<pre><code>0000000121&lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;?&gt;
-&lt;request&gt;
-    &lt;module&gt;user&lt;/module&gt;
-    &lt;action&gt;getInfo&lt;/action&gt;
-&lt;/request&gt;
-</code></pre><p>其中0000000121代表请求数据长度为121个字节，也就是整个请求的数据长度</p>
+<pre><code class="lang-xml">0000000121<span class="hljs-pi">&lt;?xml version="1.0" encoding="ISO-8859-1"?&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">request</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">module</span>&gt;</span>user<span class="hljs-tag">&lt;/<span class="hljs-title">module</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">action</span>&gt;</span>getInfo<span class="hljs-tag">&lt;/<span class="hljs-title">action</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">request</span>&gt;</span>
+</code></pre>
+<p>其中0000000121代表请求数据长度为121个字节，也就是整个请求的数据长度</p>
 
                     
                     </section>

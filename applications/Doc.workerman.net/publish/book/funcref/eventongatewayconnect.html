@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="9.3.1" data-basepath=".." data-revision="1409848251958">
+    <div class="book"  data-level="9.3.1" data-basepath=".." data-revision="1409922715721">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -968,29 +968,31 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_1545">
+                    <section class="normal" id="section-gitbook_28">
                     
                         <h1 id="event-ongatewayconnect">Event::onGatewayConnect</h1>
 <p>(WorkerMan&gt;=2.0)</p>
 <h2 id="-">说明:</h2>
-<pre><code>void Gateway::onGatewayConnect(int $client_id);
-</code></pre><p>当客户端连接上gateway进程时触发。例如客户端连接到gateway进程后，服务端要向新连接的客户端发送一个token，客户端需要根据token计算登录的凭证，然后通过这个凭证向服务端发起登录请求。</p>
+<pre><code class="lang-php">void Gateway::onGatewayConnect(int <span class="hljs-variable">$client_id</span>);
+</code></pre>
+<p>当客户端连接上gateway进程时触发。例如客户端连接到gateway进程后，服务端要向新连接的客户端发送一个token，客户端需要根据token计算登录的凭证，然后通过这个凭证向服务端发起登录请求。</p>
 <p>绝大多数应用在不用实现这个函数。</p>
 <h2 id="-">参数</h2>
 <p>(WorkerMan&gt;=2.1.3)</p>
 <p><code>$clien_id</code>
 全局唯一的客户端socket_id</p>
 <h2 id="-">范例</h2>
-<pre><code>use \Lib\Gateway;
+<pre><code class="lang-php"><span class="hljs-keyword">use</span> \<span class="hljs-title">Lib</span>\<span class="hljs-title">Gateway</span>;
 
-public onGatewayConnect($client)
+<span class="hljs-keyword">public</span> onGatewayConnect(<span class="hljs-variable">$client</span>)
 {
-   // 客户端一旦连接到服务端，服务端便向客户端发送一个token
-   // 客户端根据这个token数据生成登录请求凭证
-   $salt = &#39;!@#$%^&#39;;
-   Gateway::sendToCurrentClient(&#39;token=&#39;.md5(time().$salt));
+   <span class="hljs-comment">// 客户端一旦连接到服务端，服务端便向客户端发送一个token</span>
+   <span class="hljs-comment">// 客户端根据这个token数据生成登录请求凭证</span>
+   <span class="hljs-variable">$salt</span> = <span class="hljs-string">'!@#$%^'</span>;
+   Gateway::sendToCurrentClient(<span class="hljs-string">'token='</span>.md5(time().<span class="hljs-variable">$salt</span>));
 }
 </code></pre>
+
                     
                     </section>
                 

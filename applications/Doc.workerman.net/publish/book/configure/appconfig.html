@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="6.6" data-basepath=".." data-revision="1409848251958">
+    <div class="book"  data-level="6.6" data-basepath=".." data-revision="1409922715721">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -968,44 +968,45 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_1530">
+                    <section class="normal" id="section-gitbook_13">
                     
                         <h1 id="-">应用配置说明</h1>
 <h2 id="-conf-conf-d-gateway-conf-">一个典型的应用配置 conf/conf.d/Gateway.conf如下</h2>
-<pre><code>;进程入口文件
-worker_file = ../applications/Demo/Bootstrap/Gateway.php
+<pre><code class="lang-ini"><span class="hljs-comment">;进程入口文件</span>
+<span class="hljs-setting">worker_file = <span class="hljs-value">../applications/Demo/Bootstrap/Gateway.php</span></span>
 
-;传输层协议及监听的ip端口
-listen = tcp://0.0.0.0:8480
+<span class="hljs-comment">;传输层协议及监听的ip端口</span>
+<span class="hljs-setting">listen = <span class="hljs-value">tcp://<span class="hljs-number">0.0</span>.<span class="hljs-number">0.0</span>:<span class="hljs-number">8480</span></span></span>
 
-;是否是长连接
-persistent_connection = 1
+<span class="hljs-comment">;是否是长连接</span>
+<span class="hljs-setting">persistent_connection = <span class="hljs-value"><span class="hljs-number">1</span></span></span>
 
-;开多少服务进程
-start_workers = 5
+<span class="hljs-comment">;开多少服务进程</span>
+<span class="hljs-setting">start_workers = <span class="hljs-value"><span class="hljs-number">5</span></span></span>
 
-;以哪个用户运行，为了安全，应该使用权限较低的用户，例如www-data nobody
-user = www-data
+<span class="hljs-comment">;以哪个用户运行，为了安全，应该使用权限较低的用户，例如www-data nobody</span>
+<span class="hljs-setting">user = <span class="hljs-value">www-data</span></span>
 
-;每个请求预读长度，避免读取数据超过一个协议包，
-;一般设置为协议头的长度，当请求到来时在dealInput中根据头部标识的数据包长度计算还有多少数据没接收完毕，并返回这个值
-preread_length = 4
+<span class="hljs-comment">;每个请求预读长度，避免读取数据超过一个协议包，</span>
+<span class="hljs-comment">;一般设置为协议头的长度，当请求到来时在dealInput中根据头部标识的数据包长度计算还有多少数据没接收完毕，并返回这个值</span>
+<span class="hljs-setting">preread_length = <span class="hljs-value"><span class="hljs-number">4</span></span></span>
 
-;接收缓冲区大小设置
-max_recv_buffer_size = 10485760
+<span class="hljs-comment">;接收缓冲区大小设置</span>
+<span class="hljs-setting">max_recv_buffer_size = <span class="hljs-value"><span class="hljs-number">10485760</span></span></span>
 
-;发送缓冲区大小设置
-max_send_buffer_size = 20971520
+<span class="hljs-comment">;发送缓冲区大小设置</span>
+<span class="hljs-setting">max_send_buffer_size = <span class="hljs-value"><span class="hljs-number">20971520</span></span></span>
 
-;不reload，当有reload命令时是否安全重启这个进程
-no_reload = 1
+<span class="hljs-comment">;不reload，当有reload命令时是否安全重启这个进程</span>
+<span class="hljs-setting">no_reload = <span class="hljs-value"><span class="hljs-number">1</span></span></span>
 
-;workerman.conf.debug=1 时有效。echo var_dump 等输出是否打印到终端
-no_debug = 1
+<span class="hljs-comment">;workerman.conf.debug=1 时有效。echo var_dump 等输出是否打印到终端</span>
+<span class="hljs-setting">no_debug = <span class="hljs-value"><span class="hljs-number">1</span></span></span>
 
-;接收多少请求后重启进程，这个是gateway进程，不需要设置
-;max_requests = 1000
-</code></pre><h3 id="1-worker_file-">1、worker_file选项</h3>
+<span class="hljs-comment">;接收多少请求后重启进程，这个是gateway进程，不需要设置</span>
+<span class="hljs-comment">;max_requests = 1000</span>
+</code></pre>
+<h3 id="1-worker_file-">1、worker_file选项</h3>
 <p>worker_file 用来设置应用程序入口文件。这个入口文件必须满足以下要求：</p>
 <ul>
 <li>必须继承<code>Man\Core\SocketWorker</code>类并实现<code>dealInput</code>、<code>dealProcess</code> 方法。</li>

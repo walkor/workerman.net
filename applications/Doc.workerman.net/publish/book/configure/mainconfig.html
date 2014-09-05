@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="6.5" data-basepath=".." data-revision="1409848251958">
+    <div class="book"  data-level="6.5" data-basepath=".." data-revision="1409922715721">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -968,19 +968,20 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_1532">
+                    <section class="normal" id="section-gitbook_15">
                     
                         <h1 id="-">主配置说明</h1>
 <h3 id="-conf-workerman-conf">主配置conf/workerman.conf</h3>
-<pre><code>;debug=1则var_dump、echo、php notcie等会在终端上打印出来
-debug=1
-;保存主进程pid的文件
-pid_file=/var/run/workerman.pid
-;日志文件目录
-log_dir=./logs/
-;应用配置
-indlue=/conf.d/*.conf
-</code></pre><h3 id="-">主配置说明</h3>
+<pre><code class="lang-ini"><span class="hljs-comment">;debug=1则var_dump、echo、php notcie等会在终端上打印出来</span>
+<span class="hljs-setting">debug=<span class="hljs-value"><span class="hljs-number">1</span></span></span>
+<span class="hljs-comment">;保存主进程pid的文件</span>
+<span class="hljs-setting">pid_file=<span class="hljs-value">/var/run/workerman.pid</span></span>
+<span class="hljs-comment">;日志文件目录</span>
+<span class="hljs-setting">log_dir=<span class="hljs-value">./logs/</span></span>
+<span class="hljs-comment">;应用配置</span>
+<span class="hljs-setting">indlue=<span class="hljs-value">/conf.d/*.conf</span></span>
+</code></pre>
+<h3 id="-">主配置说明</h3>
 <p>1、debug选项</p>
 <p>debug=1，则在应用程序中<code>echo var_dump</code>等函数打印的数据都会在终端展示出来，方便调试。并且当有文件更新时，会自动加载更新的文件</p>
 <p>debug=0，则应用程序中的<code>echo var_dump</code>等函数打印的数据不会在终端展示，并且当有文件更新时，也不会自动加载文件，要想加载文件需要手动运行 workermand reload 或者重启WorkerMan</p>

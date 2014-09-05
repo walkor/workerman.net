@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="7.3" data-basepath=".." data-revision="1409848251958">
+    <div class="book"  data-level="7.3" data-basepath=".." data-revision="1409922715721">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -968,43 +968,44 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_1539">
+                    <section class="normal" id="section-gitbook_22">
                     
                         <h1 id="-">配置</h1>
 <p>workerman/conf/conf.d/MyApp.conf如下</p>
-<pre><code>;进程入口文件
-worker_file = ../applications/MyApp/MyApp.php
+<pre><code class="lang-ini"><span class="hljs-comment">;进程入口文件</span>
+<span class="hljs-setting">worker_file = <span class="hljs-value">../applications/MyApp/MyApp.php</span></span>
 
-;传输层协议及监听的ip端口
-listen = tcp://0.0.0.0:8480
+<span class="hljs-comment">;传输层协议及监听的ip端口</span>
+<span class="hljs-setting">listen = <span class="hljs-value">tcp://<span class="hljs-number">0.0</span>.<span class="hljs-number">0.0</span>:<span class="hljs-number">8480</span></span></span>
 
-;是否是长连接,根据自己的需要设置
-persistent_connection = 1
+<span class="hljs-comment">;是否是长连接,根据自己的需要设置</span>
+<span class="hljs-setting">persistent_connection = <span class="hljs-value"><span class="hljs-number">1</span></span></span>
 
-;开多少服务进程，根据自己的需要设置
-start_workers = 5
+<span class="hljs-comment">;开多少服务进程，根据自己的需要设置</span>
+<span class="hljs-setting">start_workers = <span class="hljs-value"><span class="hljs-number">5</span></span></span>
 
-;以哪个用户运行，为了安全，应该使用权限较低的用户，例如www-data nobody
-user = www-data
+<span class="hljs-comment">;以哪个用户运行，为了安全，应该使用权限较低的用户，例如www-data nobody</span>
+<span class="hljs-setting">user = <span class="hljs-value">www-data</span></span>
 
-;每个请求预读长度，假如使用\n作为请求结束边界
-preread_length = 1
+<span class="hljs-comment">;每个请求预读长度，假如使用\n作为请求结束边界</span>
+<span class="hljs-setting">preread_length = <span class="hljs-value"><span class="hljs-number">1</span></span></span>
 
-;接收缓冲区大小设置
-max_recv_buffer_size = 10485760
+<span class="hljs-comment">;接收缓冲区大小设置</span>
+<span class="hljs-setting">max_recv_buffer_size = <span class="hljs-value"><span class="hljs-number">10485760</span></span></span>
 
-;发送缓冲区大小设置
-max_send_buffer_size = 20971520
+<span class="hljs-comment">;发送缓冲区大小设置</span>
+<span class="hljs-setting">max_send_buffer_size = <span class="hljs-value"><span class="hljs-number">20971520</span></span></span>
 
-;不reload，当有reload命令时是否安全重启这个进程，根据需要设置
-no_reload = 1
+<span class="hljs-comment">;不reload，当有reload命令时是否安全重启这个进程，根据需要设置</span>
+<span class="hljs-setting">no_reload = <span class="hljs-value"><span class="hljs-number">1</span></span></span>
 
-;workerman.conf.debug=1 时有效。echo var_dump 等输出是否打印到终端，根据需要设置
-no_debug = 1
+<span class="hljs-comment">;workerman.conf.debug=1 时有效。echo var_dump 等输出是否打印到终端，根据需要设置</span>
+<span class="hljs-setting">no_debug = <span class="hljs-value"><span class="hljs-number">1</span></span></span>
 
-;接收多少请求后重启进程，根据需要设置
-;max_requests = 1000
-</code></pre><h3 id="-">详细配置说明参考配置章节</h3>
+<span class="hljs-comment">;接收多少请求后重启进程，根据需要设置</span>
+<span class="hljs-comment">;max_requests = 1000</span>
+</code></pre>
+<h3 id="-">详细配置说明参考配置章节</h3>
 <h1 id="-">启动</h1>
 <p>运行命令：<code>workerman/bin/workermand start</code></p>
 

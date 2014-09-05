@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="9.2.7" data-basepath=".." data-revision="1409848251958">
+    <div class="book"  data-level="9.2.7" data-basepath=".." data-revision="1409922715721">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -968,25 +968,28 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_1550">
+                    <section class="normal" id="section-gitbook_33">
                     
                         <h1 id="gateway-getonlinestatus">Gateway::getOnlineStatus</h1>
 <p>(WorkerMan&gt;=2.1.2)</p>
 <h2 id="-">说明:</h2>
-<pre><code>array Gateway::getOnlineStatus(void);
-</code></pre><p>获取当前所有在线client_id列表</p>
+<pre><code class="lang-php"><span class="hljs-keyword">array</span> Gateway::getOnlineStatus(void);
+</code></pre>
+<p>获取当前所有在线client_id列表</p>
 <h2 id="-">范例</h2>
-<pre><code>use \Lib\Gateway;
+<pre><code class="lang-php"><span class="hljs-keyword">use</span> \<span class="hljs-title">Lib</span>\<span class="hljs-title">Gateway</span>;
 
-// 打印在线client_id列表
+<span class="hljs-comment">// 打印在线client_id列表</span>
 var_export(Gateway::getOnlineStatus());
-</code></pre><p>打印出的数据类似如下：</p>
-<pre><code>array(
-    0=&gt;1001,
-    1=&gt;1009,
-    2=&gt;99,
+</code></pre>
+<p>打印出的数据类似如下：</p>
+<pre><code class="lang-php"><span class="hljs-keyword">array</span>(
+    <span class="hljs-number">0</span>=&gt;<span class="hljs-number">1001</span>,
+    <span class="hljs-number">1</span>=&gt;<span class="hljs-number">1009</span>,
+    <span class="hljs-number">2</span>=&gt;<span class="hljs-number">99</span>,
 );
 </code></pre>
+
                     
                     </section>
                 

@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="9.3.4" data-basepath=".." data-revision="1409848251958">
+    <div class="book"  data-level="9.3.4" data-basepath=".." data-revision="1409922715721">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -968,28 +968,30 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_1555">
+                    <section class="normal" id="section-gitbook_38">
                     
                         <h1 id="event-onclose">Event::onClose</h1>
 <p>(WorkerMan&gt;=2.0)</p>
 <h2 id="-">说明:</h2>
-<pre><code>void Gateway::onClose(int $client_id);
-</code></pre><p>客户端主动断开时触发。一般在这里做一些数据清理工作</p>
+<pre><code class="lang-php">void Gateway::onClose(int <span class="hljs-variable">$client_id</span>);
+</code></pre>
+<p>客户端主动断开时触发。一般在这里做一些数据清理工作</p>
 <h2 id="-">参数</h2>
 <p><code>$client_id</code></p>
 <p>全局唯一的client_id</p>
 <h2 id="-">范例</h2>
-<pre><code>/**
+<pre><code class="lang-php"><span class="hljs-comment">/**
  * 当用户断开连接时触发的方法
- * @param integer $client_id 断开连接的客户端client_id
- * @return void
- */
-public static function onClose($client_id)
-{
-   // 广播 xxx 退出了
-   GateWay::sendToAll(&quot;client[$client_id] logout\n&quot;));
+ *<span class="hljs-phpdoc"> @param</span> integer $client_id 断开连接的客户端client_id
+ *<span class="hljs-phpdoc"> @return</span> void
+ */</span>
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onClose</span><span class="hljs-params">(<span class="hljs-variable">$client_id</span>)</span>
+{</span>
+   <span class="hljs-comment">// 广播 xxx 退出了</span>
+   GateWay::sendToAll(<span class="hljs-string">"client[$client_id] logout\n"</span>));
 }
 </code></pre>
+
                     
                     </section>
                 

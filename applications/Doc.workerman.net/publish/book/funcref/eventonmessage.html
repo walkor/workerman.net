@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="9.3.3" data-basepath=".." data-revision="1409848251958">
+    <div class="book"  data-level="9.3.3" data-basepath=".." data-revision="1409922715721">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -968,38 +968,40 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_1547">
+                    <section class="normal" id="section-gitbook_30">
                     
                         <h1 id="event-onmessage">Event::onMessage</h1>
 <p>(WorkerMan&gt;=2.0)</p>
 <h2 id="-">说明:</h2>
-<pre><code>void Gateway::onMessage(int $client_id, string $recv_buffer);
-</code></pre><p>当收到一个完整的客户端请求时触发</p>
+<pre><code class="lang-php">void Gateway::onMessage(int <span class="hljs-variable">$client_id</span>, string <span class="hljs-variable">$recv_buffer</span>);
+</code></pre>
+<p>当收到一个完整的客户端请求时触发</p>
 <h2 id="-">参数</h2>
 <p><code>$client_id</code></p>
 <p>全局唯一的客户端</p>
 <p><code>$recv_buffer</code></p>
 <p>完整的客户端请求数据。</p>
 <h2 id="-">范例</h2>
-<pre><code>use \Lib\Gateway;
+<pre><code class="lang-php"><span class="hljs-keyword">use</span> \<span class="hljs-title">Lib</span>\<span class="hljs-title">Gateway</span>;
 
-class Event
-{
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Event</span>
+{</span>
 ...
-    /**
+    <span class="hljs-comment">/**
      * 有消息时触发该方法
-     * @param int $client_id 发消息的client_id
-     * @param string $message 消息
-     * @return void
-     */
-    public static function onMessage($client_id, $message)
-    {
-        // 群聊，转发请求给其它所有的客户端
-        return GateWay::sendToAll($message));
+     *<span class="hljs-phpdoc"> @param</span> int $client_id 发消息的client_id
+     *<span class="hljs-phpdoc"> @param</span> string $message 消息
+     *<span class="hljs-phpdoc"> @return</span> void
+     */</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onMessage</span><span class="hljs-params">(<span class="hljs-variable">$client_id</span>, <span class="hljs-variable">$message</span>)</span>
+    {</span>
+        <span class="hljs-comment">// 群聊，转发请求给其它所有的客户端</span>
+        <span class="hljs-keyword">return</span> GateWay::sendToAll(<span class="hljs-variable">$message</span>));
     }
 ...
 }
 </code></pre>
+
                     
                     </section>
                 

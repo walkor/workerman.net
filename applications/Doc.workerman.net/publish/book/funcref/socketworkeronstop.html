@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="9.1.4" data-basepath=".." data-revision="1409848251958">
+    <div class="book"  data-level="9.1.4" data-basepath=".." data-revision="1409922715721">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -968,13 +968,14 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_1564">
+                    <section class="normal" id="section-gitbook_47">
                     
                         <h1 id="socketworker-onstop">SocketWorker::onStop</h1>
 <p>(WorkerMan&gt;=2.0)  此方法不是必须实现的</p>
 <h2 id="-">说明:</h2>
-<pre><code>void SocketWorker::onStop(void)
-</code></pre><p>当子进程停止时触发，可以用来设置每个子进程停止即将退出时的工作，例如将内存中的数据保存到磁盘。</p>
+<pre><code class="lang-php">void SocketWorker::onStop(void)
+</code></pre>
+<p>当子进程停止时触发，可以用来设置每个子进程停止即将退出时的工作，例如将内存中的数据保存到磁盘。</p>
 <h2 id="-">注意</h2>
 <ul>
 <li>整个进程生命周期只触发一次onStop，只对子进程有效</li>
@@ -989,16 +990,17 @@
 <li>6、当运行workermand stop 或者 workermand restart时，所有进程会被重启</li>
 </ul>
 <h2 id="-">范例</h2>
-<pre><code>/**
+<pre><code class="lang-php"><span class="hljs-comment">/**
  * 进程停止时需要将数据写入磁盘
- * @see Man\Core.SocketWorker::onStop()
- */
-protected function onStop()
-{
-    // 将内存中的日志保存到磁盘(writeLogToDisk函数实现忽略)
-    $this-&gt;writeLogToDisk();
+ *<span class="hljs-phpdoc"> @see</span> Man\Core.SocketWorker::onStop()
+ */</span>
+<span class="hljs-keyword">protected</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onStop</span><span class="hljs-params">()</span>
+{</span>
+    <span class="hljs-comment">// 将内存中的日志保存到磁盘(writeLogToDisk函数实现忽略)</span>
+    <span class="hljs-variable">$this</span>-&gt;writeLogToDisk();
 }
 </code></pre>
+
                     
                     </section>
                 

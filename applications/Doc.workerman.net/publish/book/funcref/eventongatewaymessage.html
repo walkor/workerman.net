@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="9.3.2" data-basepath=".." data-revision="1409848251958">
+    <div class="book"  data-level="9.3.2" data-basepath=".." data-revision="1409922715721">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -968,13 +968,14 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_1546">
+                    <section class="normal" id="section-gitbook_29">
                     
                         <h1 id="event-ongatewaymessage">Event::onGatewayMessage</h1>
 <p>(WorkerMan&gt;=2.0)</p>
 <h2 id="-">说明:</h2>
-<pre><code>mixed Gateway::onGatewayMessage(string $recv_buffer);
-</code></pre><p>当Gateway进程收到数据的时候触发，其实就是Gateway进程的dealInput函数，用来判断TCP请求数据流中的请求边界。</p>
+<pre><code class="lang-php">mixed Gateway::onGatewayMessage(string <span class="hljs-variable">$recv_buffer</span>);
+</code></pre>
+<p>当Gateway进程收到数据的时候触发，其实就是Gateway进程的dealInput函数，用来判断TCP请求数据流中的请求边界。</p>
 <p>由于TCP是基于流的，服务端收到的数据可能是不完整的，也可能是多个请求连在一起（粘包），所以要通过这个函数区分请求边界。</p>
 <p>区分方法为根据协议约定去解析 <code>$recv_buffer</code>，如果<code>$recv_buffer</code>是一个完整的请求，则返回。如果不是一个完整的请求则返回<code>N</code>，即再接收<code>N</code>字节的数据。如果<code>$recv_buffer</code>不符合协议格式可以返回false，此时会主动断开与客户端的链接。</p>
 <h2 id="-">参数</h2>
@@ -993,39 +994,41 @@
 <h3 id="1-json-">1、自定义协议: json+回车</h3>
 <p><strong>Gateway.conf配置:</strong> preread_length=1，最小合法请求为<code>\n</code>，即一个回车字符，所以为1</p>
 <p><strong>协议样例:</strong>  <code>{&quot;module&quot;:&quot;user&quot;,&quot;action&quot;:&quot;getInfo&quot;}\n</code> ,其中<code>\n</code>代表回车字符</p>
-<pre><code>public function onGatewayMessage($recv_buffer)
-{
-    // 如果最后一个字符是\n代表数据读取完整，返回0
-    if($recv_buffer[strlen($recv_buffer)-1] === &quot;\n&quot;)
+<pre><code class="lang-php"><span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onGatewayMessage</span><span class="hljs-params">(<span class="hljs-variable">$recv_buffer</span>)</span>
+{</span>
+    <span class="hljs-comment">// 如果最后一个字符是\n代表数据读取完整，返回0</span>
+    <span class="hljs-keyword">if</span>(<span class="hljs-variable">$recv_buffer</span>[strlen(<span class="hljs-variable">$recv_buffer</span>)-<span class="hljs-number">1</span>] === <span class="hljs-string">"\n"</span>)
     {
-        return 0;
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
     }
 
-    // 说明还有请求数据没收到，但是由于不知道还有多少数据没收到，所以只能返回1，因为有可能下一个字符就是\n
-    return 1;
+    <span class="hljs-comment">// 说明还有请求数据没收到，但是由于不知道还有多少数据没收到，所以只能返回1，因为有可能下一个字符就是\n</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
 }
-</code></pre><h3 id="2-int-json">2、自定义协议: 首部四字节int+json</h3>
+</code></pre>
+<h3 id="2-int-json">2、自定义协议: 首部四字节int+json</h3>
 <p>其中首部四字节是一个pack的int，代表请求的数据长度</p>
 <p><strong>Gateway.conf配置:</strong> preread_length=4，最小合法请求可能为值为0的四字节int（一个空请求），所以设置为4</p>
 <p><strong>协议样例:</strong>  <code>****{&quot;module&quot;:&quot;user&quot;,&quot;action&quot;:&quot;getInfo&quot;}</code> ,其中<code>****</code>首部四字节int，由于是二进制，所以首部四字节看起来是乱码</p>
-<pre><code>public function onGatewayMessage($recv_buffer)
-{
-    // 接收到的数据长度
-    $recv_len = strlen($recv_buffer);
-    // 如果接收的长度还不够四字节，那么要等够四字节才能解包到请求长度
-    if($recv_len &lt; 4)
+<pre><code class="lang-php"><span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onGatewayMessage</span><span class="hljs-params">(<span class="hljs-variable">$recv_buffer</span>)</span>
+{</span>
+    <span class="hljs-comment">// 接收到的数据长度</span>
+    <span class="hljs-variable">$recv_len</span> = strlen(<span class="hljs-variable">$recv_buffer</span>);
+    <span class="hljs-comment">// 如果接收的长度还不够四字节，那么要等够四字节才能解包到请求长度</span>
+    <span class="hljs-keyword">if</span>(<span class="hljs-variable">$recv_len</span> &lt; <span class="hljs-number">4</span>)
     {
-        // 不够四字节，等够四字节
-        return 4 - $recv_len;
+        <span class="hljs-comment">// 不够四字节，等够四字节</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-number">4</span> - <span class="hljs-variable">$recv_len</span>;
     }
-    // 从请求数据头部解包出整体数据长度
-    $unpack_data = unpack(&#39;Ntotal_len&#39;, $recv_buffer);
-    $total_len = $unpack_data[&#39;total_len&#39;];
+    <span class="hljs-comment">// 从请求数据头部解包出整体数据长度</span>
+    <span class="hljs-variable">$unpack_data</span> = unpack(<span class="hljs-string">'Ntotal_len'</span>, <span class="hljs-variable">$recv_buffer</span>);
+    <span class="hljs-variable">$total_len</span> = <span class="hljs-variable">$unpack_data</span>[<span class="hljs-string">'total_len'</span>];
 
-    // 返回还差多少字节没有收到，这里可能返回0，代表请求接收完整
-    return $total_len - $recv_len;
+    <span class="hljs-comment">// 返回还差多少字节没有收到，这里可能返回0，代表请求接收完整</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-variable">$total_len</span> - <span class="hljs-variable">$recv_len</span>;
 }
-</code></pre><h3 id="3-http-">3、HTTP协议：</h3>
+</code></pre>
+<h3 id="3-http-">3、HTTP协议：</h3>
 <p>HTTP协议包含协议头与包体，二者直接使用\r\n\r\n分割，POST请求协议头中包含<code>Content-Length</code>代表包体的长度。</p>
 <p>请求样例:</p>
 <pre><code>GET / HTTP/1.1\r\n
@@ -1039,36 +1042,37 @@ Accept-Language: zh-CN,zh;q=0.8,en;q=0.6\r\n
 Cookie: uc_login_unique=1fe1b19668b1419d8c45a6ac738fed76;\r\n
 \r\n
 </code></pre><p><strong>Gateway.conf配置:</strong> preread_length=65535，由于HTTP协议是短链接的，即一个链接上只发一个请求，所以不会有多个请求连在一起的粘包现象，也就是说不会有读取越界的情况，所以预读长度可以设置为很大的值。短链接请求中主要任务就是判断读取的数据是否是一个完整的请求</p>
-<pre><code>public function onGatewayMessage($recv_buffer)
-{
-    // 协议头不完整，再读一些数据
-    if(!strpos($recv_buffer, &quot;\r\n\r\n&quot;))
+<pre><code class="lang-php"><span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onGatewayMessage</span><span class="hljs-params">(<span class="hljs-variable">$recv_buffer</span>)</span>
+{</span>
+    <span class="hljs-comment">// 协议头不完整，再读一些数据</span>
+    <span class="hljs-keyword">if</span>(!strpos(<span class="hljs-variable">$recv_buffer</span>, <span class="hljs-string">"\r\n\r\n"</span>))
     {
-        return 65535;
+        <span class="hljs-keyword">return</span> <span class="hljs-number">65535</span>;
     }
 
-    // GET请求只有协议头，POST请求还要读包体，包体长度在协议头中的Content-Length中存储
-    if(strpos($recv_buffer, &quot;POST&quot;))
+    <span class="hljs-comment">// GET请求只有协议头，POST请求还要读包体，包体长度在协议头中的Content-Length中存储</span>
+    <span class="hljs-keyword">if</span>(strpos(<span class="hljs-variable">$recv_buffer</span>, <span class="hljs-string">"POST"</span>))
     {
-        // 找Content-Length
-        $match = array();
-        if(preg_match(&quot;/\r\nContent-Length: ?(\d*)\r\n/&quot;, $recv_buffer, $match))
+        <span class="hljs-comment">// 找Content-Length</span>
+        <span class="hljs-variable">$match</span> = <span class="hljs-keyword">array</span>();
+        <span class="hljs-keyword">if</span>(preg_match(<span class="hljs-string">"/\r\nContent-Length: ?(\d*)\r\n/"</span>, <span class="hljs-variable">$recv_buffer</span>, <span class="hljs-variable">$match</span>))
         {
-            $content_lenght = $match[1];
+            <span class="hljs-variable">$content_lenght</span> = <span class="hljs-variable">$match</span>[<span class="hljs-number">1</span>];
         }
-        else
+        <span class="hljs-keyword">else</span>
         {
-            return 0;
+            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
         }
-        // 看包体长度是否符合
-        $tmp = explode(&quot;\r\n\r\n&quot;, $recv_buffer, 2);
-        $remain_length = $content_lenght - strlen($tmp[1]);
-        return $remain_length &gt;= 0 ? $remain_length : 0;
+        <span class="hljs-comment">// 看包体长度是否符合</span>
+        <span class="hljs-variable">$tmp</span> = explode(<span class="hljs-string">"\r\n\r\n"</span>, <span class="hljs-variable">$recv_buffer</span>, <span class="hljs-number">2</span>);
+        <span class="hljs-variable">$remain_length</span> = <span class="hljs-variable">$content_lenght</span> - strlen(<span class="hljs-variable">$tmp</span>[<span class="hljs-number">1</span>]);
+        <span class="hljs-keyword">return</span> <span class="hljs-variable">$remain_length</span> &gt;= <span class="hljs-number">0</span> ? <span class="hljs-variable">$remain_length</span> : <span class="hljs-number">0</span>;
     }
 
-    return 0;
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
 }
 </code></pre>
+
                     
                     </section>
                 

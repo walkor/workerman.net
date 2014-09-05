@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="7.2" data-basepath=".." data-revision="1409848251958">
+    <div class="book"  data-level="7.2" data-basepath=".." data-revision="1409922715721">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -968,7 +968,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_1540">
+                    <section class="normal" id="section-gitbook_23">
                     
                         <h1 id="-dealinput-dealprocess-">实现dealInput/dealProcess接口</h1>
 <h2 id="dealinput">dealInput</h2>
@@ -981,105 +981,109 @@
 <p>如 <code>{&quot;module&quot;:&quot;user&quot;,&quot;action&quot;:&quot;getInfo&quot;}\n</code>是一个请求，我们要能正确读取它，需要以下步骤：</p>
 <p>1、设置配置文件preread_length=1，代表一个请求开始时，预先读取的数据1字节长度。为什么是1字节，因为协议规定以<code>\n</code>标记一个请求结束，有可能客户端就只发来一个<code>\n</code>字符,我们需要处理这种情况，固设置请求到来时先预读一个字符。</p>
 <p>2、创建applications/MyApp/MyApp.php并实现dealInput/dealProcess如下</p>
-<pre><code>class MyApp extends Man\Core\SocketWorker
-{
-    public function dealInput($recv_buffer)
-    {
-        // 如果最后一个字符是\n代表数据读取完整，返回0
-        if($recv_buffer[strlen($recv_buffer)-1] === &quot;\n&quot;)
+<pre><code class="lang-php"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyApp</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Man</span>\<span class="hljs-title">Core</span>\<span class="hljs-title">SocketWorker</span>
+{</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">dealInput</span><span class="hljs-params">(<span class="hljs-variable">$recv_buffer</span>)</span>
+    {</span>
+        <span class="hljs-comment">// 如果最后一个字符是\n代表数据读取完整，返回0</span>
+        <span class="hljs-keyword">if</span>(<span class="hljs-variable">$recv_buffer</span>[strlen(<span class="hljs-variable">$recv_buffer</span>)-<span class="hljs-number">1</span>] === <span class="hljs-string">"\n"</span>)
         {
-            return 0;
+            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
         }
 
-        // 说明还有请求数据没收到，但是由于不知道还有多少数据没收到，所以只能返回1，因为有可能下一个字符就是\n
-        return 1;
+        <span class="hljs-comment">// 说明还有请求数据没收到，但是由于不知道还有多少数据没收到，所以只能返回1，因为有可能下一个字符就是\n</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
     }
 
-    public function dealProcess($recv_buffer)
-    {
-        // 去除末尾\n，得到完整json字符串
-        $json_str = trim($recv_buffer);
-        // 根据json字符长解析出$req_data
-        $req_data = json_decode(, true);
-        // 根据$req_data的值进入不同的处理逻辑
-        // ...............
-    }
-}
-</code></pre><h5 id="-pack-int-json-">实例二、首部四个字节网络字节序pack的int+json数据格式</h5>
-<p>如客户端这样打包</p>
-<pre><code>// 请求的包体
-$req_data = &#39;{&quot;module&quot;:&quot;user&quot;,&quot;action&quot;:&quot;getInfo&quot;}&#39;;
-// 整个请求数据长度，首部4字节+包体
-$total_len = pack(&#39;N&#39;, strlen($req_data)+4)
-$req_package =  $total_len . $req_data;
-</code></pre><p>得到类似这样的请求数据<code>****{&quot;module&quot;:&quot;user&quot;,&quot;action&quot;:&quot;getInfo&quot;}</code>，由于首部四个字节是pack的二进制数据，所以首部看起来是乱码。要想正确处理这样的请求，需要如下步骤:</p>
-<p>1、设置配置文件中preread_length=4，因为通过请求头部的四个字节，我们能获取到整个数据包的长度，进而能够区分出请求的边界。</p>
-<p>2、创建applications/MyApp/MyApp.php并实现dealInput/dealProcess如下</p>
-<pre><code>class MyApp extends Man\Core\SocketWorker
-{
-    public function dealInput($recv_buffer)
-    {
-        // 接收到的数据长度
-        $recv_len = strlen($recv_buffer);
-        // 如果接收的长度还不够四字节，那么要等够四字节才能解包到请求长度
-        if($recv_len &lt; 4)
-        {
-            // 不够四字节，等够四字节
-            return 4 - $recv_len;
-        }
-        // 从请求数据头部解包出整体数据长度
-        $unpack_data = unpack(&#39;Ntotal_len&#39;, $recv_buffer);
-        $total_len = $unpack_data[&#39;total_len&#39;];
-
-        // 返回还差多少字节没有收到，这里可能返回0，代表请求接收完整
-        return $total_len - $recv_len;
-    }
-
-    public function dealProcess($recv_buffer)
-    {
-        // 去掉首部四个字节，得到完整json字符串
-        $json_str = substr($recv_buffer, 4);
-        // 根据json字符长解析出$req_data
-        $req_data = json_decode($json_str, true);
-        // 根据$req_data的值进入不同的处理逻辑
-        // ...............
-    }
-}
-</code></pre><h4 id="-10-0-json">实例三、首部固定10个字节长度用来保存整个数据包长度，位数不够补0，数据格式为json</h4>
-<p>请求数据类似 <code>0000000046{&quot;module&quot;:&quot;user&quot;,&quot;action&quot;:&quot;getInfo&quot;}</code>,其中<code>0000000046</code>代表整个请求<code>0000000046{&quot;module&quot;:&quot;user&quot;,&quot;action&quot;:&quot;getInfo&quot;}</code>的长度。要想正确处理这这样的请求需要如下步骤：</p>
-<p>1、设置preread_length=10，因为要完整读取前10个字节才能获取整个数据包的长度。</p>
-<p>2、创建applications/MyApp/MyApp.php并实现dealInput/dealProcess如下</p>
-<pre><code>class MyApp extends Man\Core\SocketWorker
-{
-    public function dealInput($recv_buffer)
-    {
-       // 接收到的数据长度
-        $recv_len = strlen($recv_buffer);
-        // 如果接收的长度还不够十字节，那么要等够十字节才能解包到请求长度
-        if($recv_len &lt; 10)
-        {
-            // 不够十字节，等够十字节
-            return 10 - $recv_len;
-        }
-        // 从请求数据头部解包出整体数据长度
-        $json_str = substr($recv_buffer, 0, 10);
-        $total_len = base_convert($json_str, 10, 10);
-
-        // 返回还差多少字节没有收到，这里可能返回0，代表请求接收完整
-        return $total_len - $recv_len;
-    }
-
-    public function dealProcess($recv_buffer)
-    {
-        // 去掉首部十个字节，得到完整json字符串
-        $json_str = substr($recv_buffer, 10);
-        // 根据json字符长解析出$req_data
-        $req_data = json_decode($json_str, true);
-        // 根据$req_data的值进入不同的处理逻辑
-        // ...............
+    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">dealProcess</span><span class="hljs-params">(<span class="hljs-variable">$recv_buffer</span>)</span>
+    {</span>
+        <span class="hljs-comment">// 去除末尾\n，得到完整json字符串</span>
+        <span class="hljs-variable">$json_str</span> = trim(<span class="hljs-variable">$recv_buffer</span>);
+        <span class="hljs-comment">// 根据json字符长解析出$req_data</span>
+        <span class="hljs-variable">$req_data</span> = json_decode(, <span class="hljs-keyword">true</span>);
+        <span class="hljs-comment">// 根据$req_data的值进入不同的处理逻辑</span>
+        <span class="hljs-comment">// ...............</span>
     }
 }
 </code></pre>
+<h5 id="-pack-int-json-">实例二、首部四个字节网络字节序pack的int+json数据格式</h5>
+<p>如客户端这样打包</p>
+<pre><code class="lang-php"><span class="hljs-comment">// 请求的包体</span>
+<span class="hljs-variable">$req_data</span> = <span class="hljs-string">'{"module":"user","action":"getInfo"}'</span>;
+<span class="hljs-comment">// 整个请求数据长度，首部4字节+包体</span>
+<span class="hljs-variable">$total_len</span> = pack(<span class="hljs-string">'N'</span>, strlen(<span class="hljs-variable">$req_data</span>)+<span class="hljs-number">4</span>)
+<span class="hljs-variable">$req_package</span> =  <span class="hljs-variable">$total_len</span> . <span class="hljs-variable">$req_data</span>;
+</code></pre>
+<p>得到类似这样的请求数据<code>****{&quot;module&quot;:&quot;user&quot;,&quot;action&quot;:&quot;getInfo&quot;}</code>，由于首部四个字节是pack的二进制数据，所以首部看起来是乱码。要想正确处理这样的请求，需要如下步骤:</p>
+<p>1、设置配置文件中preread_length=4，因为通过请求头部的四个字节，我们能获取到整个数据包的长度，进而能够区分出请求的边界。</p>
+<p>2、创建applications/MyApp/MyApp.php并实现dealInput/dealProcess如下</p>
+<pre><code class="lang-php"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyApp</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Man</span>\<span class="hljs-title">Core</span>\<span class="hljs-title">SocketWorker</span>
+{</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">dealInput</span><span class="hljs-params">(<span class="hljs-variable">$recv_buffer</span>)</span>
+    {</span>
+        <span class="hljs-comment">// 接收到的数据长度</span>
+        <span class="hljs-variable">$recv_len</span> = strlen(<span class="hljs-variable">$recv_buffer</span>);
+        <span class="hljs-comment">// 如果接收的长度还不够四字节，那么要等够四字节才能解包到请求长度</span>
+        <span class="hljs-keyword">if</span>(<span class="hljs-variable">$recv_len</span> &lt; <span class="hljs-number">4</span>)
+        {
+            <span class="hljs-comment">// 不够四字节，等够四字节</span>
+            <span class="hljs-keyword">return</span> <span class="hljs-number">4</span> - <span class="hljs-variable">$recv_len</span>;
+        }
+        <span class="hljs-comment">// 从请求数据头部解包出整体数据长度</span>
+        <span class="hljs-variable">$unpack_data</span> = unpack(<span class="hljs-string">'Ntotal_len'</span>, <span class="hljs-variable">$recv_buffer</span>);
+        <span class="hljs-variable">$total_len</span> = <span class="hljs-variable">$unpack_data</span>[<span class="hljs-string">'total_len'</span>];
+
+        <span class="hljs-comment">// 返回还差多少字节没有收到，这里可能返回0，代表请求接收完整</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-variable">$total_len</span> - <span class="hljs-variable">$recv_len</span>;
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">dealProcess</span><span class="hljs-params">(<span class="hljs-variable">$recv_buffer</span>)</span>
+    {</span>
+        <span class="hljs-comment">// 去掉首部四个字节，得到完整json字符串</span>
+        <span class="hljs-variable">$json_str</span> = substr(<span class="hljs-variable">$recv_buffer</span>, <span class="hljs-number">4</span>);
+        <span class="hljs-comment">// 根据json字符长解析出$req_data</span>
+        <span class="hljs-variable">$req_data</span> = json_decode(<span class="hljs-variable">$json_str</span>, <span class="hljs-keyword">true</span>);
+        <span class="hljs-comment">// 根据$req_data的值进入不同的处理逻辑</span>
+        <span class="hljs-comment">// ...............</span>
+    }
+}
+</code></pre>
+<h4 id="-10-0-json">实例三、首部固定10个字节长度用来保存整个数据包长度，位数不够补0，数据格式为json</h4>
+<p>请求数据类似 <code>0000000046{&quot;module&quot;:&quot;user&quot;,&quot;action&quot;:&quot;getInfo&quot;}</code>,其中<code>0000000046</code>代表整个请求<code>0000000046{&quot;module&quot;:&quot;user&quot;,&quot;action&quot;:&quot;getInfo&quot;}</code>的长度。要想正确处理这这样的请求需要如下步骤：</p>
+<p>1、设置preread_length=10，因为要完整读取前10个字节才能获取整个数据包的长度。</p>
+<p>2、创建applications/MyApp/MyApp.php并实现dealInput/dealProcess如下</p>
+<pre><code class="lang-php"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyApp</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Man</span>\<span class="hljs-title">Core</span>\<span class="hljs-title">SocketWorker</span>
+{</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">dealInput</span><span class="hljs-params">(<span class="hljs-variable">$recv_buffer</span>)</span>
+    {</span>
+       <span class="hljs-comment">// 接收到的数据长度</span>
+        <span class="hljs-variable">$recv_len</span> = strlen(<span class="hljs-variable">$recv_buffer</span>);
+        <span class="hljs-comment">// 如果接收的长度还不够十字节，那么要等够十字节才能解包到请求长度</span>
+        <span class="hljs-keyword">if</span>(<span class="hljs-variable">$recv_len</span> &lt; <span class="hljs-number">10</span>)
+        {
+            <span class="hljs-comment">// 不够十字节，等够十字节</span>
+            <span class="hljs-keyword">return</span> <span class="hljs-number">10</span> - <span class="hljs-variable">$recv_len</span>;
+        }
+        <span class="hljs-comment">// 从请求数据头部解包出整体数据长度</span>
+        <span class="hljs-variable">$json_str</span> = substr(<span class="hljs-variable">$recv_buffer</span>, <span class="hljs-number">0</span>, <span class="hljs-number">10</span>);
+        <span class="hljs-variable">$total_len</span> = base_convert(<span class="hljs-variable">$json_str</span>, <span class="hljs-number">10</span>, <span class="hljs-number">10</span>);
+
+        <span class="hljs-comment">// 返回还差多少字节没有收到，这里可能返回0，代表请求接收完整</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-variable">$total_len</span> - <span class="hljs-variable">$recv_len</span>;
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">dealProcess</span><span class="hljs-params">(<span class="hljs-variable">$recv_buffer</span>)</span>
+    {</span>
+        <span class="hljs-comment">// 去掉首部十个字节，得到完整json字符串</span>
+        <span class="hljs-variable">$json_str</span> = substr(<span class="hljs-variable">$recv_buffer</span>, <span class="hljs-number">10</span>);
+        <span class="hljs-comment">// 根据json字符长解析出$req_data</span>
+        <span class="hljs-variable">$req_data</span> = json_decode(<span class="hljs-variable">$json_str</span>, <span class="hljs-keyword">true</span>);
+        <span class="hljs-comment">// 根据$req_data的值进入不同的处理逻辑</span>
+        <span class="hljs-comment">// ...............</span>
+    }
+}
+</code></pre>
+
                     
                     </section>
                 

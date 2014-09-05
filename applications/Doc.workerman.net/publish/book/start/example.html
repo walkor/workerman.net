@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="7.4" data-basepath=".." data-revision="1409848251958">
+    <div class="book"  data-level="7.4" data-basepath=".." data-revision="1409922715721">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -968,7 +968,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_1572">
+                    <section class="normal" id="section-gitbook_55">
                     
                         <h1 id="-">应用开发实例（提供服务器信息）</h1>
 <h3 id="-">本示例功能</h3>
@@ -987,49 +987,50 @@
 <p>1、订制协议
 由于需要使用telnet客户端，则协议应该是 文本+回车</p>
 <p>2、建立一个文件<code>applications/EchoService/EchoService.php</code>并实现dealInput、dealProcess如下</p>
-<pre><code>&lt;?php
-class EchoService extends \Man\Core\SocketWorker
-{
-   /**
+<pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">EchoService</span> <span class="hljs-keyword">extends</span> \<span class="hljs-title">Man</span>\<span class="hljs-title">Core</span>\<span class="hljs-title">SocketWorker</span>
+{</span>
+   <span class="hljs-comment">/**
     * 判断telnet客户端发来的数据是否接收完整
-    */
-   public function dealInput($recv_buffer)
-   {
-        // 根据协议,判断最后一个字符是不是回车 \n
-        if($recv_buffer[strlen($recv_buffer)-1] != &quot;\n&quot;)
+    */</span>
+   <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">dealInput</span><span class="hljs-params">(<span class="hljs-variable">$recv_buffer</span>)</span>
+   {</span>
+        <span class="hljs-comment">// 根据协议,判断最后一个字符是不是回车 \n</span>
+        <span class="hljs-keyword">if</span>(<span class="hljs-variable">$recv_buffer</span>[strlen(<span class="hljs-variable">$recv_buffer</span>)-<span class="hljs-number">1</span>] != <span class="hljs-string">"\n"</span>)
         {
-            // 不是回车返回1告诉workerman我还需要再读一个字符
-            return 1;
+            <span class="hljs-comment">// 不是回车返回1告诉workerman我还需要再读一个字符</span>
+            <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
         }
-        // 告诉workerman数据完整了
-        return 0;
+        <span class="hljs-comment">// 告诉workerman数据完整了</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
    }
 
-   /**
+   <span class="hljs-comment">/**
     * 处理业务逻辑，这里只是按照telnet客户端发来的命令返回对应的数据
-    */
-   public function dealProcess($recv_buffer)
-   {
-        // 判断telnet客户端发来的是什么
-        $cmd = trim($recv_buffer);
-        switch($cmd)
+    */</span>
+   <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">dealProcess</span><span class="hljs-params">(<span class="hljs-variable">$recv_buffer</span>)</span>
+   {</span>
+        <span class="hljs-comment">// 判断telnet客户端发来的是什么</span>
+        <span class="hljs-variable">$cmd</span> = trim(<span class="hljs-variable">$recv_buffer</span>);
+        <span class="hljs-keyword">switch</span>(<span class="hljs-variable">$cmd</span>)
         {
-            // 获得服务器的日期
-            case &#39;date&#39;:
-            return $this-&gt;sendToClient(date(&#39;Y-m-d H:i:s&#39;).&quot;\n&quot;);
-            // 获得服务器的负载
-            case &#39;load&#39;:
-            return $this-&gt;sendToClient(var_export(sys_getloadavg(), true).&quot;\n&quot;);
-            case &#39;quit&#39;:
-            return $this-&gt;closeClient($this-&gt;currentDealFd);
-            default:
-            return $this-&gt;sendToClient(&quot;unknown cmd\n&quot;);
+            <span class="hljs-comment">// 获得服务器的日期</span>
+            <span class="hljs-keyword">case</span> <span class="hljs-string">'date'</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-variable">$this</span>-&gt;sendToClient(date(<span class="hljs-string">'Y-m-d H:i:s'</span>).<span class="hljs-string">"\n"</span>);
+            <span class="hljs-comment">// 获得服务器的负载</span>
+            <span class="hljs-keyword">case</span> <span class="hljs-string">'load'</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-variable">$this</span>-&gt;sendToClient(var_export(sys_getloadavg(), <span class="hljs-keyword">true</span>).<span class="hljs-string">"\n"</span>);
+            <span class="hljs-keyword">case</span> <span class="hljs-string">'quit'</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-variable">$this</span>-&gt;closeClient(<span class="hljs-variable">$this</span>-&gt;currentDealFd);
+            <span class="hljs-keyword">default</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-variable">$this</span>-&gt;sendToClient(<span class="hljs-string">"unknown cmd\n"</span>);
         }
    }
 }
-</code></pre><p>3、配置与启动
+</code></pre>
+<p>3、配置与启动
 建立配置文件 <code>workerman/conf/conf.d/EchoService.conf</code>,内容如下</p>
-<pre><code>;监听ip及端口
+<pre><code class="lang-in">;监听ip及端口
 ;进程入口文件
 worker_file = ../applications/EchoService/EchoService.php
 ;监听的端口
@@ -1042,7 +1043,8 @@ start_workers=4
 user=root
 ;预读长度，由于协议是 文本+回车 ，最小请求为 回车1个字符，这里设置为1
 preread_length=1
-</code></pre><p>启动workerman 运行 <code>./workerman/bin/workermand start</code></p>
+</code></pre>
+<p>启动workerman 运行 <code>./workerman/bin/workermand start</code></p>
 <p>4、测试（以telnet作为客户端）
 运行 telnet</p>
 <pre><code>telnet 127.0.0.1 8181
@@ -1061,30 +1063,31 @@ quit
 Connection closed by foreign host.
 </code></pre><h3 id="php-">php客户端</h3>
 <p>一般我们都是通过php去获取数据，就像在php中读取mysql数据一样。在php调用EchoService服务如下：</p>
-<pre><code>&lt;?php
-// 建立与服务端的链接
-$socket = stream_socket_client(&quot;tcp://127.0.0.1:8181&quot;, $err_no, $err_msg);
-if(!$socket)
+<pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
+<span class="hljs-comment">// 建立与服务端的链接</span>
+<span class="hljs-variable">$socket</span> = stream_socket_client(<span class="hljs-string">"tcp://127.0.0.1:8181"</span>, <span class="hljs-variable">$err_no</span>, <span class="hljs-variable">$err_msg</span>);
+<span class="hljs-keyword">if</span>(!<span class="hljs-variable">$socket</span>)
 {
-   exit($err_msg);
+   <span class="hljs-keyword">exit</span>(<span class="hljs-variable">$err_msg</span>);
 }
 
-// 设置为阻塞模式
-stream_set_blocking($socket, true);
+<span class="hljs-comment">// 设置为阻塞模式</span>
+stream_set_blocking(<span class="hljs-variable">$socket</span>, <span class="hljs-keyword">true</span>);
 
-// 发送date命令
-stream_socket_sendto($socket, &quot;date\n&quot;);
-// 读取服务端返回的数据
-echo stream_socket_recvfrom($socket, 65535);
+<span class="hljs-comment">// 发送date命令</span>
+stream_socket_sendto(<span class="hljs-variable">$socket</span>, <span class="hljs-string">"date\n"</span>);
+<span class="hljs-comment">// 读取服务端返回的数据</span>
+<span class="hljs-keyword">echo</span> stream_socket_recvfrom(<span class="hljs-variable">$socket</span>, <span class="hljs-number">65535</span>);
 
-// 发送load命令
-stream_socket_sendto($socket, &quot;load\n&quot;);
-// 读取服务端返回的数据
-echo stream_socket_recvfrom($socket, 65535);
+<span class="hljs-comment">// 发送load命令</span>
+stream_socket_sendto(<span class="hljs-variable">$socket</span>, <span class="hljs-string">"load\n"</span>);
+<span class="hljs-comment">// 读取服务端返回的数据</span>
+<span class="hljs-keyword">echo</span> stream_socket_recvfrom(<span class="hljs-variable">$socket</span>, <span class="hljs-number">65535</span>);
 
-// 关闭链接
-fclose($socket);
-</code></pre><h3 id="-">说明</h3>
+<span class="hljs-comment">// 关闭链接</span>
+fclose(<span class="hljs-variable">$socket</span>);
+</code></pre>
+<h3 id="-">说明</h3>
 <p>本示例是一个简单的测试示例，是一个长链接应用（即telnet链接后通过这个链接发送多个请求），由于不需要telnet客户端之间传递数据，所有使用基本开发流程开发即可</p>
 <p>如果是复杂的长链接应用，例如需要客户端之间通讯，建议使用Gateway/Worker开发流程，能够极大的减少开发工作量。例如<code>applications/Demo</code>是一个基于Gateway/Worker模型开发的聊天示例，支持群聊私聊，客户端同样是telnet</p>
 
