@@ -2,7 +2,7 @@
 (WorkerMan>=2.1.3)
 
 ## 说明:
-```
+```php
 void Gateway::sendToCurrentClient(string $send_buffer);
 ```
 
@@ -15,7 +15,7 @@ void Gateway::sendToCurrentClient(string $send_buffer);
 要发送的数据（可能是二进制数据）
 
 ## 范例
-```
+```php
 use \Lib\Gateway;
 class Event
 {
