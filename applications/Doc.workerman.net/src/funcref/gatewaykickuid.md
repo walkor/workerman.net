@@ -2,7 +2,7 @@
 (WorkerMan>=2.1.3)
 
 ## 说明:
-```
+```php
 void Gateway::kickClient(int $client_id);
 ```
 
@@ -16,7 +16,7 @@ void Gateway::kickClient(int $client_id);
 全局唯一标识客户端连接的id
 
 ## 范例
-```
+```php
 use \Lib\Gateway;
 
 class Event
