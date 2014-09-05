@@ -2,7 +2,7 @@
 (WorkerMan>=2.0)
 
 ## 说明:
-```
+```php
 mixed SocketWorker::dealInput(string $recv_buffer)
 ```
 
@@ -33,7 +33,7 @@ mixed SocketWorker::dealInput(string $recv_buffer)
 **conf配置:** preread_length=1，最小合法请求为```\n```，即一个回车字符，所以为1
 
 **协议样例:**  ```{"module":"user","action":"getInfo"}\n``` ,其中```\n```代表回车字符
-```
+```php
 public function dealInput($recv_buffer)
 {
     // 如果最后一个字符是\n代表数据读取完整，返回0
@@ -54,7 +54,7 @@ public function dealInput($recv_buffer)
 **conf配置:** preread_length=4，最小合法请求可能为值为0的四字节int（一个空请求），所以设置为4
 
 **协议样例:**  ``` ****{"module":"user","action":"getInfo"}``` ,其中``` **** ```首部四字节int，由于是二进制，所以首部四字节看起来是乱码
-```
+```php
 public function dealInput($recv_buffer)
 {
     // 接收到的数据长度
@@ -95,7 +95,7 @@ Cookie: uc_login_unique=1fe1b19668b1419d8c45a6ac738fed76;\r\n
 
 **conf配置:** preread_length=65535，由于HTTP协议是短链接的，即一个链接上只发一个请求，所以不会有多个请求连在一起的粘包现象，也就是说不会有读取越界的情况，所以预读长度可以设置为很大的值。短链接请求中主要任务就是判断读取的数据是否是一个完整的请求
 
-```
+```php
 public function dealInput($recv_buffer)
 {
     // 协议头不完整，再读一些数据
