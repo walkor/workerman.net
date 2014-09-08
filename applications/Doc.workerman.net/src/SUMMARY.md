@@ -1,6 +1,5 @@
 # Summary
 
-* [序言](README.md)
 * [版权信息](license/README.md)
 * [WorkerMan手册](manual/README.md)
    * [序言](manual/preface.md)
