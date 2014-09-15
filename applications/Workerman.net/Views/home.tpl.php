@@ -4,7 +4,7 @@
 			什么是Workerman
 		</h2>
 		<p class="f14">
-			Workerman是一款<strong style="c1">开源</strong>的<strong style="c2">高性能</strong>的<strong style="c3">PHP socket 服务器框架</strong>。已经被多家公司用于移动通讯、手游服务端、网络游戏服务器、聊天室服务器、硬件通讯服务器、智能家居等服务端的开发。
+			Workerman是一款<strong class="c1">开源</strong>的<strong class="c2">高性能</strong>的<strong class="c3">PHP socket 服务器框架</strong>。已经被多家公司用于移动通讯、手游服务端、网络游戏服务器、聊天室服务器、硬件通讯服务器、智能家居等服务端的开发。
 			只要会PHP，你就可以基于Workerman轻而易举的开发出你想要的网络应用，不必再为PHP Socket底层开发而烦恼。<a class="btn" target="_blank" href="/workerman">查看更多 »</a>
 		</p>
 		<table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table>
@@ -174,7 +174,7 @@
 		</div>
 	</div>
 	<div class="col-md-5 column">
-		<h3>相关链接</h3>
+		<h4>相关链接</h4>
 		<ul>
 			<li>
 				<a href="https://github.com/walkor/web-msg-sender">Web消息实时推送</a>
@@ -183,9 +183,9 @@
 				<a href="https://github.com/walkor/workerman-JsonRpc">JSON RPC</a>
 			</li>
 		</ul>
-		<h3>
+		<h4>
 			最近更新
-		</h3>
+		</h4>
 		<ul>
 			<li>
 				<a href="http://www.workerman.net/workerman-chat">2014-08-30 workerman-chat 聊天室支持分房间等功能</a>
