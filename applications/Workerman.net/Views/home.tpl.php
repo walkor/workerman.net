@@ -4,7 +4,7 @@
 			什么是Workerman
 		</h2>
 		<p class="f14">
-			Workerman是一款开源的<strong>高性能</strong>的<strong>PHP socket 服务器框架</strong>。已经被多家公司用于移动通讯、手游服务端、网络游戏服务器、聊天室服务器、硬件通讯服务器、智能家居等服务端的开发。
+			Workerman是一款<strong style="c1">开源</strong>的<strong style="c2">高性能</strong>的<strong style="c3">PHP socket 服务器框架</strong>。已经被多家公司用于移动通讯、手游服务端、网络游戏服务器、聊天室服务器、硬件通讯服务器、智能家居等服务端的开发。
 			只要会PHP，你就可以基于Workerman轻而易举的开发出你想要的网络应用，不必再为PHP Socket底层开发而烦恼。<a class="btn" target="_blank" href="/workerman">查看更多 »</a>
 		</p>
 		<table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table>
@@ -17,11 +17,11 @@
 				<h3>Workerman支持的特性</h3>
 				<ol>
 					<li>纯PHP开发，多进程支持</li>
-					<li>支持TCP/UDP，单机可支持十万的并发TCP长连接</li>
-					<li>支持分布式部署，集群能够提供上百万甚至更高的并发TCP连接</li>
-					<li>支持libevent事件触发的网络库</li>
+					<li>支持TCP/UDP，单机可支持十万以上并发TCP长连接</li>
+					<li>支持分布式，集群能支持几百万甚至更高的并发TCP连接</li>
+					<li>支持libevent事件触发网络库</li>
 					<li>支持热更新及服务器平滑重启</li>
-					<li>支持守护进程化</li>
+					<li>支持守护进程化和统计监控模块</li>
 				</ol>
 				<a class="btn" target="_blank" href="/features">查看更多 »</a>
 			</div>
