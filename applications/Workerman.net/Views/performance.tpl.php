@@ -65,8 +65,8 @@
 </div>
 <div class="row clearfix">
 	<div class="col-md-12 column">
-	<h3>性能测试</h3>
-			<h4>测试环境：</h4>
+	<h2>性能测试</h2>
+			<h3>测试环境：</h3>
 <pre><code>系统：debian 6.0 64位
 内存：64G
 cpu：ntel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz （2颗物理cpu，6核心，2线程）
@@ -75,11 +75,11 @@ Workerman：开启200个Benchark进程
 业务：发送并返回hello字符串
 </code></pre>
 
-<h4>业务逻辑</h4>
-<code>HelloWorld</code>
-<h4>结果</h4>
+<h3>业务逻辑</h3>
+<code>客户端发送hello，服务端返回hello</code>
+<h3>结果</h3>
 
-<h5>普通PHP（版本5.3.10）压测</h5>
+<h4>普通PHP（版本5.3.10）压测</h4>
 <pre><code>短链接（每次请求完成后关闭链接，下次请求建立新的链接）:
     条件： 压测脚本开500个并发线程模拟500个并发用户，每个线程链接Workerman 10W次，每次链接发送1个请求
     结果： 吞吐量：1.9W/S ， cpu利用率：32%
@@ -91,7 +91,7 @@ Workerman：开启200个Benchark进程
 内存：每个进程内存稳定在6444K，无内存泄漏
 </code></pre>
 
-<h5>HHVM环境压测</h5>
+<h4>HHVM环境压测</h4>
 <pre><code>短链接（每次请求完成后关闭链接，下次请求建立新的链接）:
     条件： 压测脚本开1000个并发线程模拟1000个并发用户，每个线程链接Workerman 10W次，每次链接发送1个请求
     结果： 吞吐量：3.5W/S ， cpu利用率：35%
