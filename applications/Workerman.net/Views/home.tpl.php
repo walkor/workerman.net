@@ -182,6 +182,9 @@
 			<li>
 				<a href="https://github.com/walkor/workerman-JsonRpc">JSON RPC</a>
 			</li>
+			<li>
+				<a href="https://github.com/walkor/workerman-bench">压力测试代码及客户端脚本</a>
+			</li>
 		</ul>
 		<h4>
 			最近更新
