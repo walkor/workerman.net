@@ -175,6 +175,7 @@
 	</div>
 	<div class="col-md-5 column">
 		<h3>相关链接</h3>
+		<h4>其他资源</h4>
 		<ul>
 			<li>
 				<a href="https://github.com/walkor/web-msg-sender">Web消息实时推送</a>
