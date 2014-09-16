@@ -187,6 +187,24 @@
 				<a href="https://github.com/walkor/workerman-bench">压力测试代码及客户端脚本</a>
 			</li>
 		</ul>
+		<h4><a href="http://wenda.workerman.net">问答动态</a></h4>
+		<ul>
+			<li>
+				<a href="http://wenda.workerman.net/?/question/72">如何使用定时器功能，每间隔一段时间，给用户发送消息</a>
+			</li>
+			<li>
+				<a href="http://wenda.workerman.net/?/question/59">workerman的分布式问题</a>
+			</li>
+			<li>
+				<a href="http://wenda.workerman.net/?/question/45">把WORKERMAN作为游戏服务器端部署</a>
+			</li>
+			<li>
+				<a href="http://wenda.workerman.net/?/question/33">workerman支持mysql吗？</a>
+			</li>
+			<li>
+				<a href="http://wenda.workerman.net/?/question/29">workerman 工作流程，如进程，子进程，socket等关系，workerman是如何运作的？</a>
+			</li>
+		</ul>
 		<h4>
 			最近更新
 		</h4>
