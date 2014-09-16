@@ -244,14 +244,8 @@
 			</li>
 		</ul>
 		<h4 class="btl">更多帮助</h4>
-		<ul>
-			<li>
-				<a href="http://wenda.workerman.net" class="c2"><b>去社区提问</b></a>
-			</li>
-			<li>
-				<a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=37e8137d627745ff3f6d12238d0c36d94bd8a589d10d99082561550daeb43cfa"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="workerman技术交流群" title="workerman技术交流群"></a>
-			</li>
-		</ul>
+		<a href="http://wenda.workerman.net" class="c2"><b>去社区提问</b></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=37e8137d627745ff3f6d12238d0c36d94bd8a589d10d99082561550daeb43cfa"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="workerman技术交流群" title="workerman技术交流群"></a>
 		<div class="bd-ad"><?php global $bd_ad_250_250; echo $bd_ad_250_250;?></div>
 	</div>
 </div>
