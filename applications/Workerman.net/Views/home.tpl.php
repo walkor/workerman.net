@@ -205,15 +205,6 @@
 				<a href="http://wenda.workerman.net/?/question/29">workerman 工作流程，如进程，子进程，socket等关系，workerman是如何运作的？</a>
 			</li>
 		</ul>
-		<h4 class="btl">更多帮助</h4>
-		<ul>
-			<li>
-				<a href="https://wenda.workerman.net" class="c1">去社区提问</a>
-			</li>
-			<li>
-				<b class="c1">加入workerman技术交流群:&nbsp;257046084</b>
-			</li>
-		</ul>
 		<h4>
 			最近更新
 		</h4>
@@ -250,6 +241,15 @@
 			</li>
 			<li>
 				<a href="/workerman">2013-03-01 workerman 框架发布</a>
+			</li>
+		</ul>
+		<h4 class="btl">更多帮助</h4>
+		<ul>
+			<li>
+				<a href="http://wenda.workerman.net" class="c1"><b>去社区提问</b></a>
+			</li>
+			<li>
+				<b class="c1">workerman技术交流群:&nbsp;257046084</b>
 			</li>
 		</ul>
 		<div class="bd-ad"><?php global $bd_ad_250_250; echo $bd_ad_250_250;?></div>
