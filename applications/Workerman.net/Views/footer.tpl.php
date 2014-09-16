@@ -40,7 +40,7 @@
 						<ul class="sub">
 						<li>邮箱：worker-man@qq.com</li>
 						<li>QQ：2202055656</li>
-						<li>QQ群：257046084<br><a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=37e8137d627745ff3f6d12238d0c36d94bd8a589d10d99082561550daeb43cfa"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="PHP高级技术" title="PHP高级技术"></a></li>
+						<li>QQ群：257046084<br><a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=37e8137d627745ff3f6d12238d0c36d94bd8a589d10d99082561550daeb43cfa"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="workerman技术交流群" title="workerman技术交流群"></a></li>
 						</ul>
 					</div>
 					<div class="col-md-1 column">

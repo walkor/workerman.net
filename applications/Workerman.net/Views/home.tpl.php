@@ -246,10 +246,10 @@
 		<h4 class="btl">更多帮助</h4>
 		<ul>
 			<li>
-				<a href="http://wenda.workerman.net" class="c1"><b>去社区提问</b></a>
+				<a href="http://wenda.workerman.net" class="c2"><b>去社区提问</b></a>
 			</li>
 			<li>
-				<b class="c1">workerman技术交流群:&nbsp;257046084</b>
+				<a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=37e8137d627745ff3f6d12238d0c36d94bd8a589d10d99082561550daeb43cfa"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="workerman技术交流群" title="workerman技术交流群"></a>
 			</li>
 		</ul>
 		<div class="bd-ad"><?php global $bd_ad_250_250; echo $bd_ad_250_250;?></div>
