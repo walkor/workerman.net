@@ -209,4 +209,6 @@ p
 .btl{
 	border-bottom:1px solid #2f96b4;
     padding-bottom:8px;
+    font-size:bold;
+    margin-top:26px;
 }
