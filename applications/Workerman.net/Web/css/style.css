@@ -205,3 +205,8 @@ p
 	color:#D8582B;
     font-size:15px;
 }
+
+.btl{
+	border-bottom:1px solod #2f96b4;
+    padding-botom:8px;
+}
