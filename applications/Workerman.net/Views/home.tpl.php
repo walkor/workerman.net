@@ -187,7 +187,7 @@
 				<a href="https://github.com/walkor/workerman-bench">压力测试代码及客户端脚本</a>
 			</li>
 		</ul>
-		<h4><a href="http://wenda.workerman.net">问答动态</a></h4>
+		<h4>问答动态</h4>
 		<ul>
 			<li>
 				<a href="http://wenda.workerman.net/?/question/72">如何使用定时器功能，每间隔一段时间，给用户发送消息</a>
