@@ -55,6 +55,22 @@ file_put_contents('./applications/Chat/ping.data', \Protocols\JsonProtocol::enco
 
 **假如**生成一个内容为```{"type":"ping"}```的 json+回车 为协议的心跳检测数据，则可以直接新建一个文件，输入{"type":"ping"}然后后面打一个回车即可。
 
-## 技巧
-如果客户端也定时向服务端发送心跳检测，那么可以把这个检测数据当做服务端向客户端发送心跳检测的回应。也就是说客户端不用再针对服务端发来的心跳检测做回应，用客户端向服务端发送的心跳检测代替了（WorkerMan给客户端发送心跳检测后客户端发送的任意一个数据都会认为客户端回应了心跳检测）。当然需要客户端发送心跳检测的时间间隔与服务端Gateway.conf中```ping_interval*ping_not_response_limit```一致或者更小些。
+## 技巧1
+``` WorkerMan>=2.1.4 ```
 
+如果客户端有定时向服务端发送心跳检测，则服务端可以不必向客户端发送心跳检测，即利用客户端主动发送的数据判断客户端是否存活。这时我们需要设置```ping_data=```,例如如下配置
+```
+ping_interval = 10
+ping_not_response_limit = 2
+ping_data =
+```
+代表服务端不发送任何心跳数据，但是客户端如果 ```ping_interval*ping_not_response_limit=20``` 秒内连接上没有任何请求则断开连接
+
+## 技巧2
+服务端可以只发送心跳检测，而不要求客户端必须回应，则可以像下面这样设置（假设ping.data文件已经准备好）。
+```
+ping_interval = 10
+ping_not_response_limit = 0
+ping_data = ../applications/Chat/ping.data
+```
+其中```ping_not_response_limit = 0```代表服务端允许客户端不响应心跳，也就是通过TCP层面检测连接的状态，这样如果客户端因为断电等极端情况断开连接，可能需要等待TCP超时重传多次才能感应到连接断开，耗时较长。
