@@ -144,7 +144,7 @@ abstract class AbstractWorker
         {
             return array();
         }
-        return shm_get_var(Master::getShmId(), Master::STATUS_VAR_ID);
+        return @shm_get_var(Master::getShmId(), Master::STATUS_VAR_ID);
     }
     
     /**
@@ -229,7 +229,7 @@ abstract class AbstractWorker
                 return 'E_CORE_ERROR';
             case E_CORE_WARNING: // 32 //
                 return 'E_CORE_WARNING';
-            case E_CORE_ERROR: // 64 //
+            case E_COMPILE_ERROR: // 64 //
                 return 'E_COMPILE_ERROR';
             case E_CORE_WARNING: // 128 //
                 return 'E_COMPILE_WARNING';
@@ -260,7 +260,7 @@ abstract class AbstractWorker
     {
         $str = 'Worker['.get_class($this).']:'.$str;
         Lib\Log::add($str);
-        if($display && Lib\Config::get('workerman.debug') == 1)
+        if($display && Lib\Config::get('workerman.debug') == 1 && @posix_ttyname(STDOUT))
         {
             echo $str."\n";
         }
