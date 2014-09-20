@@ -22,11 +22,11 @@ Gateway进程负责接受客户端的连接和连接上发来的请求数据，�
 
 
 ### Gateway/Worker开发流程
-* [基本流程](/start/base.md)
-* [快速入门](/start/interface.md)
-* [配置与启动](/advanced/configrestart.md)
-* [Gateway/Worker开发示例](/start/gateway_example.md)
-* [Config/Store 配置](/start/store_config.md)
+* [基本流程](/start/base.html)
+* [快速入门](/start/interface.html)
+* [配置与启动](/advanced/configrestart.html)
+* [Gateway/Worker开发示例](/start/gateway_example.html)
+* [Config/Store 配置](/start/store_config.html)
 
 
 
