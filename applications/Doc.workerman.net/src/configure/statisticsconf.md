@@ -42,6 +42,7 @@ preread_length=65507
 3、StatisticsWeb.conf
 
 StatisticsWeb进程以HTTP协议对外提供查询服务，而数据的来源就是每台服务器上的StatisticsProvider进程提供的基础统计数据。也就是说StatisticsWeb进程可以将其它服务器上的统计数据通过运行在其它服务器上的StatisticsProvider进程汇总展示，从而实现分布式监控。
+
 ```ini
 ;进程入口文件
 worker_file = ./Common/WebServer.php

@@ -8,5 +8,5 @@
 ## 代码及配置
 
 * 统计监控系统代码位置在 applications/Statistics 下
-* 对应的配置为 workerman/conf/conf.d/下的 StatisticWeb.conf StatisticPrivoder.conf StatisitcWorker.conf
+* 对应的配置为 workerman/conf/conf.d/下的 StatisticWeb.conf StatisticPrivoder.conf StatisitcWorker.conf。配置说明见[Statistics统计模块配置](/configure/statisticsconf.html)
 

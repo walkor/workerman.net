@@ -33,3 +33,5 @@
 
 
 ###### 以上压测脚本与WorkerMan运行在同一台机器上
+
+**压力测试代码及脚本连接:** https://github.com/walkor/workerman-bench

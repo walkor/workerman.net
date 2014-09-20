@@ -1,10 +1,10 @@
 CACHE MANIFEST
-# Revision 1410970201750
+# Revision 1411210330797
 
 CACHE:
 faq/README.html
-faq/extension-install.html
 faq/debugging.html
+faq/extension-install.html
 index.html
 advanced/README.html
 advanced/configrestart.html
@@ -18,24 +18,24 @@ configure/filemonitorconf.html
 configure/mainconfig.html
 configure/monitorconf.html
 configure/statisticsconf.html
+continue/README.html
 debug/README.html
-debug/base_debug.html
 debug/strace.html
+debug/base_debug.html
 debug/tcpdump.html
+dev/README.html
 dev/configapp.html
 dev/dealinput.html
 dev/protocols.html
-continue/README.html
 devread/README.html
 funcref/gatewaysendtocurrentuid.html
 funcref/README.html
-dev/README.html
 funcref/eventongatewayconnect.html
 funcref/eventongatewaymessage.html
 funcref/eventonmessage.html
-funcref/eventphp.html
 funcref/gateway.html
 funcref/gatewaygetonlinestatus.html
+funcref/eventphp.html
 funcref/gatewayisonline.html
 funcref/gatewaykickcurrentuser.html
 funcref/gatewaykickuid.html
@@ -45,14 +45,14 @@ funcref/gatewaysendtouid.html
 funcref/how_to_work.html
 funcref/onstart.html
 funcref/session.html
-funcref/socketworkerdealinput.html
 funcref/socketworker.html
-funcref/socketworkeronreload.html
+funcref/socketworkerdealinput.html
 funcref/socketworkerdealprocess.html
-funcref/use_session.html
+funcref/socketworkeronreload.html
 funcref/socketworkeronstop.html
-license/README.html
+funcref/use_session.html
 funcref/what_is_session.html
+license/README.html
 manual/README.html
 manual/preface.html
 safety/README.html
@@ -63,8 +63,8 @@ start/commend.html
 start/developmentprocess.html
 start/directory.html
 start/environment.html
-start/base.html
 start/example.html
+start/base.html
 start/gateway_example.html
 start/gatewaydev.html
 start/getworkerman.html
@@ -74,6 +74,12 @@ start/namingconventions.html
 start/store_config.html
 start/systemprocess.html
 start/workerman.html
+statistics/README.html
+statistics/auth_check.html
+statistics/how_to_use.html
+statistics/principle.html
+statistics/statistics_feature.html
+statistics/what_is_statistics.html
 stresstest/README.html
 gitbook\app.js
 gitbook\fonts\fontawesome\FontAwesome.otf
