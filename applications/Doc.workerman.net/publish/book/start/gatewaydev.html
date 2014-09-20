@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="8" data-basepath=".." data-revision="1411210330795">
+    <div class="book"  data-level="8" data-basepath=".." data-revision="1411211008178">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -1084,7 +1084,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_216">
+                    <section class="normal" id="section-gitbook_162">
                     
                         <h1 id="-gateway-worker-">基于Gateway/Worker模型开发</h1>
 <p>Gateway/Worker模型一般用来开发长连接应用，例如聊天类、实时推送、即时游戏、与硬件实时通讯等。如果开发者需要开发这类应用，可以直接基于applications/Demo这个应用程序开发，applications/Demo是基于Gateway/Worker模型的一个基本应用框架。</p>
@@ -1101,6 +1101,14 @@
 <li>Worker进程是无状态的，即使单个请求因为业务出现致命错误也不会影响其他请求，更不会影响客户端连接</li>
 <li>由于Worker进程无状态，则可以平滑重启业务进程，做到不影响用户的情况下完成代码热更新</li>
 <li>由于Gateway进程和Worker进程是分开的，我们可以针对两种进程的负载情况动态扩容，甚至将Gateway Worker服务部署在多台服务器上，做到水平扩展</li>
+</ul>
+<h3 id="gateway-worker-">Gateway/Worker开发流程</h3>
+<ul>
+<li><a href="/start/base.md">基本流程</a></li>
+<li><a href="/start/interface.md">快速入门</a></li>
+<li><a href="/advanced/configrestart.md">配置与启动</a></li>
+<li><a href="/start/gateway_example.md">Gateway/Worker开发示例</a></li>
+<li><a href="/start/store_config.md">Config/Store 配置</a></li>
 </ul>
 
                     

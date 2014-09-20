@@ -21,5 +21,13 @@ Gateway进程负责接受客户端的连接和连接上发来的请求数据，�
 * 由于Gateway进程和Worker进程是分开的，我们可以针对两种进程的负载情况动态扩容，甚至将Gateway Worker服务部署在多台服务器上，做到水平扩展
 
 
+### Gateway/Worker开发流程
+* [基本流程](/start/base.md)
+* [快速入门](/start/interface.md)
+* [配置与启动](/advanced/configrestart.md)
+* [Gateway/Worker开发示例](/start/gateway_example.md)
+* [Config/Store 配置](/start/store_config.md)
+
+
 
 
