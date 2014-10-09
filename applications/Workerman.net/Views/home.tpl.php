@@ -17,8 +17,8 @@
 				<h3>Workerman支持的特性</h3>
 				<ol>
 					<li>纯PHP开发，多进程支持</li>
-					<li>支持TCP/UDP，单机可支持十万以上并发TCP长连接</li>
-					<li>支持分布式，集群能支持几百万甚至更高的并发TCP连接</li>
+					<li>支持TCP/UDP，单机可支持数十万以上并发TCP长连接</li>
+					<li>支持分布式，集群能支持数百万甚至更高的并发TCP连接</li>
 					<li>支持libevent事件触发网络库</li>
 					<li>支持热更新及服务器平滑重启</li>
 					<li>支持守护进程化和统计监控模块</li>
@@ -248,7 +248,7 @@
 			<li>
 				<a href="http://wenda.workerman.net" class="c2"><b>去社区提问</b></a>
 			</li>
-			<li><b class="c2">发邮件至&nbsp;walkor@workerman.com</b></li>
+			<li><b class="c2">发邮件至&nbsp;walkor@workerman.net</b></li>
 			<li>
 				<a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=37e8137d627745ff3f6d12238d0c36d94bd8a589d10d99082561550daeb43cfa"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="workerman技术交流群" title="workerman技术交流群"></a>
 			</li>
