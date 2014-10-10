@@ -38,7 +38,7 @@
 					<div class="col-md-3 column">
 						<b>联系我们</b>
 						<ul class="sub">
-						<li>邮箱：walkor@workerman.com</li>
+						<li>邮箱：walkor@workerman.net</li>
 						<li>QQ：2202055656</li>
 						<li>QQ群：257046084<br><a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=37e8137d627745ff3f6d12238d0c36d94bd8a589d10d99082561550daeb43cfa"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="workerman技术交流群" title="workerman技术交流群"></a></li>
 						</ul>
