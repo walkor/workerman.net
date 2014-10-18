@@ -42,7 +42,7 @@
 					<img src="/img/high-performance.png" alt="workerman高性能"/><strong>高性能</strong>
 				</h3>
 				<p>
-					基于高性能的libevent事件轮询库，单机支持数十万的并发连接，长连接吞吐量高达36W/S。PHP如数据库等对象可以常驻内存，减少解析编译及网络开销。
+					基于高性能的libevent事件网络库，单机支持数十万的并发连接，长连接吞吐量高达36W/S。PHP数据库等对象可以常驻内存，减少解析编译及网络开销。
 				</p>
 			</div>
 		</div>
