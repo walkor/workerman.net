@@ -42,7 +42,7 @@
 					<img src="/img/high-performance.png" alt="workerman高性能"/><strong>高性能</strong>
 				</h3>
 				<p>
-					基于高性能的libevent事件轮询库，长连接吞吐量达到45W/S，支持几万的并发连接。数据库等对象可以常驻内存，减少解析编译及网络开销。
+					基于高性能的libevent事件轮询库，单机支持数十万的并发连接，长连接吞吐量高达36W/S。PHP如数据库等对象可以常驻内存，减少解析编译及网络开销。
 				</p>
 			</div>
 		</div>
@@ -66,7 +66,7 @@
 					<img src="/img/so-easy.png" alt="workerman开发使用简单"/><strong>开发简单</strong>
 				</h3>
 				<p>
-					Workerman已经有很多成熟的网络应用，只要你会PHP，你就可以在这些应用的基础上快速的开发出自己的Socket应用服务。
+					接口简单，并已经有很多成熟的网络应用，只要你会PHP，你就可以在这些应用的基础上快速的开发出自己的Socket应用服务。
 				</p>
 			</div>
 		</div>
@@ -185,6 +185,9 @@
 			</li>
 			<li>
 				<a href="https://github.com/walkor/workerman-bench">压力测试代码及客户端脚本</a>
+			</li>
+			<li>
+				<a href="https://github.com/walkor/workerman/tree/master/applications/Demo#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B1%BB%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95">workerman中mysql类及用法</a>
 			</li>
 		</ul>
 		<h4>问答动态</h4>
