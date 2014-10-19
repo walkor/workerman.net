@@ -77,5 +77,8 @@
 * [常见问题](faq/README.md)
    * [WorkerMan下扩展的安装](faq/extension-install.md)
    * [WorkerMan日志](faq/debugging.md)
+* [WorkerMan进程模型](process-model/README.md)
+   * [master-worker模型](process-model/master-worker.md)
+   * [master-gateway-worker模型](process-model/master-gateway-worker.md)
 * [待续....](continue/README.md)
 
