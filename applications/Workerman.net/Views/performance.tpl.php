@@ -27,7 +27,7 @@
 </div>
 <div class="row clearfix">
 	<div class="col-md-5 column">
-	<div class="text-center"><img src="/img/workerman-request-map.png" alt="workerman 运行机制"  class="img-thumbnail" /><br><img src="/img/workerman-process.png" alt="workerman 进程模型"  class="img-thumbnail" /></div>
+	<div class="text-center"><img src="/img/workerman-request-map.png" alt="workerman 运行机制"  class="img-thumbnail" /><br><br><img src="/img/workerman-process.png" alt="workerman 进程模型"  class="img-thumbnail" /></div>
 	</div>
 	<div class="col-md-7 column">
 	<div class="thumbnail">
