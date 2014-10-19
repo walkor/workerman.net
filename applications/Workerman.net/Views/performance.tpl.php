@@ -27,7 +27,7 @@
 </div>
 <div class="row clearfix">
 	<div class="col-md-5 column">
-	<div class="text-center"><img src="/img/workerman-request-map.png" alt="workerman 运行机制"  class="img-thumbnail" /></div>
+	<div class="text-center"><img src="/img/workerman-request-map.png" alt="workerman 运行机制"  class="img-thumbnail" /><br><img src="/img/workerman-process.png" alt="workerman 进程模型"  class="img-thumbnail" /></div>
 	</div>
 	<div class="col-md-7 column">
 	<div class="thumbnail">
@@ -61,6 +61,15 @@
 			    完全不依赖于apache、nginx、php-fpm等这些容器便可以独立运行，所以性能更高。
 			</p>
 		</div>
+	</div>
+	<div class="thumbnail">
+	<div class="caption">
+		<h4>进程模型简单</h4>
+		<p>
+		    workerman是多进程（也有多线程版本）的，可以充分利用服务器多核资源。并且workerman具有简单的进程模型，主进程只负责监控子进程，而每个子进程独自接受维护客户端的连接，独自读取连接上发来的数据，独自处理。
+		    子进程间默认没有任何数据通讯，主进程和子进程之间只有一次信号通讯。简单的进程通讯模型使得workerman相比其它复杂的进程模型的软件更高效。
+		</p>
+	</div>
 	</div>
 	</div>
 </div>
