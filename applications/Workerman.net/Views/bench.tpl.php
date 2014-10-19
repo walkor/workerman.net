@@ -11,14 +11,16 @@ Workerman：开启200个Benchark进程
 </code></pre>
 
 <h3>业务逻辑</h3>
-<pre><code>
+<pre><code>// HTTP协议返回hello字符串，非HTTP协议客户端发来什么就返回什么
 class Benchmark extends Man\Core\SocketWorker
 {
+    // 分包
     public function dealInput($buffer)
     {
        return 0;
     }
     
+    // HTTP协议返回hello字符串，非HTTP协议客户端发来什么就返回什么
     public function dealProcess($buffer)
     {
         // 是HTTP协议
@@ -42,11 +44,10 @@ ab -n 100000 -c200 127.0.0.1:56789/
 </code></pre>
 
 <h4>方法二：使用workerman自带的benchmark软件，只支持64位linux系统</h4>
-<pre><code>
-#例如下面的命令含义是400并发线程模拟400个并发用户，每个用户连接127.0.0.1:56789端口发送一个hello服务端收到hello后返回一个hello后断开连接，这样每个线程并发运行10000次
-1: ./benchmark -n10000 -h1 -c400 -p56789 127.0.0.1 
-#例如下面的命令含义是1000并发线程模拟1000个并发用户，每个用户连接127.0.0.1:56789端口，然后每个线程并发连续发送10000个hello,服务端收到hello后返回一个hello
-2：./benchmark -n1 -h10000 -c1000 -p56789 127.0.0.1 
+<pre><code>1、#例如下面的命令含义是400并发线程模拟400个并发用户，每个用户连接127.0.0.1:56789端口发送一个hello服务端收到hello后返回一个hello后断开连接，这样每个线程并发运行10000次
+./benchmark -n10000 -h1 -c400 -p56789 127.0.0.1 
+2、#例如下面的命令含义是1000并发线程模拟1000个并发用户，每个用户连接127.0.0.1:56789端口，然后每个线程并发连续发送10000个hello,服务端收到hello后返回一个hello
+./benchmark -n1 -h10000 -c1000 -p56789 127.0.0.1 
 </code></pre>
 
 <h3>结果</h3>
@@ -81,9 +82,15 @@ ab -n 100000 -c200 127.0.0.1:56789/
 
 <h3>压测代码及脚本下载：</h3>
 <pre><code>
-压测代码及脚本：<a href="https://github.com/walkor/workerman-bench">https://github.com/walkor/workerman-bench</a>
-压测脚本benchmark位置：workerman-bench/applications/Benchmark/benchmark
-说明：由于各个系统配置不同，所以压测时可能需要根据系统配置调整压测参数才能达到最优
+<b>压测代码及脚本：</b><a href="https://github.com/walkor/workerman-bench">https://github.com/walkor/workerman-bench</a>
+<b>压测脚本benchmark位置：</b>workerman-bench/applications/Benchmark/benchmark
+<b>说明：</b>由于各个系统配置不同，所以压测时可能需要根据系统配置调整压测参数才能达到最优
+</code></pre>
+
+<h3>压测评价</h3>
+<pre><code>压力测试脚本和workerman服务端运行在同一台服务器上，因为压测的地址均为为127.0.0.1，所以流量没有走网卡。压测使用的是版本较低的PHP5.3.10版本，使用高版本PHP如PHP5.6性能将会更高。
+另外也压测了facebook的HHVM虚拟机，在短连接方面相比PHP5.3.10吞吐量高出84%左右，在长连接方面比PHP5.3.10吞吐量高出25%左右。
+压测均使用较小的数据包，并且业务逻辑简单，复杂的业务压力测试开发者可以根据自己的业务情况自行实施，肯定也会给开发者一个不小的惊喜。
 </code></pre>
 	</div>
 </div>
