@@ -7,7 +7,6 @@
 	<table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-MT&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-MT&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table>
 		<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-MT" target="_blank"><b>Fork on Github</b></a>&nbsp;
 		<a class="btn btn-default btn-large" href="/download/workermanwinzip"><b>下载ZIP压缩文件</b></a> <font class='f11 gray'>下载<?php echo $workermanwin_download_count;?>次</font>
-	</div>
 	<hr>
 	<h3>安装</h3>
 	<h4>1、要求安装线程安全(Thread Safe)版PHP</h4>
