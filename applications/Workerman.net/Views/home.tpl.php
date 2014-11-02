@@ -213,6 +213,9 @@
 		</h4>
 		<ul>
 			<li>
+				<a href="http://www.workerman.net/windows">2014-11-2 workerman-MT多线程版本发布，同时支持Linux Windows平台</a>
+			</li>
+			<li>
 				<a href="http://www.workerman.net/workerman-chat">2014-08-30 workerman-chat 聊天室支持分房间等功能</a>
 			</li>
 			<li>
