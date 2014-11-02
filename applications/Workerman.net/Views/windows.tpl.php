@@ -1,5 +1,5 @@
 <div class="row clearfix">
-	<div class="col-md-12 column">
+	<div class="col-md-10 column">
 	<h2>workerman-MT 多线程版本</h2>
 	<p class="f14">
 		workerman-MT 多线程版本即支持Linux平台也支持Windows平台，并且开发接口与Linux多进程版本完全一致，也就是说基于workerman开发的应用程序即可以运行在Linux系统，也可以运行在Windows系统上。
@@ -8,17 +8,19 @@
 		<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-MT" target="_blank"><b>Fork on Github</b></a>&nbsp;
 		<a class="btn btn-default btn-large" href="/download/workermanwinzip"><b>下载ZIP压缩文件</b></a> <font class='f11 gray'>下载<?php echo $workermanwin_download_count;?>次</font>
 	</div>
+	<hr>
 	<h3>安装</h3>
-	<h5>1、要求安装线程安全(Thread Safe)版PHP</h5>
+	<h4>1、要求安装线程安全(Thread Safe)版PHP</h4>
 	线程安全版本下载页面：<a href="http://windows.php.net/download">http://windows.php.net/download</a>
 	<br>
 	<img src="/img/gif/install-php.gif" alt="安装线程安全版本PHP流程图">
-	<h5>2、pthreads扩展</h5>
+	<h4>2、pthreads扩展</h4>
 	pthreads下载下载页面： <a href="http://windows.php.net/downloads/pecl/releases/pthreads">http://windows.php.net/downloads/pecl/releases/pthreads</a>
 	<br>
 	<img src="/img/gif/install-pthreads.gif" alt="安装pthreads扩展流程图">
-	<h5>3、运行</h5>
-	双击start.bat脚本，即可启动workerman-MT
+	<h4>3、运行</h4>
+	双击start.bat文件，即可启动workerman-MT
+	<hr>
 	<h3>windows多线程版本其它资源</h3>
 	小蝌蚪聊天室:<a href="https://github.com/walkor/workerman-todpole-for-win">https://github.com/walkor/workerman-todpole-for-win</a>
 	<h3>workerman 多线程版本与workerman Linux多进程版本异同</h3>
