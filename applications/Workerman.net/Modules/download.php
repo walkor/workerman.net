@@ -198,3 +198,15 @@ function download_flappybirdzip()
     \WorkerMan\Lib\Store::set($download_flappybird_count_key, ++$count);
     return \Man\Common\Protocols\Http\header('Location: https://github.com/walkor/workerman-flappy-bird/archive/master.zip');
 }
+
+/**
+ * 下载workerman-for-win
+ */
+function download_workermanwinzip()
+{
+    $download_workermanwin_count_key = 'download_workermanwin_count';
+    $count = \WorkerMan\Lib\Store::get($download_workermanwin_count_key);
+    $count = $count >= 0 ? intval($count) : 0;
+    \WorkerMan\Lib\Store::set($download_workermanwin_count_key, ++$count);
+    return \Man\Common\Protocols\Http\header('Location: https://github.com/walkor/workerman-for-win/archive/master.zip');
+}

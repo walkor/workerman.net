@@ -71,6 +71,9 @@
 						<li<?php if($html_nav == 'update')echo ' class="active" ';?>>
 							<a href="http://update.workerman.net" target="_blank">历史版本</a>
 						</li>
+						<li<?php if($html_nav == 'windows')echo ' class="active" ';?>>
+							<a href="/windows" target="_blank">windows版本</a>
+						</li>
 					</ul>
 				</div>
 			</nav>
