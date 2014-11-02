@@ -11,9 +11,11 @@
 	<h3>安装</h3>
 	<h5>1、要求安装线程安全(Thread Safe)版PHP</h5>
 	线程安全版本下载页面：<a href="http://windows.php.net/download">http://windows.php.net/download</a>
+	<br>
 	<img src="/img/gif/install-php.gif" alt="安装线程安全版本PHP流程图">
 	<h5>2、pthreads扩展</h5>
 	pthreads下载下载页面： <a href="http://windows.php.net/downloads/pecl/releases/pthreads">http://windows.php.net/downloads/pecl/releases/pthreads</a>
+	<br>
 	<img src="/img/gif/install-pthreads.gif" alt="安装pthreads扩展流程图">
 	<h5>3、运行</h5>
 	双击start.bat脚本，即可启动workerman-MT
@@ -23,7 +25,7 @@
 	<table class="table">
 		<thead>
 			<tr>
-				<th></th>
+				<th>特性</th>
 				<th>workerman</th>
 				<th>workerman-MT</th>
 			</tr>
