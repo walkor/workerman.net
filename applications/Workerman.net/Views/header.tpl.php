@@ -72,7 +72,7 @@
 							<a href="http://update.workerman.net" target="_blank">历史版本</a>
 						</li>
 						<li<?php if($html_nav == 'windows')echo ' class="active" ';?>>
-							<a href="/windows" >windows版本</a>
+							<a href="/windows" ><img src="/img/windows.png">windows版本</a>
 						</li>
 					</ul>
 				</div>
