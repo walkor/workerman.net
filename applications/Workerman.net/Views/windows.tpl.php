@@ -36,11 +36,11 @@
 			<tr>
 				<td>多进程支持</td>
 				<td class="success">是</td>
-				<td>否</td>
+				<td class="error">否</td>
 			</tr>
 			<tr>
 				<td>多线程支持</td>
-				<td>否</td>
+				<td class="error">否</td>
 				<td class="success">是</td>
 			</tr>
 			<tr>
@@ -48,25 +48,25 @@
 				<td class="success">是</td>
 				<td class="success">是</td>
 			</tr>
-			<tr class="success">
+			<tr>
 				<td>支持Windows平台</td>
-				<td>否</td>
+				<td class="error">否</td>
 				<td class="success">是</td>
 			</tr>
 			<tr>
 				<td>支持守护进程化</td>
 				<td class="success">是</td>
-				<td>后续支持</td>
+				<td class="warning">后续支持</td>
 			</tr>
-			<tr class="success">
+			<tr>
 				<td>支持 workermand status 状态查询</td>
 				<td class="success">是</td>
-				<td>后续支持</td>
+				<td class="warning">后续支持</td>
 			</tr>
 			<tr>
 				<td>支持热更新</td>
-				<td>是</td>
-				<td>后续支持</td>
+				<td class="success">是</td>
+				<td class="warning">后续支持</td>
 			</tr>
 		</tbody>
 	</table>
