@@ -12,12 +12,12 @@
 	<br><hr>
 	<h3>workerman-MT安装教程</h3>
 	<br>
-	<h4>1、要求安装线程安全(Thread Safe)版PHP</h4>
-	线程安全版本下载页面：<a href="http://windows.php.net/download">http://windows.php.net/download</a>
+	<h4>1、需要安装线程安全(Thread Safe)版PHP</h4>
+	线程安全版本PHP下载页面：<a href="http://windows.php.net/download">http://windows.php.net/download</a>
 	<br><br>
 	<img src="/img/gif/install-php.gif" alt="安装线程安全版本PHP流程图">
 	<br><br>
-	<h4>2、pthreads扩展</h4>
+	<h4>2、需要安装pthreads扩展</h4>
 	pthreads下载下载页面： <a href="http://windows.php.net/downloads/pecl/releases/pthreads">http://windows.php.net/downloads/pecl/releases/pthreads</a>
 	<br><br>
 	<img src="/img/gif/install-pthreads.gif" alt="安装pthreads扩展流程图">
@@ -75,6 +75,8 @@
 			</tr>
 		</tbody>
 	</table>
+	<br><br>
 </div>
 <div class="col-md-2column">
 </div>
+
