@@ -4,7 +4,7 @@
 ### 特性更新
 ```  更新全部针对针对Gateway/Worker模型  ```
 
-**主要是去掉了uid的概念，取而代之使用client_id唯一标志一个客户端（因为一个uid可能发起多个链接，例如聊天室应用中用户登录了多个房间，所以需要client_id唯一标识每个房间的链接，而uid无法唯一标识），注意clien_id是系统自动生成的，为int整型。**
+**主要是去掉了uid的概念，取而代之使用client_id唯一标志一个客户端（因为一个uid可能发起多个链接，例如聊天室应用中用户登录了多个房间，所以需要client_id唯一标识每个房间的链接，而uid无法唯一标识），注意client_id是系统自动生成的，为int整型。**
 
 * 去掉```Gateway::onConnect```方法，统一使用```Gateway::onMessage($client_id, $message)```
 * 使用```Gateway::sendToClient($client_id, $message)```取代原```Gateway::sendToUid($uid, $message)```

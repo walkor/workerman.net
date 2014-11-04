@@ -176,7 +176,7 @@
 <h3 id="-2-1-3-https-github-com-walkor-workerman-2-1-3-archive-master-zip-">下载地址: <a href="https://github.com/walkor/workerman-2.1.3/archive/master.zip" target="_blank">点击下载版本2.1.3</a></h3>
 <h3 id="-">特性更新</h3>
 <p><code>更新全部针对针对Gateway/Worker模型</code></p>
-<p><strong>主要是去掉了uid的概念，取而代之使用client_id唯一标志一个客户端（因为一个uid可能发起多个链接，例如聊天室应用中用户登录了多个房间，所以需要client_id唯一标识每个房间的链接，而uid无法唯一标识），注意clien_id是系统自动生成的，为int整型。</strong></p>
+<p><strong>主要是去掉了uid的概念，取而代之使用client_id唯一标志一个客户端（因为一个uid可能发起多个链接，例如聊天室应用中用户登录了多个房间，所以需要client_id唯一标识每个房间的链接，而uid无法唯一标识），注意client_id是系统自动生成的，为int整型。</strong></p>
 <ul>
 <li>去掉<code>Gateway::onConnect</code>方法，统一使用<code>Gateway::onMessage($client_id, $message)</code></li>
 <li>使用<code>Gateway::sendToClient($client_id, $message)</code>取代原<code>Gateway::sendToUid($uid, $message)</code></li>

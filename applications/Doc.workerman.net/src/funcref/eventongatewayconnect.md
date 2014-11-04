@@ -13,7 +13,7 @@ void Gateway::onGatewayConnect(int $client_id);
 ## 参数
 (WorkerMan>=2.1.3)
 
-``` $clien_id ```
+``` $client_id ```
 全局唯一的客户端socket_id
 
 
