@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="9.4.2" data-basepath=".." data-revision="1413734156874">
+    <div class="book"  data-level="9.4.2" data-basepath=".." data-revision="1415139636294">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -1123,11 +1123,11 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_29">
+                    <section class="normal" id="section-gitbook_496">
                     
                         <h3 id="-_session-"><code>$_SESSION</code>使用场景</h3>
 <p><strong>(<code>WorkerMan&gt;=2.1.2，Gateway/Worker模型</code>)</strong></p>
-<p>例如客户端链接WorkerMan后，需要发送验证数据让服务端验证是否合法，一般要传递一次用户名和密码数据，然后在<code>Gateway::onMessage($client_id, $message)</code>中通过查询数据库验证<code>$message</code>中的用户名密码是否正确，如果正确就可以将用户的uid写入到<code>$_SESSION</code>中如``$_SESSION[&#39;uid&#39;]=$uid;<code>，那么当这个client_id再次发来数据时，要判断这个客户端是否是被验证过的，就可以用</code>$_SESSION[&#39;uid&#39;]```是否被设置来判断。</p>
+<p>例如客户端链接WorkerMan后，需要发送验证数据让服务端验证是否合法，一般要传递一次用户名和密码数据，然后在<code>Gateway::onMessage($client_id, $message)</code>中通过查询数据库验证<code>$message</code>中的用户名密码是否正确，如果正确就可以将用户的uid写入到<code>$_SESSION</code>中如<code>$_SESSION[&#39;uid&#39;]=$uid;</code>，那么当这个client_id再次发来数据时，要判断这个客户端是否是被验证过的，就可以用<code>$_SESSION[&#39;uid&#39;]</code>是否被设置来判断。</p>
 <h3 id="workerman-_session-">WorkerMan中$_SESSION使用注意事项</h3>
 <ul>
 <li>使用<code>$_SESSION</code>时无需调用session_start等函数</li>

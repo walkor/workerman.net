@@ -9,8 +9,10 @@ debug=1
 pid_file=/var/run/workerman.pid
 ;日志文件目录
 log_dir=./logs/
+;backlog
+backlog=1024
 ;应用配置
-indlue=/conf.d/*.conf
+include=/conf.d/*.conf
 ```
 
 ### 主配置说明
@@ -35,6 +37,9 @@ pid_file用于设置WorkerMan进程pid存放位置。WorkerMan启动后，会将
 
 WorkerMan日志会被WorkerMan定时清理
 
-4、indlue选项
+4、backlog
+设置完成TCP三次握手等待被处理的客户端连接队列长度。此选项的值是全局默认的值，如果conf.d/下的配置中的有设置backlog，则对应的backlog将被替换。
+
+5、include选项(预留选项，目前无作用)
 
 用于设置应用程序配置目录。目前固定为/conf.d/*.conf

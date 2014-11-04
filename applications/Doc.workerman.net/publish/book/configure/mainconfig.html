@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="6.5" data-basepath=".." data-revision="1413734156874">
+    <div class="book"  data-level="6.5" data-basepath=".." data-revision="1415139636294">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -1123,7 +1123,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_43">
+                    <section class="normal" id="section-gitbook_508">
                     
                         <h1 id="-">主配置说明</h1>
 <h3 id="-conf-workerman-conf">主配置conf/workerman.conf</h3>
@@ -1133,8 +1133,10 @@
 <span class="hljs-setting">pid_file=<span class="hljs-value">/var/run/workerman.pid</span></span>
 <span class="hljs-comment">;日志文件目录</span>
 <span class="hljs-setting">log_dir=<span class="hljs-value">./logs/</span></span>
+<span class="hljs-comment">;backlog</span>
+<span class="hljs-setting">backlog=<span class="hljs-value"><span class="hljs-number">1024</span></span></span>
 <span class="hljs-comment">;应用配置</span>
-<span class="hljs-setting">indlue=<span class="hljs-value">/conf.d/*.conf</span></span>
+<span class="hljs-setting">include=<span class="hljs-value">/conf.d/*.conf</span></span>
 </code></pre>
 <h3 id="-">主配置说明</h3>
 <p>1、debug选项</p>
@@ -1147,7 +1149,9 @@
 <p>3、log_dir选项</p>
 <p>用于设置WorkerMan日志文件目录。WorkerMan日志会按照日期分割，每天一一个日志文件。日志文件记录的日志包括WorkerMan启动、停止、重启、平滑重启、以及一些异常日志如子进程异常退出。</p>
 <p>WorkerMan日志会被WorkerMan定时清理</p>
-<p>4、indlue选项</p>
+<p>4、backlog
+设置完成TCP三次握手等待被处理的客户端连接队列长度。此选项的值是全局默认的值，如果conf.d/下的配置中的有设置backlog，则对应的backlog将被替换。</p>
+<p>5、include选项(预留选项，目前无作用)</p>
 <p>用于设置应用程序配置目录。目前固定为/conf.d/*.conf</p>
 
                     
