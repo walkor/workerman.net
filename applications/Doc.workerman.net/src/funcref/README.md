@@ -5,6 +5,9 @@
        * [SocketWorker::dealProcess](/funcref/socketworkerdealprocess.html)
        * [SocketWorker::onStop](/funcref/socketworkeronstop.html)
        * [SocketWorker::onReload](/funcref/socketworkeronreload.html)
+       * [sendToClient](/funcref/sendtoclient.html)
+       * [getRemoteAddress](/funcref/getremoteaddress.html)
+       * [closeClient](/funcref/closeclient.html)
 
 
    * [Gateway类](/funcref/gateway.html)
@@ -28,3 +31,9 @@
        * [什么是超全局数组$_SESSION](/funcref/what_is_session.html)
        * [使用场景及注意事项](/funcref/use_session.html)
        * [超全局数组$_SESSION原理](/funcref/how_to_work.html)
+
+
+   * [超全局数组$_SERVER](/funcref/server.html)
+       * [什么是超全局数组$_SERVER](/funcref/what_is_server.html)
+       * [使用场景及注意事项](/funcref/use_server.html)
+       * [超全局数组$_SERVER原理](/funcref/server_how_to_work.html)

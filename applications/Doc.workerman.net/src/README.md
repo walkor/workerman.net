@@ -1,5 +1,7 @@
 # WorkerMan手册
 
+# Summary
+
 * [版权信息](license/README.md)
 * [WorkerMan手册](manual/README.md)
    * [序言](manual/preface.md)
@@ -40,6 +42,9 @@
        * [dealProcess](funcref/socketworkerdealprocess.md)
        * [onStop](funcref/socketworkeronstop.md)
        * [onReload](funcref/socketworkeronreload.md)
+       * [sendToClient](funcref/sendtoclient.md)
+       * [getRemoteAddress](funcref/getremoteaddress.md)
+       * [closeClient](funcref/closeclient.md)
    * [Gateway类](funcref/gateway.md)
        * [sendToAll](funcref/gatewaysendtoall.md)
        * [sendToClient](funcref/gatewaysendtouid.md)
@@ -57,6 +62,10 @@
        * [什么是超全局数组$_SESSION](funcref/what_is_session.md)
        * [使用场景及注意事项](funcref/use_session.md)
        * [超全局数组$_SESSION原理](funcref/how_to_work.md)
+   * [超全局数组$_SERVER](funcref/server.md)
+       * [什么是超全局数组$_SERVER](funcref/what_is_server.md)
+       * [使用场景及注意事项](funcref/use_server.md)
+       * [超全局数组$_SERVER原理](funcref/server_how_to_work.md)
 * [调试](debug/README.md)
    * [基本调试](debug/base_debug.md)
    * [网络抓包](debug/tcpdump.md)
@@ -77,5 +86,7 @@
 * [常见问题](faq/README.md)
    * [WorkerMan下扩展的安装](faq/extension-install.md)
    * [WorkerMan日志](faq/debugging.md)
+* [WorkerMan进程模型](process-model/README.md)
+   * [master-worker模型](process-model/master-worker.md)
+   * [master-gateway-worker模型](process-model/master-gateway-worker.md)
 * [待续....](continue/README.md)
-
