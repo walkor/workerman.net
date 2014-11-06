@@ -5,9 +5,9 @@
        * [SocketWorker::dealProcess](/funcref/socketworkerdealprocess.html)
        * [SocketWorker::onStop](/funcref/socketworkeronstop.html)
        * [SocketWorker::onReload](/funcref/socketworkeronreload.html)
-       * [sendToClient](/funcref/sendtoclient.html)
-       * [getRemoteAddress](/funcref/getremoteaddress.html)
-       * [closeClient](/funcref/closeclient.html)
+       * [SocketWorker::sendToClient](/funcref/sendtoclient.html)
+       * [SocketWorker::getRemoteAddress](/funcref/getremoteaddress.html)
+       * [SocketWorker::closeClient](/funcref/closeclient.html)
 
 
    * [Gateway类](/funcref/gateway.html)
