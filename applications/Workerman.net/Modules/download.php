@@ -216,7 +216,7 @@ function download_workermanwinzip()
  */
 function download_manual()
 {
-    \Man\Common\Protocols\Http\header('Content-type: application/pdf');
+    \Man\Common\Protocols\Http\header('Content-Type: application/pdf');
     \Man\Common\Protocols\Http\header('Content-Disposition: attachment; filename="workerman-manual.pdf"');
     readfile(NET_ROOT.'/Web/downloads/workerman-manual.pdf');
 }
