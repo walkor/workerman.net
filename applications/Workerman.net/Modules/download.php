@@ -1,6 +1,6 @@
 <?php
 namespace WorkerMan\Modules;
-use \Man\Common\Protocols\Http;
+use \Man\Common\Protocols\Http\header;
 
 /**
  * 下载页面
