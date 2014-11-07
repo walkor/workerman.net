@@ -19,13 +19,15 @@
 					<div class="col-md-4 column">
 						<b>下载</b>
 						<ul class="sub">
-						<li><a href="/download/workerman">Workerman</a></li>
+						<li><a href="/download/workerman">Workerman Linux多进程版本（稳定）</a></li>
+						<li><a href="/windows">Workerman跨平台多线程版本</a></li>
 						<li><a href="/download/todpole">flappy bird 多人在线版</a></li>
 						<li><a href="/download/todpole">小蝌蚪聊天室</a></li>
 						<li><a href="/download/thrift">Thrift Rpc远程调用框架</a></li>
 						<li><a href="/download/jsonrpc">Json Rpc远程调用框架</a></li>
 						<li><a href="/download/chat">PHP 聊天室</a></li>
 						<li><a href="/download/statistics">分布式统计监控系统</a></li>
+						<li><a href="/downloads/workerman-manual.pdf">Workerman离线手册</a></li>
 						</ul>
 						<p class="gray">
 						蜀ICP备13029294号
