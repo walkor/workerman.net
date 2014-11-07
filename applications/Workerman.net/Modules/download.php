@@ -1,6 +1,5 @@
 <?php
 namespace WorkerMan\Modules;
-use \Man\Common\Protocols\Http\header;
 
 /**
  * 下载页面
@@ -11,7 +10,7 @@ function download()
     $html_nav = 'download';
     $download_workerman_count_key = 'download_workerman_count';
     $workerman_download_count =  \WorkerMan\Lib\Store::get($download_workerman_count_key);
-    include NET_ROOT . '/Views/header.tpl.php';
+    include NET_ROOT . '/Views/\Man\Common\Protocols\Http\header.tpl.php';
     include NET_ROOT . '/Views/download.tpl.php';
     include NET_ROOT . '/Views/footer.tpl.php';
 }
@@ -26,7 +25,7 @@ function download_workermanzip($file_type = '')
     $count = \WorkerMan\Lib\Store::get($download_workerman_count_key);
     $count = $count >= 0 ? intval($count) : 0;
     \WorkerMan\Lib\Store::set($download_workerman_count_key, ++$count);
-    return header('Location: https://github.com/walkor/workerman/archive/master.zip');
+    return \Man\Common\Protocols\Http\header('Location: https://github.com/walkor/workerman/archive/master.zip');
 }
 
 /**
@@ -47,7 +46,7 @@ function download_thrift()
     $github_repo = 'workerman-thrift';
     $download_thrift_count_key = 'download_thrift_count';
     $thrift_download_count =  \WorkerMan\Lib\Store::get($download_thrift_count_key);
-    include NET_ROOT . '/Views/header.tpl.php';
+    include NET_ROOT . '/Views/\Man\Common\Protocols\Http\header.tpl.php';
     include NET_ROOT . '/Views/download-thrift.tpl.php';
     include NET_ROOT . '/Views/footer.tpl.php';
 }
@@ -61,7 +60,7 @@ function download_thriftzip()
     $count = \WorkerMan\Lib\Store::get($download_thrift_count_key);
     $count = $count >= 0 ? intval($count) : 0;
     \WorkerMan\Lib\Store::set($download_thrift_count_key, ++$count);
-    return header('Location: https://github.com/walkor/workerman-thrift/archive/master.zip');
+    return \Man\Common\Protocols\Http\header('Location: https://github.com/walkor/workerman-thrift/archive/master.zip');
 }
 
 /**
@@ -74,7 +73,7 @@ function download_jsonrpc()
     $github_repo = 'workerman-jsonrpc';
     $download_jsonrpc_count_key = 'download_jsonrpc_count';
     $jsonrpc_download_count =  \WorkerMan\Lib\Store::get($download_jsonrpc_count_key);
-    include NET_ROOT . '/Views/header.tpl.php';
+    include NET_ROOT . '/Views/\Man\Common\Protocols\Http\header.tpl.php';
     include NET_ROOT . '/Views/download-jsonrpc.tpl.php';
     include NET_ROOT . '/Views/footer.tpl.php';
 }
@@ -88,7 +87,7 @@ function download_jsonrpczip()
     $count = \WorkerMan\Lib\Store::get($download_jsonrpc_count_key);
     $count = $count >= 0 ? intval($count) : 0;
     \WorkerMan\Lib\Store::set($download_jsonrpc_count_key, ++$count);
-    return header('Location: https://github.com/walkor/workerman-jsonrpc/archive/master.zip');
+    return \Man\Common\Protocols\Http\header('Location: https://github.com/walkor/workerman-jsonrpc/archive/master.zip');
 }
 
 /**
@@ -101,7 +100,7 @@ function download_chat()
     $github_repo = 'workerman-chat';
     $download_chat_count_key = 'download_chat_count';
     $chat_download_count =  \WorkerMan\Lib\Store::get($download_chat_count_key);
-    include NET_ROOT . '/Views/header.tpl.php';
+    include NET_ROOT . '/Views/\Man\Common\Protocols\Http\header.tpl.php';
     include NET_ROOT . '/Views/download-chat.tpl.php';
     include NET_ROOT . '/Views/footer.tpl.php';
 }
@@ -115,7 +114,7 @@ function download_chatzip()
     $count = \WorkerMan\Lib\Store::get($download_chat_count_key);
     $count = $count >= 0 ? intval($count) : 0;
     \WorkerMan\Lib\Store::set($download_chat_count_key, ++$count);
-    return header('Location: https://github.com/walkor/workerman-chat/archive/master.zip');
+    return \Man\Common\Protocols\Http\header('Location: https://github.com/walkor/workerman-chat/archive/master.zip');
 }
 
 /**
@@ -128,7 +127,7 @@ function download_statistics()
     $github_repo = 'workerman-statistics';
     $download_statistics_count_key = 'download_statistics_count';
     $statistics_download_count =  \WorkerMan\Lib\Store::get($download_statistics_count_key);
-    include NET_ROOT . '/Views/header.tpl.php';
+    include NET_ROOT . '/Views/\Man\Common\Protocols\Http\header.tpl.php';
     include NET_ROOT . '/Views/download-statistics.tpl.php';
     include NET_ROOT . '/Views/footer.tpl.php';
 }
@@ -142,7 +141,7 @@ function download_statisticszip()
     $count = \WorkerMan\Lib\Store::get($download_statistics_count_key);
     $count = $count >= 0 ? intval($count) : 0;
     \WorkerMan\Lib\Store::set($download_statistics_count_key, ++$count);
-    return header('Location: https://github.com/walkor/workerman-statistics/archive/master.zip');
+    return \Man\Common\Protocols\Http\header('Location: https://github.com/walkor/workerman-statistics/archive/master.zip');
 }
 
 /**
@@ -155,7 +154,7 @@ function download_todpole()
     $github_repo = 'workerman-todpole';
     $download_todpole_count_key = 'download_todpole_count';
     $todpole_download_count =  \WorkerMan\Lib\Store::get($download_todpole_count_key);
-    include NET_ROOT . '/Views/header.tpl.php';
+    include NET_ROOT . '/Views/\Man\Common\Protocols\Http\header.tpl.php';
     include NET_ROOT . '/Views/download-todpole.tpl.php';
     include NET_ROOT . '/Views/footer.tpl.php';
 }
@@ -169,7 +168,7 @@ function download_todpolezip()
     $count = \WorkerMan\Lib\Store::get($download_todpole_count_key);
     $count = $count >= 0 ? intval($count) : 0;
     \WorkerMan\Lib\Store::set($download_todpole_count_key, ++$count);
-    return header('Location: https://github.com/walkor/workerman-todpole/archive/master.zip');
+    return \Man\Common\Protocols\Http\header('Location: https://github.com/walkor/workerman-todpole/archive/master.zip');
 }
 
 /**
@@ -182,7 +181,7 @@ function download_flappybird()
     $github_repo = 'workerman-flappy-bird';
     $download_flappybird_count_key = 'download_flappybird_count';
     $flappybird_download_count =  \WorkerMan\Lib\Store::get($download_flappybird_count_key);
-    include NET_ROOT . '/Views/header.tpl.php';
+    include NET_ROOT . '/Views/\Man\Common\Protocols\Http\header.tpl.php';
     include NET_ROOT . '/Views/download-flappy-bird.tpl.php';
     include NET_ROOT . '/Views/footer.tpl.php';
 }
@@ -197,7 +196,7 @@ function download_flappybirdzip()
     $count = \WorkerMan\Lib\Store::get($download_flappybird_count_key);
     $count = $count >= 0 ? intval($count) : 0;
     \WorkerMan\Lib\Store::set($download_flappybird_count_key, ++$count);
-    return header('Location: https://github.com/walkor/workerman-flappy-bird/archive/master.zip');
+    return \Man\Common\Protocols\Http\header('Location: https://github.com/walkor/workerman-flappy-bird/archive/master.zip');
 }
 
 /**
@@ -209,7 +208,7 @@ function download_workermanwinzip()
     $count = \WorkerMan\Lib\Store::get($download_workermanwin_count_key);
     $count = $count >= 0 ? intval($count) : 0;
     \WorkerMan\Lib\Store::set($download_workermanwin_count_key, ++$count);
-    return header('Location: https://github.com/walkor/workerman-for-win/archive/master.zip');
+    return \Man\Common\Protocols\Http\header('Location: https://github.com/walkor/workerman-for-win/archive/master.zip');
 }
 
 /**
@@ -217,7 +216,7 @@ function download_workermanwinzip()
  */
 function download_manual()
 {
-    header('Content-type: application/pdf');
-    header('Content-Disposition: attachment; filename="workerman-manual.pdf"');
+    \Man\Common\Protocols\Http\header('Content-type: application/pdf');
+    \Man\Common\Protocols\Http\header('Content-Disposition: attachment; filename="workerman-manual.pdf"');
     readfile(NET_ROOT.'/Web/downloads/workerman-manual.pdf');
 }
