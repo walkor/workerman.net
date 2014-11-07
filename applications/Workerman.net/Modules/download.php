@@ -10,7 +10,7 @@ function download()
     $html_nav = 'download';
     $download_workerman_count_key = 'download_workerman_count';
     $workerman_download_count =  \WorkerMan\Lib\Store::get($download_workerman_count_key);
-    include NET_ROOT . '/Views/\Man\Common\Protocols\Http\header.tpl.php';
+    include NET_ROOT . '/Views/header.tpl.php';
     include NET_ROOT . '/Views/download.tpl.php';
     include NET_ROOT . '/Views/footer.tpl.php';
 }
@@ -46,7 +46,7 @@ function download_thrift()
     $github_repo = 'workerman-thrift';
     $download_thrift_count_key = 'download_thrift_count';
     $thrift_download_count =  \WorkerMan\Lib\Store::get($download_thrift_count_key);
-    include NET_ROOT . '/Views/\Man\Common\Protocols\Http\header.tpl.php';
+    include NET_ROOT . '/Views/header.tpl.php';
     include NET_ROOT . '/Views/download-thrift.tpl.php';
     include NET_ROOT . '/Views/footer.tpl.php';
 }
@@ -73,7 +73,7 @@ function download_jsonrpc()
     $github_repo = 'workerman-jsonrpc';
     $download_jsonrpc_count_key = 'download_jsonrpc_count';
     $jsonrpc_download_count =  \WorkerMan\Lib\Store::get($download_jsonrpc_count_key);
-    include NET_ROOT . '/Views/\Man\Common\Protocols\Http\header.tpl.php';
+    include NET_ROOT . '/Views/header.tpl.php';
     include NET_ROOT . '/Views/download-jsonrpc.tpl.php';
     include NET_ROOT . '/Views/footer.tpl.php';
 }
@@ -100,7 +100,7 @@ function download_chat()
     $github_repo = 'workerman-chat';
     $download_chat_count_key = 'download_chat_count';
     $chat_download_count =  \WorkerMan\Lib\Store::get($download_chat_count_key);
-    include NET_ROOT . '/Views/\Man\Common\Protocols\Http\header.tpl.php';
+    include NET_ROOT . '/Views/header.tpl.php';
     include NET_ROOT . '/Views/download-chat.tpl.php';
     include NET_ROOT . '/Views/footer.tpl.php';
 }
@@ -127,7 +127,7 @@ function download_statistics()
     $github_repo = 'workerman-statistics';
     $download_statistics_count_key = 'download_statistics_count';
     $statistics_download_count =  \WorkerMan\Lib\Store::get($download_statistics_count_key);
-    include NET_ROOT . '/Views/\Man\Common\Protocols\Http\header.tpl.php';
+    include NET_ROOT . '/Views/header.tpl.php';
     include NET_ROOT . '/Views/download-statistics.tpl.php';
     include NET_ROOT . '/Views/footer.tpl.php';
 }
@@ -154,7 +154,7 @@ function download_todpole()
     $github_repo = 'workerman-todpole';
     $download_todpole_count_key = 'download_todpole_count';
     $todpole_download_count =  \WorkerMan\Lib\Store::get($download_todpole_count_key);
-    include NET_ROOT . '/Views/\Man\Common\Protocols\Http\header.tpl.php';
+    include NET_ROOT . '/Views/header.tpl.php';
     include NET_ROOT . '/Views/download-todpole.tpl.php';
     include NET_ROOT . '/Views/footer.tpl.php';
 }
@@ -181,7 +181,7 @@ function download_flappybird()
     $github_repo = 'workerman-flappy-bird';
     $download_flappybird_count_key = 'download_flappybird_count';
     $flappybird_download_count =  \WorkerMan\Lib\Store::get($download_flappybird_count_key);
-    include NET_ROOT . '/Views/\Man\Common\Protocols\Http\header.tpl.php';
+    include NET_ROOT . '/Views/header.tpl.php';
     include NET_ROOT . '/Views/download-flappy-bird.tpl.php';
     include NET_ROOT . '/Views/footer.tpl.php';
 }
