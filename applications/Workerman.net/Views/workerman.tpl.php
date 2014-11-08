@@ -122,6 +122,8 @@ Connection closed by foreign host.</code></pre>
 			<h4>5、查看workerman运行状态类似如下界面：</h4>
 			<p><code>./bin/workerman status</code></p>
 			<img src="/img/workerman-status.png" alt="workerman 查看运行状态"/>
+			<h3>applications/Demo例子测试方法(实际上是一个telnet 聊天室)</h3>
+			<img src="/img/gif/telnet-chat.gif" alt="telnet chat gif"/>
 			<h3>性能</h3>
 			<h4>测试环境：</h4>
 <pre><code>系统：ubuntu 12.04 LTS 64位
