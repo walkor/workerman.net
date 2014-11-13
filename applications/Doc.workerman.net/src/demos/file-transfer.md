@@ -1,4 +1,4 @@
-# 文件传输
+# 文件传输(二进制协议)
 
 ### 二进制传输协议说明
 四字节网络字节序unsigned int标识整个包的长度 + 一字节char标识文件名长度 + 文件名 + 文件二进制数据
@@ -71,7 +71,7 @@ class BinaryTransfer extends Man\Core\SocketWorker
 }
 ```
 
-## 创建配置文件 workerman/conf/conf.d/BinaryTransfer.conf
+## 创建配置文件 workerman/conf/conf.d/BinaryProtocolTransfer.conf
 
 ```ini
 ;业务进程入口文件
@@ -88,7 +88,7 @@ preread_length = 5
 persistent_connection = 1
 ```
 
-## 客户端文件 client.php
+## 客户端文件 client.php （这里用php模拟客户端上传）
 ```php
 <?php
 /** 上传文件客户端 **/
@@ -118,7 +118,7 @@ if(!$client)
     exit("$errmsg\n");
 }
 // 设置成阻塞
-stream_set_blocking($client, 0);
+stream_set_blocking($client, 1);
 
 // 文件名
 $file_name = basename($file_to_transfer);

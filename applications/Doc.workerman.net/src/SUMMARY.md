@@ -89,5 +89,6 @@
    * [master-gateway-worker模型](process-model/master-gateway-worker.md)
 * [一些开发示例](demos/README.md)
    * [文件传输(二进制协议)](demos/file-transfer.md)
+   * [文件传输(文本协议)](demos/file_transfer2.md)
 * [待续....](continue/README.md)
 
