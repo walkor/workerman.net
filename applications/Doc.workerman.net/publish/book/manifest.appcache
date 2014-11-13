@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# Revision 1415724182991
+# Revision 1415894492053
 
 CACHE:
 faq/README.html
@@ -16,8 +16,8 @@ configure/appconfig.html
 configure/configstandard.html
 configure/filemonitorconf.html
 configure/mainconfig.html
-configure/statisticsconf.html
 configure/monitorconf.html
+configure/statisticsconf.html
 continue/README.html
 debug/README.html
 debug/base_debug.html
@@ -25,6 +25,7 @@ debug/strace.html
 debug/tcpdump.html
 demos/README.html
 demos/file-transfer.html
+demos/file_transfer2.html
 dev/README.html
 dev/configapp.html
 dev/dealinput.html
