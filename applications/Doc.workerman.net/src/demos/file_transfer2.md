@@ -5,6 +5,9 @@
 
 {"file_name":"xxxx.jpg","file_data":"PD9waHAKLyo......"}\n
 
+## 说明
+下面以基本开发模型为例，Gateway/Worker模型开发与其类似（onGatewayMessage相当于dealInput，onMessage相当于dealProcess）。
+
 ### 创建文件 applications/FileTransferDemo/TextTransfer.php
 
 ```php

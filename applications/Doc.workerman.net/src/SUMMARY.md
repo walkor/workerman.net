@@ -90,5 +90,6 @@
 * [一些开发示例](demos/README.md)
    * [文件传输(二进制协议)](demos/file-transfer.md)
    * [文件传输(文本协议)](demos/file_transfer2.md)
+   * [Mysql数据库的使用](demos/mysql-width-workerman.md)
 * [待续....](continue/README.md)
 

@@ -3,6 +3,9 @@
 ### 二进制传输协议说明
 四字节网络字节序unsigned int标识整个包的长度 + 一字节char标识文件名长度 + 文件名 + 文件二进制数据
 
+## 说明
+下面以基本开发模型为例，Gateway/Worker模型开发与其类似（onGatewayMessage相当于dealInput，onMessage相当于dealProcess）。
+
 ### 创建文件 applications/FileTransferDemo/BinaryTransfer.php
 
 ```php
