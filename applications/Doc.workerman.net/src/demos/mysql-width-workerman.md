@@ -1,5 +1,5 @@
 # Mysql数据库的使用
-Workerman中封装了数据库类，在Gateway/Worker模型开发时可以直接使用。基本开发模型中需要引入数据库类。
+Workerman中封装了数据库类，在Gateway/Worker模型开发时可以直接使用。基本开发模型中需要拷贝Gateway/Worker模型中相关目录文件才能使用数据库类。
 
 ## Gateway/Worker模型 数据库使用示例
 
@@ -77,7 +77,7 @@ class Event
 ```
 
 ## 基本开发模型数据库使用示例
-1、目录结构如下
+1、目录结构如下（目录文件参考Gateway/Worker模型）
 
 ```
 applications/MysqlDemo
