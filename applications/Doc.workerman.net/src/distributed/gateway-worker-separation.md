@@ -1,12 +1,12 @@
-# 分布式部署
+# gateway worker 分离部署
 
-*首先确保你的WorkerMan版本大于2.1.1 (运行```workerma/bin/workermand status```查看)*
+以applications/Demo为例，假如需要部署三台服务器提供高可用服务。瓶颈在worker进程，则可使用1台作为gateway服务器，另外两台做worker服务器。（如果瓶颈在gateway进程（一般是带宽瓶颈），则可以2台gateway机器，1台worler机器，部署方法类似）。由于瓶颈只在worker进程或者Gateway进程，所以不需要二者同时扩容。所以可以分开部署并根据情况扩容。
 
-以applications/Demo为例，假如需要部署三台服务器提供高可用服务。瓶颈在worker进程，则可使用1台作为gateway服务器，另外两台做worker服务器。（如果瓶颈在gateway进程（一般是带宽瓶颈），则可以2台gateway机器，1台worler机器，部署方法类似）。
 
+## gateway worker 分离部署扩容步骤
 1、首先将进程切分，将Gateway进程部署在一台机器上(假设内网ip为192.168.0.1)，BusinessWorker部署在另外两台机器上（内网ip为192.168.0.2/3）
 
-2、由于192.168.0.1这台机器只部署Gateway进程，所以将该ip上的workerman/conf/conf.d/BusinessWorker.conf删掉，避免运行BusinessWorker进程
+2、由于192.168.0.1这台机器只部署Gateway进程，所以将该ip上的```workerman/conf/conf.d/BusinessWorker.conf```删掉，避免运行BusinessWorker进程
 
 3、配置Gateway服务器(192.168.0.1)上的```workerman/conf/conf.d/Gateway.conf```中的```lan_ip=192.168.0.1```与本机ip一致
 
@@ -98,5 +98,3 @@ public static $gateway = array(
 *首先还是要说明下Gateway服务器一般情况下不会成为系统瓶颈，所以一般你很长时间内Gateway服务器数量是一个稳定的值，一般一台即可*
 
 下线Gateway服务器，首先停止服务，运行```./workerman/bin/workermand stop```，此时会导致该服务器上已有的客户端链接断开，然后下线服务器即可。此时BusinessWorker会感知到有Gateway服务器下线，会自动断开与Gateway进程的联系。
-
-
