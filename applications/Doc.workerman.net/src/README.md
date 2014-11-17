@@ -69,6 +69,10 @@
    * [网络抓包](debug/tcpdump.md)
    * [跟踪系统调用](debug/strace.md)
 * [安全](safety/README.md)
+* [WorkerMan分布式部署扩容](distributed/README.md)
+   * [WorkerMan分布式好处](distributed/why-distributed.md)
+   * [如何分布式部署WorkerMan](distributed/how-distributed.md)
+   * [gateway worker 分离部署](distributed/gateway-worker-separation.md)
 * [高级应用](advanced/README.md)
    * [查看运行状态](start/workerman.md)
    * [telnet远程登录控制](advanced/telnet.md)
@@ -91,4 +95,6 @@
    * [文件传输(二进制协议)](demos/file-transfer.md)
    * [文件传输(文本协议)](demos/file_transfer2.md)
    * [Mysql数据库的使用](demos/mysql-width-workerman.md)
+   * [p2p之UDP打洞](demos/p2p-udp-hole-punching.md)
 * [待续....](continue/README.md)
+
