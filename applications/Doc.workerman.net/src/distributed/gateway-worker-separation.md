@@ -14,7 +14,7 @@
 
 4、由于物理机之间需要共享一些数据，需要部署一台memcache服务器，假设部署在Gateway（192.168.0.1）这台机器上，memcache服务端口为22322
 
-5、由于要使用memcache，所以要给三台服务器的PHP添加memcache扩展。ubuntu/debian可使用 ```sudo apt-get install php5-memcached```安装
+5、给三台服务器的PHP添加memcached或者memcache扩展。推荐用memcached扩展，ubuntu/debian可使用 sudo apt-get install php5-memcached安装。安装memcache扩展在ubuntu/debian系统可使用 sudo apt-get install php5-memcache安装
 
 6、配置memcache，更改三台服务器上```applications/Demo/Config/Store.php```中的```driver```、```gateway```两项配置如下，
 

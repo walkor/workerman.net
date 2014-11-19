@@ -14,7 +14,7 @@ public static $gateway = array(
 ## 部署实例
 以applications/Demo为例，假如需要部署三台服务器(192.168.1.1-3)提供高可用服务。。另外有一台memcache服务器（ip 192.168.1.4，端口11211）做全局数据共享。
 
-1、由于要使用memcache，所以要给三台服务器的PHP添加memcached扩展。ubuntu/debian可使用 ```sudo apt-get install php5-memcached```安装
+1、给三台服务器的PHP添加memcached或者memcache扩展。推荐用memcached扩展，ubuntu/debian可使用 sudo apt-get install php5-memcached安装。安装memcache扩展在ubuntu/debian系统可使用 sudo apt-get install php5-memcache安装
 
 2、配置三台服务器```applications/Demo/Config/Store.php```如下
 

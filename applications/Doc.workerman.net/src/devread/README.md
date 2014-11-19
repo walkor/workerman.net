@@ -2,7 +2,13 @@
 
 使用WorkerMan开发应用，你需要了解以下内容：
 
-## 一、WorkerMan开发与普通PHP开发的不同之处
+## 一、WorkerMan版本
+WorkerMan有两个版本，一个是运行在Linux系统下的多进程版本[WorkerMan](https://github.com/walkor/workerman)，另外一个版本是可以运行在Linux和Windows系统下的多线程版本[WorkerMan-MT](https://github.com/walkor/workerman-MT)。
+
+其中WorkerMan Linux多进程版本为稳定版本，WorkerMan-MT目前还处于研发测试阶段，Windows用户可以使用WorkerMan-MT开发WorkerMan应用程序，正式环境部署请使用WorkerMan Linux多进程版本。
+
+
+## 二、WorkerMan开发与普通PHP开发的不同之处
 
 除了与HTTP协议相关的变量函数无法直接使用外，WorkerMan开发与普通PHP开发并没有很大不同。
 
@@ -27,7 +33,7 @@
 * WorkerMan运行在PHP命令行模式下，当调用exit、die退出语句时，会导致当前进程退出。虽然子进程退出后会立刻重新创建一个的相同的子进程继续服务，但是还是可能对业务产生影响。
 
 
-## 二、需要了解的基本概念
+## 三、需要了解的基本概念
 
 ### 1、TCP传输层协议
 是一种面向连接（连接导向）的、可靠的、基于IP的传输层协议。TCP传输层协议一个重要特点是TCP是基于数据流的，客户端的请求会源源不断的发送给服务端，服务端收到的数据可能不是一个完整的请求，也有可能服务端收到的数据是多个请求连在一起。这就需要我们在这源源不断的数据流中区分每个请求的边界。而应用层协议主要是为请求边界定义一套规则，避免请求数据混乱。例如一个简单的应用层次协议如下```{"module":"user","action":"getInfo","uid":456}\n"```。此协议是以```\n```标记请求结束。
@@ -61,7 +67,7 @@
 
 平滑重启WorkerMan可以使用 ```./workerman/bin/workermand reload```命令，能够做到在不影响服务质量的情况下更新应用程序
 
-## 三、两种开发模型
+## 四、两种开发模型
 在WorkerMan中有两种开发模型，即：
 
 1、基础开发模型
