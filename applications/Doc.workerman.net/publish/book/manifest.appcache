@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# Revision 1416241212080
+# Revision 1416416181593
 
 CACHE:
 faq/README.html
@@ -8,7 +8,6 @@ faq/extension-install.html
 index.html
 advanced/README.html
 advanced/configrestart.html
-advanced/distributed.html
 advanced/heartbeat.html
 advanced/telnet.html
 configure/README.html
@@ -100,6 +99,10 @@ statistics/principle.html
 statistics/statistics_feature.html
 statistics/what_is_statistics.html
 stresstest/README.html
+webserver/README.html
+webserver/webserver-config.html
+webserver/webserver-differences.html
+webserver/webserver-preface.html
 gitbook\app.js
 gitbook\fonts\fontawesome\FontAwesome.otf
 gitbook\fonts\fontawesome\fontawesome-webfont.eot
