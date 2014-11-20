@@ -16,6 +16,9 @@ void Gateway::onGatewayConnect(int $client_id);
 ``` $client_id ```
 全局唯一的客户端socket_id
 
+## 返回值
+无返回值，任何返回值都会被视为无效的
+
 
 ## 范例
 ```php

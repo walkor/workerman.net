@@ -13,6 +13,9 @@ void SocketWorker::dealProcess(string $recv_buffer)
 
 一个完整的客户端请求
 
+## 返回值
+无返回值，任何返回值都会被视为无效的
+
 
 ## 范例
 

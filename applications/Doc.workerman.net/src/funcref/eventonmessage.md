@@ -18,6 +18,9 @@ void Gateway::onMessage(int $client_id, string $recv_buffer);
 
 完整的客户端请求数据。
 
+## 返回值
+无返回值，任何返回值都会被视为无效的
+
 ## 范例
 
 ```php

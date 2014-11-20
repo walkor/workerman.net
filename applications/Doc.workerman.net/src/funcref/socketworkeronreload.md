@@ -13,6 +13,10 @@ void SocketWorker::onReload(void)
 当对应子进程conf中配置no_reload=1时，收到reload信号所做的操作在onReload实现
 
 
+## 返回值
+无返回值，任何返回值都会被视为无效的
+
+
 ## 范例
 
 conf配置中no_reload=1

@@ -26,11 +26,11 @@
 
 ### 1、建立一个新的项目
 
-1.1、选定项目名，例如项目名叫ChatRoom，更改```applications/Demo``` 为 ```applications/ChatRoom```
+1.1、选定项目名，例如项目名叫ChatRoom，更改```applications/Demo``` 为 ```applications/ChatRoom```，即运行```mv applications/Demo applications/ChatRoom```
 
 1.2、将配置```workerman/conf/conf.d/Gateway.php```中的 ```worker_file```设置为新的路径```worker_file=../applications/ChatRoom/Bootstrap/Gateway.php```
 
-1.3、将配置```workerman/conf/conf.d/BusinessWorker.conf```中的```worker_file```设置为新的路径```worker_file = ../applications/Demo/Bootstrap/BusinessWorker.php```
+1.3、将配置```workerman/conf/conf.d/BusinessWorker.conf```中的```worker_file```设置为新的路径```worker_file = ../applications/ChatRoom/Bootstrap/BusinessWorker.php```
 
 1.4、重新启动WorkerMan ```workerman/bin/workermand restart```
 
