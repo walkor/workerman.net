@@ -4,7 +4,7 @@
     <head>
         
         <meta charset="UTF-8">
-        <title>文件传输(文本协议) | WorkerMan手册</title>
+        <title>定时任务 | WorkerMan手册</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 0.5.2">
@@ -17,10 +17,10 @@
     
     
     
-    <link rel="next" href="../demos/mysql-width-workerman.html" />
+    <link rel="next" href="../stresstest/README.html" />
     
     
-    <link rel="prev" href="../demos/file-transfer.html" />
+    <link rel="prev" href="../advanced/heartbeat.html" />
     
 
         
@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="19.2" data-basepath=".." data-revision="1416667032744">
+    <div class="book"  data-level="16.4" data-basepath=".." data-revision="1416667032744">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -1154,7 +1154,7 @@
             <div class="page-wrapper" tabindex="-1">
                 <div class="book-progress">
     <div class="bar">
-        <div class="inner" style="width: 97.02970297029702%;min-width: 96.03960396039604%;"></div>
+        <div class="inner" style="width: 90.0990099009901%;min-width: 89.10891089108911%;"></div>
     </div>
     <div class="chapters">
     
@@ -1342,19 +1342,19 @@
     
         <a href="../advanced/task.html" title="定时任务" class="chapter done " data-progress="16.4" style="left: 90.0990099009901%;"></a>
     
-        <a href="../stresstest/README.html" title="压力测试" class="chapter done " data-progress="17" style="left: 91.08910891089108%;"></a>
+        <a href="../stresstest/README.html" title="压力测试" class="chapter  " data-progress="17" style="left: 91.08910891089108%;"></a>
     
-        <a href="../process-model/README.html" title="WorkerMan进程模型" class="chapter done " data-progress="18" style="left: 92.07920792079207%;"></a>
+        <a href="../process-model/README.html" title="WorkerMan进程模型" class="chapter  " data-progress="18" style="left: 92.07920792079207%;"></a>
     
-        <a href="../process-model/master-worker.html" title="master-worker模型" class="chapter done " data-progress="18.1" style="left: 93.06930693069307%;"></a>
+        <a href="../process-model/master-worker.html" title="master-worker模型" class="chapter  " data-progress="18.1" style="left: 93.06930693069307%;"></a>
     
-        <a href="../process-model/master-gateway-worker.html" title="master-gateway-worker模型" class="chapter done " data-progress="18.2" style="left: 94.05940594059406%;"></a>
+        <a href="../process-model/master-gateway-worker.html" title="master-gateway-worker模型" class="chapter  " data-progress="18.2" style="left: 94.05940594059406%;"></a>
     
-        <a href="../demos/README.html" title="一些开发示例" class="chapter done " data-progress="19" style="left: 95.04950495049505%;"></a>
+        <a href="../demos/README.html" title="一些开发示例" class="chapter  " data-progress="19" style="left: 95.04950495049505%;"></a>
     
-        <a href="../demos/file-transfer.html" title="文件传输(二进制协议)" class="chapter done " data-progress="19.1" style="left: 96.03960396039604%;"></a>
+        <a href="../demos/file-transfer.html" title="文件传输(二进制协议)" class="chapter  " data-progress="19.1" style="left: 96.03960396039604%;"></a>
     
-        <a href="../demos/file_transfer2.html" title="文件传输(文本协议)" class="chapter done " data-progress="19.2" style="left: 97.02970297029702%;"></a>
+        <a href="../demos/file_transfer2.html" title="文件传输(文本协议)" class="chapter  " data-progress="19.2" style="left: 97.02970297029702%;"></a>
     
         <a href="../demos/mysql-width-workerman.html" title="Mysql数据库的使用" class="chapter  " data-progress="19.3" style="left: 98.01980198019803%;"></a>
     
@@ -1367,144 +1367,103 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_914">
+                    <section class="normal" id="section-gitbook_898">
                     
-                        <h1 id="-">文件传输(文本协议)</h1>
-<h3 id="-">文本传输协议说明</h3>
-<p>客户端将二进制文件用base64_encode编码（会增大1/3的体积），转变成明文方便传输。。整体协议采用 json+回车 格式传输，json包含了文件名、文件base64_encode后的数据。协议格式类似如下：</p>
-<p>{&quot;file_name&quot;:&quot;xxxx.jpg&quot;,&quot;file_data&quot;:&quot;PD9waHAKLyo......&quot;}\n</p>
-<h2 id="-">说明</h2>
-<p>下面以基本开发模型为例，Gateway/Worker模型开发与其类似（onGatewayMessage相当于dealInput，onMessage相当于dealProcess）。</p>
-<h3 id="-applications-filetransferdemo-texttransfer-php">创建文件 applications/FileTransferDemo/TextTransfer.php</h3>
+                        <h1 id="-">定时任务</h1>
+<h2 id="-">接口</h2>
+<pre><code>void \Man\Core\Lib\Task::add(int $time_interval, callable $callback [, bool $persistent = true])
+</code></pre><p>定时执行某个函数或者类方法</p>
+<h3 id="-">参数</h3>
+<p>time_interval</p>
+<p>多长时间执行一次，单位秒</p>
+<p>callback</p>
+<p>回调函数</p>
+<p>persistent</p>
+<p>是否是持久的，如果只想定时执行一次，则传递false。默认是true，即一直定时执行。</p>
+<h3 id="-">返回值</h3>
+<p>无返回值，任何返回值都会被视为无效</p>
+<h2 id="-">范例</h2>
+<p>新建一个文件 applications/Demo/Task.php</p>
 <pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
 <span class="hljs-comment">/*
- * 文件传输协议
- * 客户端将文件base64_encode 然后通过 json+回车 协议发送过来
- * 协议样例:
- * {"file_name":"xxx","file_data":"base64_encode(file)"}\n
- *
- */</span>
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TextTransfer</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Man</span>\<span class="hljs-title">Core</span>\<span class="hljs-title">SocketWorker</span>
+*  一个定时任务，定时向客户端发送数据
+*/</span>
+<span class="hljs-comment">// 向客户端发送数据必须载入这个类</span>
+<span class="hljs-keyword">require_once</span> <span class="hljs-keyword">__DIR__</span> . <span class="hljs-string">'/Lib/Gateway.php'</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Task</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Man</span>\<span class="hljs-title">Core</span>\<span class="hljs-title">SocketWorker</span>
 {</span>
-
-    <span class="hljs-comment">/**
-      * 分包，判断数据是否完整
-      * 不完整返回还需要多少字节数据要接收
-      * 完整的话返回0
-      *
-     **/</span>
-    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">dealInput</span><span class="hljs-params">(<span class="hljs-variable">$recv_buffer</span>)</span>
+    <span class="hljs-comment">// 子进程启动时会运行onStart， 整个进程生命周期只运行一次，这里用来注册定时任务</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onStart</span><span class="hljs-params">()</span>
     {</span>
-        <span class="hljs-keyword">if</span>(<span class="hljs-variable">$recv_buffer</span>[strlen(<span class="hljs-variable">$recv_buffer</span>)-<span class="hljs-number">1</span>] !== <span class="hljs-string">"\n"</span>)
-        {
-            <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
-        }
-        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+        <span class="hljs-comment">// 初始化定时任务(2.1.5及以上版本无需调用此函数)</span>
+        \Man\Core\Lib\Task::init(<span class="hljs-variable">$this</span>-&gt;event);
+
+        <span class="hljs-comment">// 定时任务1的时间间隔2秒</span>
+        <span class="hljs-variable">$time_interval1</span> = <span class="hljs-number">2</span>;
+        <span class="hljs-comment">// 设定定时任务</span>
+        \Man\Core\Lib\Task::add(<span class="hljs-variable">$time_interval1</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span>{</span>
+            <span class="hljs-comment">// 任务逻辑，这里只发了一个字符串</span>
+            \Lib\Gateway::sendToAll(<span class="hljs-string">"I'm Task 1\n"</span>);
+        });
+
+        <span class="hljs-comment">// 定时任务2的时间间隔10秒</span>
+        <span class="hljs-variable">$time_interval2</span> = <span class="hljs-number">10</span>;
+        <span class="hljs-comment">// 设定定时任务，定时运行 $this-&gt;dealProcess();</span>
+        \Man\Core\Lib\Task::add(<span class="hljs-variable">$time_interval2</span>, <span class="hljs-keyword">array</span>(<span class="hljs-variable">$this</span>, <span class="hljs-string">'taskTwo'</span>));
     }
 
-    <span class="hljs-comment">/**
-      * 收到完整上传数据后如何处理
-      *
-     **/</span>
-    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">dealProcess</span><span class="hljs-params">(<span class="hljs-variable">$recv_buffer</span>)</span>
+    <span class="hljs-comment">// 另外一个要定时运行的类成员函数</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">taskTwo</span><span class="hljs-params">()</span>
     {</span>
-        <span class="hljs-comment">// 解包</span>
-        <span class="hljs-variable">$package_data</span> = json_decode(trim(<span class="hljs-variable">$recv_buffer</span>), <span class="hljs-keyword">true</span>);
-        <span class="hljs-keyword">if</span>(!<span class="hljs-keyword">isset</span>(<span class="hljs-variable">$package_data</span>[<span class="hljs-string">'file_name'</span>]) || !<span class="hljs-keyword">isset</span>(<span class="hljs-variable">$package_data</span>[<span class="hljs-string">'file_data'</span>]))
-        {
-            <span class="hljs-variable">$this</span>-&gt;sendToClient(<span class="hljs-string">"package error\n"</span>);
-            <span class="hljs-keyword">return</span>;
-        }
-        <span class="hljs-comment">// 取出文件名</span>
-        <span class="hljs-variable">$file_name</span> = <span class="hljs-variable">$package_data</span>[<span class="hljs-string">'file_name'</span>];
-        <span class="hljs-comment">// 取出base64_encode后的文件数据</span>
-        <span class="hljs-variable">$file_data</span> = <span class="hljs-variable">$package_data</span>[<span class="hljs-string">'file_data'</span>];
-        <span class="hljs-comment">// base64_decode还原回原来的二进制文件数据</span>
-        <span class="hljs-variable">$file_data</span> = base64_decode(<span class="hljs-variable">$file_data</span>);
-        <span class="hljs-comment">// 文件保存路径</span>
-        <span class="hljs-variable">$save_path</span> = <span class="hljs-string">"/tmp/$file_name"</span>;
-        <span class="hljs-comment">// 保存文件</span>
-        file_put_contents(<span class="hljs-variable">$save_path</span>, <span class="hljs-variable">$file_data</span>);
-        <span class="hljs-comment">// 发送给客户端结果</span>
-        <span class="hljs-variable">$this</span>-&gt;sendToClient(<span class="hljs-string">"upload $file_name to $save_path success.\n"</span>);
+       \Lib\Gateway::sendToAll(<span class="hljs-string">"I'm Task 2\n"</span>);
     }
 
-}
+
+
+    <span class="hljs-comment">// 这里不接收请求，函数留空</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">dealInput</span><span class="hljs-params">(<span class="hljs-variable">$recv_buffer</span>)</span>{</span>}
+
+    <span class="hljs-comment">// 这里不接收请求，函数留空</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">dealProcess</span><span class="hljs-params">(<span class="hljs-variable">$recv_buffer</span>)</span>{</span>}
+    }
 </code></pre>
-<h2 id="-workerman-conf-conf-d-textptotocoltransfer-conf">创建配置文件 workerman/conf/conf.d/TextPtotocolTransfer.conf</h2>
-<pre><code class="lang-ini"><span class="hljs-comment">;业务进程入口文件</span>
-<span class="hljs-setting">worker_file = <span class="hljs-value">../applications/FileTransferDemo/TextTransfer.php</span></span>
-<span class="hljs-comment">;传输层协议 ip 及端口</span>
-<span class="hljs-setting">listen = <span class="hljs-value">tcp://<span class="hljs-number">0.0</span>.<span class="hljs-number">0.0</span>:<span class="hljs-number">8444</span></span></span>
-<span class="hljs-comment">;启动多少服务进程</span>
-<span class="hljs-setting">start_workers = <span class="hljs-value"><span class="hljs-number">5</span></span></span>
-<span class="hljs-comment">;以哪个用户运行该进程，为了安全请使用权限较低的用户，例如www-data nobody</span>
-<span class="hljs-setting">user = <span class="hljs-value">root</span></span>
-<span class="hljs-comment">;请求到来时预读长度，这里固定1</span>
-<span class="hljs-setting">preread_length = <span class="hljs-value"><span class="hljs-number">1</span></span></span>
-<span class="hljs-comment">;长链接</span>
-<span class="hljs-setting">persistent_connection = <span class="hljs-value"><span class="hljs-number">1</span></span></span>
+<p>然后新建一个配置进程文件
+workerman/conf/conf.d/Task.conf</p>
+<pre><code class="lang-ini"><span class="hljs-comment">;定时任务进程入口文件</span>
+<span class="hljs-setting">worker_file = <span class="hljs-value">../applications/Demo/Task.php</span></span>
+<span class="hljs-comment">;定时任务不接收请求，但是还是要配置一个(2.1.5及以上版本不用设置)</span>
+<span class="hljs-setting">listen = <span class="hljs-value">udp://<span class="hljs-number">0.0</span>.<span class="hljs-number">0.0</span>:<span class="hljs-number">12345</span></span></span>
+<span class="hljs-comment">;启动多少进程，定时任务一般是一个进程，也可以开多个但是要注意多进程会不会给你带来并发问题</span>
+<span class="hljs-setting">start_workers=<span class="hljs-value"><span class="hljs-number">1</span></span></span>
+<span class="hljs-comment">;以哪个用户运行这个worker进程,要设置成权限较低的用户，如 www-data nobody</span>
+<span class="hljs-setting">user=<span class="hljs-value">root</span></span>
 </code></pre>
-<h2 id="-textclient-php-php-">客户端文件 textclient.php （这里用php模拟客户端上传）</h2>
-<pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
-<span class="hljs-comment">/** 上传文件客户端 **/</span>
-
-<span class="hljs-comment">// 上传地址</span>
-<span class="hljs-variable">$address</span> = <span class="hljs-string">"127.0.0.1:8444"</span>;
-
-<span class="hljs-comment">// 检查上传文件路径参数</span>
-<span class="hljs-keyword">if</span>(!<span class="hljs-keyword">isset</span>(<span class="hljs-variable">$argv</span>[<span class="hljs-number">1</span>]))
-{
-   <span class="hljs-keyword">exit</span>(<span class="hljs-string">"use php client.php \$file_path\n"</span>);
-}
-
-<span class="hljs-comment">// 上传文件路径</span>
-<span class="hljs-variable">$file_to_transfer</span> = trim(<span class="hljs-variable">$argv</span>[<span class="hljs-number">1</span>]);
-
-<span class="hljs-comment">// 上传的文件本地不存在</span>
-<span class="hljs-keyword">if</span>(!is_file(<span class="hljs-variable">$file_to_transfer</span>))
-{
-    <span class="hljs-keyword">exit</span>(<span class="hljs-string">"$file_to_transfer not exist\n"</span>);
-}
-
-<span class="hljs-comment">// 建立socket连接</span>
-<span class="hljs-variable">$client</span> = stream_socket_client(<span class="hljs-variable">$address</span>, <span class="hljs-variable">$errno</span>, <span class="hljs-variable">$errmsg</span>);
-<span class="hljs-keyword">if</span>(!<span class="hljs-variable">$client</span>)
-{
-    <span class="hljs-keyword">exit</span>(<span class="hljs-string">"$errmsg\n"</span>);
-}
-stream_set_blocking(<span class="hljs-variable">$client</span>, <span class="hljs-number">1</span>);
-
-<span class="hljs-comment">// 文件名</span>
-<span class="hljs-variable">$file_name</span> = basename(<span class="hljs-variable">$file_to_transfer</span>);
-
-<span class="hljs-comment">// 文件二进制数据</span>
-<span class="hljs-variable">$file_data</span> = file_get_contents(<span class="hljs-variable">$file_to_transfer</span>);
-
-<span class="hljs-comment">// base64编码</span>
-<span class="hljs-variable">$file_data</span> = base64_encode(<span class="hljs-variable">$file_data</span>);
-
-<span class="hljs-comment">// 数据包</span>
-<span class="hljs-variable">$package_data</span> = <span class="hljs-keyword">array</span>(
-    <span class="hljs-string">'file_name'</span> =&gt; <span class="hljs-variable">$file_name</span>,
-    <span class="hljs-string">'file_data'</span> =&gt; <span class="hljs-variable">$file_data</span>,
-);
-
-<span class="hljs-comment">// 协议包 json+回车</span>
-<span class="hljs-variable">$package</span> = json_encode(<span class="hljs-variable">$package_data</span>).<span class="hljs-string">"\n"</span>;
-
-<span class="hljs-comment">// 执行上传</span>
-fwrite(<span class="hljs-variable">$client</span>, <span class="hljs-variable">$package</span>);
-
-<span class="hljs-comment">// 打印结果</span>
-<span class="hljs-keyword">echo</span> fread(<span class="hljs-variable">$client</span>, <span class="hljs-number">8192</span>);
-~
+<p>最后启动workerman并测试
+运行 ./workerman/bin/workermand restart
+然后运行telnet 127.0.0.1 8480
+就可以看到定时任务的效果了，类似如下</p>
+<pre><code>telnet 127.0.0.1 8480
+Trying 127.0.0.1...
+Connected to 127.0.0.1.
+Escape character is &#39;^]&#39;.
+type in your name:
+ff
+chat room login success, your client_id is 7, name is ff
+use client_id:words send message to one user
+use words send message to all
+ff[7] come
+I&#39;m Task 1
+I&#39;m Task 1
+I&#39;m Task 1
+I&#39;m Task 2
+I&#39;m Task 1
+I&#39;m Task 1
+I&#39;m Task 1
+I&#39;m Task 1
+I&#39;m Task 1
+I&#39;m Task 2
 </code></pre>
-<h2 id="-">测试</h2>
-<pre><code class="lang-php"><span class="hljs-comment">// 命令行运行，其中$filepath是本地文件的路径</span>
-php textclient.php <span class="hljs-variable">$filepath</span>
-</code></pre>
-
                     
                     </section>
                 
@@ -1513,10 +1472,10 @@ php textclient.php <span class="hljs-variable">$filepath</span>
         </div>
 
         
-        <a href="../demos/file-transfer.html" class="navigation navigation-prev " aria-label="Previous page: 文件传输(二进制协议)"><i class="fa fa-angle-left"></i></a>
+        <a href="../advanced/heartbeat.html" class="navigation navigation-prev " aria-label="Previous page: 心跳检测"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../demos/mysql-width-workerman.html" class="navigation navigation-next " aria-label="Next page: Mysql数据库的使用"><i class="fa fa-angle-right"></i></a>
+        <a href="../stresstest/README.html" class="navigation navigation-next " aria-label="Next page: 压力测试"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

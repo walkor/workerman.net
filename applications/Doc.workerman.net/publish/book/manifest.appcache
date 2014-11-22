@@ -1,32 +1,33 @@
 CACHE MANIFEST
-# Revision 1416416509115
+# Revision 1416667032745
 
 CACHE:
 faq/README.html
-faq/extension-install.html
 faq/debugging.html
+faq/extension-install.html
 index.html
 advanced/README.html
 advanced/configrestart.html
 advanced/heartbeat.html
+advanced/task.html
 advanced/telnet.html
-configure/appconfig.html
 configure/README.html
+configure/appconfig.html
 configure/configstandard.html
-configure/monitorconf.html
 configure/filemonitorconf.html
 configure/mainconfig.html
-continue/README.html
+configure/monitorconf.html
 configure/statisticsconf.html
+continue/README.html
 debug/README.html
-debug/strace.html
 debug/base_debug.html
+debug/strace.html
 debug/tcpdump.html
-demos/file-transfer.html
 demos/README.html
+demos/file-transfer.html
 demos/file_transfer2.html
-demos/p2p-udp-hole-punching.html
 demos/mysql-width-workerman.html
+demos/p2p-udp-hole-punching.html
 dev/README.html
 dev/configapp.html
 dev/dealinput.html
@@ -95,8 +96,8 @@ start/workerman.html
 statistics/README.html
 statistics/auth_check.html
 statistics/how_to_use.html
-statistics/statistics_feature.html
 statistics/principle.html
+statistics/statistics_feature.html
 statistics/what_is_statistics.html
 stresstest/README.html
 webserver/README.html
