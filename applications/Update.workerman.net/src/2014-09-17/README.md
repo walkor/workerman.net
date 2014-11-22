@@ -1,6 +1,6 @@
 # 2014-09-17
 ### 版本号: 2.1.4
-### 下载地址: [点击下载版本2.1.4](https://github.com/walkor/workerman/archive/master.zip)
+### 下载地址: [点击下载版本2.1.4](https://github.com/walkor/workerman-2.1.4/archive/master.zip)
 ### 特性更新
 ```  更新全部针对针对Gateway/Worker模型  ```
  * 记录了更详细的日志

@@ -4,7 +4,7 @@
     <head>
         
         <meta charset="UTF-8">
-        <title>2014-09-17 | WorkerMan历史版本及更新日志</title>
+        <title>2014-11-22 | WorkerMan历史版本及更新日志</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 0.5.2">
@@ -17,10 +17,10 @@
     
     
     
-    <link rel="next" href="../2014-08-27/README.html" />
+    <link rel="next" href="../2014-09-17/README.html" />
     
     
-    <link rel="prev" href="../2014-11-22/README.html" />
+    <link rel="prev" href="../index.html" />
     
 
         
@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="2" data-basepath=".." data-revision="1416662734746">
+    <div class="book"  data-level="1" data-basepath=".." data-revision="1416662734746">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -161,7 +161,7 @@
             <div class="page-wrapper" tabindex="-1">
                 <div class="book-progress">
     <div class="bar">
-        <div class="inner" style="width: 50%;min-width: 25%;"></div>
+        <div class="inner" style="width: 25%;min-width: 0%;"></div>
     </div>
     <div class="chapters">
     
@@ -169,7 +169,7 @@
     
         <a href="../2014-11-22/README.html" title="2014-11-22" class="chapter done new-chapter" data-progress="1" style="left: 25%;"></a>
     
-        <a href="../2014-09-17/README.html" title="2014-09-17" class="chapter done new-chapter" data-progress="2" style="left: 50%;"></a>
+        <a href="../2014-09-17/README.html" title="2014-09-17" class="chapter  new-chapter" data-progress="2" style="left: 50%;"></a>
     
         <a href="../2014-08-27/README.html" title="2014-08-27" class="chapter  new-chapter" data-progress="3" style="left: 75%;"></a>
     
@@ -180,18 +180,14 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_345">
+                    <section class="normal" id="section-gitbook_346">
                     
-                        <h1 id="2014-09-17">2014-09-17</h1>
-<h3 id="-2-1-4">版本号: 2.1.4</h3>
-<h3 id="-2-1-4-https-github-com-walkor-workerman-2-1-4-archive-master-zip-">下载地址: <a href="https://github.com/walkor/workerman-2.1.4/archive/master.zip" target="_blank">点击下载版本2.1.4</a></h3>
+                        <h1 id="2014-11-22">2014-11-22</h1>
+<h3 id="-2-1-5">版本号: 2.1.5</h3>
+<h3 id="-2-1-5-https-github-com-walkor-workerman-archive-master-zip-">下载地址: <a href="https://github.com/walkor/workerman/archive/master.zip" target="_blank">点击下载版本2.1.5</a></h3>
 <h3 id="-">特性更新</h3>
-<p><code>更新全部针对针对Gateway/Worker模型</code></p>
-<ul>
-<li>记录了更详细的日志</li>
-<li>增加了一些重要接口的统计监控，监控数据在浏览器中访问 ip:55757 查看</li>
-<li>心跳设置支持ping_data为空(即设置<code>ping_data=</code>)。即服务端不发送心跳，但是会定时检查客户端的最后响应时间，如果在<code>ping_interval*ping_not_response_limit</code>时间内客户端一直空闲无任何数据发来则断开客户端的连接。同样<code>ping_interval=0</code>时关闭检测。</li>
-</ul>
+<p>1、G/W模型中BusinessWorker.conf.listen不用配置</p>
+<p>2、workermand status 命令增加一项status列，展示每个子进程处于ilde(空闲状态)还是busy（忙）状态</p>
 
                     
                     </section>
@@ -201,10 +197,10 @@
         </div>
 
         
-        <a href="../2014-11-22/README.html" class="navigation navigation-prev " aria-label="Previous page: 2014-11-22"><i class="fa fa-angle-left"></i></a>
+        <a href="../index.html" class="navigation navigation-prev " aria-label="Previous page: Introduction"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../2014-08-27/README.html" class="navigation navigation-next " aria-label="Next page: 2014-08-27"><i class="fa fa-angle-right"></i></a>
+        <a href="../2014-09-17/README.html" class="navigation navigation-next " aria-label="Next page: 2014-09-17"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

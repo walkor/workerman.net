@@ -90,6 +90,7 @@
    * [查看运行状态](start/workerman.md)
    * [telnet远程登录控制](advanced/telnet.md)
    * [心跳检测](advanced/heartbeat.md)
+   * [定时任务](advanced/task.md)
 * [压力测试](stresstest/README.md)
 * [WorkerMan进程模型](process-model/README.md)
    * [master-worker模型](process-model/master-worker.md)
