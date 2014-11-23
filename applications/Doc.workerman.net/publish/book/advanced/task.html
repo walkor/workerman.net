@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="16.4" data-basepath=".." data-revision="1416667032744">
+    <div class="book"  data-level="16.4" data-basepath=".." data-revision="1416757763594">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -1367,7 +1367,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_898">
+                    <section class="normal" id="section-gitbook_1152">
                     
                         <h1 id="-">定时任务</h1>
 <h2 id="-">接口</h2>
@@ -1383,7 +1383,9 @@
 <h3 id="-">返回值</h3>
 <p>无返回值，任何返回值都会被视为无效</p>
 <h2 id="-">范例</h2>
-<p>新建一个文件 applications/Demo/Task.php</p>
+<p>定时给所有客户端发送一条消息，每2秒发送一个<code>I&#39;m Task 1\n</code>字符串，每10秒发送一个<code>I&#39;m Task 2\n</code>字符串</p>
+<h3 id="-">步骤</h3>
+<h4 id="1-applications-demo-task-php">1、新建一个文件 applications/Demo/Task.php</h4>
 <pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
 <span class="hljs-comment">/*
 *  一个定时任务，定时向客户端发送数据
@@ -1428,8 +1430,8 @@
     <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">dealProcess</span><span class="hljs-params">(<span class="hljs-variable">$recv_buffer</span>)</span>{</span>}
     }
 </code></pre>
-<p>然后新建一个配置进程文件
-workerman/conf/conf.d/Task.conf</p>
+<h4 id="2-">2、然后新建一个配置进程文件</h4>
+<p>workerman/conf/conf.d/Task.conf</p>
 <pre><code class="lang-ini"><span class="hljs-comment">;定时任务进程入口文件</span>
 <span class="hljs-setting">worker_file = <span class="hljs-value">../applications/Demo/Task.php</span></span>
 <span class="hljs-comment">;定时任务不接收请求，但是还是要配置一个(2.1.5及以上版本不用设置)</span>
@@ -1439,10 +1441,10 @@ workerman/conf/conf.d/Task.conf</p>
 <span class="hljs-comment">;以哪个用户运行这个worker进程,要设置成权限较低的用户，如 www-data nobody</span>
 <span class="hljs-setting">user=<span class="hljs-value">root</span></span>
 </code></pre>
-<p>最后启动workerman并测试
-运行 ./workerman/bin/workermand restart
-然后运行telnet 127.0.0.1 8480
-就可以看到定时任务的效果了，类似如下</p>
+<h4 id="3-workerman-">3、最后启动workerman并测试</h4>
+<p>运行 ./workerman/bin/workermand restart</p>
+<p>然后运行telnet 127.0.0.1 8480</p>
+<p>就可以看到定时任务的效果了，类似如下</p>
 <pre><code>telnet 127.0.0.1 8480
 Trying 127.0.0.1...
 Connected to 127.0.0.1.
@@ -1463,7 +1465,12 @@ I&#39;m Task 1
 I&#39;m Task 1
 I&#39;m Task 1
 I&#39;m Task 2
-</code></pre>
+</code></pre><h2 id="-">定时任务使用注意事项</h2>
+<p>1、可以在任意位置使用<code>\Man\Core\Lib\Task::add(int $time_interval, callable $callback [, bool $persistent = true])</code>添加定时任务,小于2.1.5版本的需要先手动运行<code>\Man\Core\Lib\Task::init($this-&gt;event);</code></p>
+<p>2、添加的任务在当前进程执行，如果任务很重（特别是涉及到网络IO的任务），可能会导致该进程阻塞，暂时无法处理其它业务。所以最好将耗时的任务放到单独的进程运行，例如建立一个Task进程运行</p>
+<p>3、当一个任务没有在预期的时间运行完，这时又到了下一个运行周期，则会等待当前任务完成才会运行。也就是说当前进程的任务都是串行执行的。</p>
+<p>4、要考虑到多进程设置了定时任务造成并发问题</p>
+
                     
                     </section>
                 

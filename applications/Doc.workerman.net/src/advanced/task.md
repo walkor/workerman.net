@@ -24,7 +24,10 @@ persistent
 无返回值，任何返回值都会被视为无效
 
 ## 范例
-新建一个文件 applications/Demo/Task.php
+定时给所有客户端发送一条消息，每2秒发送一个```I'm Task 1\n```字符串，每10秒发送一个```I'm Task 2\n```字符串
+
+### 步骤
+#### 1、新建一个文件 applications/Demo/Task.php
 
 ```php
 <?php
@@ -72,7 +75,7 @@ class Task extends Man\Core\SocketWorker
     }
 ```
 
-然后新建一个配置进程文件
+#### 2、然后新建一个配置进程文件
 workerman/conf/conf.d/Task.conf
 
 ```ini
@@ -86,9 +89,11 @@ start_workers=1
 user=root
 ```
 
-最后启动workerman并测试
+#### 3、最后启动workerman并测试
 运行 ./workerman/bin/workermand restart
+
 然后运行telnet 127.0.0.1 8480
+
 就可以看到定时任务的效果了，类似如下
 ```
 telnet 127.0.0.1 8480
@@ -113,3 +118,12 @@ I'm Task 1
 I'm Task 2
 ```
 
+
+## 定时任务使用注意事项
+1、可以在任意位置使用```\Man\Core\Lib\Task::add(int $time_interval, callable $callback [, bool $persistent = true])```添加定时任务,小于2.1.5版本的需要先手动运行```\Man\Core\Lib\Task::init($this->event);```
+
+2、添加的任务在当前进程执行，如果任务很重（特别是涉及到网络IO的任务），可能会导致该进程阻塞，暂时无法处理其它业务。所以最好将耗时的任务放到单独的进程运行，例如建立一个Task进程运行
+
+3、当一个任务没有在预期的时间运行完，这时又到了下一个运行周期，则会等待当前任务完成才会运行。也就是说当前进程的任务都是串行执行的。
+
+4、要考虑到多进程设置了定时任务造成并发问题
