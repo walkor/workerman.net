@@ -284,6 +284,7 @@
 		<td><a href="http://www.myebox.cn/" target="blank"><img src="/img/logos/ebox.png" alt="ebox 易泊网 logo"></a></td>
 		<td><a href="http://www.mitaole.com/" target="blank"><img src="/img/logos/mitaole.png" alt="米淘乐logo"></a></td>
 		<td><a href="http://www.duowan.com/" target="blank"><img src="/img/logos/duowan.png" alt="多玩logo"></a></td>
+		<td><a href="http://www.yuchats.com/" target="blank"><img src="/img/logos/meng-mark.png" alt="萌mark logo"></a></td>
 		<tr>
 		</table>
 	</div>
