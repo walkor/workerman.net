@@ -212,3 +212,7 @@ p
     font-weight:bold;
     margin-top:26px;
 }
+
+.anli>tbody>tr>td{
+	padding:8px;
+}
