@@ -54,7 +54,7 @@ class EchoService extends \Man\Core\SocketWorker
             // 获得服务器的日期
             case 'date':
             return $this->sendToClient(date('Y-m-d H:i:s')."\n");
-            // 获得服务器的负载
+            // 获得服务器的负载 （注意：sys_getloadavg只支持Linux系统）
             case 'load':
             return $this->sendToClient(var_export(sys_getloadavg(), true)."\n");
             case 'quit':
