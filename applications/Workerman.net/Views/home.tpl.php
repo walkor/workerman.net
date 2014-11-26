@@ -106,12 +106,11 @@
 				<h4 class="media-heading">
 					<a target="_blank" href="http://www.yuchats.com/">手机IM应用 YA！</a>
 				</h4>
-				<p>Ya！是一款极致简单、快速有效的下一代互联网沟通方式！
-用户登录后通过右划好友头像，向对方传递个通知，而对方收到通知后，也可以通过右划进行反馈。整个沟通过程极致有效，并有无数种使用方法。<br>
-" Ya "（Hi！）<br>
-" Ya Ya "（你好呀！）<br>
-" Ya Ya Ya Ya "（一起吃饭呗！）<br>
-" Ya "（好呀！） <br>
+				<p>“萌Mark是什么？图片社交？漫画工具？表情工具？”<br>
+				<br>
+　　“no，都不是。”<br>
+　　<br>
+　　我眼里的萌Mark是什么？
 				<a target="_blank" class="btn" href="http://www.yuchats.com/">本应用由www.yuchats.com提供</a></p>
 			</div>
 		</div>
