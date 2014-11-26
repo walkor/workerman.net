@@ -149,6 +149,18 @@
 			</div>
 		</div>
 		<div class="media">
+			 <a href="/workerman-jsonrpc" class="pull-left"><img src="/img/workerman-json-rpc.png" class="media-object" alt="workerman json RPC模块关系示意图"/></a>
+			<div class="media-body">
+				<h4 class="media-heading">
+					<a target="_blank" href="/workerman-json-rpc">json RPC远程调用框架</a>
+				</h4>
+				 <p>使用json数据格式通讯的远程调用系统，通讯格式简单明了，方便其它语言调用，并集成了监控模块。
+				 <br><a target="_blank" class="btn" href="/workerman-jsonrpc">详情 »</a>
+				 <a class="btn" target="_blank" href="https://github.com/walkor/workerman-jsonrpc">下载源代码 »</a>
+				 </p>
+			</div>
+		</div>
+		<div class="media">
 			 <a href="/workerman-chat" class="pull-left"><img src="/img/workerman-chat.png" class="media-object" alt="PHP聊天室示意图"/></a>
 			<div class="media-body">
 				<h4 class="media-heading">
