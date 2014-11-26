@@ -152,7 +152,7 @@
 			 <a href="/workerman-jsonrpc" class="pull-left"><img src="/img/workerman-json-rpc.png" class="media-object" alt="workerman json RPC模块关系示意图"/></a>
 			<div class="media-body">
 				<h4 class="media-heading">
-					<a target="_blank" href="/workerman-json-rpc">json RPC远程调用框架</a>
+					<a target="_blank" href="/workerman-jsonrpc">json RPC远程调用框架</a>
 				</h4>
 				 <p>使用json数据格式通讯的远程调用系统，通讯格式简单明了，方便其它语言调用，并集成了监控模块。
 				 <br><a target="_blank" class="btn" href="/workerman-jsonrpc">详情 »</a>
@@ -178,7 +178,7 @@
 				<h4 class="media-heading">
 					<a target="_blank" href="/workerman-statistics">分布式统计系统</a>
 				</h4>
-				<p>基于workerman socket框架开发的一款分布式统计监控系统，纯PHP开发、无需安装Mysql、Nginx、Apache等软件，只要你安装了PHP就行，需要Linux系统哦。
+				<p>基于workerman socket框架开发的一款分布式统计监控系统，纯PHP开发、无需安装Mysql、Nginx、Apache等软件。
 				<br><a target="_blank" class="btn" href="/workerman-statistics">详情 »</a>
 				<a class="btn" target="_blank" href="https://github.com/walkor/workerman-statistics">下载源代码 »</a>
 				</p>
@@ -272,5 +272,18 @@
 			</li>
 		</ul>
 		<div class="bd-ad"><?php global $bd_ad_250_250; echo $bd_ad_250_250;?></div>
+	</div>
+</div>
+
+<div class="row clearfix">
+	<div class="col-md-12 column">
+		<h4 class="btl">用户案例</h4>
+		<table>
+		<tr>
+		<td><a href="http://www.10ss.net/" target="blank"><img src="/img/logos/yilianyun.png" alt="易联云logo"></a></td>
+		<td><a href="http://www.myebox.cn/" target="blank"><img src="/img/logos/ebox.png" alt="ebox 易泊网 logo"></a></td>
+		<td><a href="http://www.mitaole.com/" target="blank"><img src="/img/logos/mitaole.png" alt="米淘乐logo"></a></td>
+		<tr>
+		</table>
 	</div>
 </div>
