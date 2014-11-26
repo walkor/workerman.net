@@ -278,11 +278,12 @@
 <div class="row clearfix">
 	<div class="col-md-12 column">
 		<h4 class="btl">用户案例</h4>
-		<table>
+		<table class="anli">
 		<tr>
 		<td><a href="http://www.10ss.net/" target="blank"><img src="/img/logos/yilianyun.png" alt="易联云logo"></a></td>
 		<td><a href="http://www.myebox.cn/" target="blank"><img src="/img/logos/ebox.png" alt="ebox 易泊网 logo"></a></td>
 		<td><a href="http://www.mitaole.com/" target="blank"><img src="/img/logos/mitaole.png" alt="米淘乐logo"></a></td>
+		<td><a href="http://www.duowan.com/" target="blank"><img src="/img/logos/duowan.png" alt="多玩logo"></a></td>
 		<tr>
 		</table>
 	</div>
