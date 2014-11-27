@@ -33,9 +33,9 @@
 					<a target="_blank" href="http://www.yuchats.com/">手机IM应用 YA！</a>
 				</h4>
 				<p>“萌Mark是什么？图片社交？漫画工具？表情工具？”<br>
-<br>
+				<br>
 　　“no，都不是。”<br>
-<br>
+　　<br>
 　　我眼里的萌Mark是什么？
 				<a target="_blank" class="btn" href="http://www.yuchats.com/">本应用由www.yuchats.com提供</a></p>
 			</div>
@@ -94,6 +94,18 @@
 				<p>一个可扩展的基于Websocket协议的聊天室，服务端采用workerman作为Socket服务器框架，客户端支持多浏览器统一接口，支持浏览器原生Websocket同时支持Flash实现的Websocket。
 				<br><a target="_blank" class="btn" href="/workerman-chat">详情 »</a>
 				<a class="btn" target="_blank" href="https://github.com/walkor/workerman-chat">下载源代码 »</a>
+				</p>
+			</div>
+		</div>
+		<div class="media">
+			 <a href="https://github.com/walkor/web-msg-sender" class="pull-left"><img src="/img/web-msg-sender.png" class="media-object" alt="web 消息推送示意图" /></a>
+			<div class="media-body">
+				<h4 class="media-heading">
+					<a target="_blank" href="https://github.com/walkor/web-msg-sender">分布式统计系统</a>
+				</h4>
+				<p>基于websocket+workerman的web消息推送系统，能够通过网页实时推送消息给所有用户，支持各种浏览器（需要浏览器支持html5或者flash）
+				<br><a target="_blank" class="btn" href="https://github.com/walkor/web-msg-sender">详情 »</a>
+				<a class="btn" target="_blank" href="https://github.com/walkor/web-msg-sender">下载源代码 »</a>
 				</p>
 			</div>
 		</div>
