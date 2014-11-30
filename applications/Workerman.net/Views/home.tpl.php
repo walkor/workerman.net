@@ -104,7 +104,7 @@
 			<a href="http://www.yuchats.com/" class="pull-left" target="_blank"><img src="/img/app-ya.png" class="media-object" alt='workerman 手机im ya' /></a>
 			<div class="media-body">
 				<h4 class="media-heading">
-					<a target="_blank" href="http://www.yuchats.com/">手机IM应用 YA！</a>
+					<a target="_blank" href="http://www.yuchats.com/">手机IM萌Mark</a>
 				</h4>
 				<p>“萌Mark是什么？图片社交？漫画工具？表情工具？”<br>
 				<br>
