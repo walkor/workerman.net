@@ -1,5 +1,5 @@
 # Monitor.conf
-**(WorkkerMan内置应用模块)**
+**(WorkkerMan内置应用模块，WorkerMan>=2.1.6此配置被移除)**
 
 **位置：**
 workerman/conf/conf.d/Monitor.conf
@@ -49,5 +49,11 @@ password=yourpassword
 **max_mem_limit:**子进程最大内存阈值(单位KByte)，如果某个子进程超过这个值则安全重启(reload)这个进程，以避免内存耗尽
 
 **password:**远程登录时需要提供的密码
+
+**注意**
+
+此配置在WorkerMan>=2.1.6时被合并到workerman/conf/workerman.conf中的[Monitor]段表示，并且listen默认使用本地unixsocket，地址默认为listen=unix://workerman_path/workerman/bin/unixsock，你仍然可以配置成Internet域的地址如listen=tcp://0.0.0.0:2009以便telnet远程登录
+
+
 
 

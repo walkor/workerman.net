@@ -1,5 +1,5 @@
 # FileMonitor.conf
-**(WorkkerMan内置应用模块)**
+**(WorkkerMan内置应用模块，WorkerMan>=2.1.6被移除)**
 
 **文件位置：**workerman/conf/conf.d/FileMonitor.conf
 
@@ -26,6 +26,5 @@ exclude_path[]=/path/example.php
 
 有时文件有更新时我们并不希望自动运行reload命令重启子进程去更新文件，例如Gateway/Worker模型中当Store类的数据文件```/tmp/xxx/gateway.store.cache.php```，这是我们可以把这个文件或者文件的目录加到FileMonitor的监控白名单中，例如FileMonitor.conf加上exclude_path[]=/tmp/xxx/代表将/tmp/xxx/下的所有文件加入到监控白名单中，也就是不监控这些文件的更新。
 
-**FileMonitor默认是开启的，如果不需要此模块，可以将此配置文件按删除或者移出**
-
+**WorkerMan>=2.1.6版本，FileMonitor被移除，并将文件监控工作交给各个进程自己监控**
 
