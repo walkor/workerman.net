@@ -6,7 +6,7 @@
 └── workerman     // workerman主程序
     ├── bin       // 启动停止脚本
     ├── Common    // 一些workerman内置的应用程序，如WebServer、监控相关应用(Monitor,FileMonitor)
-    ├── conf      // 各个应用程序的配置
+    ├── conf      // workerman配置
     ├── Core      // workerman核心文件
     └── logs      // workerman日志
 ```

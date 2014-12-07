@@ -18,9 +18,9 @@
 
 ## 配置文件
 
-1、配置文件在```workerman/conf/conf.d/```下
+1、配置文件默认放在applications/ChatApp/conf.d下（WorkerMan版本小于2.1.6时配置文件固定在```workerman/conf/conf.d/```下)
 
-2、配置文件名称一般与入口文件名相同并以conf为后缀，如```workerman/conf/conf.d/ChatApp.conf```
+2、配置文件名称一般与入口文件名相同并以conf为后缀，如```applications/ChatApp/conf.d/ChatApp.conf```
 
 *GateWay/Worker模型中配置文件已经配置好，开发者可以直接使用，有必要时可以做相应修改*
 
