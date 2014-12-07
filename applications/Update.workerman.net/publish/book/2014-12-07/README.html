@@ -4,7 +4,7 @@
     <head>
         
         <meta charset="UTF-8">
-        <title>2014-08-27 | WorkerMan历史版本及更新日志</title>
+        <title>2014-12-07 | WorkerMan历史版本及更新日志</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 0.5.2">
@@ -17,10 +17,10 @@
     
     
     
-    <link rel="next" href="../2014-08-06/README.html" />
+    <link rel="next" href="../2014-11-22/README.html" />
     
     
-    <link rel="prev" href="../2014-09-17/README.html" />
+    <link rel="prev" href="../index.html" />
     
 
         
@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="4" data-basepath=".." data-revision="1417973031070">
+    <div class="book"  data-level="1" data-basepath=".." data-revision="1417973031070">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -170,7 +170,7 @@
             <div class="page-wrapper" tabindex="-1">
                 <div class="book-progress">
     <div class="bar">
-        <div class="inner" style="width: 80%;min-width: 60%;"></div>
+        <div class="inner" style="width: 20%;min-width: 0%;"></div>
     </div>
     <div class="chapters">
     
@@ -178,11 +178,11 @@
     
         <a href="../2014-12-07/README.html" title="2014-12-07" class="chapter done new-chapter" data-progress="1" style="left: 20%;"></a>
     
-        <a href="../2014-11-22/README.html" title="2014-11-22" class="chapter done new-chapter" data-progress="2" style="left: 40%;"></a>
+        <a href="../2014-11-22/README.html" title="2014-11-22" class="chapter  new-chapter" data-progress="2" style="left: 40%;"></a>
     
-        <a href="../2014-09-17/README.html" title="2014-09-17" class="chapter done new-chapter" data-progress="3" style="left: 60%;"></a>
+        <a href="../2014-09-17/README.html" title="2014-09-17" class="chapter  new-chapter" data-progress="3" style="left: 60%;"></a>
     
-        <a href="../2014-08-27/README.html" title="2014-08-27" class="chapter done new-chapter" data-progress="4" style="left: 80%;"></a>
+        <a href="../2014-08-27/README.html" title="2014-08-27" class="chapter  new-chapter" data-progress="4" style="left: 80%;"></a>
     
         <a href="../2014-08-06/README.html" title="2014-08-06" class="chapter  new-chapter" data-progress="5" style="left: 100%;"></a>
     
@@ -191,25 +191,26 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_4669">
+                    <section class="normal" id="section-gitbook_4672">
                     
-                        <h1 id="2014-08-27">2014-08-27</h1>
-<h3 id="-2-1-3">版本号: 2.1.3</h3>
-<h3 id="-2-1-3-https-github-com-walkor-workerman-2-1-3-archive-master-zip-">下载地址: <a href="https://github.com/walkor/workerman-2.1.3/archive/master.zip" target="_blank">点击下载版本2.1.3</a></h3>
+                        <h1 id="2014-12-07">2014-12-07</h1>
+<h3 id="-2-1-6">版本号: 2.1.6</h3>
+<h3 id="-2-1-6-https-github-com-walkor-workerman-archive-master-zip-">下载地址: <a href="https://github.com/walkor/workerman/archive/master.zip" target="_blank">点击下载版本2.1.6</a></h3>
 <h3 id="-">特性更新</h3>
-<p><code>更新全部针对针对Gateway/Worker模型</code></p>
-<p><strong>主要是去掉了uid的概念，取而代之使用client_id唯一标志一个客户端（因为一个uid可能发起多个链接，例如聊天室应用中用户登录了多个房间，所以需要client_id唯一标识每个房间的链接，而uid无法唯一标识），注意client_id是系统自动生成的，为int整型。</strong></p>
-<ul>
-<li>去掉<code>Gateway::onConnect</code>方法，统一使用<code>Gateway::onMessage($client_id, $message)</code></li>
-<li>使用<code>Gateway::sendToClient($client_id, $message)</code>取代原<code>Gateway::sendToUid($uid, $message)</code></li>
-<li>使用<code>Gateway::sendToCurrentClient($message)</code>取代原来的<code>Gateway::sendToCurrentUid($message)</code></li>
-<li>使用<code>Gateway::kickClient($client_id)</code>取代原来<code>Gateway::kickUid($uid)</code></li>
-<li>使用<code>Gateway::kickCurrentClient()</code>取代原来<code>Gateway::kickCurrentUid()</code></li>
-<li>废除<code>Gateway::storeUid</code>方法，该方法的工作由框架内部自动完成，开发者不用再关注</li>
-<li>废除<code>Gateway::notifyConnectionSuccess</code>方法，该方法的工作由框架内部自动完成，开发者不用再关注</li>
-<li>废除<code>Gateway::deleteUidAddress</code>方法，该方法的工作由框架内部自动完成，开发者不用再关注</li>
-</ul>
-<p><strong>上一版本未验证用户走<code>Gateway::onConnect($message)</code>,已经验证的用户</strong>（<em>调用<code>Gateway::notifyConnectionSuccess($uid)</code>验证</em>）<strong>走<code>Gateway::onMessage($uid, $message)</code>，以后的版本废除了<code>Gateway::onConnect($message)</code>，统一使用<code>Gateway::onMessge($client_id, $message)</code>处理用户请求其中<code>client_id</code>由系统自动生成，唯一标识一个客户端，如果想向这个客户端发送消息，使用<code>Gateway::sendToClient($client_id, $message)</code>。用户是否已经验证可以使用<code>$_SESSION</code>来存储，例如用户合法就设置<code>$_SESSION[&#39;uid&#39;]=$uid</code>，这里的uid才是真正的用户uid，后面的请求就可以通过判断<code>$_SESSION[&#39;uid&#39;]</code>来判断用户是否通过验证</strong></p>
+<p>1、使用主进程监控终端是否关闭并通知各个子进程</p>
+<p>2、FileMonitor模块移除，在debug=1时，每个子进程监控自己使用的文件是否有更新并重启加载</p>
+<p>3、Monitor配置合并到主配置workerman/conf/workerman.conf中的[Monitor]段中，listen默认使用unix域socket，并且简化了配置</p>
+<p>4、支持重定向输出文件stdout_file配置，例如stdout_file=../output.log表示不管debug是否为1，任何echo var_dump等打印输出全部记录到output.log文件中。注意打印内容很多时会使得stdout_file体积很大，并且由于磁盘IO对性能有一定的影响</p>
+<p>5、主配置中支持使用include指定应用配置文件位置，之前的版本固定为<code>include=./conf/conf.d/*.conf</code>，现在为<code>../applications/*/conf.d/*.conf</code>，即将应用配置与应用放在一起，更加方便。你也可以配置成其它位置如<code>include=/etc/workerman/conf.d/*.ini</code>则WorkerMan启动时是到<code>/etc/workerman/conf.d/</code>下查找ini文件作为应用配置</p>
+<p>6、主配置中pid_file可以不用配置，默认使用<code>workerman/bin/pid</code>作为pid的存储文件，这样当运行多个WorkerMan实例时就不用再更改pid位置去解决位置冲突。当然也可以如以前版本，配置成自己想要的存储位置。</p>
+<p>7、应用配置增加enbale配置，代表是否启动对应的应用，不配置默认启动，enable=0则不启动。</p>
+<p>8、配置中支持WORKERMAN_ROOT_DIR常量，代表workerman目录位置，例如workerman-chat中代表<code>workerman-chat/workerman</code>。例如配置WebServer的<code>worker_file=WORKERMAN_ROOT_DIR/Common/WebServer.php</code></p>
+<h2 id="-">升级注意</h2>
+<p>1、升级时将原项目备份，git clone或者下载最新的版本，将业务代码拷贝到新的workerman中</p>
+<p>2、注意应用配置移动到了applications/yourApp/conf.d下，如果想使用老的配置位置，可以配置<code>workerman/conf/workerman.conf.include=./conf/conf.d/*.conf</code></p>
+<p>3、worker_file配置路径可以是相对路径，如果是相对路径，则是相对于该配置文件的路径。也可以使用WORKERMAN_ROOT_DIR常量配置路径，例如<code>start_file=WORKERMAN_ROOT_DIR/applications/Demo/Bootstrap/Gateway.php</code></p>
+<p>4、FileMonitor模块已经被移除，对应的配置文件已经删掉</p>
+<p>5、Monitor模块配置合并到主配置中的[Monitor]段中</p>
 
                     
                     </section>
@@ -219,10 +220,10 @@
         </div>
 
         
-        <a href="../2014-09-17/README.html" class="navigation navigation-prev " aria-label="Previous page: 2014-09-17"><i class="fa fa-angle-left"></i></a>
+        <a href="../index.html" class="navigation navigation-prev " aria-label="Previous page: Introduction"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../2014-08-06/README.html" class="navigation navigation-next " aria-label="Next page: 2014-08-06"><i class="fa fa-angle-right"></i></a>
+        <a href="../2014-11-22/README.html" class="navigation navigation-next " aria-label="Next page: 2014-11-22"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
