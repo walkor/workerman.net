@@ -3,7 +3,7 @@ namespace WorkerMan\Modules;
 
 function workerman_flappybird()
 {
-    $html_title = 'workerman-flappy-bird | flappy bird 多人在线版源代码 PHP+Websocket+HTML5';
+    $html_title = 'workerman-flappy-bird | flappy bird （像素小鸟）多人在线版源代码 PHP+Websocket+HTML5';
     $html_nav = 'applications';
     $github_repo = 'workerman-flappy-bird';
     $download_flappybird_count_key = 'download_flappybird_count';

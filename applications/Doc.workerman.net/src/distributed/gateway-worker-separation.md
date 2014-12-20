@@ -1,6 +1,6 @@
 # gateway worker 分离部署
 
-以applications/Demo为例，假如需要部署三台服务器提供高可用服务。瓶颈在worker进程，则可使用1台作为gateway服务器，另外两台做worker服务器。（如果瓶颈在gateway进程（一般是带宽瓶颈），则可以2台gateway机器，1台worler机器，部署方法类似）。由于瓶颈只在worker进程或者Gateway进程，所以不需要二者同时扩容。所以可以分开部署并根据情况扩容。
+以applications/Demo为例，假如需要部署三台服务器提供高可用服务。瓶颈在worker进程，则可使用1台作为gateway服务器，另外两台做worker服务器。（如果瓶颈在gateway进程（一般是带宽瓶颈），则可以2台gateway机器，1台worker机器，部署方法类似）。由于瓶颈只在worker进程或者Gateway进程，所以不需要二者同时扩容。所以可以分开部署并根据情况扩容。
 
 
 ## gateway worker 分离部署扩容步骤

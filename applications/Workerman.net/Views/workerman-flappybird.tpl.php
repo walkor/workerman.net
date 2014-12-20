@@ -12,7 +12,7 @@
 				workerman-flappy-bird
 			</h2>
 			<p class="f16">
-				workerman-flappy-bird是一个以workerman作为服务器为后端服务器，前端采用HTML5+WebSocket开发的即时交互游戏，flappy bird 游戏多人在线版。
+				workerman-flappy-bird采用PHP(workerman框架)+HTML5技术开发，是一款以workerman作为应用服务器，workerman-flappy-bird是一个以workerman作为应用服务器，前端采用HTML5+WebSocket开发的即时交互游戏，flappy bird （像素小鸟）游戏多人在线版。
 			</p>
 			<p><a href="http://flap.workerman.net" target="_blank">在线DEMO点击这里</a></p>
 			<h3>
@@ -20,7 +20,7 @@
 			</h3>
 			<ul>
 			<li>前端采用HTML5开发</li>
-			<li>以workerman作为后台游戏服务器</li>
+			<li>以PHP的workerman框架开发后台游戏服务器</li>
 			<li>后端PHP多进程支持</li>
 			<li>采用WebSocket协议</li>
 			<li>PHP实时推送技术</li>
