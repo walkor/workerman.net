@@ -1359,7 +1359,7 @@
                     <section class="normal" id="section-gitbook_2655">
                     
                         <h1 id="gateway-worker-">gateway worker 分离部署</h1>
-<p>以applications/Demo为例，假如需要部署三台服务器提供高可用服务。瓶颈在worker进程，则可使用1台作为gateway服务器，另外两台做worker服务器。（如果瓶颈在gateway进程（一般是带宽瓶颈），则可以2台gateway机器，1台worler机器，部署方法类似）。由于瓶颈只在worker进程或者Gateway进程，所以不需要二者同时扩容。所以可以分开部署并根据情况扩容。</p>
+<p>以applications/Demo为例，假如需要部署三台服务器提供高可用服务。瓶颈在worker进程，则可使用1台作为gateway服务器，另外两台做worker服务器。（如果瓶颈在gateway进程（一般是带宽瓶颈），则可以2台gateway机器，1台worker机器，部署方法类似）。由于瓶颈只在worker进程或者Gateway进程，所以不需要二者同时扩容。所以可以分开部署并根据情况扩容。</p>
 <h2 id="gateway-worker-">gateway worker 分离部署扩容步骤</h2>
 <p>1、首先将进程切分，将Gateway进程部署在一台机器上(假设内网ip为192.168.0.1)，BusinessWorker部署在另外两台机器上（内网ip为192.168.0.2/3）</p>
 <p>2、由于192.168.0.1这台机器只部署Gateway进程，所以将该ip上的<code>workerman/conf/conf.d/BusinessWorker.conf</code>删掉，避免运行BusinessWorker进程</p>

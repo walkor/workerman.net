@@ -12,7 +12,7 @@
 				workerman-todpole
 			</h2>
 			<p class="f16">
-				workerman-todpole是一个以workerman作为服务器为后端服务器，前端采用HTML5+WebSocket开发的小蝌蚪即时交互游戏。
+				workerman-todpole采用PHP(workerman框架)+HTML5技术开发，是一款以workerman作为应用服务器，前端采用HTML5+WebSocket开发的小蝌蚪即时交互游戏。
 				游戏交互很简单，点击屏幕小蝌蚪可以自由游动，其它玩家可以看到周围玩家的游动状态，并且可以即时聊天。
 			</p>
 			<p><a href="http://workerman.net:8383" target="_blank"><h4>线上DEMO效果点击这里</h4></a></p>
@@ -21,7 +21,7 @@
 			</h3>
 			<ul>
 			<li>前端采用HTML5开发</li>
-			<li>以workerman作为后台游戏服务器</li>
+			<li>以PHP的workerman框架开发后台游戏服务器</li>
 			<li>后端PHP多进程支持</li>
 			<li>采用WebSocket协议</li>
 			<li>PHP实时推送技术</li>
