@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="8.5" data-basepath=".." data-revision="1417970253215">
+    <div class="book"  data-level="8.5" data-basepath=".." data-revision="1419089326091">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -1356,7 +1356,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_2711">
+                    <section class="normal" id="section-gitbook_182">
                     
                         <h1 id="config-store-">Config/Store 配置</h1>
 <p><strong>(<code>WorkerMan&gt;=2.0，Gateway/Worker模型</code>)</strong></p>
@@ -1385,14 +1385,14 @@
     );
 
     <span class="hljs-comment">/* 如果使用文件存储，则在这里设置数据存储的目录，默认/tmp/下
-     * 注意：如果修改了storePath，要将storePath加入到conf/conf.d/FileMonitor.conf的忽略目录中
-     * 例如 $storePath = '/home/data/',则需要在conf/conf.d/FileMonitor.conf加一行 exclude_path[]=/home/data/
+     * 注意：如果修改了storePath，要将storePath加入到workerman的文件监控的忽略目录中
+     * 例如 $storePath = '/home/data/',则需要在workerman/conf/workerman.conf的[Monitor]段下加一行 exclude_path[]=/home/data/
      */</span>
     <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-variable">$storePath</span> = <span class="hljs-string">'/tmp/workerman-chat/'</span>;
 }
 </code></pre>
 <p>1、Store类有两种存储驱动，文件存储（DRIVER_FILE）及memcache存储(DRIVER_MC)。文件存储适合开发调试使用，memcache存储适合生产环境使用。</p>
-<p>2、如果使用文件存储，存储文件会放置于<code>$storePath</code>指定的路径下。如果运行多个Gateway/Worker模型的项目，请确保多个项目之间的<code>$storePath</code>路径不要冲突。如果<code>$storePath</code>有修改，请确保将改路径加到conf/conf.d/FileMonitor.conf中的exclude_path[]中。</p>
+<p>2、如果使用文件存储，存储文件会放置于<code>$storePath</code>指定的路径下。如果运行多个Gateway/Worker模型的项目，请确保多个项目之间的<code>$storePath</code>路径不要冲突。如果<code>$storePath</code>有修改，请确保将改路径加到workerman/workerman.conf的[Monitor]段中的exclude_path[]中。</p>
 <p>3、如果是memcache存储，请安装memcached服务端及php的memcached扩展。并设定<code>$gateway</code> <code>$room</code>中的ip和端口为memcache服务端的ip端口。</p>
 <p>4、如果是memcache存储，并且业务想添加自己的存储实例，可以开启新的memcache服务端ip端口，然后添加一项配置。例如新增加一个user存储实例，memcache ip端口为192.168.1.2:11211，则只需要增加如下一项到\Config\Store类中</p>
 <pre><code class="lang-php"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-variable">$user</span>= <span class="hljs-keyword">array</span>(
@@ -1406,7 +1406,7 @@
 <p>1、线上环境请使用memcache存储，即设置</p>
 <pre><code class="lang-php"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-variable">$driver</span> = <span class="hljs-keyword">self</span>::DRIVER_MC
 </code></pre>
-<p>2、如果更改了<code>public static $storePath</code>配置，请将配置的路径加到<code>conf/conf.d/FileMonitor.conf</code>的监视排除列表中，避该路径下的免存储文件更新导致WorkerMan的自动reload。例如<code>$storePath = &#39;/home/data/&#39;;</code>，则需要conf/conf.d/FileMonitor.conf中需要有一项<code>exclude_path[]=/home/data/</code></p>
+<p>2、如果更改了<code>public static $storePath</code>配置，请将配置的路径加到<code>workerman/workerman.conf</code>的监视排除列表中，避该路径下的免存储文件更新导致WorkerMan的自动reload。例如<code>$storePath = &#39;/home/data/&#39;;</code>，则需要workerman/workerman.conf的[Monitor]段下加一项<code>exclude_path[]=/home/data/</code></p>
 <p>3、开发者不要使用<code>Store::instance(&#39;gateway&#39;);</code>、<code>Store::instance(&#39;room&#39;);</code>，也要避免业务新增配置memcache的ip端口与gateway或者room的配置相同，以免造成业务数据与框架数据冲突。</p>
 
                     

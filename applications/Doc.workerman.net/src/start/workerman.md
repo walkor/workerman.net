@@ -64,7 +64,7 @@ listening：传输层协议及监听ip端口
 
 timestamp：该进程启动时间戳
 
-worker_name：该进程运行的服务服务名，对应于conf/conf.d下的配置名
+worker_name：该进程运行的服务服务名
 
 total_request：该进程接收多少连接
 

@@ -68,11 +68,11 @@ class EchoService extends \Man\Core\SocketWorker
 ```
 
 3、配置与启动
-建立配置文件 ```workerman/conf/conf.d/EchoService.conf```,内容如下
+建立配置文件 ```applications/EchoService/conf.d/EchoService.conf```,内容如下
 ```in
 ;监听ip及端口
 ;进程入口文件
-worker_file = ../applications/EchoService/EchoService.php
+worker_file = ../EchoService.php
 ;监听的端口
 listen = tcp://0.0.0.0:8181
 ;是否是长连接

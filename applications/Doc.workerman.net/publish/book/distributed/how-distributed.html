@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="13.2" data-basepath=".." data-revision="1417970253215">
+    <div class="book"  data-level="13.2" data-basepath=".." data-revision="1419089326091">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -1356,11 +1356,11 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_2656">
+                    <section class="normal" id="section-gitbook_128">
                     
                         <h1 id="-workerman">如何分布式WorkerMan</h1>
 <h2 id="-">关键点</h2>
-<h3 id="1-workerman-conf-conf-d-gateway-conf-lan_ip-ip-">1、配置 <code>workerman/conf/conf.d/Gateway.conf</code> 中的 <code>lan_ip</code> 与当前服务器内网ip一致</h3>
+<h3 id="1-conf-d-gateway-conf-lan_ip-ip-">1、配置 <code>conf.d/Gateway.conf</code> 中的 <code>lan_ip</code> 与当前服务器内网ip一致</h3>
 <h3 id="2-applications-xxx-config-store-php-memcache-">2、<code>applications/XXX/Config/Store.php</code> 中 memcache 相关配置</h3>
 <pre><code class="lang-php"><span class="hljs-comment">// self::DRIVER_MC代表使用memcache存储</span>
 <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-variable">$driver</span> = <span class="hljs-keyword">self</span>::DRIVER_MC;
@@ -1379,8 +1379,10 @@
 <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-variable">$gateway</span> = <span class="hljs-keyword">array</span>(
      <span class="hljs-string">'192.168.1.4:11211'</span>,
 );
+<span class="hljs-comment">// 如果有其它的配置如workerman-chat中的$room配置，也需要将其改成memcache的ip和端口</span>
+...
 </code></pre>
-<p>3、分别配置三台服务器的<code>workerman/conf/conf.d/Gateway.conf</code>中的<code>lan_ip</code>为当前服务器的内网ip。例如配置192.168.1.1服务器Gateway.conf中<code>lan_ip=192.168.1.1</code></p>
+<p>3、分别配置三台服务器的<code>conf.d/Gateway.conf</code>中的<code>lan_ip</code>为当前服务器的内网ip。例如配置192.168.1.1服务器Gateway.conf中<code>lan_ip=192.168.1.1</code></p>
 <p>4、逐台启动WorkerMan，至此WorkerMan分布式部署完毕。</p>
 <p><strong>说明：</strong></p>
 <p>1、三台WorkerMan机器都运行了Gateway进程和Worker进程，客户端连接上任意一台WorkerMan的Gateway端口即可。</p>

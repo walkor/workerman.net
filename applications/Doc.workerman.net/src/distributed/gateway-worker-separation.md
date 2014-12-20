@@ -6,11 +6,11 @@
 ## gateway worker 分离部署扩容步骤
 1、首先将进程切分，将Gateway进程部署在一台机器上(假设内网ip为192.168.0.1)，BusinessWorker部署在另外两台机器上（内网ip为192.168.0.2/3）
 
-2、由于192.168.0.1这台机器只部署Gateway进程，所以将该ip上的```workerman/conf/conf.d/BusinessWorker.conf```删掉，避免运行BusinessWorker进程
+2、由于192.168.0.1这台机器只部署Gateway进程，所以将该ip上的```conf.d/BusinessWorker.conf```删掉，避免运行BusinessWorker进程
 
-3、配置Gateway服务器(192.168.0.1)上的```workerman/conf/conf.d/Gateway.conf```中的```lan_ip=192.168.0.1```与本机ip一致
+3、配置Gateway服务器(192.168.0.1)上的```conf.d/Gateway.conf```中的```lan_ip=192.168.0.1```与本机ip一致
 
-3、由于192.168.0.2/3 两台服务器只部署BusinessWorker进程，所以将这两台ip上的workerman/conf/conf.d/Gateway.conf删掉，避免运行Gateway进程
+3、由于192.168.0.2/3 两台服务器只部署BusinessWorker进程，所以将这两台ip上的conf.d/Gateway.conf删掉，避免运行Gateway进程
 
 4、由于物理机之间需要共享一些数据，需要部署一台memcache服务器，假设部署在Gateway（192.168.0.1）这台机器上，memcache服务端口为22322
 
@@ -49,9 +49,9 @@ public static $gateway = array(
 
 ### 扩容Gateway （假设ip为192.168.0.100）
 
-1、删除```workerman/conf/conf.d/BusinessWorker.conf```，确保BusinessWorker在这台服务器不会运行
+1、删除```conf.d/BusinessWorker.conf```，确保BusinessWorker在这台服务器不会运行
 
-2、配置```workerman/conf/conf.d/Gateway.conf```中的```lan_ip=192.168.0.100```与本机内网ip一致
+2、配置```conf.d/Gateway.conf```中的```lan_ip=192.168.0.100```与本机内网ip一致
 
 3、配置```applications/Demo/Config/Store.php```中的```driver```、```gateway```两项配置如下，
 
@@ -74,7 +74,7 @@ public static $gateway = array(
 
 ### 扩容BusinessWorker：
 
-1、删除```workerman/conf/conf.d/Gateway.conf```，确保Gateway进程不会在该服务器上运行
+1、删除```conf.d/Gateway.conf```，确保Gateway进程不会在该服务器上运行
 
 2、配置```applications/Demo/Config/Store.php```中的```driver```、```gateway```两项配置如下
 

@@ -76,11 +76,11 @@ class Task extends Man\Core\SocketWorker
 ```
 
 #### 2、然后新建一个配置进程文件
-workerman/conf/conf.d/Task.conf
+applications/Demo/conf.d/Task.conf
 
 ```ini
 ;定时任务进程入口文件
-worker_file = ../applications/Demo/Task.php
+worker_file = ../Task.php
 ;定时任务不接收请求，但是还是要配置一个(2.1.5及以上版本不用设置)
 listen = udp://0.0.0.0:12345
 ;启动多少进程，定时任务一般是一个进程，也可以开多个但是要注意多进程会不会给你带来并发问题

@@ -41,7 +41,7 @@ StatisticClient::report('User', 'getInfo', $success, $code, $msg);
 
 3、服务端的配置可以用默认值
 
-4、通过网页浏览器访问 ip:55757查询统计数据，55757是默认端口，可以在workerman\conf\conf.d\StatisticsWeb.conf里更改
+4、通过网页浏览器访问 ip:55757查询统计数据，55757是默认端口，可以在conf.d\StatisticsWeb.conf里更改
 
 5、55757端口可以改成80端口，但是要确认80端口没有被其它WebServer占用，例如apache、nginx等
 

@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="13.3" data-basepath=".." data-revision="1417970253215">
+    <div class="book"  data-level="13.3" data-basepath=".." data-revision="1419089326091">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -1356,15 +1356,15 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_2655">
+                    <section class="normal" id="section-gitbook_127">
                     
                         <h1 id="gateway-worker-">gateway worker 分离部署</h1>
 <p>以applications/Demo为例，假如需要部署三台服务器提供高可用服务。瓶颈在worker进程，则可使用1台作为gateway服务器，另外两台做worker服务器。（如果瓶颈在gateway进程（一般是带宽瓶颈），则可以2台gateway机器，1台worker机器，部署方法类似）。由于瓶颈只在worker进程或者Gateway进程，所以不需要二者同时扩容。所以可以分开部署并根据情况扩容。</p>
 <h2 id="gateway-worker-">gateway worker 分离部署扩容步骤</h2>
 <p>1、首先将进程切分，将Gateway进程部署在一台机器上(假设内网ip为192.168.0.1)，BusinessWorker部署在另外两台机器上（内网ip为192.168.0.2/3）</p>
-<p>2、由于192.168.0.1这台机器只部署Gateway进程，所以将该ip上的<code>workerman/conf/conf.d/BusinessWorker.conf</code>删掉，避免运行BusinessWorker进程</p>
-<p>3、配置Gateway服务器(192.168.0.1)上的<code>workerman/conf/conf.d/Gateway.conf</code>中的<code>lan_ip=192.168.0.1</code>与本机ip一致</p>
-<p>3、由于192.168.0.2/3 两台服务器只部署BusinessWorker进程，所以将这两台ip上的workerman/conf/conf.d/Gateway.conf删掉，避免运行Gateway进程</p>
+<p>2、由于192.168.0.1这台机器只部署Gateway进程，所以将该ip上的<code>conf.d/BusinessWorker.conf</code>删掉，避免运行BusinessWorker进程</p>
+<p>3、配置Gateway服务器(192.168.0.1)上的<code>conf.d/Gateway.conf</code>中的<code>lan_ip=192.168.0.1</code>与本机ip一致</p>
+<p>3、由于192.168.0.2/3 两台服务器只部署BusinessWorker进程，所以将这两台ip上的conf.d/Gateway.conf删掉，避免运行Gateway进程</p>
 <p>4、由于物理机之间需要共享一些数据，需要部署一台memcache服务器，假设部署在Gateway（192.168.0.1）这台机器上，memcache服务端口为22322</p>
 <p>5、给三台服务器的PHP添加memcached或者memcache扩展。推荐用memcached扩展，ubuntu/debian可使用 sudo apt-get install php5-memcached安装。安装memcache扩展在ubuntu/debian系统可使用 sudo apt-get install php5-memcache安装</p>
 <p>6、配置memcache，更改三台服务器上<code>applications/Demo/Config/Store.php</code>中的<code>driver</code>、<code>gateway</code>两项配置如下，</p>
@@ -1386,8 +1386,8 @@
 <h3 id="-gateway-">二、当Gateway服务器集群负载较高时，我们怎么扩容？</h3>
 <p><em>假如memcache扩展已经安装</em></p>
 <h3 id="-gateway-ip-192-168-0-100-">扩容Gateway （假设ip为192.168.0.100）</h3>
-<p>1、删除<code>workerman/conf/conf.d/BusinessWorker.conf</code>，确保BusinessWorker在这台服务器不会运行</p>
-<p>2、配置<code>workerman/conf/conf.d/Gateway.conf</code>中的<code>lan_ip=192.168.0.100</code>与本机内网ip一致</p>
+<p>1、删除<code>conf.d/BusinessWorker.conf</code>，确保BusinessWorker在这台服务器不会运行</p>
+<p>2、配置<code>conf.d/Gateway.conf</code>中的<code>lan_ip=192.168.0.100</code>与本机内网ip一致</p>
 <p>3、配置<code>applications/Demo/Config/Store.php</code>中的<code>driver</code>、<code>gateway</code>两项配置如下，</p>
 <pre><code class="lang-php"><span class="hljs-comment">// 存储驱动改为memcache</span>
 <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-variable">$driver</span> = <span class="hljs-keyword">self</span>::DRIVER_MC
@@ -1401,7 +1401,7 @@
 <h3 id="-businessworker-">三、当BusinessWorker服务器集群负载较高时，我们怎么扩容？</h3>
 <p><em>假如memcache扩展已经安装</em></p>
 <h3 id="-businessworker-">扩容BusinessWorker：</h3>
-<p>1、删除<code>workerman/conf/conf.d/Gateway.conf</code>，确保Gateway进程不会在该服务器上运行</p>
+<p>1、删除<code>conf.d/Gateway.conf</code>，确保Gateway进程不会在该服务器上运行</p>
 <p>2、配置<code>applications/Demo/Config/Store.php</code>中的<code>driver</code>、<code>gateway</code>两项配置如下</p>
 <pre><code class="lang-php"><span class="hljs-comment">// 存储驱动改为memcache</span>
 <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-variable">$driver</span> = <span class="hljs-keyword">self</span>::DRIVER_MC

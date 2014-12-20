@@ -74,11 +74,11 @@ class BinaryTransfer extends Man\Core\SocketWorker
 }
 ```
 
-## 创建配置文件 workerman/conf/conf.d/BinaryProtocolTransfer.conf
+## 创建配置文件 applications/FileTransferDemo/conf.d/BinaryProtocolTransfer.conf
 
 ```ini
 ;业务进程入口文件
-worker_file = ../applications/FileTransferDemo/BinaryTransfer.php
+worker_file = ../BinaryTransfer.php
 ;传输层协议 ip 及端口
 listen = tcp://0.0.0.0:8333
 ;启动多少服务进程

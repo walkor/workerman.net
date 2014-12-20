@@ -29,8 +29,8 @@ class Store
     );
 
     /* 如果使用文件存储，则在这里设置数据存储的目录，默认/tmp/下
-     * 注意：如果修改了storePath，要将storePath加入到conf/conf.d/FileMonitor.conf的忽略目录中
-     * 例如 $storePath = '/home/data/',则需要在conf/conf.d/FileMonitor.conf加一行 exclude_path[]=/home/data/
+     * 注意：如果修改了storePath，要将storePath加入到workerman的文件监控的忽略目录中
+     * 例如 $storePath = '/home/data/',则需要在workerman/conf/workerman.conf的[Monitor]段下加一行 exclude_path[]=/home/data/
      */
     public static $storePath = '/tmp/workerman-chat/';
 }
@@ -38,7 +38,7 @@ class Store
 
 1、Store类有两种存储驱动，文件存储（DRIVER_FILE）及memcache存储(DRIVER_MC)。文件存储适合开发调试使用，memcache存储适合生产环境使用。
 
-2、如果使用文件存储，存储文件会放置于```$storePath```指定的路径下。如果运行多个Gateway/Worker模型的项目，请确保多个项目之间的```$storePath```路径不要冲突。如果```$storePath```有修改，请确保将改路径加到conf/conf.d/FileMonitor.conf中的exclude_path[]中。
+2、如果使用文件存储，存储文件会放置于```$storePath```指定的路径下。如果运行多个Gateway/Worker模型的项目，请确保多个项目之间的```$storePath```路径不要冲突。如果```$storePath```有修改，请确保将改路径加到workerman/workerman.conf的[Monitor]段中的exclude_path[]中。
 
 3、如果是memcache存储，请安装memcached服务端及php的memcached扩展。并设定```$gateway``` ```$room```中的ip和端口为memcache服务端的ip端口。
 
@@ -58,7 +58,7 @@ public static $user= array(
 ```php
 public static $driver = self::DRIVER_MC
 ```
-2、如果更改了```public static $storePath```配置，请将配置的路径加到```conf/conf.d/FileMonitor.conf```的监视排除列表中，避该路径下的免存储文件更新导致WorkerMan的自动reload。例如```$storePath = '/home/data/';```，则需要conf/conf.d/FileMonitor.conf中需要有一项```exclude_path[]=/home/data/```
+2、如果更改了```public static $storePath```配置，请将配置的路径加到```workerman/workerman.conf```的监视排除列表中，避该路径下的免存储文件更新导致WorkerMan的自动reload。例如```$storePath = '/home/data/';```，则需要workerman/workerman.conf的[Monitor]段下加一项```exclude_path[]=/home/data/```
 
 3、开发者不要使用```Store::instance('gateway');```、```Store::instance('room');```，也要避免业务新增配置memcache的ip端口与gateway或者room的配置相同，以免造成业务数据与框架数据冲突。
 

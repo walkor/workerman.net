@@ -66,11 +66,11 @@ class TextTransfer extends Man\Core\SocketWorker
 
 }
 ```
-## 创建配置文件 workerman/conf/conf.d/TextPtotocolTransfer.conf
+## 创建配置文件 applications/FileTransferDemo/conf.d/TextPtotocolTransfer.conf
 
 ```ini
 ;业务进程入口文件
-worker_file = ../applications/FileTransferDemo/TextTransfer.php
+worker_file = ../TextTransfer.php
 ;传输层协议 ip 及端口
 listen = tcp://0.0.0.0:8444
 ;启动多少服务进程

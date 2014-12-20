@@ -1,6 +1,6 @@
 # 如何分布式WorkerMan
 ##关键点
-### 1、配置 ```workerman/conf/conf.d/Gateway.conf``` 中的 ```lan_ip``` 与当前服务器内网ip一致
+### 1、配置 ```conf.d/Gateway.conf``` 中的 ```lan_ip``` 与当前服务器内网ip一致
 ### 2、```applications/XXX/Config/Store.php``` 中 memcache 相关配置
 ```php
 // self::DRIVER_MC代表使用memcache存储
@@ -25,9 +25,11 @@ public static $driver = self::DRIVER_MC
 public static $gateway = array(
      '192.168.1.4:11211',
 );
+// 如果有其它的配置如workerman-chat中的$room配置，也需要将其改成memcache的ip和端口
+...
 ```
 
-3、分别配置三台服务器的```workerman/conf/conf.d/Gateway.conf```中的```lan_ip```为当前服务器的内网ip。例如配置192.168.1.1服务器Gateway.conf中```lan_ip=192.168.1.1```
+3、分别配置三台服务器的```conf.d/Gateway.conf```中的```lan_ip```为当前服务器的内网ip。例如配置192.168.1.1服务器Gateway.conf中```lan_ip=192.168.1.1```
 
 4、逐台启动WorkerMan，至此WorkerMan分布式部署完毕。
 

@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="3.2" data-basepath=".." data-revision="1417970253215">
+    <div class="book"  data-level="3.2" data-basepath=".." data-revision="1419089326091">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -1356,7 +1356,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_2697">
+                    <section class="normal" id="section-gitbook_169">
                     
                         <h1 id="workerman-">WorkerMan的特性</h1>
 <h3 id="1-php-">1、纯PHP开发</h3>
@@ -1382,7 +1382,7 @@
 <h3 id="11-">11、支持子服务次数配置</h3>
 <p>可以设置进程服务次数，类似php-fpm配置中的max_requests配置，例如设置max_requests为1000，则每个子进程对外服务1000次后便会安全退出。 开启这个配置的目的是为了避免由于业务代码不规范导致的内存泄露给系统带来的内存占用过高的影响。</p>
 <h3 id="12-">12、支持子进程监控</h3>
-<p>子进程监控包括内存占用监控（子进程内存超过配置Monitor.max_mem_limit时安全重启对应进程）、网络收发包成功率监控、子进程FatalErr监控、 子进程频繁退出监控。以上监控阈值均在conf/conf.d/Monitor.conf中配置，达到阈值时，便会触发告警（告警方法在workers/Monitor:sendSms()中实现）。</p>
+<p>子进程监控包括内存占用监控（子进程内存超过配置Monitor.max_mem_limit时安全重启对应进程）、网络收发包成功率监控、子进程FatalErr监控、 子进程频繁退出监控。以上监控阈值均在workerman.conf的[Monitor]段中配置，达到阈值时，便会触发告警（告警方法在workers/Monitor:sendSms()中实现）。</p>
 <h3 id="13-">13、支持对象或者资源永久保持</h3>
 <p>在一个进程生命周期内静态成员或者全局变量在不主动销毁的情况下是永久保持的，也就是只要初始化一次静态成员或者全局变量则整个进程生命周期内的所有请求都可以复用这个 静态成员或者全局变量。例如只要单个进程内初始化一次数据库连接，则以后这个进程的所有请求都可以复用这个数据库连接，不用每个用户请求都去重连数据库，避免了频繁连接数据库过程中TCP三次握手、 数据库权限验证、断开连接时TCP四次握手的过程，极大的提高了应用程序效率。memcache、redis等初始化也是同样的道理。</p>
 <h3 id="14-">14、高性能</h3>
