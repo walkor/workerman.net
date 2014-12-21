@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="16.4" data-basepath=".." data-revision="1417970253215">
+    <div class="book"  data-level="16.4" data-basepath=".." data-revision="1419089326091">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -1356,7 +1356,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_2631">
+                    <section class="normal" id="section-gitbook_103">
                     
                         <h1 id="-">定时任务</h1>
 <h2 id="-">接口</h2>
@@ -1420,9 +1420,9 @@
     }
 </code></pre>
 <h4 id="2-">2、然后新建一个配置进程文件</h4>
-<p>workerman/conf/conf.d/Task.conf</p>
+<p>applications/Demo/conf.d/Task.conf</p>
 <pre><code class="lang-ini"><span class="hljs-comment">;定时任务进程入口文件</span>
-<span class="hljs-setting">worker_file = <span class="hljs-value">../applications/Demo/Task.php</span></span>
+<span class="hljs-setting">worker_file = <span class="hljs-value">../Task.php</span></span>
 <span class="hljs-comment">;定时任务不接收请求，但是还是要配置一个(2.1.5及以上版本不用设置)</span>
 <span class="hljs-setting">listen = <span class="hljs-value">udp://<span class="hljs-number">0.0</span>.<span class="hljs-number">0.0</span>:<span class="hljs-number">12345</span></span></span>
 <span class="hljs-comment">;启动多少进程，定时任务一般是一个进程，也可以开多个但是要注意多进程会不会给你带来并发问题</span>

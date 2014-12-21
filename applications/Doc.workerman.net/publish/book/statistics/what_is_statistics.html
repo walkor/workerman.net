@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="12.1" data-basepath=".." data-revision="1417970253215">
+    <div class="book"  data-level="12.1" data-basepath=".." data-revision="1419089326091">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -1356,18 +1356,18 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_2719">
+                    <section class="normal" id="section-gitbook_190">
                     
                         <h1 id="-">关于统计监控模块</h1>
 <p>当我们的程序部署在正式环境后，我们需要监控我的程序是否运行正常。统计监控模块就是用来监控系统运转情况的一个工具，它提供了一些重要接口的调用情况，如各个时段的调用量、调用耗时、成功率、失败日志等等，并以曲线图和表格的形式通过网页展示出来。</p>
-<p>WorkerMan默认都开启了统计模块，如果想要去掉，可以删除<code>workerman/conf/conf.d/StatisticWeb.conf,StatisticPrivoder.conf,StatisitcWorker.conf</code>三个配置文件，以及<code>applications/Statistics</code>目录。</p>
+<p>WorkerMan默认都开启了统计模块，如果想要去掉，可以设置<code>conf.d/StatisticWeb.conf,StatisticPrivoder.conf,StatisitcWorker.conf</code>三个配置文件的enable=0，或者删除<code>applications/Statistics</code>目录。</p>
 <h2 id="-">统计模块界面</h2>
-<p>默认统计页面通过浏览器访问，默认为55757端口。例如<code>http://{$ip}:55757</code>，<code>$ip</code>为workerman运行的服务器ip，可在<code>workerman/conf/conf.d/StatisticWeb.conf</code>配置域名。</p>
+<p>默认统计页面通过浏览器访问，默认为55757端口。例如<code>http://{$ip}:55757</code>，<code>$ip</code>为workerman运行的服务器ip，可在<code>conf.d/StatisticWeb.conf</code>配置域名。</p>
 <p>界面Demo:<a href="http://www.workerman.net:55757" target="_blank">http://www.workerman.net:55757</a></p>
 <h2 id="-">代码及配置</h2>
 <ul>
 <li>统计监控系统代码位置在 applications/Statistics 下</li>
-<li>对应的配置为 workerman/conf/conf.d/下的 StatisticWeb.conf StatisticPrivoder.conf StatisitcWorker.conf。配置说明见<a href="/configure/statisticsconf.html">Statistics统计模块配置</a></li>
+<li>配置说明见<a href="/configure/statisticsconf.html">Statistics统计模块配置</a></li>
 </ul>
 
                     

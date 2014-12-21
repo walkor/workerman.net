@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="8.1" data-basepath=".." data-revision="1417970253215">
+    <div class="book"  data-level="8.1" data-basepath=".." data-revision="1419089326091">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -1356,7 +1356,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_2704">
+                    <section class="normal" id="section-gitbook_174">
                     
                         <h1 id="-">基本流程</h1>
 <p><strong>(<code>WorkerMan&gt;=2.0，Gateway/Worker模型</code>)</strong></p>
@@ -1377,10 +1377,8 @@
 <h2 id="-applications-demo-">基于applications/Demo开发流程</h2>
 <h3 id="1-">1、建立一个新的项目</h3>
 <p>1.1、选定项目名，例如项目名叫ChatRoom，更改<code>applications/Demo</code> 为 <code>applications/ChatRoom</code>，即运行<code>mv applications/Demo applications/ChatRoom</code></p>
-<p>1.2、将配置<code>workerman/conf/conf.d/Gateway.php</code>中的 <code>worker_file</code>设置为新的路径<code>worker_file=../applications/ChatRoom/Bootstrap/Gateway.php</code></p>
-<p>1.3、将配置<code>workerman/conf/conf.d/BusinessWorker.conf</code>中的<code>worker_file</code>设置为新的路径<code>worker_file = ../applications/ChatRoom/Bootstrap/BusinessWorker.php</code></p>
-<p>1.4、重新启动WorkerMan <code>workerman/bin/workermand restart</code></p>
-<p>1.5 至此，一个新的基于Gateway/Worker模型的项目建立好了</p>
+<p>1.2、重新启动WorkerMan <code>workerman/bin/workermand restart</code></p>
+<p>1.3、至此，一个新的基于Gateway/Worker模型的项目建立好了</p>
 <h3 id="2-">2、选定协议</h3>
 <p>appplications/Demo中使用的默认应用层协议是文本请求末尾加回车，即 Text+&quot;\n&quot;,协议解析的文件是Procotols\TextProtocol.php</p>
 <p>下面是一个请求数据的样本：<code>Hi,大家好，我是小明\n</code>（注意末尾的\n是回车字符，代表一个请求的结束）</p>

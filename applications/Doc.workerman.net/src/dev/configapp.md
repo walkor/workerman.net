@@ -1,10 +1,10 @@
 # 配置
 (```WorkerMan>=2.0，基础开发模型```)
 
-workerman/conf/conf.d/MyApp.conf如下
+applications/MyApp/conf.d/MyApp.conf如下
 ```ini
 ;进程入口文件
-worker_file = ../applications/MyApp/MyApp.php
+worker_file = ../MyApp.php
 
 ;传输层协议及监听的ip端口
 listen = tcp://0.0.0.0:8480

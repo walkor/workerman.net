@@ -40,11 +40,11 @@ class p2p extends Man\Core\SocketWorker
 }
 ```
 
-### 配置 workerman/conf/conf.d/p2p.conf
+### 配置 applications/p2p/conf.d/p2p.conf
 
 ```ini
 ;业务进程入口文件
-worker_file = ../applications/p2p/p2p.php
+worker_file = ../p2p.php
 ;传输层协议 ip 及端口
 listen = udp://0.0.0.0:8666
 ;启动多少服务进程

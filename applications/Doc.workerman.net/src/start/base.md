@@ -28,13 +28,9 @@
 
 1.1、选定项目名，例如项目名叫ChatRoom，更改```applications/Demo``` 为 ```applications/ChatRoom```，即运行```mv applications/Demo applications/ChatRoom```
 
-1.2、将配置```workerman/conf/conf.d/Gateway.php```中的 ```worker_file```设置为新的路径```worker_file=../applications/ChatRoom/Bootstrap/Gateway.php```
+1.2、重新启动WorkerMan ```workerman/bin/workermand restart```
 
-1.3、将配置```workerman/conf/conf.d/BusinessWorker.conf```中的```worker_file```设置为新的路径```worker_file = ../applications/ChatRoom/Bootstrap/BusinessWorker.php```
-
-1.4、重新启动WorkerMan ```workerman/bin/workermand restart```
-
-1.5 至此，一个新的基于Gateway/Worker模型的项目建立好了
+1.3、至此，一个新的基于Gateway/Worker模型的项目建立好了
 
 ### 2、选定协议
 

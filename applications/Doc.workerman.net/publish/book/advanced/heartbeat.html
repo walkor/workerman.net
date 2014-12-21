@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="16.3" data-basepath=".." data-revision="1417970253215">
+    <div class="book"  data-level="16.3" data-basepath=".." data-revision="1419089326091">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -1356,7 +1356,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_2630">
+                    <section class="normal" id="section-gitbook_102">
                     
                         <h1 id="-">服务端到客户端的心跳检测</h1>
 <p>WorkerMan支持<strong>服务端</strong>向<strong>客户端</strong>定时发送心跳检测数据</p>
@@ -1369,7 +1369,7 @@
 <p>1、当服务端不要求客户端必须回应心跳检测时，假如客户端遇到掉电等极端情况，这时服务端向客户端发送的心跳数据在TCP层面就会发送超时，遇到这种超时情况TCP会重试多次（次数及间隔依赖操作系统的配置），多次无果后会断开连接。这种极端情况从连接断开到服务端检测到可能要持续至少10分钟。</p>
 <p>2、当服务端要求必须回应检测时，如果服务端在规定的时间（Gateway.conf配置）内没有收到客户端的任何数据，则立刻判定客户端已经断开，服务端就立即断开连接。</p>
 <h2 id="workerman-">WorkerMan中如何配置心跳检测？</h2>
-<p>在workerman/conf/conf.d/Gateway.php中设置心跳检测，主要是如下三个选项</p>
+<p>在conf.d/Gateway.php中设置心跳检测，主要是如下三个选项</p>
 <pre><code class="lang-ini"><span class="hljs-comment">;服务端向客户端发送心跳数据的时间间隔 单位：秒。如果设置为0代表不发送心跳检测</span>
 <span class="hljs-setting">ping_interval = <span class="hljs-value"><span class="hljs-number">10</span></span></span>
 
