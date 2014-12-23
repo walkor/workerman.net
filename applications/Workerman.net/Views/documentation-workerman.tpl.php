@@ -72,10 +72,10 @@
 		</h3>
 		<h4>1、新建文件applications/EchoWorker/EchoWorker.php</h4>
 		<pre><code><span style="color: #000000"><span style="color: #0000BB">&lt;?php&nbsp;<br /></span><span style="color: #007700"><br />class&nbsp;</span><span style="color: #0000BB">EchoWorker&nbsp;</span><span style="color: #007700">extends&nbsp;</span><span style="color: #0000BB">Man</span><span style="color: #007700">\</span><span style="color: #0000BB">Core</span><span style="color: #007700">\</span><span style="color: #0000BB">SocketWorker<br /></span><span style="color: #007700">{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">/**<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;确定包是否完整 return 0:完整 return X:还有X字节没有接收完<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">dealInput</span><span style="color: #007700">(</span><span style="color: #0000BB">$buffer</span><span style="color: #007700">)<br />&nbsp;&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">0</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">/**<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;处理业务，当客户端数据接收完毕后触发（这里只是将客户端发来的字符串直接会写到客户端）<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">dealProcess</span><span style="color: #007700">(</span><span style="color: #0000BB">$buffer</span><span style="color: #007700">)<br />&nbsp;&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">sendToClient</span><span style="color: #007700">(</span><span style="color: #0000BB">$buffer</span><span style="color: #007700">);&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;<br />}&nbsp;<br /></span></span>	</code></pre>
-		<h4>2、新建配置conf/conf.d/EchoWorker.conf</h4>
+		<h4>2、新建配置applications/EchoWorker/conf.d/EchoWorker.conf</h4>
 		<pre><code>;监听ip及端口
 ;进程入口文件
-worker_file = ../applications/EchoWorker/EchoWorker.php
+worker_file = ../EchoWorker.php
 ;监听的端口
 listen = tcp://0.0.0.0:55555
 ;是否是长连接
@@ -112,7 +112,7 @@ Connection closed by foreign host.</code></pre>
     <br>1、运行停止命令 ./workerman/bin/workermand stop 
     <br>2、运行重启命令 ./workerman/bin/workermand restart
     <br>3、平滑重启服务 ./workerman/bin/workermand reload
-    <br>4、workerman检测到业务进程内存泄露达到上限值 conf/conf.d/Monitor.conf 中的max_mem_limit重启对应进程</p><br>
+    <br>4、workerman检测到业务进程内存泄露达到上限值  workerman.conf 的 [Monitor]段 中的max_mem_limit重启对应进程</p><br>
     <h4>3、钩子函数dealInput</h4>
     <pre><code>int public dealInput(string $bin);</code></pre>
     <p><b>[必须实现]</b>当有数据到达时触发，参数$bin是接受到的全部数据（包括之前接收的未处理的数据）。由于网络延时、本地socket缓冲区大小限制、TCP分片等原因，

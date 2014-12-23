@@ -77,11 +77,11 @@ service HelloWorld
 			<h4>3、完善框架文件逻辑</h4>
 			./applications/ThriftRpc/Services/HelloWorld/HelloWorldHandler.php
 			<pre><code><span style="color: #000000"><span style="color: #0000BB">&lt;?php<br /></span><span style="color: #007700">namespace&nbsp;</span><span style="color: #0000BB">Services</span><span style="color: #007700">\</span><span style="color: #0000BB">HelloWorld</span><span style="color: #007700">;<br /><br />class&nbsp;</span><span style="color: #0000BB">HelloWorldHandler&nbsp;</span><span style="color: #007700">implements&nbsp;</span><span style="color: #0000BB">HelloWorldIf&nbsp;</span><span style="color: #007700">{<br />&nbsp;&nbsp;public&nbsp;function&nbsp;</span><span style="color: #0000BB">sayHello</span><span style="color: #007700">(</span><span style="color: #0000BB">$name</span><span style="color: #007700">)<br />&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #DD0000">"Hello&nbsp;</span><span style="color: #0000BB">$name</span><span style="color: #DD0000">"</span><span style="color: #007700">;<br />&nbsp;&nbsp;}<br />}<br /></span></span></code></pre>
-			<h4>4、./conf/conf.d/下创建HelloWorld.conf文件如下</h4>
+			<h4>4、./applications/ThriftRpc/conf.d/下创建HelloWorld.conf文件如下</h4>
 			<pre><code>
 ;Thrift HelloWorld 服务
 ;worker_file，worker路口入口文件
-worker_file = ../applications/ThriftRpc/ThriftWorker.php
+worker_file = ../ThriftWorker.php
 ;监听的端口
 listen = tcp://0.0.0.0:9090
 ;短连接，每次请求后服务端主动断开
