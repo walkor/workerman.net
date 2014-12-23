@@ -192,7 +192,7 @@
 						</h3>
 						<p>
 							子进程监控包括内存占用监控（子进程内存超过配置Monitor.max_mem_limit时安全重启对应进程）、网络收发包成功率监控、子进程FatalErr监控、
-							子进程频繁退出监控。以上监控阈值均在<code>conf/conf.d/Monitor.conf</code>中配置，达到阈值时，便会触发告警（告警方法在workers/Monitor:sendSms()中实现）。
+							子进程频繁退出监控。以上监控阈值均在workerman.conf的[Monitor]段中配置，达到阈值时，便会触发告警（告警方法在workers/Monitor:sendSms()中实现）。
 						</p>
 					</div>
 				</div>
@@ -263,7 +263,7 @@
 							支持HHVM
 						</h3>
 						<p>
-							支持HHVM，HHVM官方报告称运行在HHVM环境的PHP程序性能是普通ZEND虚拟机下PHP的9倍。实际经过压力测试确实有明显性能提升效果。
+							支持HHVM，对于php性能有大幅度（一般为50%左右甚至更高）的提升，尤其是在cpu密集运算中。实际经过压力测试确实有明显性能提升效果。
 						</p>
 					</div>
 				</div>
