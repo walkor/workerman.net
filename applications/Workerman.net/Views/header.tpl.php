@@ -69,7 +69,7 @@
 							<a href="http://wenda.workerman.net" target="_blank">问答</a>
 						</li>
 						<li<?php if($html_nav == 'update')echo ' class="active" ';?>>
-							<a href="http://update.workerman.net" target="_blank">历史版本</a>
+							<a href="http://update.workerman.net" target="_blank">更新日志</a>
 						</li>
 						<li<?php if($html_nav == 'windows')echo ' class="active" ';?>>
 							<a href="/windows" ><img src="/img/windows.png">&nbsp;windows多线程版本</a>
