@@ -42,4 +42,4 @@ no_debug = 1
 
 #启动
 
-运行命令：```workerman/bin/workermand start```
+运行命令：```./workerman/bin/workermand start```

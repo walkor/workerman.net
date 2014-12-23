@@ -39,7 +39,7 @@ pid     memory      listening        timestamp  worker_name       total_request 
 14256   5M      tcp://0.0.0.0:55757  1405929526 StatisticWeb      676            0          0            23           0         0               100%
 17527   2M      udp://0.0.0.0:55656  1405352220 StatisticWorker   3929424        0          0            0            0         0               100%
 ```
-###### ```status```展示的信息与 ```workerman/bin/workermand status```展示的信息相同，status详细信息参见第一章中查看运行状态章节
+###### ```status```展示的信息与 ```./workerman/bin/workermand status```展示的信息相同，status详细信息参见第一章中查看运行状态章节
 
 ## 远程控制支持的命令
 

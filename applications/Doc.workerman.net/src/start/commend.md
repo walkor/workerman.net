@@ -1,19 +1,19 @@
 # 启动与停止
 
 ### 启动
-```workerman/bin/workermand start```
+```./workerman/bin/workermand start```
 
 ### 停止
-```workerman/bin/workermand stop```
+```./workerman/bin/workermand stop```
 
 ### 重启
-```workerman/bin/workermand restart```
+```./workerman/bin/workermand restart```
 
 ### 平滑重启
-```workerman/bin/workermand reload```
+```./workerman/bin/workermand reload```
 
 ### 查看状态
-```workerman/bin/workermand status```
+```./workerman/bin/workermand status```
 
 
 ## 什么是平滑重启？

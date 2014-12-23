@@ -28,7 +28,7 @@
 
 1.1、选定项目名，例如项目名叫ChatRoom，更改```applications/Demo``` 为 ```applications/ChatRoom```，即运行```mv applications/Demo applications/ChatRoom```
 
-1.2、重新启动WorkerMan ```workerman/bin/workermand restart```
+1.2、重新启动WorkerMan ```./workerman/bin/workermand restart```
 
 1.3、至此，一个新的基于Gateway/Worker模型的项目建立好了
 
