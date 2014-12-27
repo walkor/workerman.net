@@ -230,6 +230,9 @@
 			<li>
 				<a href="http://wenda.workerman.net/?/question/29">workerman 工作流程，如进程，子进程，socket等关系，workerman是如何运作的？</a>
 			</li>
+			<li>
+			<a href="http://wenda.workerman.net/?/question/130">不在workerman环境下如果调用WORKERMAN的函数给用户推送数据</a>
+			</li>
 		</ul>
 		<h4>
 			最近更新
