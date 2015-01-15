@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# Revision 1421326762312
+# Revision 1421334167626
 
 CACHE:
 faq/README.html
@@ -94,8 +94,8 @@ start/systemprocess.html
 start/workerman.html
 statistics/README.html
 statistics/auth_check.html
-statistics/how_to_use.html
 statistics/principle.html
+statistics/how_to_use.html
 statistics/statistics_feature.html
 statistics/what_is_statistics.html
 stresstest/README.html
