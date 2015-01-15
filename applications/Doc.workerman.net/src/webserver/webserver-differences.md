@@ -16,7 +16,7 @@ WorkerMan运行在PHP CLI模式下，PHP CLI模式下无法使用HTTP相关的�
 WorkerMan的WebServer默认使用index.php作为Web入口文件，例如配置```root[example.com]=/home/www```，则example.com的入口文件为```/home/www/index.php```。当url访问的文件（包括静态文件和PHP文件）不存在时，会自动调用入口文件index.php
 
 ### 6、可用的超全局变量
-可用的超全局变量有$_SERVER、$_GET、$_POST、$_FILES、$_COOKIE、$_SESSION、$_REQUEST。
+可用的超全局变量有```$_SERVER、$_GET、$_POST、$_FILES、$_COOKIE、$_SESSION、$_REQUEST```。
 
 其中$_FILES结构类似
 ```php
