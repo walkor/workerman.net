@@ -1,10 +1,10 @@
 CACHE MANIFEST
-# Revision 1419344963068
+# Revision 1421326762312
 
 CACHE:
-faq/extension-install.html
-faq/debugging.html
 faq/README.html
+faq/debugging.html
+faq/extension-install.html
 index.html
 advanced/README.html
 advanced/configrestart.html

@@ -6,7 +6,7 @@
 mixed SocketWorker::sendToClient($buffer_so_send)
 ```
 
-关闭客户端的连接
+向当前客户端发送数据
 
 ## 参数
 
