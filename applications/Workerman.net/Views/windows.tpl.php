@@ -4,7 +4,9 @@
 	<p class="f14">
 		workerman-MT 多线程版本即支持Linux平台也支持Windows平台，并且开发接口与Linux多进程版本完全一致，
 		也就是说基于workerman开发的应用程序即可以运行在Linux系统，也可以运行在Windows系统上。
-		<br><b>（注意：workerman-MT需要安装PHP多线程版本，并需要安装pthreads扩展，安装教程见下面。注意多线程版本任然处于开发测试状态，建议使用者用于开发调试，实际部署使用Linux多进程版本）</b>
+		<br>
+		<b>注意：workerman-MT需要安装PHP多线程版本，并需要安装pthreads扩展(建议不管是32位还是64位的系统都下载32位的php及32位的pthreads扩展,因为64位的pthreads扩展不是很稳定)，安装教程见下面。注意多线程版本任然处于开发测试状态，建议使用者用于开发调试，实际部署使用Linux多进程版本
+		</b>
 	</p>
 	<table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-MT&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-MT&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table>
 		<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-MT" target="_blank"><b>Fork on Github</b></a>&nbsp;

@@ -70,7 +70,7 @@ listen用来设置应用程序传输层协议(tcp/udp)以及监听的ip与端口
 
 
 ### 4、backlog(非必须选项)
-设置完成TCP三次握手等待被处理的客户端连接队列长度。如果没有设置，则使用conf/workerman.conf.backlog
+完成TCP三次握手等待业务进程处理的客户端连接队列长度。如果没有设置，则使用conf/workerman.conf.backlog
 
 
 ### 5、persistent_connection选项
@@ -138,5 +138,5 @@ no_reload=1：当运行workermand reload时，该进程不会重启
 
 ### 13、max_requests选项（非必须选项）
 
-max_requests用来设置对应进程接受多少用户请求后安全重启。此选项主要是为了避免业务代码有bug导致内存泄露而导致的内存耗尽，如果业务代码没有内存泄漏可以不设置此选项。
+max_requests用来设置对应进程接受多少用户请求后安全重启。此选项主要是为了避免业务代码有bug导致内存泄露，如果业务代码没有内存泄漏可以不设置此选项。
 
