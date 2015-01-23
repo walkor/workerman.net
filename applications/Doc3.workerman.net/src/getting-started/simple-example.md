@@ -13,10 +13,10 @@ $http_worker = new Worker("http://0.0.0.0:2345");
 // 启动4个进程监听2345，并提供服务
 $http_worker->count = 4;
 
-// 当有浏览器连接时发送$_GET数组
+// 当有浏览器连接时发送hello world
 $http_worker->onMessage = function($connection)
 {
-    // 获取$_GET数据
+    // 向客户端发送hello world
     $connection->send('hello world');
 };
 
