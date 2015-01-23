@@ -6,4 +6,5 @@
    * [特性](getting-started/feature.md)
    * [下载](getting-started/download.md)
    * [开发必读](getting-started/difference.md)
+   * [简单的开发实例](getting-started/simple-example.md)
 
