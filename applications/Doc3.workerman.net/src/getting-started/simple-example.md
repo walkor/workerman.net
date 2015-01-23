@@ -1,8 +1,9 @@
 # 简单的开发实例
 
-## 使用WorkerMan开发一个简单的WebServer
+## 基于WorkerMan开发一个简单的WebServer
 创建test.php文件
 ```php
+<?php
 require_once './Workerman/Autoloader.php';
 use Workerman\Worker;
 
@@ -12,13 +13,15 @@ $http_worker = new Worker("http://0.0.0.0:2345");
 // 启动4个进程监听2345，并提供服务
 $http_worker->count = 4;
 
-// 当有客户端连接时发送$_GET数组
+// 当有浏览器连接时发送$_GET数组
 $http_worker->onMessage = function($connection)
 {
     // 获取$_GET数据
-    $html_string = "<html><body><b>".var_export($_GET)."</b></body></html>";
-    $connection->send($html_string);
+    $connection->send('hello world');
 };
+
+// 运行worker
+Worker::runAll();
 ```
 
 运行
