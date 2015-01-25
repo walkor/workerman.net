@@ -70,7 +70,7 @@ php ws_test.php start
 
 **测试**
 
-打开chrome浏览器，按F12打开调试控制台，在Console一栏输入
+打开chrome浏览器，按F12打开调试控制台，在Console一栏输入(或者把下面代码放入到html页面用js运行)
 
 ```javascript
 // 假设服务端ip为127.0.0.1

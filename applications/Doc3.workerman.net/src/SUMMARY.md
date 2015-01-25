@@ -7,4 +7,7 @@
    * [下载](getting-started/download.md)
    * [开发必读](getting-started/difference.md)
    * [简单的开发实例](getting-started/simple-example.md)
+* [安装配置](install/README)
+   * [环境要求](install/requirement.md)
+   * [安装](install/install.md)
 
