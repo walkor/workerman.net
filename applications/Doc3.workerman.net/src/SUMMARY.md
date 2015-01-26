@@ -10,4 +10,5 @@
 * [安装配置](install/README)
    * [环境要求](install/requirement.md)
    * [安装](install/install.md)
+   * [启动与停止](install/start-and-stop.md)
 
