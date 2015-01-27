@@ -11,6 +11,8 @@
    * [启动与停止](install/start-and-stop.md)
 * [开发流程](development/README.md)
    * [开发前必读](development/before-development.md)
+   * [目录结构](development/directory-structure.md)
+   * [开发规范](development/standard.md)
    * [基础开发](development/base-development)
    * [基于Gateway/Worker开发](development/gatewayworker)
 
