@@ -1,5 +1,5 @@
 # 安装
-WorkerMan实际上没有安装脚本，只需要把WorkerMan源代码下载下来即可运行。
+WorkerMan实际上没有安装脚本，如果你的php环境已经装好，只需要把WorkerMan源代码下载下来即可运行。
 下载方法建议用Github clone，你也可以通过下载zip文件的方式下载WorkerMan代码程序。
 
 ## 通过Github安装

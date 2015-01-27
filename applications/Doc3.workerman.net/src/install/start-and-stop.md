@@ -1,22 +1,22 @@
 # 启动与停止
 
 ### 启动
-```php bootstrap.php start```
+```php start.php start```
 
 ### 停止
-```php bootstrap.php stop```
+```php start.php stop```
 
 ### 重启
-```php bootstrap.php restart```
+```php start.php restart```
 
 ### 平滑重启
-```php bootstrap.php reload```
+```php start.php reload```
 
 ### 查看状态
-```php bootstrap.php status```
+```php start.php status```
 
 ## 启动文件说明
-WorkerMan自带一个启动文件bootstrap.php，用于启动applications下的所有应用。它的原理是扫描查找applications/应用/下的bootstrap.php文件，并载入。applications/应用/bootstrap.php里面是服务启动的具体脚本。
+WorkerMan自带一个启动文件start.php，用于启动applications下的所有应用。它的原理是扫描查找applications/应用/下的start.php文件，并载入。applications/应用/start.php里面是服务启动的具体脚本，包含端口、进程数等设置。
 
 
 ## 什么是平滑重启？
