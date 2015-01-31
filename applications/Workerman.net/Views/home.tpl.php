@@ -239,6 +239,9 @@
 		</h4>
 		<ul>
 			<li>
+				<a href="https://github.com/walkor/workerman">2015-1-31 workerman-3.0 发布</a>
+			</li>
+			<li>
 				<a href="http://www.workerman.net/windows">2014-11-2 workerman-MT多线程版本发布，同时支持Linux Windows平台</a>
 			</li>
 			<li>
