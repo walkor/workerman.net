@@ -34,7 +34,7 @@
 				特性
 			</h3>
 			<ul>
-			<li>支持HHVM，将PHP性能提高9倍左右</li>
+			<li>支持HHVM</li>
 			<li>使用PHP开发</li>
 			<li>支持PHP多进程/多线程（多线程版本）</li>
 			<li>标准输入输出重定向</li>
@@ -80,50 +80,22 @@
 			<h3>安装</h3>
 			<p>下载后解压即可</p>
 			<h3>启动停止</h3>
-			<p>启动：./workerman/bin/workermand start</p>
-			<p>停止：./workerman/bin/workermand stop</p>
-			<p>重启：./workerman/bin/workermand restart</p>
-			<p>平滑重启：./workerman/bin/workermand reload</p>
-			<p>查看状态：./workerman/bin/workermand status</p>
+			<p>启动：php start.php start -d</p>
+			<p>停止：php start.php  stop</p>
+			<p>重启：php start.php  restart</p>
+			<p>平滑重启：php start.php reload</p>
+			<p>查看状态：php start.php status</p>
 			<h3>
 			<a name="dev">服务端开发示例EchoServer</a>
-		</h3>
-		<h4>1、新建文件applications/EchoWorker/EchoWorker.php</h4>
-		<pre><code><span style="color: #000000"><span style="color: #0000BB">&lt;?php&nbsp;<br /></span><span style="color: #007700"><br />class&nbsp;</span><span style="color: #0000BB">EchoWorker&nbsp;</span><span style="color: #007700">extends&nbsp;</span><span style="color: #0000BB">Man</span><span style="color: #007700">\</span><span style="color: #0000BB">Core</span><span style="color: #007700">\</span><span style="color: #0000BB">SocketWorker<br /></span><span style="color: #007700">{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">/**<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;确定包是否完整 return 0:完整 return X:还有X字节没有接收完<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">dealInput</span><span style="color: #007700">(</span><span style="color: #0000BB">$buffer</span><span style="color: #007700">)<br />&nbsp;&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">0</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">/**<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;处理业务，当客户端数据接收完毕后触发（这里只是将客户端发来的字符串直接会写到客户端）<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">dealProcess</span><span style="color: #007700">(</span><span style="color: #0000BB">$buffer</span><span style="color: #007700">)<br />&nbsp;&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">sendToClient</span><span style="color: #007700">(</span><span style="color: #0000BB">$buffer</span><span style="color: #007700">);&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;<br />}&nbsp;<br /></span></span>	</code></pre>
-		<h4>2、新建配置../applications/EchoWorker/conf.d/EchoWorker.conf</h4>
-		<pre><code>;监听ip及端口
-;进程入口文件
-worker_file = ../EchoWorker.php
-;监听的端口
-listen = tcp://0.0.0.0:55555
-;是否是长连接
-persistent_connection = 0
-;启动多少进程
-start_workers=4
-;以哪个用户运行这个worker进程
-user=www-data
-;预读长度
-preread_length=8192</code></pre>
-			<h4>3、启动服务如下图：</h4>
-			<p><code>./workerman/bin/workermand start</code></p>
+			</h3>
+			<h4>1、新建文件Applications/Test/start.php</h4>
+			<pre><code><span style="color: #000000"><span style="color: #0000BB">&lt;?php<br /></span><span style="color: #007700">use&nbsp;</span><span style="color: #0000BB">Workerman</span><span style="color: #007700">\</span><span style="color: #0000BB">Worker</span><span style="color: #007700">;<br /><br /></span><span style="color: #FF8000">//&nbsp;创建一个Worker监听2346端口，使用websocket协议通讯<br /></span><span style="color: #0000BB">$ws_worker&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">Worker</span><span style="color: #007700">(</span><span style="color: #DD0000">"websocket://0.0.0.0:2346"</span><span style="color: #007700">);<br /><br /></span><span style="color: #FF8000">//&nbsp;启动4个进程对外提供服务<br /></span><span style="color: #0000BB">$ws_worker</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">count&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">4</span><span style="color: #007700">;<br /><br /></span><span style="color: #FF8000">//&nbsp;当收到客户端发来的数据后返回hello&nbsp;$data给客户端<br /></span><span style="color: #0000BB">$ws_worker</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">onMessage&nbsp;</span><span style="color: #007700">=&nbsp;function(</span><span style="color: #0000BB">$connection</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$data</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;向客户端发送hello&nbsp;$data<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$connection</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">send</span><span style="color: #007700">(</span><span style="color: #DD0000">'hello&nbsp;'&nbsp;</span><span style="color: #007700">.&nbsp;</span><span style="color: #0000BB">$data</span><span style="color: #007700">);<br />};<br /><br /></span></span></code></pre>
+			<h4>2、启动服务如下图：</h4>
+			<p><code>php start.php start -d</code></p>
 			<img src="/img/workerman-start.png" alt="workerman启动界面"/>
-			<h4>4、测试</h4>
-			<pre><code>telnet 127.0.0.1 55555
-输入任意字符串回车
-服务端会将字符串原封不动的返回</code></pre>
-			<p>结果如下</p>
-			<pre><code>telnet 127.0.0.1 55555
-Trying 127.0.0.1...
-Connected to 127.0.0.1.
-Escape character is '^]'.
-hello world
-hello world
-Connection closed by foreign host.</code></pre>
-			<h4>5、查看workerman运行状态类似如下界面：</h4>
-			<p><code>./bin/workerman status</code></p>
+			<h4>3、查看workerman运行状态类似如下界面：</h4>
+			<p><code>php start.php status</code></p>
 			<img src="/img/workerman-status.png" alt="workerman 查看运行状态"/>
-			<h3>applications/Demo例子测试方法(实际上是一个telnet 聊天室)</h3>
-			<img src="/img/gif/telnet-chat.gif" alt="telnet chat gif"/>
 			<h3>性能</h3>
 			<h4>测试环境：</h4>
 <pre><code>系统：ubuntu 12.04 LTS 64位
@@ -141,7 +113,7 @@ cpu：Intel® Core™ i3-3220 CPU @ 3.30GHz × 4
 </code></pre>
 <pre><code>长链接（每次请求后不关闭链接，下次请求继续复用这个链接）:
 条件： 压测脚本开1000个线程，每个线程链接Workerman 1次，每个链接发送10W请求
-结果： 吞吐量：<b>9.7W/S</b> ， cpu：68% ， 内存占用：4*8M = 32M
+结果： 吞吐量：<b>12W/S</b> ， cpu：68% ， 内存占用：4*8M = 32M
 </code></pre>
 <pre><code>无流量抖动，无内存泄漏，性能非常强悍</code></pre>
 		</div>
