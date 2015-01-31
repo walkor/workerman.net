@@ -1,7 +1,14 @@
 # 启动与停止
 
 ### 启动
+
+以debug方式启动
+
 ```php start.php start```
+
+以daemon方式启动
+
+```php start.php start -d```
 
 ### 停止
 ```php start.php stop```

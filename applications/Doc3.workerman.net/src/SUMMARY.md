@@ -49,5 +49,9 @@
        * [getOnlineStatus](gateway-worker-development/get-online-status.md)
    * [超全局数组$_SESSION](gateway-worker-development/session.md)
    * [超全局数组$_SERVER](gateway-worker-development/server.md)
-   * [心跳检测](gateway-worker-development/heartbeat)
+   * [心跳检测](gateway-worker-development/heartbeat.md)
+* [调试](debug/README)
+   * [基本调试](debug/base.md)
+   * [网络抓包](debug/tcpdump.md)
+   * [追踪系统调用](debug/strace.md)
 
