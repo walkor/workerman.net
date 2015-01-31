@@ -1,6 +1,6 @@
 # 简单的开发实例
 
-## 使用HTTP协议对外提供Web服务
+## 实例一、使用HTTP协议对外提供Web服务
 **创建http_test.php文件**
 ```php
 <?php
@@ -38,7 +38,7 @@ php http_test.php start
 在浏览器中访问url http://127.0.0.1:2345
 
 
-## 使用WebSocket协议对外提供服务
+## 实例二、使用WebSocket协议对外提供服务
 **创建ws_test.php文件**
 ```php
 <?php
@@ -85,7 +85,7 @@ ws.onmessage = function(e) {
 };
 ```
 
-## 直接使用TCP传输数据
+## 实例三、直接使用TCP传输数据
 **创建tcp_test.php**
 
 ```php

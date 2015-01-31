@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="5.3" data-basepath=".." data-revision="1422704499945">
+    <div class="book"  data-level="5.3" data-basepath=".." data-revision="1422711183098">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -796,7 +796,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_14732">
+                    <section class="normal" id="section-gitbook_14846">
                     
                         <h1 id="-">开发规范</h1>
 <h2 id="-">应用程序目录</h2>
@@ -805,7 +805,6 @@
 <p>和nginx+PHP-FPM下的PHP应用程序一样，WorkerMan中的应用程序也需要一个入口文件，WorkerMan的入口文件为start.php，放在applications/YourApp/下（YourApp为你应用的名称）。</p>
 <p>applications/YourApp/start.php 中是创建监听进程相关的代码，例如下面的基于Worker开发的代码片段</p>
 <pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
-<span class="hljs-keyword">require_once</span> <span class="hljs-string">'./Workerman/Autoloader.php'</span>;
 <span class="hljs-keyword">use</span> <span class="hljs-title">Workerman</span>\<span class="hljs-title">Worker</span>;
 
 <span class="hljs-comment">// 创建一个Worker监听2345端口，使用http协议通讯</span>

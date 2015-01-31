@@ -16,7 +16,6 @@ Applications/SimpleChat/
 Applications/SimpleChat/start.php
 ```php
 <?php
-require_once __DIR__ . '/../../Workerman/Autoloader.php';
 use Workerman\Worker;
 
 $global_uid = 0;

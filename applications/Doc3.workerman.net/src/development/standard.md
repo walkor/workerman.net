@@ -11,7 +11,6 @@
 applications/YourApp/start.php 中是创建监听进程相关的代码，例如下面的基于Worker开发的代码片段
 ```php
 <?php
-require_once './Workerman/Autoloader.php';
 use Workerman\Worker;
 
 // 创建一个Worker监听2345端口，使用http协议通讯

@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="6.2" data-basepath=".." data-revision="1422704499945">
+    <div class="book"  data-level="6.2" data-basepath=".." data-revision="1422711183098">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -796,7 +796,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_14758">
+                    <section class="normal" id="section-gitbook_14875">
                     
                         <h2 id="-">如何定制协议</h2>
 <p>实际上制定自己的协议是比较简单的事情。简单的协议一般包含两部分:</p>
@@ -865,8 +865,7 @@
 </code></pre>
 <p>至此，JsonNL协议实现完毕，可以在MyApp项目中使用，使用方法例如下面</p>
 <p>文件：Applications\MyApp\start.php</p>
-<pre><code class="lang-php"><span class="hljs-keyword">require_once</span> <span class="hljs-keyword">__DIR__</span> . <span class="hljs-string">'/../../Workerman/Autoloader.php'</span>;
-<span class="hljs-keyword">use</span> <span class="hljs-title">Workerman</span>\<span class="hljs-title">Worker</span>;
+<pre><code class="lang-php"><span class="hljs-keyword">use</span> <span class="hljs-title">Workerman</span>\<span class="hljs-title">Worker</span>;
 <span class="hljs-variable">$json_worker</span> = <span class="hljs-keyword">new</span> Worker(<span class="hljs-string">'JsonNL://0.0.0.0:1234'</span>);
 <span class="hljs-variable">$json_worker</span>-&gt;onMessage = ...
 ...

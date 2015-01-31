@@ -78,7 +78,6 @@ class JsonNL
 
 文件：Applications\MyApp\start.php
 ```php
-require_once __DIR__ . '/../../Workerman/Autoloader.php';
 use Workerman\Worker;
 $json_worker = new Worker('JsonNL://0.0.0.0:1234');
 $json_worker->onMessage = ...

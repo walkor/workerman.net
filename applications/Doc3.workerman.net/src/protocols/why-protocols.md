@@ -8,7 +8,6 @@
 ## WorkerMan已经支持的协议
 WorkerMan目前已经支持HTTP、Websocket、Telnet协议，需要基于这些协议通讯时可以直接使用，使用方法及时在初始化Worker或者Gateway类时指定协议，例如
 ```php
-require_once __DIR__ . '/../../Workerman/Autoloader.php';
 use Workerman\Worker;
 // websocket://0.0.0.0:2345 表明用websocket协议监听2345端口
 $websocket_worker = new Worker('websocket://0.0.0.0:2345');
