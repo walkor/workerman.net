@@ -63,7 +63,10 @@
 							<a href="/install">安装</a>
 						</li>
 						<li<?php if($html_nav == 'documentation')echo ' class="active" ';?>>
-							<a href="http://doc.workerman.net" target="_blank">手册</a>
+							<a href="http://doc.workerman.net" target="_blank">手册2.x</a>
+						</li>
+						<li<?php if($html_nav == 'documentation')echo ' class="active" ';?>>
+							<a href="http://doc3.workerman.net" target="_blank">手册3.x</a>
 						</li>
 						<li<?php if($html_nav == 'group')echo ' class="active" ';?>>
 							<a href="http://wenda.workerman.net" target="_blank">问答</a>
