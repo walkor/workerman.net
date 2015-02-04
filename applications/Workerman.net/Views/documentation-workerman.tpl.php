@@ -62,11 +62,11 @@
 		<h3><a name="install">下载安装</a></h3>
 		<p>下载后解压即可 <a href="/download/workermanzip" target="_blank">workerman.zip</a></p>
 		<h3><a name="start">启动停止</a></h3>
-		<p>启动：./workerman/bin/workermand start</p>
-		<p>停止：./workerman/bin/workermand stop</p>
-		<p>重启：./workerman/bin/workermand restart</p>
-		<p>平滑重启：./workerman/bin/workermand reload</p>
-		<p>查看状态：./workerman/bin/workermand status</p>
+		<p>启动：php start.php start -d</p>
+		<p>停止：php start.php stop</p>
+		<p>重启：php start.php restart</p>
+		<p>平滑重启：php start.php reload</p>
+		<p>查看状态：php start.php status</p>
 		<h3>
 			<a name="dev">服务端开发示例EchoServer</a>
 		</h3>
@@ -87,7 +87,7 @@ user=www-data
 ;预读长度
 preread_length=8192</code></pre>
 		<h4>3、启动服务如图</h4>
-		<p><code>./workerman/bin/workermand start</code></p>
+		<p><code>php start.php start -d</code></p>
 		<img src="/img/workerman-start.png"  alt="workerman启动界面"/>
 		<h4>4、测试</h4>
 		<pre><code>telnet 127.0.0.1 55555
@@ -109,15 +109,15 @@ Connection closed by foreign host.</code></pre>
     <h4>2、钩子函数onStop</h4>
     <pre><code>bool public onStop();</code></pre>
     <p><b>[可选实现]</b> 当业务进程停止服务准备退出时触发，这里可以做一些全局的收尾工作。引起进程停止服务准备退出的情况或者原因如下：
-    <br>1、运行停止命令 ./workerman/bin/workermand stop 
-    <br>2、运行重启命令 ./workerman/bin/workermand restart
-    <br>3、平滑重启服务 ./workerman/bin/workermand reload
+    <br>1、运行停止命令 php start.php stop 
+    <br>2、运行重启命令 php start.php restart
+    <br>3、平滑重启服务 php start.php reload
     <br>4、workerman检测到业务进程内存泄露达到上限值  workerman.conf 的 [Monitor]段 中的max_mem_limit重启对应进程</p><br>
     <h4>3、钩子函数dealInput</h4>
     <pre><code>int public dealInput(string $bin);</code></pre>
     <p><b>[必须实现]</b>当有数据到达时触发，参数$bin是接受到的全部数据（包括之前接收的未处理的数据）。由于网络延时、本地socket缓冲区大小限制、TCP分片等原因，
     数据包可能不会一次全部到达，这时需要根据选定的协议和已经接收到的数据判断还有多少字节数据没有收到。返回0代表数据全部接收完毕（进入业务处理阶段），
-    返回x>0代表还有x字节没有收到（继续等待x字节的数据），返回false表示数据包有错（终止当前请求，等待其它请求），可以通过./workerman/bin/workermand status查看每个业务进程的请求量、包错误量等信息。
+    返回x>0代表还有x字节没有收到（继续等待x字节的数据），返回false表示数据包有错（终止当前请求，等待其它请求），可以通过php start.php status查看每个业务进程的请求量、包错误量等信息。
     </p><br>
     <h4>4、钩子函数dealProcess</h4>
     <pre><code>int public dealProcess(string $bin);</code></pre>

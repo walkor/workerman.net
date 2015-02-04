@@ -44,7 +44,7 @@ class Master
      * 版本
      * @var string
      */
-    const VERSION = '2.1.6';
+    const VERSION = '3.0.0';
     
     /**
      * 服务名

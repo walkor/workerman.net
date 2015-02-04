@@ -65,7 +65,7 @@
 			<h4>创建文件./applications/JsonRpc/Services/User.php</h4>
 			<pre><code><span style="color: #000000"><span style="color: #0000BB">&lt;?php<br /></span><span style="color: #007700">class&nbsp;</span><span style="color: #0000BB">User<br /></span><span style="color: #007700">{<br />&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;static&nbsp;function&nbsp;</span><span style="color: #0000BB">getInfoByUid</span><span style="color: #007700">(</span><span style="color: #0000BB">$uid</span><span style="color: #007700">)<br />&nbsp;&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;....<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">}<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;static&nbsp;function&nbsp;</span><span style="color: #0000BB">getEmail</span><span style="color: #007700">(</span><span style="color: #0000BB">$uid</span><span style="color: #007700">)<br />&nbsp;&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;...<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">}<br />}<br /></span></span></code></pre>
 			<h4>启动服务如图：</h4>
-			<p><code>./workerman/bin/workermand start</code></p>
+			<p><code>php start.php start -d</code></p>
 			<img src="/img/workerman-jsonrpc-start.png" alt="php json rpc 启动界面"/>
 			<br/>
 			<h3>客户端使用示例</h3>

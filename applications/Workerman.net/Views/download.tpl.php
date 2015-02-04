@@ -45,7 +45,7 @@
 								最新版本
 						</td>
 						<td>
-								2.1.6 
+								3.0.0 
 						</td>
 				</tr>
 				<tr>
@@ -87,10 +87,10 @@
 						</td>
 						<td>
 							<ul>
-								<li>启动: ./workerman/bin/workermand start</li>
-								<li>停止: ./workerman/bin/workermand stop</li>
-								<li>平滑重启: ./workerman/bin/workermand reload</li>
-								<li>查看状态: ./workerman/bin/workermand status</li>
+								<li>启动: php start.php start -d</li>
+								<li>停止: php start.php stop</li>
+								<li>平滑重启: php start.php reload</li>
+								<li>查看状态: php start.php status</li>
 							</ul>
 						</td>
 				</tr>

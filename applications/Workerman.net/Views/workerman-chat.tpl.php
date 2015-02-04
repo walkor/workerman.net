@@ -71,7 +71,7 @@
 				安装启动
 			</h3>
 			<p>1、<a href="/download/chatzip" target="_blank">下载</a>workerman-chat，并解压缩到任意目录</p>
-			<p>2、启动workerman<code>./workerman/bin/workermand start</code>如下图</p>
+			<p>2、启动workerman<code>php start.php start -d</code>如下图</p>
 			<img src="/img/workerman-chat-start.png" alt="php聊天室启动示意图"/>
 			<p>3、浏览器访问端口55151，例如<a href="http://chat.workerman.net">workerman.net:55151</a>如图：</p>
 			<img src="/img/workerman-chat-page.png" alt="php聊天室使用界面"/>
