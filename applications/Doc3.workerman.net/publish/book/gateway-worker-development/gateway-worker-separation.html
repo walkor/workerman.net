@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="8.9.3" data-basepath=".." data-revision="1423145820956">
+    <div class="book"  data-level="8.9.3" data-basepath=".." data-revision="1423146204629">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -846,7 +846,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_1362">
+                    <section class="normal" id="section-gitbook_1428">
                     
                         <h1 id="gateway-worker-">gateway worker 分离部署</h1>
 <h2 id="-gateway-worker-">什么是Gateway Worker分离部署</h2>
@@ -865,32 +865,33 @@
 ...
 </code></pre>
 <p>3、配置Gateway服务器(192.168.0.1)上的Gateway实例的<code>lanIp=192.168.0.1</code>与本机ip一致，Gateway服务器的初始化文件最终类似下面配置(如果有单独的Web服务器运行蝌蚪界面，可以把WebServer初始化部分也去掉)</p>
-<p> 初始化文件Applications/Todpole/start.php</p>
-<pre><code>&lt;?php
-use \Workerman\WebServer;
-use \GatewayWorker\Gateway;
-use \GatewayWorker\BusinessWorker;
+<p>文件Applications/Todpole/start.php</p>
+<pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
+<span class="hljs-keyword">use</span> \<span class="hljs-title">Workerman</span>\<span class="hljs-title">WebServer</span>;
+<span class="hljs-keyword">use</span> \<span class="hljs-title">GatewayWorker</span>\<span class="hljs-title">Gateway</span>;
+<span class="hljs-keyword">use</span> \<span class="hljs-title">GatewayWorker</span>\<span class="hljs-title">BusinessWorker</span>;
 
-// gateway
-$gateway = new Gateway(&quot;Websocket://0.0.0.0:8282&quot;);
-$gateway-&gt;name = &#39;TodpoleGateway&#39;;
-$gateway-&gt;count = 4;
-$gateway-&gt;lanIp = &#39;127.0.0.1&#39;;
-$gateway-&gt;startPort = 2000;
-$gateway-&gt;pingInterval = 10;
-$gateway-&gt;pingData = &#39;{&quot;type&quot;:&quot;ping&quot;}&#39;;
+<span class="hljs-comment">// gateway</span>
+<span class="hljs-variable">$gateway</span> = <span class="hljs-keyword">new</span> Gateway(<span class="hljs-string">"Websocket://0.0.0.0:8282"</span>);
+<span class="hljs-variable">$gateway</span>-&gt;name = <span class="hljs-string">'TodpoleGateway'</span>;
+<span class="hljs-variable">$gateway</span>-&gt;count = <span class="hljs-number">4</span>;
+<span class="hljs-variable">$gateway</span>-&gt;lanIp = <span class="hljs-string">'127.0.0.1'</span>;
+<span class="hljs-variable">$gateway</span>-&gt;startPort = <span class="hljs-number">2000</span>;
+<span class="hljs-variable">$gateway</span>-&gt;pingInterval = <span class="hljs-number">10</span>;
+<span class="hljs-variable">$gateway</span>-&gt;pingData = <span class="hljs-string">'{"type":"ping"}'</span>;
 
-// bussinessWorker
-//$worker = new BusinessWorker();
-//$worker-&gt;name = &#39;TodpoleBusinessWorker&#39;;
-//$worker-&gt;count = 4;
+<span class="hljs-comment">// bussinessWorker</span>
+<span class="hljs-comment">//$worker = new BusinessWorker();</span>
+<span class="hljs-comment">//$worker-&gt;name = 'TodpoleBusinessWorker';</span>
+<span class="hljs-comment">//$worker-&gt;count = 4;</span>
 
-// WebServer
-$web = new WebServer(&quot;http://0.0.0.0:8383&quot;);
-$web-&gt;count = 12;
-$web-&gt;addRoot(&#39;kedou.workerman.net&#39;, __DIR__.&#39;/Web&#39;);
-</code></pre><p>3、由于192.168.0.2/3 两台服务器只部署BusinessWorker进程，所以将这两台ip上的Gateway初始化注释掉或者删掉，避免运行Gateway进程，BusinessWorker服务器初始化文件类似下面(如果有单独的Web服务器运行蝌蚪界面，可以把WebServer初始化部分也去掉)</p>
-<p>初始化文件Applications/Todpole/start.php</p>
+<span class="hljs-comment">// WebServer</span>
+<span class="hljs-variable">$web</span> = <span class="hljs-keyword">new</span> WebServer(<span class="hljs-string">"http://0.0.0.0:8383"</span>);
+<span class="hljs-variable">$web</span>-&gt;count = <span class="hljs-number">12</span>;
+<span class="hljs-variable">$web</span>-&gt;addRoot(<span class="hljs-string">'kedou.workerman.net'</span>, <span class="hljs-keyword">__DIR__</span>.<span class="hljs-string">'/Web'</span>);
+</code></pre>
+<p>3、由于192.168.0.2/3 两台服务器只部署BusinessWorker进程，所以将这两台ip上的Gateway初始化注释掉或者删掉，避免运行Gateway进程，BusinessWorker服务器初始化文件类似下面(如果有单独的Web服务器运行蝌蚪界面，可以把WebServer初始化部分也去掉)</p>
+<p>文件Applications/Todpole/start.php</p>
 <pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
 <span class="hljs-keyword">use</span> \<span class="hljs-title">Workerman</span>\<span class="hljs-title">WebServer</span>;
 <span class="hljs-keyword">use</span> \<span class="hljs-title">GatewayWorker</span>\<span class="hljs-title">Gateway</span>;
@@ -928,7 +929,7 @@ $web-&gt;addRoot(&#39;kedou.workerman.net&#39;, __DIR__.&#39;/Web&#39;);
 <p>7、首先启动Gateway服务器192.168.0.1，然后启动BusinessWorker的服务器192.168.0.2/3</p>
 <p><em>至此，WorkerMan分布式部署完毕。</em></p>
 <h2 id="-">一些问题及解答</h2>
-<h3 id="-gateway-businesworker-">一、为什么将Gateway与BusinesWorker分别部署在不同的服务器上？</h3>
+<h3 id="-gateway-businesworker-">为什么将Gateway与BusinesWorker分别部署在不同的服务器上？</h3>
 <p>首先说明的是不一定非要将Gateway BusinessWorker分开部署，但是推荐分开部署，原因如下：</p>
 <p>1、由于Gateway只负责网络IO，只要服务器带宽够用，绝大多数情况下Gateway服务器不会成为瓶颈，所以在很长时间我们只需要一台或者少数几台Gateway服务器即可。由于我们不想BusinessWorker影响到Gateway，所以将Gateway和BusinessWorker分开部署</p>
 <p>2、BusinessWorker主要负责业务逻辑。当请求量增大时，由于可能BusinessWorker业务比较复杂，负载可能会明显升高，这时我们只要单纯增加BusinessWorker服务器即可，Gateway服务器则一般不需要变动，也就是不用通知客户端Gateway的ip有所变动</p>

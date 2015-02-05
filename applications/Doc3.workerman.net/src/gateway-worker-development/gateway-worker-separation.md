@@ -26,8 +26,8 @@ Gateway/Worker模式有两组进程，Gateway进程负责网络IO，Worker进程
 
 3、配置Gateway服务器(192.168.0.1)上的Gateway实例的```lanIp=192.168.0.1```与本机ip一致，Gateway服务器的初始化文件最终类似下面配置(如果有单独的Web服务器运行蝌蚪界面，可以把WebServer初始化部分也去掉)
 
- 初始化文件Applications/Todpole/start.php
-```
+文件Applications/Todpole/start.php
+```php
 <?php
 use \Workerman\WebServer;
 use \GatewayWorker\Gateway;
@@ -55,7 +55,7 @@ $web->addRoot('kedou.workerman.net', __DIR__.'/Web');
 
 3、由于192.168.0.2/3 两台服务器只部署BusinessWorker进程，所以将这两台ip上的Gateway初始化注释掉或者删掉，避免运行Gateway进程，BusinessWorker服务器初始化文件类似下面(如果有单独的Web服务器运行蝌蚪界面，可以把WebServer初始化部分也去掉)
 
-初始化文件Applications/Todpole/start.php
+文件Applications/Todpole/start.php
 
 ```php
 <?php
@@ -105,7 +105,7 @@ public static $gateway = array(
 
 ## 一些问题及解答
 
-### 一、为什么将Gateway与BusinesWorker分别部署在不同的服务器上？
+### 为什么将Gateway与BusinesWorker分别部署在不同的服务器上？
 首先说明的是不一定非要将Gateway BusinessWorker分开部署，但是推荐分开部署，原因如下：
 
 1、由于Gateway只负责网络IO，只要服务器带宽够用，绝大多数情况下Gateway服务器不会成为瓶颈，所以在很长时间我们只需要一台或者少数几台Gateway服务器即可。由于我们不想BusinessWorker影响到Gateway，所以将Gateway和BusinessWorker分开部署
