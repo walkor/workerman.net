@@ -1,6 +1,6 @@
 # 2014-12-07
 ### 版本号: 2.1.6
-### 下载地址: [点击下载版本2.1.6](https://github.com/walkor/workerman/archive/master.zip)
+### 下载地址: [点击下载版本2.1.6](https://github.com/walkor/workerman-2.x/archive/master.zip)
 ### 特性更新
 1、使用主进程监控终端是否关闭并通知各个子进程
 
