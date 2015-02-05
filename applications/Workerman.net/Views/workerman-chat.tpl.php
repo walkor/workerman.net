@@ -76,6 +76,6 @@
 			<p>3、浏览器访问端口55151，例如<a href="http://chat.workerman.net">workerman.net:55151</a>如图：</p>
 			<img src="/img/workerman-chat-page.png" alt="php聊天室使用界面"/>
 			<h3>说明</h3>
-			<p>本聊天室业务逻辑非常简单，业务逻辑都在文件./applications/Chat/Event.php中，开发者可以随意修改，比如增加表情等功能</p>
+			<p>本聊天室业务逻辑非常简单，业务逻辑都在文件./Applications/Chat/Event.php中，开发者可以随意修改，比如增加表情等功能</p>
 		</div>
 	</div>

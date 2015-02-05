@@ -75,29 +75,21 @@ service HelloWorld
 			<h4>2、使用thrift编译生成框架文件</h4>
 			<code>thrift -gen php:server HelloWorld.thrift && cp ./gen-php/Services/HelloWorld ./applications/ThriftRpc/Services/ -r</code>
 			<h4>3、完善框架文件逻辑</h4>
-			./applications/ThriftRpc/Services/HelloWorld/HelloWorldHandler.php
+			./Applications/ThriftRpc/Services/HelloWorld/HelloWorldHandler.php
 			<pre><code><span style="color: #000000"><span style="color: #0000BB">&lt;?php<br /></span><span style="color: #007700">namespace&nbsp;</span><span style="color: #0000BB">Services</span><span style="color: #007700">\</span><span style="color: #0000BB">HelloWorld</span><span style="color: #007700">;<br /><br />class&nbsp;</span><span style="color: #0000BB">HelloWorldHandler&nbsp;</span><span style="color: #007700">implements&nbsp;</span><span style="color: #0000BB">HelloWorldIf&nbsp;</span><span style="color: #007700">{<br />&nbsp;&nbsp;public&nbsp;function&nbsp;</span><span style="color: #0000BB">sayHello</span><span style="color: #007700">(</span><span style="color: #0000BB">$name</span><span style="color: #007700">)<br />&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #DD0000">"Hello&nbsp;</span><span style="color: #0000BB">$name</span><span style="color: #DD0000">"</span><span style="color: #007700">;<br />&nbsp;&nbsp;}<br />}<br /></span></span></code></pre>
-			<h4>4、./applications/ThriftRpc/conf.d/下创建HelloWorld.conf文件如下</h4>
+			<h4>4、在Applications/ThriftRpc/start.php 中初始化服务，包括进端口和程数</h4>
 			<pre><code>
-;Thrift HelloWorld 服务
-;worker_file，worker路口入口文件
-worker_file = ../ThriftWorker.php
-;监听的端口
-listen = tcp://0.0.0.0:9090
-;短连接，每次请求后服务端主动断开
-persistent_connection = 0
-;启动多少worker进程,一般设置成 cpu核数*8
-start_workers=24
-;接收多少请求后退出
-max_requests=10000
-;以哪个用户运行该worker进程,为了安全，请使用较低权限的用户,如www-data nobody
-user=root
-;thrift transport，默认使用TBufferedTransport，可以改成其它transport（注意不要忘记修改客户端对应的thrift_transport配置项）
-thrift_transport = TBufferedTransport
-;thrift protocol，默认使用二进制协议，可以设置成其它协议（注意不要忘记修改客户端对应的thrift_protocol配置项）
-thrift_protocol  = TBinaryProtocol
-;统计数据上报地址，即StatisticWorker.conf配置的地址
-statistic_address = udp://127.0.0.1:44646
+require_once __DIR__ . '/ThriftWorker.php';
+
+// helloworld
+$hello_worker = new ThriftWorker('tcp://0.0.0.0:9090');
+$hello_worker->count = 16;
+$hello_worker->class = 'HelloWorld';
+
+// another worker
+//$another_worker = new ThriftWorker('tcp://0.0.0.0:9090');
+//$another_worker->count = 16;
+//$another_worker->class = 'AnotherClass';
 			</code></pre>
 			<h4>5、启动服务端如下：</h4>
 			<p><code>php start.php start -d</code></p>

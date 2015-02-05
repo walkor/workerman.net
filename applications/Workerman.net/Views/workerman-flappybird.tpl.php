@@ -63,14 +63,14 @@
 			<h4>3、终端运行<code>apt-get install git</code>如图：</h4>
 			<img src="/img/apt-install-git.png" alt="apt-get 安装 git"/>
 			<h4>4、终端运行<code> cd /home/ && git clone https://github.com/walkor/workerman-flappy-bird</code></h4>
-			<h4>5、终端运行<code>/home/workerman-todpole/workerman/bin/workermand start</code></h4>
+			<h4>5、终端运行<code>cd workerman-flappy-bird &&  php start.php start -d</code></h4>
 			<h4>6、大功告成！浏览器访问 http://ip:8484 如图:（如果不知道自己服务器ip，则运行 <code>ip addr | grep eth1 | grep inet</code>查看）</h4>
 			<a href="http://flap.workerman.net" target="_blank"><img src="/img/workerman-flappy-bird.png" alt="php 多人在线flappy bird小游戏浏览器界面" /></a>
 			<br><br>
 			<h3>阿里云详细安装教程之centos系统</h3>
 			<h4>1、<code>yum install php-cli php-process git</code></h4>
 			<h4>2、<code>cd /home/ && git clone https://github.com/walkor/workerman-flappy-bird</code></h4>
-			<h4>3、<code>/home/workerman-flappy-bird/workerman/bin/workermand start</code></h4>
+			<h4>3、<code>cd workerman-flappy-bird &&  php start.php start -d</code></h4>
 			<h4>4、大功告成！浏览器访问 http://ip:8484 （如果不知道自己服务器ip，则运行 <code>ip addr | grep eth1 | grep inet</code>查看）</h4>
 			<br>
 			<p><a href="http://flap.workerman.net" target="_blank">多人在线 flappy bird DEMO点击这里</a></p>
