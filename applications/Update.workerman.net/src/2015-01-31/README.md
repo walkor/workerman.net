@@ -16,7 +16,9 @@
 
 7、Gateway/Worker模型除了初始化时与Worker类似，接口无变化，同样Event.php中业务不在有协议相关的处理逻辑，协议全部在Gateway进程处理
 
-8、Gateway/Worker模型去掉了onGatewayMessage接口，onGatewayConnect接口名称变为onConnect。至此Event.php中可用的接口实现分别为 onConnect、onMessage、onClose
+8、Gateway/Worker模型去掉了Event的onGatewayMessage接口，onGatewayConnect接口名称变为onConnect。至此Event.php中可用的接口实现分别为 onConnect、onMessage、onClose
+
+其它变化参考手册:http://doc3.workerman.net/
 
 
 ### 升级注意事项

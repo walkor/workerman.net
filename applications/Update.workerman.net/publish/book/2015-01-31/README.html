@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="1" data-basepath=".." data-revision="1423148369176">
+    <div class="book"  data-level="1" data-basepath=".." data-revision="1423150502048">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -202,7 +202,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_2779">
+                    <section class="normal" id="section-gitbook_2786">
                     
                         <h1 id="2015-01-31">2015-01-31</h1>
 <h3 id="-3-0-0">版本号: 3.0.0</h3>
@@ -215,7 +215,8 @@
 <p>5、业务代码不再规定必须继承SocketWorker类，而以更灵活的onMessage等钩子的方式调用业务逻辑，降低业务与WorkerMan的耦合度</p>
 <p>6、协议相关优化，业务代码不在和协议耦合在一起，可以方便的切换协议或者支持多协议。规范了协议接口，所有协议必须遵循协议接口规范</p>
 <p>7、Gateway/Worker模型除了初始化时与Worker类似，接口无变化，同样Event.php中业务不在有协议相关的处理逻辑，协议全部在Gateway进程处理</p>
-<p>8、Gateway/Worker模型去掉了onGatewayMessage接口，onGatewayConnect接口名称变为onConnect。至此Event.php中可用的接口实现分别为 onConnect、onMessage、onClose</p>
+<p>8、Gateway/Worker模型去掉了Event的onGatewayMessage接口，onGatewayConnect接口名称变为onConnect。至此Event.php中可用的接口实现分别为 onConnect、onMessage、onClose</p>
+<p>其它变化参考手册:<a href="http://doc3.workerman.net/" target="_blank">http://doc3.workerman.net/</a></p>
 <h3 id="-">升级注意事项</h3>
 <p>此次版本更新变化很大，主要是让WorkerMan开发更简单，增加了Worker、Connection，优化了协议处理，已经基于2.x开发的WorkerMan没有必要更新到此版本。新的项目可以基于3.x开发</p>
 
