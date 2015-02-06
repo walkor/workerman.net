@@ -35,7 +35,7 @@
    * [适用范围](gateway-worker-development/gateway-worker-development.md)
    * [Gateway类的使用](gateway-worker-development/gateway.md)
    * [BusinessWorker类的使用](gateway-worker-development/business-worker.md)
-   * [Event类的回调接口](gateway-worker-development/event-functions)
+   * [Event类的回调接口](gateway-worker-development/event-functions.md)
        * [onConnect](gateway-worker-development/onconnect.md)
        * [onMessage](gateway-worker-development/onmessage.md)
        * [onClose](gateway-worker-development/onclose.md)
