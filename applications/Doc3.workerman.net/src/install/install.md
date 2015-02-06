@@ -33,7 +33,7 @@ git clone https://github.com/walkor/workerman
 
 5、进入到WorkerMan主程序根目录，命令行运行以下命令启动WorkerMan
 ```shell
-php bootstrap.php start
+php start.php start
 ```
 
 
@@ -66,7 +66,7 @@ git clone https://github.com/walkor/workerman
 
 5、进入到WorkerMan主程序根目录，命令行运行以下命令启动WorkerMan
 ```shell
-php bootstrap.php start
+php start.php start
 ```
 
 
@@ -79,6 +79,6 @@ php bootstrap.php start
 
 3、进入到WorkerMan主程序根目录，命令行运行以下命令启动WorkerMan
 ```shell
-php bootstrap.php start
+php start.php start
 ```
 
