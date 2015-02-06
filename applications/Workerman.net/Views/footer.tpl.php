@@ -27,7 +27,7 @@
 						<li><a href="/download/jsonrpc">Json Rpc远程调用框架</a></li>
 						<li><a href="/download/chat">PHP 聊天室</a></li>
 						<li><a href="/download/statistics">分布式统计监控系统</a></li>
-						<li><a href="/download/manual">Workerman离线手册（PDF）</a></li>
+						<li><a href="/download/manual">Workerman3.x离线手册（PDF）</a></li>
 						</ul>
 						<p class="gray">
 						蜀ICP备13029294号
