@@ -58,7 +58,7 @@
    * [基本调试](debug/base.md)
    * [网络抓包](debug/tcpdump.md)
    * [追踪系统调用](debug/strace.md)
-* [高级应用](advanced/README)
+* [高级应用](advanced/README.md)
    * [定时任务（定时器）](advanced/timer.md)
    * [WebServer](advanced/webserver.md)
 

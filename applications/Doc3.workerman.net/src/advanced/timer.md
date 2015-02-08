@@ -29,7 +29,11 @@ persistent
 
 ### 示例
 ```php
+use \Workerman\Worker;
+
 $task = new Worker();
+// 开启多少个进程运行定时任务，注意多进程并发问题
+$task->count = 1;
 $task->onWorkerStart = function($task)
 {
     $time_interval = 2;
