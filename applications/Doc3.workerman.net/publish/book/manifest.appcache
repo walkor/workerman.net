@@ -1,11 +1,15 @@
 CACHE MANIFEST
-# Revision 1423231304308
+# Revision 1423365921039
 
 CACHE:
 getting-started/README.html
 getting-started/feature.html
 getting-started/simple-example.html
 index.html
+advanced/README.html
+advanced/status.html
+advanced/timer.html
+advanced/webserver.html
 debug/base.html
 debug/strace.html
 debug/tcpdump.html
