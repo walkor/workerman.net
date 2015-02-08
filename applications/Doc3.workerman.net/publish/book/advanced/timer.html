@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="10.1" data-basepath=".." data-revision="1423365921038">
+    <div class="book"  data-level="10.1" data-basepath=".." data-revision="1423366222021">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -896,12 +896,13 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_687">
+                    <section class="normal" id="section-gitbook_765">
                     
                         <h1 id="-">定时任务</h1>
 <h2 id="-">接口</h2>
-<pre><code>void \Workerman\Lib\Timer::add(int $time_interval, callable $callback [,$args = array(), bool $persistent = true])
-</code></pre><p>定时执行某个函数或者类方法</p>
+<pre><code class="lang-php">void \Workerman\Lib\Timer::add(int <span class="hljs-variable">$time_interval</span>, callable <span class="hljs-variable">$callback</span> [,<span class="hljs-variable">$args</span> = <span class="hljs-keyword">array</span>(), bool <span class="hljs-variable">$persistent</span> = <span class="hljs-keyword">true</span>])
+</code></pre>
+<p>定时执行某个函数或者类方法</p>
 <h3 id="-">参数</h3>
 <p>time_interval</p>
 <p>多长时间执行一次，单位秒</p>
@@ -929,7 +930,7 @@
 };
 </code></pre>
 <h2 id="-">定时任务使用注意事项</h2>
-<p>1、可以在任意位置使用<code>\Workerman\Lib\Timer::addadd(int $time_interval, callable $callback [,$args = array(), bool $persistent = true])</code>添加定时任务</p>
+<p>1、可以在任意位置使用<code>\Workerman\Lib\Timer::add(int $time_interval, callable $callback [,$args = array(), bool $persistent = true])</code>添加定时任务</p>
 <p>2、添加的任务在当前进程执行，如果任务很重（特别是涉及到网络IO的任务），可能会导致该进程阻塞，暂时无法处理其它业务。所以最好将耗时的任务放到单独的进程运行，例如像示例中一样建立一个Worker进程运行</p>
 <p>3、当一个任务没有在预期的时间运行完，这时又到了下一个运行周期，则会等待当前任务完成才会运行。也就是说当前进程的任务都是串行执行的。</p>
 <p>4、要考虑到多进程设置了定时任务造成并发问题</p>
