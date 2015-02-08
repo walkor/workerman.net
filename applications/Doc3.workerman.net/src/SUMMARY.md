@@ -61,4 +61,5 @@
 * [高级应用](advanced/README.md)
    * [定时任务（定时器）](advanced/timer.md)
    * [WebServer](advanced/webserver.md)
+   * [查看WorkerMan运行状态](advanced/status.md)
 
