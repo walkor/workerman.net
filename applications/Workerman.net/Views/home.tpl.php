@@ -17,7 +17,7 @@
 				<h3>Workerman支持的特性</h3>
 				<ol>
 					<li>纯PHP开发，多进程支持</li>
-					<li>支持TCP/UDP，单机可支持数十万以上并发TCP长连接</li>
+					<li>支持TCP/UDP，单机可支持数百万以上TCP长连接</li>
 					<li>支持分布式，集群能支持数百万甚至更高的并发TCP连接</li>
 					<li>支持libevent事件触发网络库</li>
 					<li>支持热更新及服务器平滑重启</li>
@@ -302,7 +302,11 @@
 		<td><a href="http://www.mitaole.com/" target="blank"><img src="/img/logos/mitaole.png" alt="米淘乐logo"></a></td>
 		<td><a href="http://www.duowan.com/" target="blank"><img src="/img/logos/duowan.png" alt="多玩logo"></a></td>
 		<td><a href="http://www.yuchats.com/" target="blank"><img src="/img/logos/meng-mark.png" alt="萌mark logo"></a></td>
+		</tr>
 		<tr>
+		<td><a href="http://www.ilongterm.com/" target="blank"><img src="/img/logos/ilongterm.png" alt="龙腾海外房产网logo"></a></td>
+		<td><a href="http://www.dbfen.com/" target="blank"><img src="/img/logos/dbfen.png" alt="多备份logo"></a></td>
+		</tr>
 		</table>
 	</div>
 </div>
