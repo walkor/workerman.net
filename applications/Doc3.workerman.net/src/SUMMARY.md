@@ -63,4 +63,7 @@
    * [WebServer](advanced/webserver.md)
    * [查看WorkerMan运行状态](advanced/status.md)
    * [在其它项目中推送消息](advanced/push.md)
+* [附录](appendices/README)
+   * [压力测试](appendices/stress-test.md)
+   * [安装扩展](appendices/install-extension.md)
 
