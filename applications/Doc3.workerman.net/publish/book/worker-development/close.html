@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="7.3.4" data-basepath=".." data-revision="1423582645850">
+    <div class="book"  data-level="7.3.4" data-basepath=".." data-revision="1423663792579">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -946,24 +946,22 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_1693">
+                    <section class="normal" id="section-gitbook_409">
                     
                         <h1 id="close">close</h1>
 <h2 id="-">说明:</h2>
-<pre><code class="lang-php">void Connection::close(mixed <span class="hljs-variable">$data</span> [,<span class="hljs-variable">$raw</span> = <span class="hljs-keyword">false</span>])
+<pre><code class="lang-php">void Connection::close(mixed <span class="hljs-variable">$data</span>)
 </code></pre>
-<p>向客户端发送数据</p>
+<p>关闭连接</p>
 <h2 id="-">参数</h2>
 <p><code>$data</code></p>
-<p>要发送的数据，如果在初始化Worker类时指定了协议，则会自动调用协议的encode方法,完成协议打包工作后发送给客户端</p>
-<p><code>$raw</code>
-是否发送原始数据，即不调用协议的encode方法，默认是false，即自动调用协议的encode方法</p>
+<p>要发送的数据（如果有指定协议，则会自动调用协议的encode方法），当数据发送完毕后关闭连接，随后会触发onClose回调</p>
 <h2 id="-">范例</h2>
 <pre><code class="lang-php"><span class="hljs-keyword">use</span> <span class="hljs-title">WorkerMan</span>\<span class="hljs-title">Worker</span>;
 <span class="hljs-variable">$worker</span> = <span class="hljs-keyword">new</span> Worker(<span class="hljs-string">'websocket://0.0.0.0:8484'</span>);
 <span class="hljs-variable">$worker</span>-&gt;onMessage = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(<span class="hljs-variable">$connection</span>, <span class="hljs-variable">$data</span>)</span>
 {</span>
-    <span class="hljs-variable">$connection</span>-&gt;send(<span class="hljs-string">"hello\n"</span>);
+    <span class="hljs-variable">$connection</span>-&gt;close(<span class="hljs-string">"hello\n"</span>);
 };
 </code></pre>
 
