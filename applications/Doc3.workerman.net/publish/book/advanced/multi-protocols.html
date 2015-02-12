@@ -4,7 +4,7 @@
     <head>
         
         <meta charset="UTF-8">
-        <title>在其它项目中推送消息 | WorkerMan 3.x 手册</title>
+        <title>多协议支持 | WorkerMan 3.x 手册</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 0.5.2">
@@ -17,10 +17,10 @@
     
     
     
-    <link rel="next" href="../advanced/multi-protocols.html" />
+    <link rel="next" href="../appendices/README.html" />
     
     
-    <link rel="prev" href="../advanced/status.html" />
+    <link rel="prev" href="../advanced/push.html" />
     
 
         
@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="10.4" data-basepath=".." data-revision="1423755765384">
+    <div class="book"  data-level="10.5" data-basepath=".." data-revision="1423755765384">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -821,7 +821,7 @@
             <div class="page-wrapper" tabindex="-1">
                 <div class="book-progress">
     <div class="bar">
-        <div class="inner" style="width: 92.6470588235294%;min-width: 91.17647058823529%;"></div>
+        <div class="inner" style="width: 94.11764705882354%;min-width: 92.6470588235294%;"></div>
     </div>
     <div class="chapters">
     
@@ -953,7 +953,7 @@
     
         <a href="../advanced/push.html" title="在其它项目中推送消息" class="chapter done " data-progress="10.4" style="left: 92.6470588235294%;"></a>
     
-        <a href="../advanced/multi-protocols.html" title="多协议支持" class="chapter  " data-progress="10.5" style="left: 94.11764705882354%;"></a>
+        <a href="../advanced/multi-protocols.html" title="多协议支持" class="chapter done " data-progress="10.5" style="left: 94.11764705882354%;"></a>
     
         <a href="../appendices/README.html" title="附录" class="chapter  " data-progress="11" style="left: 95.58823529411765%;"></a>
     
@@ -968,73 +968,69 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_4054">
+                    <section class="normal" id="section-gitbook_4053">
                     
-                        <h1 id="-workerman-">在非WorkerMan项目中推送消息</h1>
+                        <h1 id="-">多协议支持</h1>
 <h2 id="-">需求</h2>
-<p>有时候需要在非WorkerMan环境中向客户端推送数据。例如在一个普通的Web项目中通过WorkerMan推送数据（前提是已经部署了WorkerMan，客户端已经连接WorkerMan）。目前有三种比较方便方法推送数据。（本节内容主要是针对Gateway/Worker模型的推送方法的讲解）</p>
-<h2 id="-gatewayclient-">方法一、使用GatewayClient客户端推送</h2>
-<p><strong>客户端地址：</strong><a href="https://github.com/walkor/GatewayClient" target="_blank">https://github.com/walkor/GatewayClient</a></p>
-<p><strong>目录结构：</strong></p>
-<pre><code class="lang-shell">GatewayClient/
-├── Config
-│   └── Store.php
-└── Gateway.php
-</code></pre>
-<p><strong>使用方法：</strong></p>
-<p>1、配置Config/Store.php使其与WorkerMan项目中的Applications/YourApp/Config/Store.php配置相同。</p>
-<p>注意:<code>Store::$driver = self::DRIVER_FILE</code>时<code>Store::$storePath</code>的要配置成<code>Applications/YourApp/Config/Store::$storePath</code>的实际值</p>
-<p> 注意:非WorkerMan项目与WorkerMan不在同一台服务器，需要设置成<code>Store::$driver=self::DRIVER_MC;</code>，并设置<code>Store::$gateway</code>为memcache开启的端口，<code>Store::$storePath</code>不用设置</p>
-<p> 2、包含文件<code>require &#39;/your/path/GatewayClient/Gateway.php&#39;;</code>然后就可以像在WorkerMan环境中一样调用<code>Gateway::sendToAll、Gateway::sendToClient、Gateway::closeClient、Gateway::isOnline、Gateway::getOnlineStatus</code>等方法了（注意<code>Gateway::sendToCurrentClient</code>和<code>Gateway::closeCurrentClient</code>无法调用）。</p>
-<p> <strong>示例</strong></p>
-<pre><code class="lang-php"><span class="hljs-keyword">require_once</span> <span class="hljs-string">'/your/path/GatewayClient/Gateway.php'</span>;
+<p>有时我们需要一套应用程序支持多个客户端，进而需要应用支持多个协议。例如一个IM即时通讯应用，可能需要同时支持浏览器使用，又要支持移动App客户端。而二者所使用的协议可能完全不同。</p>
+<h2 id="-">如何支持多协议</h2>
+<p>在WorkerMan中最简单的实现方法是开启多个端口，每个端口使用一种协议。不同客户端使用各自的协议去连特定的端口。</p>
+<h2 id="-">示例（小蝌蚪）</h2>
+<p><a href="https://github.com/walkor/workerman-todpole" target="_blank">小蝌蚪</a>应用程序是运行在PC浏览器里面的，使用Websocket协议与WorkerMan通讯，当我们需要把它移植到手机App上却有没有合适的客户端Websocket库时，我们可以使用更简单的协议来实现App与WorkerMan通讯，例如Text文本协议(以换行符为结尾的文本数据包)。</p>
+<p>下面是开启多端口支持多协议示例</p>
+<pre><code class="lang-php"><span class="hljs-keyword">use</span> \<span class="hljs-title">Workerman</span>\<span class="hljs-title">WebServer</span>;
+<span class="hljs-keyword">use</span> \<span class="hljs-title">GatewayWorker</span>\<span class="hljs-title">Gateway</span>;
+<span class="hljs-keyword">use</span> \<span class="hljs-title">GatewayWorker</span>\<span class="hljs-title">BusinessWorker</span>;
 
-Gateway::sendToAll(<span class="hljs-string">'{"type":"broadcast","content":"hello all"}'</span>);
-
-Gateway::sendToClient(<span class="hljs-variable">$client_id</span>,<span class="hljs-string">'{"type":"say","content":"hello"}'</span>);
-
-Gateway::isOnline(<span class="hljs-variable">$client_id</span>);
-
-...
-</code></pre>
-<h2 id="-">方法二、用一个特殊的账号当做管理客户端，通过这个账号推送数据</h2>
-<p> 此方法通俗易懂，可以通过现有客户端直接操作，具体代码根据自己的业务实现</p>
-<h2 id="-gateway-">方法三、开启一个内部Gateway端口，用于推送数据</h2>
-<p> 方法二虽然简单，但是局限于只能通过客户端界面操作，定时推送等需求不好直接操作客户端，而通过PHP模拟客户端可能会受到复杂协议的限制不好操作，这时我们可以开启一个内部文本协议的Gateway端口，通过PHP代码使用文本协议连接WorkerMan作为客户端向其它客户端推送数据。</p>
-<p> <strong> 示例（workerman-chat为例） </strong></p>
-<p><strong>服务端：</strong>Applications/Chat/start.php中新增一个文本协议Gateway端口</p>
-<pre><code class="lang-php"><span class="hljs-comment">// gateway</span>
-<span class="hljs-variable">$gateway</span> = <span class="hljs-keyword">new</span> Gateway(<span class="hljs-string">"Websocket://0.0.0.0:7272"</span>);
-<span class="hljs-variable">$gateway</span>-&gt;name = <span class="hljs-string">'ChatGateway'</span>;
+<span class="hljs-comment">// gateway 原有代码</span>
+<span class="hljs-variable">$gateway</span> = <span class="hljs-keyword">new</span> Gateway(<span class="hljs-string">"Websocket://0.0.0.0:8282"</span>);
+<span class="hljs-variable">$gateway</span>-&gt;name = <span class="hljs-string">'TodpoleGateway'</span>;
 <span class="hljs-variable">$gateway</span>-&gt;count = <span class="hljs-number">4</span>;
 <span class="hljs-variable">$gateway</span>-&gt;lanIp = <span class="hljs-string">'127.0.0.1'</span>;
-<span class="hljs-variable">$gateway</span>-&gt;startPort = <span class="hljs-number">2500</span>;
+<span class="hljs-variable">$gateway</span>-&gt;startPort = <span class="hljs-number">2000</span>;
 <span class="hljs-variable">$gateway</span>-&gt;pingInterval = <span class="hljs-number">10</span>;
 <span class="hljs-variable">$gateway</span>-&gt;pingData = <span class="hljs-string">'{"type":"ping"}'</span>;
 
-<span class="hljs-comment">// #### 内部推送端口(假设内网ip为192.168.100.100) ####</span>
-<span class="hljs-variable">$internal_gateway</span> = <span class="hljs-keyword">new</span> Gateway(<span class="hljs-string">"Text://192.168.100.100:7273"</span>);
-<span class="hljs-variable">$internal_gateway</span>-&gt;name=<span class="hljs-string">'internalGateway'</span>;
-<span class="hljs-variable">$internal_gateway</span>-&gt;startProt = <span class="hljs-number">2800</span>;
-<span class="hljs-comment">// #### 内部推送端口设置完毕 ####</span>
+<span class="hljs-comment">// ##########新增端口支持Text协议 开始##########</span>
+<span class="hljs-comment">// 新增8283端口，开启Text文本协议</span>
+<span class="hljs-variable">$gateway_text</span> = <span class="hljs-keyword">new</span> Gateway(<span class="hljs-string">"Text://0.0.0.0:8283"</span>);
+<span class="hljs-comment">// 进程名称，主要是status时方便识别</span>
+<span class="hljs-variable">$gateway_text</span>-&gt;name = <span class="hljs-string">'TodpoleGatewayText'</span>;
+<span class="hljs-comment">// 开启多少text协议的gateway进程</span>
+<span class="hljs-variable">$gateway_text</span>-&gt;count = <span class="hljs-number">4</span>;
+<span class="hljs-comment">// 本机ip（分布式部署时需要设置成内网ip）</span>
+<span class="hljs-variable">$gateway</span>-&gt;lanIp = <span class="hljs-string">'127.0.0.1'</span>;
+<span class="hljs-comment">// gateway内部通讯起始端口，起始端口不要重复</span>
+<span class="hljs-variable">$gateway</span>-&gt;startPort = <span class="hljs-number">2500</span>;
+<span class="hljs-comment">// 也可以设置心跳，这里省略</span>
+<span class="hljs-comment">// ##########新增端口支持Text协议 结束##########</span>
 
-<span class="hljs-comment">// bussinessWorker</span>
+<span class="hljs-comment">// bussinessWorker 原有代码</span>
 <span class="hljs-variable">$worker</span> = <span class="hljs-keyword">new</span> BusinessWorker();
-<span class="hljs-variable">$worker</span>-&gt;name = <span class="hljs-string">'ChatBusinessWorker'</span>;
+<span class="hljs-variable">$worker</span>-&gt;name = <span class="hljs-string">'TodpoleBusinessWorker'</span>;
 <span class="hljs-variable">$worker</span>-&gt;count = <span class="hljs-number">4</span>;
 
-<span class="hljs-comment">// WebServer</span>
-<span class="hljs-variable">$web</span> = <span class="hljs-keyword">new</span> WebServer(<span class="hljs-string">"http://0.0.0.0:55151"</span>);
+<span class="hljs-comment">// WebServer 原有代码</span>
+<span class="hljs-variable">$web</span> = <span class="hljs-keyword">new</span> WebServer(<span class="hljs-string">"http://0.0.0.0:8383"</span>);
 <span class="hljs-variable">$web</span>-&gt;count = <span class="hljs-number">2</span>;
 <span class="hljs-variable">$web</span>-&gt;addRoot(<span class="hljs-string">'www.workerman.net'</span>, <span class="hljs-keyword">__DIR__</span>.<span class="hljs-string">'/Web'</span>);
 </code></pre>
-<p> <strong>客户端：</strong>在其它项目中就可以直接用PHP socket 使用文本协议调用，代码类似如下:</p>
-<pre><code class="lang-php"><span class="hljs-comment">// 建立连接，@see http://php.net/manual/zh/function.stream-socket-client.php</span>
-<span class="hljs-variable">$client</span> = stream_socket_client(<span class="hljs-string">'tcp://192.168.100.100:7273'</span>);
-<span class="hljs-keyword">if</span>(!<span class="hljs-variable">$client</span>)<span class="hljs-keyword">exit</span>(<span class="hljs-string">"can not connect"</span>);
-<span class="hljs-comment">// 模拟超级用户，以文本协议发送数据，注意文本协议末尾有换行符（发送的数据中最好有能识别超级用户的字段），这样在Event.php中的onMessage方法中便能收到这个数据，然后做相应的处理</span>
-fwrite(<span class="hljs-variable">$client</span>, <span class="hljs-string">'{"type":"send","content":"hello all", "user":"admin", "pass":"******"}'</span>.<span class="hljs-string">"\n"</span>);
+<p><strong>测试效果</strong></p>
+<p>由于是文本协议，我们可以通过telnet命令方便的模拟文本协议客户端。以下运行telnet命令的结果</p>
+<pre><code class="lang-shell">telnet 127.0.0.1 8283
+Trying 127.0.0.1...
+Connected to 127.0.0.1.
+Escape character is &#39;^]&#39;.
+{&quot;type&quot;:&quot;update&quot;,&quot;id&quot;:156,&quot;angle&quot;:3.636,&quot;momentum&quot;:0,&quot;x&quot;:-64.8,&quot;y&quot;:147.1,&quot;life&quot;:1,&quot;name&quot;:&quot;Guest.156&quot;,&quot;authorized&quot;:false}
+{&quot;type&quot;:&quot;update&quot;,&quot;id&quot;:156,&quot;angle&quot;:4.27,&quot;momentum&quot;:0,&quot;x&quot;:-64.8,&quot;y&quot;:147.1,&quot;life&quot;:1,&quot;name&quot;:&quot;Guest.156&quot;,&quot;authorized&quot;:false}
+{&quot;type&quot;:&quot;update&quot;,&quot;id&quot;:156,&quot;angle&quot;:5.766,&quot;momentum&quot;:0,&quot;x&quot;:-64.8,&quot;y&quot;:147.1,&quot;life&quot;:1,&quot;name&quot;:&quot;Guest.156&quot;,&quot;authorized&quot;:false}
+{&quot;type&quot;:&quot;update&quot;,&quot;id&quot;:156,&quot;angle&quot;:6.284,&quot;momentum&quot;:3,&quot;x&quot;:-58.8,&quot;y&quot;:146.7,&quot;life&quot;:1,&quot;name&quot;:&quot;Guest.156&quot;,&quot;authorized&quot;:false}
 </code></pre>
+<p>我们能看到其它PC客户端通过WorkerMan转发来的蝌蚪的实时坐标数据，我们也可以输入自己的坐标数据，然后按回车键，我们就能在PC客户端上看到自己了。这样通过使用telnet客户端+文本协议，我们可以方便的调试数据，开发新的客户端了。</p>
+<p><strong>说明：</strong></p>
+<p>以上是WorkerMan多协议支持示例，我们看到只需要简单的初始化端口及协议即可，服务端的业务代码不用任何更改。开发者也可以使用其它协议初始化端口，也可以参考《定制通讯协议章节》定义自己的协议</p>
+<p>以上是Gateway/Worker模型的多协议支持示例，基于Worker的多协议也是同样的道理</p>
+<p>支持多协议还有其他的方法，比如通过协议自身的特点区分当前是哪种协议，然后分别调用相应协议的解码方法，这样可以做到只开一个端口就可以支持多种协议的效果</p>
 
                     
                     </section>
@@ -1044,10 +1040,10 @@ fwrite(<span class="hljs-variable">$client</span>, <span class="hljs-string">'{"
         </div>
 
         
-        <a href="../advanced/status.html" class="navigation navigation-prev " aria-label="Previous page: 查看WorkerMan运行状态"><i class="fa fa-angle-left"></i></a>
+        <a href="../advanced/push.html" class="navigation navigation-prev " aria-label="Previous page: 在其它项目中推送消息"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../advanced/multi-protocols.html" class="navigation navigation-next " aria-label="Next page: 多协议支持"><i class="fa fa-angle-right"></i></a>
+        <a href="../appendices/README.html" class="navigation navigation-next " aria-label="Next page: 附录"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
