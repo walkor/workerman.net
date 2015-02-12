@@ -34,4 +34,8 @@
 
 ###### 以上压测脚本与WorkerMan运行在同一台机器上
 
+
+## 压力测试需要内核调优
+参见 附录-内核调优 章节
+
 **压力测试代码及脚本连接:** https://github.com/walkor/workerman-bench

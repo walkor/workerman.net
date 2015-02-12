@@ -31,47 +31,6 @@ libevent扩展使得PHP可以使用系统[Epoll](http://baike.baidu.com/view/138
 
 ## 如何安装扩展
 
-如果发现所需扩展没有安装科尝试以下方法：
-
-### 如果您的php是源码编译
-那么请进到php的源码目录，再进入ext目录下，分别找到相应的php模块目录，进行编译
-
-1、 假设php目录为/usr/local/php, 进到相应的php模块目录，执行```
-/usr/local/php/bin/phpize```
-
-
-2、 接着执行```
- ./configure –with-php-config=/usr/local/php/bin/php-config```
-
-
-3、 接着执行以下命令 (没有权限则在命令前加sudo)```
-make && make install ```
-
-
-4、 编译完成后，会显示so在哪个目录下，然后打开php.ini之后，在相应地方加入```
-extension=your_extension.so```
-
-
-### centos系统并且PHP是yum安装
-1、命令行运行```
-yum install php-cli php-process git php-devel php-pear libevent-devel```
-
-2、命令行运行```
-pecl install channel://pecl.php.net/libevent-0.1.0```
-
-3、命令行运行```
-echo extension=libevent.so > /etc/php.d/libevent.ini```
-
-
-### debian/ubuntu并且PHP是apt-install安装
-1、命令行运行```
-apt-get update && apt-get install php5-cli git php-pear php5-dev libevent-dev```
-
-2、命令行运行```
-pecl install channel://pecl.php.net/libevent-0.1.0```
-
-3、命令行运行```
-echo extension=libevent.so > /etc/php5/cli/conf.d/libevent.ini```
-
+参见 附录-安装扩展 章节
 
 
