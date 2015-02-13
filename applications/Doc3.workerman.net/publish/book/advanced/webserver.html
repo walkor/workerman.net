@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="10.2" data-basepath=".." data-revision="1423755765384">
+    <div class="book"  data-level="10.2" data-basepath=".." data-revision="1423839760712">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -968,7 +968,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_4057">
+                    <section class="normal" id="section-gitbook_82">
                     
                         <h1 id="webserver">WebServer</h1>
 <p>WorkerMan自带了一个简单那的Web服务器，同样也是基于Worker实现的。文件位置在Workerman/WebServer.php。这个WebServer开发的目的主要是为了方便运行一些简单的Web程序，例如workerman-todpole等web界面程序。</p>
@@ -989,9 +989,9 @@
 <h3 id="2-workerman-web-">2、WorkerMan架构Web程序运行机制</h3>
 <p>WorkerMan是常驻内存的运行机制，只要PHP文件被载入编译过一次，便会常驻内存，不会再去从磁盘读取或者再去编译，并省去了重复的请求初始化、创建执行环境、词法解析、语法解析、编译生成opcode以及请求关闭释放各种资源等诸多耗时的步骤。剩下的只是简单的计算过程，所以性能很高。正因为常驻内存，所以类、函数、常量等定义代码只要运行一次，便可以永久使用，不会被销毁，所以要避免反复加载类、函数、常量等定义文件。比较简单的办法是使用require_once加载文件，避免重复加载重复定义。</p>
 <h3 id="3-exit-die-">3、避免使用exit、die语句</h3>
-<p>同样的，在程序中避免使用exit、die语句，使用exit、die会导致进程退出。可以使用<code>\Workerman\Http::end($msg)</code>函数替代exit、die函数。</p>
+<p>同样的，在程序中避免使用exit、die语句，使用exit、die会导致进程退出。可以使用<code>\Workerman\Protocols\Http::end($msg)</code>函数替代exit、die函数。</p>
 <h3 id="4-http-">4、HTTP相关函数的使用</h3>
-<p>WorkerMan运行在PHP CLI模式下，PHP CLI模式下无法使用HTTP相关的函数，例如<code>header、setcookie、session_start</code>等函数，请使用<code>\Workerman\Http的内置方法header、setcookie、session_start</code>等替换。</p>
+<p>WorkerMan运行在PHP CLI模式下，PHP CLI模式下无法使用HTTP相关的函数，例如<code>header、setcookie、session_start</code>等函数，请使用<code>/Workerman/Protocols/Http.php</code>文件中的<code>header、setcookie、session_start</code>等方法替换。</p>
 <h3 id="5-web-">5、Web入口文件</h3>
 <p>WorkerMan的WebServer默认使用index.php作为Web入口文件，例如配置<code>$webserver-&gt;setRoot(&#39;www.example.com&#39;, &#39;/home/www/&#39;);</code>，则www.example.com的入口文件为<code>/home/www/index.php</code>。当url访问的文件（包括静态文件和PHP文件）不存在时，会自动调用入口文件index.php</p>
 <h3 id="6-">6、可用的超全局变量</h3>

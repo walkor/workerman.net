@@ -27,10 +27,10 @@ $sebserver->count = 4;
 WorkerMan是常驻内存的运行机制，只要PHP文件被载入编译过一次，便会常驻内存，不会再去从磁盘读取或者再去编译，并省去了重复的请求初始化、创建执行环境、词法解析、语法解析、编译生成opcode以及请求关闭释放各种资源等诸多耗时的步骤。剩下的只是简单的计算过程，所以性能很高。正因为常驻内存，所以类、函数、常量等定义代码只要运行一次，便可以永久使用，不会被销毁，所以要避免反复加载类、函数、常量等定义文件。比较简单的办法是使用require_once加载文件，避免重复加载重复定义。
 
 ### 3、避免使用exit、die语句
-同样的，在程序中避免使用exit、die语句，使用exit、die会导致进程退出。可以使用```\Workerman\Http::end($msg)```函数替代exit、die函数。
+同样的，在程序中避免使用exit、die语句，使用exit、die会导致进程退出。可以使用```\Workerman\Protocols\Http::end($msg)```函数替代exit、die函数。
 
 ### 4、HTTP相关函数的使用
-WorkerMan运行在PHP CLI模式下，PHP CLI模式下无法使用HTTP相关的函数，例如```header、setcookie、session_start```等函数，请使用```\Workerman\Http的内置方法header、setcookie、session_start```等替换。
+WorkerMan运行在PHP CLI模式下，PHP CLI模式下无法使用HTTP相关的函数，例如```header、setcookie、session_start```等函数，请使用```/Workerman/Protocols/Http.php```文件中的```header、setcookie、session_start```等方法替换。
 
 ### 5、Web入口文件
 WorkerMan的WebServer默认使用index.php作为Web入口文件，例如配置```$webserver->setRoot('www.example.com', '/home/www/');```，则www.example.com的入口文件为```/home/www/index.php```。当url访问的文件（包括静态文件和PHP文件）不存在时，会自动调用入口文件index.php
