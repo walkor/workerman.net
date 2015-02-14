@@ -11,5 +11,9 @@ WorkerMan有分为多进程版本[WorkerMan](https://github.com/walkor/workerman
 
 本手册主要是针对Linux多进程3.x版本的说明
 
+# 客户端
+
+WorkerMan的通信协议是开放的，又是可定制的，因此，理论上WorkerMan可以与使用任意协议的任意平台的客户端进行通信。当用户开发客户端时，可以根据相应的通信协议完成与服务端的通信。
+
 
 
