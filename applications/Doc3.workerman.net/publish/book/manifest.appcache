@@ -1,8 +1,8 @@
 CACHE MANIFEST
-# Revision 1423839760713
+# Revision 1424094721493
 
 CACHE:
-gateway-worker-development/how-distributed.html
+gateway-worker-development/is-online.html
 gateway-worker-development/README.html
 gateway-worker-development/close-client.html
 gateway-worker-development/close-current-client.html
@@ -13,8 +13,8 @@ gateway-worker-development/gateway-worker-separation.html
 gateway-worker-development/gateway.html
 gateway-worker-development/get-online-status.html
 gateway-worker-development/heartbeat.html
+gateway-worker-development/how-distributed.html
 gateway-worker-development/business-worker.html
-gateway-worker-development/is-online.html
 gateway-worker-development/lib-gateway-functions.html
 gateway-worker-development/onclose.html
 gateway-worker-development/onconnect.html
@@ -24,6 +24,7 @@ gateway-worker-development/send-to-client.html
 gateway-worker-development/send-to-current-client.html
 gateway-worker-development/server.html
 gateway-worker-development/session.html
+gateway-worker-development/store-config.html
 gateway-worker-development/why-distributed.html
 index.html
 advanced/README.html
@@ -36,7 +37,6 @@ appendices/README.html
 appendices/install-extension.html
 appendices/kernel-optimization.html
 appendices/stress-test.html
-debug/README.html
 debug/base.html
 debug/strace.html
 debug/tcpdump.html
@@ -71,6 +71,7 @@ worker-development/on_worker_start.html
 worker-development/send.html
 worker-development/worker-development.html
 worker-development/worker-functions.html
+debug/README.html
 gitbook\app.js
 gitbook\fonts\fontawesome\FontAwesome.otf
 gitbook\fonts\fontawesome\fontawesome-webfont.eot
