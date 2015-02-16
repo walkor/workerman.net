@@ -54,6 +54,7 @@
        * [为什么分布式部署](gateway-worker-development/why-distributed.md)
        * [如何分布式部署](gateway-worker-development/how-distributed.md)
        * [Gateway Worker分离部署](gateway-worker-development/gateway-worker-separation.md)
+   * [Config/Store 配置](gateway-worker-development/store-config.md)
 * [调试](debug/README.md)
    * [基本调试](debug/base.md)
    * [网络抓包](debug/tcpdump.md)
