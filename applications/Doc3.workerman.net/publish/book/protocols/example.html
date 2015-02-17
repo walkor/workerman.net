@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="6.3" data-basepath=".." data-revision="1424094721492">
+    <div class="book"  data-level="6.3" data-basepath=".." data-revision="1424179147579">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -979,7 +979,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_112">
+                    <section class="normal" id="section-gitbook_135">
                     
                         <h1 id="-">一些例子</h1>
 <h2 id="-">例子一</h2>
@@ -997,7 +997,8 @@
 </code></pre>
 <p>其中0000000121代表整个数据包长度，后面紧跟xml数据格式的包体内容</p>
 <h3 id="-">协议实现</h3>
-<pre><code class="lang-php"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">XmlProtocol</span>
+<pre><code class="lang-php"><span class="hljs-keyword">namespace</span> <span class="hljs-title">Protocols</span>;
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">XmlProtocol</span>
 {</span>
     <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">input</span><span class="hljs-params">(<span class="hljs-variable">$recv_buffer</span>)</span>
     {</span>
@@ -1042,7 +1043,8 @@
 
 <p>其中首部四字节*号代表一个网络字节序的unsigned int数据，为不可见字符，紧接着是Json的数据格式的包体数据</p>
 <h3 id="-">协议实现</h3>
-<pre><code class="lang-php"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">JsonInt</span>
+<pre><code class="lang-php"><span class="hljs-keyword">namespace</span> <span class="hljs-title">Protocols</span>;
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">JsonInt</span>
 {</span>
     <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">input</span><span class="hljs-params">(<span class="hljs-variable">$recv_buffer</span>)</span>
     {</span>

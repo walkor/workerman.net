@@ -18,6 +18,7 @@
 
 ### 协议实现
 ```php
+namespace Protocols;
 class XmlProtocol
 {
     public static function input($recv_buffer)
@@ -66,6 +67,7 @@ class XmlProtocol
 
 ### 协议实现
 ```php
+namespace Protocols;
 class JsonInt
 {
     public static function input($recv_buffer)

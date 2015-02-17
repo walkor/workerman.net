@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="6.2" data-basepath=".." data-revision="1424094721492">
+    <div class="book"  data-level="6.2" data-basepath=".." data-revision="1424179147579">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -979,7 +979,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_113">
+                    <section class="normal" id="section-gitbook_136">
                     
                         <h2 id="-">如何定制协议</h2>
 <p>实际上制定自己的协议是比较简单的事情。简单的协议一般包含两部分:</p>
@@ -998,11 +998,12 @@
 <p>注意上面的请求数据末尾有一个换行字符(在PHP中用<strong>双引号</strong>字符串&quot;\n&quot;表示)，代表一个请求的结束。</p>
 <h3 id="-">实现步骤</h3>
 <p>在WorkerMan中如果要实现上面的协议，假设协议的名字叫JsonNL，所在项目为MyApp，则需要以下步骤</p>
-<p>1、建立文件Applications/MyApp/Protocols/JsonNL.php</p>
-<p>2、实现JsonNL类，必须实现三个静态方法分别为 input、encode、decode</p>
+<p>1、协议文件放到Applications项目的Protocols文件夹，例如文件Applications/MyApp/Protocols/JsonNL.php</p>
+<p>2、实现JsonNL类，以<code>namespace Protocols;</code>为命名空间，必须实现三个静态方法分别为 input、encode、decode</p>
 <h3 id="-">具体实现</h3>
 <p><strong>Applications/MyApp/Protocols/JsonNL.php的实现</strong></p>
-<pre><code class="lang-php"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">JsonNL</span>
+<pre><code class="lang-php"><span class="hljs-keyword">namespace</span> <span class="hljs-title">Protocols</span>;
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">JsonNL</span>
 {</span>
     <span class="hljs-comment">/**
      * 检查包的完整性
