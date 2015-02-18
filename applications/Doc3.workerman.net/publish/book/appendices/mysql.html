@@ -4,7 +4,7 @@
     <head>
         
         <meta charset="UTF-8">
-        <title>Event类的回调接口 | WorkerMan 3.x 手册</title>
+        <title>使用mysql数据库 | WorkerMan 3.x 手册</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 0.5.2">
@@ -17,10 +17,8 @@
     
     
     
-    <link rel="next" href="../gateway-worker-development/onconnect.html" />
     
-    
-    <link rel="prev" href="../gateway-worker-development/business-worker.html" />
+    <link rel="prev" href="../appendices/kernel-optimization.html" />
     
 
         
@@ -32,7 +30,7 @@
 
 
         
-    <div class="book"  data-level="8.4" data-basepath=".." data-revision="1424268514368">
+    <div class="book"  data-level="11.4" data-basepath=".." data-revision="1424268514368">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -839,7 +837,7 @@
             <div class="page-wrapper" tabindex="-1">
                 <div class="book-progress">
     <div class="bar">
-        <div class="inner" style="width: 52.857142857142854%;min-width: 51.42857142857143%;"></div>
+        <div class="inner" style="width: 100%;min-width: 98.57142857142857%;"></div>
     </div>
     <div class="chapters">
     
@@ -919,80 +917,234 @@
     
         <a href="../gateway-worker-development/event-functions.html" title="Event类的回调接口" class="chapter done " data-progress="8.4" style="left: 52.857142857142854%;"></a>
     
-        <a href="../gateway-worker-development/onconnect.html" title="onConnect" class="chapter  " data-progress="8.4.1" style="left: 54.285714285714285%;"></a>
+        <a href="../gateway-worker-development/onconnect.html" title="onConnect" class="chapter done " data-progress="8.4.1" style="left: 54.285714285714285%;"></a>
     
-        <a href="../gateway-worker-development/onmessage.html" title="onMessage" class="chapter  " data-progress="8.4.2" style="left: 55.714285714285715%;"></a>
+        <a href="../gateway-worker-development/onmessage.html" title="onMessage" class="chapter done " data-progress="8.4.2" style="left: 55.714285714285715%;"></a>
     
-        <a href="../gateway-worker-development/onclose.html" title="onClose" class="chapter  " data-progress="8.4.3" style="left: 57.142857142857146%;"></a>
+        <a href="../gateway-worker-development/onclose.html" title="onClose" class="chapter done " data-progress="8.4.3" style="left: 57.142857142857146%;"></a>
     
-        <a href="../gateway-worker-development/lib-gateway-functions.html" title="Lib\Gateway类提供的接口" class="chapter  " data-progress="8.5" style="left: 58.57142857142857%;"></a>
+        <a href="../gateway-worker-development/lib-gateway-functions.html" title="Lib\Gateway类提供的接口" class="chapter done " data-progress="8.5" style="left: 58.57142857142857%;"></a>
     
-        <a href="../gateway-worker-development/send-to-all.html" title="sendToAll" class="chapter  " data-progress="8.5.1" style="left: 60%;"></a>
+        <a href="../gateway-worker-development/send-to-all.html" title="sendToAll" class="chapter done " data-progress="8.5.1" style="left: 60%;"></a>
     
-        <a href="../gateway-worker-development/send-to-client.html" title="sendToClient" class="chapter  " data-progress="8.5.2" style="left: 61.42857142857143%;"></a>
+        <a href="../gateway-worker-development/send-to-client.html" title="sendToClient" class="chapter done " data-progress="8.5.2" style="left: 61.42857142857143%;"></a>
     
-        <a href="../gateway-worker-development/send-to-current-client.html" title="sendToCurrentClient" class="chapter  " data-progress="8.5.3" style="left: 62.857142857142854%;"></a>
+        <a href="../gateway-worker-development/send-to-current-client.html" title="sendToCurrentClient" class="chapter done " data-progress="8.5.3" style="left: 62.857142857142854%;"></a>
     
-        <a href="../gateway-worker-development/close-client.html" title="closeClient" class="chapter  " data-progress="8.5.4" style="left: 64.28571428571429%;"></a>
+        <a href="../gateway-worker-development/close-client.html" title="closeClient" class="chapter done " data-progress="8.5.4" style="left: 64.28571428571429%;"></a>
     
-        <a href="../gateway-worker-development/close-current-client.html" title="closeCurrentClient" class="chapter  " data-progress="8.5.5" style="left: 65.71428571428571%;"></a>
+        <a href="../gateway-worker-development/close-current-client.html" title="closeCurrentClient" class="chapter done " data-progress="8.5.5" style="left: 65.71428571428571%;"></a>
     
-        <a href="../gateway-worker-development/is-online.html" title="isOnline" class="chapter  " data-progress="8.5.6" style="left: 67.14285714285714%;"></a>
+        <a href="../gateway-worker-development/is-online.html" title="isOnline" class="chapter done " data-progress="8.5.6" style="left: 67.14285714285714%;"></a>
     
-        <a href="../gateway-worker-development/get-online-status.html" title="getOnlineStatus" class="chapter  " data-progress="8.5.7" style="left: 68.57142857142857%;"></a>
+        <a href="../gateway-worker-development/get-online-status.html" title="getOnlineStatus" class="chapter done " data-progress="8.5.7" style="left: 68.57142857142857%;"></a>
     
-        <a href="../gateway-worker-development/session.html" title="超全局数组$_SESSION" class="chapter  " data-progress="8.6" style="left: 70%;"></a>
+        <a href="../gateway-worker-development/session.html" title="超全局数组$_SESSION" class="chapter done " data-progress="8.6" style="left: 70%;"></a>
     
-        <a href="../gateway-worker-development/server.html" title="超全局数组$_SERVER" class="chapter  " data-progress="8.7" style="left: 71.42857142857143%;"></a>
+        <a href="../gateway-worker-development/server.html" title="超全局数组$_SERVER" class="chapter done " data-progress="8.7" style="left: 71.42857142857143%;"></a>
     
-        <a href="../gateway-worker-development/heartbeat.html" title="心跳检测" class="chapter  " data-progress="8.8" style="left: 72.85714285714286%;"></a>
+        <a href="../gateway-worker-development/heartbeat.html" title="心跳检测" class="chapter done " data-progress="8.8" style="left: 72.85714285714286%;"></a>
     
-        <a href="../gateway-worker-development/distributed.html" title="分布式部署" class="chapter  " data-progress="8.9" style="left: 74.28571428571429%;"></a>
+        <a href="../gateway-worker-development/distributed.html" title="分布式部署" class="chapter done " data-progress="8.9" style="left: 74.28571428571429%;"></a>
     
-        <a href="../gateway-worker-development/why-distributed.html" title="为什么分布式部署" class="chapter  " data-progress="8.9.1" style="left: 75.71428571428571%;"></a>
+        <a href="../gateway-worker-development/why-distributed.html" title="为什么分布式部署" class="chapter done " data-progress="8.9.1" style="left: 75.71428571428571%;"></a>
     
-        <a href="../gateway-worker-development/how-distributed.html" title="如何分布式部署" class="chapter  " data-progress="8.9.2" style="left: 77.14285714285714%;"></a>
+        <a href="../gateway-worker-development/how-distributed.html" title="如何分布式部署" class="chapter done " data-progress="8.9.2" style="left: 77.14285714285714%;"></a>
     
-        <a href="../gateway-worker-development/gateway-worker-separation.html" title="Gateway Worker分离部署" class="chapter  " data-progress="8.9.3" style="left: 78.57142857142857%;"></a>
+        <a href="../gateway-worker-development/gateway-worker-separation.html" title="Gateway Worker分离部署" class="chapter done " data-progress="8.9.3" style="left: 78.57142857142857%;"></a>
     
-        <a href="../debug/README.html" title="调试" class="chapter  new-chapter" data-progress="9" style="left: 80%;"></a>
+        <a href="../debug/README.html" title="调试" class="chapter done new-chapter" data-progress="9" style="left: 80%;"></a>
     
-        <a href="../debug/base.html" title="基本调试" class="chapter  " data-progress="9.1" style="left: 81.42857142857143%;"></a>
+        <a href="../debug/base.html" title="基本调试" class="chapter done " data-progress="9.1" style="left: 81.42857142857143%;"></a>
     
-        <a href="../debug/tcpdump.html" title="网络抓包" class="chapter  " data-progress="9.2" style="left: 82.85714285714286%;"></a>
+        <a href="../debug/tcpdump.html" title="网络抓包" class="chapter done " data-progress="9.2" style="left: 82.85714285714286%;"></a>
     
-        <a href="../debug/strace.html" title="追踪系统调用" class="chapter  " data-progress="9.3" style="left: 84.28571428571429%;"></a>
+        <a href="../debug/strace.html" title="追踪系统调用" class="chapter done " data-progress="9.3" style="left: 84.28571428571429%;"></a>
     
-        <a href="../advanced/README.html" title="高级应用" class="chapter  " data-progress="10" style="left: 85.71428571428571%;"></a>
+        <a href="../advanced/README.html" title="高级应用" class="chapter done " data-progress="10" style="left: 85.71428571428571%;"></a>
     
-        <a href="../advanced/timer.html" title="定时任务（定时器）" class="chapter  " data-progress="10.1" style="left: 87.14285714285714%;"></a>
+        <a href="../advanced/timer.html" title="定时任务（定时器）" class="chapter done " data-progress="10.1" style="left: 87.14285714285714%;"></a>
     
-        <a href="../advanced/webserver.html" title="WebServer" class="chapter  " data-progress="10.2" style="left: 88.57142857142857%;"></a>
+        <a href="../advanced/webserver.html" title="WebServer" class="chapter done " data-progress="10.2" style="left: 88.57142857142857%;"></a>
     
-        <a href="../advanced/status.html" title="查看WorkerMan运行状态" class="chapter  " data-progress="10.3" style="left: 90%;"></a>
+        <a href="../advanced/status.html" title="查看WorkerMan运行状态" class="chapter done " data-progress="10.3" style="left: 90%;"></a>
     
-        <a href="../advanced/push.html" title="在其它项目中推送消息" class="chapter  " data-progress="10.4" style="left: 91.42857142857143%;"></a>
+        <a href="../advanced/push.html" title="在其它项目中推送消息" class="chapter done " data-progress="10.4" style="left: 91.42857142857143%;"></a>
     
-        <a href="../advanced/multi-protocols.html" title="多协议支持" class="chapter  " data-progress="10.5" style="left: 92.85714285714286%;"></a>
+        <a href="../advanced/multi-protocols.html" title="多协议支持" class="chapter done " data-progress="10.5" style="left: 92.85714285714286%;"></a>
     
-        <a href="../appendices/README.html" title="附录" class="chapter  " data-progress="11" style="left: 94.28571428571429%;"></a>
+        <a href="../appendices/README.html" title="附录" class="chapter done " data-progress="11" style="left: 94.28571428571429%;"></a>
     
-        <a href="../appendices/stress-test.html" title="压力测试" class="chapter  " data-progress="11.1" style="left: 95.71428571428571%;"></a>
+        <a href="../appendices/stress-test.html" title="压力测试" class="chapter done " data-progress="11.1" style="left: 95.71428571428571%;"></a>
     
-        <a href="../appendices/install-extension.html" title="安装扩展" class="chapter  " data-progress="11.2" style="left: 97.14285714285714%;"></a>
+        <a href="../appendices/install-extension.html" title="安装扩展" class="chapter done " data-progress="11.2" style="left: 97.14285714285714%;"></a>
     
-        <a href="../appendices/kernel-optimization.html" title="Linux内核调优" class="chapter  " data-progress="11.3" style="left: 98.57142857142857%;"></a>
+        <a href="../appendices/kernel-optimization.html" title="Linux内核调优" class="chapter done " data-progress="11.3" style="left: 98.57142857142857%;"></a>
     
-        <a href="../appendices/mysql.html" title="使用mysql数据库" class="chapter  " data-progress="11.4" style="left: 100%;"></a>
+        <a href="../appendices/mysql.html" title="使用mysql数据库" class="chapter done " data-progress="11.4" style="left: 100%;"></a>
     
     </div>
 </div>
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_44">
+                    <section class="normal" id="section-gitbook_73">
                     
-                        <h1 id="event-">Event类的回调接口</h1>
+                        <h2 id="gateway-worker-">Gateway/Worker模型 数据库使用示例</h2>
+<p>1、数据库配置Applications/XXX/Config/Db.php</p>
+<pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
+<span class="hljs-keyword">namespace</span> <span class="hljs-title">Config</span>;
+<span class="hljs-comment">/**
+ * mysql配置
+ *<span class="hljs-phpdoc"> @author</span> walkor
+ */</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Db</span>
+{</span>
+    <span class="hljs-comment">/**
+     * 数据库的一个实例配置，则使用时像下面这样使用
+     * $user_array = Db::instance('user')-&gt;select('name,age')-&gt;from('users')-&gt;where('age&gt;12')-&gt;query();
+     * 等价于
+     * $user_array = Db::instance('user')-&gt;query('SELECT `name`,`age` FROM `users` WHERE `age`&gt;12');
+     *<span class="hljs-phpdoc"> @var</span> array
+     */</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-variable">$user</span> = <span class="hljs-keyword">array</span>(
+        <span class="hljs-string">'host'</span>    =&gt; <span class="hljs-string">'127.0.0.1'</span>,
+        <span class="hljs-string">'port'</span>    =&gt; <span class="hljs-number">3306</span>,
+        <span class="hljs-string">'user'</span>    =&gt; <span class="hljs-string">'your_user_name'</span>,
+        <span class="hljs-string">'password'</span> =&gt; <span class="hljs-string">'your_password'</span>,
+        <span class="hljs-string">'dbname'</span>  =&gt; <span class="hljs-string">'user'</span>,
+        <span class="hljs-string">'charset'</span>    =&gt; <span class="hljs-string">'utf8'</span>,
+    );
+}
+</code></pre>
+<p>2、Applications/XXX/Event.php</p>
+<pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
+<span class="hljs-keyword">use</span> \<span class="hljs-title">Lib</span>\<span class="hljs-title">Gateway</span>;
+<span class="hljs-keyword">use</span> \<span class="hljs-title">Protocols</span>\<span class="hljs-title">TextProtocol</span>;
+<span class="hljs-keyword">use</span> \<span class="hljs-title">Lib</span>\<span class="hljs-title">Db</span>;
+
+<span class="hljs-comment">/**
+ * 数据库示例，假设有个user库，里面有个user表
+ */</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Event</span>
+{</span>
+    <span class="hljs-comment">/**
+     * 网关有消息时，判断消息是否完整
+     */</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onGatewayMessage</span><span class="hljs-params">(<span class="hljs-variable">$buffer</span>)</span>
+    {</span>
+        <span class="hljs-keyword">return</span> TextProtocol::check(<span class="hljs-variable">$buffer</span>);
+    }
+
+   <span class="hljs-comment">/**
+    * 有消息时触发该方法，根据发来的命令打印2个用户信息
+    *<span class="hljs-phpdoc"> @param</span> int $client_id 发消息的client_id
+    *<span class="hljs-phpdoc"> @param</span> string $message 消息
+    *<span class="hljs-phpdoc"> @return</span> void
+    */</span>
+   <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onMessage</span><span class="hljs-params">(<span class="hljs-variable">$client_id</span>, <span class="hljs-variable">$message</span>)</span>
+   {</span>
+        <span class="hljs-comment">// 发来的消息</span>
+        <span class="hljs-variable">$commend</span> = trim(<span class="hljs-variable">$message</span>);
+        <span class="hljs-keyword">if</span>(<span class="hljs-variable">$commend</span> !== <span class="hljs-string">'get_user_list'</span>)
+        {
+            Gateway::sendToClient(<span class="hljs-variable">$client_id</span>, <span class="hljs-string">"unknown commend\n"</span>);
+            <span class="hljs-keyword">return</span>;
+        }
+        <span class="hljs-comment">// 获取用户列表（这里是临时的一个测试数据库）</span>
+        <span class="hljs-variable">$ret</span> = Db::instance(<span class="hljs-string">'user'</span>)-&gt;select(<span class="hljs-string">'*'</span>)-&gt;from(<span class="hljs-string">'users'</span>)-&gt;where(<span class="hljs-string">'uid&gt;3'</span>)-&gt;offset(<span class="hljs-number">5</span>)-&gt;limit(<span class="hljs-number">2</span>)-&gt;query();
+        <span class="hljs-comment">// 打印结果</span>
+        <span class="hljs-keyword">return</span> Gateway::sendToClient(<span class="hljs-variable">$client_id</span>, var_export(<span class="hljs-variable">$ret</span>, <span class="hljs-keyword">true</span>));
+   }
+
+}
+</code></pre>
+<h1 id="-">数据库类使用的一些示例</h1>
+<h2 id="-">配置</h2>
+<p>在Config/Db.php中配置数据库信息，如果有多个数据库，可以在Db.php中配置多个实例
+例如下面配置了两个数据库实例</p>
+<pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
+<span class="hljs-keyword">namespace</span> <span class="hljs-title">Config</span>;
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Db</span>
+{</span>
+    <span class="hljs-comment">// 数据库实例1</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-variable">$db1</span> = <span class="hljs-keyword">array</span>(
+        <span class="hljs-string">'host'</span>    =&gt; <span class="hljs-string">'127.0.0.1'</span>,
+        <span class="hljs-string">'port'</span>    =&gt; <span class="hljs-number">3306</span>,
+        <span class="hljs-string">'user'</span>    =&gt; <span class="hljs-string">'mysql_user'</span>,
+        <span class="hljs-string">'password'</span> =&gt; <span class="hljs-string">'mysql_password'</span>,
+        <span class="hljs-string">'dbname'</span>  =&gt; <span class="hljs-string">'db1'</span>,
+        <span class="hljs-string">'charset'</span>    =&gt; <span class="hljs-string">'utf8'</span>,
+    );
+
+    <span class="hljs-comment">// 数据库实例2</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-variable">$db2</span> = <span class="hljs-keyword">array</span>(
+        <span class="hljs-string">'host'</span>    =&gt; <span class="hljs-string">'127.0.0.1'</span>,
+        <span class="hljs-string">'port'</span>    =&gt; <span class="hljs-number">3306</span>,
+        <span class="hljs-string">'user'</span>    =&gt; <span class="hljs-string">'mysql_user'</span>,
+        <span class="hljs-string">'password'</span> =&gt; <span class="hljs-string">'mysql_password'</span>,
+        <span class="hljs-string">'dbname'</span>  =&gt; <span class="hljs-string">'db2'</span>,
+        <span class="hljs-string">'charset'</span>    =&gt; <span class="hljs-string">'utf8'</span>,
+    );
+}
+</code></pre>
+<h2 id="-">使用方法</h2>
+<pre><code class="lang-php"><span class="hljs-variable">$db1</span> = \Lib\Db::instance(<span class="hljs-string">'db1'</span>);
+<span class="hljs-variable">$db2</span> = \Lib\Db::instance(<span class="hljs-string">'db2'</span>);
+
+<span class="hljs-comment">// 获取所有数据</span>
+<span class="hljs-variable">$db1</span>-&gt;select(<span class="hljs-string">'ID,Sex'</span>)-&gt;from(<span class="hljs-string">'Persons'</span>)-&gt;where(<span class="hljs-string">'sex= :sex'</span>)-&gt;bindValues(<span class="hljs-keyword">array</span>(<span class="hljs-string">'sex'</span>=&gt;<span class="hljs-string">'M'</span>))-&gt;query();
+<span class="hljs-comment">//等价于</span>
+<span class="hljs-variable">$db1</span>-&gt;select(<span class="hljs-string">'ID,Sex'</span>)-&gt;from(<span class="hljs-string">'Persons'</span>)-&gt;where(<span class="hljs-string">"sex= 'F' "</span>)-&gt;query();
+<span class="hljs-comment">//等价于</span>
+<span class="hljs-variable">$db1</span>-&gt;query(<span class="hljs-string">"SELECT ID,Sex FROM `Persons` WHERE sex=‘M’"</span>);
+
+
+<span class="hljs-comment">// 获取一行数据</span>
+<span class="hljs-variable">$db1</span>-&gt;select(<span class="hljs-string">'ID,Sex'</span>)-&gt;from(<span class="hljs-string">'Persons'</span>)-&gt;where(<span class="hljs-string">'sex= :sex'</span>)-&gt;bindValues(<span class="hljs-keyword">array</span>(<span class="hljs-string">'sex'</span>=&gt;<span class="hljs-string">'M'</span>))-&gt;row();
+<span class="hljs-comment">//等价于</span>
+<span class="hljs-variable">$db1</span>-&gt;select(<span class="hljs-string">'ID,Sex'</span>)-&gt;from(<span class="hljs-string">'Persons'</span>)-&gt;where(<span class="hljs-string">"sex= 'F' "</span>)-&gt;row();
+<span class="hljs-comment">//等价于</span>
+<span class="hljs-variable">$db1</span>-&gt;row(<span class="hljs-string">"SELECT ID,Sex FROM `Persons` WHERE sex=‘M’"</span>);
+
+
+<span class="hljs-comment">// 获取一列数据</span>
+<span class="hljs-variable">$db1</span>-&gt;select(<span class="hljs-string">'ID,Sex'</span>)-&gt;from(<span class="hljs-string">'Persons'</span>)-&gt;where(<span class="hljs-string">'sex= :sex'</span>)-&gt;bindValues(<span class="hljs-keyword">array</span>(<span class="hljs-string">'sex'</span>=&gt;<span class="hljs-string">'M'</span>))-&gt;column();
+<span class="hljs-comment">//等价于</span>
+<span class="hljs-variable">$db1</span>-&gt;select(<span class="hljs-string">'ID,Sex'</span>)-&gt;from(<span class="hljs-string">'Persons'</span>)-&gt;where(<span class="hljs-string">"sex= 'F' "</span>)-&gt;column();
+<span class="hljs-comment">//等价于</span>
+<span class="hljs-variable">$db1</span>-&gt;column(<span class="hljs-string">"SELECT ID,Sex FROM `Persons` WHERE sex=‘M’"</span>);
+
+<span class="hljs-comment">// 获取单个值</span>
+<span class="hljs-variable">$db1</span>-&gt;select(<span class="hljs-string">'ID,Sex'</span>)-&gt;from(<span class="hljs-string">'Persons'</span>)-&gt;where(<span class="hljs-string">'sex= :sex'</span>)-&gt;bindValues(<span class="hljs-keyword">array</span>(<span class="hljs-string">'sex'</span>=&gt;<span class="hljs-string">'M'</span>))-&gt;single();
+<span class="hljs-comment">//等价于</span>
+<span class="hljs-variable">$db1</span>-&gt;select(<span class="hljs-string">'ID,Sex'</span>)-&gt;from(<span class="hljs-string">'Persons'</span>)-&gt;where(<span class="hljs-string">"sex= 'F' "</span>)-&gt;single();
+<span class="hljs-comment">//等价于</span>
+<span class="hljs-variable">$db1</span>-&gt;single(<span class="hljs-string">"SELECT ID,Sex FROM `Persons` WHERE sex=‘M’"</span>);
+
+<span class="hljs-comment">// 复杂查询</span>
+<span class="hljs-variable">$db1</span>-&gt;select(<span class="hljs-string">'*'</span>)-&gt;from(<span class="hljs-string">'table1'</span>)-&gt;innerJoin(<span class="hljs-string">'table2'</span>,<span class="hljs-string">'table1.uid = table2.uid'</span>)-&gt;where(<span class="hljs-string">'age &gt; :age'</span>)-&gt;groupBy(<span class="hljs-keyword">array</span>(<span class="hljs-string">'aid'</span>))-&gt;having(<span class="hljs-string">'foo="foo"'</span>)-&gt;orderBy(<span class="hljs-keyword">array</span>(<span class="hljs-string">'did'</span>))-&gt;limit(<span class="hljs-number">10</span>)-&gt;offset(<span class="hljs-number">20</span>)-&gt;bindValues(arra
+y(<span class="hljs-string">'age'</span> =&gt; <span class="hljs-number">13</span>));
+<span class="hljs-comment">// 等价于</span>
+<span class="hljs-variable">$db1</span>-&gt;query(SELECT * FROM `table1` INNER JOIN `table2` ON `table1`.`uid` = `table2`.`uid` WHERE age &gt; <span class="hljs-number">13</span> GROUP BY aid HAVING foo=<span class="hljs-string">"foo"</span> ORDER BY did LIMIT <span class="hljs-number">10</span> OFFSET <span class="hljs-number">20</span>“);
+
+<span class="hljs-comment">// 插入</span>
+<span class="hljs-variable">$insert_id</span> = <span class="hljs-variable">$db1</span>-&gt;insert(<span class="hljs-string">'Persons'</span>)-&gt;cols(<span class="hljs-keyword">array</span>(<span class="hljs-string">'Firstname'</span>=&gt;<span class="hljs-string">'abc'</span>, <span class="hljs-string">'Lastname'</span>=&gt;<span class="hljs-string">'efg'</span>, <span class="hljs-string">'Sex'</span>=&gt;<span class="hljs-string">'M'</span>, <span class="hljs-string">'Age'</span>=&gt;<span class="hljs-number">13</span>))-&gt;query();
+等价于
+<span class="hljs-variable">$insert_id</span> = <span class="hljs-variable">$db1</span>-&gt;query(<span class="hljs-string">"INSERT INTO `Persons` ( `Firstname`,`Lastname`,`Sex`,`Age`) VALUES ( 'abc', 'efg', 'M', 13)"</span>);
+
+<span class="hljs-comment">// 更新</span>
+<span class="hljs-variable">$row_count</span> = <span class="hljs-variable">$db1</span>-&gt;update(<span class="hljs-string">'Persons'</span>)-&gt;cols(<span class="hljs-keyword">array</span>(<span class="hljs-string">'sex'</span>))-&gt;where(<span class="hljs-string">'ID=1'</span>)-&gt;bindValue(<span class="hljs-string">'sex'</span>, <span class="hljs-string">'F'</span>)-&gt;query();
+<span class="hljs-comment">// 等价于</span>
+<span class="hljs-variable">$row_count</span> = <span class="hljs-variable">$db1</span>-&gt;update(<span class="hljs-string">'Persons'</span>)-&gt;cols(<span class="hljs-keyword">array</span>(<span class="hljs-string">'sex'</span>=&gt;<span class="hljs-string">'F'</span>))-&gt;where(<span class="hljs-string">'ID=1'</span>)-&gt;query();
+<span class="hljs-comment">// 等价于</span>
+<span class="hljs-variable">$row_count</span> = <span class="hljs-variable">$db1</span>-&gt;query(<span class="hljs-string">"UPDATE `Persons` SET `sex` = 'F' WHERE ID=1"</span>);
+
+<span class="hljs-comment">// 删除</span>
+<span class="hljs-variable">$row_count</span> = <span class="hljs-variable">$db1</span>-&gt;delete(<span class="hljs-string">'Persons'</span>)-&gt;where(<span class="hljs-string">'ID=9'</span>)-&gt;query();
+<span class="hljs-comment">// 等价于</span>
+<span class="hljs-variable">$row_count</span> = <span class="hljs-variable">$db1</span>-&gt;query(<span class="hljs-string">"DELETE FROM `Persons` WHERE ID=9"</span>);
+</code></pre>
 
                     
                     </section>
@@ -1002,10 +1154,8 @@
         </div>
 
         
-        <a href="../gateway-worker-development/business-worker.html" class="navigation navigation-prev " aria-label="Previous page: BusinessWorker类的使用"><i class="fa fa-angle-left"></i></a>
+        <a href="../appendices/kernel-optimization.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Linux内核调优"><i class="fa fa-angle-left"></i></a>
         
-        
-        <a href="../gateway-worker-development/onconnect.html" class="navigation navigation-next " aria-label="Next page: onConnect"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

@@ -1,9 +1,9 @@
 CACHE MANIFEST
-# Revision 1424179147580
+# Revision 1424268514370
 
 CACHE:
-gateway-worker-development/is-online.html
 gateway-worker-development/README.html
+gateway-worker-development/is-online.html
 gateway-worker-development/close-client.html
 gateway-worker-development/close-current-client.html
 gateway-worker-development/distributed.html
@@ -36,6 +36,7 @@ advanced/webserver.html
 appendices/README.html
 appendices/install-extension.html
 appendices/kernel-optimization.html
+appendices/mysql.html
 appendices/stress-test.html
 debug/README.html
 debug/base.html
@@ -50,16 +51,15 @@ getting-started/README.html
 getting-started/feature.html
 getting-started/simple-example.html
 install/README.html
-install/install.html
 install/requirement.html
-install/start-and-stop.html
 license/README.html
+install/start-and-stop.html
 preface/README.html
 protocols/README.html
 protocols/example.html
+install/install.html
 protocols/how-protocols.html
 protocols/why-protocols.html
-worker-development/on-connect.html
 worker-development/README.html
 worker-development/connection-functions.html
 worker-development/get-remote-ip.html
@@ -72,6 +72,7 @@ worker-development/on_worker_start.html
 worker-development/send.html
 worker-development/worker-development.html
 worker-development/worker-functions.html
+worker-development/on-connect.html
 gitbook\app.js
 gitbook\fonts\fontawesome\FontAwesome.otf
 gitbook\fonts\fontawesome\fontawesome-webfont.eot
