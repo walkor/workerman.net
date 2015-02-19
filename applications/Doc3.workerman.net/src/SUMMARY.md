@@ -70,4 +70,6 @@
    * [安装扩展](appendices/install-extension.md)
    * [Linux内核调优](appendices/kernel-optimization.md)
    * [使用mysql数据库](appendices/mysql.md)
+* [常见问题](faq/README.md)
+   * [运行多个WorkerMan实例](faq/running-concurent.md)
 
