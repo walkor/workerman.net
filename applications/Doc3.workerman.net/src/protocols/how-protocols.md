@@ -19,7 +19,7 @@
 ### 实现步骤
 在WorkerMan中如果要实现上面的协议，假设协议的名字叫JsonNL，所在项目为MyApp，则需要以下步骤
 
-1、协议文件放到Applications项目的Protocols文件夹，例如文件Applications/MyApp/Protocols/JsonNL.php
+1、协议文件放到Applications下项目的Protocols文件夹，例如文件Applications/MyApp/Protocols/JsonNL.php
 
 2、实现JsonNL类，以```namespace Protocols;```为命名空间，必须实现三个静态方法分别为 input、encode、decode
 
@@ -35,7 +35,9 @@ class JsonNL
     /**
      * 检查包的完整性
      * 如果能够得到包长，则返回包的在buffer中的长度，否则返回0继续等待数据
+     * 如果协议有问题，则可以返回false，当前客户端连接会因此断开
      * @param string $buffer
+     * @return int
      */
     public static function input($buffer)
     {

@@ -72,4 +72,5 @@
    * [使用mysql数据库](appendices/mysql.md)
 * [常见问题](faq/README.md)
    * [运行多个WorkerMan实例](faq/running-concurent.md)
+   * [WorkerMan支持哪些协议](faq/protocols.md)
 
