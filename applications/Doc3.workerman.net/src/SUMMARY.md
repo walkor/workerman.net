@@ -71,6 +71,7 @@
    * [Linux内核调优](appendices/kernel-optimization.md)
    * [使用mysql数据库](appendices/mysql.md)
 * [常见问题](faq/README.md)
-   * [运行多个WorkerMan实例](faq/running-concurent.md)
-   * [WorkerMan支持哪些协议](faq/protocols.md)
+   * [运行多个WorkerMan](faq/running-concurent.md)
+   * [支持哪些协议](faq/protocols.md)
+   * [应该开启多少进程](faq/processes-count.md)
 

@@ -4,7 +4,7 @@
     <head>
         
         <meta charset="UTF-8">
-        <title>基于Gateway/BusinessWorker开发 | WorkerMan 3.x 手册</title>
+        <title>应该开启多少进程 | WorkerMan 3.x 手册</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 0.5.2">
@@ -17,10 +17,8 @@
     
     
     
-    <link rel="next" href="../gateway-worker-development/gateway-worker-development.html" />
     
-    
-    <link rel="prev" href="../worker-development/close.html" />
+    <link rel="prev" href="../faq/protocols.html" />
     
 
         
@@ -32,7 +30,7 @@
 
 
         
-    <div class="book"  data-level="8" data-basepath=".." data-revision="1424450459732">
+    <div class="book"  data-level="12.3" data-basepath=".." data-revision="1424450459732">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -881,7 +879,7 @@
             <div class="page-wrapper" tabindex="-1">
                 <div class="book-progress">
     <div class="bar">
-        <div class="inner" style="width: 43.24324324324324%;min-width: 41.891891891891895%;"></div>
+        <div class="inner" style="width: 100%;min-width: 98.64864864864865%;"></div>
     </div>
     <div class="chapters">
     
@@ -951,98 +949,127 @@
     
         <a href="../gateway-worker-development/README.html" title="基于Gateway/BusinessWorker开发" class="chapter done new-chapter" data-progress="8" style="left: 43.24324324324324%;"></a>
     
-        <a href="../gateway-worker-development/gateway-worker-development.html" title="适用范围" class="chapter  " data-progress="8.1" style="left: 44.5945945945946%;"></a>
+        <a href="../gateway-worker-development/gateway-worker-development.html" title="适用范围" class="chapter done " data-progress="8.1" style="left: 44.5945945945946%;"></a>
     
-        <a href="../gateway-worker-development/store-config.html" title="Config/Store 配置" class="chapter  " data-progress="8.10" style="left: 45.945945945945944%;"></a>
+        <a href="../gateway-worker-development/store-config.html" title="Config/Store 配置" class="chapter done " data-progress="8.10" style="left: 45.945945945945944%;"></a>
     
-        <a href="../gateway-worker-development/gateway.html" title="Gateway类的使用" class="chapter  " data-progress="8.2" style="left: 47.2972972972973%;"></a>
+        <a href="../gateway-worker-development/gateway.html" title="Gateway类的使用" class="chapter done " data-progress="8.2" style="left: 47.2972972972973%;"></a>
     
-        <a href="../gateway-worker-development/business-worker.html" title="BusinessWorker类的使用" class="chapter  " data-progress="8.3" style="left: 48.648648648648646%;"></a>
+        <a href="../gateway-worker-development/business-worker.html" title="BusinessWorker类的使用" class="chapter done " data-progress="8.3" style="left: 48.648648648648646%;"></a>
     
-        <a href="../gateway-worker-development/event-functions.html" title="Event类的回调接口" class="chapter  " data-progress="8.4" style="left: 50%;"></a>
+        <a href="../gateway-worker-development/event-functions.html" title="Event类的回调接口" class="chapter done " data-progress="8.4" style="left: 50%;"></a>
     
-        <a href="../gateway-worker-development/onconnect.html" title="onConnect" class="chapter  " data-progress="8.4.1" style="left: 51.351351351351354%;"></a>
+        <a href="../gateway-worker-development/onconnect.html" title="onConnect" class="chapter done " data-progress="8.4.1" style="left: 51.351351351351354%;"></a>
     
-        <a href="../gateway-worker-development/onmessage.html" title="onMessage" class="chapter  " data-progress="8.4.2" style="left: 52.7027027027027%;"></a>
+        <a href="../gateway-worker-development/onmessage.html" title="onMessage" class="chapter done " data-progress="8.4.2" style="left: 52.7027027027027%;"></a>
     
-        <a href="../gateway-worker-development/onclose.html" title="onClose" class="chapter  " data-progress="8.4.3" style="left: 54.054054054054056%;"></a>
+        <a href="../gateway-worker-development/onclose.html" title="onClose" class="chapter done " data-progress="8.4.3" style="left: 54.054054054054056%;"></a>
     
-        <a href="../gateway-worker-development/lib-gateway-functions.html" title="Lib\Gateway类提供的接口" class="chapter  " data-progress="8.5" style="left: 55.4054054054054%;"></a>
+        <a href="../gateway-worker-development/lib-gateway-functions.html" title="Lib\Gateway类提供的接口" class="chapter done " data-progress="8.5" style="left: 55.4054054054054%;"></a>
     
-        <a href="../gateway-worker-development/send-to-all.html" title="sendToAll" class="chapter  " data-progress="8.5.1" style="left: 56.75675675675676%;"></a>
+        <a href="../gateway-worker-development/send-to-all.html" title="sendToAll" class="chapter done " data-progress="8.5.1" style="left: 56.75675675675676%;"></a>
     
-        <a href="../gateway-worker-development/send-to-client.html" title="sendToClient" class="chapter  " data-progress="8.5.2" style="left: 58.108108108108105%;"></a>
+        <a href="../gateway-worker-development/send-to-client.html" title="sendToClient" class="chapter done " data-progress="8.5.2" style="left: 58.108108108108105%;"></a>
     
-        <a href="../gateway-worker-development/send-to-current-client.html" title="sendToCurrentClient" class="chapter  " data-progress="8.5.3" style="left: 59.45945945945946%;"></a>
+        <a href="../gateway-worker-development/send-to-current-client.html" title="sendToCurrentClient" class="chapter done " data-progress="8.5.3" style="left: 59.45945945945946%;"></a>
     
-        <a href="../gateway-worker-development/close-client.html" title="closeClient" class="chapter  " data-progress="8.5.4" style="left: 60.810810810810814%;"></a>
+        <a href="../gateway-worker-development/close-client.html" title="closeClient" class="chapter done " data-progress="8.5.4" style="left: 60.810810810810814%;"></a>
     
-        <a href="../gateway-worker-development/close-current-client.html" title="closeCurrentClient" class="chapter  " data-progress="8.5.5" style="left: 62.16216216216216%;"></a>
+        <a href="../gateway-worker-development/close-current-client.html" title="closeCurrentClient" class="chapter done " data-progress="8.5.5" style="left: 62.16216216216216%;"></a>
     
-        <a href="../gateway-worker-development/is-online.html" title="isOnline" class="chapter  " data-progress="8.5.6" style="left: 63.513513513513516%;"></a>
+        <a href="../gateway-worker-development/is-online.html" title="isOnline" class="chapter done " data-progress="8.5.6" style="left: 63.513513513513516%;"></a>
     
-        <a href="../gateway-worker-development/get-online-status.html" title="getOnlineStatus" class="chapter  " data-progress="8.5.7" style="left: 64.86486486486487%;"></a>
+        <a href="../gateway-worker-development/get-online-status.html" title="getOnlineStatus" class="chapter done " data-progress="8.5.7" style="left: 64.86486486486487%;"></a>
     
-        <a href="../gateway-worker-development/session.html" title="超全局数组$_SESSION" class="chapter  " data-progress="8.6" style="left: 66.21621621621621%;"></a>
+        <a href="../gateway-worker-development/session.html" title="超全局数组$_SESSION" class="chapter done " data-progress="8.6" style="left: 66.21621621621621%;"></a>
     
-        <a href="../gateway-worker-development/server.html" title="超全局数组$_SERVER" class="chapter  " data-progress="8.7" style="left: 67.56756756756756%;"></a>
+        <a href="../gateway-worker-development/server.html" title="超全局数组$_SERVER" class="chapter done " data-progress="8.7" style="left: 67.56756756756756%;"></a>
     
-        <a href="../gateway-worker-development/heartbeat.html" title="心跳检测" class="chapter  " data-progress="8.8" style="left: 68.91891891891892%;"></a>
+        <a href="../gateway-worker-development/heartbeat.html" title="心跳检测" class="chapter done " data-progress="8.8" style="left: 68.91891891891892%;"></a>
     
-        <a href="../gateway-worker-development/distributed.html" title="分布式部署" class="chapter  " data-progress="8.9" style="left: 70.27027027027027%;"></a>
+        <a href="../gateway-worker-development/distributed.html" title="分布式部署" class="chapter done " data-progress="8.9" style="left: 70.27027027027027%;"></a>
     
-        <a href="../gateway-worker-development/why-distributed.html" title="为什么分布式部署" class="chapter  " data-progress="8.9.1" style="left: 71.62162162162163%;"></a>
+        <a href="../gateway-worker-development/why-distributed.html" title="为什么分布式部署" class="chapter done " data-progress="8.9.1" style="left: 71.62162162162163%;"></a>
     
-        <a href="../gateway-worker-development/how-distributed.html" title="如何分布式部署" class="chapter  " data-progress="8.9.2" style="left: 72.97297297297297%;"></a>
+        <a href="../gateway-worker-development/how-distributed.html" title="如何分布式部署" class="chapter done " data-progress="8.9.2" style="left: 72.97297297297297%;"></a>
     
-        <a href="../gateway-worker-development/gateway-worker-separation.html" title="Gateway Worker分离部署" class="chapter  " data-progress="8.9.3" style="left: 74.32432432432432%;"></a>
+        <a href="../gateway-worker-development/gateway-worker-separation.html" title="Gateway Worker分离部署" class="chapter done " data-progress="8.9.3" style="left: 74.32432432432432%;"></a>
     
-        <a href="../debug/README.html" title="调试" class="chapter  new-chapter" data-progress="9" style="left: 75.67567567567568%;"></a>
+        <a href="../debug/README.html" title="调试" class="chapter done new-chapter" data-progress="9" style="left: 75.67567567567568%;"></a>
     
-        <a href="../debug/base.html" title="基本调试" class="chapter  " data-progress="9.1" style="left: 77.02702702702703%;"></a>
+        <a href="../debug/base.html" title="基本调试" class="chapter done " data-progress="9.1" style="left: 77.02702702702703%;"></a>
     
-        <a href="../debug/tcpdump.html" title="网络抓包" class="chapter  " data-progress="9.2" style="left: 78.37837837837837%;"></a>
+        <a href="../debug/tcpdump.html" title="网络抓包" class="chapter done " data-progress="9.2" style="left: 78.37837837837837%;"></a>
     
-        <a href="../debug/strace.html" title="追踪系统调用" class="chapter  " data-progress="9.3" style="left: 79.72972972972973%;"></a>
+        <a href="../debug/strace.html" title="追踪系统调用" class="chapter done " data-progress="9.3" style="left: 79.72972972972973%;"></a>
     
-        <a href="../advanced/README.html" title="高级应用" class="chapter  " data-progress="10" style="left: 81.08108108108108%;"></a>
+        <a href="../advanced/README.html" title="高级应用" class="chapter done " data-progress="10" style="left: 81.08108108108108%;"></a>
     
-        <a href="../advanced/timer.html" title="定时任务（定时器）" class="chapter  " data-progress="10.1" style="left: 82.43243243243244%;"></a>
+        <a href="../advanced/timer.html" title="定时任务（定时器）" class="chapter done " data-progress="10.1" style="left: 82.43243243243244%;"></a>
     
-        <a href="../advanced/webserver.html" title="WebServer" class="chapter  " data-progress="10.2" style="left: 83.78378378378379%;"></a>
+        <a href="../advanced/webserver.html" title="WebServer" class="chapter done " data-progress="10.2" style="left: 83.78378378378379%;"></a>
     
-        <a href="../advanced/status.html" title="查看WorkerMan运行状态" class="chapter  " data-progress="10.3" style="left: 85.13513513513513%;"></a>
+        <a href="../advanced/status.html" title="查看WorkerMan运行状态" class="chapter done " data-progress="10.3" style="left: 85.13513513513513%;"></a>
     
-        <a href="../advanced/push.html" title="在其它项目中推送消息" class="chapter  " data-progress="10.4" style="left: 86.48648648648648%;"></a>
+        <a href="../advanced/push.html" title="在其它项目中推送消息" class="chapter done " data-progress="10.4" style="left: 86.48648648648648%;"></a>
     
-        <a href="../advanced/multi-protocols.html" title="多协议支持" class="chapter  " data-progress="10.5" style="left: 87.83783783783784%;"></a>
+        <a href="../advanced/multi-protocols.html" title="多协议支持" class="chapter done " data-progress="10.5" style="left: 87.83783783783784%;"></a>
     
-        <a href="../appendices/README.html" title="附录" class="chapter  " data-progress="11" style="left: 89.1891891891892%;"></a>
+        <a href="../appendices/README.html" title="附录" class="chapter done " data-progress="11" style="left: 89.1891891891892%;"></a>
     
-        <a href="../appendices/stress-test.html" title="压力测试" class="chapter  " data-progress="11.1" style="left: 90.54054054054055%;"></a>
+        <a href="../appendices/stress-test.html" title="压力测试" class="chapter done " data-progress="11.1" style="left: 90.54054054054055%;"></a>
     
-        <a href="../appendices/install-extension.html" title="安装扩展" class="chapter  " data-progress="11.2" style="left: 91.89189189189189%;"></a>
+        <a href="../appendices/install-extension.html" title="安装扩展" class="chapter done " data-progress="11.2" style="left: 91.89189189189189%;"></a>
     
-        <a href="../appendices/kernel-optimization.html" title="Linux内核调优" class="chapter  " data-progress="11.3" style="left: 93.24324324324324%;"></a>
+        <a href="../appendices/kernel-optimization.html" title="Linux内核调优" class="chapter done " data-progress="11.3" style="left: 93.24324324324324%;"></a>
     
-        <a href="../appendices/mysql.html" title="使用mysql数据库" class="chapter  " data-progress="11.4" style="left: 94.5945945945946%;"></a>
+        <a href="../appendices/mysql.html" title="使用mysql数据库" class="chapter done " data-progress="11.4" style="left: 94.5945945945946%;"></a>
     
-        <a href="../faq/README.html" title="常见问题" class="chapter  " data-progress="12" style="left: 95.94594594594595%;"></a>
+        <a href="../faq/README.html" title="常见问题" class="chapter done " data-progress="12" style="left: 95.94594594594595%;"></a>
     
-        <a href="../faq/running-concurent.html" title="运行多个WorkerMan" class="chapter  " data-progress="12.1" style="left: 97.29729729729729%;"></a>
+        <a href="../faq/running-concurent.html" title="运行多个WorkerMan" class="chapter done " data-progress="12.1" style="left: 97.29729729729729%;"></a>
     
-        <a href="../faq/protocols.html" title="支持哪些协议" class="chapter  " data-progress="12.2" style="left: 98.64864864864865%;"></a>
+        <a href="../faq/protocols.html" title="支持哪些协议" class="chapter done " data-progress="12.2" style="left: 98.64864864864865%;"></a>
     
-        <a href="../faq/processes-count.html" title="应该开启多少进程" class="chapter  " data-progress="12.3" style="left: 100%;"></a>
+        <a href="../faq/processes-count.html" title="应该开启多少进程" class="chapter done " data-progress="12.3" style="left: 100%;"></a>
     
     </div>
 </div>
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_3526">
+                    <section class="normal" id="section-gitbook_3572">
                     
-                        <h1 id="-gateway-businessworker-">基于Gateway/BusinessWorker开发</h1>
+                        <h1 id="-">应该开启多少进程</h1>
+<h2 id="-">如何设置进程数</h2>
+<p>进程数是由<code>count</code>属性决定的，例如下面代码</p>
+<pre><code>use Workerman\Worker;
+$http_worker = new Worker(&quot;http://0.0.0.0:2345&quot;);
+
+// ## 启动4个进程对外提供服务 ##
+$http_worker-&gt;count = 4;
+</code></pre><h2 id="-">进程数设置需要考虑以下条件</h2>
+<p>1、cpu核数</p>
+<p>2、内存大小</p>
+<p>3、业务属于IO密集型还是CPU密集型</p>
+<h2 id="-">进程数设置原则</h2>
+<p>1、每个进程占用内存之和需要小于总内存（一般来说每个业务进程占用内存大概40M左右）</p>
+<p>2、如果是IO密集型，也就是业务中涉及到一些阻塞式网络通讯开销，比如一般的访问Mysql、Redis等存储都是阻塞式访问的，进程数可以开大一些，如配置成CPU核数的3倍。如果业务中涉及的阻塞网络开销很多，可以再适当加大进程数，例如CPU核数的5倍甚至更高。</p>
+<p>3、如果是CPU密集型，也就是没有外部网络IO开销，或者没有阻塞的网络IO开销，例如使用异步IO读取网络资源，进程不会被业务代码阻塞的情况下，可以把进程数设置成和CPU核数一样</p>
+<hr>
+<p>进程数设置原理有点像生产线上工人们工作的情景，有4个生产线，就相当于CPU是4核的，生产线上的产品相当于任务，工人相当于进程。</p>
+<p>工人并非越多越好，因为只有4条生产线，生产能力有限，并且工人多了大家轮流上下生产线开销也很大，同样的进程多了进程间切换开销也很大。</p>
+<p>如果流水线上的商品每一步操作起来比较耗时（IO密集型），就需要多一点的工人去操作。</p>
+<p>如果流水线上的商品每一步操作都比较快（CPU密集型），只需要少数工人即可</p>
+<h2 id="-worker-">如果是基于Worker开发</h2>
+<p>如果是基于Worker开发，业务代码是IO密集型的（业务代码有IO阻塞的地方），则根据IO密集程度设置进程数，例如CPU核数的3倍。</p>
+<p>如果业务代码中无阻塞式IO通讯，则可以将进程数设置成cpu核数</p>
+<h2 id="-gateway-worker-">如果是基于Gateway/Worker开发</h2>
+<p>Gateway/Worker模型与Nginx+PHP-FPM模型非常相像，Gateway相当于Nginx，Worker相当于PHP-FPM。进程数设置原则也类似。</p>
+<p>Gateway进程虽然处理大量IO操作，但是由于Gateway进程的IO都是非阻塞的，所以它不是IO密集型进程，而是CPU密集型，将进程数设置成CPU核数即可</p>
+<p>Worker进程是处理业务的，根据业务是否有IO阻塞操作以及阻塞程度设置进程数</p>
+<h2 id="-">注意</h2>
+<p>WorkerMan自身的IO都是非阻塞的，例如<code>Connection-&gt;send、Gateway::sendToClient、Gateway::sendToAll</code>等都是非阻塞的，属于CPU密集型操作。如果不清楚自己业务偏向于哪种类型，可设置进程数为CPU核数的2倍左右即可（注意Gateway为CPU密集型进程，设置与CPU核数相同）。</p>
 
                     
                     </section>
@@ -1052,10 +1079,8 @@
         </div>
 
         
-        <a href="../worker-development/close.html" class="navigation navigation-prev " aria-label="Previous page: close"><i class="fa fa-angle-left"></i></a>
+        <a href="../faq/protocols.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 支持哪些协议"><i class="fa fa-angle-left"></i></a>
         
-        
-        <a href="../gateway-worker-development/gateway-worker-development.html" class="navigation navigation-next " aria-label="Next page: 适用范围"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
