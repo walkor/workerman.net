@@ -32,22 +32,14 @@ class Db
 2、Applications/XXX/Event.php
 ```php
 <?php
-use \Lib\Gateway;
-use \Protocols\TextProtocol;
-use \Lib\Db;
+use \GatewayWorker\Lib\Gateway;
+use \GatewayWorker\Lib\Db;
 
 /**
  * 数据库示例，假设有个user库，里面有个user表
  */
 class Event
 {
-    /**
-     * 网关有消息时，判断消息是否完整
-     */
-    public static function onGatewayMessage($buffer)
-    {
-        return TextProtocol::check($buffer);
-    }
 
    /**
     * 有消息时触发该方法，根据发来的命令打印2个用户信息
@@ -107,8 +99,9 @@ class Db
 ## 使用方法
 
 ```php
-$db1 = \Lib\Db::instance('db1');
-$db2 = \Lib\Db::instance('db2');
+use \GatewayWorker\Lib\Db;
+$db1 = Db::instance('db1');
+$db2 = Db::instance('db2');
 
 // 获取所有数据
 $db1->select('ID,Sex')->from('Persons')->where('sex= :sex')->bindValues(array('sex'=>'M'))->query();

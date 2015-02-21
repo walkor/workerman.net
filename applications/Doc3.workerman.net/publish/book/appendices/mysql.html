@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="11.4" data-basepath=".." data-revision="1424450459732">
+    <div class="book"  data-level="11.4" data-basepath=".." data-revision="1424511417663">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -1040,7 +1040,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_3560">
+                    <section class="normal" id="section-gitbook_64">
                     
                         <h2 id="gateway-worker-">Gateway/Worker模型 数据库使用示例</h2>
 <p>1、数据库配置Applications/XXX/Config/Db.php</p>
@@ -1071,22 +1071,14 @@
 </code></pre>
 <p>2、Applications/XXX/Event.php</p>
 <pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
-<span class="hljs-keyword">use</span> \<span class="hljs-title">Lib</span>\<span class="hljs-title">Gateway</span>;
-<span class="hljs-keyword">use</span> \<span class="hljs-title">Protocols</span>\<span class="hljs-title">TextProtocol</span>;
-<span class="hljs-keyword">use</span> \<span class="hljs-title">Lib</span>\<span class="hljs-title">Db</span>;
+<span class="hljs-keyword">use</span> \<span class="hljs-title">GatewayWorker</span>\<span class="hljs-title">Lib</span>\<span class="hljs-title">Gateway</span>;
+<span class="hljs-keyword">use</span> \<span class="hljs-title">GatewayWorker</span>\<span class="hljs-title">Lib</span>\<span class="hljs-title">Db</span>;
 
 <span class="hljs-comment">/**
  * 数据库示例，假设有个user库，里面有个user表
  */</span>
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Event</span>
 {</span>
-    <span class="hljs-comment">/**
-     * 网关有消息时，判断消息是否完整
-     */</span>
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onGatewayMessage</span><span class="hljs-params">(<span class="hljs-variable">$buffer</span>)</span>
-    {</span>
-        <span class="hljs-keyword">return</span> TextProtocol::check(<span class="hljs-variable">$buffer</span>);
-    }
 
    <span class="hljs-comment">/**
     * 有消息时触发该方法，根据发来的命令打印2个用户信息
@@ -1141,8 +1133,9 @@
 }
 </code></pre>
 <h2 id="-">使用方法</h2>
-<pre><code class="lang-php"><span class="hljs-variable">$db1</span> = \Lib\Db::instance(<span class="hljs-string">'db1'</span>);
-<span class="hljs-variable">$db2</span> = \Lib\Db::instance(<span class="hljs-string">'db2'</span>);
+<pre><code class="lang-php"><span class="hljs-keyword">use</span> \<span class="hljs-title">GatewayWorker</span>\<span class="hljs-title">Lib</span>\<span class="hljs-title">Db</span>;
+<span class="hljs-variable">$db1</span> = Db::instance(<span class="hljs-string">'db1'</span>);
+<span class="hljs-variable">$db2</span> = Db::instance(<span class="hljs-string">'db2'</span>);
 
 <span class="hljs-comment">// 获取所有数据</span>
 <span class="hljs-variable">$db1</span>-&gt;select(<span class="hljs-string">'ID,Sex'</span>)-&gt;from(<span class="hljs-string">'Persons'</span>)-&gt;where(<span class="hljs-string">'sex= :sex'</span>)-&gt;bindValues(<span class="hljs-keyword">array</span>(<span class="hljs-string">'sex'</span>=&gt;<span class="hljs-string">'M'</span>))-&gt;query();
