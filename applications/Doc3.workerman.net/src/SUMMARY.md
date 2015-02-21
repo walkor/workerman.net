@@ -73,5 +73,6 @@
 * [常见问题](faq/README.md)
    * [运行多个WorkerMan](faq/running-concurent.md)
    * [支持哪些协议](faq/protocols.md)
-   * [应该开启多少进程](faq/processes-count.md)
+   * [如何设置进程数](faq/processes-count.md)
+   * [查看当前客户端连接数](faq/connection-status.md)
 

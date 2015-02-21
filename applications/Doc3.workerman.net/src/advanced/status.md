@@ -5,26 +5,27 @@
 
 ```
 ---------------------------------------GLOBAL STATUS--------------------------------------------
-Workerman version:3.0.1          PHP version:5.3.29-1~dotdeb.0
-start time:2015-02-06 23:03:46   run 1 days 12 hours
-load average: 0.08, 0.02, 0.01
+Workerman version:3.0.3          PHP version:5.3.29-1~dotdeb.0
+start time:2014-07-21 18:05:47   run 86 days 22 hours
+load average: 0, 0, 0
 3 workers       10 processes
-worker_name        exit_status     exit_count
-ChatGateway        0                0
-ChatBusinessWorker 0                0
-WebServer          0                0
+worker_name           exit_status     exit_count
+TodpoleGateway        0                0
+TodpoleBusinessWorker 0                4
+TodpoleBusinessWorker 9                1
+WebServer             0                2
 ---------------------------------------PROCESS STATUS-------------------------------------------
-pid     memory  listening                worker_name        total_request send_fail throw_exception
-1700    2.11M   Websocket://0.0.0.0:7272 ChatGateway        333            0         0
-1701    2.11M   Websocket://0.0.0.0:7272 ChatGateway        1709           0         0
-1702    2.13M   Websocket://0.0.0.0:7272 ChatGateway        20746          0         0
-1703    2.11M   Websocket://0.0.0.0:7272 ChatGateway        856            0         0
-1704    2.25M   none                     ChatBusinessWorker 5576           0         0
-1705    2.24M   none                     ChatBusinessWorker 5818           0         0
-1706    2.25M   none                     ChatBusinessWorker 5590           0         0
-1707    2.24M   none                     ChatBusinessWorker 5658           0         0
-1708    1.8M    http://0.0.0.0:55151     WebServer          1              0         0
-1709    1.8M    http://0.0.0.0:55151     WebServer          10             0         0
+pid     memory  listening                worker_name           connections total_request send_fail throw_exception
+936     2.15M   Websocket://0.0.0.0:8585 TodpoleGateway        13         355            0         0
+937     2.03M   Websocket://0.0.0.0:8585 TodpoleGateway        5          181            0         0
+938     2M      Websocket://0.0.0.0:8585 TodpoleGateway        4          171            0         0
+939     2.03M   Websocket://0.0.0.0:8585 TodpoleGateway        5          177            0         0
+948     2.15M   none                     TodpoleBusinessWorker 4          32             0         0
+949     2.16M   none                     TodpoleBusinessWorker 4          54             0         0
+953     2.16M   none                     TodpoleBusinessWorker 4          50             0         0
+957     2.15M   none                     TodpoleBusinessWorker 4          53             0         0
+954     1.84M   http://0.0.0.0:8686      WebServer             0          61             0         0
+955     1.84M   http://0.0.0.0:8686      WebServer             1          59             0         0
 ```
 
 ## 说明
@@ -33,9 +34,9 @@ pid     memory  listening                worker_name        total_request send_f
 
 从这以栏中我们可以看到
 
-WorkerMan的版本```version:3.0.1```
+WorkerMan的版本```version:3.0.3```
 
-启动时间```2015-02-06 23:03:46```，运行了```run 6 days 22 hours```
+启动时间```2015-02-21 18:05:47```，运行了```run 6 days 22 hours```
 
 服务器负载 ```load average: 0, 0, 0```
 
@@ -64,9 +65,11 @@ timestamp：该进程启动时间戳
 
 worker_name：该进程运行的服务服务名
 
-total_request：该进程接收多少连接
+connections:该进程当前有多少个TCP连接，包括客户端连接和WorkerMan内部通讯的连接
 
-send_fail：该进程向客户端发送数据失败次数
+total_request：该进程接收多少请求，注意每个连接上可能有多个请求
+
+send_fail：该进程向客户端发送数据失败次数，失败原因一般为客户端连接断开
 
 throw_exception：该进程内业务未捕获的异常数量
 
