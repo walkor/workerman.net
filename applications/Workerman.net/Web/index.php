@@ -15,7 +15,7 @@ $host_name = 'www.workerman.net';
 
 if(0 !== strpos($_SERVER['HTTP_HOST'],$host_name))
 {
-    return \Man\Common\Protocols\Http\header('Location: http://' . $host_name .$_SERVER['REQUEST_URI'], true, 301);
+    return _header('Location: http://' . $host_name .$_SERVER['REQUEST_URI'], true, 301);
 }
 
 $tmp_arr = explode('/', $path);
@@ -51,7 +51,7 @@ if(!function_exists($func))
 
 if(!function_exists($func))
 {
-    return \Man\Common\Protocols\Http\header('Location: /'.(!empty($_GET) ? '?'.http_build_query($_GET) : ''));
+    return _header('Location: /'.(!empty($_GET) ? '?'.http_build_query($_GET) : ''));
 }
 
 call_user_func_array($func, $tmp_arr);

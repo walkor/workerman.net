@@ -25,7 +25,7 @@ function download_workermanzip($file_type = '')
     $count = \WorkerMan\Lib\Store::get($download_workerman_count_key);
     $count = $count >= 0 ? intval($count) : 0;
     \WorkerMan\Lib\Store::set($download_workerman_count_key, ++$count);
-    return \Man\Common\Protocols\Http\header('Location: https://github.com/walkor/workerman/archive/master.zip');
+    return _header('Location: https://github.com/walkor/workerman/archive/master.zip');
 }
 
 /**
@@ -60,7 +60,7 @@ function download_thriftzip()
     $count = \WorkerMan\Lib\Store::get($download_thrift_count_key);
     $count = $count >= 0 ? intval($count) : 0;
     \WorkerMan\Lib\Store::set($download_thrift_count_key, ++$count);
-    return \Man\Common\Protocols\Http\header('Location: https://github.com/walkor/workerman-thrift/archive/master.zip');
+    return _header('Location: https://github.com/walkor/workerman-thrift/archive/master.zip');
 }
 
 /**
@@ -87,7 +87,7 @@ function download_jsonrpczip()
     $count = \WorkerMan\Lib\Store::get($download_jsonrpc_count_key);
     $count = $count >= 0 ? intval($count) : 0;
     \WorkerMan\Lib\Store::set($download_jsonrpc_count_key, ++$count);
-    return \Man\Common\Protocols\Http\header('Location: https://github.com/walkor/workerman-jsonrpc/archive/master.zip');
+    return _header('Location: https://github.com/walkor/workerman-jsonrpc/archive/master.zip');
 }
 
 /**
@@ -114,7 +114,7 @@ function download_chatzip()
     $count = \WorkerMan\Lib\Store::get($download_chat_count_key);
     $count = $count >= 0 ? intval($count) : 0;
     \WorkerMan\Lib\Store::set($download_chat_count_key, ++$count);
-    return \Man\Common\Protocols\Http\header('Location: https://github.com/walkor/workerman-chat/archive/master.zip');
+    return _header('Location: https://github.com/walkor/workerman-chat/archive/master.zip');
 }
 
 /**
@@ -141,7 +141,7 @@ function download_statisticszip()
     $count = \WorkerMan\Lib\Store::get($download_statistics_count_key);
     $count = $count >= 0 ? intval($count) : 0;
     \WorkerMan\Lib\Store::set($download_statistics_count_key, ++$count);
-    return \Man\Common\Protocols\Http\header('Location: https://github.com/walkor/workerman-statistics/archive/master.zip');
+    return _header('Location: https://github.com/walkor/workerman-statistics/archive/master.zip');
 }
 
 /**
@@ -168,7 +168,7 @@ function download_todpolezip()
     $count = \WorkerMan\Lib\Store::get($download_todpole_count_key);
     $count = $count >= 0 ? intval($count) : 0;
     \WorkerMan\Lib\Store::set($download_todpole_count_key, ++$count);
-    return \Man\Common\Protocols\Http\header('Location: https://github.com/walkor/workerman-todpole/archive/master.zip');
+    return _header('Location: https://github.com/walkor/workerman-todpole/archive/master.zip');
 }
 
 /**
@@ -196,7 +196,7 @@ function download_flappybirdzip()
     $count = \WorkerMan\Lib\Store::get($download_flappybird_count_key);
     $count = $count >= 0 ? intval($count) : 0;
     \WorkerMan\Lib\Store::set($download_flappybird_count_key, ++$count);
-    return \Man\Common\Protocols\Http\header('Location: https://github.com/walkor/workerman-flappy-bird/archive/master.zip');
+    return _header('Location: https://github.com/walkor/workerman-flappy-bird/archive/master.zip');
 }
 
 /**
@@ -208,7 +208,7 @@ function download_workermanwinzip()
     $count = \WorkerMan\Lib\Store::get($download_workermanwin_count_key);
     $count = $count >= 0 ? intval($count) : 0;
     \WorkerMan\Lib\Store::set($download_workermanwin_count_key, ++$count);
-    return \Man\Common\Protocols\Http\header('Location: https://github.com/walkor/workerman-for-win/archive/master.zip');
+    return _header('Location: https://github.com/walkor/workerman-for-win/archive/master.zip');
 }
 
 /**
@@ -216,7 +216,7 @@ function download_workermanwinzip()
  */
 function download_manual()
 {
-    \Man\Common\Protocols\Http\header('Content-Type: application/pdf');
-    \Man\Common\Protocols\Http\header('Content-Disposition: attachment; filename="workerman-manual.pdf"');
+    _header('Content-Type: application/pdf');
+    _header('Content-Disposition: attachment; filename="workerman-manual.pdf"');
     readfile(NET_ROOT.'/Web/downloads/workerman-manual.pdf');
 }
