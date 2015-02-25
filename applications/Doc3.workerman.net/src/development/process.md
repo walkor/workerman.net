@@ -49,8 +49,8 @@ function handle_close($connection)
 }
 
 
-// 创建一个telnet文本协议的Worker监听2347接口
-$telnet_worker = new Worker("telnet://0.0.0.0:2347");
+// 创建一个文本协议的Worker监听2347接口
+$telnet_worker = new Worker("Text://0.0.0.0:2347");
 
 // 只启动1个进程，这样方便客户端之间传输数据
 $telnet_worker->count = 1;
@@ -59,4 +59,10 @@ $telnet_worker->onConnect = 'handler_connection';
 $telnet_worker->onMessage = 'handle_message';
 $telnet_worker->onClose = 'handle_close';
 
+```
+
+#### 5、测试
+Text协议可以用telnet命令测试
+```shell
+telnet 127.0.0.1 2347
 ```

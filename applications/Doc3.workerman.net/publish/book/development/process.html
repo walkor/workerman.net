@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="5.4" data-basepath=".." data-revision="1424515749248">
+    <div class="book"  data-level="5.4" data-basepath=".." data-revision="1424867624240">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -1051,7 +1051,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_836">
+                    <section class="normal" id="section-gitbook_120">
                     
                         <h1 id="-">基本流程</h1>
 <p>（以一个简单的Websocket聊天室服务端为例）</p>
@@ -1098,8 +1098,8 @@
 }
 
 
-<span class="hljs-comment">// 创建一个telnet文本协议的Worker监听2347接口</span>
-<span class="hljs-variable">$telnet_worker</span> = <span class="hljs-keyword">new</span> Worker(<span class="hljs-string">"telnet://0.0.0.0:2347"</span>);
+<span class="hljs-comment">// 创建一个文本协议的Worker监听2347接口</span>
+<span class="hljs-variable">$telnet_worker</span> = <span class="hljs-keyword">new</span> Worker(<span class="hljs-string">"Text://0.0.0.0:2347"</span>);
 
 <span class="hljs-comment">// 只启动1个进程，这样方便客户端之间传输数据</span>
 <span class="hljs-variable">$telnet_worker</span>-&gt;count = <span class="hljs-number">1</span>;
@@ -1107,6 +1107,10 @@
 <span class="hljs-variable">$telnet_worker</span>-&gt;onConnect = <span class="hljs-string">'handler_connection'</span>;
 <span class="hljs-variable">$telnet_worker</span>-&gt;onMessage = <span class="hljs-string">'handle_message'</span>;
 <span class="hljs-variable">$telnet_worker</span>-&gt;onClose = <span class="hljs-string">'handle_close'</span>;
+</code></pre>
+<h4 id="5-">5、测试</h4>
+<p>Text协议可以用telnet命令测试</p>
+<pre><code class="lang-shell">telnet 127.0.0.1 2347
 </code></pre>
 
                     
