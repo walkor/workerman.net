@@ -15,7 +15,6 @@
 │   ├── BusinessWorker.php   // Worker业务进程
 │   ├── Gateway.php          // Gateway进程
 │   └── Lib                  // 类库
-│       ├── Autoloader.php   // 自动加载类
 │       ├── Context.php      // Gateway与Worker通讯的上下文
 │       ├── DbConnection.php // 数据库连接类
 │       ├── Db.php           // 数据库连接管理类，对应配置在Applications/YourApp/Config/Db.php

@@ -24,7 +24,7 @@
 	<h5>2、第二步和第三步通过pecl安装libevent扩展，并配置扩展的ini文件（安装libevent扩展不是必须的，libevent扩展可以让php使用更高级的事件库，在并发量很高时发挥作用，如果并发量比较低，例如5000并发，可以不用安装）</h5>
 	<h5>3、第四步是通过git下载workerman的应用程序，这里默认下载的是workerman的Demo程序，如果下载workerman的其他应用程序可以修改地址，例如下载workerman-chat则命令为git clone https://github.com/walkor/workerman-chat。
 	如果手动下载过了想要的workerman应用程序，则此步骤可以省略。</h5>
-	<h5>4、第五不步是运行workerman应用程序</h5>
+	<h5>4、第五步是运行workerman应用程序</h5>
 	
 	<h5><b>总结：如果已经安装了php环境，则可以尝试（跳过第一、二、三、四步）手动下载workerman应用的zip文件解压后直接运行workerman应用程序（第五步），workerman运行界面会提示当前环境缺少的扩展或者组件，根据提示自行安装</b></h5>
 	</div>
