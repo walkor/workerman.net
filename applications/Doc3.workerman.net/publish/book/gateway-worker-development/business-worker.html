@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="8.3" data-basepath=".." data-revision="1425041026543">
+    <div class="book"  data-level="8.3" data-basepath=".." data-revision="1425217767881">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -1051,16 +1051,20 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_17">
+                    <section class="normal" id="section-gitbook_817">
                     
                         <h1 id="businessworker-">BusinessWorker类的使用</h1>
-<p>BusinessWorker类其实也是基于基础的Worker开发的。由于BusinessWorker进程中无法直接操作Gateway进程的连接，也就无法获得连接对象，所以无法使用BusinessWorker的onConnect、onMessage、onClose属性，请开发者不要调用以上回调属性包括onWorkerStart、onWorkerStop属性。</p>
+<p>BusinessWorker类其实也是基于基础的Worker开发的。由于BusinessWorker进程中无法直接操作Gateway进程的连接，也就无法获得连接对象，所以无法使用BusinessWorker的onConnect、onMessage、onClose属性，请开发者不要设置以上回调属性。开发者仍然可以设置onWorkerStart、onWorkerStop属性。</p>
 <p>BusinessWorker的相关回调函数在项目中的Event.php中定义，具体内容参见下一节</p>
 <h2 id="businessworker-">BusinessWorker类可以定制的内容</h2>
 <p>1、name</p>
 <p>和Worker一样，可以设置BusinessWorker进程的名称，方便status命令中查看统计</p>
 <p>2、count</p>
 <p>和Worker一样，可以设置BusinessWorker进程的数量，以便充分利用多cpu资源</p>
+<p>3、onWorkerStart</p>
+<p>和Worker一样，可以设置BusinessWorker启动后的回调函数，一般在这个回调里面初始化一些全局数据</p>
+<p>4、onWorkerStop</p>
+<p>和Worker一样，可以设置BusinessWorker关闭的回调函数，一般在这个回调里面做数据清理或者保存数据工作</p>
 
                     
                     </section>

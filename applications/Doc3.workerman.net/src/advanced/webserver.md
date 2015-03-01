@@ -1,6 +1,6 @@
 # WebServer
 
-WorkerMan自带了一个简单那的Web服务器，同样也是基于Worker实现的。文件位置在Workerman/WebServer.php。这个WebServer开发的目的主要是为了方便运行一些简单的Web程序，例如workerman-todpole等web界面程序。
+WorkerMan自带了一个简单的Web服务器，同样也是基于Worker实现的。文件位置在Workerman/WebServer.php。这个WebServer开发的目的主要是为了方便运行一些简单的Web程序，例如workerman-todpole等web界面程序。
 
 ## 使用方法
 
@@ -66,3 +66,7 @@ foreach($_FILES as $file_info)
 }
 
 ```
+
+### 7、可以设置onWorkerStart、onWorkerStop回调
+可以设置onWorkerStart、onWorkerStop回调，做进程启动时全局初始化及进程退出（stop等命令）数据保存清理工作
+
