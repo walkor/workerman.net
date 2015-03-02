@@ -22,7 +22,7 @@
 	<div class="col-md-9 column">
 	<h3>联系我们</h3>
 	<ul class="sub">
-	<li>邮箱：worker-man@qq.com</li>
+	<li>邮箱：walkor@workerman.net</li>
 	<li>QQ：2202055656</li>
 	<li>QQ群：257046084</li>
 	</ul>

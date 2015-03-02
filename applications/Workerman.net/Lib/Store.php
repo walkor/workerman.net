@@ -5,7 +5,7 @@ namespace WorkerMan\Lib;
  *
 * 这里用php数组文件来存储数据，
 * 为了获取高性能需要用类似memcache、redis的存储
-* @author walkor <worker-man@qq.com>
+* @author walkor <walkor@workerman.net>
 *
 */
 
