@@ -81,7 +81,7 @@
 						</h3>
 						<p>
 							很多时候需要PHP应用程序要与客户端保持长连接，比如聊天室、游戏等，但是传统的PHP容器（apache、nginx、php-fpm）很难做到这一点。
-							使用workerman，你只需要配置一个字段，便可以使用PHP长连接。php单个进程可以支持几千的并发连接，多进程支持几万的并发连接没有任何问题。
+							使用workerman可以轻松使用PHP长连接。php单个进程可以支持几千甚至几万的并发连接，多进程则可支持数十万甚至上百万的并发连接。
 						</p>
 					</div>
 				</div>
@@ -93,9 +93,8 @@
 							支持各种应用层协议
 						</h3>
 						<p>
-							接口上支持各种应用层协议，包括自定义协议。workerman相关应用中已经用到的协议有统计监控系统（HTTP协议、自定义Statistic二进制协议）、
-							workerman-chat（Websocke协议）、workerman-thrift-rcp（Thrift协议）、workerman-json-rpc（自定义json协议）。以上应用中的协议可以拿来直接用，
-							或者开发者选择使用自己的协议。
+							接口上支持各种应用层协议，包括自定义协议。Workerman默认支持的协议有HTTP、WebSocket、以及简单的Text文本协议。
+							同时Workerman提供了通用的协议接口，开发者基于此接口便可以方便的开发出自己的协议。
 						</p>
 					</div>
 				</div>
@@ -161,12 +160,11 @@
 				<div class="thumbnail">
 					<div class="caption">
 						<h3>
-							支持telnet远程控制及监控
+							自带监控
 						</h3>
 						<p>
 							workerman内部带有监控统计模块，能够统计workerman自身的一些数据，如进程退出次数及退出状态，每个进程占用内存大小及监听的ip端口、每个进程启动时间、
-							进程运行的服务名、每个进程处理请求数、数据包错误量、数据包发送失败量等等。这些信息可以本地运行<code>./bin/workerman status</code>本地查看或者通过telnet ip port(默认2000端口)远程获得。
-							通过telnet，你还可以远程重启某个进程（kill命令）、平滑重启服务（reload命令）等。
+							进程运行的服务名、每个进程处理请求数、连接数、数据包发送失败量等等。这些信息可以本地运行<code>php start.php status</code>本地查看。
 						</p>
 					</div>
 				</div>
@@ -178,7 +176,7 @@
 							支持子服务次数配置
 						</h3>
 						<p>
-							可以设置进程服务次数，类似php-fpm配置中的max_requests配置，例如设置max_requests为1000，则每个子进程对外服务1000次后便会安全退出。
+							可以设置进程服务次数，类似php-fpm配置中的max_requests配置，例如设置maxRequests为1000，则每个子进程对外服务1000次后便会安全退出。
 							开启这个配置的目的是为了避免由于业务代码不规范导致的内存泄露给系统带来的内存占用过高的影响。
 						</p>
 					</div>
@@ -188,11 +186,10 @@
 				<div class="thumbnail">
 					<div class="caption">
 						<h3>
-							支持子进程监控
+							支持异步IO
 						</h3>
 						<p>
-							子进程监控包括内存占用监控（子进程内存超过配置Monitor.max_mem_limit时安全重启对应进程）、网络收发包成功率监控、子进程FatalErr监控、
-							子进程频繁退出监控。以上监控阈值均在workerman.conf的[Monitor]段中配置，达到阈值时，便会触发告警（告警方法在workers/Monitor:sendSms()中实现）。
+							Workerman自带的网络IO接口是异步的，开发者可实现基于事件的异步编程
 						</p>
 					</div>
 				</div>
@@ -279,6 +276,24 @@
 						</p>
 					</div>
 				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<div class="thumbnail">
+					<div class="caption">
+						<h3>
+							支持毫秒级别定时器
+						</h3>
+						<p>
+							支持毫秒级别定时器，可以做定时任务或者定时计算，如游戏中地图上AI相关计算。
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+			</div>
+			<div class="col-md-4">
 			</div>
 		</div>
 	</div>
