@@ -75,4 +75,5 @@
    * [支持哪些协议](faq/protocols.md)
    * [如何设置进程数](faq/processes-count.md)
    * [查看当前客户端连接数](faq/connection-status.md)
+   * [对象和资源的持久化](faq/persistent-data-and-resources.md)
 

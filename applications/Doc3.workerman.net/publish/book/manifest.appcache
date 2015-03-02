@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# Revision 1425308281531
+# Revision 1425311244394
 
 CACHE:
 gateway-worker-development/is-online.html
@@ -34,8 +34,8 @@ advanced/status.html
 advanced/timer.html
 advanced/webserver.html
 appendices/README.html
-appendices/install-extension.html
 appendices/kernel-optimization.html
+appendices/install-extension.html
 appendices/mysql.html
 appendices/stress-test.html
 debug/README.html
@@ -49,6 +49,7 @@ development/process.html
 development/standard.html
 faq/README.html
 faq/connection-status.html
+faq/persistent-data-and-resources.html
 faq/processes-count.html
 faq/protocols.html
 faq/running-concurent.html
