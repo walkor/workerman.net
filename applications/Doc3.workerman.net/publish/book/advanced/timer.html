@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="10.1" data-basepath=".." data-revision="1425391852487">
+    <div class="book"  data-level="10.1" data-basepath=".." data-revision="1425395536917">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -1062,11 +1062,11 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_1746">
+                    <section class="normal" id="section-gitbook_1993">
                     
                         <h1 id="-">定时任务</h1>
 <h2 id="-">接口</h2>
-<pre><code class="lang-php">void \Workerman\Lib\Timer::add(int <span class="hljs-variable">$time_interval</span>, callable <span class="hljs-variable">$callback</span> [,<span class="hljs-variable">$args</span> = <span class="hljs-keyword">array</span>(), bool <span class="hljs-variable">$persistent</span> = <span class="hljs-keyword">true</span>])
+<pre><code class="lang-php">int \Workerman\Lib\Timer::add(int <span class="hljs-variable">$time_interval</span>, callable <span class="hljs-variable">$callback</span> [,<span class="hljs-variable">$args</span> = <span class="hljs-keyword">array</span>(), bool <span class="hljs-variable">$persistent</span> = <span class="hljs-keyword">true</span>])
 </code></pre>
 <p>定时执行某个函数或者类方法</p>
 <h3 id="-">参数</h3>
@@ -1079,7 +1079,7 @@
 <p>persistent</p>
 <p>是否是持久的，如果只想定时执行一次，则传递false。默认是true，即一直定时执行。</p>
 <h3 id="-">返回值</h3>
-<p>无返回值，任何返回值都会被视为无效</p>
+<p>返回一个整数，代表计时器的timerid，可以通过这个id删除对应的计时器</p>
 <h3 id="-">示例</h3>
 <pre><code class="lang-php"><span class="hljs-keyword">use</span> \<span class="hljs-title">Workerman</span>\<span class="hljs-title">Worker</span>;
 
@@ -1095,6 +1095,15 @@
     });
 };
 </code></pre>
+<h2 id="-">清除定时器接口</h2>
+<pre><code class="lang-php">boolean \Workerman\Lib\Timer::del(int <span class="hljs-variable">$timer_id</span>)
+</code></pre>
+<p>删除某个定时器</p>
+<h3 id="-">参数</h3>
+<p>timer_id</p>
+<p>定时器的id，即add接口返回的整型</p>
+<h3 id="-">返回值</h3>
+<p>boolean</p>
 <h2 id="-">定时任务使用注意事项</h2>
 <p>1、可以在WorkerMan运行过程中任意位置使用<code>\Workerman\Lib\Timer::add(int $time_interval, callable $callback [,$args = array(), bool $persistent = true])</code>添加定时任务。</p>
 <p>2、添加的任务在当前进程执行，如果任务很重（特别是涉及到网络IO的任务），可能会导致该进程阻塞，暂时无法处理其它业务。所以最好将耗时的任务放到单独的进程运行，例如像示例中一样建立一个Worker进程运行</p>

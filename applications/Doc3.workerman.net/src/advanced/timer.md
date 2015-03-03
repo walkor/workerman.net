@@ -2,7 +2,7 @@
 
 ## 接口
 ```php
-void \Workerman\Lib\Timer::add(int $time_interval, callable $callback [,$args = array(), bool $persistent = true])
+int \Workerman\Lib\Timer::add(int $time_interval, callable $callback [,$args = array(), bool $persistent = true])
 ```
 定时执行某个函数或者类方法
 
@@ -25,7 +25,7 @@ persistent
 是否是持久的，如果只想定时执行一次，则传递false。默认是true，即一直定时执行。
 
 ### 返回值
-无返回值，任何返回值都会被视为无效
+返回一个整数，代表计时器的timerid，可以通过这个id删除对应的计时器
 
 ### 示例
 ```php
@@ -44,6 +44,20 @@ $task->onWorkerStart = function($task)
 };
 
 ```
+
+## 清除定时器接口
+```php
+boolean \Workerman\Lib\Timer::del(int $timer_id)
+```
+删除某个定时器
+
+### 参数
+timer_id
+
+定时器的id，即add接口返回的整型
+
+### 返回值
+boolean
 
 
 ## 定时任务使用注意事项
