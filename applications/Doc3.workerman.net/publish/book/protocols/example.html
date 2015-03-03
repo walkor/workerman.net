@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="6.3" data-basepath=".." data-revision="1425311244393">
+    <div class="book"  data-level="6.3" data-basepath=".." data-revision="1425391852487">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -1062,7 +1062,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_821">
+                    <section class="normal" id="section-gitbook_1778">
                     
                         <h1 id="-">一些例子</h1>
 <h2 id="-">例子一</h2>
@@ -1159,6 +1159,215 @@
         <span class="hljs-keyword">return</span> <span class="hljs-variable">$total_length</span> . <span class="hljs-variable">$body_json_str</span>;
     }
 }
+</code></pre>
+<h2 id="-">例子三（使用二进制协议上传文件）</h2>
+<h3 id="-">协议定义</h3>
+<pre><code class="lang-C"><span class="hljs-keyword">struct</span>
+{
+  <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> total_len;  <span class="hljs-comment">// 整个包的长度，大端网络字节序</span>
+  <span class="hljs-keyword">char</span>         name_len;   <span class="hljs-comment">// 文件名的长度</span>
+  <span class="hljs-keyword">char</span>         name[name_len]; <span class="hljs-comment">// 文件名</span>
+  <span class="hljs-keyword">char</span>         file[total_len - BinaryTransfer::PACKAGE_HEAD_LEN - name_len]; <span class="hljs-comment">// 文件数据</span>
+}
+</code></pre>
+<h3 id="-">协议样本</h3>
+<pre> *****logo.png****************** </pre>
+
+<p>其中首部四字节*号代表一个网络字节序的unsigned int数据，为不可见字符，第5个*是用一个字节存储文件名长度，紧接着是文件名，接着是原始的二进制文件数据</p>
+<h3 id="-">协议实现</h3>
+<pre><code class="lang-php"><span class="hljs-keyword">namespace</span> <span class="hljs-title">Protocols</span>;
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BinaryTransfer</span>
+{</span>
+    <span class="hljs-comment">// 协议头长度</span>
+    <span class="hljs-keyword">const</span> PACKAGE_HEAD_LEN = <span class="hljs-number">5</span>;
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">input</span><span class="hljs-params">(<span class="hljs-variable">$recv_buffer</span>)</span>
+    {</span>
+        <span class="hljs-comment">// 如果不够一个协议头的长度，则继续等待</span>
+        <span class="hljs-keyword">if</span>(strlen(<span class="hljs-variable">$recv_buffer</span>) &lt; <span class="hljs-keyword">self</span>::PACKAGE_HEAD_LEN)
+        {
+            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+        }
+        <span class="hljs-comment">// 解包</span>
+        <span class="hljs-variable">$package_data</span> = unpack(<span class="hljs-string">'Ntotal_len/Cname_len'</span>, <span class="hljs-variable">$recv_buffer</span>);
+        <span class="hljs-comment">// 返回包长</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-variable">$package_data</span>[<span class="hljs-string">'total_len'</span>];
+    }
+
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">decode</span><span class="hljs-params">(<span class="hljs-variable">$recv_buffer</span>)</span>
+    {</span>
+        <span class="hljs-comment">// 解包</span>
+        <span class="hljs-variable">$package_data</span> = unpack(<span class="hljs-string">'Ntotal_len/Cname_len'</span>, <span class="hljs-variable">$recv_buffer</span>);
+        <span class="hljs-comment">// 文件名长度</span>
+        <span class="hljs-variable">$name_len</span> = <span class="hljs-variable">$package_data</span>[<span class="hljs-string">'name_len'</span>];
+        <span class="hljs-comment">// 从数据流中截取出文件名</span>
+        <span class="hljs-variable">$file_name</span> = substr(<span class="hljs-variable">$recv_buffer</span>, <span class="hljs-keyword">self</span>::PACKAGE_HEAD_LEN, <span class="hljs-variable">$name_len</span>);
+        <span class="hljs-comment">// 从数据流中截取出文件二进制数据</span>
+        <span class="hljs-variable">$file_data</span> = substr(<span class="hljs-variable">$recv_buffer</span>, <span class="hljs-keyword">self</span>::PACKAGE_HEAD_LEN + <span class="hljs-variable">$name_len</span>);
+         <span class="hljs-keyword">return</span> <span class="hljs-keyword">array</span>(
+             <span class="hljs-string">'file_name'</span> =&gt; <span class="hljs-variable">$file_name</span>,
+             <span class="hljs-string">'file_data'</span> =&gt; <span class="hljs-variable">$file_data</span>,
+         );
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">encode</span><span class="hljs-params">(<span class="hljs-variable">$data</span>)</span>
+    {</span>
+        <span class="hljs-comment">// 可以根据自己的需要编码发送给客户端的数据，这里只是当做文本原样返回</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-variable">$data</span>;
+    }
+}
+</code></pre>
+<h3 id="-">服务端协议使用示例</h3>
+<pre><code class="lang-php"><span class="hljs-keyword">use</span> <span class="hljs-title">Workerman</span>\<span class="hljs-title">Worker</span>;
+
+<span class="hljs-variable">$worker</span> = <span class="hljs-keyword">new</span> Worker(<span class="hljs-string">'BinaryTransfer://0.0.0.0:8333'</span>);
+<span class="hljs-comment">// 保存文件到tmp下</span>
+<span class="hljs-variable">$worker</span>-&gt;onMessage = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(<span class="hljs-variable">$connection</span>, <span class="hljs-variable">$data</span>)</span>
+{</span>
+    <span class="hljs-variable">$save_path</span> = <span class="hljs-string">'/tmp/'</span>.<span class="hljs-variable">$data</span>[<span class="hljs-string">'file_name'</span>];
+    file_put_contents(<span class="hljs-variable">$save_path</span>, <span class="hljs-variable">$data</span>[<span class="hljs-string">'file_data'</span>]);
+    <span class="hljs-variable">$connection</span>-&gt;send(<span class="hljs-string">"upload success. save path $save_path"</span>);
+};
+</code></pre>
+<h3 id="-client-php-php-">客户端文件 client.php （这里用php模拟客户端上传）</h3>
+<pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
+<span class="hljs-comment">/** 上传文件客户端 **/</span>
+<span class="hljs-comment">// 上传地址</span>
+<span class="hljs-variable">$address</span> = <span class="hljs-string">"127.0.0.1:8333"</span>;
+<span class="hljs-comment">// 检查上传文件路径参数</span>
+<span class="hljs-keyword">if</span>(!<span class="hljs-keyword">isset</span>(<span class="hljs-variable">$argv</span>[<span class="hljs-number">1</span>]))
+{
+   <span class="hljs-keyword">exit</span>(<span class="hljs-string">"use php client.php \$file_path\n"</span>);
+}
+<span class="hljs-comment">// 上传文件路径</span>
+<span class="hljs-variable">$file_to_transfer</span> = trim(<span class="hljs-variable">$argv</span>[<span class="hljs-number">1</span>]);
+<span class="hljs-comment">// 上传的文件本地不存在</span>
+<span class="hljs-keyword">if</span>(!is_file(<span class="hljs-variable">$file_to_transfer</span>))
+{
+    <span class="hljs-keyword">exit</span>(<span class="hljs-string">"$file_to_transfer not exist\n"</span>);
+}
+<span class="hljs-comment">// 建立socket连接</span>
+<span class="hljs-variable">$client</span> = stream_socket_client(<span class="hljs-variable">$address</span>, <span class="hljs-variable">$errno</span>, <span class="hljs-variable">$errmsg</span>);
+<span class="hljs-keyword">if</span>(!<span class="hljs-variable">$client</span>)
+{
+    <span class="hljs-keyword">exit</span>(<span class="hljs-string">"$errmsg\n"</span>);
+}
+<span class="hljs-comment">// 设置成阻塞</span>
+stream_set_blocking(<span class="hljs-variable">$client</span>, <span class="hljs-number">1</span>);
+<span class="hljs-comment">// 文件名</span>
+<span class="hljs-variable">$file_name</span> = basename(<span class="hljs-variable">$file_to_transfer</span>);
+<span class="hljs-comment">// 文件名长度</span>
+<span class="hljs-variable">$name_len</span> = strlen(<span class="hljs-variable">$file_name</span>);
+<span class="hljs-comment">// 文件二进制数据</span>
+<span class="hljs-variable">$file_data</span> = file_get_contents(<span class="hljs-variable">$file_to_transfer</span>);
+<span class="hljs-comment">// 协议头长度 4字节包长+1字节文件名长度</span>
+<span class="hljs-variable">$PACKAGE_HEAD_LEN</span> = <span class="hljs-number">5</span>;
+<span class="hljs-comment">// 协议包</span>
+<span class="hljs-variable">$package</span> = pack(<span class="hljs-string">'NC'</span>, <span class="hljs-variable">$PACKAGE_HEAD_LEN</span>  + strlen(<span class="hljs-variable">$file_name</span>) + strlen(<span class="hljs-variable">$file_data</span>), <span class="hljs-variable">$name_len</span>) . <span class="hljs-variable">$file_name</span> . <span class="hljs-variable">$file_data</span>;
+<span class="hljs-comment">// 执行上传</span>
+fwrite(<span class="hljs-variable">$client</span>, <span class="hljs-variable">$package</span>);
+<span class="hljs-comment">// 打印结果</span>
+<span class="hljs-keyword">echo</span> fread(<span class="hljs-variable">$client</span>, <span class="hljs-number">8192</span>),<span class="hljs-string">"\n"</span>;
+</code></pre>
+<h2 id="-">例子四（使用文本协议上传文件）</h2>
+<h3 id="-">协议定义</h3>
+<p>json+换行，json中包含了文件名以及base64_encode编码（会增大1/3的体积）的文件数据</p>
+<h3 id="-">协议样本</h3>
+<p>{&quot;file_name&quot;:&quot;logo.png&quot;,&quot;file_data&quot;:&quot;PD9waHAKLyo......&quot;}\n</p>
+<p>注意末尾为一个换行符，在PHP中用双引号字符<code>&quot;\n&quot;</code>标识</p>
+<h3 id="-">协议实现</h3>
+<pre><code class="lang-php"><span class="hljs-keyword">namespace</span> <span class="hljs-title">Protocols</span>;
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TextTransfer</span>
+{</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">input</span><span class="hljs-params">(<span class="hljs-variable">$recv_buffer</span>)</span>
+    {</span>
+        <span class="hljs-variable">$recv_len</span> = strlen(<span class="hljs-variable">$recv_buffer</span>);
+        <span class="hljs-keyword">if</span>(<span class="hljs-variable">$recv_buffer</span>[<span class="hljs-variable">$recv_len</span>-<span class="hljs-number">1</span>] !== <span class="hljs-string">"\n"</span>)
+        {
+            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+        }
+        <span class="hljs-keyword">return</span> strlen(<span class="hljs-variable">$recv_buffer</span>);
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">decode</span><span class="hljs-params">(<span class="hljs-variable">$recv_buffer</span>)</span>
+    {</span>
+        <span class="hljs-comment">// 解包</span>
+        <span class="hljs-variable">$package_data</span> = json_decode(trim(<span class="hljs-variable">$recv_buffer</span>), <span class="hljs-keyword">true</span>);
+        <span class="hljs-comment">// 取出文件名</span>
+        <span class="hljs-variable">$file_name</span> = <span class="hljs-variable">$package_data</span>[<span class="hljs-string">'file_name'</span>];
+        <span class="hljs-comment">// 取出base64_encode后的文件数据</span>
+        <span class="hljs-variable">$file_data</span> = <span class="hljs-variable">$package_data</span>[<span class="hljs-string">'file_data'</span>];
+        <span class="hljs-comment">// base64_decode还原回原来的二进制文件数据</span>
+        <span class="hljs-variable">$file_data</span> = base64_decode(<span class="hljs-variable">$file_data</span>);
+        <span class="hljs-comment">// 返回数据</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">array</span>(
+             <span class="hljs-string">'file_name'</span> =&gt; <span class="hljs-variable">$file_name</span>,
+             <span class="hljs-string">'file_data'</span> =&gt; <span class="hljs-variable">$file_data</span>,
+         );
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">encode</span><span class="hljs-params">(<span class="hljs-variable">$data</span>)</span>
+    {</span>
+        <span class="hljs-comment">// 可以根据自己的需要编码发送给客户端的数据，这里只是当做文本原样返回</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-variable">$data</span>;
+    }
+}
+</code></pre>
+<h3 id="-">服务端协议使用示例</h3>
+<p>说明：写法与二进制上传写法一样，即能做到几乎不用改动任何业务代码便可以切换协议</p>
+<pre><code class="lang-php"><span class="hljs-keyword">use</span> <span class="hljs-title">Workerman</span>\<span class="hljs-title">Worker</span>;
+
+<span class="hljs-variable">$worker</span> = <span class="hljs-keyword">new</span> Worker(<span class="hljs-string">'TextTransfer://0.0.0.0:8333'</span>);
+<span class="hljs-comment">// 保存文件到tmp下</span>
+<span class="hljs-variable">$worker</span>-&gt;onMessage = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(<span class="hljs-variable">$connection</span>, <span class="hljs-variable">$data</span>)</span>
+{</span>
+    <span class="hljs-variable">$save_path</span> = <span class="hljs-string">'/tmp/'</span>.<span class="hljs-variable">$data</span>[<span class="hljs-string">'file_name'</span>];
+    file_put_contents(<span class="hljs-variable">$save_path</span>, <span class="hljs-variable">$data</span>[<span class="hljs-string">'file_data'</span>]);
+    <span class="hljs-variable">$connection</span>-&gt;send(<span class="hljs-string">"upload success. save path $save_path"</span>);
+};
+</code></pre>
+<h3 id="-textclient-php-php-">客户端文件 textclient.php （这里用php模拟客户端上传）</h3>
+<pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
+<span class="hljs-comment">/** 上传文件客户端 **/</span>
+<span class="hljs-comment">// 上传地址</span>
+<span class="hljs-variable">$address</span> = <span class="hljs-string">"127.0.0.1:8333"</span>;
+<span class="hljs-comment">// 检查上传文件路径参数</span>
+<span class="hljs-keyword">if</span>(!<span class="hljs-keyword">isset</span>(<span class="hljs-variable">$argv</span>[<span class="hljs-number">1</span>]))
+{
+   <span class="hljs-keyword">exit</span>(<span class="hljs-string">"use php client.php \$file_path\n"</span>);
+}
+<span class="hljs-comment">// 上传文件路径</span>
+<span class="hljs-variable">$file_to_transfer</span> = trim(<span class="hljs-variable">$argv</span>[<span class="hljs-number">1</span>]);
+<span class="hljs-comment">// 上传的文件本地不存在</span>
+<span class="hljs-keyword">if</span>(!is_file(<span class="hljs-variable">$file_to_transfer</span>))
+{
+    <span class="hljs-keyword">exit</span>(<span class="hljs-string">"$file_to_transfer not exist\n"</span>);
+}
+<span class="hljs-comment">// 建立socket连接</span>
+<span class="hljs-variable">$client</span> = stream_socket_client(<span class="hljs-variable">$address</span>, <span class="hljs-variable">$errno</span>, <span class="hljs-variable">$errmsg</span>);
+<span class="hljs-keyword">if</span>(!<span class="hljs-variable">$client</span>)
+{
+    <span class="hljs-keyword">exit</span>(<span class="hljs-string">"$errmsg\n"</span>);
+}
+stream_set_blocking(<span class="hljs-variable">$client</span>, <span class="hljs-number">1</span>);
+<span class="hljs-comment">// 文件名</span>
+<span class="hljs-variable">$file_name</span> = basename(<span class="hljs-variable">$file_to_transfer</span>);
+<span class="hljs-comment">// 文件二进制数据</span>
+<span class="hljs-variable">$file_data</span> = file_get_contents(<span class="hljs-variable">$file_to_transfer</span>);
+<span class="hljs-comment">// base64编码</span>
+<span class="hljs-variable">$file_data</span> = base64_encode(<span class="hljs-variable">$file_data</span>);
+<span class="hljs-comment">// 数据包</span>
+<span class="hljs-variable">$package_data</span> = <span class="hljs-keyword">array</span>(
+    <span class="hljs-string">'file_name'</span> =&gt; <span class="hljs-variable">$file_name</span>,
+    <span class="hljs-string">'file_data'</span> =&gt; <span class="hljs-variable">$file_data</span>,
+);
+<span class="hljs-comment">// 协议包 json+回车</span>
+<span class="hljs-variable">$package</span> = json_encode(<span class="hljs-variable">$package_data</span>).<span class="hljs-string">"\n"</span>;
+<span class="hljs-comment">// 执行上传</span>
+fwrite(<span class="hljs-variable">$client</span>, <span class="hljs-variable">$package</span>);
+<span class="hljs-comment">// 打印结果</span>
+<span class="hljs-keyword">echo</span> fread(<span class="hljs-variable">$client</span>, <span class="hljs-number">8192</span>),<span class="hljs-string">"\n"</span>;
 </code></pre>
 
                     
