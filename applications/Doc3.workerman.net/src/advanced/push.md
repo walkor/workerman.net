@@ -4,29 +4,27 @@
 有时候需要在非WorkerMan环境中向客户端推送数据。例如在一个普通的Web项目中通过WorkerMan推送数据（前提是已经部署了WorkerMan，客户端已经连接WorkerMan）。目前有三种比较方便方法推送数据。（本节内容主要是针对Gateway/Worker模型的推送方法的讲解）
 
 ## 方法一、使用GatewayClient客户端推送
-**客户端地址：**https://github.com/walkor/GatewayClient
+**客户端地址：**
 
-**目录结构：**
+https://github.com/walkor/GatewayClient
+
+**使用方法：**
+
+*注意:如果项目与WorkerMan不在同一台服务器，需要安装memcached，参考8.10 Config/Store配置章节*
+
+
+1、拷贝WorkerMan项目中的Applications/YourApp/Config目录到GatewayClient下。
+
+拷贝后的GatewayClient目录结构如下
 ```shell
 GatewayClient/
 ├── Config
 │   └── Store.php
 └── Gateway.php
 ```
+2、引入GatewayClient/Gateway.php文件开始使用。接口使用方法与\GatewayWorker\Lib\Gateway接口相同，接口说明参见8.5章节。
 
-**使用方法：**
-
-1、配置Config/Store.php使其与WorkerMan项目中的Applications/YourApp/Config/Store.php配置相同。
-
-注意:```Store::$driver = self::DRIVER_FILE```时```Store::$storePath```的要配置成```Applications/YourApp/Config/Store::$storePath```的实际值
-
-
- 注意:非WorkerMan项目与WorkerMan不在同一台服务器，需要设置成```Store::$driver=self::DRIVER_MC;```，并设置```Store::$gateway```为memcache开启的端口，```Store::$storePath```不用设置
-
-
- 2、包含文件```require '/your/path/GatewayClient/Gateway.php';```然后就可以像在WorkerMan环境中一样调用```Gateway::sendToAll、Gateway::sendToClient、Gateway::closeClient、Gateway::isOnline、Gateway::getOnlineStatus```等方法了（注意```Gateway::sendToCurrentClient```和```Gateway::closeCurrentClient```无法调用）。
-
- **示例**
+ **客户端使用示例**
  ```php
 require_once '/your/path/GatewayClient/Gateway.php';
 

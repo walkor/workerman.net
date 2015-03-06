@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="10.4" data-basepath=".." data-revision="1425395536917">
+    <div class="book"  data-level="10.4" data-basepath=".." data-revision="1425653521817">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -1062,25 +1062,25 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_1991">
+                    <section class="normal" id="section-gitbook_416">
                     
                         <h1 id="-workerman-">在非WorkerMan项目中推送消息</h1>
 <h2 id="-">需求</h2>
 <p>有时候需要在非WorkerMan环境中向客户端推送数据。例如在一个普通的Web项目中通过WorkerMan推送数据（前提是已经部署了WorkerMan，客户端已经连接WorkerMan）。目前有三种比较方便方法推送数据。（本节内容主要是针对Gateway/Worker模型的推送方法的讲解）</p>
 <h2 id="-gatewayclient-">方法一、使用GatewayClient客户端推送</h2>
-<p><strong>客户端地址：</strong><a href="https://github.com/walkor/GatewayClient" target="_blank">https://github.com/walkor/GatewayClient</a></p>
-<p><strong>目录结构：</strong></p>
+<p><strong>客户端地址：</strong></p>
+<p><a href="https://github.com/walkor/GatewayClient" target="_blank">https://github.com/walkor/GatewayClient</a></p>
+<p><strong>使用方法：</strong></p>
+<p><em>注意:如果项目与WorkerMan不在同一台服务器，需要安装memcached，参考8.10 Config/Store配置章节</em></p>
+<p>1、拷贝WorkerMan项目中的Applications/YourApp/Config目录到GatewayClient下。</p>
+<p>拷贝后的GatewayClient目录结构如下</p>
 <pre><code class="lang-shell">GatewayClient/
 ├── Config
 │   └── Store.php
 └── Gateway.php
 </code></pre>
-<p><strong>使用方法：</strong></p>
-<p>1、配置Config/Store.php使其与WorkerMan项目中的Applications/YourApp/Config/Store.php配置相同。</p>
-<p>注意:<code>Store::$driver = self::DRIVER_FILE</code>时<code>Store::$storePath</code>的要配置成<code>Applications/YourApp/Config/Store::$storePath</code>的实际值</p>
-<p> 注意:非WorkerMan项目与WorkerMan不在同一台服务器，需要设置成<code>Store::$driver=self::DRIVER_MC;</code>，并设置<code>Store::$gateway</code>为memcache开启的端口，<code>Store::$storePath</code>不用设置</p>
-<p> 2、包含文件<code>require &#39;/your/path/GatewayClient/Gateway.php&#39;;</code>然后就可以像在WorkerMan环境中一样调用<code>Gateway::sendToAll、Gateway::sendToClient、Gateway::closeClient、Gateway::isOnline、Gateway::getOnlineStatus</code>等方法了（注意<code>Gateway::sendToCurrentClient</code>和<code>Gateway::closeCurrentClient</code>无法调用）。</p>
-<p> <strong>示例</strong></p>
+<p>2、引入GatewayClient/Gateway.php文件开始使用。接口使用方法与\GatewayWorker\Lib\Gateway接口相同，接口说明参见8.5章节。</p>
+<p> <strong>客户端使用示例</strong></p>
 <pre><code class="lang-php"><span class="hljs-keyword">require_once</span> <span class="hljs-string">'/your/path/GatewayClient/Gateway.php'</span>;
 
 Gateway::sendToAll(<span class="hljs-string">'{"type":"broadcast","content":"hello all"}'</span>);
