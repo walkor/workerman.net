@@ -8,7 +8,7 @@ Applications/SimpleChat/
 假设用户量不大，这里基于Worker开发
 
 #### 3、选定协议
-这里我们选定Text文本协议
+这里我们选定Text文本协议(WorkerMan中自定义的一个协议，格式为文本+换行)
 
 （目前WorkerMan支持HTTP、Websocket、Text文本协议，如果需要使用其它协议，请参照协议一章开发自己的协议）
 
