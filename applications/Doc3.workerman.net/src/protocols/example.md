@@ -97,7 +97,7 @@ class JsonInt
         // 计算整个包的长度，首部4字节+包体字节数
         $total_length = 4 + strlen($body_json_str);
         // 返回打包的数据
-        return $total_length . $body_json_str;
+        return pack('N',$total_length) . $body_json_str;
     }
 }
 ```

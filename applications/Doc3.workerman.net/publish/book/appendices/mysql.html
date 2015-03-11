@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="11.4" data-basepath=".." data-revision="1425742609524">
+    <div class="book"  data-level="11.4" data-basepath=".." data-revision="1426090629911">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -1062,7 +1062,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_153">
+                    <section class="normal" id="section-gitbook_81">
                     
                         <h2 id="gateway-worker-">Gateway/Worker模型 数据库使用示例</h2>
 <p>1、数据库配置Applications/XXX/Config/Db.php</p>
@@ -1176,18 +1176,18 @@
 
 
 <span class="hljs-comment">// 获取一列数据</span>
-<span class="hljs-variable">$db1</span>-&gt;select(<span class="hljs-string">'ID,Sex'</span>)-&gt;from(<span class="hljs-string">'Persons'</span>)-&gt;where(<span class="hljs-string">'sex= :sex'</span>)-&gt;bindValues(<span class="hljs-keyword">array</span>(<span class="hljs-string">'sex'</span>=&gt;<span class="hljs-string">'M'</span>))-&gt;column();
+<span class="hljs-variable">$db1</span>-&gt;select(<span class="hljs-string">'ID'</span>)-&gt;from(<span class="hljs-string">'Persons'</span>)-&gt;where(<span class="hljs-string">'sex= :sex'</span>)-&gt;bindValues(<span class="hljs-keyword">array</span>(<span class="hljs-string">'sex'</span>=&gt;<span class="hljs-string">'M'</span>))-&gt;column();
 <span class="hljs-comment">//等价于</span>
-<span class="hljs-variable">$db1</span>-&gt;select(<span class="hljs-string">'ID,Sex'</span>)-&gt;from(<span class="hljs-string">'Persons'</span>)-&gt;where(<span class="hljs-string">"sex= 'F' "</span>)-&gt;column();
+<span class="hljs-variable">$db1</span>-&gt;select(<span class="hljs-string">'ID'</span>)-&gt;from(<span class="hljs-string">'Persons'</span>)-&gt;where(<span class="hljs-string">"sex= 'F' "</span>)-&gt;column();
 <span class="hljs-comment">//等价于</span>
-<span class="hljs-variable">$db1</span>-&gt;column(<span class="hljs-string">"SELECT ID,Sex FROM `Persons` WHERE sex=‘M’"</span>);
+<span class="hljs-variable">$db1</span>-&gt;column(<span class="hljs-string">"SELECT `ID` FROM `Persons` WHERE sex=‘M’"</span>);
 
 <span class="hljs-comment">// 获取单个值</span>
 <span class="hljs-variable">$db1</span>-&gt;select(<span class="hljs-string">'ID,Sex'</span>)-&gt;from(<span class="hljs-string">'Persons'</span>)-&gt;where(<span class="hljs-string">'sex= :sex'</span>)-&gt;bindValues(<span class="hljs-keyword">array</span>(<span class="hljs-string">'sex'</span>=&gt;<span class="hljs-string">'M'</span>))-&gt;single();
 <span class="hljs-comment">//等价于</span>
 <span class="hljs-variable">$db1</span>-&gt;select(<span class="hljs-string">'ID,Sex'</span>)-&gt;from(<span class="hljs-string">'Persons'</span>)-&gt;where(<span class="hljs-string">"sex= 'F' "</span>)-&gt;single();
 <span class="hljs-comment">//等价于</span>
-<span class="hljs-variable">$db1</span>-&gt;single(<span class="hljs-string">"SELECT ID,Sex FROM `Persons` WHERE sex=‘M’"</span>);
+<span class="hljs-variable">$db1</span>-&gt;single(<span class="hljs-string">"SELECT ID,Sex FROM `Persons` WHERE sex='M'"</span>);
 
 <span class="hljs-comment">// 复杂查询</span>
 <span class="hljs-variable">$db1</span>-&gt;select(<span class="hljs-string">'*'</span>)-&gt;from(<span class="hljs-string">'table1'</span>)-&gt;innerJoin(<span class="hljs-string">'table2'</span>,<span class="hljs-string">'table1.uid = table2.uid'</span>)-&gt;where(<span class="hljs-string">'age &gt; :age'</span>)-&gt;groupBy(<span class="hljs-keyword">array</span>(<span class="hljs-string">'aid'</span>))-&gt;having(<span class="hljs-string">'foo="foo"'</span>)-&gt;orderBy(<span class="hljs-keyword">array</span>(<span class="hljs-string">'did'</span>))-&gt;limit(<span class="hljs-number">10</span>)-&gt;offset(<span class="hljs-number">20</span>)-&gt;bindValues(arra

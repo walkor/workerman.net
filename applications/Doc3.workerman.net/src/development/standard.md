@@ -42,9 +42,9 @@ class UserInfo
 
 2、使用命名空间，命名空间名字与目录路径对应，并以开发者的项目根目录为基准。
 
-例如项目Applications/MyApp/，类文件Applications/MyApp/MyClass.php因为在项目根目录，所以命名空间省略。类文件Applications/MyApp/Protocols/MyProtocol.php因为MyProtocol.php在MyApp项目的Protocols目录下，所以要加上命名空间 ```namesapce Protocols;```，如下：
+例如项目Applications/MyApp/，类文件Applications/MyApp/MyClass.php因为在项目根目录，所以命名空间省略。类文件Applications/MyApp/Protocols/MyProtocol.php因为MyProtocol.php在MyApp项目的Protocols目录下，所以要加上命名空间 ```namespace Protocols;```，如下：
 ```php
-namesapce Protocols;
+namespace Protocols;
 class MyProtocol
 {
 ....

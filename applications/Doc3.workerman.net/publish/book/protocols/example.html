@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="6.3" data-basepath=".." data-revision="1425742609524">
+    <div class="book"  data-level="6.3" data-basepath=".." data-revision="1426090629911">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -1062,7 +1062,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_181">
+                    <section class="normal" id="section-gitbook_109">
                     
                         <h1 id="-">一些例子</h1>
 <h2 id="-">例子一</h2>
@@ -1156,7 +1156,7 @@
         <span class="hljs-comment">// 计算整个包的长度，首部4字节+包体字节数</span>
         <span class="hljs-variable">$total_length</span> = <span class="hljs-number">4</span> + strlen(<span class="hljs-variable">$body_json_str</span>);
         <span class="hljs-comment">// 返回打包的数据</span>
-        <span class="hljs-keyword">return</span> <span class="hljs-variable">$total_length</span> . <span class="hljs-variable">$body_json_str</span>;
+        <span class="hljs-keyword">return</span> pack(<span class="hljs-string">'N'</span>,<span class="hljs-variable">$total_length</span>) . <span class="hljs-variable">$body_json_str</span>;
     }
 }
 </code></pre>
