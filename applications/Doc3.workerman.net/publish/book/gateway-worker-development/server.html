@@ -1075,7 +1075,7 @@
 <li>GATEWAY_CLIENT_ID // 全局唯一的客户端id</li>
 </ul>
 <h3 id="-_server-"><code>$_SERVER</code>使用场景</h3>
-<p>当需要在Event.php中获得客户端的ip及端口信息时，可以使用<code>$_SERVER[&#39;REMOTE_ADDR&#39;]</code>和<code>$_SERVER[&#39;REMOTE_APORT&#39;]</code>获得。当想在某个函数逻辑处理时获得当前客户端的client_id时，可以使用<code>$_SERVER[&#39;GATEWAY_CLIENT_ID&#39;]</code>方便的获得</p>
+<p>当需要在Event.php中获得客户端的ip及端口信息时，可以使用<code>$_SERVER[&#39;REMOTE_ADDR&#39;]</code>和<code>$_SERVER[&#39;REMOTE_PORT&#39;]</code>获得。当想在某个函数逻辑处理时获得当前客户端的client_id时，可以使用<code>$_SERVER[&#39;GATEWAY_CLIENT_ID&#39;]</code>方便的获得</p>
 <h3 id="-_server-"><code>$_SERVER</code>使用注意事项</h3>
 <ul>
 <li><code>$_SERVER[&#39;GATEWAY_ADDR&#39;]</code> 和 <code>$_SERVER[&#39;GATEWAY_PORT&#39;]</code>开发者一般用不到，可以忽略。</li>
