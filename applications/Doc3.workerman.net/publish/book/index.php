@@ -1,3 +1,3 @@
 <?php
 
-\Man\Common\Protocols\Http\header('Location: /index.html');
+header('Location: /index.html');

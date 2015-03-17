@@ -1091,7 +1091,7 @@
             <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
         }
         <span class="hljs-comment">// 返回包长，包长包含 头部数据长度+包体长度</span>
-        <span class="hljs-variable">$total_len</span> = base_convert(<span class="hljs-variable">$json_str</span>, <span class="hljs-number">10</span>, <span class="hljs-number">10</span>);
+        <span class="hljs-variable">$total_len</span> = base_convert(<span class="hljs-variable">$recv_buffer</span>, <span class="hljs-number">10</span>, <span class="hljs-number">10</span>);
         <span class="hljs-keyword">return</span> <span class="hljs-variable">$total_len</span>;
     }
 
