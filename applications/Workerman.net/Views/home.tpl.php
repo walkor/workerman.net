@@ -90,6 +90,31 @@
 			</div>
 		</div>
 		<div class="media">
+			 <a href="http://browserquest.workerman.net/" class="pull-left" target="_blank"><img src="/img/browserquest.jpg" class="media-object" alt="browserquest php 版本示意图"/></a>
+			<div class="media-body">
+				<h4 class="media-heading">
+					<a target="_blank" href="http://browserquest.workerman.net/">BrowserQuest WorkerMan版本</a>
+				</h4>
+				<p>
+				BrowserQuest是Mozilla发布的一款2D图形的MMO（大型多人在线）游戏，玩家可以聊天、打怪、升级、寻宝、获得成就。这里基于WorkerMan框架重写了BrowserQuest服务端nodejs部分，浏览器与后端同样是基于websocket协议通讯。
+				<br>
+				<a class="btn" target="_blank" href="https://github.com/walkor/BrowserQuest-PHP">下载源代码 »</a>
+				</p>
+			</div>
+		</div>
+		<div class="media">
+			 <a href="/workerman-chat" class="pull-left"><img src="/img/workerman-chat.png" class="media-object" alt="PHP聊天室示意图"/></a>
+			<div class="media-body">
+				<h4 class="media-heading">
+					<a target="_blank" href="/workerman-chat">聊天室</a>
+				</h4>
+				<p>一个可扩展的基于Websocket协议的聊天室，服务端采用workerman作为Socket服务器框架，客户端支持多浏览器统一接口，支持浏览器原生Websocket同时支持Flash实现的Websocket。
+				<br><a target="_blank" class="btn" href="/workerman-chat">详情 »</a>
+				<a class="btn" target="_blank" href="https://github.com/walkor/workerman-chat">下载源代码 »</a>
+				</p>
+			</div>
+		</div>
+		<div class="media">
 			<a href="http://www.10ss.net/" class="pull-left" target="_blank"><img src="/img/yilianyun.png" class="media-object" alt='workerman 打印机' /></a>
 			<div class="media-body">
 				<h4 class="media-heading">
@@ -157,18 +182,6 @@
 				 <br><a target="_blank" class="btn" href="/workerman-jsonrpc">详情 »</a>
 				 <a class="btn" target="_blank" href="https://github.com/walkor/workerman-jsonrpc">下载源代码 »</a>
 				 </p>
-			</div>
-		</div>
-		<div class="media">
-			 <a href="/workerman-chat" class="pull-left"><img src="/img/workerman-chat.png" class="media-object" alt="PHP聊天室示意图"/></a>
-			<div class="media-body">
-				<h4 class="media-heading">
-					<a target="_blank" href="/workerman-chat">聊天室</a>
-				</h4>
-				<p>一个可扩展的基于Websocket协议的聊天室，服务端采用workerman作为Socket服务器框架，客户端支持多浏览器统一接口，支持浏览器原生Websocket同时支持Flash实现的Websocket。
-				<br><a target="_blank" class="btn" href="/workerman-chat">详情 »</a>
-				<a class="btn" target="_blank" href="https://github.com/walkor/workerman-chat">下载源代码 »</a>
-				</p>
 			</div>
 		</div>
 		<div class="media">
