@@ -29,7 +29,7 @@
 			</div>
 		</div>
 		<div class="media">
-			 <a href="http://vmstat.workerman.net/" class="pull-left" target="_blank"><img src="/img/workerman-vmstat.jpg" class="media-object" alt="web vmstat 截图"/></a>
+			 <a href="http://vmstat.workerman.net/" class="pull-left" target="_blank"><img src="/img/workerman-vmstat.png" class="media-object" alt="web vmstat 截图"/></a>
 			<div class="media-body">
 				<h4 class="media-heading">
 					<a target="_blank" href="http://vmstat.workerman.net/">Web VMStat 监控</a>
