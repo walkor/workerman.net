@@ -29,6 +29,18 @@
 			</div>
 		</div>
 		<div class="media">
+			 <a href="/workerman-chat" class="pull-left"><img src="/img/workerman-chat.png" class="media-object" alt="PHP聊天室示意图"/></a>
+			<div class="media-body">
+				<h4 class="media-heading">
+					<a target="_blank" href="/workerman-chat">聊天室</a>
+				</h4>
+				<p>一个可扩展的基于Websocket协议的聊天室，服务端采用workerman作为Socket服务器框架，客户端支持多浏览器统一接口，支持浏览器原生Websocket同时支持Flash实现的Websocket。
+				<br><a target="_blank" class="btn" href="/workerman-chat">详情 »</a>
+				<a class="btn" target="_blank" href="https://github.com/walkor/workerman-chat">下载源代码 »</a>
+				</p>
+			</div>
+		</div>
+		<div class="media">
 			 <a href="http://vmstat.workerman.net/" class="pull-left" target="_blank"><img src="/img/workerman-vmstat.png" class="media-object" alt="web vmstat 截图"/></a>
 			<div class="media-body">
 				<h4 class="media-heading">
@@ -42,14 +54,15 @@
 			</div>
 		</div>
 		<div class="media">
-			 <a href="/workerman-chat" class="pull-left"><img src="/img/workerman-chat.png" class="media-object" alt="PHP聊天室示意图"/></a>
+			 <a href="https://github.com/walkor/live-ascii-camera" class="pull-left" target="_blank"><img src="/img/live-ascii-camera.png" class="media-object" alt="ascii 视频流 截图"/></a>
 			<div class="media-body">
 				<h4 class="media-heading">
-					<a target="_blank" href="/workerman-chat">聊天室</a>
+					<a target="_blank" href="http://vmstat.workerman.net/">摄像头 ascii 视频流实时传输</a>
 				</h4>
-				<p>一个可扩展的基于Websocket协议的聊天室，服务端采用workerman作为Socket服务器框架，客户端支持多浏览器统一接口，支持浏览器原生Websocket同时支持Flash实现的Websocket。
-				<br><a target="_blank" class="btn" href="/workerman-chat">详情 »</a>
-				<a class="btn" target="_blank" href="https://github.com/walkor/workerman-chat">下载源代码 »</a>
+				<p>
+				利用HTML5将摄像头视频流转换成ascii码流，通过websocket实时传输workerman，workerman实时转发给其它浏览器展示
+				<br>
+				<a class="btn" target="_blank" href="https://github.com/walkor/live-ascii-camera">下载源代码 »</a>
 				</p>
 			</div>
 		</div>

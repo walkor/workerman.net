@@ -128,6 +128,19 @@
 			</div>
 		</div>
 		<div class="media">
+			 <a href="https://github.com/walkor/live-ascii-camera" class="pull-left" target="_blank"><img src="/img/live-ascii-camera.png" class="media-object" alt="ascii 视频流 截图"/></a>
+			<div class="media-body">
+				<h4 class="media-heading">
+					<a target="_blank" href="http://vmstat.workerman.net/">摄像头 ascii 视频流实时传输</a>
+				</h4>
+				<p>
+				利用HTML5将摄像头视频流转换成ascii码流，通过websocket实时传输workerman，workerman实时转发给其它浏览器展示
+				<br>
+				<a class="btn" target="_blank" href="https://github.com/walkor/live-ascii-camera">下载源代码 »</a>
+				</p>
+			</div>
+		</div>
+		<div class="media">
 			<a href="http://www.10ss.net/" class="pull-left" target="_blank"><img src="/img/yilianyun.png" class="media-object" alt='workerman 打印机' /></a>
 			<div class="media-body">
 				<h4 class="media-heading">
