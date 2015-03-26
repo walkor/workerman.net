@@ -237,21 +237,6 @@
 	</div>
 	<div class="col-md-5 column">
 		<h3></h3>
-		<h4>相关资源</h4>
-		<ul>
-			<li>
-				<a href="https://github.com/walkor/web-msg-sender">Web消息实时推送应用源码</a>
-			</li>
-			<li>
-				<a href="https://github.com/walkor/workerman-JsonRpc">JSON RPC源码</a>
-			</li>
-			<li>
-				<a href="https://github.com/walkor/workerman-bench">压力测试代码及客户端脚本</a>
-			</li>
-			<li>
-				<a href="https://github.com/walkor/workerman/tree/master/applications/Demo#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B1%BB%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95">workerman中mysql类及用法</a>
-			</li>
-		</ul>
 		<h4>问答动态</h4>
 		<ul>
 			<li>
