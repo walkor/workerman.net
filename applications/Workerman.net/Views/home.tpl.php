@@ -141,6 +141,19 @@
 			</div>
 		</div>
 		<div class="media">
+			 <a href="https://github.com/walkor/live-camera" class="pull-left" target="_blank"><img src="/img/live-camera.jpg" class="media-object" alt="websocket 传输 视频流 截图"/></a>
+			<div class="media-body">
+				<h4 class="media-heading">
+					<a target="_blank" href="https://github.com/walkor/live-camera">摄像头视频流实时传输</a>
+				</h4>
+				<p>
+				利用websocket将摄像头视频流实时传输workerman，workerman实时转发给其它浏览器展示
+				<br>
+				<a class="btn" target="_blank" href="https://github.com/walkor/live-camera">下载源代码 »</a>
+				</p>
+			</div>
+		</div>
+		<div class="media">
 			<a href="http://www.10ss.net/" class="pull-left" target="_blank"><img src="/img/yilianyun.png" class="media-object" alt='workerman 打印机' /></a>
 			<div class="media-body">
 				<h4 class="media-heading">
