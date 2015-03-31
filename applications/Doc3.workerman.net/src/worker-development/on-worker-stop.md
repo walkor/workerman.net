@@ -1,7 +1,7 @@
 # onWorkerStop
 ## 说明:
 ```php
-callback Worker::onWorkerStop
+callback Worker::$onWorkerStop
 ```
 
 设置Workert停止时的回调函数，即当Worker收到stop信号后立即执行Worker::onWorkerStop指定的回调函数

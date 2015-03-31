@@ -1,7 +1,7 @@
 # onWorkerStart
 ## 说明:
 ```php
-callback Worker::onWorkerStart
+callback Worker::$onWorkerStart
 ```
 
 设置Worker启动时的回调函数，即当Worker启动后立即执行Worker::onWorkerStart成员指定的回调函数

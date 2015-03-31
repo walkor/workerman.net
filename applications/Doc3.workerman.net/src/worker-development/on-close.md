@@ -1,7 +1,7 @@
 # onClose
 ## 说明:
 ```php
-callback Worker::onClose
+callback Worker::$onClose
 ```
 
 当客户端的连接断开时触发，不管连接是如何断开的，只要断开就会触发

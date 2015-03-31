@@ -1,7 +1,7 @@
 # onConnect
 ## 说明:
 ```php
-callback Worker::onConnect
+callback Worker::$onConnect
 ```
 
 当有客户端连接时触发的回调函数

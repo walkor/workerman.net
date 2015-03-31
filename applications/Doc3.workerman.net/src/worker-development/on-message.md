@@ -1,7 +1,7 @@
 # onMessage
 ## 说明:
 ```php
-callback Worker::onMessage
+callback Worker::$onMessage
 ```
 
 当有客户端的连接上有数据发来时触发
