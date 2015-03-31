@@ -8,7 +8,7 @@ callback Worker::$onBufferFull
 
 该回调**可能**会在调用Connection::send后立刻被触发，比如发送大数据或者连续快速的向对端发送数据，由于网络等原因数据被大量积压在对应连接的发送缓冲区，当超过```TcpConnection::$maxSendBufferSize```上限时触发。
 
-当发生onBufferFull事件时，开发者一般需要采取措施，例如停止向对端发送数据，等待发送缓冲区的数据被发送完毕(onBufferDrain事件)等。如果已经触发onBufferFull事件，仍然向对端发送数据，并且发送缓冲区仍然是满的状态，则此次发送的数据将会被丢弃。
+当发生onBufferFull事件时，开发者一般需要采取措施，例如停止向对端发送数据，等待发送缓冲区的数据被发送完毕(onBufferDrain事件)等。如果已经触发onBufferFull事件，仍然向对端发送数据，并且发送缓冲区仍然是满的状态，则此次发送的数据将会被丢弃，并触发onError回调。
 
 
 ## 回调函数的参数

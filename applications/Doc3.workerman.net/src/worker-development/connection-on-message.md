@@ -4,19 +4,8 @@
 callback Connection::$onMessage
 ```
 
-当有客户端的连接上有数据发来时触发。
 
 作用与```Worker::$onMessage```回调相同，区别是只针对当前连接有效，也就是可以针对某个连接的设置onMessage回调。
-
-## 回调函数的参数
-
-``` $connection ```
-
-连接对象
-
-``` $data ```
-
-客户端连接上发来的数据，如果Worker指定了协议，则$data是对应协议decode（解码）了的数据
 
 
 ## 范例
