@@ -1,0 +1,26 @@
+# maxPackageSize
+
+## 说明:
+```php
+static int Connection::$maxPackageSize
+```
+
+此属性为全局静态属性，用来设置每个连接能够接收的最大包包长。不设置默认为10MB。
+
+如果发来的数据包解析得到包长大于```Connection::$maxPackageSize```，则会视为非法数据，连接会断开。
+
+
+## 范例
+
+
+```php
+use Workerman\Worker;
+use Workerman\Protocols\TcpConnection;
+TcpConnection::$maxPackageSize = 1024000;
+
+$worker = new Worker('Websocket://0.0.0.0:8484');
+$worker->onMessage = function($connection, $data)
+{
+    $connection->send('hello');
+};
+```
