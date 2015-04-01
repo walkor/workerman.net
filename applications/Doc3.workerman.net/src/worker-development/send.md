@@ -21,7 +21,7 @@ true 表示发送成功
 
 null 表示放入待发送队列，等待异步发送
 
-false 表示发送失败，失败原因可能是客户端连接已经关闭，或者该连接的本地发送缓冲区已满
+false 表示发送失败，失败原因可能是客户端连接已经关闭，或者该连接的应用层发送缓冲区已满
 
 
 ## 范例
@@ -31,6 +31,7 @@ use WorkerMan\Worker;
 $worker = new Worker('websocket://0.0.0.0:8484');
 $worker->onMessage = function($connection, $data)
 {
+    // 会自动调用\Workerman\Protocols\Websocket::encode打包成websocket协议数据后发送
     $connection->send("hello\n");
 };
 ```

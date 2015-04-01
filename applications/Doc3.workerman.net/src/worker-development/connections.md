@@ -19,7 +19,7 @@ $worker->onWorkerStart = function($worker)
     // 定时，每10秒一次
     Timer::add(10, function()use($worker)
     {
-        // 遍历所有的客户端连接，发送当前服务器的时间
+        // 遍历当前进程所有的客户端连接，发送当前服务器的时间
         foreach($worker->connections as $connection)
         {
             $connection->send(time());

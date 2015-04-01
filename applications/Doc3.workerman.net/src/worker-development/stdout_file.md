@@ -14,6 +14,7 @@ static string Worker::$stdoutFile
 ```php
 use WorkerMan\Worker;
 Worker::$daemonize = true;
+// 所有的打印输出全部保存在/tmp/stdout.log文件中
 Worker::$stdoutFile = '/tmp/stdout.log';
 $worker = new Worker('Text://0.0.0.0:8484');
 $worker->onWorkerStart = function($worker)

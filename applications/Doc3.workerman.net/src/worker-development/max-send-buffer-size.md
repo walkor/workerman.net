@@ -15,6 +15,8 @@ static int Connection::$maxSendBufferSize
 ```php
 use Workerman\Worker;
 use Workerman\Protocols\TcpConnection;
+
+// 设置每个连接的应用层发送缓冲区大小为102400字节
 TcpConnection::$maxSendBufferSize = 102400;
 
 $worker = new Worker('Websocket://0.0.0.0:8484');

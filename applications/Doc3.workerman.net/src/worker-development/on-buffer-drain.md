@@ -6,8 +6,7 @@ callback Worker::$onBufferDrain
 
 每个连接都有一个单独的应用层发送缓冲区，缓冲区大小由```TcpConnection::$maxSendBufferSize```决定，默认值为1MB，可以手动设置更改大小，更改后会对所有连接生效。
 
-该回调在应用层发送缓冲区数据全部发送完毕后触发。一般与onBufferFull配合使用，例如在onBufferFull时停止向对端继续写入数据，在onBufferDrain恢复写入数据。
-
+该回调在应用层发送缓冲区数据全部发送完毕后触发。一般与onBufferFull配合使用，例如在onBufferFull时停止向对端继续send数据，在onBufferDrain恢复写入数据。
 
 
 

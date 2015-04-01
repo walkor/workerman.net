@@ -17,8 +17,10 @@ use \Workerman\Events\EventInterface;
 $worker = new Worker('Text://0.0.0.0:8484');
 $worker->onWorkerStart = function($worker)
 {
+    // 当进程收到SIGALRM信号时，打印输出一些信息
     Worker::$globalEvent->add(SIGALRM, EventInterface::EV_SIGNAL, function()
     {
         echo "Get signal SIGALRM\n";
     });
 };
+```

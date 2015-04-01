@@ -4,7 +4,7 @@
 string Worker::$transport
 ```
 
-设置Worker实例所使用的传输层协议，目前只支持两种，tcp和udp。不设置默认为tcp。
+设置当前Worker实例所使用的传输层协议，目前只支持两种，tcp和udp。不设置默认为tcp。
 
 
 ## 范例

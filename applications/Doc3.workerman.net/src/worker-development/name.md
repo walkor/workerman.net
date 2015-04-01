@@ -5,7 +5,7 @@
 string Worker::$name
 ```
 
-设置此实例的名称，方便运行status命令时识别进程。不设置时默认为none。
+设置当前Worker实例的名称，方便运行status命令时识别进程。不设置时默认为none。
 
 
 ## 范例

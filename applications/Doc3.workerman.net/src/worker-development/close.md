@@ -10,7 +10,7 @@ void Connection::close(mixed $data)
 
 ``` $data ```
 
-要发送的数据（如果有指定协议，则会自动调用协议的encode方法），当数据发送完毕后关闭连接，随后会触发onClose回调
+要发送的数据（如果有指定协议，则会自动调用协议的encode方法打包```$data```数据），当数据发送完毕后关闭连接，随后会触发onClose回调
 
 
 ## 范例

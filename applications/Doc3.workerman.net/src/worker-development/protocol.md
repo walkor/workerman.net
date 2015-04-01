@@ -21,6 +21,7 @@ $worker->onConnect = function($connection)
 $worker->onMessage = function($connection, $data)
 {
     var_dump($_GET, $_POST);
+    // send 时会自动调用$connection->protocol::encode()，打包数据后再发送
     $connection->send("hello");
 };
 ```
