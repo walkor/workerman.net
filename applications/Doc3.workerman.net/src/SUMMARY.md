@@ -58,6 +58,7 @@
            * [getRemoteIp](worker-development/get-remote-ip.md)
            * [getRemotePort](worker-development/get-remote-port.md)
            * [close](worker-development/close.md)
+           * [destroy](worker-development/destroy.md)
            * [pauseRecv](worker-development/pause-recv.md)
            * [resumeRecv](worker-development/resume-recv.md)
    * [AsyncTcpConnection类](worker-development/async-tcp-connection.md)
