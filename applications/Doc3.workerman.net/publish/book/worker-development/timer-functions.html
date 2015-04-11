@@ -4,7 +4,7 @@
     <head>
         
         <meta charset="UTF-8">
-        <title>onError | WorkerMan 3.x 手册</title>
+        <title>定时器Timer类 | WorkerMan 3.x 手册</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 0.5.2">
@@ -17,10 +17,10 @@
     
     
     
-    <link rel="next" href="../worker-development/connection-method.html" />
+    <link rel="next" href="../worker-development/add.html" />
     
     
-    <link rel="prev" href="../worker-development/connection-on-buffer-drain.html" />
+    <link rel="prev" href="../worker-development/__construct.html" />
     
 
         
@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="7.3.2.5" data-basepath=".." data-revision="1428762343886">
+    <div class="book"  data-level="7.5" data-basepath=".." data-revision="1428762343886">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -1238,7 +1238,7 @@
             <div class="page-wrapper" tabindex="-1">
                 <div class="book-progress">
     <div class="bar">
-        <div class="inner" style="width: 48.62385321100918%;min-width: 47.706422018348626%;"></div>
+        <div class="inner" style="width: 57.79816513761468%;min-width: 56.88073394495413%;"></div>
     </div>
     <div class="chapters">
     
@@ -1350,25 +1350,25 @@
     
         <a href="../worker-development/connection-on-error.html" title="onError" class="chapter done " data-progress="7.3.2.5" style="left: 48.62385321100918%;"></a>
     
-        <a href="../worker-development/connection-method.html" title="接口" class="chapter  " data-progress="7.3.3" style="left: 49.54128440366973%;"></a>
+        <a href="../worker-development/connection-method.html" title="接口" class="chapter done " data-progress="7.3.3" style="left: 49.54128440366973%;"></a>
     
-        <a href="../worker-development/send.html" title="send" class="chapter  " data-progress="7.3.3.1" style="left: 50.45871559633027%;"></a>
+        <a href="../worker-development/send.html" title="send" class="chapter done " data-progress="7.3.3.1" style="left: 50.45871559633027%;"></a>
     
-        <a href="../worker-development/get-remote-ip.html" title="getRemoteIp" class="chapter  " data-progress="7.3.3.2" style="left: 51.37614678899082%;"></a>
+        <a href="../worker-development/get-remote-ip.html" title="getRemoteIp" class="chapter done " data-progress="7.3.3.2" style="left: 51.37614678899082%;"></a>
     
-        <a href="../worker-development/get-remote-port.html" title="getRemotePort" class="chapter  " data-progress="7.3.3.3" style="left: 52.293577981651374%;"></a>
+        <a href="../worker-development/get-remote-port.html" title="getRemotePort" class="chapter done " data-progress="7.3.3.3" style="left: 52.293577981651374%;"></a>
     
-        <a href="../worker-development/close.html" title="close" class="chapter  " data-progress="7.3.3.4" style="left: 53.211009174311926%;"></a>
+        <a href="../worker-development/close.html" title="close" class="chapter done " data-progress="7.3.3.4" style="left: 53.211009174311926%;"></a>
     
-        <a href="../worker-development/pause-recv.html" title="pauseRecv" class="chapter  " data-progress="7.3.3.5" style="left: 54.12844036697248%;"></a>
+        <a href="../worker-development/pause-recv.html" title="pauseRecv" class="chapter done " data-progress="7.3.3.5" style="left: 54.12844036697248%;"></a>
     
-        <a href="../worker-development/resume-recv.html" title="resumeRecv" class="chapter  " data-progress="7.3.3.6" style="left: 55.04587155963303%;"></a>
+        <a href="../worker-development/resume-recv.html" title="resumeRecv" class="chapter done " data-progress="7.3.3.6" style="left: 55.04587155963303%;"></a>
     
-        <a href="../worker-development/async-tcp-connection.html" title="AsyncTcpConnection类" class="chapter  " data-progress="7.4" style="left: 55.96330275229358%;"></a>
+        <a href="../worker-development/async-tcp-connection.html" title="AsyncTcpConnection类" class="chapter done " data-progress="7.4" style="left: 55.96330275229358%;"></a>
     
-        <a href="../worker-development/__construct.html" title="__construct" class="chapter  " data-progress="7.4.1" style="left: 56.88073394495413%;"></a>
+        <a href="../worker-development/__construct.html" title="__construct" class="chapter done " data-progress="7.4.1" style="left: 56.88073394495413%;"></a>
     
-        <a href="../worker-development/timer-functions.html" title="定时器Timer类" class="chapter  " data-progress="7.5" style="left: 57.79816513761468%;"></a>
+        <a href="../worker-development/timer-functions.html" title="定时器Timer类" class="chapter done " data-progress="7.5" style="left: 57.79816513761468%;"></a>
     
         <a href="../worker-development/add.html" title="add" class="chapter  " data-progress="7.5.1" style="left: 58.71559633027523%;"></a>
     
@@ -1467,13 +1467,9 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_203">
+                    <section class="normal" id="section-gitbook_233">
                     
-                        <h1 id="onerror">onError</h1>
-<h2 id="-">说明:</h2>
-<pre><code class="lang-php">callback Connection::<span class="hljs-variable">$onError</span>
-</code></pre>
-<p>作用与<code>Worker::$onError</code>回调相同，区别是只针对当前连接起作用，即可以单独设置某个连接的onError回调</p>
+                        <h1 id="-timer-">定时器Timer类</h1>
 
                     
                     </section>
@@ -1483,10 +1479,10 @@
         </div>
 
         
-        <a href="../worker-development/connection-on-buffer-drain.html" class="navigation navigation-prev " aria-label="Previous page: onBufferDrain"><i class="fa fa-angle-left"></i></a>
+        <a href="../worker-development/__construct.html" class="navigation navigation-prev " aria-label="Previous page: __construct"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../worker-development/connection-method.html" class="navigation navigation-next " aria-label="Next page: 接口"><i class="fa fa-angle-right"></i></a>
+        <a href="../worker-development/add.html" class="navigation navigation-next " aria-label="Next page: add"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
