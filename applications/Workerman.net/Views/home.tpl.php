@@ -42,7 +42,7 @@
 					<img src="/img/high-performance.png" alt="workerman高性能"/><strong>高性能</strong>
 				</h3>
 				<p>
-					基于高性能的libevent事件网络库，单机支持数十万的并发连接，长连接吞吐量高达36W/S。PHP数据库等对象可以常驻内存，减少解析编译及网络开销。
+					基于高性能的libevent事件网络库，单机可支持百万的并发连接，长连接吞吐量高达36W/S。PHP数据库等对象可以常驻内存，减少解析编译及网络开销。
 				</p>
 			</div>
 		</div>
@@ -176,6 +176,19 @@
 　　<br>
 　　我眼里的萌Mark是什么？
 				<a target="_blank" class="btn" href="http://www.yuchats.com/">本应用由www.yuchats.com提供</a></p>
+			</div>
+		</div>
+		<div class="media">
+			 <a href="http://j.yunleyou.com/" class="pull-left" target="_blank"><img src="/img/jinglingweiji.jpg" class="media-object" alt="精灵危机游戏 截图"/></a>
+			<div class="media-body">
+				<h4 class="media-heading">
+					<a target="_blank" href="http://j.yunleyou.com/">手机游戏 精灵危机</a>
+				</h4>
+				<p>
+				《精灵危机》的游戏带玩家进入一个由昆虫们组成的魔法大陆，他们依靠火，水，风，光，暗的魔法能量工作和生活。而有一天，能量的平衡被打破了，玩家必须帮助这个世界的人们，守卫能量的平衡，拯救这个岌岌可危的世界并揭露幕后的阴谋。
+				<br>
+				<a class="btn" target="_blank" href="http://j.yunleyou.com/">本游戏由云乐游平台提供 »</a>
+				</p>
 			</div>
 		</div>
 		<div class="media">
