@@ -2,7 +2,7 @@
 
 ## 说明:
 ```php
-int Connection::$protocol
+string Connection::$protocol
 ```
 
 设置此链的应用层协议打包解包所使用的类
