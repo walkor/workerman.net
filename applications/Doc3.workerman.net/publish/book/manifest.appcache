@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# Revision 1428766301083
+# Revision 1428940042896
 
 CACHE:
 gateway-worker-development/is-online.html
@@ -19,6 +19,7 @@ gateway-worker-development/lib-gateway-functions.html
 gateway-worker-development/onclose.html
 gateway-worker-development/onconnect.html
 gateway-worker-development/onmessage.html
+gateway-worker-development/router.html
 gateway-worker-development/send-to-all.html
 gateway-worker-development/send-to-client.html
 gateway-worker-development/send-to-current-client.html
@@ -27,8 +28,8 @@ gateway-worker-development/session.html
 gateway-worker-development/store-config.html
 gateway-worker-development/why-distributed.html
 index.html
-advanced/multi-protocols.html
 advanced/README.html
+advanced/multi-protocols.html
 advanced/push.html
 advanced/status.html
 advanced/webserver.html
@@ -64,11 +65,14 @@ preface/README.html
 protocols/README.html
 protocols/example.html
 protocols/how-protocols.html
-worker-development/README.html
+protocols/why-protocols.html
+worker-development/max-package-size.html
 worker-development/add.html
+worker-development/README.html
 worker-development/callback.html
-worker-development/async-tcp-connection.html
 worker-development/close.html
+worker-development/async-tcp-connection.html
+worker-development/connect.html
 worker-development/connection-callback.html
 worker-development/connection-functions.html
 worker-development/connection-method.html
@@ -77,8 +81,8 @@ worker-development/connection-on-buffer-full.html
 worker-development/connection-on-close.html
 worker-development/connection-on-error.html
 worker-development/connection-on-message.html
-worker-development/connection-property.html
 worker-development/connections.html
+worker-development/connection-property.html
 worker-development/count.html
 worker-development/daemonize.html
 worker-development/del.html
@@ -86,8 +90,9 @@ worker-development/destroy.html
 worker-development/get-remote-ip.html
 worker-development/get-remote-port.html
 worker-development/global-event.html
-worker-development/max-package-size.html
-protocols/why-protocols.html
+worker-development/id.html
+worker-development/__construct.html
+worker-development/max-send-buffer-size.html
 worker-development/name.html
 worker-development/on-buffer-drain.html
 worker-development/on-buffer-full.html
@@ -111,8 +116,6 @@ worker-development/user.html
 worker-development/worker-development.html
 worker-development/worker-functions.html
 worker-development/worker.html
-worker-development/max-send-buffer-size.html
-worker-development/__construct.html
 gitbook\app.js
 gitbook\fonts\fontawesome\FontAwesome.otf
 gitbook\fonts\fontawesome\fontawesome-webfont.eot

@@ -84,6 +84,7 @@
        * [closeCurrentClient](gateway-worker-development/close-current-client.md)
        * [isOnline](gateway-worker-development/is-online.md)
        * [getOnlineStatus](gateway-worker-development/get-online-status.md)
+   * [设置路由router](gateway-worker-development/router.md)
    * [超全局数组$_SESSION](gateway-worker-development/session.md)
    * [超全局数组$_SERVER](gateway-worker-development/server.md)
    * [心跳检测](gateway-worker-development/heartbeat.md)
