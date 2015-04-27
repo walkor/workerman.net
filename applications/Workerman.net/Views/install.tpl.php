@@ -28,6 +28,18 @@
 	
 	<h5><b>总结：如果已经安装了php环境，则可以尝试（跳过第一、二、三、四步）手动下载workerman应用的zip文件解压后直接运行workerman应用程序（第五步），workerman运行界面会提示当前环境缺少的扩展或者组件，根据提示自行安装</b></h5>
 	</div>
+	<h3>编译安装workerman的php环境(以cnetos为例)</h3>
+<h5>1、 yum install wget gcc git php-devel php-pear libevent-devel libxml2-devel cmake</h5>
+<h5>2、 wget  http://cn2.php.net/distributions/php-5.6.8.tar.gz              (下载php)</h5>
+<h5>3、 tar zxvf php-5.6.8.tar.gz</h5>
+<h5>4、 cd php-5.6.8</h5>
+<h5>5、 ./configure --enable-posix --enable-pcntl --enable-sockets</h5>
+<h5>6、 make</h5>
+<h5>7、 make install</h5>
+<h5>8、 pecl install channel://pecl.php.net/libevent-0.1.0</h5>
+<h5>9、 echo extension=libevent.so > /etc/phpd/libevent.ini</h5>
+<h5>10、 git clone https://github.com/walkor/workerman</h5>
+<h5>11、 cd ./workerman && php start.php start -d</h5>
 	<div class="bd-ad"><?php global $bd_ad_468_60; echo $bd_ad_468_60;?></div>
 	<div class="col-md-3 column">
 	
