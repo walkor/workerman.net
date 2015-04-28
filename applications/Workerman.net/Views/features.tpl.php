@@ -173,11 +173,10 @@
 				<div class="thumbnail">
 					<div class="caption">
 						<h3>
-							支持子服务次数配置
+							支持毫秒级别定时器
 						</h3>
 						<p>
-							可以设置进程服务次数，类似php-fpm配置中的max_requests配置，例如设置maxRequests为1000，则每个子进程对外服务1000次后便会安全退出。
-							开启这个配置的目的是为了避免由于业务代码不规范导致的内存泄露给系统带来的内存占用过高的影响。
+							支持毫秒级别定时器，可以做定时任务或者定时计算，如游戏中地图上AI相关计算。
 						</p>
 					</div>
 				</div>
@@ -280,16 +279,7 @@
 		</div>
 		<div class="row">
 			<div class="col-md-4">
-				<div class="thumbnail">
-					<div class="caption">
-						<h3>
-							支持毫秒级别定时器
-						</h3>
-						<p>
-							支持毫秒级别定时器，可以做定时任务或者定时计算，如游戏中地图上AI相关计算。
-						</p>
-					</div>
-				</div>
+				
 			</div>
 			<div class="col-md-4">
 			</div>
