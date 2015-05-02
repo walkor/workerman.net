@@ -379,6 +379,7 @@
 		<tr>
 		<td><a href="http://www.ilongterm.com/" target="blank"><img src="/img/logos/ilongterm.png" alt="龙腾海外房产网logo"></a></td>
 		<td><a href="http://www.dbfen.com/" target="blank"><img src="/img/logos/dbfen.png" alt="多备份logo"></a></td>
+		<td><a href="http://www.zhibo8.com/" target="blank"><img src="/img/logos/zhibo8.png" alt="zhibo8 logo"></a></td>
 		</tr>
 		</table>
 	</div>
