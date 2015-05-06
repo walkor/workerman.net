@@ -20,7 +20,7 @@
 						<b>下载</b>
 						<ul class="sub">
 						<li><a href="/download/workerman">Workerman Linux多进程版本（稳定）</a></li>
-						<li><a href="/windows">Workerman跨平台多线程版本</a></li>
+						<li><a href="https://github.com/walkor/workerman-for-win">Workerman Windows版本</a></li>
 						<li><a href="/download/todpole">flappy bird 多人在线版</a></li>
 						<li><a href="/download/todpole">小蝌蚪聊天室</a></li>
 						<li><a href="/download/thrift">Thrift Rpc远程调用框架</a></li>

@@ -279,28 +279,25 @@
 		<h4>问答动态</h4>
 		<ul>
 			<li>
-				<a href="http://wenda.workerman.net/?/question/72">如何使用定时器功能，每间隔一段时间，给用户发送消息</a>
-			</li>
-			<li>
-				<a href="http://wenda.workerman.net/?/question/59">workerman的分布式问题</a>
-			</li>
-			<li>
-				<a href="http://wenda.workerman.net/?/question/45">把WORKERMAN作为游戏服务器端部署</a>
-			</li>
-			<li>
-				<a href="http://wenda.workerman.net/?/question/33">workerman支持mysql吗？</a>
-			</li>
-			<li>
 				<a href="http://wenda.workerman.net/?/question/29">workerman 工作流程，如进程，子进程，socket等关系，workerman是如何运作的？</a>
 			</li>
 			<li>
-			<a href="http://wenda.workerman.net/?/question/130">不在workerman环境下如果调用WORKERMAN的函数给用户推送数据</a>
+			<a href="http://doc3.workerman.net/advanced/push.html">其它项目如何利用workerman推送数据</a>
 			</li>
 		</ul>
 		<h4>
 			最近更新
 		</h4>
 		<ul>
+			<li>
+				<a href="https://github.com/walkor/shadowsocks-php">2015-04-19 shadowsocks php版本服务端 发布</a>
+			</li>
+			<li>
+				<a href="https://github.com/walkor/workerman-for-win">2015-04-07 workerman3.x windows版本 发布</a>
+			</li>
+			<li>
+				<a href="https://github.com/walkor/live-camera">2015-03-30 摄像头视频流直播demo发布</a>
+			</li>
 			<li>
 				<a href="https://github.com/walkor/live-ascii-camera">2015-03-25 摄像头视频流转ascii码流实时传输demo发布</a>
 			</li>
