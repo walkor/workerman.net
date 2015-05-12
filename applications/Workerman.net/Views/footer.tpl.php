@@ -17,7 +17,7 @@
 						</ul>
 					</div>
 					<div class="col-md-4 column">
-						<b>下载</b>
+						<b>相关连接</b>
 						<ul class="sub">
 						<li><a href="/download/workerman">Workerman Linux多进程版本（稳定）</a></li>
 						<li><a href="https://github.com/walkor/workerman-for-win">Workerman Windows版本</a></li>
@@ -28,6 +28,7 @@
 						<li><a href="/download/chat">PHP 聊天室</a></li>
 						<li><a href="/download/statistics">分布式统计监控系统</a></li>
 						<li><a href="http://doc.workerman.net" >Workerman2.x手册</a></li>
+						<li><a href="http://gatewayworker-doc.workerman.net/">GatewayWorker手册</a></li>
 						<li><a href="/download/manual">Workerman3.x离线手册（PDF）</a></li>
 						</ul>
 						<p class="gray">
