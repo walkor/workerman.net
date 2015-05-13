@@ -81,17 +81,36 @@
 			<p>PHP>=5.3 非Win系统&nbsp;&nbsp;<a href="/install">详细安装教程点击这里</a></p>
 			<h3>安装</h3>
 			<p>下载后解压即可</p>
-			<h3>启动停止</h3>
-			<p>启动：php start.php start -d</p>
-			<p>停止：php start.php  stop</p>
-			<p>重启：php start.php  restart</p>
-			<p>平滑重启：php start.php reload</p>
-			<p>查看状态：php start.php status</p>
 			<h3>
 			<a name="dev">服务端开发示例EchoServer</a>
 			</h3>
-			<h4>1、新建文件Applications/Test/start.php</h4>
-			<pre><code><span style="color: #000000"><span style="color: #0000BB">&lt;?php<br /></span><span style="color: #007700">use&nbsp;</span><span style="color: #0000BB">Workerman</span><span style="color: #007700">\</span><span style="color: #0000BB">Worker</span><span style="color: #007700">;<br /><br /></span><span style="color: #FF8000">//&nbsp;创建一个Worker监听2346端口，使用websocket协议通讯<br /></span><span style="color: #0000BB">$ws_worker&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">Worker</span><span style="color: #007700">(</span><span style="color: #DD0000">"websocket://0.0.0.0:2346"</span><span style="color: #007700">);<br /><br /></span><span style="color: #FF8000">//&nbsp;启动4个进程对外提供服务<br /></span><span style="color: #0000BB">$ws_worker</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">count&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">4</span><span style="color: #007700">;<br /><br /></span><span style="color: #FF8000">//&nbsp;当收到客户端发来的数据后返回hello&nbsp;$data给客户端<br /></span><span style="color: #0000BB">$ws_worker</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">onMessage&nbsp;</span><span style="color: #007700">=&nbsp;function(</span><span style="color: #0000BB">$connection</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$data</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;向客户端发送hello&nbsp;$data<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$connection</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">send</span><span style="color: #007700">(</span><span style="color: #DD0000">'hello&nbsp;'&nbsp;</span><span style="color: #007700">.&nbsp;</span><span style="color: #0000BB">$data</span><span style="color: #007700">);<br />};<br /><br /></span></span></code></pre>
+			<h4>1、新建文件start.php</h4>
+			<pre><code>
+		<?php
+		$codes = <<<EOF
+<?php
+use Workerman\Worker;
+require_once './Workerman/Autoloader.php';
+
+// 创建一个Worker监听2346端口，使用websocket协议通讯
+\$ws_worker = new Worker("websocket://0.0.0.0:2346");
+
+// 启动4个进程对外提供服务
+\$ws_worker->count = 4;
+
+// 当收到客户端发来的数据后返回hello \$data给客户端
+\$ws_worker->onMessage = function(\$connection, \$data)
+{
+    // 向客户端发送hello \$data
+    $connection->send('hello ' . \$data);
+};
+
+// 运行
+Worker::runAll();
+EOF;
+		 highlight_string();
+		?> 
+			</code></pre>
 			<h4>2、启动服务如下图：</h4>
 			<p><code>php start.php start -d</code></p>
 			<img src="/img/workerman-start.png" alt="workerman启动界面"/>

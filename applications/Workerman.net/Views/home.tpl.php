@@ -282,7 +282,10 @@
 				<a href="http://wenda.workerman.net/?/question/29">workerman 工作流程，如进程，子进程，socket等关系，workerman是如何运作的？</a>
 			</li>
 			<li>
-			<a href="http://doc3.workerman.net/advanced/push.html">其它项目如何利用workerman推送数据</a>
+			<a href="http://gatewayworker-doc.workerman.net/advanced/push.html">其它项目如何利用GatewayWorker推送数据</a>
+			</li>
+			<li>
+			<a href="http://wenda.workerman.net/?/question/358">workerman如何使用worker进程处理繁重的业务</a>
 			</li>
 		</ul>
 		<h4>

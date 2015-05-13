@@ -63,7 +63,7 @@
 			<h4>3、终端运行<code>apt-get install git</code>如图：</h4>
 			<img src="/img/apt-install-git.png" alt="apt-get 安装 git"/>
 			<h4>4、终端运行<code> cd /home/ && git clone https://github.com/walkor/workerman-flappy-bird</code></h4>
-			<h4>5、终端运行<code>cd workerman-flappy-bird &&  php start.php start -d</code></h4>
+			<h4>5、终端运行<code>cd workerman-flappy-bird &&  ./workerman/bin/workermand start</code></h4>
 			<h4>6、大功告成！浏览器访问 http://ip:8484 如图:（如果不知道自己服务器ip，则运行 <code>ip addr | grep eth1 | grep inet</code>查看）</h4>
 			<a href="http://flap.workerman.net" target="_blank"><img src="/img/workerman-flappy-bird.png" alt="php 多人在线flappy bird小游戏浏览器界面" /></a>
 			<br><br>

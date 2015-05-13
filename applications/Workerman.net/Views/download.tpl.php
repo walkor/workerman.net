@@ -78,20 +78,7 @@
 								安装
 						</td>
 						<td>
-								无需安装，下载下来即可使用
-						</td>
-				</tr>
-				<tr>
-						<td>
-								相关命令
-						</td>
-						<td>
-							<ul>
-								<li>启动: php start.php start -d</li>
-								<li>停止: php start.php stop</li>
-								<li>平滑重启: php start.php reload</li>
-								<li>查看状态: php start.php status</li>
-							</ul>
+								无需安装，下载下来即可使用。参考手册 <a href="http://doc3.workerman.net/">http://doc3.workerman.net/</a>
 						</td>
 				</tr>
 				<tr>
