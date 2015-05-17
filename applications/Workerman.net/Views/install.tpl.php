@@ -24,7 +24,7 @@
 	如果手动下载过了想要的workerman应用程序，则此步骤可以省略。</h5>
 	
 	<h5><b>总结：如果已经安装了php环境，则可以尝试（跳过第一、二、三、四步）手动下载workerman应用的zip文件解压后直接运行workerman应用程序（第五步），workerman运行界面会提示当前环境缺少的扩展或者组件，根据提示自行安装</b></h5>
-	<h3>编译安装workerman的php环境(以cnetos为例)</h3>
+	<h3>编译安装workerman的php环境(以centos为例)</h3>
 <h5>1、 yum install wget gcc git php-devel php-pear libevent-devel libxml2-devel cmake</h5>
 <h5>2、 wget  http://cn2.php.net/distributions/php-5.6.8.tar.gz              (下载php)</h5>
 <h5>3、 tar zxvf php-5.6.8.tar.gz</h5>
