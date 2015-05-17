@@ -1,7 +1,7 @@
 <?php
 namespace WorkerMan\Modules;
 
-function applications()
+function doc()
 {
     $html_title = '开发手册 | workerman PHP Socket 服务器框架';
     $html_nav = 'doc';
