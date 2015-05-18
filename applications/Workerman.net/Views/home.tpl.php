@@ -16,7 +16,7 @@
 			<div class="caption">
 				<h3>Workerman支持的特性</h3>
 				<ol>
-					<li>纯PHP开发，多进程支持</li>
+					<li>纯PHP开发，多进程支持，支持hhvm</li>
 					<li>支持TCP/UDP，单机可支持数百万以上TCP长连接</li>
 					<li>支持分布式，集群能支持数百万甚至更高的并发TCP连接</li>
 					<li>支持libevent事件触发网络库</li>
