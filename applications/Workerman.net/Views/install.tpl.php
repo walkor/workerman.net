@@ -1,6 +1,13 @@
 <div class="row clearfix">
 	<div class="col-md-9 column">
-	<h5>安装workerman（安装workerman的其它应用是类似的过程）</h5>
+	<h3>提示</h3>
+	<b>workerman只是一个代码包，如果php环境满足要求，下载后即可使用，实际上没有安装过程。
+	<br>workerman对php环境的要求是：
+	<br>1、php>=5.3.3，可以运行命令 php -v 查看版本
+	<br>2、Linux系统要求php安装了posix和pcntl扩展，可以运行php -m 查看是否安装了这两个扩展
+	<br>如果以上两个条件都满足，可以直接下载使用workerman
+	</b>
+	<h2>全新系统参考以下安装教程</h2>
 	<h3>centos系统安装教程</h3>
 	<h5>1、命令行运行<code>yum install php-cli php-process  git gcc  php-devel php-pear libevent-devel</code></h5>
 	<h5>2、命令行运行<code>pecl install channel://pecl.php.net/libevent-0.1.0</code> 提示libevent installation [autodetect]: 时按回车</h5>
@@ -29,7 +36,7 @@
 <h5>2、 wget  http://cn2.php.net/distributions/php-5.6.8.tar.gz              (下载php)</h5>
 <h5>3、 tar zxvf php-5.6.8.tar.gz</h5>
 <h5>4、 cd php-5.6.8</h5>
-<h5>5、 ./configure --enable-posix --enable-pcntl --enable-sockets</h5>
+<h5>5、 ./configure --enable-posix --enable-pcntl</h5>
 <h5>6、 make</h5>
 <h5>7、 make install</h5>
 <h5>8、 pecl install channel://pecl.php.net/libevent-0.1.0</h5>
