@@ -72,7 +72,7 @@
 							<a href="https://github.com/walkor/workerman/releases" target="_blank">更新日志</a>
 						</li>
 						<li<?php if($html_nav == 'windows')echo ' class="active" ';?>>
-							<a href="https://github.com/walkor/workerman-for-win" target="_blank">Windows版本</a>
+							<a href="/windows" target="_blank">Windows版本</a>
 						</li>
 					</ul>
 				</div>
