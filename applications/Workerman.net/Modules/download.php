@@ -172,6 +172,18 @@ function download_todpolezip()
 }
 
 /**
+ * 下载workerman-thrift-rpc.zip
+ */
+function download_browserquestzip()
+{
+    $download_browserquest_count_key = 'download_browserquest_count';
+    $count = \WorkerMan\Lib\Store::get($download_browserquest_count_key);
+    $count = $count >= 0 ? intval($count) : 0;
+    \WorkerMan\Lib\Store::set($download_browserquest_count_key, ++$count);
+    return _header('Location: https://github.com/walkor/browserquest-php/archive/master.zip');
+}
+
+/**
  * 下载workerman-flappy-bird页面
  */
 function download_flappybird()

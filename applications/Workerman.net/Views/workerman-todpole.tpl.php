@@ -34,6 +34,7 @@
 		<div class="col-md-5 column text-center">
 			<h3>其它应用</h3>
 			<div class="list-group">
+				<a class="list-group-item" href="/browserquest">BrowserQuest PHP版本</a>
 				<a class="list-group-item" href="/workerman-thrift">Thrift RPC 远程调用框架</a>
 				<a class="list-group-item" href="/workerman-jsonrpc">Json RPC远程调用框架</a>
 				<a class="list-group-item" href="/workerman-chat">聊天室框架</a>
@@ -41,7 +42,7 @@
 				<div class="list-group-item active">
 					PHP小蝌蚪实时交互游戏
 				</div>
-				<a class="list-group-item" href="/workerman-flappybird">flappy bird 多人在线版游戏&nbsp;&nbsp;<font style="font-size:12px;color:red;">new</font></a>
+				<a class="list-group-item" href="/workerman-flappybird">flappy bird 多人在线版游戏</a>
 			</div>
 			<div class="thumbnail">
 				<div class="caption-download">
