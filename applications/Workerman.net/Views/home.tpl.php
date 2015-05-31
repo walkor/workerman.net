@@ -161,8 +161,9 @@
 					<a target="_blank" href="https://github.com/walkor/live-camera">摄像头视频流实时传输</a>
 				</h4>
 				<p>
-				利用websocket将摄像头视频流实时传输workerman，workerman实时转发给其它浏览器展示
+				HTML5调用摄像头，利用websocket将摄像头视频流实时传输workerman，workerman实时转发给其它浏览器展示
 				<br>
+				<a target="_blank" class="btn" href="/camera">详情 »</a>
 				<a class="btn" target="_blank" href="https://github.com/walkor/live-camera">下载源代码 »</a>
 				</p>
 			</div>

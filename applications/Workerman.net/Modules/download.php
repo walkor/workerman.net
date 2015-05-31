@@ -224,7 +224,7 @@ function download_workermanwinzip()
 }
 
 /**
- * 下载workerman-for-win
+ * 下载camera视频直播程序
  */
 function download_camerazip()
 {

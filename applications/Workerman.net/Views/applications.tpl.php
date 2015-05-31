@@ -24,6 +24,7 @@
 				<p>
 				BrowserQuest是Mozilla发布的一款2D图形的MMO（大型多人在线）游戏，玩家可以聊天、打怪、升级、寻宝、获得成就。这里基于WorkerMan框架重写了BrowserQuest服务端nodejs部分，浏览器与后端同样是基于websocket协议通讯。
 				<br>
+				<a target="_blank" class="btn" href="/browserquest">详情 »</a>
 				<a class="btn" target="_blank" href="https://github.com/walkor/BrowserQuest-PHP">下载源代码 »</a>
 				</p>
 			</div>
@@ -86,8 +87,9 @@
 					<a target="_blank" href="https://github.com/walkor/live-camera">摄像头视频流实时传输</a>
 				</h4>
 				<p>
-				利用websocket将摄像头视频流实时传输workerman，workerman实时转发给其它浏览器展示
+				HTML5调用摄像头，利用websocket将摄像头视频流实时传输workerman，workerman实时转发给其它浏览器展示
 				<br>
+				<a target="_blank" class="btn" href="/camera">详情 »</a>
 				<a class="btn" target="_blank" href="https://github.com/walkor/live-camera">下载源代码 »</a>
 				</p>
 			</div>
