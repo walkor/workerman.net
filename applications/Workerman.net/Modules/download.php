@@ -224,6 +224,18 @@ function download_workermanwinzip()
 }
 
 /**
+ * 下载workerman-for-win
+ */
+function download_camerazip()
+{
+    $download_camera_count_key = 'download_camera_count';
+    $count = \WorkerMan\Lib\Store::get($download_camera_count_key);
+    $count = $count >= 0 ? intval($count) : 0;
+    \WorkerMan\Lib\Store::set($download_camera_count_key, ++$count);
+    return _header('Location: https://github.com/walkor/live-camera/archive/master.zip');
+}
+
+/**
  * 下载手册
  */
 function download_manual()
