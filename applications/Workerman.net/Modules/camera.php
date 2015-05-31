@@ -9,6 +9,6 @@ function camera()
     $download_camera_count_key = 'download_camera_count';
     $camera_download_count =  \WorkerMan\Lib\Store::get($download_camera_count_key);
     include NET_ROOT . '/Views/header.tpl.php';
-    include NET_ROOT . '/Views/workerman-camera.tpl.php';
+    include NET_ROOT . '/Views/camera.tpl.php';
     include NET_ROOT . '/Views/footer.tpl.php';
 }
