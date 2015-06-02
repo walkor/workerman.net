@@ -132,12 +132,10 @@
 				<div class="thumbnail">
 					<div class="caption">
 						<h3>
-							支持文件更新检测及自动加载
+							支持HHVM
 						</h3>
 						<p>
-							基于workerman开发应用程序过程中，我们希望在我们改动代码后能够立刻生效，则只要你开启配置中debug功能即可。
-							开启后workerman会有一个<b>单独的进程</b>轮询（因为PHP在Mac系统无法使用linux内核提供的Inotify机制，所以只好轮询）应用程序<b>真实</b>使用的所有PHP文件，
-							当文件有更新时，启动平滑重启，自动载入新的PHP文件。
+							支持HHVM，对于php性能有大幅度（一般为50%左右甚至更高）的提升，尤其是在cpu密集运算中。实际经过压力测试确实有明显性能提升效果。
 						</p>
 					</div>
 				</div>
@@ -248,18 +246,6 @@
 						</h3>
 						<p>
 							WorkerMan支持分布式部署，可以平滑的动态添加减少服务器而不影响服务质量。从而使得WorkerMan集群能够支持相当大的吞吐量或者并发TCP连接。
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="thumbnail">
-					<div class="caption">
-						<h3>
-							支持HHVM
-						</h3>
-						<p>
-							支持HHVM，对于php性能有大幅度（一般为50%左右甚至更高）的提升，尤其是在cpu密集运算中。实际经过压力测试确实有明显性能提升效果。
 						</p>
 					</div>
 				</div>
