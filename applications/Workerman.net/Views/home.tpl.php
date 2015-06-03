@@ -169,6 +169,18 @@
 			</div>
 		</div>
 		<div class="media">
+			 <a href="https://github.com/walkor/web-msg-sender" class="pull-left"><img src="/img/web-msg-sender.png" class="media-object" alt="web 消息推送示意图" /></a>
+			<div class="media-body">
+				<h4 class="media-heading">
+					<a target="_blank" href="https://github.com/walkor/web-msg-sender">Web消息推送系统</a>
+				</h4>
+				<p>基于websocket+workerman的web消息推送系统，能够通过网页实时推送消息给所有用户，支持各种浏览器（需要浏览器支持html5或者flash）
+				<br><a target="_blank" class="btn" href="/web-sender">详情 »</a>
+				<a class="btn" target="_blank" href="https://github.com/walkor/web-msg-sender">下载源代码 »</a>
+				</p>
+			</div>
+		</div>
+		<div class="media">
 			<a href="http://www.10ss.net/" class="pull-left" target="_blank"><img src="/img/yilianyun.png" class="media-object" alt='workerman 打印机' /></a>
 			<div class="media-body">
 				<h4 class="media-heading">
@@ -249,18 +261,6 @@
 				 <br><a target="_blank" class="btn" href="/workerman-jsonrpc">详情 »</a>
 				 <a class="btn" target="_blank" href="https://github.com/walkor/workerman-jsonrpc">下载源代码 »</a>
 				 </p>
-			</div>
-		</div>
-		<div class="media">
-			 <a href="https://github.com/walkor/web-msg-sender" class="pull-left"><img src="/img/web-msg-sender.png" class="media-object" alt="web 消息推送示意图" /></a>
-			<div class="media-body">
-				<h4 class="media-heading">
-					<a target="_blank" href="https://github.com/walkor/web-msg-sender">Web消息推送系统</a>
-				</h4>
-				<p>基于websocket+workerman的web消息推送系统，能够通过网页实时推送消息给所有用户，支持各种浏览器（需要浏览器支持html5或者flash）
-				<br><a target="_blank" class="btn" href="/web-sender">详情 »</a>
-				<a class="btn" target="_blank" href="https://github.com/walkor/web-msg-sender">下载源代码 »</a>
-				</p>
 			</div>
 		</div>
 		<div class="media">
