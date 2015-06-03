@@ -16,15 +16,15 @@
 				通过后台推送消息，消息可以即时推送到客户端，可以做到针对某个用户推送数据（需要开发）。服务端采用Workerman，支持Epoll，能够轻松支持上万并发连接，非轮询，性能极高。
 			</p>
 			<p class="f16">
-				web-msg-sender采用经典的gateway worker进程模型。gateway只负责网络IO，负责接受网页上发来的websocket连接，维持这些连接并。Gateway进程是全异步非阻塞的，每个gateway进程都可以同时接受上万客户端连接。
+				web-msg-sender采用经典的gateway worker进程模型。gateway只负责网络IO，负责接受网页上发来的websocket连接，维持这些连接。Gateway进程是全异步非阻塞的，每个gateway进程都可以同时接受上万客户端连接。
 				workers采用的是PHP开发者所熟悉的同步模型，开发者选择性的实现onConnect、onMessage、onClose回调皆可轻松扩展功能，开发扩展非常容易。
 			</p>
 			<p class="f16">
 				gateway worker之间是无状态的，gateway和workers可以分别部署在不同的物理机上，实现分布式部署，扩容和升级都非常方便。
 				业务接入只需要引入一段js即可实现推送，能做到与现有业务解耦，整合维护很简单。
 			</p>
-			<p class="f16"><a href="http://workerman.net:3333/" target="_blank">后台发消息的Demo页面：http://workerman.net:3333/</a></p>
-			<p class="f16"><a href="http://workerman.net/web-msg-sender.html" target="_blank">用户接受消息的Demo页面：http://workerman.net/web-msg-sender.html 可以多开几个</a></p>
+			<p class="f16">后台发消息的Demo页面：<a href="http://workerman.net:3333/" target="_blank">http://workerman.net:3333/</a></p>
+			<p class="f16">用户接受消息的Demo页面：<a href="http://workerman.net/web-msg-sender.html" target="_blank">http://workerman.net/web-msg-sender.html 可以多开几个</a></p>
 			<div class="bd-ad"><?php global $bd_ad_468_60; echo $bd_ad_468_60;?></div>
 		</div>
 		<div class="col-md-5 column text-center">
