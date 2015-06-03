@@ -16,8 +16,8 @@
 			</p>
 			<p class="f16">
 				workerman-chat采用gateway workers 进程模型。gateway只负责网络IO，全异步非阻塞，每个gateway进程都可以同时接受上万客户端连接。
-				workers采用的是PHP开发者所熟悉的同步模型，并提供了开发者基本的接口 onGatewayMessage、onMessage、onClose、sendToClient、sendToAll等方法。
-				开发者只要在onGatewayMessage、onMessage、onClose三个方法中添加上自己的业务逻辑即可，开发维护非常简单。
+				workers采用的是PHP开发者所熟悉的同步模型，并提供了开发者基本的接口 onConnect、onMessage、onClose、sendToClient、sendToAll等方法。
+				开发者只要在onConnect、onMessage、onClose三个方法中添加上自己的业务逻辑即可，开发维护非常简单。
 			</p>
 			<p class="f16">
 				由于采用的是gateway workers 进程模型，gateway和workers之间是无状态的，gateway和workers可以分别部署在不同的物理机上，所以扩容和升级都非常方便。
@@ -45,7 +45,9 @@
 		<div class="col-md-5 column text-center">
 			<h3>其它应用</h3>
 			<div class="list-group">
+				<a class="list-group-item" href="/web-sender">WEB消息推送框架</a>
 				<a class="list-group-item" href="/browserquest">BrowserQuest PHP版本</a>
+				<a class="list-group-item" href="/camera">摄像头视频直播</a>
 				<a class="list-group-item" href="/workerman-thrift">Thrift RPC 远程调用框架</a>
 				<a class="list-group-item" href="/workerman-jsonrpc">Json RPC远程调用框架</a>
 				<div class="list-group-item active">

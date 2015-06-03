@@ -23,15 +23,14 @@
 		<div class="col-md-5 column text-center">
 			<h3>其它应用</h3>
 			<div class="list-group">
+				<a class="list-group-item" href="/web-sender">WEB消息推送框架</a>
 				<a class="list-group-item" href="/browserquest">BrowserQuest PHP版本</a>
 				<div class="list-group-item active">
 					摄像头视频直播
 				</div>
 				<a class="list-group-item" href="/workerman-thrift">Thrift RPC 远程调用框架</a>
 				<a class="list-group-item" href="/workerman-jsonrpc">Json RPC远程调用框架</a>
-				<div class="list-group-item active">
-					聊天室框架
-				</div>
+				<a class="list-group-item" href="/workerman-chat">聊天室框架	</a>
 				<a class="list-group-item" href="/workerman-statistics">统计监控系统</a>
 				<a class="list-group-item" href="/workerman-todpole">PHP小蝌蚪实时交互游戏&nbsp;&nbsp;<font style="font-size:12px;color:red;">hot</font></a>
 				<a class="list-group-item" href="/workerman-flappybird">flappy bird 多人在线版游戏</a>

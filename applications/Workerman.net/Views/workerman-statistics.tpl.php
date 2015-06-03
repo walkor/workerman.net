@@ -38,7 +38,9 @@
 		<div class="col-md-5 column text-center">
 			<h3>其它应用</h3>
 			<div class="list-group">
+				<a class="list-group-item" href="/web-sender">WEB消息推送框架</a>
 				<a class="list-group-item" href="/browserquest">BrowserQuest PHP版本</a>
+				<a class="list-group-item" href="/camera">摄像头视频直播</a>
 				<a class="list-group-item" href="/workerman-thrift">Thrift RPC 远程调用框架</a>
 				<a class="list-group-item" href="/workerman-jsonrpc">Json RPC远程调用框架</a>
 				<a class="list-group-item" href="/workerman-chat">聊天室框架</a>
