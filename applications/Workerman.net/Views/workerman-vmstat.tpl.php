@@ -29,7 +29,7 @@
 				<div class="list-group-item active">
 					vmstat服务器状态监控服务
 				</div>
-				<a class="list-group-item" href="/sender">WEB消息推送框架</a>
+				<a class="list-group-item" href="/web-sender">WEB消息推送框架</a>
 				<a class="list-group-item" href="/browserquest">BrowserQuest PHP版本</a>
 				<a class="list-group-item" href="/camera">摄像头视频直播</a>
 				<a class="list-group-item" href="/workerman-thrift">Thrift RPC 远程调用框架</a>

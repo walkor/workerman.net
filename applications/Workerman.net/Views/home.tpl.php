@@ -137,6 +137,7 @@
 				<p>
 				一个通过浏览器查看vmstat命令的工具，以更友好的方式实时展示服务器cpu、内存、IO等情况
 				<br>
+				<a target="_blank" class="btn" href="/workerman-vmstat">详情 »</a>
 				<a class="btn" target="_blank" href="https://github.com/walkor/workerman-vmstat">下载源代码 »</a>
 				</p>
 			</div>
