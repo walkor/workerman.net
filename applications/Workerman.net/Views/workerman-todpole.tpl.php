@@ -34,6 +34,7 @@
 		<div class="col-md-5 column text-center">
 			<h3>其它应用</h3>
 			<div class="list-group">
+				<a class="list-group-item" href="/workerman-vmstat">vmstat服务器状态监控服务</a>
 				<a class="list-group-item" href="/web-sender">WEB消息推送框架</a>
 				<a class="list-group-item" href="/browserquest">BrowserQuest PHP版本</a>
 				<a class="list-group-item" href="/camera">摄像头视频直播</a>

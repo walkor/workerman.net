@@ -236,6 +236,18 @@ function download_camerazip()
 }
 
 /**
+ * 下载camera视频直播程序
+ */
+function download_vmstatzip()
+{
+    $download_vmstat_count_key = 'download_vmstat_count';
+    $count = \WorkerMan\Lib\Store::get($download_vmstat_count_key);
+    $count = $count >= 0 ? intval($count) : 0;
+    \WorkerMan\Lib\Store::set($download_vmstat_count_key, ++$count);
+    return _header('Location: https://github.com/walkor/workerman-vmstat/archive/master.zip');
+}
+
+/**
  * 下载手册
  */
 function download_manual()
