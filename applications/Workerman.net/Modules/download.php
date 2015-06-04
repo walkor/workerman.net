@@ -236,7 +236,7 @@ function download_camerazip()
 }
 
 /**
- * 下载camera视频直播程序
+ * 下载vmstat监控程序
  */
 function download_vmstatzip()
 {
@@ -245,6 +245,15 @@ function download_vmstatzip()
     $count = $count >= 0 ? intval($count) : 0;
     \WorkerMan\Lib\Store::set($download_vmstat_count_key, ++$count);
     return _header('Location: https://github.com/walkor/workerman-vmstat/archive/master.zip');
+}
+
+function download_sendertzip()
+{
+    $download_sender_count_key = 'download_sender_count';
+    $count = \WorkerMan\Lib\Store::get($download_sender_count_key);
+    $count = $count >= 0 ? intval($count) : 0;
+    \WorkerMan\Lib\Store::set($download_sender_count_key, ++$count);
+    return _header('Location: https://github.com/walkor/web-msg-sender/archive/master.zip');
 }
 
 /**
