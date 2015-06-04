@@ -247,7 +247,7 @@ function download_vmstatzip()
     return _header('Location: https://github.com/walkor/workerman-vmstat/archive/master.zip');
 }
 
-function download_sendertzip()
+function download_senderzip()
 {
     $download_sender_count_key = 'download_sender_count';
     $count = \WorkerMan\Lib\Store::get($download_sender_count_key);
