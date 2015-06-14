@@ -32,7 +32,7 @@
 	<h5>3、第四步是通过git下载workerman的应用程序，这里默认下载的是workerman的Demo程序，如果下载workerman的其他应用程序可以修改地址，例如下载workerman-chat则命令为git clone https://github.com/walkor/workerman-chat。
 	如果手动下载过了想要的workerman应用程序，则此步骤可以省略。</h5>
 	
-	<h5><b>总结：如果已经安装了php环境，则可以尝试（跳过第一、二、三、四步）手动下载workerman应用的zip文件解压后直接运行workerman应用程序（第五步），workerman运行界面会提示当前环境缺少的扩展或者组件，根据提示自行安装</b></h5>
+	<h5><b>总结：如果已经安装了php环境，则可以尝试（跳过第一、二、三、四步）,直接下载workerman使用</b></h5>
 	<h3>编译安装workerman的php环境(以centos为例)</h3>
 <h5>1、 yum install wget gcc git php-devel php-pear libevent-devel libxml2-devel cmake</h5>
 <h5>2、 wget  http://cn2.php.net/distributions/php-5.6.8.tar.gz              (下载php)</h5>
