@@ -72,7 +72,7 @@
 		<div class="col-md-12 column">
 			
 			<h3>
-				安装启动
+				linux环境安装启动
 			</h3>
 			<p>1、<a href="/download/chatzip" target="_blank">下载</a>workerman-chat，并解压缩到任意目录</p>
 			<p>2、启动workerman<code>php start.php start -d</code>如下图</p>
@@ -81,5 +81,8 @@
 			<img src="/img/workerman-chat-page.png" alt="php聊天室使用界面"/>
 			<h3>说明</h3>
 			<p>本聊天室业务逻辑非常简单，业务逻辑都在文件./Applications/Chat/Event.php中，开发者可以随意修改，比如增加表情等功能</p>
+			<h3>Windows系统安装教程</h3>
+			<h4>参见源码中README.md</h4>
+			<br>
 		</div>
 	</div>

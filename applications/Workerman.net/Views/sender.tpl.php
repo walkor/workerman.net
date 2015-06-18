@@ -56,13 +56,16 @@
 	<div class="row clearfix">
 		<div class="col-md-12 column">
 			<h3>
-				安装启动
+				Linux环境安装启动
 			</h3>
 			<p>1、<a href="/download/chatzip" target="_blank">下载</a>web-msg-sender，并解压缩到任意目录</p>
 			<p>2、启动workerman<code>php start.php start -d</code>如下图</p>
 			<img src="/img/sender-start.png" alt="WEB推送启动示意图"/>
 			<p>3、浏览器访问端口http://ip:3333或者http://域名:3333，例如<a href="http://workerman.net:3333/">http://workerman.net:3333</a>如图：</p>
 			<img src="/img/sender.png" alt="WEB推送使用界面"/>
+			<h3>Windows系统安装教程</h3>
+			<h4>参见源码中README.md</h4>
+			<br>
 			<h3>说明</h3>
 			<p>本框架逻辑非常简单，业务逻辑都在文件./Applications/Sender/Event.php中，开发者可以随意修改，例如针对某个用户推送消息</p>
 		</div>
