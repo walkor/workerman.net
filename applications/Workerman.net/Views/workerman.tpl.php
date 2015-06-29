@@ -112,7 +112,7 @@ require_once './Workerman/Autoloader.php';
 // 运行
 Worker::runAll();
 EOF;
-		 highlight_string();
+		 echo highlight_string($codes, true);
 		?> 
 			</code></pre>
 			<h4>2、启动服务如下图：</h4>
@@ -127,6 +127,7 @@ EOF;
 内存：8G
 cpu：Intel® Core™ i3-3220 CPU @ 3.30GHz × 4
 </code></pre>
+<code><pre>
 <?php 
 $code = '<?php
 use Workerman\Worker;
@@ -142,6 +143,7 @@ $worker->onMessage = function($connection, $data)
 Worker::runAll();';
 echo highlight_string($code, true);
 ?>
+</code></pre>
 <h4>业务逻辑</h4>
 <code>EchoServer</code>
 <h4>结果</h4>
