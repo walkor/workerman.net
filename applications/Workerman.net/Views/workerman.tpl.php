@@ -83,18 +83,18 @@
 		<div class="col-md-12 column">
 			<h3>环境</h3>
 			<p>PHP>=5.3 非Win系统&nbsp;&nbsp;<a href="/install">详细安装教程点击这里</a></p>
+                        <p>Windows <a href="/windows">用户点击这里</a></p>
 			<h3>安装</h3>
 			<p>下载后解压即可</p>
 			<h3>
-			<a name="dev">服务端开发示例EchoServer</a>
+			<a name="dev">服务端开发示例WebSocket Server</a>
 			</h3>
 			<h4>1、新建文件start.php</h4>
 			<pre><code>
 		<?php
-		$codes = <<<EOF
-<?php
+		$codes = '<?php
 use Workerman\Worker;
-require_once './Workerman/Autoloader.php';
+require_once \'./Workerman/Autoloader.php\';
 
 // 创建一个Worker监听2346端口，使用websocket协议通讯
 \$ws_worker = new Worker("websocket://0.0.0.0:2346");
@@ -102,20 +102,20 @@ require_once './Workerman/Autoloader.php';
 // 启动4个进程对外提供服务
 \$ws_worker->count = 4;
 
-// 当收到客户端发来的数据后返回hello \$data给客户端
-\$ws_worker->onMessage = function(\$connection, \$data)
+// 当收到客户端发来的数据后返回hello $data给客户端
+\$ws_worker->onMessage = function($connection, $data)
 {
-    // 向客户端发送hello \$data
-    $connection->send('hello ' . \$data);
+    // 向客户端发送hello $data
+    $connection->send(\'hello \' . $data);
 };
 
 // 运行
-Worker::runAll();
-EOF;
+Worker::runAll()';
+
 		 echo highlight_string($codes, true);
 		?> 
 			</code></pre>
-			<h4>2、启动服务如下图：</h4>
+			<h4>2、启动服务类似下图：</h4>
 			<p><code>php start.php start -d</code></p>
 			<img src="/img/workerman-start.png" alt="workerman启动界面"/>
 			<h4>3、查看workerman运行状态类似如下界面：</h4>
