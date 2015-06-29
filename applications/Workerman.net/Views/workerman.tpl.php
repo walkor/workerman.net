@@ -127,7 +127,21 @@ EOF;
 内存：8G
 cpu：Intel® Core™ i3-3220 CPU @ 3.30GHz × 4
 </code></pre>
-
+<?php 
+$code = '<?php
+use Workerman\Worker;
+$worker = new Worker(\'tcp://0.0.0.0:1234\');
+$worker->count=3;
+$worker->onMessage = function($connection, $data)
+{
+    // 长连接
+    $connection->send("HTTP/1.1 200 OK\r\nConnection: keep-alive\r\nServer: workerman\1.1.4\r\n\r\nhello");
+    // 短连接
+    //$connection->close("HTTP/1.1 200 OK\r\nServer: workerman\1.1.4\r\n\r\nhello");
+};
+Worker::runAll();';
+echo highlight_string($code, true);
+?>
 <h4>业务逻辑</h4>
 <code>EchoServer</code>
 <h4>结果</h4>
