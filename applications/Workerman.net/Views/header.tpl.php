@@ -78,8 +78,7 @@
 							<a href="/donate" >捐赠</a>
 						</li>
 					</ul>
-				</div>
-				<ul class="nav navbar-nav navbar-right">
+					<ul class="nav navbar-nav navbar-right">
 						<li class="dropdown">
 							 <a href="#" class="dropdown-toggle" data-toggle="dropdown">语言<strong class="caret"></strong></a>
 							<ul class="dropdown-menu">
@@ -91,5 +90,6 @@
 								</li>
 							</ul>
 						</li>
-				</ul>
+					</ul>
+				</div>
 			</nav>
