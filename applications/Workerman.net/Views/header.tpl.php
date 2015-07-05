@@ -79,4 +79,17 @@
 						</li>
 					</ul>
 				</div>
+				<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown">
+							 <a href="#" class="dropdown-toggle" data-toggle="dropdown">语言<strong class="caret"></strong></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="/">中文</a>
+								</li>
+								<li>
+									<a href="http://en.workerman.net">English</a>
+								</li>
+							</ul>
+						</li>
+				</ul>
 			</nav>
