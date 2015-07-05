@@ -8,15 +8,17 @@
 	</p>
 	<br>
 	<h4>您对Workerman的捐助将会被用于：</h4>
-	1、Workerman持续和深入的开发
-	2、社区及文档的持续建设与完善
-	3、主站、社区、示例的服务器租用
+	1、Workerman持续和深入的开发<br>
+	2、社区及文档的持续建设与完善<br>
+	3、更好的主站、社区及示例服务器<br>
+	4、建立人数更多的QQ群组<br>
 	<br>
 	<h4>支付宝捐赠：</h4>
 用手机扫描二位码支付<br>
 <img src="/img/alipay.png" alt='捐赠二维码图片'>
 <br>
-支付宝帐号：worker-man@qq.com
+支付宝帐号：worker-man@qq.com<br>
+感谢您对Workerman的支持!
 	</div>
 	<div class="col-md-3 column">
 	
