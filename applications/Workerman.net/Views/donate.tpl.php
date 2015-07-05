@@ -3,7 +3,7 @@
 	<h3>捐赠Workerman</h3>
 	<p>
 	Workerman是一款开源的高性能的PHP Socket框架，为广大PHP开发者解决了PHP难以开发socket网络应用的难题。
-	两年来Workerman团队一直为广大的开发者提供免费的咨询与帮助服务，
+	两年来Workerman团队一直为广大的开发者提供免费的咨询与帮助，
 	如果您对我们的成果表示认同并且觉得Workerman对您有所帮助我们愿意接受来自您的慷慨捐赠。
 	</p>
 	<br>
