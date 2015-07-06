@@ -64,6 +64,8 @@
 					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-chat&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-chat&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
 					<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-chat" target="_blank"><b>Fork on Github</b></a>&nbsp;
 					<a class="btn btn-default btn-large" href="/download/chatzip"><b>下载ZIP压缩文件</b> </a> <font class='f11 gray'>下载<?php echo $chat_download_count;?>次</font>
+					<h4>Windows版本下载</h4>
+					<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-chat-for-win"><b>下载ZIP压缩文件</b> </a> 
 				</div>
 			</div>
 		</div>
@@ -79,10 +81,12 @@
 			<img src="/img/workerman-chat-start.png" alt="php聊天室启动示意图"/>
 			<p>3、浏览器访问端口http://ip:55151或者http://域名:55151，例如<a href="http://chat.workerman.net">http://workerman.net:55151</a>如图：</p>
 			<img src="/img/workerman-chat-page.png" alt="php聊天室使用界面"/>
+			<h3>Windows版本安装启动</h3>
+			<p>1、参考<a href="/windows" >这里</a>设置PHP环境变量</p>
+			<p>2、双击start_for_win.bat运行</p>
+			<p>3、关闭终端停止</p>
 			<h3>说明</h3>
 			<p>本聊天室业务逻辑非常简单，业务逻辑都在文件./Applications/Chat/Event.php中，开发者可以随意修改，比如增加表情等功能</p>
-			<h3>Windows系统安装教程</h3>
-			<h4>参见源码中README.md</h4>
 			<br>
 		</div>
 	</div>
