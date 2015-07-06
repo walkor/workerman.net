@@ -19,7 +19,15 @@
 	<br><br>
 	<img src="/img/gif/install-php.gif" alt="PHP环境变量设置示意图">
 	<br><br>
-	<h3>cmd命令行中运行</h3>
+	<h3>与Linux版本异同</h3>
+	1、win版本count属性无效，全部为单进程
+	2、不支持start stop reload restart status命令
+	3、cmd命令行启动，后面可接多个文件，例如 php start_web.php start_gateway.php start_worker.php
+	4、每个启动文件只能实例化一个容器(Worker/WebServer/Gateway/BusinessWorker)，需要实例化多个容器时
+	需要拆成多个文件，例如 start_web.php start_gateway.php start_worker.php 分别初始化web gateway worker
+	<br><br>
+	<h3>启动与停止</h3>
+	cmd命令行中运行
 	<code>php your_file.php</code><br>
 	注意windows版本没有stop、reload、restart、status命令，启动时直接运行 php 文件.php 即可，停止运行按ctrl+c
 	<br><hr>
