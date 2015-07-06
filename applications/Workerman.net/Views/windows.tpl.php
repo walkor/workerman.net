@@ -20,11 +20,11 @@
 	<img src="/img/gif/install-php.gif" alt="PHP环境变量设置示意图">
 	<br><br>
 	<h3>与Linux版本异同</h3>
-	1、win版本count属性无效，全部为单进程
-	2、不支持start stop reload restart status命令
-	3、cmd命令行启动，后面可接多个文件，例如 php start_web.php start_gateway.php start_worker.php
-	4、每个启动文件只能实例化一个容器(Worker/WebServer/Gateway/BusinessWorker)，需要实例化多个容器时
-	需要拆成多个文件，例如 start_web.php start_gateway.php start_worker.php 分别初始化web gateway worker
+	1、win版本count属性无效，全部为单进程<br>
+	2、不支持start stop reload restart status命令<br>
+	3、cmd命令行启动，后面可接多个文件，例如 php start_web.php start_gateway.php start_worker.php<br>
+	4、每个启动文件只能实例化一个容器(Worker/WebServer/Gateway/BusinessWorker)，需要实例化多个容器时<br>
+	需要拆成多个文件，例如 start_web.php start_gateway.php start_worker.php 分别初始化web gateway worker<br>
 	<br><br>
 	<h3>启动与停止</h3>
 	cmd命令行中运行
