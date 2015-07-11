@@ -19,6 +19,8 @@
 <img src="/img/alipay.png" alt='捐赠二维码图片'>
 <br>
 感谢您对Workerman的支持!
+<br><br>
+<h3><a href="/donate_list">查看捐赠列表</a></h3>
 	</div>
 	<div class="col-md-3 column">
 	
