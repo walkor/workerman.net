@@ -364,7 +364,7 @@
 				 257046084
 			</li>
 		</ul>
-		<h3>捐赠墙</h3>
+		<h4><a href="/donate_list">捐赠墙</a></h4>
 		<table class="table">
 				<tbody>
 					<tr class="active">
