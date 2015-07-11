@@ -3,7 +3,7 @@
 	<h3>捐赠列表</h3>
 	<table class="table">
 				<tbody>
-					<tr>
+					<tr class="active">
 						<td>
 							10.0￥
 						</td>
