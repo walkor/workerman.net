@@ -365,7 +365,7 @@
 			</li>
 		</ul>
 		<br>
-		<h4><a href="/donate_list">捐赠墙</a></h4>
+		<h4><a href="/donate_list"><b>捐赠墙</b></a></h4>
 		<table class="table">
 				<tbody>
 					<tr class="active">
