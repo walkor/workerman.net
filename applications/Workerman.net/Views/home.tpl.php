@@ -393,16 +393,16 @@
 		<h4 class="btl">用户案例</h4>
 		<table class="anli">
 		<tr>
-		<td><a href="http://www.10ss.net/" target="blank"><img src="/img/logos/yilianyun.png" alt="易联云logo"></a></td>
-		<td><a href="http://www.myebox.cn/" target="blank"><img src="/img/logos/ebox.png" alt="ebox 易泊网 logo"></a></td>
-		<td><a href="http://www.mitaole.com/" target="blank"><img src="/img/logos/mitaole.png" alt="米淘乐logo"></a></td>
-		<td><a href="http://www.duowan.com/" target="blank"><img src="/img/logos/duowan.png" alt="多玩logo"></a></td>
-		<td><a href="http://www.yuchats.com/" target="blank"><img src="/img/logos/meng-mark.png" alt="萌mark logo"></a></td>
+		<td><img src="/img/logos/yilianyun.png" alt="易联云logo"></td>
+		<td><img src="/img/logos/ebox.png" alt="ebox 易泊网 logo"></td>
+		<td><img src="/img/logos/mitaole.png" alt="米淘乐logo"></td>
+		<td><img src="/img/logos/duowan.png" alt="多玩logo"></td>
+		<td><img src="/img/logos/meng-mark.png" alt="萌mark logo"></td>
 		</tr>
 		<tr>
-		<td><a href="http://www.ilongterm.com/" target="blank"><img src="/img/logos/ilongterm.png" alt="龙腾海外房产网logo"></a></td>
-		<td><a href="http://www.dbfen.com/" target="blank"><img src="/img/logos/dbfen.png" alt="多备份logo"></a></td>
-		<td><a href="http://www.zhibo8.com/" target="blank"><img src="/img/logos/zhibo8.png" alt="zhibo8 logo"></a></td>
+		<td><img src="/img/logos/ilongterm.png" alt="龙腾海外房产网logo"></td>
+		<td><img src="/img/logos/dbfen.png" alt="多备份logo"></td>
+		<td><img src="/img/logos/zhibo8.png" alt="zhibo8 logo"></td>
 		</tr>
 		</table>
 	</div>
