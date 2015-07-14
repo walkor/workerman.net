@@ -366,24 +366,7 @@
 		</ul>
 		<br>
 		<h4><a href="/donate_list"><b>捐赠墙</b></a></h4>
-		<table class="table">
-				<tbody>
-					<tr class="active">
-						<td>
-							10.0￥
-						</td>
-						<td>
-							欧阳锦龙
-						</td>
-						<td>
-							2015-07-12
-						</td>
-						<td>
-							支付宝
-						</td>
-					</tr>
-				</tbody>
-		</table>
+                <?php include __DIR__ . '/__donate_list.tpl.php';?>
 		<div class="bd-ad"><?php global $bd_ad_250_250; echo $bd_ad_250_250;?></div>
 	</div>
 </div>
