@@ -51,7 +51,9 @@ if(!function_exists($func))
 
 if(!function_exists($func))
 {
-    return _header('Location: /'.(!empty($_GET) ? '?'.http_build_query($_GET) : ''));
+    _header("HTTP/1.0 404 Not Found", true, 404);
+    echo "<html><head><title>404 Not Found</title></head><body><h3>404 Not Found</h3></body></html>";
+    //return _header('Location: /'.(!empty($_GET) ? '?'.http_build_query($_GET) : ''));
 }
 
 call_user_func_array($func, $tmp_arr);
