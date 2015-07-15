@@ -329,7 +329,7 @@
 				<a href="https://github.com/walkor/workerman-for-win">2014-06-10 workerman windows 平台多线程测试版本发布</a>
 			</li>
 			<li>
-				<a href="http://wenda.phpgame.cn">2014-06-07 workerman社区功能上线</a>
+				<a href="http://wenda.workerman.net">2014-06-07 workerman社区功能上线</a>
 			</li>
 			<li>
 				<a href="/workerman-todpole">2014-06-03 flappy bird 多人在线版发布</a>

@@ -3,10 +3,11 @@
 <head>
   <meta charset="utf-8">
   <title><?php if(isset($html_title))echo $html_title;else echo 'workerman 一个高性能的php socket 服务器框架';?></title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="<?php if(isset($html_desc))echo $html_desc;?>">
-  <meta name="author" content="">
-  <meta name="baidu_union_verify" content="e47ae1f37ead6981de7a997096347250">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="keywords" content="php socket框架,php异步,php websocket, php 长连接"/>
+  <meta name="description" content="<?php if(isset($html_desc))echo $html_desc;?>"/>
+  <meta name="author" content=""/>
+  <meta name="baidu_union_verify" content="e47ae1f37ead6981de7a997096347250"/>
   <meta name="baidu-site-verification" content="9J9K0y1Cxv" />
   <meta name="baidu-site-verification" content="jLodbXMgwV" />
 	<!--link rel="stylesheet/less" href="/less/bootstrap.less" type="text/css" /-->
