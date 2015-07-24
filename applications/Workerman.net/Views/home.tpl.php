@@ -4,11 +4,11 @@
 			什么是Workerman
 		</h2>
 		<p class="f14">
-			Workerman是一款<strong class="c4">纯PHP开发</strong>的<strong class="c4">开源</strong>的<strong class="c2">高性能</strong>的<strong class="c3">PHP socket 异步框架</strong>。被广泛的用于手机app、手游服务端、网络游戏服务器、聊天室服务器、硬件通讯服务器、智能家居、车联网、物联网等领域的开发。
+			Workerman是一款<strong class="c4">纯PHP开发</strong>的<strong class="c4">开源</strong>的<strong class="c2">高性能</strong>的<strong class="c3">PHP socket 服务器框架</strong>。被广泛的用于手机app、手游服务端、网络游戏服务器、聊天室服务器、硬件通讯服务器、智能家居、车联网、物联网等领域的开发。
 			支持TCP长连接，支持Websocket、HTTP等协议，支持自定义协议。基于workerman开发者可以更专注于业务逻辑开发，不必再为PHP Socket底层开发而烦恼。<a class="btn" target="_blank" href="/workerman">查看更多 »</a>
 		</p>
 		<table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table>
-		<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman" target="_blank"><b>Fork on Github</b></a>&nbsp;
+		<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman" target="_blank" rel="nofollow"><b>Fork on Github</b></a>&nbsp;
 		<a class="btn btn-default btn-large" href="/download/workermanzip"><b>下载ZIP压缩文件</b></a> <font class='f11 gray'>下载<?php echo $workerman_download_count;?>次</font>
 	</div>
 	<div class="col-md-5 column">
@@ -85,7 +85,7 @@
 				</h4>
 				<p>使用HTML5+WebSocket+Workerman实时推送技术开发的蝌蚪小游戏，游戏中玩家们可以实时互动，并且可以实时聊天，非常有趣。
 				<br><a target="_blank" class="btn" href="/workerman-todpole">详情 »</a>
-				<a class="btn" target="_blank" href="http://github.com/walkor/workerman-todpole">下载源代码 »</a>
+				<a class="btn" target="_blank" href="http://github.com/walkor/workerman-todpole" rel="nofollow">下载源代码 »</a>
 				</p>
 			</div>
 		</div>
@@ -99,7 +99,7 @@
 				BrowserQuest是Mozilla发布的一款2D图形的MMO（大型多人在线）游戏，玩家可以聊天、打怪、升级、寻宝、获得成就。这里基于WorkerMan框架重写了BrowserQuest服务端nodejs部分，浏览器与后端同样是基于websocket协议通讯。
 				<br>
 				<a target="_blank" class="btn" href="/browserquest">详情 »</a>
-				<a class="btn" target="_blank" href="https://github.com/walkor/BrowserQuest-PHP">下载源代码 »</a>
+				<a class="btn" target="_blank" href="https://github.com/walkor/BrowserQuest-PHP" rel="nofollow">下载源代码 »</a>
 				</p>
 			</div>
 		</div>
@@ -109,22 +109,22 @@
 				<h4 class="media-heading">
 					<a target="_blank" href="/workerman-chat">聊天室</a>
 				</h4>
-				<p>一个可扩展的基于Websocket协议的聊天室，服务端采用workerman作为Socket服务器框架，客户端支持多浏览器统一接口，支持浏览器原生Websocket同时支持Flash实现的Websocket。
+				<p>一个可扩展的php socket的聊天室，服务端采用workerman作为socket服务器框架，采用web-socket-js作为前端websocket库，支持多浏览器。可以用作app聊天室开发。
 				<br><a target="_blank" class="btn" href="/workerman-chat">详情 »</a>
-				<a class="btn" target="_blank" href="https://github.com/walkor/workerman-chat">下载源代码 »</a>
+				<a class="btn" target="_blank" href="https://github.com/walkor/workerman-chat" rel="nofollow">下载源代码 »</a>
 				</p>
 			</div>
 		</div>
 		<div class="media">
-			 <a href="https://github.com/walkor/shadowsocks-php" class="pull-left" target="_blank"><img src="/img/shadowsocks-php.png" class="media-object" alt="shadowsocks-php 截图"/></a>
+			 <a href="https://github.com/walkor/shadowsocks-php" class="pull-left" target="_blank" rel="nofollow"><img src="/img/shadowsocks-php.png" class="media-object" alt="shadowsocks-php 截图"/></a>
 			<div class="media-body">
 				<h4 class="media-heading">
-					<a target="_blank" href="https://github.com/walkor/shadowsocks-php">Shdowsocks-PHP</a>
+					<a target="_blank" href="https://github.com/walkor/shadowsocks-php" rel="nofollow">Shdowsocks-PHP</a>
 				</h4>
 				<p>
 				轻量级科学上网姿势，改变您的生活体验！
 				<br>
-				<a class="btn" target="_blank" href="https://github.com/walkor/shadowsocks-php">下载源代码 »</a>
+				<a class="btn" target="_blank" href="https://github.com/walkor/shadowsocks-php" rel="nofollow">下载源代码 »</a>
 				</p>
 			</div>
 		</div>
@@ -138,46 +138,46 @@
 				一个通过浏览器查看vmstat命令的工具，以更友好的方式实时展示服务器cpu、内存、IO等情况
 				<br>
 				<a target="_blank" class="btn" href="/workerman-vmstat">详情 »</a>
-				<a class="btn" target="_blank" href="https://github.com/walkor/workerman-vmstat">下载源代码 »</a>
+				<a class="btn" target="_blank" href="https://github.com/walkor/workerman-vmstat" rel="nofollow">下载源代码 »</a>
 				</p>
 			</div>
 		</div>
 		<div class="media">
-			 <a href="https://github.com/walkor/live-ascii-camera" class="pull-left" target="_blank"><img src="/img/live-ascii-camera.png" class="media-object" alt="ascii 视频流 截图"/></a>
+			 <a href="https://github.com/walkor/live-ascii-camera" class="pull-left" target="_blank" rel="nofollow"><img src="/img/live-ascii-camera.png" class="media-object" alt="ascii 视频流 截图"/></a>
 			<div class="media-body">
 				<h4 class="media-heading">
-					<a target="_blank" href="https://github.com/walkor/live-ascii-camera">摄像头 ascii 视频流实时传输</a>
+					<a target="_blank" href="https://github.com/walkor/live-ascii-camera" rel="nofollow">摄像头 ascii 视频流实时传输</a>
 				</h4>
 				<p>
-				利用HTML5将摄像头视频流转换成ascii码流，通过websocket实时传输workerman，workerman实时转发给其它浏览器展示
+				利用浏览器HTML5捕获摄像头视频并转换成ascii码流，通过websocket实时传输workerman，workerman实时转发给其它浏览器展示
 				<br>
-				<a class="btn" target="_blank" href="https://github.com/walkor/live-ascii-camera">下载源代码 »</a>
+				<a class="btn" target="_blank" href="https://github.com/walkor/live-ascii-camera" rel="nofollow">下载源代码 »</a>
 				</p>
 			</div>
 		</div>
 		<div class="media">
-			 <a href="https://github.com/walkor/live-camera" class="pull-left" target="_blank"><img src="/img/live-camera.jpg" class="media-object" alt="websocket 传输 视频流 截图"/></a>
+			 <a href="/camera" class="pull-left" target="_blank"><img src="/img/live-camera.jpg" class="media-object" alt="live-camera 截图"/></a>
 			<div class="media-body">
 				<h4 class="media-heading">
-					<a target="_blank" href="https://github.com/walkor/live-camera">摄像头视频流实时传输</a>
+					<a target="_blank" href="/camera">摄像头视频流实时传输</a>
 				</h4>
 				<p>
-				HTML5调用摄像头，利用websocket将摄像头视频流实时传输workerman，workerman实时转发给其它浏览器展示
+				网页HTML5调用摄像头，利用websocket将摄像头视频流实时传输给workerman，并实时转发给其它浏览器展示
 				<br>
 				<a target="_blank" class="btn" href="/camera">详情 »</a>
-				<a class="btn" target="_blank" href="https://github.com/walkor/live-camera">下载源代码 »</a>
+				<a class="btn" target="_blank" href="https://github.com/walkor/live-camera" rel="nofollow">下载源代码 »</a>
 				</p>
 			</div>
 		</div>
 		<div class="media">
-			 <a href="https://github.com/walkor/web-msg-sender" class="pull-left"><img src="/img/web-msg-sender.png" class="media-object" alt="web 消息推送示意图" /></a>
+			 <a href="/web-sender" class="pull-left"><img src="/img/web-msg-sender.png" class="media-object" alt="web 消息推送示意图" /></a>
 			<div class="media-body">
 				<h4 class="media-heading">
-					<a target="_blank" href="https://github.com/walkor/web-msg-sender">Web消息推送系统</a>
+					<a target="_blank" href="/web-sender">Web消息推送系统</a>
 				</h4>
-				<p>基于websocket+workerman的web消息推送系统，能够通过网页实时推送消息给所有用户，支持各种浏览器（需要浏览器支持html5或者flash）
+				<p>web消息推送系统，能够通过网页实时推送消息给所有用户，支持各种浏览器（需要浏览器支持html5或者flash）
 				<br><a target="_blank" class="btn" href="/web-sender">详情 »</a>
-				<a class="btn" target="_blank" href="https://github.com/walkor/web-msg-sender">下载源代码 »</a>
+				<a class="btn" target="_blank" href="https://github.com/walkor/web-msg-sender" rel="nofollow">下载源代码 »</a>
 				</p>
 			</div>
 		</div>
@@ -225,9 +225,9 @@
 				<h4 class="media-heading">
 					<a target="_blank" href="/workerman-flappybird">flappy bird 游戏多人在线版</a>
 				</h4>
-				<p>使用HTML5+WebSocket+Workerman实时推送技术开发的多人在线版flappy bird，游戏中你可以看到无数玩家同时控制小鸟前赴后继地向前送死的壮烈(搞笑)场面。
+				<p>多人在线版flappy bird，游戏中你可以看到无数玩家同时控制小鸟前赴后继地向前送死的壮烈(搞笑)场面。
 				<br><a target="_blank" class="btn" href="/workerman-flappybird">详情 »</a>
-				<a class="btn" target="_blank" href="https://github.com/walkor/workerman-flappy-bird">下载源代码 »</a>
+				<a class="btn" target="_blank" href="https://github.com/walkor/workerman-flappy-bird" rel="nofollow">下载源代码 »</a>
 				</p>
 			</div>
 		</div>
@@ -239,7 +239,7 @@
 				</h4>
 				 <p>Workerman和Thrift框架相结合，目的是解决异构系统与PHP通信的问题，使你的服务更方便的被其它语言调用。
 				 <br><a target="_blank" class="btn" href="/workerman-thrift">详情 »</a>
-				 <a class="btn" target="_blank" href="https://github.com/walkor/workerman-thrift">下载源代码 »</a>
+				 <a class="btn" target="_blank" href="https://github.com/walkor/workerman-thrift" rel="nofollow">下载源代码 »</a>
 				 </p>
 			</div>
 		</div>
@@ -251,7 +251,7 @@
 				</h4>
 				 <p>使用json数据格式通讯的远程调用系统，通讯格式简单明了，方便其它语言调用，并集成了监控模块。
 				 <br><a target="_blank" class="btn" href="/workerman-jsonrpc">详情 »</a>
-				 <a class="btn" target="_blank" href="https://github.com/walkor/workerman-jsonrpc">下载源代码 »</a>
+				 <a class="btn" target="_blank" href="https://github.com/walkor/workerman-jsonrpc" rel="nofollow">下载源代码 »</a>
 				 </p>
 			</div>
 		</div>
@@ -261,9 +261,9 @@
 				<h4 class="media-heading">
 					<a target="_blank" href="/workerman-statistics">分布式统计系统</a>
 				</h4>
-				<p>基于workerman socket框架开发的一款分布式统计监控系统，纯PHP开发、无需安装Mysql、Nginx、Apache等软件。
+				<p>基于php socket开发的一款分布式统计监控系统，udp数据上报，分布式统计，结果自动汇总展示。纯PHP开发、无需安装Mysql、Nginx、Apache等软件。
 				<br><a target="_blank" class="btn" href="/workerman-statistics">详情 »</a>
-				<a class="btn" target="_blank" href="https://github.com/walkor/workerman-statistics">下载源代码 »</a>
+				<a class="btn" target="_blank" href="https://github.com/walkor/workerman-statistics" rel="nofollow">下载源代码 »</a>
 				</p>
 			</div>
 		</div>
@@ -276,7 +276,7 @@
 				<a href="http://wenda.workerman.net/?/question/29">workerman 工作流程，如进程，子进程，socket等关系，workerman是如何运作的？</a>
 			</li>
 			<li>
-			<a href="http://gatewayworker-doc.workerman.net/advanced/push.html">其它项目如何利用GatewayWorker推送数据</a>
+			<a href="http://gatewayworker-doc.workerman.net/advanced/push.html" rel="nofollow">其它项目如何利用GatewayWorker推送数据</a>
 			</li>
 			<li>
 			<a href="http://wenda.workerman.net/?/question/358">workerman如何使用worker进程处理繁重的业务</a>
@@ -287,25 +287,25 @@
 		</h4>
 		<ul>
 			<li>
-				<a href="https://github.com/walkor/shadowsocks-php">2015-04-19 shadowsocks php版本服务端 发布</a>
+				<a href="https://github.com/walkor/shadowsocks-php" rel="nofollow">2015-04-19 shadowsocks php版本服务端 发布</a>
 			</li>
 			<li>
-				<a href="https://github.com/walkor/workerman-for-win">2015-04-07 workerman3.x windows版本 发布</a>
+				<a href="/windows">2015-04-07 workerman3.x windows版本 发布</a>
 			</li>
 			<li>
-				<a href="https://github.com/walkor/live-camera">2015-03-30 摄像头视频流直播demo发布</a>
+				<a href="/camera">2015-03-30 摄像头视频流直播demo发布</a>
 			</li>
 			<li>
-				<a href="https://github.com/walkor/live-ascii-camera">2015-03-25 摄像头视频流转ascii码流实时传输demo发布</a>
+				<a href="https://github.com/walkor/live-ascii-camera" rel="nofollow">2015-03-25 摄像头视频流转ascii码流实时传输demo发布</a>
 			</li>
 			<li>
-				<a href="https://github.com/walkor/workerman-vmstat">2015-03-23 web vmstat工具发布</a>
+				<a href="/workerman-vmstat" rel="nofollow">2015-03-23 web vmstat工具发布</a>
 			</li>
 			<li>
-				<a href="https://github.com/walkor/BrowserQuest-PHP">2015-03-22 workerman版本BrowserQuest 发布</a>
+				<a href="/browserquest">2015-03-22 workerman版本BrowserQuest 发布</a>
 			</li>
 			<li>
-				<a href="https://github.com/walkor/workerman">2015-01-31 workerman-3.0 发布</a>
+				<a href="https://github.com/walkor/workerman" rel="nofollow">2015-01-31 workerman-3.0 发布</a>
 			</li>
 			<li>
 				<a href="http://www.workerman.net/windows">2014-11-2 workerman-MT多线程版本发布，同时支持Linux Windows平台</a>
@@ -314,10 +314,10 @@
 				<a href="http://www.workerman.net/workerman-chat">2014-08-30 workerman-chat 聊天室支持分房间等功能</a>
 			</li>
 			<li>
-				<a href="http://doc.workerman.net/index.html">2014-07-23 workerman 手册发布</a>
+				<a href="http://doc.workerman.net/index.html" rel="nofollow">2014-07-23 workerman 手册发布</a>
 			</li>
 			<li>
-				<a href="https://github.com/walkor/workerman-for-win">2014-06-10 workerman windows 平台多线程测试版本发布</a>
+				<a href="/windows" rel="nofollow">2014-06-10 workerman windows 平台多线程测试版本发布</a>
 			</li>
 			<li>
 				<a href="http://wenda.workerman.net">2014-06-07 workerman社区功能上线</a>
@@ -329,7 +329,7 @@
 				<a href="/workerman-todpole">2014-05-01 PHP小蝌蚪游戏发布</a>
 			</li>
 			<li>
-				<a href="/workerman-chat">2014-03-25 基于Websocket的聊天室发布</a>
+				<a href="/workerman-chat">2014-03-25 聊天室发布</a>
 			</li>
 			<li>
 				<a href="/workerman-statistics">2014-01-03 分布式监控系统发布</a>
@@ -351,7 +351,7 @@
 			</li>
 			<li><b class="c2">发邮件至&nbsp;walkor@workerman.net</b></li>
 			<li>
-				<a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=37e8137d627745ff3f6d12238d0c36d94bd8a589d10d99082561550daeb43cfa"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="workerman技术交流群" title="workerman技术交流群"></a>
+				<a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=37e8137d627745ff3f6d12238d0c36d94bd8a589d10d99082561550daeb43cfa" rel="nofollow"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="workerman技术交流群" title="workerman技术交流群"></a>
 				 257046084
 			</li>
 		</ul>
