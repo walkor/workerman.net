@@ -95,40 +95,40 @@
 			</div>
 		</div>
 		<div class="media">
-			<a href="http://www.10ss.net/" class="pull-left" target="_blank"><img src="/img/yilianyun.png" class="media-object" alt='workerman 打印机' /></a>
+			<a href="http://www.10ss.net/" class="pull-left" target="_blank" rel="nofollow"><img src="/img/yilianyun.png" class="media-object" alt='workerman 打印机' /></a>
 			<div class="media-body">
 				<h4 class="media-heading">
-					<a target="_blank" href="http://www.10ss.net/">高扩展云打印机</a>
+					<a target="_blank" href="http://www.10ss.net/" rel="nofollow">高扩展云打印机</a>
 				</h4>
 				<p>
 				易联云平台是依托移动互联网的超远程打印解决方案，包含了设备管理中心、互联网API等模块。能够有效的实现易联云和应用之间的对接，帮助用户和开发者方便的使用超远程打印的构架和功能。
-				<a target="_blank" class="btn" href="http://www.10ss.net/">本应用来自www.10ss.net</a></p>
+				<a target="_blank" class="btn" href="http://www.10ss.net/" rel="nofollow">本应用来自www.10ss.net</a></p>
 			</div>
 		</div>
 		<div class="media">
-			<a href="http://www.yuchats.com/" class="pull-left" target="_blank"><img src="/img/app-ya.png" class="media-object" alt='workerman 手机im ya' /></a>
+			<a href="http://www.yuchats.com/" class="pull-left" target="_blank" rel="nofollow"><img src="/img/app-ya.png" class="media-object" alt='workerman 手机im ya' /></a>
 			<div class="media-body">
 				<h4 class="media-heading">
-					<a target="_blank" href="http://www.yuchats.com/">手机app萌Mark</a>
+					<a target="_blank" href="http://www.yuchats.com/" rel="nofollow">手机app萌Mark</a>
 				</h4>
 				<p>“萌Mark是什么？图片社交？漫画工具？表情工具？”<br>
 				<br>
 　　“no，都不是。”<br>
 　　<br>
 　　我眼里的萌Mark是什么？
-				<a target="_blank" class="btn" href="http://www.yuchats.com/">本应用由www.yuchats.com提供</a></p>
+				<a target="_blank" class="btn" href="http://www.yuchats.com/" rel="nofollow">本应用由www.yuchats.com提供</a></p>
 			</div>
 		</div>
 		<div class="media">
-			 <a href="http://j.yunleyou.com/" class="pull-left" target="_blank"><img src="/img/jinglingweiji.jpg" class="media-object" alt="精灵危机游戏 截图"/></a>
+			 <a href="http://j.yunleyou.com/" class="pull-left" target="_blank" rel="nofollow"><img src="/img/jinglingweiji.jpg" class="media-object" alt="精灵危机游戏 截图"/></a>
 			<div class="media-body">
 				<h4 class="media-heading">
-					<a target="_blank" href="http://j.yunleyou.com/">手机游戏 精灵危机</a>
+					<a target="_blank" href="http://j.yunleyou.com/" rel="nofollow">手机游戏 精灵危机</a>
 				</h4>
 				<p>
 				《精灵危机》的游戏带玩家进入一个由昆虫们组成的魔法大陆，他们依靠火，水，风，光，暗的魔法能量工作和生活。而有一天，能量的平衡被打破了，玩家必须帮助这个世界的人们，守卫能量的平衡，拯救这个岌岌可危的世界并揭露幕后的阴谋。
 				<br>
-				<a class="btn" target="_blank" href="http://j.yunleyou.com/">本游戏由云乐游平台提供 »</a>
+				<a class="btn" target="_blank" href="http://j.yunleyou.com/" rel="nofollow">本游戏由云乐游平台提供 »</a>
 				</p>
 			</div>
 		</div>
