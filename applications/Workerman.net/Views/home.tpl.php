@@ -4,7 +4,7 @@
 			什么是Workerman
 		</h2>
 		<p class="f14">
-			Workerman是一款<strong class="c4">纯PHP开发</strong>的<strong class="c4">开源</strong>的<strong class="c2">高性能</strong>的<strong class="c3">PHP socket 服务器框架</strong>。被广泛的用于手机app、手游服务端、网络游戏服务器、聊天室服务器、硬件通讯服务器、智能家居、车联网、物联网等领域的开发。
+			Workerman是一款<strong class="c4">纯PHP开发</strong>的<strong class="c4">开源</strong><strong class="c2">高性能</strong>的<strong class="c3">PHP socket 服务器框架</strong>。被广泛的用于手机app、手游服务端、网络游戏服务器、聊天室服务器、硬件通讯服务器、智能家居、车联网、物联网等领域的开发。
 			支持TCP长连接，支持Websocket、HTTP等协议，支持自定义协议。基于workerman开发者可以更专注于业务逻辑开发，不必再为PHP Socket底层开发而烦恼。<a class="btn" target="_blank" href="/workerman">查看更多 »</a>
 		</p>
 		<table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table>
@@ -39,7 +39,7 @@
 		<div class="thumbnail">
 			<div class="caption">
 				<h3>
-					<img src="/img/high-performance.png" alt="workerman高性能"/><strong>高性能</strong>
+					<img src="/img/high-performance.png" alt="高性能"/><strong>高性能</strong>
 				</h3>
 				<p>
 					基于高性能的libevent事件网络库，单机可支持百万的并发连接，长连接吞吐量高达36W/S。PHP数据库等对象可以常驻内存，减少解析编译及网络开销。
@@ -51,7 +51,7 @@
 		<div class="thumbnail">
 			<div class="caption">
 				<h3>
-					<img src="/img/high-availability.png" alt="workerman高可用性"/><strong>高可用</strong>
+					<img src="/img/high-availability.png" alt="高可用性"/><strong>高可用</strong>
 				</h3>
 				<p>
 					已被多家公司证实其高可用性，这些公司不乏日营业额过亿的电子商务公司用于服务器后台的开发，以及知名网游公司用于游戏后台的开发。
@@ -63,7 +63,7 @@
 		<div class="thumbnail">
 			<div class="caption">
 				<h3>
-					<img src="/img/so-easy.png" alt="workerman开发使用简单"/><strong>开发简单</strong>
+					<img src="/img/so-easy.png" alt="开发使用简单"/><strong>开发简单</strong>
 				</h3>
 				<p>
 					接口简单，并已经有很多成熟的网络应用，只要你会PHP，你就可以在这些应用的基础上快速的开发出自己的Socket应用服务。
@@ -83,7 +83,7 @@
 				<h4 class="media-heading">
 					<a target="_blank" href="http://kedou.workerman.net/">PHP小蝌蚪聊天室</a>&nbsp;&nbsp;<font style="font-size:12px;color:red;">置顶推荐</font>
 				</h4>
-				<p>使用HTML5+WebSocket+Workerman实时推送技术开发的蝌蚪小游戏，游戏中玩家们可以实时互动，并且可以实时聊天，非常有趣。
+				<p>使用HTML5+WebSocket+Workerman实时推送技术开发的小蝌蚪聊天室，聊天室中玩家们化身为小蝌蚪，可以自由游动，并且可以实时聊天，非常有趣。
 				<br><a target="_blank" class="btn" href="/workerman-todpole">详情 »</a>
 				<a class="btn" target="_blank" href="http://github.com/walkor/workerman-todpole" rel="nofollow">下载源代码 »</a>
 				</p>
@@ -109,7 +109,7 @@
 				<h4 class="media-heading">
 					<a target="_blank" href="/workerman-chat">聊天室</a>
 				</h4>
-				<p>一个可扩展的php socket的聊天室，服务端采用workerman作为socket服务器框架，采用web-socket-js作为前端websocket库，支持多浏览器。可以用作app聊天室开发。
+				<p>一个可扩展的php socket的聊天室，服务端采用workerman作为socket服务器框架，采用web-socket-js作为前端websocket库，支持多浏览器。同样可以用作app聊天室开发。
 				<br><a target="_blank" class="btn" href="/workerman-chat">详情 »</a>
 				<a class="btn" target="_blank" href="https://github.com/walkor/workerman-chat" rel="nofollow">下载源代码 »</a>
 				</p>
@@ -149,7 +149,7 @@
 					<a target="_blank" href="https://github.com/walkor/live-ascii-camera" rel="nofollow">摄像头 ascii 视频流实时传输</a>
 				</h4>
 				<p>
-				利用浏览器HTML5捕获摄像头视频并转换成ascii码流，通过websocket实时传输workerman，workerman实时转发给其它浏览器展示
+				利用浏览器HTML5捕获摄像头视频并转换成ascii码流，并实时转发给其它浏览器展示
 				<br>
 				<a class="btn" target="_blank" href="https://github.com/walkor/live-ascii-camera" rel="nofollow">下载源代码 »</a>
 				</p>
@@ -198,11 +198,8 @@
 				<h4 class="media-heading">
 					<a target="_blank" href="http://www.yuchats.com/" rel="nofollow">手机app萌Mark</a>
 				</h4>
-				<p>“萌Mark是什么？图片社交？漫画工具？表情工具？”<br>
-				<br>
-　　“no，都不是。”<br>
-　　<br>
-　　我眼里的萌Mark是什么？
+				<p>
+				一款有趣的手机app，后端基于workerman开发
 				<a target="_blank" class="btn" href="http://www.yuchats.com/" rel="nofollow">本应用由www.yuchats.com提供</a></p>
 			</div>
 		</div>
@@ -213,7 +210,7 @@
 					<a target="_blank" href="http://j.yunleyou.com/" rel="nofollow">手机游戏 精灵危机</a>
 				</h4>
 				<p>
-				《精灵危机》的游戏带玩家进入一个由昆虫们组成的魔法大陆，他们依靠火，水，风，光，暗的魔法能量工作和生活。而有一天，能量的平衡被打破了，玩家必须帮助这个世界的人们，守卫能量的平衡，拯救这个岌岌可危的世界并揭露幕后的阴谋。
+				基于workerman开发的一款手机游戏
 				<br>
 				<a class="btn" target="_blank" href="http://j.yunleyou.com/" rel="nofollow">本游戏由云乐游平台提供 »</a>
 				</p>
@@ -279,7 +276,7 @@
 			<a href="http://gatewayworker-doc.workerman.net/advanced/push.html" rel="nofollow">其它项目如何利用GatewayWorker推送数据</a>
 			</li>
 			<li>
-			<a href="http://wenda.workerman.net/?/question/358">workerman如何使用worker进程处理繁重的业务</a>
+			<a href="http://wenda.workerman.net/?/question/358">如何使用worker进程处理繁重的业务</a>
 			</li>
 		</ul>
 		<h4>
@@ -302,7 +299,7 @@
 				<a href="/workerman-vmstat" rel="nofollow">2015-03-23 web vmstat工具发布</a>
 			</li>
 			<li>
-				<a href="/browserquest">2015-03-22 workerman版本BrowserQuest 发布</a>
+				<a href="/browserquest">2015-03-22 BrowserQuest php版本发布</a>
 			</li>
 			<li>
 				<a href="https://github.com/walkor/workerman" rel="nofollow">2015-01-31 workerman-3.0 发布</a>
@@ -311,7 +308,7 @@
 				<a href="http://www.workerman.net/windows">2014-11-2 workerman-MT多线程版本发布，同时支持Linux Windows平台</a>
 			</li>
 			<li>
-				<a href="http://www.workerman.net/workerman-chat">2014-08-30 workerman-chat 聊天室支持分房间等功能</a>
+				<a href="http://www.workerman.net/workerman-chat">2014-08-30 聊天室支持分房间等功能</a>
 			</li>
 			<li>
 				<a href="http://doc.workerman.net/index.html" rel="nofollow">2014-07-23 workerman 手册发布</a>
@@ -320,7 +317,7 @@
 				<a href="/windows" rel="nofollow">2014-06-10 workerman windows 平台多线程测试版本发布</a>
 			</li>
 			<li>
-				<a href="http://wenda.workerman.net">2014-06-07 workerman社区功能上线</a>
+				<a href="http://wenda.workerman.net">2014-06-07 社区功能上线</a>
 			</li>
 			<li>
 				<a href="/workerman-todpole">2014-06-03 flappy bird 多人在线版发布</a>
