@@ -78,7 +78,7 @@
 			相关应用
 		</h3>
 		<div class="media">
-			 <a href="http://kedou.workerman.net/" class="pull-left" target="_blank" ><img src="/img/workerman-todpole.png" class="media-object" alt='PHP 小蝌蚪游戏界面' /></a>
+			 <a href="http://kedou.workerman.net/" class="pull-left" target="_blank" ><img src="/img/workerman-todpole.png" class="media-object" alt='PHP 小蝌蚪聊天室界面' /></a>
 			<div class="media-body">
 				<h4 class="media-heading">
 					<a target="_blank" href="http://kedou.workerman.net/">PHP小蝌蚪聊天室</a>&nbsp;&nbsp;<font style="font-size:12px;color:red;">置顶推荐</font>
@@ -104,7 +104,7 @@
 			</div>
 		</div>
 		<div class="media">
-			 <a href="/workerman-chat" class="pull-left"><img src="/img/workerman-chat.png" class="media-object" alt="PHP聊天室示意图"/></a>
+			 <a href="/workerman-chat" class="pull-left"><img src="/img/workerman-chat.png" class="media-object" alt="PHP聊天室"/></a>
 			<div class="media-body">
 				<h4 class="media-heading">
 					<a target="_blank" href="/workerman-chat">聊天室</a>
@@ -116,7 +116,7 @@
 			</div>
 		</div>
 		<div class="media">
-			 <a href="https://github.com/walkor/shadowsocks-php" class="pull-left" target="_blank" rel="nofollow"><img src="/img/shadowsocks-php.png" class="media-object" alt="shadowsocks-php 截图"/></a>
+			 <a href="https://github.com/walkor/shadowsocks-php" class="pull-left" target="_blank" rel="nofollow"><img src="/img/shadowsocks-php.png" class="media-object" alt="shadowsocks-php"/></a>
 			<div class="media-body">
 				<h4 class="media-heading">
 					<a target="_blank" href="https://github.com/walkor/shadowsocks-php" rel="nofollow">Shdowsocks-PHP</a>
@@ -129,7 +129,7 @@
 			</div>
 		</div>
 		<div class="media">
-			 <a href="http://vmstat.workerman.net/" class="pull-left" target="_blank"><img src="/img/workerman-vmstat.png" class="media-object" alt="web vmstat 截图"/></a>
+			 <a href="http://vmstat.workerman.net/" class="pull-left" target="_blank"><img src="/img/workerman-vmstat.png" class="media-object" alt="web vmstat"/></a>
 			<div class="media-body">
 				<h4 class="media-heading">
 					<a target="_blank" href="http://vmstat.workerman.net/">Web VMStat 监控</a>
@@ -143,7 +143,7 @@
 			</div>
 		</div>
 		<div class="media">
-			 <a href="https://github.com/walkor/live-ascii-camera" class="pull-left" target="_blank" rel="nofollow"><img src="/img/live-ascii-camera.png" class="media-object" alt="ascii 视频流 截图"/></a>
+			 <a href="https://github.com/walkor/live-ascii-camera" class="pull-left" target="_blank" rel="nofollow"><img src="/img/live-ascii-camera.png" class="media-object" alt="ascii 视频流 "/></a>
 			<div class="media-body">
 				<h4 class="media-heading">
 					<a target="_blank" href="https://github.com/walkor/live-ascii-camera" rel="nofollow">摄像头 ascii 视频流实时传输</a>
@@ -193,7 +193,7 @@
 			</div>
 		</div>
 		<div class="media">
-			<a href="http://www.yuchats.com/" class="pull-left" target="_blank" rel="nofollow"><img src="/img/app-ya.png" class="media-object" alt='workerman 手机im ya' /></a>
+			<a href="http://www.yuchats.com/" class="pull-left" target="_blank" rel="nofollow"><img src="/img/app-ya.png" class="media-object" alt='php服务端手机app 萌mark' /></a>
 			<div class="media-body">
 				<h4 class="media-heading">
 					<a target="_blank" href="http://www.yuchats.com/" rel="nofollow">手机app萌Mark</a>
@@ -204,7 +204,7 @@
 			</div>
 		</div>
 		<div class="media">
-			 <a href="http://j.yunleyou.com/" class="pull-left" target="_blank" rel="nofollow"><img src="/img/jinglingweiji.jpg" class="media-object" alt="精灵危机游戏 截图"/></a>
+			 <a href="http://j.yunleyou.com/" class="pull-left" target="_blank" rel="nofollow"><img src="/img/jinglingweiji.jpg" class="media-object" alt="workerman手机游戏"/></a>
 			<div class="media-body">
 				<h4 class="media-heading">
 					<a target="_blank" href="http://j.yunleyou.com/" rel="nofollow">手机游戏 精灵危机</a>
@@ -217,7 +217,7 @@
 			</div>
 		</div>
 		<div class="media">
-			 <a href="/workerman-flappybird" class="pull-left"><img src="/img/workerman-flappy-bird.png" class="media-object" alt='workerman多人在线 flappy bird 游戏截图' /></a>
+			 <a href="/workerman-flappybird" class="pull-left"><img src="/img/workerman-flappy-bird.png" class="media-object" alt='多人在线 flappy bird ' /></a>
 			<div class="media-body">
 				<h4 class="media-heading">
 					<a target="_blank" href="/workerman-flappybird">flappy bird 游戏多人在线版</a>
@@ -229,7 +229,7 @@
 			</div>
 		</div>
 		<div class="media">
-			 <a href="/workerman-thrift" class="pull-left"><img src="/img/workerman-thrift.png" class="media-object" alt="workerman thrift RPC模块关系示意图"/></a>
+			 <a href="/workerman-thrift" class="pull-left"><img src="/img/workerman-thrift.png" class="media-object" alt="php thrift RPC模块关系示意图"/></a>
 			<div class="media-body">
 				<h4 class="media-heading">
 					<a target="_blank" href="/workerman-thrift">Thrift RPC远程调用框架</a>
@@ -241,7 +241,7 @@
 			</div>
 		</div>
 		<div class="media">
-			 <a href="/workerman-jsonrpc" class="pull-left"><img src="/img/workerman-json-rpc.png" class="media-object" alt="workerman json RPC模块关系示意图"/></a>
+			 <a href="/workerman-jsonrpc" class="pull-left"><img src="/img/workerman-json-rpc.png" class="media-object" alt="PHP json RPC模块关系示意图"/></a>
 			<div class="media-body">
 				<h4 class="media-heading">
 					<a target="_blank" href="/workerman-jsonrpc">json RPC远程调用框架</a>
@@ -270,7 +270,7 @@
 		<h4>问答动态</h4>
 		<ul>
 			<li>
-				<a href="http://wenda.workerman.net/?/question/29">workerman 工作流程，如进程，子进程，socket等关系，workerman是如何运作的？</a>
+				<a href="http://wenda.workerman.net/?/question/29">workerman 工作流程，如进程，子进程，socket等关系，是如何运作的？</a>
 			</li>
 			<li>
 			<a href="http://gatewayworker-doc.workerman.net/advanced/push.html" rel="nofollow">其它项目如何利用GatewayWorker推送数据</a>
