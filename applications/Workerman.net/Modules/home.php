@@ -5,7 +5,7 @@ function home()
 {
     if(!empty($_GET))
     {
-        return _header('Location: /');
+        return _header('Location: /', 301);
     }
     $html_title = 'workerman 一个高性能的PHP Socket 服务器框架';
     $html_keywords = 'workerman, php socket';
