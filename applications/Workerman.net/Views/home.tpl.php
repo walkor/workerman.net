@@ -75,7 +75,7 @@
 <div class="row clearfix">
 	<div class="col-md-7 column">
 		<h3>
-			相关应用
+			workerman相关应用
 		</h3>
 		<div class="media">
 			 <a href="http://kedou.workerman.net/" class="pull-left" target="_blank" ><img src="/img/workerman-todpole.png" class="media-object" alt='PHP 小蝌蚪聊天室界面' /></a>
@@ -149,7 +149,7 @@
 					<a target="_blank" href="https://github.com/walkor/live-ascii-camera" rel="nofollow">摄像头 ascii 视频流实时传输</a>
 				</h4>
 				<p>
-				利用浏览器HTML5捕获摄像头视频并转换成ascii码流，并实时转发给其它浏览器展示
+				利用浏览器HTML5捕获摄像头视频并转换成ascii码流，并利用workerman实时转发给其它浏览器展示
 				<br>
 				<a class="btn" target="_blank" href="https://github.com/walkor/live-ascii-camera" rel="nofollow">下载源代码 »</a>
 				</p>
