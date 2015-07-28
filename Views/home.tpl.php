@@ -129,10 +129,10 @@
 			</div>
 		</div>
 		<div class="media">
-			 <a href="http://vmstat.workerman.net/" class="pull-left" target="_blank"><img src="/img/workerman-vmstat.png" class="media-object" alt="web vmstat"/></a>
+			 <a href="/demos/vmstat/" class="pull-left" target="_blank"><img src="/img/workerman-vmstat.png" class="media-object" alt="web vmstat"/></a>
 			<div class="media-body">
 				<h4 class="media-heading">
-					<a target="_blank" href="http://vmstat.workerman.net/">Web VMStat 监控</a>
+					<a target="_blank" href="/demos/vmstat/">Web VMStat 监控</a>
 				</h4>
 				<p>
 				一个通过浏览器查看vmstat命令的工具，以更友好的方式实时展示服务器cpu、内存、IO等情况
