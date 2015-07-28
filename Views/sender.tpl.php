@@ -23,8 +23,8 @@
 				gateway worker之间是无状态的，gateway和workers可以分别部署在不同的物理机上，实现分布式部署，扩容和升级都非常方便。
 				业务接入只需要引入一段js即可实现推送，能做到与现有业务解耦，整合维护很简单。
 			</p>
-			<p class="f16">后台发消息的Demo页面：<a href="http://workerman.net:3333/" target="_blank">http://workerman.net:3333/</a></p>
-			<p class="f16">用户接受消息的Demo页面：<a href="http://workerman.net/web-msg-sender.html" target="_blank">http://workerman.net/web-msg-sender.html 可以多开几个</a></p>
+			<p class="f16">后台发消息的Demo页面：<a href="http://workerman.net:3333/" target="_blank" rel="nofollow">http://workerman.net:3333/</a></p>
+			<p class="f16">用户接受消息的Demo页面：<a href="http://workerman.net/web-msg-sender.html" target="_blank" rel="nofollow">http://workerman.net/web-msg-sender.html 可以多开几个</a></p>
 			<div class="bd-ad"><?php global $bd_ad_468_60; echo $bd_ad_468_60;?></div>
 		</div>
 		<div class="col-md-5 column text-center">
