@@ -20,7 +20,7 @@
 				网页通过websocket接收到数据后，在页面上绘图展示。
 			</p>
 			
-			<p class="f16">线上Demo示例：<a href="http://vmstat.workerman.net/" target="_blank">http://vmstat.workerman.net/</a></p>
+			<p class="f16">线上Demo示例：<a href="/demos/vmstat/" target="_blank">http://www.workerman.net/demos/vmstat/</a></p>
 			<div class="bd-ad"><?php global $bd_ad_468_60; echo $bd_ad_468_60;?></div>
 		</div>
 		<div class="col-md-5 column text-center">
