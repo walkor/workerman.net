@@ -16,10 +16,10 @@
 			</div>
 		</div>
 		<div class="media">
-			 <a href="http://browserquest.workerman.net/" class="pull-left" target="_blank"><img src="/img/browserquest.jpg" class="media-object" alt="browserquest php 版本示意图"/></a>
+			 <a href="/demos/browserquest/" class="pull-left" target="_blank"><img src="/img/browserquest.jpg" class="media-object" alt="browserquest php 版本示意图"/></a>
 			<div class="media-body">
 				<h4 class="media-heading">
-					<a target="_blank" href="http://browserquest.workerman.net/">BrowserQuest WorkerMan版本</a>
+					<a target="_blank" href="/demos/browserquest/">BrowserQuest WorkerMan版本</a>
 				</h4>
 				<p>
 				BrowserQuest是Mozilla发布的一款2D图形的MMO（大型多人在线）游戏，玩家可以聊天、打怪、升级、寻宝、获得成就。这里基于WorkerMan框架重写了BrowserQuest服务端nodejs部分，浏览器与后端同样是基于websocket协议通讯。
