@@ -88,7 +88,7 @@
 									<a href="/">中文</a>
 								</li>
 								<li>
-									<a href="http://en.workerman.net">English</a>
+									<a href="/en/">English</a>
 								</li>
 							</ul>
 						</li>
