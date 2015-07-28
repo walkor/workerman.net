@@ -311,7 +311,7 @@
 				<a href="http://www.workerman.net/workerman-chat">2014-08-30 聊天室支持分房间等功能</a>
 			</li>
 			<li>
-				<a href="http://doc.workerman.net/index.html" rel="nofollow">2014-07-23 workerman 手册发布</a>
+				<a href="http://doc3.workerman.net/index.html" rel="nofollow">2014-07-23 workerman 手册发布</a>
 			</li>
 			<li>
 				<a href="/windows" rel="nofollow">2014-06-10 workerman windows 平台多线程测试版本发布</a>
