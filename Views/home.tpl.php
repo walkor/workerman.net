@@ -284,61 +284,61 @@
 		</h4>
 		<ul>
 			<li>
-				<a href="https://github.com/walkor/shadowsocks-php" rel="nofollow">2015-04-19 shadowsocks php版本服务端 发布</a>
+				2015-04-19 shadowsocks php版本服务端 发布
 			</li>
 			<li>
-				<a href="/windows">2015-04-07 workerman3.x windows版本 发布</a>
+				2015-04-07 workerman3.x windows版本 发布
 			</li>
 			<li>
-				<a href="/camera">2015-03-30 摄像头视频流直播demo发布</a>
+				2015-03-30 摄像头视频流直播demo发布
 			</li>
 			<li>
-				<a href="https://github.com/walkor/live-ascii-camera" rel="nofollow">2015-03-25 摄像头视频流转ascii码流实时传输demo发布</a>
+				2015-03-25 摄像头视频流转ascii码流实时传输demo发布
 			</li>
 			<li>
-				<a href="/workerman-vmstat" rel="nofollow">2015-03-23 web vmstat工具发布</a>
+				2015-03-23 web vmstat工具发布
 			</li>
 			<li>
-				<a href="/browserquest">2015-03-22 BrowserQuest php版本发布</a>
+				2015-03-22 BrowserQuest php版本发布
 			</li>
 			<li>
-				<a href="https://github.com/walkor/workerman" rel="nofollow">2015-01-31 workerman-3.0 发布</a>
+				2015-01-31 workerman-3.0 发布
 			</li>
 			<li>
-				<a href="http://www.workerman.net/windows">2014-11-2 workerman-MT多线程版本发布，同时支持Linux Windows平台</a>
+				2014-11-2 workerman-MT多线程版本发布，同时支持Linux Windows平台
 			</li>
 			<li>
-				<a href="http://www.workerman.net/workerman-chat">2014-08-30 聊天室支持分房间等功能</a>
+				2014-08-30 聊天室支持分房间等功能
 			</li>
 			<li>
-				<a href="http://doc3.workerman.net/index.html" rel="nofollow">2014-07-23 workerman 手册发布</a>
+				2014-07-23 workerman 手册发布
 			</li>
 			<li>
-				<a href="/windows" rel="nofollow">2014-06-10 workerman windows 平台多线程测试版本发布</a>
+				2014-06-10 workerman windows 平台多线程测试版本发布
 			</li>
 			<li>
-				<a href="http://wenda.workerman.net">2014-06-07 社区功能上线</a>
+				2014-06-07 社区功能上线
 			</li>
 			<li>
-				<a href="/workerman-todpole">2014-06-03 flappy bird 多人在线版发布</a>
+				2014-06-03 flappy bird 多人在线版发布
 			</li>
 		    <li>
-				<a href="/workerman-todpole">2014-05-01 PHP小蝌蚪游戏发布</a>
+				2014-05-01 PHP小蝌蚪游戏发布
 			</li>
 			<li>
-				<a href="/workerman-chat">2014-03-25 聊天室发布</a>
+				2014-03-25 聊天室发布
 			</li>
 			<li>
-				<a href="/workerman-statistics">2014-01-03 分布式监控系统发布</a>
+				2014-01-03 分布式监控系统发布
 			</li>
 			<li>
-				<a href="/workerman-thrift">2013-10-05 Thrif Rpc框架发布</a>
+				2013-10-05 Thrif Rpc框架发布
 			</li>
 			<li>
-				<a href="/workerman-jsonrpc">2013-09-11 Json Rpc 框架发布</a>
+				2013-09-11 Json Rpc 框架发布
 			</li>
 			<li>
-				<a href="/workerman">2013-03-01 workerman 框架发布</a>
+				2013-03-01 workerman 框架发布
 			</li>
 		</ul>
 		<h4 class="btl">更多帮助</h4>
