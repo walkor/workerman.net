@@ -33,6 +33,7 @@
 	如果手动下载过了想要的workerman应用程序，则此步骤可以省略。</h5>
 	
 	<h5><b>总结：如果已经安装了php环境，则可以尝试（跳过第一、二、三、四步）,直接下载workerman使用</b></h5>
+	<br>
 	<h3>编译安装workerman的php环境(以centos为例)</h3>
 <h5>1、 yum install wget gcc git php-devel php-pear libevent-devel libxml2-devel cmake</h5>
 <h5>2、 wget  http://cn2.php.net/distributions/php-5.6.8.tar.gz              (下载php)</h5>
