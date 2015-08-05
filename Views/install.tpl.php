@@ -5,7 +5,7 @@
 	<br>workerman对php环境的要求是：
 	<br>1、php>=5.3.3，可以运行命令 php -v 查看版本
 	<br>2、Linux系统要求php安装了posix和pcntl扩展
-	<br>可以在命令中运行 <code>curl -Ss http://www.workerman.net/check.php | php</code>检测本地环境是否满足workerman。
+	<br>可以在命令中运行 <code>curl -Ss http://www.workerman.net/check.php | php </code> 检测本地环境是否满足workerman。
 	</b>
 	<h2>全新系统参考以下安装教程</h2>
 	<h3>centos系统安装教程</h3>
