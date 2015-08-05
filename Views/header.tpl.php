@@ -10,6 +10,7 @@
   <meta name="baidu_union_verify" content="e47ae1f37ead6981de7a997096347250"/>
   <meta name="baidu-site-verification" content="9J9K0y1Cxv" />
   <meta name="baidu-site-verification" content="jLodbXMgwV" />
+  <meta name="baidu-site-verification" content="NXCSEiOPBB" />
 	<!--link rel="stylesheet/less" href="/less/bootstrap.less" type="text/css" /-->
 	<!--link rel="stylesheet/less" href="/less/responsive.less" type="text/css" /-->
 	<!--script src="/js/less-1.3.3.min.js"></script-->
