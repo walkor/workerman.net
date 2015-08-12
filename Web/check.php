@@ -25,7 +25,7 @@ function check($val)
     }
     else
     {
-       return "\033[31;40mS [fail] \033[0m\n";
+       return "\033[31;40m [fail] \033[0m\n";
     }
 }
 
