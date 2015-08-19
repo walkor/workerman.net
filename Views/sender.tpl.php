@@ -58,7 +58,7 @@
 			<h3>
 				Linux环境安装启动
 			</h3>
-			<p>1、<a href="/download/chatzip" target="_blank">下载</a>web-msg-sender，并解压缩到任意目录</p>
+			<p>1、<a href="/download/senderzip" target="_blank">下载</a>web-msg-sender，并解压缩到任意目录</p>
 			<p>2、启动workerman<code>php start.php start -d</code>如下图</p>
 			<img src="/img/sender-start.png" alt="WEB推送启动示意图"/>
 			<p>3、浏览器访问端口http://ip:3333或者http://域名:3333，例如<a href="http://workerman.net:3333/">http://workerman.net:3333</a>如图：</p>
