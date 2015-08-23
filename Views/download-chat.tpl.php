@@ -74,7 +74,8 @@
 						</td>
 						<td>
 								<p>你可以从下面的github地址中获得源码</p>
-								<p><p><a href="https://github.com/walkor/workerman-chat" target="_blank">https://github.com/walkor/workerman-chat</a></p></p>
+								<p>Linux版本：<a href="https://github.com/walkor/workerman-chat" target="_blank">https://github.com/walkor/workerman-chat</a></p>
+								<p>windows版本：<a href="https://github.com/walkor/workerman-chat-for-win" target="_blank">https://github.com/walkor/workerman-chat-for-win</a></p>
 						</td>
 				</tr>
 				<tr>

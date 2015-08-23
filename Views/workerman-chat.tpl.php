@@ -83,9 +83,10 @@
 			<p>3、浏览器访问端口http://ip:55151或者http://域名:55151，例如<a href="http://chat.workerman.net">http://workerman.net:55151</a>如图：</p>
 			<img src="/img/workerman-chat-page.png" alt="php聊天室使用界面"/>
 			<h3>Windows版本安装启动</h3>
-			<p>1、参考<a href="/windows" >这里</a>设置PHP环境变量</p>
-			<p>2、双击start_for_win.bat运行</p>
-			<p>3、关闭终端停止</p>
+			<p>1、点击<a href="https://github.com/walkor/workerman-chat-for-win/archive/master.zip">这里</a>下载windows版本聊天室源码</p>
+			<p>2、参考<a href="/windows" >这里</a>设置PHP环境变量</p>
+			<p>3、双击start_for_win.bat运行</p>
+			<p>4、关闭终端停止</p>
 			<h3>说明</h3>
 			<p>本聊天室业务逻辑非常简单，业务逻辑都在文件./Applications/Chat/Event.php中，开发者可以随意修改，比如增加表情等功能</p>
 			<br>
