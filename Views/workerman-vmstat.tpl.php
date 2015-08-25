@@ -54,7 +54,7 @@
 			<h3>
 				安装启动
 			</h3>
-			<p>1、<a href="/download/chatzip" target="_blank">下载</a>workerman-vmstat，并解压缩到任意目录</p>
+			<p>1、<a href="/download/vmstatzip" target="_blank">下载</a>workerman-vmstat，并解压缩到任意目录</p>
 			<p>2、启动workerman<code>php start.php start -d</code>如下图</p>
 			<img src="/img/vmstat-start.png" alt="vmstat服务启动示意图"/>
 			<p>3、浏览器访问端口http://ip:55555或者http://域名:55555，例如<a href="http://workerman.net:55555">http://workerman.net:55555</a>如图：</p>
