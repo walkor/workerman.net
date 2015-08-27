@@ -353,8 +353,9 @@
 			</li>
 		</ul>
 		<br>
-		<h4><a href="/donate_list"><b>捐赠墙</b></a></h4>
+		<h4><a href="/donate_list"><b>捐赠墙</b></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/donate" style="font-size:14px"><b>我要捐赠</b></a></h4>
                 <?php include __DIR__ . '/__donate_list.tpl.php';?>
+                <a href="/donate" style="font-size:16px"><b>我要捐赠</b></a>
 		<div class="bd-ad"><?php global $bd_ad_250_250; echo $bd_ad_250_250;?></div>
 	</div>
 </div>
