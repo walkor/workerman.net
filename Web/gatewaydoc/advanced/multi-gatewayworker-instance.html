@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="6.3" data-basepath=".." data-revision="1440692134761">
+    <div class="book"  data-level="6.3" data-basepath=".." data-revision="1440694000317">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -607,13 +607,13 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_869">
+                    <section class="normal" id="section-gitbook_920">
                     
                         <h1 id="-gatewayworker-">运行多个gatewayWorker实例</h1>
 <p>可以运行多个GatewayWorker实例，步骤如下。</p>
 <p>假设已有Applications/Chat，想增加Applications/Chat2</p>
 <p>1、拷贝Applications/Chat到Applications/Chat2</p>
-<p>2、更改Applications/Chat2/Config/Store.php中的配置，使之与Applications/Chat2/Config/Store.php不同</p>
+<p>2、更改Applications/Chat2/Config/Store.php中的配置，使之与Applications/Chat/Config/Store.php不同</p>
 <pre><code class="lang-php"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Store</span>
 {</span>
     <span class="hljs-keyword">const</span> DRIVER_FILE = <span class="hljs-number">1</span>;
@@ -631,7 +631,7 @@
 <span class="hljs-comment">// 这里改成workerman-chat2</span>
 Store::<span class="hljs-variable">$storePath</span> = sys_get_temp_dir().<span class="hljs-string">'/workerman-chat2/'</span>;
 </code></pre>
-<p>默认配置为$driver = self::DRIVER_FILE，则需要改数据文件存储路径。</p>
+<p>如果配置为$driver = self::DRIVER_FILE，则需要改数据文件存储路径Store::$storePath。</p>
 <p>如果$driver = self::DRIVER_MC或者DRIVER_REDIS,</p>
 <p>则不需要更改Store::$storePath，但要更改</p>
 <pre><code class="lang-php"><span class="hljs-comment">// 这里改为了6380</span>
@@ -643,7 +643,7 @@ Store::<span class="hljs-variable">$storePath</span> = sys_get_temp_dir().<span 
     <span class="hljs-string">'127.0.0.1:6380'</span>,
 );
 </code></pre>
-<p><strong>注意</strong>：memcache或者redis要启动相应端口(这里是6380)的服务端的实例</p>
+<p>并且memcache或者redis要启动相应端口(这里是6380)的服务端的实例</p>
 <p>3、更改Applications/Chat2/start_gateway.php中的属性，包括gateway端口、gateway-&gt;startPort、和进程名如下</p>
 <pre><code class="lang-php"><span class="hljs-comment">// 更改gateway进程端口，这里改为8282</span>
 <span class="hljs-variable">$gateway</span> = <span class="hljs-keyword">new</span> Gateway(<span class="hljs-string">"Websocket://0.0.0.0:8282"</span>);
