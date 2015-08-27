@@ -1,9 +1,10 @@
 CACHE MANIFEST
-# Revision 1437895284783
+# Revision 1440692134763
 
 CACHE:
 index.html
 advanced/README.html
+advanced/multi-gatewayworker-instance.html
 advanced/multi-protocols.html
 advanced/push.html
 appendices/README.html
