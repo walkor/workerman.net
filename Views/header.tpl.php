@@ -80,6 +80,9 @@
 						<li<?php if($html_nav == 'donate')echo ' class="active" ';?>>
 							<a href="/donate" >捐赠</a>
 						</li>
+						<li<?php if($html_nav == 'jobs')echo ' class="active" ';?>>
+							<a href="/jobs" >招聘</a>
+						</li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<li class="dropdown">

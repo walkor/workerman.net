@@ -221,3 +221,12 @@ p
 .anli>tbody>tr>td{
 	padding:8px;
 }
+.job_hr{
+height:220px;padding:20px;font-size:14px;text-align: left;border:none;
+}
+.job_hr>img{
+    float:left;width:180px;height:180px;margin-right:20px;
+}
+.job_desc{
+    border:none;border-radius: 0;background: none;
+}
