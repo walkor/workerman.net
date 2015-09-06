@@ -375,6 +375,8 @@
 		<td><img src="/img/logos/ilongterm.png" alt="龙腾海外房产网logo"></td>
 		<td><img src="/img/logos/dbfen.png" alt="多备份logo"></td>
 		<td><img src="/img/logos/zhibo8.png" alt="zhibo8 logo"></td>
+		<td><img src="/img/logos/meilishuo.png"></td>
+		<td><img src="/img/logos/zhenpin.png" ></td>
 		</tr>
 		</table>
 	</div>
