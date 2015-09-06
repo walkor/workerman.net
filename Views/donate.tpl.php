@@ -25,7 +25,7 @@
     <h4>微信捐赠：</h4>
 微信帐号：workermand<br>
 可以用手机扫描二位码支付<br>
-<img src="/img/tenpay.png">
+<img src="/img/tenpay.jpg">
     </td>
     </tr>
     </table>
