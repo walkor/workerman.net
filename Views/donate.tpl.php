@@ -13,10 +13,22 @@
 	3、租用更好的主站、社区及示例服务器<br>
 	4、建立人数更多的Workerman QQ群组<br>
 	<br>
+	<table>
+	<tr>
+	<td>
 	<h4>支付宝捐赠：</h4>
 支付宝帐号：worker-man@qq.com<br>
 可以用手机扫描二位码支付<br>
-<img src="/img/alipay.png" alt='捐赠二维码图片'>
+<img src="/img/alipay.png">
+    </td>
+    <td>
+    <h4>微信捐赠：</h4>
+微信帐号：workermand<br>
+可以用手机扫描二位码支付<br>
+<img src="/img/tenpay.png">
+    </td>
+    </tr>
+    </table>
 <br>
 感谢您对Workerman的支持!
 <br><br>
