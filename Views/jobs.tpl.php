@@ -6,11 +6,9 @@
 <div class="row clearfix">
 		<div class="col-md-7 column">
 			<h2>
-				PHP开发工程师
+				聚美优品 PHP开发工程师
 			</h2>
 			<pre class="job_desc">
-公司：聚美优品
-			
 职位月薪：面谈               工作地点：成都
 发布日期：2015-09-07         工作性质：全职
 
@@ -39,11 +37,9 @@
 <div class="row clearfix">
 		<div class="col-md-7 column">
 			<h2>
-				PHP开发工程师
+				微云车联 PHP开发工程师
 			</h2>
 			<pre class="job_desc">
-公司：微云车联
-
 职位月薪：10k~25k元/月       工作地点：北京
 发布日期：2015-08-29         工作性质：全职
 
