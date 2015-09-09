@@ -116,6 +116,20 @@
 			</div>
 		</div>
 		<div class="media">
+			 <a href="https://github.com/walkor/phpsocket.io" class="pull-left" target="_blank" rel="nofollow"><img src="/img/socket.io.png" class="media-object" /></a>
+			<div class="media-body">
+				<h4 class="media-heading">
+					<a target="_blank" href="https://github.com/walkor/phpsocket.io" rel="nofollow">phpsocket.io - socket.io php版本</a>
+				</h4>
+				<p>
+				socket.io PHP版本。Socket.IO 实现了实时双向的基于事件的通讯机制。旨在让各种浏览器及移动设备上实现实时app功能，模糊化各种传输机制。
+				<br>
+				<a class="btn" target="_blank" href="https://github.com/walkor/phpsocket.io" rel="nofollow">下载源代码 »</a>
+				<a class="btn" target="_blank" href="/demos/phpsocketio-chat" rel="nofollow"> domo »</a>
+				</p>
+			</div>
+		</div>
+		<div class="media">
 			 <a href="https://github.com/walkor/shadowsocks-php" class="pull-left" target="_blank" rel="nofollow"><img src="/img/shadowsocks-php.png" class="media-object" alt="shadowsocks-php"/></a>
 			<div class="media-body">
 				<h4 class="media-heading">
@@ -365,16 +379,16 @@
 		<h4 class="btl">用户案例</h4>
 		<table class="anli">
 		<tr>
-		<td><img src="/img/logos/yilianyun.png" alt="易联云logo"></td>
-		<td><img src="/img/logos/ebox.png" alt="ebox 易泊网 logo"></td>
-		<td><img src="/img/logos/mitaole.png" alt="米淘乐logo"></td>
-		<td><img src="/img/logos/duowan.png" alt="多玩logo"></td>
-		<td><img src="/img/logos/meng-mark.png" alt="萌mark logo"></td>
+		<td><img src="/img/logos/yilianyun.png"></td>
+		<td><img src="/img/logos/ebox.png"></td>
+		<td><img src="/img/logos/mitaole.png"></td>
+		<td><img src="/img/logos/duowan.png"></td>
+		<td><img src="/img/logos/meng-mark.png"></td>
 		</tr>
 		<tr>
-		<td><img src="/img/logos/ilongterm.png" alt="龙腾海外房产网logo"></td>
-		<td><img src="/img/logos/dbfen.png" alt="多备份logo"></td>
-		<td><img src="/img/logos/zhibo8.png" alt="zhibo8 logo"></td>
+		<td><img src="/img/logos/ilongterm.png"></td>
+		<td><img src="/img/logos/dbfen.png"></td>
+		<td><img src="/img/logos/zhibo8.png"></td>
 		<td><img src="/img/logos/meilishuo.png"></td>
 		<td><img src="/img/logos/zhenpin.png" ></td>
 		</tr>
