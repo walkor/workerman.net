@@ -52,5 +52,10 @@
 		</div>
 	</div>
 </div>
+<script src="/demos/phpsocketio-chat/socket.io-client/socket.io.js"></script>
+<script>
+var socket = io('http://'+document.domain+':2020');
+socket.on('new message', function(data){console && console.log(data);});
+</script>>
 </body>
 </html>
