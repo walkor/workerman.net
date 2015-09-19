@@ -56,6 +56,7 @@
 <script>
 var socket = io('http://'+document.domain+':2020');
 socket.on('new message', function(data){console && console.log(data);});
+socket.on('connect', function(){socket.emit('add user', 'bot');});
 </script>>
 </body>
 </html>
