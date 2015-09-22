@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="5.6" data-basepath=".." data-revision="1441551139679">
+    <div class="book"  data-level="5.6" data-basepath=".." data-revision="1442936335867">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -607,14 +607,15 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_30">
+                    <section class="normal" id="section-gitbook_1075">
                     
                         <h1 id="router">router</h1>
 <h2 id="-">说明:</h2>
 <pre><code class="lang-php">callback Gateway::<span class="hljs-variable">$router</span>
 </code></pre>
-<p>设置Gateway到BusinessWorker路由规则。不设置默认是Gateway随机选择一个BusinessWorker进程把数据转发给它处理。</p>
+<p>设置Gateway到BusinessWorker路由规则。默认规则是Gateway随机选择一个BusinessWorker进程，然后把当前client_id与这个BusinessWorker进程<strong>绑定</strong>，以后这个client_id的所有数据（onConnect/onMessage/onClose事件）都交给这个绑定的BusinessWorker进程处理。</p>
 <p>期待该回调函数从所有到BusinessWorker进程的连接对象中选择一个并返回。</p>
+<p><strong>注意：之前（2015-09-22日之前）版本GatewayWorker默认使用的是随机路由，也就是同一个client_id的onConnect/onMessage/onClose事件可能被不同的BusinessWorker进程处理，带来的问题是onConnect/onMessage/onClose可能并发执行甚至乱序执行。并且与client_id有绑定关系的定时器时可能与预期效果不符，例如同一个client_id的onConnect回调设置的定时器在onClose中可能无法删除，原因是两个回调可能被分配到不同的BusinessWorker进程处理。以上问题在2015-09-22之后的版本通过绑定路由得到了修正，开发者到原来应用下载地址重新下载自己的应用即可得到最新的GatewayWorker版本</strong></p>
 <h2 id="-">回调函数的参数</h2>
 <p><code>$worker_connnections</code></p>
 <p>是一个数组，里面包含了所有到BusinessWorker进程的连接对象。数组的key为BusinessWorker进程的通讯地址，格式为ip:port。回调函数最终将返回该数组中一个连接对象。</p>
@@ -632,25 +633,44 @@
 <h2 id="-1-">范例 1 随机路由</h2>
 <pre><code class="lang-php"><span class="hljs-keyword">use</span> \<span class="hljs-title">GatewayWorker</span>\<span class="hljs-title">Gateway</span>;
 <span class="hljs-variable">$gateway</span> = <span class="hljs-keyword">new</span> Gateway(<span class="hljs-string">"Websocket://0.0.0.0:8585"</span>);
-<span class="hljs-comment">// 随机路由</span>
+<span class="hljs-comment">// ===随机路由开始===</span>
 <span class="hljs-variable">$gateway</span>-&gt;router = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(<span class="hljs-variable">$worker_connections</span>, <span class="hljs-variable">$client_connection</span>, <span class="hljs-variable">$cmd</span>, <span class="hljs-variable">$buffer</span>)</span>
 {</span>
     <span class="hljs-keyword">return</span> <span class="hljs-variable">$worker_connections</span>[array_rand(<span class="hljs-variable">$worker_connections</span>)];
 };
-...
+<span class="hljs-comment">// ===随机路由结束===</span>
+
+<span class="hljs-variable">$gateway</span>-&gt;name = ...
+...省略...
+
+<span class="hljs-keyword">if</span>(!defined(<span class="hljs-string">'GLOBAL_START'</span>))
+{
+    Worker::runAll();
+}
 </code></pre>
 <h2 id="-2-">范例 2 随机绑定</h2>
 <pre><code class="lang-php"><span class="hljs-keyword">use</span> \<span class="hljs-title">GatewayWorker</span>\<span class="hljs-title">Gateway</span>;
 <span class="hljs-variable">$gateway</span> = <span class="hljs-keyword">new</span> Gateway(<span class="hljs-string">"Websocket://0.0.0.0:8585"</span>);
+
+<span class="hljs-comment">// ==绑定==</span>
 <span class="hljs-variable">$gateway</span>-&gt;router = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(<span class="hljs-variable">$worker_connections</span>, <span class="hljs-variable">$client_connection</span>, <span class="hljs-variable">$cmd</span>, <span class="hljs-variable">$buffer</span>)</span>
 {</span>
+    <span class="hljs-comment">// 临时给客户端连接设置一个businessworker属性，用来存储该连接被绑定的worker进程</span>
     <span class="hljs-keyword">if</span>(!<span class="hljs-keyword">isset</span>(<span class="hljs-variable">$client_connection</span>-&gt;businessworker))
     {
         <span class="hljs-variable">$client_connection</span>-&gt;businessworker = <span class="hljs-variable">$worker_connections</span>[array_rand(<span class="hljs-variable">$worker_connections</span>)];
     }
     <span class="hljs-keyword">return</span> <span class="hljs-variable">$client_connection</span>-&gt;businessworker;
 };
-...
+<span class="hljs-comment">// ==绑定==</span>
+
+<span class="hljs-variable">$gateway</span>-&gt;name = ...
+...省略...
+
+<span class="hljs-keyword">if</span>(!defined(<span class="hljs-string">'GLOBAL_START'</span>))
+{
+    Worker::runAll();
+}
 </code></pre>
 
                     
