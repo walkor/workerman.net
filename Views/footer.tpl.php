@@ -42,8 +42,10 @@
 						<b>联系我们</b>
 						<ul class="sub">
 						<li>邮箱：walkor@workerman.net</li>
-						<li>QQ：2202055656</li>
-						<li>QQ群：257046084<br><a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=37e8137d627745ff3f6d12238d0c36d94bd8a589d10d99082561550daeb43cfa"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="workerman技术交流群" title="workerman技术交流群"></a></li>
+						<li>
+						QQ群：137410824<br>
+						<a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=8296bbb9225f1f528c0a68cdcbab49e4fd159a625bd0faf3fda0e81d0fdfe86b"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="workerman官方群2" title="workerman官方群2"></a>
+						</li>
 						</ul>
 					</div>
 					<div class="col-md-1 column">

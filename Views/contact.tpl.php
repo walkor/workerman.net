@@ -23,8 +23,7 @@
 	<h3>联系我们</h3>
 	<ul class="sub">
 	<li>邮箱：walkor@workerman.net</li>
-	<li>QQ：2202055656</li>
-	<li>QQ群：257046084</li>
+	<li>QQ群：137410824</li>
 	</ul>
 	</div>
 	<div class="col-md-3 column">
