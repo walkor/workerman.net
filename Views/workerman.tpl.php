@@ -90,8 +90,7 @@
 			<a name="dev">服务端开发示例WebSocket Server</a>
 			</h3>
 			<h4>1、新建文件start.php</h4>
-			<pre><code>
-		<?php
+			<pre><code><?php
 		$codes = '<?php
 use Workerman\Worker;
 require_once \'./Workerman/Autoloader.php\';
@@ -110,11 +109,10 @@ $ws_worker->onMessage = function($connection, $data)
 };
 
 // 运行
-Worker::runAll()';
+Worker::runAll();';
 
 		 echo highlight_string($codes, true);
-		?> 
-			</code></pre>
+		?> </code></pre>
 			<h4>2、启动服务类似下图：</h4>
 			<p><code>php start.php start -d</code></p>
 			<img src="/img/workerman-start.png" alt="workerman启动界面"/>
