@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="5.5.1" data-basepath=".." data-revision="1442938360571">
+    <div class="book"  data-level="5.5.1" data-basepath=".." data-revision="1444661393957">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -607,18 +607,18 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_1236">
+                    <section class="normal" id="section-gitbook_387">
                     
                         <h1 id="-gatewayworker-lib-gateway-sendtoall">\GatewayWorker\Lib\Gateway::sendToAll</h1>
 <h2 id="-">说明:</h2>
-<pre><code class="lang-php">void Gateway::sendToAll(mixed <span class="hljs-variable">$send_data</span> [, <span class="hljs-keyword">array</span> <span class="hljs-variable">$client_id_array</span>=<span class="hljs-keyword">array</span>()]);
+<pre><code class="lang-php">void Gateway::sendToAll(string <span class="hljs-variable">$send_data</span> [, <span class="hljs-keyword">array</span> <span class="hljs-variable">$client_id_array</span>=<span class="hljs-keyword">array</span>()]);
 </code></pre>
 <p>向所有客户端或者client_id_array指定的客户端发送<code>$send_data</code>数据。如果指定的$client_id_array中的client_id不存在则自动丢弃</p>
 <h2 id="-">参数</h2>
 <ul>
 <li><code>$send_data</code></li>
 </ul>
-<p>要发送的数据，此数据会被Gateway所使用协议的encode方法打包后发送给客户端</p>
+<p>要发送的数据（字符串类型），此数据会被Gateway所使用协议的encode方法打包后发送给客户端</p>
 <ul>
 <li><code>$client_id_array</code></li>
 </ul>

@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="5.5.9" data-basepath=".." data-revision="1442938360571">
+    <div class="book"  data-level="5.5.9" data-basepath=".." data-revision="1444661393957">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -607,11 +607,11 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_1239">
+                    <section class="normal" id="section-gitbook_391">
                     
                         <h1 id="-gatewayworker-lib-gateway-sendtouid">\GatewayWorker\Lib\Gateway::sendToUid</h1>
 <h2 id="-">说明:</h2>
-<pre><code class="lang-php">void Gateway::sendToUid(mixed <span class="hljs-variable">$uid</span>, mixed <span class="hljs-variable">$message</span>);
+<pre><code class="lang-php">void Gateway::sendToUid(mixed <span class="hljs-variable">$uid</span>, string <span class="hljs-variable">$message</span>);
 </code></pre>
 <p>向uid绑定的所有client_id发送数据。</p>
 <p>注意：uid与client_id是一对多的关系，如果当前uid下绑定了多个client_id，则多个client_id对应的客户端都会收到消息。</p>
@@ -623,7 +623,7 @@
 <ul>
 <li><code>$message</code></li>
 </ul>
-<p>要发送的数据，此数据会被Gateway所使用协议的encode方法打包后再发送给客户端</p>
+<p>要发送的数据（字符串类型），此数据会被Gateway所使用协议的encode方法打包后再发送给客户端</p>
 <h2 id="-">范例</h2>
 <pre><code class="lang-php"><span class="hljs-keyword">use</span> \<span class="hljs-title">GatewayWorker</span>\<span class="hljs-title">Lib</span>\<span class="hljs-title">Gateway</span>;
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Event</span>

@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="5.5.7" data-basepath=".." data-revision="1442938360571">
+    <div class="book"  data-level="5.5.7" data-basepath=".." data-revision="1444661393957">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -607,13 +607,16 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_1248">
+                    <section class="normal" id="section-gitbook_379">
                     
                         <h1 id="-gatewayworker-lib-gateway-getonlinestatus">\GatewayWorker\Lib\Gateway::getOnlineStatus</h1>
 <h2 id="-">说明:</h2>
 <pre><code class="lang-php"><span class="hljs-keyword">array</span> Gateway::getOnlineStatus(void);
 </code></pre>
 <p>获取当前所有在线client_id列表</p>
+<p><strong>注意：</strong></p>
+<p>开发者要慎用此函数，尤其在线连接数过万时。</p>
+<p>当在线连接数过万时，此函数返回的数据可能少于实际在线数据。</p>
 <h2 id="-">范例</h2>
 <pre><code class="lang-php"><span class="hljs-keyword">use</span> \<span class="hljs-title">GatewayWorker</span>\<span class="hljs-title">Lib</span>\<span class="hljs-title">Gateway</span>;
 
