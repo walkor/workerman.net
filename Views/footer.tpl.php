@@ -32,11 +32,13 @@
 						</ul>
 						<p class="gray">
 						蜀ICP备13029294号
+                                                </p>
+                                                <p class="gray" id="online_count"></p>
+                                                <p class="gray" style="font-size:11px"> Powered by <a href="http://www.workerman.net/web-sender" target="_blank"><strong>web-msg-sender!</strong></a></p>
 						<script type="text/javascript">
 							var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 							document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F609dc2f866ce0133cdf405ea1a45f492' type='text/javascript'%3E%3C/script%3E"));
 						</script>
-						</p>
 					</div>
 					<div class="col-md-3 column">
 						<b>联系我们</b>
@@ -54,11 +56,13 @@
 		</div>
 	</div>
 </div>
-<script src="/demos/phpsocketio-chat/socket.io-client/socket.io.js"></script>
+<script src='//cdn.bootcss.com/socket.io/1.3.7/socket.io.js'></script>
 <script>
-var socket = io('http://'+document.domain+':2020');
-socket.on('new message', function(data){console && console.log(data);});
-socket.on('connect', function(){socket.emit('add user', 'bot');});
-</script>>
+var socket = io('http://'+document.domain+':3120');
+socket.on('connect', function(){socket.emit('login', '<?php echo session_id();?>');});
+//socket.on('reconnect', function(){socket.emit('login', '<?php echo session_id();?>');});
+socket.on('update_online_count', function(count){$('#online_count').html(count);});
+</script>
+
 </body>
 </html>

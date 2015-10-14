@@ -66,5 +66,6 @@ if(!function_exists($func))
 }
 else
 {
+    session_start();
     call_user_func_array($func, $tmp_arr);
 }
