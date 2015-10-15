@@ -30,15 +30,17 @@
 						<li><a href="http://www.workerman.net/gatewaydoc/">GatewayWorker手册</a></li>
 						<li><a href="/download/manual">Workerman3.x离线手册（PDF）</a></li>
 						</ul>
-						<p class="gray">
-						蜀ICP备13029294号
-                                                </p>
+                                                <center>
                                                 <p class="gray" id="online_count"></p>
                                                 <p class="gray" style="font-size:11px"> Powered by <a href="http://www.workerman.net/web-sender" target="_blank"><strong>web-msg-sender!</strong></a></p>
 						<script type="text/javascript">
 							var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 							document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F609dc2f866ce0133cdf405ea1a45f492' type='text/javascript'%3E%3C/script%3E"));
 						</script>
+                                                <p class="gray">
+                                                蜀ICP备13029294号
+                                                </p>
+                                                </center>
 					</div>
 					<div class="col-md-3 column">
 						<b>联系我们</b>
