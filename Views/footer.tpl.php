@@ -62,7 +62,6 @@
 <script>
 var socket = io('http://'+document.domain+':3120');
 socket.on('connect', function(){socket.emit('login', '<?php echo session_id();?>');});
-//socket.on('reconnect', function(){socket.emit('login', '<?php echo session_id();?>');});
 socket.on('update_online_count', function(count){$('#online_count').html(count);});
 </script>
 
