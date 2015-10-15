@@ -87,11 +87,11 @@ content 为消息内容
     // 后端推送来消息时
     socket.on('new_msg', function(msg){
         console.log("收到消息："+msg);
-    }
+    });
     // 后端推送来在线数据时
     socket.on('update_online_count', function(online_stat){
         console.log(online_stat);
-    }
+    });
 &lt;/script&gt;
 			</pre>
 			<p>在站点中加入以上代码后便可以通过访问或者后端调用
