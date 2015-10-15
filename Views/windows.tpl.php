@@ -33,12 +33,13 @@
 	<br><hr>
 	<h3>主页demo如何用windows版本workerman运行</h3>
 	总的来讲就是下载windows版本workerman，替换Workerman目录，<br>
-	以workerman-chat为例
+	以<a href="https://github.com/walkor/workerman-chat" rel="nofollow">workerman-chat</a>为例
 <h5>1、进入源代码删除Workerman目录包括文件</h5>
 <h5>2、下载windows版本workerman，zip地址 <a href="https://github.com/walkor/workerman-for-win/archive/master.zip">https://github.com/walkor/workerman-for-win/archive/master.zip</a></h5>
-<h5>3、解压到原Worekrman目录所在位置，同时目录workerman-for-win-master重命名为Workerman(注意第一个字母W为大写)</h5>
-<h5>4、双击start_for_win.bat启动（目前只有workerman-chat、workerman-todpole、web-msg-sender三个应用有这个启动脚本，其它应用直接运行 php Applications/xxx/xxx.php 运行 ）</h5>
+<h5>3、解压到原Worekrman目录所在位置，同时目录workerman-for-win-master重命名为Workerman(注意第一个字母W为大写)，完成Workerman目录的替换</h5>
+<h5>4、双击start_for_win.bat启动（目前只有<a href="https://github.com/walkor/workerman-chat-for-win" rel="nofollow">workerman-chat-for-win</a>、<a href="https://github.com/walkor/workerman-todpole" rel="nofollow">workerman-todpole</a>两个应用有这个启动脚本，其它应用直接运行 php Applications/xxx/xxx.php 运行 ）</h5>
 <h5>5、浏览器访问地址 http://127.0.0.1:8383</h5>
+完整的windows版本workerman-chat见<a href="https://github.com/walkor/workerman-chat-for-win" rel="nofollow">workerman-chat-for-win</a>
 	<br><hr>
 </div>
 <div class="col-md-2column">

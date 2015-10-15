@@ -74,7 +74,7 @@ content 为消息内容
 			<h3>测试：</h3>
 			<p>支持跨域推送，开发者可以不用建立服务端，直接使用线上的推送服务测试，只要引入js文件并设置下端口及回调即可，例如在任意站点中加入如下代码即可收到消息并统计数据：</p>
 			<pre>
-<script src='http//cdn.bootcss.com/socket.io/1.3.7/socket.io.js'></script>
+&lt;script src='http//cdn.bootcss.com/socket.io/1.3.7/socket.io.js'&gt;&lt;/script&gt;
 &lt;script&gt;
     // 连接服务端
     var socket = io('http://workerman.net:2120');
