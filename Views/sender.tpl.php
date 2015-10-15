@@ -12,7 +12,7 @@
 				WEB消息推送框架
 			</h2>
 			<p class="f16">
-				web-msg-sender是一款web推送框架，采用PHPSocket.IO开发，基于WebSocket长连接通讯，如果浏览器不支持WebSocket则自动转用comet技术推送。
+				web-msg-sender是一款web长连接推送框架，采用PHPSocket.IO开发，基于WebSocket长连接通讯，如果浏览器不支持WebSocket则自动转用comet推送。
 				通过后台推送消息，消息可以即时推送到客户端，非轮询，实时性非常好，性能很高。
 			</p>
 			<div class="f16">
@@ -75,7 +75,7 @@ content 为消息内容
 			<p>支持跨域推送，开发者可以不用建立服务端，直接使用线上的推送服务测试，只要引入js文件并设置下端口及回调即可，例如在任意站点中加入如下代码即可收到消息并统计数据：</p>
 			<pre>
 <script src='http//cdn.bootcss.com/socket.io/1.3.7/socket.io.js'></script>
-<script>
+&lt;script&gt;
     // 连接服务端
     var socket = io('http://workerman.net:2120');
     // uid可以是自己网站的用户id，以便针对uid推送以及统计在线人数
@@ -92,7 +92,7 @@ content 为消息内容
     socket.on('update_online_count', function(online_stat){
         console.log(online_stat);
     }
-</script>
+&lt;/script&gt;
 			</pre>
 			<p>在站点中加入以上代码后便可以通过访问或者后端调用
 推送接口url：<a rel="nofollow" href="http://www.workerman.net:2121/?type=publish&to=123&content=这是消息内容">http://www.workerman.net:2121/?type=publish&to=123&content=这是消息内容</a>
