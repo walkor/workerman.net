@@ -56,19 +56,6 @@
 			</div>
 		</div>
 		<div class="media">
-			 <a href="https://github.com/walkor/shadowsocks-php" class="pull-left" target="_blank" rel="nofollow"><img src="/img/shadowsocks-php.png" class="media-object" alt="shadowsocks-php"/></a>
-			<div class="media-body">
-				<h4 class="media-heading">
-					<a target="_blank" href="https://github.com/walkor/shadowsocks-php" rel="nofollow">Shdowsocks-PHP</a>
-				</h4>
-				<p>
-				轻量级科学上网姿势，改变您的生活体验！
-				<br>
-				<a class="btn" target="_blank" href="https://github.com/walkor/shadowsocks-php" rel="nofollow">下载源代码 »</a>
-				</p>
-			</div>
-		</div>
-		<div class="media">
 			 <a href="/demos/vmstat/" class="pull-left" target="_blank"><img src="/img/workerman-vmstat.png" class="media-object" alt="web vmstat"/></a>
 			<div class="media-body">
 				<h4 class="media-heading">
