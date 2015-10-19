@@ -28,26 +28,25 @@
 						<li><a href="/download/chat">PHP 聊天室</a></li>
 						<li><a href="/download/statistics">分布式统计监控系统</a></li>
 						<li><a href="http://www.workerman.net/gatewaydoc/">GatewayWorker手册</a></li>
-						<li><a href="/download/manual">Workerman3.x离线手册（PDF）</a></li>
 						</ul>
-                                                <center>
-                                                <p class="gray" id="online_count"></p>
-                                                <p class="gray" style="font-size:11px"> Powered by <a href="http://www.workerman.net/web-sender" target="_blank"><strong>web-msg-sender!</strong></a></p>
+						<div>
+						<p class="gray" id="online_count"></p>
+						<p class="gray" style="font-size:11px"> Powered by <a href="http://www.workerman.net/web-sender" target="_blank"><strong>web-msg-sender!</strong></a></p>
 						<script type="text/javascript">
 							var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 							document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F609dc2f866ce0133cdf405ea1a45f492' type='text/javascript'%3E%3C/script%3E"));
 						</script>
-                                                <p class="gray">
-                                                蜀ICP备13029294号
-                                                </p>
-                                                </center>
+						<p class="gray">
+						蜀ICP备13029294号
+						</p>
+						</div>
 					</div>
 					<div class="col-md-3 column">
 						<b>联系我们</b>
 						<ul class="sub">
 						<li>邮箱：walkor@workerman.net</li>
 						<li>
-                                                QQ群1：257046084(已满)<br>
+						QQ群1：257046084(已满)<br>
 						QQ群2：137410824<br>
 						<a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=8296bbb9225f1f528c0a68cdcbab49e4fd159a625bd0faf3fda0e81d0fdfe86b"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="workerman官方群2" title="workerman官方群2"></a>
 						</li>

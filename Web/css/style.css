@@ -230,3 +230,7 @@ height:220px;padding:20px;font-size:14px;text-align: left;border:none;
 .job_desc{
     border:none;border-radius: 0;background: none;
 }
+.center{
+    text-align:center;	
+}
+}
