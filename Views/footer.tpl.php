@@ -29,7 +29,7 @@
 						<li><a href="/download/statistics">分布式统计监控系统</a></li>
 						<li><a href="http://www.workerman.net/gatewaydoc/">GatewayWorker手册</a></li>
 						</ul>
-						<div>
+						<div class="center">
 						<p class="gray" id="online_count"></p>
 						<p class="gray" style="font-size:11px"> Powered by <a href="http://www.workerman.net/web-sender" target="_blank"><strong>web-msg-sender!</strong></a></p>
 						<script type="text/javascript">
