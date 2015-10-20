@@ -72,7 +72,7 @@
 							<a href="http://wenda.workerman.net" target="_blank">问答</a>
 						</li>
 						<li<?php if($html_nav == 'update')echo ' class="active" ';?>>
-							<a href="https://github.com/walkor/workerman/releases" target="_blank">历史版本</a>
+							<a href="https://github.com/walkor/workerman/releases" target="_blank">发布的版本</a>
 						</li>
 						<li<?php if($html_nav == 'windows')echo ' class="active" ';?>>
 							<a href="/windows" >Windows版本</a>
