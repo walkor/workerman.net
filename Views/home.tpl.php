@@ -358,8 +358,29 @@
 		</ul>
 		<br>
 		<h4><a href="/donate_list"><b>捐赠墙</b></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/donate" style="font-size:14px"><b>我要捐赠</b></a></h4>
-                <?php include __DIR__ . '/__donate_list.tpl.php';?>
-                <a href="/donate" style="font-size:16px"><b>我要捐赠</b></a>
+                <?php /*include __DIR__ . '/__donate_list.tpl.php';*/?>
+                <?php
+$donate_file = __DIR__ . '/__donate_list.tpl.php';
+$donate_content = file_get_contents($donate_file);
+$display_count = 54;
+$donate_list = "";
+if($donate_content)
+{
+    $line_list = explode("\n", $donate_content);
+    foreach($line_list as $line)
+    {
+        if($display_count-- <= 0)
+        {
+            break;
+        }
+        $donate_list .= $line."\n";
+    }
+    $donate_list .= "   </tbody>
+</table>";
+}
+echo $donate_list;
+                ?>
+                <a href="/donate_list"><b>全部清单</b></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/donate"><b>我要捐赠</b></a>
 		<div class="bd-ad"><?php global $bd_ad_250_250; echo $bd_ad_250_250;?></div>
 	</div>
 </div>
