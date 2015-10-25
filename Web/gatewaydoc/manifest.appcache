@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# Revision 1445261460087
+# Revision 1445606896882
 
 CACHE:
 index.html
@@ -16,9 +16,9 @@ gateway-worker-development/close-client.html
 gateway-worker-development/close-current-client.html
 gateway-worker-development/distributed.html
 gateway-worker-development/event-functions.html
+gateway-worker-development/gateway-worker-development.html
 gateway-worker-development/gateway-worker-separation.html
 gateway-worker-development/gateway.html
-gateway-worker-development/gateway-worker-development.html
 gateway-worker-development/get-online-status.html
 gateway-worker-development/heartbeat.html
 gateway-worker-development/how-distributed.html
@@ -34,12 +34,12 @@ gateway-worker-development/send-to-current-client.html
 gateway-worker-development/send-to-uid.html
 gateway-worker-development/server.html
 gateway-worker-development/session.html
-gateway-worker-development/store-config.html
 gateway-worker-development/why-distributed.html
 getting-started/README.html
 getting-started/directory.html
 getting-started/feature.html
 license/README.html
+gateway-worker-development/store-config.html
 preface/README.html
 protocols/README.html
 gitbook\app.js
