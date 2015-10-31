@@ -134,7 +134,7 @@
 					<a target="_blank" href="https://github.com/walkor/phpsocket.io" rel="nofollow">PHPSocket.IO</a>
 				</h4>
 				<p>
-				Socket.IOPHP版本。Socket.IO 实现了实时双向的基于事件的通讯机制。旨在让各种浏览器及移动设备上实现实时app功能，模糊化各种传输机制。
+				Socket.IO的PHP 服务端版本。Socket.IO 实现了实时双向的基于事件的通讯机制。旨在让各种浏览器及移动设备上实现实时app功能，模糊化各种传输机制。
 				<br>
 				<a class="btn" target="_blank" href="https://github.com/walkor/phpsocket.io" rel="nofollow">下载源代码 »</a>
 				<a class="btn" target="_blank" href="/demos/phpsocketio-chat/" rel="nofollow">chat domo »</a>

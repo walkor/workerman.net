@@ -75,7 +75,7 @@ content 为消息内容
 			<p>3、浏览器访问端口http://ip:2123或者http://域名:2123，例如<a href="http://workerman.net:2123/">http://workerman.net:2123</a>如图：</p>
 			<img src="/img/web-msg-sender-demo.png" alt="WEB推送使用界面"/>
 			<br>
-			<h3>测试：</h3>
+			<h3>前端测试：</h3>
 			<p>支持跨域推送，开发者可以不用建立服务端，直接使用线上的推送服务测试，只要引入js文件并设置下端口及回调即可，例如在任意站点中加入如下代码即可收到消息并统计数据：</p>
 			<pre>
 &lt;script src='http://cdn.bootcss.com/socket.io/1.3.7/socket.io.js'&gt;&lt;/script&gt;
@@ -98,8 +98,31 @@ content 为消息内容
     });
 &lt;/script&gt;
 			</pre>
-			<p>在站点中加入以上代码后便可以通过访问或者后端调用
-推送接口url：<a rel="nofollow" href="http://www.workerman.net:2121/?type=publish&to=123&content=这是消息内容">http://www.workerman.net:2121/?type=publish&to=123&content=这是消息内容</a>
-推送数据了</p>
+<h3>后端调用api向任意用户推送：</h3>
+<pre>
+<?php
+  $api_str = '<?php
+// 指明给谁推送，为空表示向所有在线用户推送
+$to_uid = "";
+// 推送的url地址，上线时改成自己的服务器地址
+$push_api_url = "http://workerman.net:2121/";
+$post_data = array(
+   "type" => "publish",
+   "content" => "这个是推送的测试数据",
+   "to" => $to_uid, 
+);
+$ch = curl_init ();
+curl_setopt ( $ch, CURLOPT_URL, $push_api_url );
+curl_setopt ( $ch, CURLOPT_POST, 1 );
+curl_setopt ( $ch, CURLOPT_HEADER, 0 );
+curl_setopt ( $ch, CURLOPT_RETURNTRANSFER, 1 );
+curl_setopt ( $ch, CURLOPT_POSTFIELDS, $post_data );
+$return = curl_exec ( $ch );
+curl_close ( $ch );
+var_export($return);';
+echo htmlspecialchars($api_str);
+?>
+</pre>
+
 		</div>
 	</div>
