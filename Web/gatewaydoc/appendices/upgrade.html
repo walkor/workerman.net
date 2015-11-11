@@ -30,7 +30,7 @@
 
 
         
-    <div class="book"  data-level="8.2" data-basepath=".." data-revision="1447254141720">
+    <div class="book"  data-level="8.2" data-basepath=".." data-revision="1447254497331">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -676,7 +676,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_4179">
+                    <section class="normal" id="section-gitbook_4229">
                     
                         <h1 id="1-0-2-0-">1.0升级到2.0注意事项</h1>
 <h2 id="-1-0-2-0">如何知道自己使用的版本是1.0还是2.0</h2>
@@ -695,7 +695,7 @@
 <p>2、增加了Register服务，用于注册Gateway、BusinessWorker服务，方便二者建立通讯。</p>
 <p>3、client_id由原来的整型改为长度固定为20的字符串，类似<code>7f00000108ff00000006</code></p>
 <p>4、Gateway::getOnlineStatus方法被删除，在2.0中请使用Gateway::getAllClientInfo替代，使用方法参见手册</p>
-<p>5、增加Lib/Gateway类增加unbindUid、getClientIdByUid、joinGroup、leaveGroup、sendToGroup、getClientCountByGroup、getClientInfoByGroup、getAllClientInfo等方法。</p>
+<p>5、Lib/Gateway类增加unbindUid、getClientIdByUid、joinGroup、leaveGroup、sendToGroup、getClientCountByGroup、getClientInfoByGroup、getAllClientInfo等方法。</p>
 <p>6、多端口（多协议）应用中，可以通过<code>$_SERVER[&#39;GATEWAY_PORT&#39;]</code>户识别客户端连接的是哪个端口（使用的哪种协议）</p>
 
                     
