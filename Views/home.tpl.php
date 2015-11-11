@@ -284,9 +284,12 @@
 			最近更新
 		</h4>
 		<ul>
-                        <li>
-                                2015-10-14 web-msg-sender(web消息推送)改版
-                        </li>
+			<li>
+				2015-11-11 GatewayWorker2.0发布
+			</li>
+ 			<li>
+				2015-10-14 web-msg-sender(web消息推送)改版
+			</li>
 			<li>
 				2015-09-10 phpsocket.io发布
 			</li>
