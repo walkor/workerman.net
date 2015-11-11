@@ -20,7 +20,7 @@
 				</h4>
 				<p>
 				GatewayWorker是基于Workerman开发的一套TCP长连接的应用框架，
-				实现了单发、群发、广播等接口，内置了mysql、redis、memcache等类库，
+				实现了单发、群发、广播等接口，内置了mysql类库，
 				GatewayWorker分为Gateway进程和Worker进程，天然支持分布式部署，能够支持庞大的连接数（百万甚至千万连接级别的应用）。
 				可用于开发IM聊天应用、移动通讯、游戏后台、物联网、智能家居后台等等。
 				<br>
