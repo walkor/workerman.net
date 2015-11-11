@@ -24,9 +24,11 @@
 				GatewayWorker分为Gateway进程和Worker进程，天然支持分布式部署，能够支持庞大的连接数（百万甚至千万连接级别的应用）。
 				可用于开发IM聊天应用、移动通讯、游戏后台、物联网、智能家居后台等等。
 				<br>
-				<a class="btn" target="_blank" href="/gatewaydoc-1.0/">在线手册1.0</a><a class="btn" target="_blank" href="/gatewaydoc/">在线手册2.0</a><a class="btn" target="_blank" href="https://github.com/walkor/GatewayWorker/archive/master.zip">点击下载源码</a>
+				<a class="btn" target="_blank" href="/gatewaydoc-1.0/">GatewayWorker1.0手册</a>
+				<a class="btn" target="_blank" href="/gatewaydoc/">GatewayWorker2.0手册</a>
+				<a class="btn" target="_blank" href="/gatewaydoc/appendices/upgrade.html">2.0与1.0的差异</a>
+				<a class="btn" target="_blank" href="https://github.com/walkor/GatewayWorker/archive/master.zip">点击下载源码</a>
 				</p>
-				<p><a class="btn" target="_blank" href="/gatewaydoc/appendices/upgrade.html">GatewayWorker2.0与1.0的差异</a></p>
 			</div>
 		</div>
 <br><?php global $bd_ad_960_90; echo $bd_ad_960_90;?>
