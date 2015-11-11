@@ -26,6 +26,7 @@
 				<br>
 				<a class="btn" target="_blank" href="/gatewaydoc-1.0/">在线手册1.0</a><a class="btn" target="_blank" href="/gatewaydoc/">在线手册2.0</a><a class="btn" target="_blank" href="https://github.com/walkor/GatewayWorker/archive/master.zip">点击下载源码</a>
 				</p>
+				<p><a class="btn" target="_blank" href="/gatewaydoc/appendices/upgrade.html">GatewayWorker2.0与1.0的差异</a></p>
 			</div>
 		</div>
 <br><?php global $bd_ad_960_90; echo $bd_ad_960_90;?>
