@@ -1,27 +1,27 @@
 CACHE MANIFEST
-# Revision 1447254497331
+# Revision 1447255156023
 
 CACHE:
-feature/README.html
-index.html
-advanced/multi-gatewayworker-instance.html
 advanced/README.html
+index.html
+feature/README.html
+advanced/multi-gatewayworker-instance.html
 advanced/multi-protocols.html
 advanced/push.html
 appendices/README.html
 appendices/mysql.html
 appendices/upgrade.html
+gateway-worker-development/README.html
 gateway-worker-development/join-group.html
 gateway-worker-development/business-worker.html
-gateway-worker-development/close-current-client.html
-gateway-worker-development/close-client.html
 gateway-worker-development/distributed.html
-gateway-worker-development/README.html
+gateway-worker-development/close-client.html
+gateway-worker-development/close-current-client.html
 gateway-worker-development/event-functions.html
 gateway-worker-development/gateway-worker-development.html
 gateway-worker-development/gateway-worker-separation.html
-gateway-worker-development/gateway.html
 gateway-worker-development/get-client-count-by-group.html
+gateway-worker-development/gateway.html
 gateway-worker-development/get-client-id-by-uid.html
 gateway-worker-development/get-client-info-by-group.html
 gateway-worker-development/get-online-status.html
