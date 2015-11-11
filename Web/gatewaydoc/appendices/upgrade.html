@@ -4,7 +4,7 @@
     <head>
         
         <meta charset="UTF-8">
-        <title>高级应用 | GatewayWorker2.0 手册</title>
+        <title>1.0升级到2.0注意事项 | GatewayWorker2.0 手册</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 0.5.2">
@@ -17,10 +17,8 @@
     
     
     
-    <link rel="next" href="../advanced/push.html" />
     
-    
-    <link rel="prev" href="../gateway-worker-development/gateway-worker-separation.html" />
+    <link rel="prev" href="../appendices/mysql.html" />
     
 
         
@@ -32,7 +30,7 @@
 
 
         
-    <div class="book"  data-level="7" data-basepath=".." data-revision="1447248325869">
+    <div class="book"  data-level="8.2" data-basepath=".." data-revision="1447248325869">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -575,7 +573,7 @@
             <div class="page-wrapper" tabindex="-1">
                 <div class="book-progress">
     <div class="bar">
-        <div class="inner" style="width: 86.95652173913044%;min-width: 84.78260869565217%;"></div>
+        <div class="inner" style="width: 100%;min-width: 97.82608695652173%;"></div>
     </div>
     <div class="chapters">
     
@@ -661,26 +659,44 @@
     
         <a href="../advanced/README.html" title="高级应用" class="chapter done new-chapter" data-progress="7" style="left: 86.95652173913044%;"></a>
     
-        <a href="../advanced/push.html" title="在其它项目中推送消息" class="chapter  " data-progress="7.1" style="left: 89.1304347826087%;"></a>
+        <a href="../advanced/push.html" title="在其它项目中推送消息" class="chapter done " data-progress="7.1" style="left: 89.1304347826087%;"></a>
     
-        <a href="../advanced/multi-protocols.html" title="多协议支持" class="chapter  " data-progress="7.2" style="left: 91.30434782608695%;"></a>
+        <a href="../advanced/multi-protocols.html" title="多协议支持" class="chapter done " data-progress="7.2" style="left: 91.30434782608695%;"></a>
     
-        <a href="../advanced/multi-gatewayworker-instance.html" title="运行多个gatewayWorker实例" class="chapter  " data-progress="7.3" style="left: 93.47826086956522%;"></a>
+        <a href="../advanced/multi-gatewayworker-instance.html" title="运行多个gatewayWorker实例" class="chapter done " data-progress="7.3" style="left: 93.47826086956522%;"></a>
     
-        <a href="../appendices/README.html" title="附录" class="chapter  new-chapter" data-progress="8" style="left: 95.65217391304348%;"></a>
+        <a href="../appendices/README.html" title="附录" class="chapter done new-chapter" data-progress="8" style="left: 95.65217391304348%;"></a>
     
-        <a href="../appendices/mysql.html" title="使用mysql数据库" class="chapter  " data-progress="8.1" style="left: 97.82608695652173%;"></a>
+        <a href="../appendices/mysql.html" title="使用mysql数据库" class="chapter done " data-progress="8.1" style="left: 97.82608695652173%;"></a>
     
-        <a href="../appendices/upgrade.html" title="1.0升级到2.0注意事项" class="chapter  " data-progress="8.2" style="left: 100%;"></a>
+        <a href="../appendices/upgrade.html" title="1.0升级到2.0注意事项" class="chapter done " data-progress="8.2" style="left: 100%;"></a>
     
     </div>
 </div>
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_4024">
+                    <section class="normal" id="section-gitbook_4031">
                     
-                        <h1 id="-">高级应用</h1>
+                        <h1 id="1-0-2-0-">1.0升级到2.0注意事项</h1>
+<h2 id="-1-0-2-0">如何知道自己使用的版本是1.0还是2.0</h2>
+<p>打开文件 GatewayWorker/Gateway.php，查看是否有常量VERSION，并且常量值大于等于2.0.0</p>
+<pre><code class="lang-php"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Gateway</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Worker</span>
+{</span>
+
+    <span class="hljs-comment">/**
+     * 版本
+     *<span class="hljs-phpdoc"> @var</span> string
+     */</span>
+    <span class="hljs-keyword">const</span> VERSION = <span class="hljs-string">'2.0.0'</span>;
+</code></pre>
+<h2 id="2-0-1-0-">2.0和1.0相比有哪些改变</h2>
+<p>1、框架自身不在依赖Store存储，并且把相关代码全部删除了，如果业务有依赖Store可以自行保留。</p>
+<p>2、增加了Register服务，用于注册Gateway、BusinessWorker服务，方便二者建立通讯。</p>
+<p>3、client_id由原来的整型改为长度固定为20的字符串，类似<code>7f00000108ff00000006</code></p>
+<p>4、Gateway::getOnlineStatus方法被删除，在2.0中请使用Gateway::getAllClientInfo替代，使用方法参见手册</p>
+<p>5、增加Lib/Gateway类增加unbindUid、getClientIdByUid、joinGroup、leaveGroup、sendToGroup、getClientCountByGroup、getClientInfoByGroup、getAllClientInfo等方法。</p>
+<p>6、多端口（多协议）应用中，可以通过<code>$_SERVER[&#39;GATEWAY_PORT&#39;]</code>户识别客户端连接的是哪个端口（使用的哪种协议）</p>
 
                     
                     </section>
@@ -690,10 +706,8 @@
         </div>
 
         
-        <a href="../gateway-worker-development/gateway-worker-separation.html" class="navigation navigation-prev " aria-label="Previous page: Gateway Worker分离部署"><i class="fa fa-angle-left"></i></a>
+        <a href="../appendices/mysql.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 使用mysql数据库"><i class="fa fa-angle-left"></i></a>
         
-        
-        <a href="../advanced/push.html" class="navigation navigation-next " aria-label="Next page: 在其它项目中推送消息"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

@@ -4,7 +4,7 @@
     <head>
         
         <meta charset="UTF-8">
-        <title>高级应用 | GatewayWorker2.0 手册</title>
+        <title>sendToGroup | GatewayWorker2.0 手册</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 0.5.2">
@@ -17,10 +17,10 @@
     
     
     
-    <link rel="next" href="../advanced/push.html" />
+    <link rel="next" href="../gateway-worker-development/get-client-count-by-group.html" />
     
     
-    <link rel="prev" href="../gateway-worker-development/gateway-worker-separation.html" />
+    <link rel="prev" href="../gateway-worker-development/leave-group.html" />
     
 
         
@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="7" data-basepath=".." data-revision="1447248325869">
+    <div class="book"  data-level="6.6.13" data-basepath=".." data-revision="1447248325869">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -575,7 +575,7 @@
             <div class="page-wrapper" tabindex="-1">
                 <div class="book-progress">
     <div class="bar">
-        <div class="inner" style="width: 86.95652173913044%;min-width: 84.78260869565217%;"></div>
+        <div class="inner" style="width: 71.73913043478261%;min-width: 69.56521739130434%;"></div>
     </div>
     <div class="chapters">
     
@@ -647,19 +647,19 @@
     
         <a href="../gateway-worker-development/send-to-group.html" title="sendToGroup" class="chapter done " data-progress="6.6.13" style="left: 71.73913043478261%;"></a>
     
-        <a href="../gateway-worker-development/get-client-count-by-group.html" title="getClientCountByGroup" class="chapter done " data-progress="6.6.14" style="left: 73.91304347826087%;"></a>
+        <a href="../gateway-worker-development/get-client-count-by-group.html" title="getClientCountByGroup" class="chapter  " data-progress="6.6.14" style="left: 73.91304347826087%;"></a>
     
-        <a href="../gateway-worker-development/get-client-info-by-group.html" title="getClientInfoByGroup" class="chapter done " data-progress="6.6.15" style="left: 76.08695652173913%;"></a>
+        <a href="../gateway-worker-development/get-client-info-by-group.html" title="getClientInfoByGroup" class="chapter  " data-progress="6.6.15" style="left: 76.08695652173913%;"></a>
     
-        <a href="../gateway-worker-development/get-online-status.html" title="getALLClientInfo" class="chapter done " data-progress="6.6.16" style="left: 78.26086956521739%;"></a>
+        <a href="../gateway-worker-development/get-online-status.html" title="getALLClientInfo" class="chapter  " data-progress="6.6.16" style="left: 78.26086956521739%;"></a>
     
-        <a href="../gateway-worker-development/router.html" title="设置路由router" class="chapter done " data-progress="6.7" style="left: 80.43478260869566%;"></a>
+        <a href="../gateway-worker-development/router.html" title="设置路由router" class="chapter  " data-progress="6.7" style="left: 80.43478260869566%;"></a>
     
-        <a href="../gateway-worker-development/session.html" title="超全局数组$_SESSION" class="chapter done " data-progress="6.8" style="left: 82.6086956521739%;"></a>
+        <a href="../gateway-worker-development/session.html" title="超全局数组$_SESSION" class="chapter  " data-progress="6.8" style="left: 82.6086956521739%;"></a>
     
-        <a href="../gateway-worker-development/server.html" title="超全局数组$_SERVER" class="chapter done " data-progress="6.9" style="left: 84.78260869565217%;"></a>
+        <a href="../gateway-worker-development/server.html" title="超全局数组$_SERVER" class="chapter  " data-progress="6.9" style="left: 84.78260869565217%;"></a>
     
-        <a href="../advanced/README.html" title="高级应用" class="chapter done new-chapter" data-progress="7" style="left: 86.95652173913044%;"></a>
+        <a href="../advanced/README.html" title="高级应用" class="chapter  new-chapter" data-progress="7" style="left: 86.95652173913044%;"></a>
     
         <a href="../advanced/push.html" title="在其它项目中推送消息" class="chapter  " data-progress="7.1" style="left: 89.1304347826087%;"></a>
     
@@ -678,9 +678,38 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_4024">
+                    <section class="normal" id="section-gitbook_4059">
                     
-                        <h1 id="-">高级应用</h1>
+                        <h1 id="-gatewayworker-lib-gateway-sendtogroup">\GatewayWorker\Lib\Gateway::sendToGroup</h1>
+<h2 id="-">说明:</h2>
+<pre><code class="lang-php">void Gateway::sendToGroup(mixed <span class="hljs-variable">$group</span>, string <span class="hljs-variable">$message</span>);
+</code></pre>
+<p>向某个分组的所有client_id发送数据。</p>
+<h2 id="-">参数</h2>
+<ul>
+<li><code>$group</code></li>
+</ul>
+<p>group可以是字符串、数字、或者数组。如果为数组，则是给数组内所有group发送数据</p>
+<ul>
+<li><code>$message</code></li>
+</ul>
+<p>要发送的数据（字符串类型），此数据会被Gateway所使用协议的encode方法打包后再发送给客户端</p>
+<h2 id="-">范例</h2>
+<pre><code class="lang-php"><span class="hljs-keyword">use</span> \<span class="hljs-title">GatewayWorker</span>\<span class="hljs-title">Lib</span>\<span class="hljs-title">Gateway</span>;
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Event</span>
+{</span>
+    ...
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onMessage</span><span class="hljs-params">(<span class="hljs-variable">$client_id</span>, <span class="hljs-variable">$message</span>)</span>
+    {</span>
+        <span class="hljs-comment">// $message = '{"type":"send_to_group","group":"xxxxx", "message":"...."}'</span>
+        <span class="hljs-variable">$req_data</span> = json_decode(<span class="hljs-variable">$message</span>, <span class="hljs-keyword">true</span>);
+        Gateway::sendToGroup(<span class="hljs-variable">$req_data</span>[<span class="hljs-string">'group'</span>], <span class="hljs-variable">$req_data</span>[<span class="hljs-string">'message'</span>]);
+    }
+
+    ...
+}
+</code></pre>
 
                     
                     </section>
@@ -690,10 +719,10 @@
         </div>
 
         
-        <a href="../gateway-worker-development/gateway-worker-separation.html" class="navigation navigation-prev " aria-label="Previous page: Gateway Worker分离部署"><i class="fa fa-angle-left"></i></a>
+        <a href="../gateway-worker-development/leave-group.html" class="navigation navigation-prev " aria-label="Previous page: leaveGroup"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../advanced/push.html" class="navigation navigation-next " aria-label="Next page: 在其它项目中推送消息"><i class="fa fa-angle-right"></i></a>
+        <a href="../gateway-worker-development/get-client-count-by-group.html" class="navigation navigation-next " aria-label="Next page: getClientCountByGroup"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
