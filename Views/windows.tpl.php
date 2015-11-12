@@ -12,6 +12,9 @@
 		<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-for-win" target="_blank"><b>Fork on Github</b></a>&nbsp;
 		<a class="btn btn-default btn-large" href="/download/workermanwinzip"><b>下载ZIP压缩文件</b></a> <font class='f11 gray'>下载<?php echo $workermanwin_download_count;?>次</font>
 	<br><hr>
+	<h3>可用的windows demo</h3>
+	完整的windows版本workerman-chat见 [<a href="https://github.com/walkor/workerman-chat-for-win" rel="nofollow">workerman-chat-for-win</a>]<br>
+    完整的windows版本workerman-todpole见 [<a href="https://github.com/walkor/workerman-todpole-for-win" rel="nofollow">workerman-todpole-for-win</a>]
 	<h3>workerman-for-win安装教程</h3>
 	<br>
 	<h4>需要PHP版本>=5.3.3 并设置PHP的环境变量（参考下图）</h4>
