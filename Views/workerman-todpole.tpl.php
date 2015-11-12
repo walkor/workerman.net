@@ -29,6 +29,10 @@
 			<li>即时聊天</li>
 			<li>独立运行，不依赖Mysql、apache、nginx等软件</li>
 			</ul>
+			<p class="f16">
+			Linux版本GitHub地址：<a href="https://github.com/walkor/workerman-todpole" rel="nofollow">https://github.com/walkor/workerman-todpole</a>
+			<br>Windows版本GitHub地址：<a href="https://github.com/walkor/workerman-todpole-for-win" rel="nofollow">https://github.com/walkor/workerman-todpole-for-win</a>
+			</p>
 			<div class="bd-ad"><?php global $bd_ad_468_60; echo $bd_ad_468_60;?></div>
 		</div>
 		<div class="col-md-5 column text-center">

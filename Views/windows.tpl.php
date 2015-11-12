@@ -39,7 +39,8 @@
 <h5>3、解压到原Worekrman目录所在位置，同时目录workerman-for-win-master重命名为Workerman(注意第一个字母W为大写)，完成Workerman目录的替换</h5>
 <h5>4、双击start_for_win.bat启动（目前只有<a href="https://github.com/walkor/workerman-chat-for-win" rel="nofollow">workerman-chat-for-win</a>、<a href="https://github.com/walkor/workerman-todpole" rel="nofollow">workerman-todpole</a>两个应用有这个启动脚本，其它应用直接运行 php Applications/xxx/xxx.php 运行 ）</h5>
 <h5>5、浏览器访问地址 http://127.0.0.1:8383</h5>
-完整的windows版本workerman-chat见<a href="https://github.com/walkor/workerman-chat-for-win" rel="nofollow">workerman-chat-for-win</a>
+完整的windows版本workerman-chat见<a href="https://github.com/walkor/workerman-chat-for-win" rel="nofollow">workerman-chat-for-win</a><br>
+完整的windows版本workerman-todpole见<a href="https://github.com/walkor/workerman-todpole-for-win" rel="nofollow">workerman-todpole-for-win</a>
 	<br><hr>
 </div>
 <div class="col-md-2column">
