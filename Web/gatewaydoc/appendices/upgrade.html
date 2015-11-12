@@ -30,7 +30,7 @@
 
 
         
-    <div class="book"  data-level="8.2" data-basepath=".." data-revision="1447255156021">
+    <div class="book"  data-level="8.2" data-basepath=".." data-revision="1447303951724">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -676,7 +676,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_4281">
+                    <section class="normal" id="section-gitbook_713">
                     
                         <h1 id="1-0-2-0-">1.0升级到2.0注意事项</h1>
 <h2 id="-1-0-2-0">如何知道自己使用的版本是1.0还是2.0</h2>
@@ -697,6 +697,46 @@
 <p>4、Gateway::getOnlineStatus方法被删除，在2.0中请使用Gateway::getAllClientInfo替代，使用方法参见手册</p>
 <p>5、Lib/Gateway类增加unbindUid、getClientIdByUid、joinGroup、leaveGroup、sendToGroup、getClientCountByGroup、getClientInfoByGroup、getAllClientInfo等方法。</p>
 <p>6、多端口（多协议）应用中，可以通过<code>$_SERVER[&#39;GATEWAY_PORT&#39;]</code>户识别客户端连接的是哪个端口（使用的哪种协议）</p>
+<h2 id="1-0-2-0-">1.0到2.0升级注意事项</h2>
+<h3 id="-store-regiser-">框架不再依赖Store相关配置，统一使用Regiser注册服务，设置方法如下</h3>
+<p>1、需要增加一个register服务启动脚本start_register.php</p>
+<pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
+<span class="hljs-keyword">use</span> \<span class="hljs-title">Workerman</span>\<span class="hljs-title">Worker</span>;
+<span class="hljs-keyword">use</span> \<span class="hljs-title">GatewayWorker</span>\<span class="hljs-title">Register</span>;
+<span class="hljs-comment">// 自动加载类</span>
+<span class="hljs-keyword">require_once</span> <span class="hljs-keyword">__DIR__</span> . <span class="hljs-string">'/../../Workerman/Autoloader.php'</span>;
+<span class="hljs-comment">// 必须是text协议，端口与start_gateway.php和start_businessworker.php里面registerAddress一致</span>
+<span class="hljs-variable">$register</span> = <span class="hljs-keyword">new</span> Register(<span class="hljs-string">'text://0.0.0.0:1236'</span>);
+<span class="hljs-comment">// 如果不是在根目录启动，则运行runAll方法</span>
+<span class="hljs-keyword">if</span>(!defined(<span class="hljs-string">'GLOBAL_START'</span>))
+{
+    Worker::runAll();
+}
+</code></pre>
+<p>2、start_gateway.php中需要设置<code>$gateway-&gt;registerAddress</code>与start_register.php中端口一致</p>
+<pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
+<span class="hljs-keyword">use</span> \<span class="hljs-title">Workerman</span>\<span class="hljs-title">Worker</span>;
+<span class="hljs-keyword">use</span> \<span class="hljs-title">GatewayWorker</span>\<span class="hljs-title">Gateway</span>;
+<span class="hljs-keyword">use</span> \<span class="hljs-title">Workerman</span>\<span class="hljs-title">Autoloader</span>;
+<span class="hljs-keyword">require_once</span> <span class="hljs-keyword">__DIR__</span> . <span class="hljs-string">'/../../Workerman/Autoloader.php'</span>;
+
+<span class="hljs-variable">$gateway</span> = <span class="hljs-keyword">new</span> Gateway(<span class="hljs-string">"Websocket://0.0.0.0:7272"</span>);
+<span class="hljs-variable">$gateway</span>-&gt;name = <span class="hljs-string">'ChatGateway'</span>;
+<span class="hljs-variable">$gateway</span>-&gt;count = <span class="hljs-number">4</span>;
+<span class="hljs-variable">$gateway</span>-&gt;lanIp = <span class="hljs-string">'127.0.0.1'</span>;
+<span class="hljs-variable">$gateway</span>-&gt;startPort = <span class="hljs-number">2300</span>;
+<span class="hljs-variable">$gateway</span>-&gt;pingInterval = <span class="hljs-number">10</span>;
+<span class="hljs-variable">$gateway</span>-&gt;pingData = <span class="hljs-string">'{"type":"ping"}'</span>;
+<span class="hljs-comment">/**
+ * 服务注册地址
+ * 单机部署ip为127.0.0.1
+ * 端口与start_register.php中监听端口一致
+ */</span>
+<span class="hljs-variable">$gateway</span>-&gt;registerAddress = <span class="hljs-string">'127.0.0.1:1236'</span>;
+</code></pre>
+<p>3、start_businessworker.php也需要配置registerAddress，方法同上</p>
+<h3 id="client_id-">client_id由原来整型改为字符串</h3>
+<p>如果业务有依赖client_id类型需要注意</p>
 
                     
                     </section>
