@@ -1,19 +1,10 @@
 CACHE MANIFEST
-# Revision 1447303951724
+# Revision 1447306313139
 
 CACHE:
-feature/README.html
-advanced/README.html
-index.html
-advanced/multi-gatewayworker-instance.html
-advanced/multi-protocols.html
-advanced/push.html
-appendices/README.html
-appendices/mysql.html
-appendices/upgrade.html
-gateway-worker-development/join-group.html
 gateway-worker-development/README.html
 gateway-worker-development/business-worker.html
+gateway-worker-development/join-group.html
 gateway-worker-development/close-client.html
 gateway-worker-development/close-current-client.html
 gateway-worker-development/distributed.html
@@ -39,15 +30,25 @@ gateway-worker-development/router.html
 gateway-worker-development/send-to-all.html
 gateway-worker-development/send-to-client.html
 gateway-worker-development/send-to-current-client.html
-gateway-worker-development/send-to-group.html
 gateway-worker-development/send-to-uid.html
+gateway-worker-development/send-to-group.html
 gateway-worker-development/server.html
 gateway-worker-development/session.html
 gateway-worker-development/unbind-uid.html
 gateway-worker-development/why-distributed.html
+index.html
+advanced/README.html
+advanced/multi-gatewayworker-instance.html
+advanced/multi-protocols.html
+advanced/push.html
+appendices/README.html
+appendices/mysql.html
+appendices/upgrade.html
+feature/README.html
 getting-started/README.html
 license/README.html
 preface/README.html
+process-of-communication/README.html
 protocols/README.html
 gitbook\app.js
 gitbook\fonts\fontawesome\FontAwesome.otf
