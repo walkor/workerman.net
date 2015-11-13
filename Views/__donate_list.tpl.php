@@ -1,6 +1,7 @@
 <table class="table">
 	<tbody>
-		<tr class="active"><td>50.0￥</td><td>张华</td><td>2015-11-03</td><td>支付宝</td></tr>
+		<tr class="active"><td>6.0￥</td><td>陈乃栾</td><td>2015-11-13</td><td>微信</td></tr>
+		<tr class="active"><td>50.0￥</td><td>张华</td><td>2015-11-13</td><td>支付宝</td></tr>
 		<tr class="active"><td>50.0￥</td><td>王孙裕</td><td>2015-11-12</td><td>微信</td></tr>
 		<tr class="active"><td>7.85￥</td><td>曾建华</td><td>2015-11-11</td><td>微信</td></tr>
 		<tr class="active"><td>10.0￥</td><td>彭震11x</td><td>2015-11-10</td><td>微信</td></tr>
