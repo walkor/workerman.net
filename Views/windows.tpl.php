@@ -48,7 +48,7 @@
         <code>php your_file.php</code>(注意后面可以接多个文件)<br>
         注意windows版本没有stop、reload、restart、status命令，启动时直接运行 php 文件.php 即可，停止运行按ctrl+c
         <br>
-
+       <hr>
 </div>
 <div class="col-md-2column">
 </div>
