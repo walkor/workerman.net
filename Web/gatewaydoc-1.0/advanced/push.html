@@ -614,7 +614,9 @@
 <p>有时候需要在非WorkerMan环境中向客户端推送数据。例如在一个普通的Web项目中通过WorkerMan推送数据（前提是已经部署了WorkerMan，客户端已经连接WorkerMan）。目前有三种比较方便方法推送数据。（本节内容主要是针对Gateway/Worker模型的推送方法的讲解）</p>
 <h2 id="-gatewayclient-">方法一、使用GatewayClient客户端推送</h2>
 <p><strong>客户端地址：</strong></p>
-<p><a href="https://github.com/walkor/GatewayClient" target="_blank">https://github.com/walkor/GatewayClient</a></p>
+<p><a href="https://github.com/walkor/GatewayClient/archive/v1.0.zip" target="_blank">https://github.com/walkor/GatewayClient</a><br>
+<code>注意：GatewayWorker1.0请使用v1.0版本的GatewayClient</code>
+</p>
 <p><strong>使用方法：</strong></p>
 <p><strong>注意：</strong>如果项目与WorkerMan不在同一台服务器，需要安装redis，参考5.11 Config/Store配置章节。</p>
 <p><strong>注意：</strong>如果项目与WorkerMan在同一台服务器，并且Config/Store.php中<code>$driver = self::DRIVER_FILE;</code>，需要将<code>Store::$storePath = sys_get_temp_dir().&#39;/workerman-your-app/&#39;;</code>一行代码中<code>sys_get_temp_dir()</code>改成固定值，因为这个函数的返回值在两个项目可能不一致。</p>
