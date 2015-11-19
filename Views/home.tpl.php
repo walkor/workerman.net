@@ -121,7 +121,7 @@
 				<h4 class="media-heading">
 					<a target="_blank" href="/web-sender">Web消息推送系统</a>
 				</h4>
-				<p>web消息推送系统，能够通过socket 长连接实时推送消息给所有用户，基于PHPSocketIO开发，支持各种浏览器。
+				<p>web消息推送系统，能够通过socket 长连接实时推送消息给所有用户，基于PHPSocketIO开发，客户端使用socket.io客户端，支持各种浏览器。
 				<br><a target="_blank" class="btn" href="/web-sender">详情 »</a>
 				<a class="btn" target="_blank" href="https://github.com/walkor/web-msg-sender" rel="nofollow">下载源代码 »</a>
 				</p>
@@ -134,7 +134,7 @@
 					<a target="_blank" href="https://github.com/walkor/phpsocket.io" rel="nofollow">PHPSocket.IO</a>
 				</h4>
 				<p>
-				Socket.IO的PHP 服务端版本。Socket.IO 实现了实时双向的基于事件的通讯机制。旨在让各种浏览器及移动设备上实现实时app功能，模糊化各种传输机制。
+				PHPSocket.IO是Socket.IO的PHP 服务端版本。PHP版socket.io可用来替代传统nodejs版本socket.io服务端，并且接口与其一致，可用于开发跨浏览器或者安卓、ios等移动端即时通讯应用。
 				<br>
 				<a class="btn" target="_blank" href="https://github.com/walkor/phpsocket.io" rel="nofollow">下载源代码 »</a>
 				<a class="btn" target="_blank" href="/demos/phpsocketio-chat/" rel="nofollow">chat domo »</a>
