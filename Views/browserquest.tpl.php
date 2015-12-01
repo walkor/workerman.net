@@ -13,7 +13,7 @@
 			</h2>
 			<p class="f16">
 				BrowserQuest是一款HTML+PHP开发的多人在线网页游戏，通过websocket与后端服务器实现双向通讯，支持几乎所有浏览器，包括安卓和IOS上的Firefox上的Safari等浏览器。
-				这款有些由Mozilla发布，BrowserQuest-PHP对其改写，主要是将后台nodejs部分改成了PHP（Workerman框架）。
+				这款游戏由Mozilla发布，BrowserQuest-PHP对其改写，主要是将后台nodejs部分改成了PHP（Workerman框架）。
 			</p>
 			<p>
 			<h4><a href="http://www.workerman.net/demos/browserquest/" target="_blank">线上DEMO效果点击这里</a></h4>
