@@ -32,7 +32,7 @@
 <h5>1、进入源代码删除Workerman目录包括文件</h5>
 <h5>2、下载windows版本workerman，zip地址 <a href="https://github.com/walkor/workerman-for-win/archive/master.zip">https://github.com/walkor/workerman-for-win/archive/master.zip</a></h5>
 <h5>3、解压到原Worekrman目录所在位置，同时目录workerman-for-win-master重命名为Workerman，完成Workerman目录的替换</h5>
-<h5>4、cd Applications/Chat/，运行 php start_regiser.php start_gateway.php start_businessworker.php start_web.php start_web.php 完成启动</h5>
+<h5>4、cd Applications/Chat/，运行 php start_register.php start_gateway.php start_businessworker.php start_web.php start_web.php 完成启动</h5>
 <h5>5、浏览器访问地址 http://127.0.0.1:8181</h5>
 	<br><hr>
 
