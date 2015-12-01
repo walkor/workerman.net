@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# Revision 1447307658579
+# Revision 1448971908946
 
 CACHE:
 gateway-worker-development/join-group.html
@@ -10,8 +10,8 @@ gateway-worker-development/close-current-client.html
 gateway-worker-development/distributed.html
 gateway-worker-development/event-functions.html
 gateway-worker-development/gateway-worker-development.html
-gateway-worker-development/gateway.html
 gateway-worker-development/gateway-worker-separation.html
+gateway-worker-development/gateway.html
 gateway-worker-development/get-client-count-by-group.html
 gateway-worker-development/get-client-id-by-uid.html
 gateway-worker-development/get-client-info-by-group.html
@@ -50,6 +50,7 @@ license/README.html
 preface/README.html
 process-of-communication/README.html
 protocols/README.html
+start-and-stop/README.html
 gitbook\app.js
 gitbook\fonts\fontawesome\FontAwesome.otf
 gitbook\fonts\fontawesome\fontawesome-webfont.eot
