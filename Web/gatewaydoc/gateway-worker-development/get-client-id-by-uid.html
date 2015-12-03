@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="8.6.8" data-basepath=".." data-revision="1448971908945">
+    <div class="book"  data-level="8.6.8" data-basepath=".." data-revision="1449158332817">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -700,13 +700,15 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_75">
+                    <section class="normal" id="section-gitbook_548">
                     
                         <h1 id="-gatewayworker-lib-gateway-getclientidbyuid">\GatewayWorker\Lib\Gateway::getClientIdByUid</h1>
 <h2 id="-">说明:</h2>
-<pre><code class="lang-php">void Gateway::getClientIdByUid(mixed <span class="hljs-variable">$uid</span>);
+<pre><code class="lang-php"><span class="hljs-keyword">array</span> Gateway::getClientIdByUid(mixed <span class="hljs-variable">$uid</span>);
 </code></pre>
-<p>获取与uid绑定的所有client_id</p>
+<p>返回一个数组，数组元素为与uid绑定的所有在线的client_id。如果没有在线的client_id则返回一个空数组。</p>
+<p>此方法可以判断一个uid是否在线。</p>
+<p>注意：返回值为与uid绑定的所有在线的client_id数组。因为已经下线的client_id会自动与uid解绑，所以已经下线的client_id不会出现在返回值中。</p>
 <h2 id="-">参数</h2>
 <ul>
 <li><code>$uid</code></li>

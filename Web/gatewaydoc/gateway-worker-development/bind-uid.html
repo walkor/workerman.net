@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="8.6.7" data-basepath=".." data-revision="1448971908945">
+    <div class="book"  data-level="8.6.7" data-basepath=".." data-revision="1449158332817">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -700,7 +700,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_81">
+                    <section class="normal" id="section-gitbook_554">
                     
                         <h1 id="-gatewayworker-lib-gateway-binduid">\GatewayWorker\Lib\Gateway::bindUid</h1>
 <h2 id="-">说明:</h2>
@@ -708,7 +708,10 @@
 </code></pre>
 <p>将client_id与uid绑定，以便通过Gateway::sendToUid发送数据。</p>
 <p>该方法能方便的将client_id与其他系统uid绑定，通过uid来发送数据。</p>
-<p>注意：uid与client_id是一对多的关系，系统允许一个uid下有多个client_id。如果业务需要一对一的关系，可以通过Gateway::getClientIdByUid获得某uid已经绑定的client_id，然后开发者自行决定是踢掉之前的client_id还是忽略重复绑定。</p>
+<p>注意：</p>
+<p>1、uid与client_id是一对多的关系，系统允许一个uid下有多个client_id。</p>
+<p>2、如果业务需要一对一的关系，可以通过Gateway::getClientIdByUid获得某uid已经绑定的client_id，然后开发者自行决定是踢掉之前的client_id还是忽略重复绑定。</p>
+<p>3、client_id下线（连接断开）时会自动执行解绑，开发者无需调用Gateway::unbindUid解绑。</p>
 <h2 id="-">参数</h2>
 <ul>
 <li><code>$client_id</code></li>
