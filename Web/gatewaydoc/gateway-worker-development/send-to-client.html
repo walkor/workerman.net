@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="8.6.2" data-basepath=".." data-revision="1449158332817">
+    <div class="book"  data-level="8.6.2" data-basepath=".." data-revision="1449655712146">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -700,7 +700,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_563">
+                    <section class="normal" id="section-gitbook_424">
                     
                         <h1 id="-gatewayworker-lib-gateway-sendtoclient">\GatewayWorker\Lib\Gateway::sendToClient</h1>
 <h2 id="-">说明:</h2>
@@ -716,6 +716,9 @@
 <li><code>$send_data</code></li>
 </ul>
 <p>要发送的数据（字符串类型），此数据会被Gateway所使用协议的encode方法打包后再发送给客户端</p>
+<h3 id="-">返回值</h3>
+<p>因为数据发送是异步进行的，所以没有返回值。一般来说只要客户端在线就可以发送成功。</p>
+<p>发送前先可以用Gateway::isOnline判断下客户端是否在线。</p>
 <h2 id="-">范例</h2>
 <pre><code class="lang-php"><span class="hljs-keyword">use</span> \<span class="hljs-title">GatewayWorker</span>\<span class="hljs-title">Lib</span>\<span class="hljs-title">Gateway</span>;
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Event</span>
