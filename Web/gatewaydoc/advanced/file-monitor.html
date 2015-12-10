@@ -4,7 +4,7 @@
     <head>
         
         <meta charset="UTF-8">
-        <title>设置路由router | GatewayWorker2.0 手册</title>
+        <title>监控文件更新 | GatewayWorker2.0 手册</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 0.5.2">
@@ -17,10 +17,10 @@
     
     
     
-    <link rel="next" href="../gateway-worker-development/session.html" />
+    <link rel="next" href="../appendices/README.html" />
     
     
-    <link rel="prev" href="../gateway-worker-development/get-online-status.html" />
+    <link rel="prev" href="../advanced/multi-gatewayworker-instance.html" />
     
 
         
@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="8.7" data-basepath=".." data-revision="1449756443400">
+    <div class="book"  data-level="9.4" data-basepath=".." data-revision="1449756443400">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -602,7 +602,7 @@
             <div class="page-wrapper" tabindex="-1">
                 <div class="book-progress">
     <div class="bar">
-        <div class="inner" style="width: 79.59183673469387%;min-width: 77.55102040816327%;"></div>
+        <div class="inner" style="width: 93.87755102040816%;min-width: 91.83673469387755%;"></div>
     </div>
     <div class="chapters">
     
@@ -686,19 +686,19 @@
     
         <a href="../gateway-worker-development/router.html" title="设置路由router" class="chapter done " data-progress="8.7" style="left: 79.59183673469387%;"></a>
     
-        <a href="../gateway-worker-development/session.html" title="超全局数组$_SESSION" class="chapter  " data-progress="8.8" style="left: 81.63265306122449%;"></a>
+        <a href="../gateway-worker-development/session.html" title="超全局数组$_SESSION" class="chapter done " data-progress="8.8" style="left: 81.63265306122449%;"></a>
     
-        <a href="../gateway-worker-development/server.html" title="超全局数组$_SERVER" class="chapter  " data-progress="8.9" style="left: 83.6734693877551%;"></a>
+        <a href="../gateway-worker-development/server.html" title="超全局数组$_SERVER" class="chapter done " data-progress="8.9" style="left: 83.6734693877551%;"></a>
     
-        <a href="../advanced/README.html" title="高级应用" class="chapter  new-chapter" data-progress="9" style="left: 85.71428571428571%;"></a>
+        <a href="../advanced/README.html" title="高级应用" class="chapter done new-chapter" data-progress="9" style="left: 85.71428571428571%;"></a>
     
-        <a href="../advanced/push.html" title="在其它项目中推送消息" class="chapter  " data-progress="9.1" style="left: 87.75510204081633%;"></a>
+        <a href="../advanced/push.html" title="在其它项目中推送消息" class="chapter done " data-progress="9.1" style="left: 87.75510204081633%;"></a>
     
-        <a href="../advanced/multi-protocols.html" title="多协议支持" class="chapter  " data-progress="9.2" style="left: 89.79591836734694%;"></a>
+        <a href="../advanced/multi-protocols.html" title="多协议支持" class="chapter done " data-progress="9.2" style="left: 89.79591836734694%;"></a>
     
-        <a href="../advanced/multi-gatewayworker-instance.html" title="运行多个gatewayWorker实例" class="chapter  " data-progress="9.3" style="left: 91.83673469387755%;"></a>
+        <a href="../advanced/multi-gatewayworker-instance.html" title="运行多个gatewayWorker实例" class="chapter done " data-progress="9.3" style="left: 91.83673469387755%;"></a>
     
-        <a href="../advanced/file-monitor.html" title="监控文件更新" class="chapter  " data-progress="9.4" style="left: 93.87755102040816%;"></a>
+        <a href="../advanced/file-monitor.html" title="监控文件更新" class="chapter done " data-progress="9.4" style="left: 93.87755102040816%;"></a>
     
         <a href="../appendices/README.html" title="附录" class="chapter  " data-progress="10" style="left: 95.91836734693878%;"></a>
     
@@ -711,71 +711,13 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_265">
+                    <section class="normal" id="section-gitbook_277">
                     
-                        <h1 id="router">router</h1>
-<h2 id="-">说明:</h2>
-<pre><code class="lang-php">callback Gateway::<span class="hljs-variable">$router</span>
-</code></pre>
-<p>设置Gateway到BusinessWorker路由规则。默认规则是Gateway随机选择一个BusinessWorker进程，然后把当前client_id与这个BusinessWorker进程<strong>绑定</strong>，以后这个client_id的所有数据（onConnect/onMessage/onClose事件）都交给这个绑定的BusinessWorker进程处理。</p>
-<p>期待该回调函数从所有到BusinessWorker进程的连接对象中选择一个并返回。</p>
-<p><strong>注意：之前（2015-09-22日之前）版本GatewayWorker默认使用的是随机路由，也就是同一个client_id的onConnect/onMessage/onClose事件可能被不同的BusinessWorker进程处理，带来的问题是onConnect/onMessage/onClose可能并发执行甚至乱序执行。并且与client_id有绑定关系的定时器时可能与预期效果不符，例如同一个client_id的onConnect回调设置的定时器在onClose中可能无法删除，原因是两个回调可能被分配到不同的BusinessWorker进程处理。以上问题在2015-09-22之后的版本通过绑定路由得到了修正，开发者到原来应用下载地址重新下载自己的应用即可得到最新的GatewayWorker版本</strong></p>
-<h2 id="-">回调函数的参数</h2>
-<p><code>$worker_connnections</code></p>
-<p>是一个数组，里面包含了所有到BusinessWorker进程的连接对象。数组的key为BusinessWorker进程的通讯地址，格式为ip:port。回调函数最终将返回该数组中一个连接对象。</p>
-<p><code>$client_connection</code></p>
-<p>客户端连接对象,可以通过此对象获得客户端ip端口等信息</p>
-<p><code>$cmd</code></p>
-<p>当前什么类型的消息，是个数字，分别可能为</p>
-<p>1: CMD_ON_CONNECTION，即连接事件</p>
-<p>2: CMD_ON_MESSAGE，即消息事件</p>
-<p>3: CMD_ON_CLOSE，即客户端关闭事件</p>
-<p><code>$buffer</code></p>
-<p>客户端发来的数据。注意只有当 <code>$cmd</code> 为<code>2</code>时 <code>$buffer</code>才有值</p>
-<h2 id="-">返回值</h2>
-<p>返回 <code>$worker_connnections</code> 中的一个连接对象</p>
-<h2 id="-1-">范例 1 随机路由</h2>
-<pre><code class="lang-php"><span class="hljs-keyword">use</span> \<span class="hljs-title">GatewayWorker</span>\<span class="hljs-title">Gateway</span>;
-<span class="hljs-variable">$gateway</span> = <span class="hljs-keyword">new</span> Gateway(<span class="hljs-string">"Websocket://0.0.0.0:8585"</span>);
-<span class="hljs-comment">// ===随机路由开始===</span>
-<span class="hljs-variable">$gateway</span>-&gt;router = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(<span class="hljs-variable">$worker_connections</span>, <span class="hljs-variable">$client_connection</span>, <span class="hljs-variable">$cmd</span>, <span class="hljs-variable">$buffer</span>)</span>
-{</span>
-    <span class="hljs-keyword">return</span> <span class="hljs-variable">$worker_connections</span>[array_rand(<span class="hljs-variable">$worker_connections</span>)];
-};
-<span class="hljs-comment">// ===随机路由结束===</span>
-
-<span class="hljs-variable">$gateway</span>-&gt;name = ...
-...省略...
-
-<span class="hljs-keyword">if</span>(!defined(<span class="hljs-string">'GLOBAL_START'</span>))
-{
-    Worker::runAll();
-}
-</code></pre>
-<h2 id="-2-">范例 2 随机绑定</h2>
-<pre><code class="lang-php"><span class="hljs-keyword">use</span> \<span class="hljs-title">GatewayWorker</span>\<span class="hljs-title">Gateway</span>;
-<span class="hljs-variable">$gateway</span> = <span class="hljs-keyword">new</span> Gateway(<span class="hljs-string">"Websocket://0.0.0.0:8585"</span>);
-
-<span class="hljs-comment">// ==绑定==</span>
-<span class="hljs-variable">$gateway</span>-&gt;router = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(<span class="hljs-variable">$worker_connections</span>, <span class="hljs-variable">$client_connection</span>, <span class="hljs-variable">$cmd</span>, <span class="hljs-variable">$buffer</span>)</span>
-{</span>
-    <span class="hljs-comment">// 临时给客户端连接设置一个businessworker属性，用来存储该连接被绑定的worker进程</span>
-    <span class="hljs-keyword">if</span>(!<span class="hljs-keyword">isset</span>(<span class="hljs-variable">$client_connection</span>-&gt;businessworker))
-    {
-        <span class="hljs-variable">$client_connection</span>-&gt;businessworker = <span class="hljs-variable">$worker_connections</span>[array_rand(<span class="hljs-variable">$worker_connections</span>)];
-    }
-    <span class="hljs-keyword">return</span> <span class="hljs-variable">$client_connection</span>-&gt;businessworker;
-};
-<span class="hljs-comment">// ==绑定==</span>
-
-<span class="hljs-variable">$gateway</span>-&gt;name = ...
-...省略...
-
-<span class="hljs-keyword">if</span>(!defined(<span class="hljs-string">'GLOBAL_START'</span>))
-{
-    Worker::runAll();
-}
-</code></pre>
+                        <h1 id="-">监控文件更新</h1>
+<p>GatewayWorker是常驻内存的，磁盘上的文件更改后需要reload或者restart后才能生效，这在开发功能时非常麻烦。</p>
+<p>为解决这个问题，Workerman官方提供了一个文件监控及自动reload服务。</p>
+<p>代码地址在：<a href="https://github.com/walkor/workerman-filemonitor" target="_blank">https://github.com/walkor/workerman-filemonitor</a></p>
+<p>把FileMonitor目录放到你的Applications下重启即可。</p>
 
                     
                     </section>
@@ -785,10 +727,10 @@
         </div>
 
         
-        <a href="../gateway-worker-development/get-online-status.html" class="navigation navigation-prev " aria-label="Previous page: getALLClientInfo"><i class="fa fa-angle-left"></i></a>
+        <a href="../advanced/multi-gatewayworker-instance.html" class="navigation navigation-prev " aria-label="Previous page: 运行多个gatewayWorker实例"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../gateway-worker-development/session.html" class="navigation navigation-next " aria-label="Next page: 超全局数组$_SESSION"><i class="fa fa-angle-right"></i></a>
+        <a href="../appendices/README.html" class="navigation navigation-next " aria-label="Next page: 附录"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
