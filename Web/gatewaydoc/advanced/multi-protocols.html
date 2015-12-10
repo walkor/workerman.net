@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="9.2" data-basepath=".." data-revision="1449655712146">
+    <div class="book"  data-level="9.2" data-basepath=".." data-revision="1449739562554">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -700,7 +700,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_435">
+                    <section class="normal" id="section-gitbook_123">
                     
                         <h1 id="-">多协议支持</h1>
 <h2 id="-">需求</h2>
@@ -727,8 +727,8 @@ Autoloader::setRootPath(<span class="hljs-keyword">__DIR__</span>);
 <span class="hljs-variable">$gateway_text</span>-&gt;count = <span class="hljs-number">4</span>;
 <span class="hljs-comment">// 本机ip（分布式部署时需要设置成内网ip）</span>
 <span class="hljs-variable">$gateway_text</span>-&gt;lanIp = <span class="hljs-string">'127.0.0.1'</span>;
-<span class="hljs-comment">// 设置服务注册地址</span>
-<span class="hljs-variable">$gateway_text</span>-&gt;registerAddress = <span class="hljs-string">'127.0.0.1:1236'</span>;
+<span class="hljs-comment">// 设置服务注册地址(注意：这个地址是start_register.php中监听的地址)</span>
+<span class="hljs-variable">$gateway_text</span>-&gt;registerAddress = <span class="hljs-string">'127.0.0.1:1237'</span>;
 <span class="hljs-comment">// gateway内部通讯起始端口，起始端口不要重复</span>
 <span class="hljs-variable">$gateway_text</span>-&gt;startPort = <span class="hljs-number">2500</span>;
 <span class="hljs-comment">// 也可以设置心跳，这里省略</span>
