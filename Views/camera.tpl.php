@@ -16,7 +16,7 @@
 				再由后端广播给所有在线播放网页，观看者可以通过这个播放页面实时观看摄像头拍摄的内容。此应用支持部分手机浏览器调用摄像头直播摄像头视频流。
 			</p>
 			<h3>线上Demo</h3>
-			<p class="f16"><a href="/demos/live-camera/" target="_blank">摄像头录制页面</a></p>
+			<p class="f16"><a href="/demos/live-camera/camera.html" target="_blank">摄像头录制页面</a></p>
 			<p class="f16"><a href="/demos/live-camera/" target="_blank">实时接收视频流页面</a></p>
 			<div class="bd-ad"><?php global $bd_ad_468_60; echo $bd_ad_468_60;?></div>
 		</div>
