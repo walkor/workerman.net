@@ -43,7 +43,7 @@
 <h5>6、 make</h5>
 <h5>7、 make install</h5>
 <h5>8、 pecl install channel://pecl.php.net/libevent-0.1.0</h5>
-<h5>9、 echo extension=libevent.so > /etc/phpd/libevent.ini</h5>
+<h5>9、 echo extension=libevent.so > /etc/php.d/libevent.ini</h5>
 <h5>10、 git clone https://github.com/walkor/workerman</h5>
 <h5>5、参考<a href="http://doc3.workerman.net/getting-started/simple-example.html" target="_blank">手册</a>写例子运行或者从主页下载<a href="/applications">demo</a>运行</h5>
 	</div>
