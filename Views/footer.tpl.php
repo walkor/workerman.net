@@ -47,8 +47,8 @@
 						<li>邮箱：walkor@workerman.net</li>
 						<li>
 						QQ群1：257046084(已满)<br>
-						QQ群2：137410824<br>
-						<a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=8296bbb9225f1f528c0a68cdcbab49e4fd159a625bd0faf3fda0e81d0fdfe86b"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="workerman官方群2" title="workerman官方群2"></a>
+						QQ群2：137410824(已满)<br>
+						QQ群3：527941005
 						</li>
 						</ul>
 					</div>
