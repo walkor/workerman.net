@@ -355,8 +355,7 @@
 			</li>
 			<li><b class="c2">发邮件至&nbsp;walkor@workerman.net</b></li>
 			<li>
-				<a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=8296bbb9225f1f528c0a68cdcbab49e4fd159a625bd0faf3fda0e81d0fdfe86b"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="workerman官方群2" title="workerman官方群2"></a>
-				 137410824
+				 加入QQ群：527941005
 			</li>
 		</ul>
 		<br>
