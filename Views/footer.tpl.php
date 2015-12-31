@@ -49,6 +49,7 @@
 						QQ群1：257046084(已满)<br>
 						QQ群2：137410824(已满)<br>
 						QQ群3：527941005
+						<a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=beb88dc6303c25e893ac433260e7c682b27efd3935eeb060d7ede5b213ff13fc"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="workerman官方群3" title="workerman官方群3"></a>
 						</li>
 						</ul>
 					</div>
