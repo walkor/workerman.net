@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# Revision 1450347231794
+# Revision 1452175069457
 
 CACHE:
 gateway-worker-development/join-group.html
@@ -18,9 +18,9 @@ gateway-worker-development/get-client-info-by-group.html
 gateway-worker-development/get-online-status.html
 gateway-worker-development/heartbeat.html
 gateway-worker-development/how-distributed.html
-gateway-worker-development/is-online.html
-gateway-worker-development/bind-uid.html
 gateway-worker-development/leave-group.html
+gateway-worker-development/bind-uid.html
+gateway-worker-development/is-online.html
 gateway-worker-development/lib-gateway-functions.html
 gateway-worker-development/onclose.html
 gateway-worker-development/onconnect.html
@@ -29,14 +29,14 @@ gateway-worker-development/register.html
 gateway-worker-development/router.html
 gateway-worker-development/send-to-all.html
 gateway-worker-development/send-to-client.html
-gateway-worker-development/send-to-current-client.html
 gateway-worker-development/send-to-group.html
 gateway-worker-development/send-to-uid.html
-gateway-worker-development/server.html
+gateway-worker-development/send-to-current-client.html
 gateway-worker-development/session.html
+gateway-worker-development/server.html
 gateway-worker-development/unbind-uid.html
-gateway-worker-development/why-distributed.html
 index.html
+gateway-worker-development/why-distributed.html
 advanced/README.html
 advanced/file-monitor.html
 advanced/multi-gatewayworker-instance.html
@@ -45,12 +45,14 @@ advanced/push.html
 appendices/README.html
 appendices/mysql.html
 appendices/upgrade.html
+faq/get-gateway-port.html
+faq/get-ip.html
 feature/README.html
 getting-started/README.html
 license/README.html
 preface/README.html
-process-of-communication/README.html
 protocols/README.html
+process-of-communication/README.html
 start-and-stop/README.html
 gitbook\app.js
 gitbook\fonts\fontawesome\FontAwesome.otf
