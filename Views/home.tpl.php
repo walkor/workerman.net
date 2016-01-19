@@ -285,6 +285,9 @@
 		</h4>
 		<ul>
 			<li>
+				2016-01-18 分布式进程间通讯组件Channel发布
+			</li>
+			<li>
 				2015-11-11 GatewayWorker2.0发布
 			</li>
  			<li>
