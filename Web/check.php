@@ -34,5 +34,26 @@ echo "PHP Version >= 5.3.3                 " . check($version_ok);
 echo "Extension pcntl check                " . check($pcntl_loaded);
 
 echo "Extension posix check                " . check($posix_loaded);
+
+$check_func_map = array(
+    "stream_socket_server",
+    "stream_socket_client",
+    "pcntl_signal_dispatch",
+);
+// 获取php.ini中设置的禁用函数
+if($disable_func_string = ini_get("disable_functions"))
+{
+    $disable_func_map = array_flip(explode(",", $disable_func_string));
+}
+// 遍历查看是否有禁用的函数
+foreach($check_func_map as $func)
+{
+    if(isset($disable_func_map[$func]))
+    {
+        echo "\n\033[31;40mFunction $func may be disabled. Please check disable_functions in php.ini\n";
+        echo "see http://doc3.workerman.net/faq/disable-function-check.html\033[0m\n";
+        exit;
+    }
+}
 ';
 
