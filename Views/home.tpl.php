@@ -265,6 +265,18 @@
 				</p>
 			</div>
 		</div>
+		<div class="media">
+			 <a href="https://github.com/walkor/workerman-queue" class="pull-left" rel="nofollow"><img src="/img/workerman-queue.png" class="media-object" alt="workerman 消息队列" /></a>
+			<div class="media-body">
+				<h4 class="media-heading">
+					<a target="_blank" href="https://github.com/walkor/workerman-queue" rel="nofollow">workerman消息队列</a>
+				</h4>
+				<p>一个简单的消息队列demo，基于Linux sysv 队列实现，需要开启sysvmsg扩展
+				<br><a target="_blank" class="btn" href="https://github.com/walkor/workerman-queue" rel="nofollow">详情 »</a>
+				<a class="btn" target="_blank" href="https://github.com/walkor/workerman-queue" rel="nofollow">下载源代码 »</a>
+				</p>
+			</div>
+		</div>
 	</div>
 	<div class="col-md-5 column">
 		<h3></h3>
