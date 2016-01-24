@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="10.1" data-basepath=".." data-revision="1453019624401">
+    <div class="book"  data-level="10.1" data-basepath=".." data-revision="1453651277791">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -750,14 +750,14 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_47">
+                    <section class="normal" id="section-gitbook_135">
                     
                         <h2 id="gateway-worker-">Gateway/Worker模型 数据库使用示例</h2>
 <h2 id="-">说明</h2>
 <p>常驻内存的程序在使用mysql时经常会遇到<code>mysql gone away</code>的错误，这个是由于程序与mysql的连接长时间没有通讯，连接被mysql服务端踢掉导致。GatewayWorker提供了一个mysql类，可以解决这个问题，当发生<code>mysql gone away</code>错误时，会自动重试一次。</p>
 <h2 id="-">注意</h2>
 <p>不要直接在<code>your_file.php</code>直接使用这个mysql类，会导致错误。请在<code>onXXXX</code>回调中使用这个数据库类。</p>
-<p>1、数据库配置XXX/Config/Db.php（如果没有此文件请手动创建）</p>
+<p>1、数据库配置Applications/项目/Config/Db.php（如果没有此文件请手动创建），例如聊天室的话就是Applications/Chat/Config/Db.php</p>
 <pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
 <span class="hljs-keyword">namespace</span> <span class="hljs-title">Config</span>;
 <span class="hljs-comment">/**
@@ -768,22 +768,22 @@
 {</span>
     <span class="hljs-comment">/**
      * 数据库的一个实例配置，则使用时像下面这样使用
-     * $user_array = Db::instance('user')-&gt;select('name,age')-&gt;from('users')-&gt;where('age&gt;12')-&gt;query();
+     * $user_array = Db::instance('db1')-&gt;select('name,age')-&gt;from('users')-&gt;where('age&gt;12')-&gt;query();
      * 等价于
-     * $user_array = Db::instance('user')-&gt;query('SELECT `name`,`age` FROM `users` WHERE `age`&gt;12');
+     * $user_array = Db::instance('db1')-&gt;query('SELECT `name`,`age` FROM `users` WHERE `age`&gt;12');
      *<span class="hljs-phpdoc"> @var</span> array
      */</span>
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-variable">$user</span> = <span class="hljs-keyword">array</span>(
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-variable">$db1</span> = <span class="hljs-keyword">array</span>(
         <span class="hljs-string">'host'</span>    =&gt; <span class="hljs-string">'127.0.0.1'</span>,
         <span class="hljs-string">'port'</span>    =&gt; <span class="hljs-number">3306</span>,
         <span class="hljs-string">'user'</span>    =&gt; <span class="hljs-string">'your_user_name'</span>,
         <span class="hljs-string">'password'</span> =&gt; <span class="hljs-string">'your_password'</span>,
-        <span class="hljs-string">'dbname'</span>  =&gt; <span class="hljs-string">'user'</span>,
+        <span class="hljs-string">'dbname'</span>  =&gt; <span class="hljs-string">'your_db_name'</span>,
         <span class="hljs-string">'charset'</span>    =&gt; <span class="hljs-string">'utf8'</span>,
     );
 }
 </code></pre>
-<p>2、XXX/Event.php</p>
+<p>2、项目/Event.php</p>
 <pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
 <span class="hljs-keyword">use</span> \<span class="hljs-title">GatewayWorker</span>\<span class="hljs-title">Lib</span>\<span class="hljs-title">Gateway</span>;
 <span class="hljs-keyword">use</span> \<span class="hljs-title">GatewayWorker</span>\<span class="hljs-title">Lib</span>\<span class="hljs-title">Db</span>;
@@ -831,7 +831,7 @@
         <span class="hljs-string">'port'</span>    =&gt; <span class="hljs-number">3306</span>,
         <span class="hljs-string">'user'</span>    =&gt; <span class="hljs-string">'mysql_user'</span>,
         <span class="hljs-string">'password'</span> =&gt; <span class="hljs-string">'mysql_password'</span>,
-        <span class="hljs-string">'dbname'</span>  =&gt; <span class="hljs-string">'db1'</span>,
+        <span class="hljs-string">'dbname'</span>  =&gt; <span class="hljs-string">'database_name1'</span>,
         <span class="hljs-string">'charset'</span>    =&gt; <span class="hljs-string">'utf8'</span>,
     );
 
@@ -841,7 +841,7 @@
         <span class="hljs-string">'port'</span>    =&gt; <span class="hljs-number">3306</span>,
         <span class="hljs-string">'user'</span>    =&gt; <span class="hljs-string">'mysql_user'</span>,
         <span class="hljs-string">'password'</span> =&gt; <span class="hljs-string">'mysql_password'</span>,
-        <span class="hljs-string">'dbname'</span>  =&gt; <span class="hljs-string">'db2'</span>,
+        <span class="hljs-string">'dbname'</span>  =&gt; <span class="hljs-string">'database_name2'</span>,
         <span class="hljs-string">'charset'</span>    =&gt; <span class="hljs-string">'utf8'</span>,
     );
 }
