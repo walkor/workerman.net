@@ -4,7 +4,7 @@
     <head>
         
         <meta charset="UTF-8">
-        <title>BusinessWorker类的使用 | GatewayWorker2.0 手册</title>
+        <title>processTimeout | GatewayWorker2.0 手册</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 0.5.2">
@@ -17,10 +17,10 @@
     
     
     
-    <link rel="next" href="../gateway-worker-development/property-and-callback.html" />
+    <link rel="next" href="../gateway-worker-development/process-timeout-handler.html" />
     
     
-    <link rel="prev" href="../gateway-worker-development/gateway.html" />
+    <link rel="prev" href="../gateway-worker-development/event-handler.html" />
     
 
         
@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="8.3" data-basepath=".." data-revision="1453902247764">
+    <div class="book"  data-level="8.3.1.2" data-basepath=".." data-revision="1453902247764">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -692,7 +692,7 @@
             <div class="page-wrapper" tabindex="-1">
                 <div class="book-progress">
     <div class="bar">
-        <div class="inner" style="width: 28.07017543859649%;min-width: 26.31578947368421%;"></div>
+        <div class="inner" style="width: 33.333333333333336%;min-width: 31.57894736842105%;"></div>
     </div>
     <div class="chapters">
     
@@ -730,11 +730,11 @@
     
         <a href="../gateway-worker-development/business-worker.html" title="BusinessWorker类的使用" class="chapter done " data-progress="8.3" style="left: 28.07017543859649%;"></a>
     
-        <a href="../gateway-worker-development/property-and-callback.html" title="属性及回调" class="chapter  " data-progress="8.3.1" style="left: 29.82456140350877%;"></a>
+        <a href="../gateway-worker-development/property-and-callback.html" title="属性及回调" class="chapter done " data-progress="8.3.1" style="left: 29.82456140350877%;"></a>
     
-        <a href="../gateway-worker-development/event-handler.html" title="eventHandler" class="chapter  " data-progress="8.3.1.1" style="left: 31.57894736842105%;"></a>
+        <a href="../gateway-worker-development/event-handler.html" title="eventHandler" class="chapter done " data-progress="8.3.1.1" style="left: 31.57894736842105%;"></a>
     
-        <a href="../gateway-worker-development/process-timeout.html" title="processTimeout" class="chapter  " data-progress="8.3.1.2" style="left: 33.333333333333336%;"></a>
+        <a href="../gateway-worker-development/process-timeout.html" title="processTimeout" class="chapter done " data-progress="8.3.1.2" style="left: 33.333333333333336%;"></a>
     
         <a href="../gateway-worker-development/process-timeout-handler.html" title="processTimeoutHandler" class="chapter  " data-progress="8.3.1.3" style="left: 35.08771929824562%;"></a>
     
@@ -817,27 +817,79 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_132">
+                    <section class="normal" id="section-gitbook_156">
                     
-                        <h1 id="businessworker-">BusinessWorker类的使用</h1>
-<p>BusinessWorker类其实也是基于基础的Worker开发的。由于BusinessWorker进程中无法直接操作Gateway进程的连接，也就无法获得连接对象，所以无法使用BusinessWorker的onConnect、onMessage、onClose属性，请开发者不要设置以上回调属性。开发者仍然可以设置onWorkerStart、onWorkerStop属性。</p>
-<p>BusinessWorker的相关回调函数在项目中的Event.php中定义，具体内容参见下一节</p>
-<h2 id="businessworker-">BusinessWorker类可以定制的内容</h2>
-<p>1、name</p>
-<p>和Worker一样，可以设置BusinessWorker进程的名称，方便status命令中查看统计</p>
-<p>2、count</p>
-<p>和Worker一样，可以设置BusinessWorker进程的数量，以便充分利用多cpu资源</p>
-<p>3、registerAddress，注册服务地址，只写格式类似于 &#39;127.0.0.1:1236&#39;</p>
-<p>4、onWorkerStart</p>
-<p>和Worker一样，可以设置BusinessWorker启动后的回调函数，一般在这个回调里面初始化一些全局数据</p>
-<p>5、onWorkerStop</p>
-<p>和Worker一样，可以设置BusinessWorker关闭的回调函数，一般在这个回调里面做数据清理或者保存数据工作</p>
-<h2 id="-event">业务处理类 Event</h2>
-<p>Event类为业务处理的入口文件，当有客户端事件发生时会触发相应的回调如下：</p>
-<p>1、当客户端连接到Gateway时，会触发<code>Event::onConnect($client_id)</code>回调。</p>
-<p>2、当客户端发来数据时，会触发<code>Event::onMessage($client_id, $data)</code>回调。</p>
-<p>3、当客户端关闭时，会触发<code>Event::onClose($client_id)</code>回调。</p>
-<p><strong>Event详细文档参见下一节</strong></p>
+                        <h1 id="processtimeout">processTimeout</h1>
+<h2 id="-">说明:</h2>
+<pre><code class="lang-php">int BusinessWorker::<span class="hljs-variable">$processTimeout</span>
+</code></pre>
+<p><strong>(注意：此特性需要GatewayWorker版本&gt;=2.0.2，如何查看版本号参考《常见问题》一章)</strong></p>
+<p>(此属性一般不用设置)</p>
+<p>设置监控服务端业务超时时间（单位秒）。不设置默认是30秒，设置为0表示不监控。</p>
+<p>此属性用于监控<code>Event::onConnect Event::onMessage Event::onClose</code>的执行时间，单次执行时间如果超过<code>BusinessWorker::$processTimeout</code>设定的值，则记录一条日志到workerman.log，日志中包含超时的调用栈，这对于排查业务长时间阻塞以及死循环等问题非常有帮助。</p>
+<p>注意：此属性需要在Event.php文件头部设置一条语句<code>declare(ticks=1);</code>才能生效，见下面示例。</p>
+<h2 id="-">范例</h2>
+<p>start_businessworker.php</p>
+<pre><code class="lang-php"><span class="hljs-keyword">use</span> \<span class="hljs-title">Workerman</span>\<span class="hljs-title">Worker</span>;
+<span class="hljs-keyword">use</span> \<span class="hljs-title">GatewayWorker</span>\<span class="hljs-title">BusinessWorker</span>;
+
+<span class="hljs-variable">$worker</span> = <span class="hljs-keyword">new</span> BusinessWorker();
+<span class="hljs-variable">$worker</span>-&gt;name = <span class="hljs-string">'ChatBusinessWorker'</span>;
+<span class="hljs-variable">$worker</span>-&gt;count = <span class="hljs-number">4</span>;
+<span class="hljs-variable">$worker</span>-&gt;registerAddress = <span class="hljs-string">'127.0.0.1:1236'</span>;
+
+<span class="hljs-comment">// 设置业务超时时间10秒，需要配合业务</span>
+<span class="hljs-variable">$worker</span>-&gt;processTimeout = <span class="hljs-number">10</span>;
+
+<span class="hljs-keyword">if</span>(!defined(<span class="hljs-string">'GLOBAL_START'</span>))
+{
+    Worker::runAll();
+}
+</code></pre>
+<p>Event.php</p>
+<p>需要在文件头部增加<code>declare(ticks=1);</code>语句，添加后运行<code>php start.php reload</code>即可生效。</p>
+<pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
+<span class="hljs-comment">/**
+ * BusinessWorker::$processTimeout 属性需要配合declare(ticks=1)才能生效
+ */</span>
+<span class="hljs-keyword">declare</span>(ticks=<span class="hljs-number">1</span>);
+
+<span class="hljs-keyword">use</span> \<span class="hljs-title">GatewayWorker</span>\<span class="hljs-title">Lib</span>\<span class="hljs-title">Gateway</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Event</span>
+{</span>
+   <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onMessage</span><span class="hljs-params">(<span class="hljs-variable">$client_id</span>, <span class="hljs-variable">$message</span>)</span>
+   {</span>
+       <span class="hljs-keyword">self</span>::testTimeout();
+   }
+
+   <span class="hljs-keyword">protected</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">testTimeout</span><span class="hljs-params">()</span>
+   {</span>
+       <span class="hljs-comment">// 故意放一个死循环</span>
+       <span class="hljs-keyword">while</span>(<span class="hljs-number">1</span>)
+       {
+           sleep(<span class="hljs-number">1</span>);
+       }
+   }
+}
+</code></pre>
+<p>以上应用运行后，会在GatewayWorker/workerman.log(设置Worker::$logFile可以更改日志路径)里面产生业务超时日志，日志内容类似如下。</p>
+<pre><code>process_timeout:
+#1 /home/GatewayWorker/Applications/YourApp/Event.php(14): Event::testTimeout()
+#2 [internal function]: Event::onMessage(&#39;7f0000010b54000...&#39;, &#39;test msg&#39;)
+#3 /home/GatewayWorker/GatewayWorker/BusinessWorker.php(264): call_user_func(&#39;Event::onMessag...&#39;, &#39;7f0000010b54000...&#39;, &#39;test msg&#39;)
+#4 [internal function]: GatewayWorker\BusinessWorker-&gt;onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#5 /home/GatewayWorker/Workerman/Connection/TcpConnection.php(453): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#6 [internal function]: Workerman\Connection\TcpConnection-&gt;baseRead(Resource id #49, 2, NULL)
+#7 /home/GatewayWorker/Workerman/Events/Libevent.php(221): event_base_loop(Resource id #32)
+#8 /home/GatewayWorker/Workerman/Worker.php(1507): Workerman\Events\Libevent-&gt;loop()
+#9 /home/GatewayWorker/GatewayWorker/BusinessWorker.php(121): Workerman\Worker-&gt;run()
+#10 /home/GatewayWorker/Workerman/Worker.php(900): GatewayWorker\BusinessWorker-&gt;run()
+#11 /home/GatewayWorker/Workerman/Worker.php(860): Workerman\Worker::forkOneWorker(Object(GatewayWorker\BusinessWorker))
+#12 /home/GatewayWorker/Workerman/Worker.php(387): Workerman\Worker::forkWorkers()
+#13 /home/GatewayWorker/start.php(32): Workerman\Worker::runAll()
+#14 {main}
+</code></pre><p>从上面日志中可以看到业务代码在/home/GatewayWorker/Applications/YourApp/Event.php的第14行运行Event::testTimeout()时超时</p>
 
                     
                     </section>
@@ -847,10 +899,10 @@
         </div>
 
         
-        <a href="../gateway-worker-development/gateway.html" class="navigation navigation-prev " aria-label="Previous page: Gateway类的使用"><i class="fa fa-angle-left"></i></a>
+        <a href="../gateway-worker-development/event-handler.html" class="navigation navigation-prev " aria-label="Previous page: eventHandler"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../gateway-worker-development/property-and-callback.html" class="navigation navigation-next " aria-label="Next page: 属性及回调"><i class="fa fa-angle-right"></i></a>
+        <a href="../gateway-worker-development/process-timeout-handler.html" class="navigation navigation-next " aria-label="Next page: processTimeoutHandler"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
