@@ -370,8 +370,8 @@
 			</li>
 			<li><b class="c2">发邮件至&nbsp;walkor@workerman.net</b></li>
 			<li>
-				 QQ群：527941005
-				 <a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=beb88dc6303c25e893ac433260e7c682b27efd3935eeb060d7ede5b213ff13fc"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="workerman官方群3" title="workerman官方群3"></a>
+				 QQ群：137410824
+				 <a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=a7255bef60d796f72b1d7f16b2f6a745fd74ab1d15d6c9de6e031f3978817c3c"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="workerman官方群2" title="workerman官方群2"></a>
 			</li>
 		</ul>
 		<br>
