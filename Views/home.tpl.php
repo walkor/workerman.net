@@ -142,6 +142,19 @@
 			</div>
 		</div>
 		<div class="media">
+			 <a href="https://github.com/walkor/php-websocketd" class="pull-left" target="_blank" rel="nofollow"><img src="/img/php-websocketd.png" class="media-object" /></a>
+			<div class="media-body">
+				<h4 class="media-heading">
+					<a target="_blank" href="https://github.com/walkor/php-websocketd" rel="nofollow">php-websocketd</a>
+				</h4>
+				<p>
+				php-websocketd是一个服务端守护程序，可以将指定任意程序(Python, Ruby, Perl, C等程序或者系统命令)的运行结果通过websocket传输到浏览器上实时展示。例如打印tail -f /var/log/php_errors.log结果用于监控错误日志；例如展示htop结果，监控服务器系统等。
+				<br>
+				<a class="btn" target="_blank" href="https://github.com/walkor/php-websocketd" rel="nofollow">下载源代码 »</a>
+				</p>
+			</div>
+		</div>
+		<div class="media">
 			 <a href="/demos/vmstat/" class="pull-left" target="_blank"><img src="/img/workerman-vmstat.png" class="media-object" alt="web vmstat"/></a>
 			<div class="media-body">
 				<h4 class="media-heading">
@@ -296,6 +309,9 @@
 			最近更新
 		</h4>
 		<ul>
+			<li>
+				2016-02-16 php-websocketd发布
+			</li>
 			<li>
 				2016-01-18 分布式进程间通讯组件Channel发布
 			</li>
