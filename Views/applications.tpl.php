@@ -68,15 +68,16 @@
 			</div>
 		</div>
 		<div class="media">
-			 <a href="https://github.com/walkor/php-websocketd" class="pull-left" target="_blank" rel="nofollow"><img src="/img/php-websocketd.png" class="media-object" /></a>
+			 <a href="https://github.com/walkor/phptty" class="pull-left" target="_blank" rel="nofollow"><img src="/img/php-websocketd.png" class="media-object" /></a>
 			<div class="media-body">
 				<h4 class="media-heading">
-					<a target="_blank" href="https://github.com/walkor/php-websocketd" rel="nofollow">php-websocketd</a>
+					<a target="_blank" href="https://github.com/walkor/phptty" rel="nofollow">phptty</a>
 				</h4>
 				<p>
-				php-websocketd是一个服务端守护程序，可以将指定任意程序(Python, Ruby, Perl, C等程序或者系统命令)的运行结果通过websocket传输到浏览器上实时展示。例如打印tail -f /var/log/php_errors.log结果用于监控错误日志；例如展示htop结果，监控服务器系统等。
+				phptty是一个基于浏览器的Linux终端模拟器，可以在浏览器里面控制Linux终端程序。服务端基于workerman开发。phptty可以实现很多有意思的功能，例如利用htop命令查看服务器负载，tail -f 实时服务器错误日志等等。
 				<br>
-				<a class="btn" target="_blank" href="https://github.com/walkor/php-websocketd" rel="nofollow">下载源代码 »</a>
+				<a class="btn" target="_blank" href="https://github.com/walkor/phptty" rel="nofollow">下载源代码 »</a>
+				<a class="btn" target="_blank" href="http://45.55.93.159:7779/" rel="nofollow">在线示例-htop »</a>
 				</p>
 			</div>
 		</div>
