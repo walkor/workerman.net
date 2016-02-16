@@ -137,7 +137,7 @@
 				PHPSocket.IO是Socket.IO的PHP 服务端版本。PHP版socket.io可用来替代传统nodejs版本socket.io服务端，并且接口与其一致，可用于开发跨浏览器或者安卓、ios等移动端即时通讯应用。
 				<br>
 				<a class="btn" target="_blank" href="https://github.com/walkor/phpsocket.io" rel="nofollow">下载源代码 »</a>
-				<a class="btn" target="_blank" href="/demos/phpsocketio-chat/" rel="nofollow">chat domo »</a>
+				<a class="btn" target="_blank" href="/demos/phpsocketio-chat/" rel="nofollow">在线示例-聊天室 »</a>
 				</p>
 			</div>
 		</div>
@@ -151,6 +151,7 @@
 				php-websocketd是一个服务端守护程序，可以将指定任意程序(Python, Ruby, Perl, C等程序或者系统命令)的运行结果通过websocket传输到浏览器上实时展示。例如打印tail -f /var/log/php_errors.log结果用于监控错误日志；例如展示htop结果，监控服务器系统等。
 				<br>
 				<a class="btn" target="_blank" href="https://github.com/walkor/php-websocketd" rel="nofollow">下载源代码 »</a>
+				<a class="btn" target="_blank" href="/demos/phpsocketio-chat/" rel="nofollow">在线示例-htop »</a>
 				</p>
 			</div>
 		</div>
