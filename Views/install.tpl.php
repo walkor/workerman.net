@@ -8,14 +8,16 @@
 	<br>可以在命令中运行 <code>curl -Ss http://www.workerman.net/check.php | php </code> 检测本地环境是否满足workerman。
 	</b>
 	<h2>全新系统参考以下安装教程</h2>
-	<h3>centos系统安装教程 <a href="/img/gif/centos-install.gif" target="_blank">>>点击这里查看动画教程<<</a></h3>
+	<h3>centos系统安装教程 </h3>
+	<a href="/img/gif/centos-install.gif" target="_blank">>>点击这里查看动画教程<<</a><br>
 	<h5>1、命令行运行<code>yum install php-cli php-process  git gcc  php-devel php-pear libevent-devel</code></h5>
 	<h5>2、命令行运行<code>pecl install channel://pecl.php.net/libevent-0.1.0</code> 提示libevent installation [autodetect]: 时按回车</h5>
 	<h5>3、命令行运行<code>echo extension=libevent.so > /etc/php.d/libevent.ini</code></h5>
 	<h5>4、命令行运行<code>git clone https://github.com/walkor/workerman</code></h5>
 	<h5>5、参考<a href="http://doc3.workerman.net/getting-started/simple-example.html" target="_blank">手册</a>写例子运行或者从主页下载<a href="/applications">demo</a>运行</h5>
 	<br>
-	<h3>debian/ubuntu系统安装教程(如果不是root用户请用sudo 后面加命令) <a href="/img/gif/ubuntu-install.gif" target="_blank">>>点击这里查看动画教程<<</a></h3>
+	<h3>debian/ubuntu系统安装教程(如果不是root用户请用sudo 后面加命令) </h3>
+	<a href="/img/gif/ubuntu-install.gif" target="_blank">>>点击这里查看动画教程<<</a><br>
 	<h5>1、命令行运行<code>apt-get install php5-cli git gcc php-pear php5-dev libevent-dev</code></h5>
 	<h5>2、命令行运行<code>pecl install channel://pecl.php.net/libevent-0.1.0</code> 提示libevent installation [autodetect]: 时按回车</h5>
 	<h5>3、命令行运行<code>echo extension=libevent.so > /etc/php5/cli/conf.d/libevent.ini</code></h5>
