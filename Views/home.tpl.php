@@ -311,6 +311,9 @@
 		</h4>
 		<ul>
 			<li>
+				<a href="http://doc3.workerman.net/component/global-data.html">2016-02-26 GlobalData 进程变量共享组件发布</a>
+			</li>
+			<li>
 				2016-02-16 phptty发布
 			</li>
 			<li>
