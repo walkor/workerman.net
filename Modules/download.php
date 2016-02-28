@@ -34,16 +34,16 @@ function download()
     $flappybird_download_count =  \WorkerMan\Lib\Store::get($download_flappybird_count_key);
     
     $download_workermanwin_count_key = 'download_workermanwin_count';
-    $download_workermanwin_count = \WorkerMan\Lib\Store::get($download_workermanwin_count_key);
+    $workermanwin_download_count = \WorkerMan\Lib\Store::get($download_workermanwin_count_key);
     
     $download_camera_count_key = 'download_camera_count';
-    $download_camera_count = \WorkerMan\Lib\Store::get($download_camera_count_key);
+    $camera_download_count = \WorkerMan\Lib\Store::get($download_camera_count_key);
     
     $download_vmstat_count_key = 'download_vmstat_count';
-    $download_vmstat_count = \WorkerMan\Lib\Store::get($download_vmstat_count_key);
+    $vmstat_download_count = \WorkerMan\Lib\Store::get($download_vmstat_count_key);
     
     $download_sender_count_key = 'download_sender_count';
-    $download_sender_count = \WorkerMan\Lib\Store::get($download_sender_count_key);
+    $sender_download_count = \WorkerMan\Lib\Store::get($download_sender_count_key);
     
     
     include NET_ROOT . '/Views/header.tpl.php';

@@ -32,7 +32,7 @@
     				</h4>
 					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=browserquest-php&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=browserquest-php&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
 					<a class="btn btn-default btn-large" href="https://github.com/walkor/browserquest-php" target="_blank"><b>Fork on Github</b></a>&nbsp;
-					<a class="btn btn-default btn-large" href="/download/browserquestzip"><b>下载ZIP压缩文件</b></a> <font class='f11 gray'>下载<?php echo $browserquest_download_count;?>次</font>
+					<a class="btn btn-default btn-large" href="/download/browserquestzip"><b>下载ZIP压缩文件</b></a> <font class='f11 gray'>下载<?php echo $download_browserquest_count;?>次</font>
 					<p></p>
 				</div>
 			</div>
