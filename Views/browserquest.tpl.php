@@ -15,6 +15,15 @@
 				BrowserQuest是一款HTML+PHP开发的多人在线网页游戏，通过websocket与后端服务器实现双向通讯，支持几乎所有浏览器，包括安卓和IOS上的Firefox上的Safari等浏览器。
 				这款游戏由Mozilla发布，BrowserQuest-PHP对其改写，主要是将后台nodejs部分改成了PHP（Workerman框架）。
 			</p>
+			<div class="thumbnail">
+				<div class="caption-download">
+					<h4>下载BrowserQuest PHP</h4>
+					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=browserquest-php&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=browserquest-php&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
+					<a class="btn btn-default btn-large" href="https://github.com/walkor/browserquest-php" target="_blank"><b>Fork on Github</b></a>&nbsp;
+					<a class="btn btn-default btn-large" href="/download/browserquestzip"><b>下载ZIP压缩文件</b></a> <font class='f11 gray'>下载<?php echo $browserquest_download_count;?>次</font>
+					<p></p>
+				</div>
+			</div>
 			<p>
 			<h4><a href="http://www.workerman.net/demos/browserquest/" target="_blank">线上DEMO效果点击这里</a></h4>
 			</p>
@@ -45,15 +54,6 @@
 				<a class="list-group-item" href="/workerman-statistics">统计监控系统</a>
 				<a class="list-group-item" href="/workerman-todpole">PHP小蝌蚪实时交互游戏</a>
 				<a class="list-group-item" href="/workerman-flappybird">flappy bird 多人在线版游戏</a>
-			</div>
-			<div class="thumbnail">
-				<div class="caption-download">
-					<h4>下载BrowserQuest PHP</h4>
-					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=browserquest-php&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=browserquest-php&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
-					<a class="btn btn-default btn-large" href="https://github.com/walkor/browserquest-php" target="_blank"><b>Fork on Github</b></a>&nbsp;
-					<a class="btn btn-default btn-large" href="/download/browserquestzip"><b>下载ZIP压缩文件</b></a> <font class='f11 gray'>下载<?php echo $browserquest_download_count;?>次</font>
-					<p></p>
-				</div>
 			</div>
 		</div>
 	</div>
