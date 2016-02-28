@@ -27,6 +27,15 @@
 			<li>支持跨域推送</li>
 			</ul>
 			</div>
+			<h3>下载</h3>
+			<div class="thumbnail">
+				<div class="caption-download">
+					<h4>WEB消息推送框架</h4>
+					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=web-msg-sender&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=web-msg-sender&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
+					<a class="btn btn-default btn-large" href="https://github.com/walkor/web-msg-sender" target="_blank"><b>Fork on Github</b></a>&nbsp;
+					<a class="btn btn-default btn-large" href="/download/senderzip"><b>下载ZIP压缩文件</b> </a> <font class='f11 gray'>下载<?php echo $sender_download_count;?>次</font>
+				</div>
+			</div>
                         <b>Demo1:</b><br>
                         <p class="f16">接收消息页面：<a rel="nofollow" href="http://www.workerman.net:2123/">http://www.workerman.net:2123/</a></p>
 			<p class="f16">推送接口url：<a rel="nofollow" href="http://www.workerman.net:2121/?type=publish&to=&content=content">http://www.workerman.net:2121/?type=publish&to=uid&content=content</a><br>
@@ -53,14 +62,6 @@ content 为消息内容
 				<a class="list-group-item" href="/workerman-statistics">统计监控系统</a>
 				<a class="list-group-item" href="/workerman-todpole">PHP小蝌蚪实时交互游戏&nbsp;&nbsp;<font style="font-size:12px;color:red;">hot</font></a>
 				<a class="list-group-item" href="/workerman-flappybird">flappy bird 多人在线版游戏</a>
-			</div>
-			<div class="thumbnail">
-				<div class="caption-download">
-					<h4>WEB消息推送框架</h4>
-					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=web-msg-sender&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=web-msg-sender&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
-					<a class="btn btn-default btn-large" href="https://github.com/walkor/web-msg-sender" target="_blank"><b>Fork on Github</b></a>&nbsp;
-					<a class="btn btn-default btn-large" href="/download/senderzip"><b>下载ZIP压缩文件</b> </a> <font class='f11 gray'>下载<?php echo $sender_download_count;?>次</font>
-				</div>
 			</div>
 		</div>
 	</div>

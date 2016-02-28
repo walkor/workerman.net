@@ -20,6 +20,15 @@
 				workerman-statistics包含了客户端和服务端，客户端是一个类库，通过函数调用的方式以UDP协议上报数据给服务端，服务端接收上报数据然后汇总展示。
 				workerman-statistics以曲线图和表格的方式展示请求量、耗时、成功率、错误日志等。
 			</p>
+			<h3>下载</h3>
+			<div class="thumbnail">
+				<div class="caption-download">
+					<h4>统计监控系统</h4>
+					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-statistics&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-statistics&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
+					<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-statistics" target="_blank"><b>Fork on Github</b></a>&nbsp;
+					<a class="btn btn-default btn-large" href="/download/statisticszip"><b>下载ZIP压缩文件</b> </a> <font class='f11 gray'>下载<?php echo $statistics_download_count;?>次</font>
+				</div>
+			</div>
 			<h3>
 				特性
 			</h3>
@@ -50,14 +59,6 @@
 				</div>
 				<a class="list-group-item" href="/workerman-todpole">PHP小蝌蚪实时交互游戏&nbsp;&nbsp;<font style="font-size:12px;color:red;">hot</font></a>
 				<a class="list-group-item" href="/workerman-flappybird">flappy bird 多人在线版游戏</a>
-			</div>
-			<div class="thumbnail">
-				<div class="caption-download">
-					<h4>统计监控系统</h4>
-					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-statistics&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-statistics&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
-					<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-statistics" target="_blank"><b>Fork on Github</b></a>&nbsp;
-					<a class="btn btn-default btn-large" href="/download/statisticszip"><b>下载ZIP压缩文件</b> </a> <font class='f11 gray'>下载<?php echo $statistics_download_count;?>次</font>
-				</div>
 			</div>
 		</div>
 	</div>

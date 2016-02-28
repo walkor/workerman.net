@@ -15,6 +15,15 @@
 				workerman-flappy-bird采用PHP(workerman框架)+HTML5技术开发，是一款以workerman作为应用服务器，workerman-flappy-bird是一个以workerman作为应用服务器，前端采用HTML5+WebSocket开发的即时交互游戏，flappy bird （像素小鸟）游戏多人在线版。
 			</p>
 			<p><a href="/demos/flappy-bird/" target="_blank">在线DEMO点击这里</a></p>
+			<h3>下载</h3>
+			<div class="thumbnail">
+				<div class="caption-download">
+					<h4>下载flappy bird 多人在线版游戏源代码</h4>
+					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-flappy-bird&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-flappy-bird&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
+					<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-flappy-bird" target="_blank"><b>Fork on Github</b></a>&nbsp;
+					<a class="btn btn-default btn-large" href="/download/flappybirdzip"><b>下载ZIP压缩文件</b> </a> <font class='f11 gray'>下载<?php echo $flappybird_download_count;?>次</font>
+				</div>
+			</div>
 			<h3>
 				特性
 			</h3>
@@ -43,14 +52,6 @@
 				<a class="list-group-item" href="/workerman-todpole">PHP小蝌蚪实时交互游戏&nbsp;&nbsp;<font style="font-size:12px;color:red;">hot</font></a>
 				<div class="list-group-item active">
 					flappy bird 多人在线版游戏
-				</div>
-			</div>
-			<div class="thumbnail">
-				<div class="caption-download">
-					<h4>下载flappy bird 多人在线版游戏源代码</h4>
-					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-flappy-bird&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-flappy-bird&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
-					<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-flappy-bird" target="_blank"><b>Fork on Github</b></a>&nbsp;
-					<a class="btn btn-default btn-large" href="/download/flappybirdzip"><b>下载ZIP压缩文件</b> </a> <font class='f11 gray'>下载<?php echo $flappybird_download_count;?>次</font>
 				</div>
 			</div>
 		</div>

@@ -24,6 +24,18 @@
 				workerman-chat也非常适合游戏后台开发。
 			</p>
 			<p class="f16"><a href="http://chat.workerman.net" target="_blank">查看php聊天室demo请点击<b>这里</b></a></p>
+			<h3>下载</h3>
+			<div class="thumbnail">
+				<div class="caption-download">
+					<h4>下载PHP 聊天室框架</h4>
+					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-chat&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-chat&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
+					<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-chat" target="_blank"><b>Fork on Github</b></a>&nbsp;
+					<a class="btn btn-default btn-large" href="/download/chatzip"><b>下载ZIP压缩文件</b> </a> <font class='f11 gray'>下载<?php echo $chat_download_count;?>次</font>
+					<br><br>
+					<h4>Windows版本下载</h4>
+					<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-chat-for-win"><b>下载Win版本ZIP压缩文件</b> </a> 
+				</div>
+			</div>
 			<h3>
 				特性
 			</h3>
@@ -57,17 +69,6 @@
 				<a class="list-group-item" href="/workerman-statistics">统计监控系统</a>
 				<a class="list-group-item" href="/workerman-todpole">PHP小蝌蚪实时交互游戏&nbsp;&nbsp;<font style="font-size:12px;color:red;">hot</font></a>
 				<a class="list-group-item" href="/workerman-flappybird">flappy bird 多人在线版游戏</a>
-			</div>
-			<div class="thumbnail">
-				<div class="caption-download">
-					<h4>下载PHP 聊天室框架</h4>
-					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-chat&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-chat&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
-					<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-chat" target="_blank"><b>Fork on Github</b></a>&nbsp;
-					<a class="btn btn-default btn-large" href="/download/chatzip"><b>下载ZIP压缩文件</b> </a> <font class='f11 gray'>下载<?php echo $chat_download_count;?>次</font>
-					<br><br>
-					<h4>Windows版本下载</h4>
-					<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-chat-for-win"><b>下载Win版本ZIP压缩文件</b> </a> 
-				</div>
 			</div>
 		</div>
 	</div>

@@ -16,6 +16,16 @@
 				游戏交互很简单，点击屏幕小蝌蚪可以自由游动，其它玩家可以看到周围玩家的游动状态，并且可以即时聊天。
 			</p>
 			<p><a href="http://workerman.net:8383" target="_blank"><h4>线上DEMO效果点击这里</h4></a></p>
+			<h3>下载</h3>
+			<div class="thumbnail">
+				<div class="caption-download">
+					<h4>下载PHP小蝌蚪游戏</h4>
+					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-todpole&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-todpole&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
+					<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-todpole" target="_blank"><b>Fork on Github</b></a>&nbsp;
+					<a class="btn btn-default btn-large" href="/download/todpolezip"><b>下载ZIP压缩文件</b></a> <font class='f11 gray'>下载<?php echo $todpole_download_count;?>次</font>
+					<p></p>
+				</div>
+			</div>
 			<h3>
 				特性
 			</h3>
@@ -50,15 +60,6 @@
 					PHP小蝌蚪实时交互游戏
 				</div>
 				<a class="list-group-item" href="/workerman-flappybird">flappy bird 多人在线版游戏</a>
-			</div>
-			<div class="thumbnail">
-				<div class="caption-download">
-					<h4>下载PHP小蝌蚪游戏</h4>
-					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-todpole&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-todpole&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
-					<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-todpole" target="_blank"><b>Fork on Github</b></a>&nbsp;
-					<a class="btn btn-default btn-large" href="/download/todpolezip"><b>下载ZIP压缩文件</b></a> <font class='f11 gray'>下载<?php echo $todpole_download_count;?>次</font>
-					<p></p>
-				</div>
 			</div>
 		</div>
 	</div>

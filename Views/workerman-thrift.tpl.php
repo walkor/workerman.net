@@ -19,6 +19,15 @@
 				然后使用thrift自动生成C++, Java, Python, PHP, Ruby, Erlang, Perl, Haskell, C#, Cocoa, JavaScript, Node.js, Smalltalk, OCaml等这些语言的客户端，
 				通过这些客户端去调用PHP语言开发的服务。
 			</p>
+			<h3>下载</h3>
+			<div class="thumbnail">
+				<div class="caption-download">
+					<h4>下载Thrift RPC远程调用框架</h4>
+					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-thrift&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-thrift&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
+					<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-thrift" target="_blank"><b>Fork on Github</b></a>&nbsp;
+					<a class="btn btn-default btn-large" href="/download/thriftzip"><b>下载ZIP压缩文件</b> </a> <font class='f11 gray'>下载<?php echo $thrift_download_count;?>次</font>
+				</div>
+			</div>
 			<h3>
 				特性
 			</h3>
@@ -51,14 +60,6 @@
 				<a class="list-group-item" href="/workerman-statistics">统计监控系统</a>
 				<a class="list-group-item" href="/workerman-todpole">PHP小蝌蚪实时交互游戏&nbsp;&nbsp;<font style="font-size:12px;color:red;">hot</font></a>
 				<a class="list-group-item" href="/workerman-flappybird">flappy bird 多人在线版游戏</a>
-			</div>
-			<div class="thumbnail">
-				<div class="caption-download">
-					<h4>下载Thrift RPC远程调用框架</h4>
-					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-thrift&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-thrift&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
-					<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-thrift" target="_blank"><b>Fork on Github</b></a>&nbsp;
-					<a class="btn btn-default btn-large" href="/download/thriftzip"><b>下载ZIP压缩文件</b> </a> <font class='f11 gray'>下载<?php echo $thrift_download_count;?>次</font>
-				</div>
 			</div>
 		</div>
 	</div>

@@ -12,14 +12,23 @@
 				workerman-json-rpc
 			</h2>
 			<p class="f16">
-				JSON  (JavaScript Object Notation)是一种用于在组件间交互信息的数据交换格式，其是以JavaScript 为基础的数据表示语言。既方便于人的读写习惯，又有利于计算机的解析和生成。
-				</p>
-				<p class="f16">
-				RPC（Remote Procedure Call）是远程调用，既客户端通过某种协议向服务器发起请求并获得结果。RPC使得开发分布式网络程序非常方便，并且能极大限度的将网络系统的各个部分解耦，方便后续开发、维护。
-				</p>
-				<p class="f16">
-				workerman-json-rpc是一个以workerman作为服务器容器，使用Json作为协议简单高效的RPC远程调用框架。
-				</p>
+			JSON  (JavaScript Object Notation)是一种用于在组件间交互信息的数据交换格式，其是以JavaScript 为基础的数据表示语言。既方便于人的读写习惯，又有利于计算机的解析和生成。
+			</p>
+			<p class="f16">
+			RPC（Remote Procedure Call）是远程调用，既客户端通过某种协议向服务器发起请求并获得结果。RPC使得开发分布式网络程序非常方便，并且能极大限度的将网络系统的各个部分解耦，方便后续开发、维护。
+			</p>
+			<p class="f16">
+			workerman-json-rpc是一个以workerman作为服务器容器，使用Json作为协议简单高效的RPC远程调用框架。
+			</p>
+			<h3>下载</h3>
+			<div class="thumbnail">
+				<div class="caption-download">
+					<h4>下载Json RPC远程调用框架</h4>
+					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-jsonrpc&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-jsonrpc&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
+					<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-jsonrpc" target="_blank"><b>Fork on Github</b></a>&nbsp;
+					<a class="btn btn-default btn-large" href="/download/jsonrpczip"><b>下载ZIP压缩文件</b></a> <font class='f11 gray'>下载<?php echo $jsonrpc_download_count;?>次</font>
+				</div>
+			</div>
 			<h3>
 				特性
 			</h3>
@@ -50,14 +59,6 @@
 				<a class="list-group-item" href="/workerman-statistics">统计监控系统</a>
 				<a class="list-group-item" href="/workerman-todpole">PHP小蝌蚪实时交互游戏&nbsp;&nbsp;<font style="font-size:12px;color:red;">hot</font></a>
 				<a class="list-group-item" href="/workerman-flappybird">flappy bird 多人在线版游戏</a>
-			</div>
-			<div class="thumbnail">
-				<div class="caption-download">
-					<h4>下载Json RPC远程调用框架</h4>
-					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-jsonrpc&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-jsonrpc&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
-					<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-jsonrpc" target="_blank"><b>Fork on Github</b></a>&nbsp;
-					<a class="btn btn-default btn-large" href="/download/jsonrpczip"><b>下载ZIP压缩文件</b></a> <font class='f11 gray'>下载<?php echo $jsonrpc_download_count;?>次</font>
-				</div>
 			</div>
 		</div>
 	</div>

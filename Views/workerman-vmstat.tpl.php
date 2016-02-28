@@ -19,6 +19,15 @@
 				workerman vmstat原理是使用workerman打开一个运行 vmstat命令的进程，监听这个vmstat进程的输出，然后将输出以websocket协议发给所有在线的网页客户端，
 				网页通过websocket接收到数据后，在页面上绘图展示。
 			</p>
+			<h3>下载</h3>
+			<div class="thumbnail">
+				<div class="caption-download">
+					<h4>vmstat服务器状态监控服务</h4>
+					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-vmstat&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-vmstat&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
+					<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-vmstat" target="_blank"><b>Fork on Github</b></a>&nbsp;
+					<a class="btn btn-default btn-large" href="/download/vmstatzip"><b>下载ZIP压缩文件</b> </a> <font class='f11 gray'>下载<?php echo $vmstat_download_count;?>次</font>
+				</div>
+			</div>
 			
 			<p class="f16">线上Demo示例：<a href="/demos/vmstat/" target="_blank">http://www.workerman.net/demos/vmstat/</a></p>
 			<div class="bd-ad"><?php global $bd_ad_468_60; echo $bd_ad_468_60;?></div>
@@ -38,14 +47,6 @@
 				<a class="list-group-item" href="/workerman-statistics">统计监控系统</a>
 				<a class="list-group-item" href="/workerman-todpole">PHP小蝌蚪实时交互游戏&nbsp;&nbsp;<font style="font-size:12px;color:red;">hot</font></a>
 				<a class="list-group-item" href="/workerman-flappybird">flappy bird 多人在线版游戏</a>
-			</div>
-			<div class="thumbnail">
-				<div class="caption-download">
-					<h4>vmstat服务器状态监控服务</h4>
-					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-vmstat&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-vmstat&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
-					<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-vmstat" target="_blank"><b>Fork on Github</b></a>&nbsp;
-					<a class="btn btn-default btn-large" href="/download/vmstatzip"><b>下载ZIP压缩文件</b> </a> <font class='f11 gray'>下载<?php echo $vmstat_download_count;?>次</font>
-				</div>
 			</div>
 		</div>
 	</div>
