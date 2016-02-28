@@ -15,6 +15,9 @@
 				BrowserQuest是一款HTML+PHP开发的多人在线网页游戏，通过websocket与后端服务器实现双向通讯，支持几乎所有浏览器，包括安卓和IOS上的Firefox上的Safari等浏览器。
 				这款游戏由Mozilla发布，BrowserQuest-PHP对其改写，主要是将后台nodejs部分改成了PHP（Workerman框架）。
 			</p>
+			<h3>
+				下载
+			</h3>
 			<div class="thumbnail">
 				<div class="caption-download">
 					<h4>下载BrowserQuest PHP</h4>
