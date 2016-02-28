@@ -71,17 +71,14 @@
 						<li<?php if($html_nav == 'group')echo ' class="active" ';?>>
 							<a href="http://wenda.workerman.net" target="_blank">问答</a>
 						</li>
-						<li<?php if($html_nav == 'update')echo ' class="active" ';?>>
-							<a href="https://github.com/walkor/workerman/releases" target="_blank">发布的版本</a>
+						<li<?php if($html_nav == 'last_update')echo ' class="active" ';?>>
+							<a href="/last_update" target="_blank">最近更新</a>
 						</li>
 						<li<?php if($html_nav == 'windows')echo ' class="active" ';?>>
 							<a href="/windows" >Windows版本</a>
 						</li>
 						<li<?php if($html_nav == 'donate')echo ' class="active" ';?>>
 							<a href="/donate" >捐赠</a>
-						</li>
-						<li<?php if($html_nav == 'jobs')echo ' class="active" ';?>>
-							<a href="/jobs" >招聘</a>
 						</li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
