@@ -6,13 +6,48 @@ namespace WorkerMan\Modules;
  */
 function download()
 {
-    $html_title = 'workerman下载  |  workerman PHP Socket 服务器框架';
+    $html_title = '下载workerman及相关应用';
     $html_nav = 'download';
     $html_keywords = '下载workerman';
     $download_workerman_count_key = 'download_workerman_count';
     $workerman_download_count =  \WorkerMan\Lib\Store::get($download_workerman_count_key);
+    
+    $download_thrift_count_key = 'download_thrift_count';
+    $thrift_download_count =  \WorkerMan\Lib\Store::get($download_thrift_count_key);
+    
+    $download_jsonrpc_count_key = 'download_jsonrpc_count';
+    $jsonrpc_download_count =  \WorkerMan\Lib\Store::get($download_jsonrpc_count_key);
+    
+    $download_chat_count_key = 'download_chat_count';
+    $chat_download_count =  \WorkerMan\Lib\Store::get($download_chat_count_key);
+    
+    $download_statistics_count_key = 'download_statistics_count';
+    $statistics_download_count =  \WorkerMan\Lib\Store::get($download_statistics_count_key);
+    
+    $download_todpole_count_key = 'download_todpole_count';
+    $todpole_download_count =  \WorkerMan\Lib\Store::get($download_todpole_count_key);
+    
+    $download_browserquest_count_key = 'download_browserquest_count';
+    $download_browserquest_count = \WorkerMan\Lib\Store::get($download_browserquest_count_key);
+    
+    $download_flappybird_count_key = 'download_flappybird_count';
+    $flappybird_download_count =  \WorkerMan\Lib\Store::get($download_flappybird_count_key);
+    
+    $download_workermanwin_count_key = 'download_workermanwin_count';
+    $download_workermanwin_count = \WorkerMan\Lib\Store::get($download_workermanwin_count_key);
+    
+    $download_camera_count_key = 'download_camera_count';
+    $download_camera_count = \WorkerMan\Lib\Store::get($download_camera_count_key);
+    
+    $download_vmstat_count_key = 'download_vmstat_count';
+    $download_vmstat_count = \WorkerMan\Lib\Store::get($download_vmstat_count_key);
+    
+    $download_sender_count_key = 'download_sender_count';
+    $download_sender_count = \WorkerMan\Lib\Store::get($download_sender_count_key);
+    
+    
     include NET_ROOT . '/Views/header.tpl.php';
-    include NET_ROOT . '/Views/download.tpl.php';
+    include NET_ROOT . '/Views/download_list.tpl.php';
     include NET_ROOT . '/Views/footer.tpl.php';
 }
 
