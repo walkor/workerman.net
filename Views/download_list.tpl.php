@@ -3,21 +3,23 @@
 		相关应用
 	</li>
 </ul>
+<div class="row clearfix">
+		<div class="col-md-7 column">
+		
 		<div class="media">
 			 <a href="http://kedou.workerman.net/" class="pull-left" target="_blank" ><img src="/img/workerman-todpole.png" class="media-object" alt='PHP 小蝌蚪聊天室界面' /></a>
 			<div class="media-body">
-				<h4 class="media-heading">
-					<a target="_blank" href="http://kedou.workerman.net/">PHP小蝌蚪聊天室</a>&nbsp;&nbsp;<font style="font-size:12px;color:red;">置顶推荐</font>
-				</h4>
 				<div class="thumbnail">
-				<div class="caption-download">
-					<h4>下载PHP小蝌蚪游戏</h4>
-					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-todpole&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-todpole&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
-					<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-todpole" target="_blank"><b>Fork on Github</b></a>&nbsp;
-					<a class="btn btn-default btn-large" href="/download/todpolezip"><b>下载ZIP压缩文件</b></a> <font class='f11 gray'>下载<?php echo $todpole_download_count;?>次</font>
-					<p></p>
-				</div>
-			</div>
+    				<div class="caption-download">
+        				<h4 class="media-heading">
+        					<a target="_blank" href="http://kedou.workerman.net/">PHP小蝌蚪聊天室</a>
+        				</h4>
+    					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-todpole&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-todpole&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
+    					<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-todpole" target="_blank"><b>Fork on Github</b></a>&nbsp;
+    					<a class="btn btn-default btn-large" href="/download/todpolezip"><b>下载ZIP压缩文件</b></a> <font class='f11 gray'>下载<?php echo $todpole_download_count;?>次</font>
+    					<p></p>
+    				</div>
+    			</div>
 			</div>
 		</div>
 		<div class="media">
@@ -210,5 +212,5 @@
 				</p>
 			</div>
 		</div>
-
-<br><?php global $bd_ad_960_90; echo $bd_ad_960_90;?>
+	</div>
+</div>
