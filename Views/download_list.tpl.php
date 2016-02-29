@@ -13,7 +13,7 @@
 					<h4>workerman</h4>
 					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
 					<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman" target="_blank"><b>Fork on Github</b></a>&nbsp;
-					<a class="btn btn-default btn-large" href="/download/workermanzip"><b>下载ZIP压缩文件</b> </a> <font class='f11 gray'>下载<?php echo $workerman_download_count;?>次</font>
+					<a class="btn btn-default btn-large" href="/download/workermanzip"><b>下载ZIP压缩文件</b> </a>
 				</div>
 			</div>
 			</div>
@@ -26,7 +26,7 @@
 					<h4>workerman-for-win</h4>
 					<table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-for-win&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-for-win&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table>
 					<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-for-win" target="_blank"><b>Fork on Github</b></a>&nbsp;
-					<a class="btn btn-default btn-large" href="/download/workermanwinzip"><b>下载ZIP压缩文件</b></a> <font class='f11 gray'>下载<?php echo $workermanwin_download_count;?>次</font>
+					<a class="btn btn-default btn-large" href="/download/workermanwinzip"><b>下载ZIP压缩文件</b></a> 
 				<br>
 				</div>
 			</div>
@@ -81,7 +81,7 @@
         				</h4>
     					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-todpole&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-todpole&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
     					<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-todpole" target="_blank"><b>Fork on Github</b></a>&nbsp;
-    					<a class="btn btn-default btn-large" href="/download/todpolezip"><b>下载ZIP压缩文件</b></a> <font class='f11 gray'>下载<?php echo $todpole_download_count;?>次</font>
+    					<a class="btn btn-default btn-large" href="/download/todpolezip"><b>下载ZIP压缩文件</b></a> 
     					<p></p>
     				</div>
     			</div>
@@ -97,7 +97,7 @@
     				</h4>
 					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=browserquest-php&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=browserquest-php&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
 					<a class="btn btn-default btn-large" href="https://github.com/walkor/browserquest-php" target="_blank"><b>Fork on Github</b></a>&nbsp;
-					<a class="btn btn-default btn-large" href="/download/browserquestzip"><b>下载ZIP压缩文件</b></a> <font class='f11 gray'>下载<?php echo $download_browserquest_count;?>次</font>
+					<a class="btn btn-default btn-large" href="/download/browserquestzip"><b>下载ZIP压缩文件</b></a> 
 					<p></p>
 				</div>
 			</div>
@@ -111,7 +111,7 @@
 					<h4>workerman-chat PHP 聊天室框架</h4>
 					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-chat&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-chat&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
 					<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-chat" target="_blank"><b>Fork on Github</b></a>&nbsp;
-					<a class="btn btn-default btn-large" href="/download/chatzip"><b>下载ZIP压缩文件</b> </a> <font class='f11 gray'>下载<?php echo $chat_download_count;?>次</font>
+					<a class="btn btn-default btn-large" href="/download/chatzip"><b>下载ZIP压缩文件</b> </a> 
 					<br><br>
 					<h4>Windows版本下载</h4>
 					<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-chat-for-win"><b>下载Win版本ZIP压缩文件</b> </a> 
@@ -127,7 +127,7 @@
 					<h4>WEB消息推送框架</h4>
 					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=web-msg-sender&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=web-msg-sender&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
 					<a class="btn btn-default btn-large" href="https://github.com/walkor/web-msg-sender" target="_blank"><b>Fork on Github</b></a>&nbsp;
-					<a class="btn btn-default btn-large" href="/download/senderzip"><b>下载ZIP压缩文件</b> </a> <font class='f11 gray'>下载<?php echo $sender_download_count;?>次</font>
+					<a class="btn btn-default btn-large" href="/download/senderzip"><b>下载ZIP压缩文件</b> </a>
 				</div>
 			</div>
 			</div>
@@ -166,7 +166,7 @@
 					<h4>vmstat服务器状态监控服务</h4>
 					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-vmstat&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-vmstat&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
 					<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-vmstat" target="_blank"><b>Fork on Github</b></a>&nbsp;
-					<a class="btn btn-default btn-large" href="/download/vmstatzip"><b>下载ZIP压缩文件</b> </a> <font class='f11 gray'>下载<?php echo $vmstat_download_count;?>次</font>
+					<a class="btn btn-default btn-large" href="/download/vmstatzip"><b>下载ZIP压缩文件</b> </a> 
 				</div>
 			</div>
 			</div>
@@ -192,7 +192,7 @@
 					<h4>下载摄像头视频直播代码</h4>
 					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=live-camera&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=live-camera&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
 					<a class="btn btn-default btn-large" href="https://github.com/walkor/live-camera" target="_blank"><b>Fork on Github</b></a>&nbsp;
-					<a class="btn btn-default btn-large" href="/download/camerazip"><b>下载ZIP压缩文件</b> </a> <font class='f11 gray'>下载<?php echo $camera_download_count;?>次</font>
+					<a class="btn btn-default btn-large" href="/download/camerazip"><b>下载ZIP压缩文件</b> </a> 
 				</div>
 			</div>
 			</div>
@@ -205,7 +205,7 @@
 					<h4>flappy bird 多人在线版游戏源代码</h4>
 					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-flappy-bird&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-flappy-bird&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
 					<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-flappy-bird" target="_blank"><b>Fork on Github</b></a>&nbsp;
-					<a class="btn btn-default btn-large" href="/download/flappybirdzip"><b>下载ZIP压缩文件</b> </a> <font class='f11 gray'>下载<?php echo $flappybird_download_count;?>次</font>
+					<a class="btn btn-default btn-large" href="/download/flappybirdzip"><b>下载ZIP压缩文件</b> </a> 
 				</div>
 			</div>
 			</div>
@@ -218,7 +218,7 @@
 					<h4>Thrift RPC远程调用框架</h4>
 					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-thrift&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-thrift&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
 					<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-thrift" target="_blank"><b>Fork on Github</b></a>&nbsp;
-					<a class="btn btn-default btn-large" href="/download/thriftzip"><b>下载ZIP压缩文件</b> </a> <font class='f11 gray'>下载<?php echo $thrift_download_count;?>次</font>
+					<a class="btn btn-default btn-large" href="/download/thriftzip"><b>下载ZIP压缩文件</b> </a>
 				</div>
 			</div>
 			</div>
@@ -231,7 +231,7 @@
 					<h4>Json RPC远程调用框架</h4>
 					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-jsonrpc&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-jsonrpc&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
 					<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-jsonrpc" target="_blank"><b>Fork on Github</b></a>&nbsp;
-					<a class="btn btn-default btn-large" href="/download/jsonrpczip"><b>下载ZIP压缩文件</b></a> <font class='f11 gray'>下载<?php echo $jsonrpc_download_count;?>次</font>
+					<a class="btn btn-default btn-large" href="/download/jsonrpczip"><b>下载ZIP压缩文件</b></a>
 				</div>
 			</div>
 			</div>
@@ -244,7 +244,7 @@
 					<h4>统计监控系统</h4>
 					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-statistics&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-statistics&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
 					<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-statistics" target="_blank"><b>Fork on Github</b></a>&nbsp;
-					<a class="btn btn-default btn-large" href="/download/statisticszip"><b>下载ZIP压缩文件</b> </a> <font class='f11 gray'>下载<?php echo $statistics_download_count;?>次</font>
+					<a class="btn btn-default btn-large" href="/download/statisticszip"><b>下载ZIP压缩文件</b> </a>
 				</div>
 			</div>
 			</div>
