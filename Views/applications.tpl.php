@@ -47,7 +47,7 @@
 				<h4 class="media-heading">
 					<a target="_blank" href="/web-sender">Web消息推送系统</a>
 				</h4>
-				<p>web消息推送系统，能够通过socket 长连接实时推送消息给所有用户，基于PHPSocketIO开发，支持各种浏览器。
+				<p>web消息推送系统，能够通过socket 长连接实时推送消息给所有用户，基于PHPSocketIO开发，客户端使用socket.io客户端，支持各种浏览器。
 				<br><a target="_blank" class="btn" href="/web-sender">详情 »</a>
 				<a class="btn" target="_blank" href="https://github.com/walkor/web-msg-sender" rel="nofollow">下载源代码 »</a>
 				</p>
@@ -60,10 +60,23 @@
 					<a target="_blank" href="https://github.com/walkor/phpsocket.io" rel="nofollow">PHPSocket.IO</a>
 				</h4>
 				<p>
-				Socket.IOPHP版本。Socket.IO 实现了实时双向的基于事件的通讯机制。旨在让各种浏览器及移动设备上实现实时app功能，模糊化各种传输机制。
+				PHPSocket.IO是Socket.IO的PHP 服务端版本。PHP版socket.io可用来替代传统nodejs版本socket.io服务端，并且接口与其一致，可用于开发跨浏览器或者安卓、ios等移动端即时通讯应用。
 				<br>
 				<a class="btn" target="_blank" href="https://github.com/walkor/phpsocket.io" rel="nofollow">下载源代码 »</a>
-				<a class="btn" target="_blank" href="/demos/phpsocketio-chat/" rel="nofollow">chat domo »</a>
+				<a class="btn" target="_blank" href="/demos/phpsocketio-chat/" rel="nofollow">在线示例-聊天室 »</a>
+				</p>
+			</div>
+		</div>
+		<div class="media">
+			 <a href="https://github.com/walkor/php-socks5" class="pull-left" target="_blank" rel="nofollow"><img src="/img/socks5-big.png" class="media-object" /></a>
+			<div class="media-body">
+				<h4 class="media-heading">
+					<a target="_blank" href="https://github.com/walkor/php-socks5" rel="nofollow">PHPSocket.IO</a>
+				</h4>
+				<p>
+				一个php写的socks5代理，基于workerman开发。前端(浏览器等)和socks5之间通过socks5协议进行通讯，将原本要发送给真正服务器的请求发送给socks5服务器代为转发并返回结果。
+				<br>
+				<a class="btn" target="_blank" href="https://github.com/walkor/php-socks5" rel="nofollow">下载源代码 »</a>
 				</p>
 			</div>
 		</div>
@@ -202,6 +215,60 @@
 				<p>基于php socket开发的一款分布式统计监控系统，udp数据上报，分布式统计，结果自动汇总展示。纯PHP开发、无需安装Mysql、Nginx、Apache等软件。
 				<br><a target="_blank" class="btn" href="/workerman-statistics">详情 »</a>
 				<a class="btn" target="_blank" href="https://github.com/walkor/workerman-statistics" rel="nofollow">下载源代码 »</a>
+				</p>
+			</div>
+		</div>
+		<div class="media">
+			 <a href="https://github.com/walkor/gatewayworker" class="pull-left" rel="nofollow" target="_blank" ><img src="/img/channel-big.png" class="media-object" alt="workerman 分布式通讯组件" /></a>
+			<div class="media-body">
+				<h4 class="media-heading">
+					<a target="_blank" href="https://github.com/walkor/gatewayworker" rel="nofollow">GatewayWorker框架</a>
+				</h4>
+				<p>
+				GatewayWorker是基于Workerman开发的一个可分布式部署的TCP长连接框架，专门用于快速开发TCP长连接应用，例如app推送服务端、即时IM服务端、游戏服务端、物联网、智能家居等等
+				<br>
+				<a class="btn" target="_blank" href="https://github.com/walkor/Channel" rel="nofollow">下载源代码 »</a>
+				<a class="btn" target="_blank" href="http://www.workerman.net/gatewaydoc/" rel="nofollow">文档 »</a>
+				</p>
+			</div>
+		</div>
+		<div class="media">
+			 <a href="https://github.com/walkor/workerman-queue" class="pull-left" rel="nofollow" target="_blank" ><img src="/img/workerman-queue.png" class="media-object" alt="workerman 消息队列" /></a>
+			<div class="media-body">
+				<h4 class="media-heading">
+					<a target="_blank" href="https://github.com/walkor/workerman-queue" rel="nofollow">workerman消息队列</a>
+				</h4>
+				<p>一个简单的消息队列demo，基于Linux sysv 队列实现，需要开启sysvmsg扩展
+				<br>
+				<a class="btn" target="_blank" href="https://github.com/walkor/workerman-queue" rel="nofollow">下载源代码 »</a>
+				</p>
+			</div>
+		</div>
+		<div class="media">
+			 <a href="https://github.com/walkor/Channel" class="pull-left" rel="nofollow" target="_blank" ><img src="/img/channel-big.png" class="media-object" alt="workerman 分布式通讯组件" /></a>
+			<div class="media-body">
+				<h4 class="media-heading">
+					<a target="_blank" href="https://github.com/walkor/Channel" rel="nofollow">分布式通讯组件Channel</a>
+				</h4>
+				<p>
+				基于订阅的进程间通讯组件，事件的订阅发布机制，使用方法简单，能够方便的实现进程间及服务器集群间通讯。
+				<br>
+				<a class="btn" target="_blank" href="https://github.com/walkor/Channel" rel="nofollow">下载源代码 »</a>
+				<a class="btn" target="_blank" href="http://doc3.workerman.net/component/channel.html" rel="nofollow">文档 »</a>
+				</p>
+			</div>
+		</div>
+		<div class="media">
+			 <a href="https://github.com/walkor/GlobalData" class="pull-left" rel="nofollow" target="_blank" ><img src="/img/globaldata-big.png" class="media-object" alt="数据全局共享组件" /></a>
+			<div class="media-body">
+				<h4 class="media-heading">
+					<a target="_blank" href="https://github.com/walkor/GlobalData" rel="nofollow">分布式变量共享组件GlobalData</a>
+				</h4>
+				<p>
+				进程间数据共享组件，用于分布式数据共享。服务端基于Workerman。客户端可用于任何PHP项目。
+				<br>
+				<a class="btn" target="_blank" href="https://github.com/walkor/GlobalData" rel="nofollow">下载源代码 »</a>
+				<a class="btn" target="_blank" href="http://doc3.workerman.net/component/global-data.html" rel="nofollow">文档 »</a>
 				</p>
 			</div>
 		</div>

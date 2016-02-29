@@ -148,7 +148,7 @@
 					<a target="_blank" href="https://github.com/walkor/php-socks5" rel="nofollow">PHPSocket.IO</a>
 				</h4>
 				<p>
-				一个php写的socks5代理，基于workerman开发。前端(浏览器等)和socks5之间通过TCP/IP以socks5协议进行通讯，前端将原本要发送给真正服务器的请求发送给socks5服务器，然后socks5服务器将请求转发给真正的服务器。
+				一个php写的socks5代理，基于workerman开发。前端(浏览器等)和socks5之间通过socks5协议进行通讯，将原本要发送给真正服务器的请求发送给socks5服务器代为转发并返回结果。
 				<br>
 				<a class="btn" target="_blank" href="https://github.com/walkor/php-socks5" rel="nofollow">下载源代码 »</a>
 				</p>
@@ -293,18 +293,6 @@
 			</div>
 		</div>
 		<div class="media">
-			 <a href="https://github.com/walkor/workerman-queue" class="pull-left" rel="nofollow" target="_blank" ><img src="/img/workerman-queue.png" class="media-object" alt="workerman 消息队列" /></a>
-			<div class="media-body">
-				<h4 class="media-heading">
-					<a target="_blank" href="https://github.com/walkor/workerman-queue" rel="nofollow">workerman消息队列</a>
-				</h4>
-				<p>一个简单的消息队列demo，基于Linux sysv 队列实现，需要开启sysvmsg扩展
-				<br>
-				<a class="btn" target="_blank" href="https://github.com/walkor/workerman-queue" rel="nofollow">下载源代码 »</a>
-				</p>
-			</div>
-		</div>
-		<div class="media">
 			 <a href="https://github.com/walkor/gatewayworker" class="pull-left" rel="nofollow" target="_blank" ><img src="/img/channel-big.png" class="media-object" alt="workerman 分布式通讯组件" /></a>
 			<div class="media-body">
 				<h4 class="media-heading">
@@ -319,13 +307,25 @@
 			</div>
 		</div>
 		<div class="media">
+			 <a href="https://github.com/walkor/workerman-queue" class="pull-left" rel="nofollow" target="_blank" ><img src="/img/workerman-queue.png" class="media-object" alt="workerman 消息队列" /></a>
+			<div class="media-body">
+				<h4 class="media-heading">
+					<a target="_blank" href="https://github.com/walkor/workerman-queue" rel="nofollow">workerman消息队列</a>
+				</h4>
+				<p>一个简单的消息队列demo，基于Linux sysv 队列实现，需要开启sysvmsg扩展
+				<br>
+				<a class="btn" target="_blank" href="https://github.com/walkor/workerman-queue" rel="nofollow">下载源代码 »</a>
+				</p>
+			</div>
+		</div>
+		<div class="media">
 			 <a href="https://github.com/walkor/Channel" class="pull-left" rel="nofollow" target="_blank" ><img src="/img/channel-big.png" class="media-object" alt="workerman 分布式通讯组件" /></a>
 			<div class="media-body">
 				<h4 class="media-heading">
 					<a target="_blank" href="https://github.com/walkor/Channel" rel="nofollow">分布式通讯组件Channel</a>
 				</h4>
 				<p>
-				基于订阅的多进程通讯组件，事件的订阅发布机制，使用方法简单，能够方便的实现进程间及服务器间通讯。
+				基于订阅的进程间通讯组件，事件的订阅发布机制，使用方法简单，能够方便的实现进程间及服务器集群间通讯。
 				<br>
 				<a class="btn" target="_blank" href="https://github.com/walkor/Channel" rel="nofollow">下载源代码 »</a>
 				<a class="btn" target="_blank" href="http://doc3.workerman.net/component/channel.html" rel="nofollow">文档 »</a>
