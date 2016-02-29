@@ -145,7 +145,7 @@
 			 <a href="https://github.com/walkor/php-socks5" class="pull-left" target="_blank" rel="nofollow"><img src="/img/socks5-big.png" class="media-object" /></a>
 			<div class="media-body">
 				<h4 class="media-heading">
-					<a target="_blank" href="https://github.com/walkor/php-socks5" rel="nofollow">PHPSocket.IO</a>
+					<a target="_blank" href="https://github.com/walkor/php-socks5" rel="nofollow">socks5网络代理服务</a>
 				</h4>
 				<p>
 				一个php写的socks5代理，基于workerman开发。前端(浏览器等)和socks5之间通过socks5协议进行通讯，将原本要发送给真正服务器的请求发送给socks5服务器代为转发并返回结果。
