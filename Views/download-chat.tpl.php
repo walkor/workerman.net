@@ -29,7 +29,7 @@
 				workerman-chat是一款开源的PHP聊天室框架，使用改框架可以轻而易举的开发出自己的聊天室，采用Websocket协议，拥有更好的性能，支持分布式部署，可以自由扩展。
 				<a class="btn"  href="/workerman-chat">详细介绍 »</a>
 				<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-chat&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-chat&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table>
-				<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-chat" target="_blank"><b>Fork on Github</b></a>&nbsp;
+				<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-chat" target="_blank" rel="nofollow"><b>Fork on Github</b></a>&nbsp;
 				<a class="btn btn-default btn-large" href="/download/chatzip"><b>下载ZIP压缩文件</b></a> <font class='f11 gray'>下载<?php echo $chat_download_count;?>次</font>
 		</div>
 		<table class="table table-bordered">
