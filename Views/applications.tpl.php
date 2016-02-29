@@ -219,7 +219,7 @@
 			</div>
 		</div>
 		<div class="media">
-			 <a href="https://github.com/walkor/gatewayworker" class="pull-left" rel="nofollow" target="_blank" ><img src="/img/channel-big.png" class="media-object" alt="workerman 分布式通讯组件" /></a>
+			 <a href="https://github.com/walkor/gatewayworker" class="pull-left" rel="nofollow" target="_blank" ><img src="/img/gatewayworker-big.png" class="media-object" alt="workerman 分布式通讯组件" /></a>
 			<div class="media-body">
 				<h4 class="media-heading">
 					<a target="_blank" href="https://github.com/walkor/gatewayworker" rel="nofollow">GatewayWorker框架</a>
