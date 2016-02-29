@@ -5,7 +5,72 @@
 </ul>
 <div class="row clearfix">
 		<div class="col-md-9 column">
-		
+		<div class="media">
+			 <a href="http://doc3.workerman.net/" class="pull-left" target="_blank" ><img src="/img/workerman-big.png" class="media-object" /></a>
+			<div class="media-body">
+			<div class="thumbnail">
+				<div class="caption-download">
+					<h4>workerman</h4>
+					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
+					<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman" target="_blank"><b>Fork on Github</b></a>&nbsp;
+					<a class="btn btn-default btn-large" href="/download/workermanzip"><b>下载ZIP压缩文件</b> </a> <font class='f11 gray'>下载<?php echo $workerman_download_count;?>次</font>
+				</div>
+			</div>
+			</div>
+		</div>
+		<div class="media">
+			 <a href="http://doc3.workerman.net/" class="pull-left" target="_blank" ><img src="/img/workerman-for-win-big.png" class="media-object" /></a>
+			<div class="media-body">
+			<div class="thumbnail">
+				<div class="caption-download">
+					<h4>workerman-for-win</h4>
+					<table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-for-win&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-for-win&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table>
+					<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-for-win" target="_blank"><b>Fork on Github</b></a>&nbsp;
+					<a class="btn btn-default btn-large" href="/download/workermanwinzip"><b>下载ZIP压缩文件</b></a> <font class='f11 gray'>下载<?php echo $workermanwin_download_count;?>次</font>
+				<br>
+				</div>
+			</div>
+			</div>
+		</div>
+		<div class="media">
+			 <a href="http://workerman.net/gatewaydoc/" class="pull-left" target="_blank" ><img src="/img/gatewayworker-big.png" class="media-object" /></a>
+			<div class="media-body">
+			<div class="thumbnail">
+				<div class="caption-download">
+					<h4>GatewayWorker</h4>
+					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=gatewayworker&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=gatewayworker&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
+					<a class="btn btn-default btn-large" href="https://github.com/walkor/gatewayworker" target="_blank"><b>Fork on Github</b></a>&nbsp;
+					<a class="btn btn-default btn-large" href="https://github.com/walkor/GatewayWorker/archive/master.zip"><b>下载ZIP压缩文件</b> </a>
+				</div>
+			</div>
+			</div>
+		</div>
+		<div class="media">
+			 <a href="http://doc3.workerman.net/component/channel.html" class="pull-left" target="_blank" ><img src="/img/channel-big.png" class="media-object" /></a>
+			<div class="media-body">
+			<div class="thumbnail">
+				<div class="caption-download">
+					<h4>进程间通讯组件Channel</h4>
+					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=channel&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=channel&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
+					<a class="btn btn-default btn-large" href="https://github.com/walkor/channel" target="_blank"><b>Fork on Github</b></a>&nbsp;
+					<a class="btn btn-default btn-large" href="https://github.com/walkor/Channel/archive/master.zip"><b>下载ZIP压缩文件</b> </a>
+				</div>
+			</div>
+			</div>
+		</div>
+		<div class="media">
+			 <a href="http://doc3.workerman.net/component/global-data.html" class="pull-left" target="_blank" ><img src="/img/globaldata-big.png" class="media-object" /></a>
+			<div class="media-body">
+			<div class="thumbnail">
+				<div class="caption-download">
+					<h4>进程间变量组件GlobalData</h4>
+					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=GlobalData&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=GlobalData&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
+					<a class="btn btn-default btn-large" href="https://github.com/walkor/GlobalData" target="_blank"><b>Fork on Github</b></a>&nbsp;
+					<a class="btn btn-default btn-large" href="https://github.com/walkor/GlobalData/archive/master.zip"><b>下载ZIP压缩文件</b> </a>
+				</div>
+			</div>
+			</div>
+		</div>
 		<div class="media">
 			 <a href="http://kedou.workerman.net/" class="pull-left" target="_blank" ><img src="/img/workerman-todpole.png" class="media-object" alt='PHP 小蝌蚪聊天室界面' /></a>
 			<div class="media-body">
