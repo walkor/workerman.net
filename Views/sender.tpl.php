@@ -73,7 +73,8 @@ content 为消息内容
 			<p>1、<a href="/download/senderzip" target="_blank">下载</a>web-msg-sender，并解压缩到任意目录</p>
 			<p>2、启动workerman<code>php start.php start -d</code>如下图</p>
 			<img src="/img/sender-start.png" alt="WEB推送启动示意图"/>
-			<p>3、浏览器访问端口http://ip:2123或者http://域名:2123，例如<a href="http://workerman.net:2123/">http://workerman.net:2123</a>如图：</p>
+			<p>3、浏览器访问端口http://ip:2123或者http://域名:2123，例如
+			<a href="http://workerman.net:2123/">http://workerman.net:2123</a>如图：(如果无法访问请检查服务器防火墙)</p>
 			<img src="/img/web-msg-sender-demo.png" alt="WEB推送使用界面"/>
 			<br>
 			<h3>前端测试：</h3>
