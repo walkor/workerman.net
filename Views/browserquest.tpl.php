@@ -68,7 +68,8 @@
 			<p>1、<a href="/download/browserquestzip" target="_blank">下载BrowserQuest-PHP</a>，并解压缩到任意目录</p>
 			<p>2、进入目录并启动workerman<code>php start.php start -d</code>如下图</p>
 			<img src="/img/browserquest-start.png" alt="browserquest启动示意图"/>
-			<p>3、浏览器访问端口http://ip:8787或者http://域名:8787，例如<a href="http://www.workerman.net/demos/browserquest/">http://workerman.net:8787</a>如图：</p>
+			<p>3、浏览器访问端口http://ip:8787或者http://域名:8787，例如
+			<a href="http://www.workerman.net/demos/browserquest/">http://workerman.net:8787</a>如图：(如果无法访问请检查服务器防火墙)</p>
 			<img src="/img/browserquest.png" alt="browserquest使用界面"/>
 			<h3>说明</h3>
 			BrowserQuest-PHP由BrowserQuest修改而来，主要是将后台nodejs改成了PHP，原BrowserQuest地址<a href="http://browserquest.mozilla.org/" target="_blank">http://browserquest.mozilla.org/</a>
