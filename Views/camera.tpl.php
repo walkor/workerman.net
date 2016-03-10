@@ -56,7 +56,8 @@
 			<p>1、<a href="/download/camerazip" target="_blank">下载</a>LiveCamera，并解压缩到任意目录</p>
 			<p>2、进入目录启动workerman<code>php start.php start -d</code>如下图</p>
 			<img src="/img/camera-start.png" alt="网页摄像头直播启动示意图"/>
-			<div>3、录像页面：http://ip:8088/camera.html(ip为运行liveCamera服务的ip或者域名)<br> 观看页面：http://ip:8088/</div>
+			<div>3、录像页面：http://ip:8088/camera.html(ip为运行liveCamera服务的ip或者域名)<br>
+			观看页面：http://ip:8088/ (如果无法访问请检查服务器防火墙)</div>
 			<img src="/img/camera.jpg" alt="网页摄像头直播使用界面"/>
 		</div>
 	</div>
