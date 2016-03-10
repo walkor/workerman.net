@@ -81,7 +81,8 @@
 			<p>1、<a href="/download/chatzip" target="_blank">下载</a>workerman-chat，并解压缩到任意目录</p>
 			<p>2、启动workerman<code>php start.php start -d</code>如下图</p>
 			<img src="/img/workerman-chat-start.png" alt="php聊天室启动示意图"/>
-			<p>3、浏览器访问端口http://ip:55151或者http://域名:55151，例如<a href="http://chat.workerman.net">http://workerman.net:55151</a>如图：</p>
+			<p>3、浏览器访问端口http://ip:55151或者http://域名:55151，例如
+			<a href="http://chat.workerman.net">http://workerman.net:55151</a>如图：(如果无法访问请检查服务器防火墙)</p>
 			<img src="/img/workerman-chat-page.png" alt="php聊天室使用界面"/>
 			<h3>Windows版本安装启动</h3>
 			<p>1、点击<a href="https://github.com/walkor/workerman-chat-for-win/archive/master.zip">这里</a>下载windows版本聊天室源码</p>
