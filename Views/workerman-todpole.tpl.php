@@ -78,14 +78,14 @@
 			<img src="/img/git-clone-workerman-todpole.png" alt="git 下载小蝌蚪代码"/>
 			<h4>5、终端运行<code>cd workerman-todpole && php start.php start -d</code>如图</h4>
 			<img src="/img/workerman-todpole-start-without-libevent.png" alt="php蝌蚪小游戏启动界面" />
-			<h4>6、大功告成！浏览器访问 http://ip:8383 如图:（如果不知道自己服务器ip，则运行 <code>ip addr | grep eth1 | grep inet</code>查看）</h4>
+			<h4>6、大功告成！浏览器访问 http://ip:8383 如图:（如果无法访问请检查服务器防火墙）</h4>
 			<a href="http://kedou.workerman.net" target="_blank"><img src="/img/workerman-todpole-browser.png" alt="php蝌蚪小游戏浏览器界面" /></a>
 			<br><br>
 			<h3>阿里云详细安装教程之centos系统</h3>
 			<h4>1、<code>yum install php-cli php-process git</code></h4>
 			<h4>2、<code>cd /home/ && git clone https://github.com/walkor/workerman-todpole</code></h4>
 			<h4>3、<code>cd workerman-todpole && php start.php start -d</code></h4>
-			<h4>4、大功告成！浏览器访问 http://ip:8383 （如果不知道自己服务器ip，则运行 <code>ip addr | grep eth1 | grep inet</code>查看）</h4>
+			<h4>4、大功告成！浏览器访问 http://ip:8383 （如果无法访问请检查服务器防火墙）</h4>
 			<br>
 			<h3>网页空间/虚拟空间安装教程</h3>
 			<a href="https://github.com/walkor/workerman-todpole-web">请使用这个安装包</a>
