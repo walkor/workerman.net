@@ -9,7 +9,6 @@
 <ul>
 <li>workerman3.3.1版本发布，新增ws协议，用于AsyncTcpConnection作为客户端连接websocket协议服务，见下面示例</li></ul>
 <pre>
-<?php
 use Workerman\Worker;
 use Workerman\Connection\AsyncTcpConnection;
 require_once __DIR__ . '/Workerman/Autoloader.php';
