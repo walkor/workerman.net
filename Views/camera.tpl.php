@@ -25,6 +25,7 @@
 				</div>
 			</div>
 			<h3>线上Demo</h3>
+			<p>提示：最好用火狐测试，谷歌浏览器升级了安全策略，谷歌浏览器只能在https下才能利用html5打开摄像头。</p>
 			<p class="f16"><a href="/demos/live-camera/camera.html" target="_blank">摄像头录制页面</a></p>
 			<p class="f16"><a href="/demos/live-camera/" target="_blank">实时接收视频流页面</a></p>
 			<div class="bd-ad"><?php global $bd_ad_468_60; echo $bd_ad_468_60;?></div>
