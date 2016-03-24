@@ -1,13 +1,13 @@
-<h3>2016-02-28</h3>
+<h3>2016-02-28 workerman3.3.0版本发布</h3>
 <ul>
-<li>workerman3.3.0版本发布，新增<a href = "http://doc3.workerman.net/appendices/about-frame.html">frame协议</a>。</li>
+<li>新增<a href = "http://doc3.workerman.net/appendices/about-frame.html">frame协议</a>。</li>
 <li>发布全局变量共享组件<a href="http://doc3.workerman.net/component/global-data.html">GlobalData</a>(需要workerman>=3.3.0)，用于进程间/服务器间变量共享。</li>
 <li>升级进程间/服务器间通讯组件<a href="http://doc3.workerman.net/component/channel.html">Channel</a>(需要workerman>=3.3.0)，使之支持二进制数据通讯。</li>
 </ul>
 <hr>
-<h3>2016-03-19</h3>
+<h3>2016-03-19 workerman3.3.1版本发布</h3>
 <ul>
-<li>workerman3.3.1版本发布，新增ws协议，用于AsyncTcpConnection作为客户端连接websocket协议服务，见下面示例</li></ul>
+<li>新增ws协议，用于AsyncTcpConnection作为客户端连接websocket协议服务，见下面示例</li></ul>
 <pre>
 use Workerman\Worker;
 use Workerman\Connection\AsyncTcpConnection;
@@ -32,3 +32,5 @@ $worker->onWorkerStart = function()
 };
 Worker::runAll();
 </pre>
+<ul>
+<li>支持<a href="http://php.net/manual/en/book.event.php" target="_blank" rel="nofollow">Event扩展</a>(libevent扩展的替代品)，用于提高并发链接数。Event扩展支持php7</li></ul>
