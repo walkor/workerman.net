@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="8.10" data-basepath=".." data-revision="1456488038072">
+    <div class="book"  data-level="8.10" data-basepath=".." data-revision="1459608267686">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -817,7 +817,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_1157">
+                    <section class="normal" id="section-gitbook_1409">
                     
                         <h1 id="-">服务端到客户端的心跳检测</h1>
 <p>GatewayWorker支持<strong>服务端</strong>向<strong>客户端</strong>定时发送心跳包检测连接是否存活</p>
@@ -845,7 +845,7 @@
 <p><code>Gateway::$pingInterval</code></p>
 <p>服务端向客户端发送心跳数据的时间间隔 单位：秒。如果设置为0代表不发送心跳检测</p>
 <p><code>Gateway::$pingNotResponseLimit</code></p>
-<p>客户端连续$pingNotResponseLimit次$pingInterval时间内不回应心跳则断开链接。
+<p>客户端连续<code>$pingNotResponseLimit</code>次<code>$pingInterval</code>时间内不回应心跳则断开链接。
 如果设置为0代表客户端不用发送回应数据，即通过TCP层面检测连接的连通性（极端情况至少10分钟才能检测到）</p>
 <p><code>Gateway::$pingData</code></p>
 <p>要发送的心跳请求数据，心跳数据是任意的，只要客户端能识别即可。</p>
