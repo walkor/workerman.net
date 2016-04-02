@@ -16,15 +16,15 @@
 	<h5>4、命令行运行<code>git clone https://github.com/walkor/workerman</code></h5>
 	<h5>5、参考<a href="http://doc3.workerman.net/getting-started/simple-example.html" target="_blank">手册</a>写例子运行或者从主页下载<a href="/applications">demo</a>运行</h5>
 	<br>
-	<h3>debian/ubuntu系统安装教程(如果不是root用户请用sudo 后面加命令) </h3>
+	<h3>debian/ubuntu系统安装教程</h3>
 	<a href="/img/gif/ubuntu-install.gif" target="_blank">>>点击这里查看动画教程<<</a><br>
 	<h5>1、命令行运行<code>apt-get install php5-cli git gcc php-pear php5-dev libevent-dev</code></h5>
 	<h5>2、命令行运行<code>pecl install channel://pecl.php.net/libevent-0.1.0</code> 提示libevent installation [autodetect]: 时按回车</h5>
-	<h5>3、命令行运行<code>echo extension=libevent.so > /etc/php5/cli/conf.d/libevent.ini</code></h5>
+	<h5>3、命令行运行(需要切换到root用户)<code>echo extension=libevent.so > /etc/php5/cli/conf.d/libevent.ini</code></h5>
 	<h5>4、命令行运行<code>git clone https://github.com/walkor/workerman</code></h5>
 	<h5>5、参考<a href="http://doc3.workerman.net/getting-started/simple-example.html" target="_blank">手册</a>写例子运行或者从主页下载<a href="/applications">demo</a>运行</h5>
 	<br>
-	<h3>说明</h3>
+	<h3>以上命令说明</h3>
 	<h5>1、第一步安装php相关环境，包括<a href="http://php.net/manual/zh/features.commandline.php" target="_blank">php cli</a>，workerman运行在php cli下，如果已经安装好php环境则不用安装；
 	php-process（一般centos系统下需要安装）为进程控制相关扩展，
 	包括<a href="http://php.net/manual/zh/book.posix.php" target="_blank">posix</a>和<a href="http://php.net/manual/zh/book.pcntl.php" target="_blank">pcntl</a>；
@@ -34,8 +34,27 @@
 	<h5>3、第四步是通过git下载workerman的应用程序，这里默认下载的是workerman的Demo程序，如果下载workerman的其他应用程序可以修改地址，例如下载workerman-chat则命令为git clone https://github.com/walkor/workerman-chat。
 	如果手动下载过了想要的workerman应用程序，则此步骤可以省略。</h5>
 	
-	<h5><b>总结：如果已经安装了php环境，则可以尝试（跳过第一、二、三、四步）,直接下载workerman使用</b></h5>
+	<h3>mac os 系统安装教程</h3>
+	<h5>mac os 自带PHP，但是可能缺少pcntl扩展</h5>
+	<h5>1、参考手册<a href="http://doc3.workerman.net/appendices/install-extension.html" target="_blank">附录-安装扩展</a>一节中方法三源码编译安装pcntl扩展。</h5>
+	<h5>2、参考手册<a href="http://doc3.workerman.net/appendices/install-extension.html" target="_blank">附录-安装扩展</a>一节中方法四利用phpize安装libevent扩展（可省略）。</h5>
+	<h5>3、通过<a href="http://www.workerman.net/download/workermanzip" target="_blank">http://www.workerman.net/download/workermanzip</a> 下载WorkerMan主程序，或者到<a href="http://www.workerman.net/" target="_blank">官网</a>下载例子运行。</h5>
 	<br>
+	
+	<h3>关于libevent扩展</h3>
+	<p>如果无法安装<a href="http://php.net/manual/zh/book.libevent.php" target="_blank">libevent扩展</a>，可以用<a href="http://php.net/manual/zh/book.event.php" target="_blank">Event扩展</a>代替。</p>
+<p><strong>安装Event扩展方法如下：</strong></p>
+<p>注意：Event扩展也同样依赖libevent库，所以首先需要安装libevent-devel包(并非扩展)。</p>
+<p>centos系统</p>
+<pre><code>yum install libevent-devel
+pecl install event
+echo extension=event.so &gt; /etc/php.d/event.ini
+</code></pre><p>debian/ubuntu系统</p>
+<pre><code>apt-get install libevent-dev
+pecl install event
+echo extension=event.so &gt; /etc/php5/cli/conf.d/event.ini
+</code></pre>
+	
 	<h3>编译安装workerman的php环境(以centos为例)</h3>
 <h5>1、 yum install wget gcc git php-devel php-pear libevent-devel libxml2-devel cmake</h5>
 <h5>2、 wget  http://cn2.php.net/distributions/php-5.6.8.tar.gz              (下载php)</h5>
