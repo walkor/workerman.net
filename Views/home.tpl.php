@@ -148,9 +148,22 @@
 					<a target="_blank" href="https://github.com/walkor/php-socks5" rel="nofollow">socks5网络代理服务</a>
 				</h4>
 				<p>
-				一个php写的socks5代理，基于workerman开发。前端(浏览器等)和socks5之间通过socks5协议进行通讯，将原本要发送给真正服务器的请求发送给socks5服务器代为转发并返回结果。
+				一个php写的socks5代理，基于workerman开发。socks5代理不关心应用层协议，是一种通用的代理服务器，可用于做游戏代理、http代理等等。
 				<br>
 				<a class="btn" target="_blank" href="https://github.com/walkor/php-socks5" rel="nofollow">下载源代码 »</a>
+				</p>
+			</div>
+		</div>
+		<div class="media">
+			 <a href="https://github.com/walkor/php-http-proxy" class="pull-left" target="_blank" rel="nofollow"><img src="/img/http-proxy-big.png" class="media-object" /></a>
+			<div class="media-body">
+				<h4 class="media-heading">
+					<a target="_blank" href="https://github.com/walkor/php-http-proxy" rel="nofollow">php-http-proxy http代理</a>
+				</h4>
+				<p>
+				基于workerman开发的一个http代理。源码仅有几十行，性能强悍。
+				<br>
+				<a class="btn" target="_blank" href="https://github.com/walkor/php-http-proxy" rel="nofollow">下载源代码 »</a>
 				</p>
 			</div>
 		</div>
@@ -365,6 +378,9 @@
 			最近更新
 		</h4>
 		<ul>
+			<li>
+				<a href="https://github.com/walkor/php-http-proxy" rel="nofollow">2016-04-06 php-http-proxy http代理发布</a>
+			</li>
 			<li>
 				<a href="http://doc3.workerman.net/component/global-data.html">2016-02-26 GlobalData 进程变量共享组件发布</a>
 			</li>

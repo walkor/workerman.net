@@ -272,5 +272,18 @@
 				</p>
 			</div>
 		</div>
+		<div class="media">
+			 <a href="https://github.com/walkor/php-http-proxy" class="pull-left" target="_blank" rel="nofollow"><img src="/img/http-proxy-big.png" class="media-object" /></a>
+			<div class="media-body">
+				<h4 class="media-heading">
+					<a target="_blank" href="https://github.com/walkor/php-http-proxy" rel="nofollow">php-http-proxy http代理</a>
+				</h4>
+				<p>
+				基于workerman开发的一个http代理。源码仅有几十行，性能强悍。
+				<br>
+				<a class="btn" target="_blank" href="https://github.com/walkor/php-http-proxy" rel="nofollow">下载源代码 »</a>
+				</p>
+			</div>
+		</div>
 
 <br><?php global $bd_ad_960_90; echo $bd_ad_960_90;?>
