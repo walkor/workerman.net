@@ -5,7 +5,7 @@
 		workerman-for-win是运行在windows平台的版本，开发接口与Linux多进程版本一致，
 		也就是说基于workerman开发的应用程序即可以运行在Linux系统，也可以运行在Windows系统上。
 		<br>
-		<b>注意：windows版本建议使用者用于开发调试，实际部署使用Linux多进程版本
+		<b>注意：windows版本建议使用者用于开发调试，实际部署使用Linux多进程版本。Window版本workerman不依赖任何扩展。
 		</b>
 	</p>
 	<table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-for-win&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-for-win&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table>
@@ -16,6 +16,7 @@
         <font class="f16">
 	windows版本聊天室<a href="https://github.com/walkor/workerman-chat-for-win" rel="nofollow">点击下载workerman-chat-for-win</a><br>
         windows版本小蝌蚪聊天室<a href="https://github.com/walkor/workerman-todpole-for-win" rel="nofollow">点击下载workerman-todpole-for-win</a>
+        windows版本GatewayWorker<a href="https://github.com/walkor/GatewayWorker-for-win" rel="nofollow">点击下载GatewayWorker-for-win</a>
         <br>以上demo下载后双击start_for_win.bat即可启动（无需安装其它扩展）
         </font>
         <div style="margin:10px 0">提示：如果出现类似"php不是内部或外部命令"的提示，说明没有设置好php环境变量，请参考下面步骤设置</div>

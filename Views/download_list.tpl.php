@@ -41,6 +41,8 @@
 					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=gatewayworker&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=gatewayworker&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
 					<a class="btn btn-default btn-large" href="https://github.com/walkor/gatewayworker" target="_blank" rel="nofollow"><b>Fork on Github</b></a>&nbsp;
 					<a class="btn btn-default btn-large" href="https://github.com/walkor/GatewayWorker/archive/master.zip"><b>下载ZIP压缩文件</b> </a>
+					<h4>Windows版本下载</h4>
+						<a class="btn btn-default btn-large" href="https://github.com/walkor/GatewayWorker-for-win/archive/master.zip"><b>下载Win版本ZIP压缩文件</b> </a>
 				</div>
 			</div>
 			</div>

@@ -30,7 +30,7 @@
 
 
         
-    <div class="book"  data-level="0" data-basepath="." data-revision="1460382057259">
+    <div class="book"  data-level="0" data-basepath="." data-revision="1460383964398">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -815,7 +815,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_92">
+                    <section class="normal" id="section-gitbook_192">
                     
                         <h1 id="gatewayworker2-0-">GatewayWorker2.0 手册</h1>
 <p>本手册适用于最新版本GatewayWorker2.0(发布时间2015-11-11)。</p>
@@ -830,9 +830,10 @@
 <p>Workerman可以看做是一个纯粹的socket类库，可以开发几乎所有的网络应用，不管是TCP的还是UDP的，长连接的还是短连接的。Workerman代码精简，功能强大，使用灵活，能够快速开发出各种网络应用。</p>
 <p>因为绝大多数开发者的目标是基于Workerman开发TCP长连接应用，而长连接应用服务端有很多共同之处，例如它们有相同的进程模型以及单发、群发、广播等接口需求。所以才有了GatewayWorker框架，GatewayWorker是基于Workerman开发的一个TCP长连接框架，实现了单发、群送、广播等长连接必用的接口，并且内置了MySql类库。GatewayWorker框架实现了Gateway Worker进程模型，天然支持分布式部署，扩容缩容非常方便，能够应对海量并发连接。可以说GatewayWorker是基于Workerman实现的一个更完善的专门用于实现TCP长连接的项目框架。</p>
 <h2 id="gatewayworker-">GatewayWorker 源码地址</h2>
-<p><a href="https://github.com/walkor/GatewayWorker" target="_blank">https://github.com/walkor/GatewayWorker</a></p>
+<p>Linux版本：<a href="https://github.com/walkor/GatewayWorker" target="_blank">https://github.com/walkor/GatewayWorker</a></p>
+<p>Windows版本：<a href="https://github.com/walkor/GatewayWorker-for-win" target="_blank">https://github.com/walkor/GatewayWorker-for-win</a></p>
 <h2 id="applications-yourapp-">Applications\YourApp测试方法</h2>
-<h2 id="-">启动</h2>
+<h2 id="-linux-">启动（Linux版本）</h2>
 <p>以debug方式启动</p>
 <p><code>php start.php start</code></p>
 <p>或者以daemon方式启动</p>
