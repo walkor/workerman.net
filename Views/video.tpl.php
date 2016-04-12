@@ -6,7 +6,7 @@
 		<div class="media">
 			<div class="media-body">
 				<ul>
-				<li><a href="http://v.youku.com/v_show/id_XMTQ3MDgyMDg5Mg==.html">安装启动</a></li>
+				<li><a href="http://v.youku.com/v_show/id_XMTQ3MDgyMDg5Mg==.html" class="pull-left" target="_blank" rel="nofollow">workerman视频教程-安装启动</a></li>
 				</ul>
 			</div>
 		</div>
