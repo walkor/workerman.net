@@ -294,6 +294,13 @@
 				</h4>
 				<p>
 				基于wokerman 引擎框架的帧扩展。
+				1.EventDispatcher 事件派发器，支持中断。用于管理事件的派发。<br>
+2.ChannelEventDispatcher 跨进程事件派发器，原理和EventDispatcher一样，结合Channel组件进行跨进程的事件派发。单例模式。<br>
+3.FrameChild 帧处理组件，可嵌套，继承EventDispatcher，支持状态保留reload后恢复数据，自带回收重用，对象池模式。<br>
+4.Event 事件，EventDispatcher将派发Event事件，自带回收重用，对象池模式。<br>
+5.MyRedis Redis。<br>
+6.RedisForDb Redis作为Db缓存的基本实现。<br>
+7.Utils 工具类，目前仅提供uuid唯一id。<br>
 				<br>
 				<a class="btn" target="_blank" href="http://114.55.55.197:9393" rel="nofollow">demo »</a>
 				<a class="btn" target="_blank" href="https://github.com/tmtbe/ServerFrame" rel="nofollow">下载源代码 »</a>
