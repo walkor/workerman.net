@@ -14,10 +14,10 @@
 	<br><hr>
 	<h3>直接下载可用的windows demo</h3>
         <font class="f16">
-	windows版本聊天室<a href="https://github.com/walkor/workerman-chat-for-win" rel="nofollow">点击下载workerman-chat-for-win</a><br>
-        windows版本小蝌蚪聊天室<a href="https://github.com/walkor/workerman-todpole-for-win" rel="nofollow">点击下载workerman-todpole-for-win</a>
-        windows版本GatewayWorker<a href="https://github.com/walkor/GatewayWorker-for-win" rel="nofollow">点击下载GatewayWorker-for-win</a>
-        <br>以上demo下载后双击start_for_win.bat即可启动（无需安装其它扩展）
+        windows版本聊天室<a href="https://github.com/walkor/workerman-chat-for-win" rel="nofollow">点击下载workerman-chat-for-win</a><br>
+        windows版本小蝌蚪聊天室<a href="https://github.com/walkor/workerman-todpole-for-win" rel="nofollow">点击下载workerman-todpole-for-win</a><br>
+        windows版本GatewayWorker<a href="https://github.com/walkor/GatewayWorker-for-win" rel="nofollow">点击下载GatewayWorker-for-win</a><br>
+        以上demo下载后双击start_for_win.bat即可启动（无需安装其它扩展）
         </font>
         <div style="margin:10px 0">提示：如果出现类似"php不是内部或外部命令"的提示，说明没有设置好php环境变量，请参考下面步骤设置</div>
         <hr>
@@ -41,7 +41,8 @@
         1、win版本count属性无效，全部为单进程<br>
         2、不支持start stop reload restart status命令<br>
         3、cmd命令行启动，后面可接多个文件，例如 php start_web.php start_gateway.php start_worker.php<br>
-        4、每个启动文件只能实例化一个容器(Worker/WebServer/Gateway/BusinessWorker)，需要实例化多个容器时<br>
+        4、无法守护进程，cmd窗口关掉后服务即停止<br>
+        5、每个启动文件只能实例化一个容器(Worker/WebServer/Gateway/BusinessWorker)，需要实例化多个容器时<br>
         需要拆成多个文件，例如 start_web.php start_gateway.php start_worker.php 分别初始化web gateway worker<br>
         <br><br>
         <h3>Windows版本workerman的启动与停止</h3>
