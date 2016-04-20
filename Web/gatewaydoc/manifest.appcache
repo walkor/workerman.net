@@ -1,32 +1,34 @@
 CACHE MANIFEST
-# Revision 1461161219600
+# Revision 1461166877321
 
 CACHE:
 gateway-worker-development/business-worker.html
-gateway-worker-development/join-group.html
 gateway-worker-development/README.html
+gateway-worker-development/leave-group.html
 gateway-worker-development/close-client.html
-gateway-worker-development/event-functions.html
-gateway-worker-development/event-handler.html
-gateway-worker-development/close-current-client.html
 gateway-worker-development/distributed.html
+gateway-worker-development/close-current-client.html
+gateway-worker-development/event-functions.html
 gateway-worker-development/gateway-worker-development.html
-gateway-worker-development/get-all-client-count.html
-gateway-worker-development/get-client-count-by-group.html
+gateway-worker-development/event-handler.html
 gateway-worker-development/gateway-worker-separation.html
 gateway-worker-development/gateway.html
+gateway-worker-development/get-all-client-count.html
+gateway-worker-development/get-client-count-by-group.html
 gateway-worker-development/get-client-id-by-uid.html
-gateway-worker-development/get-online-status.html
 gateway-worker-development/get-client-info-by-group.html
-gateway-worker-development/heartbeat.html
+gateway-worker-development/get-online-status.html
 gateway-worker-development/how-distributed.html
+gateway-worker-development/heartbeat.html
+gateway-worker-development/join-group.html
 gateway-worker-development/is-online.html
 gateway-worker-development/bind-uid.html
-gateway-worker-development/leave-group.html
 gateway-worker-development/lib-gateway-functions.html
 gateway-worker-development/onclose.html
 gateway-worker-development/onconnect.html
 gateway-worker-development/onmessage.html
+gateway-worker-development/onworkerstart.html
+gateway-worker-development/onworkerstop.html
 gateway-worker-development/process-timeout-handler.html
 gateway-worker-development/process-timeout.html
 gateway-worker-development/property-and-callback.html
@@ -41,11 +43,11 @@ gateway-worker-development/server.html
 gateway-worker-development/session.html
 gateway-worker-development/unbind-uid.html
 gateway-worker-development/why-distributed.html
-advanced/file-monitor.html
+index.html
 advanced/README.html
+advanced/file-monitor.html
 advanced/multi-gatewayworker-instance.html
 advanced/multi-protocols.html
-index.html
 advanced/push.html
 appendices/README.html
 appendices/mysql.html
@@ -54,10 +56,10 @@ faq/get-gateway-port.html
 faq/get-gateway-version.html
 faq/get-ip.html
 feature/README.html
-preface/README.html
 getting-started/README.html
-process-of-communication/README.html
 license/README.html
+preface/README.html
+process-of-communication/README.html
 protocols/README.html
 start-and-stop/README.html
 gitbook\app.js
