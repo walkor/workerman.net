@@ -1,6 +1,6 @@
 <h3>2016-04-20 GatewayWorker2.0.4版本发布</h3>
 <ul>
-<li>为避免和Event扩展冲突，原Event.php类更名为Events.php，类名也同步改为Events</li>
+<li>为避免和Event扩展冲突，原Event.php更名为Events.php，类名也同步改为Events</li>
 <li>Events.php中支持设置BusinessWorker进程的<a href="http://workerman.net/gatewaydoc/gateway-worker-development/onworkerstart.html">onWorkerStart</a>、<a href="http://workerman.net/gatewaydoc/gateway-worker-development/onworkerstop.html">onWorkerStop</a>回调，</li>
 <li>增加<a href="http://workerman.net/gatewaydoc/gateway-worker-development/get-all-client-count.html">Gateway::getAllClientCount()</a>方法，用于获取当前在线总数(在线的client_id总数)</li>
 </ul>
