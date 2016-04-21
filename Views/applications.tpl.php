@@ -292,7 +292,7 @@
 				<h4 class="media-heading">
 					<a target="_blank" href="https://github.com/tmtbe/ServerFrame" rel="nofollow">ServerFrame</a>
 				</h4>
-基于wokerman 引擎框架的帧扩展。
+基于wokerman 引擎框架的帧扩展。<br>
 1.EventDispatcher 事件派发器，支持中断。用于管理事件的派发。<br>
 2.ChannelEventDispatcher 跨进程事件派发器，原理和EventDispatcher一样，结合Channel组件进行跨进程的事件派发。单例模式。<br>
 3.FrameChild 帧处理组件，可嵌套，继承EventDispatcher，支持状态保留reload后恢复数据，自带回收重用，对象池模式。<br>
@@ -302,6 +302,46 @@
 7.Utils 工具类，目前仅提供uuid唯一id。<br>
 				<a class="btn" target="_blank" href="http://114.55.55.197:9393" rel="nofollow">demo »</a>
 				<a class="btn" target="_blank" href="https://github.com/tmtbe/ServerFrame" rel="nofollow">下载源代码 »</a>
+			</div>
+		</div>
+		
+		<div class="media">
+			<div class="media-body">
+				<h4 class="media-heading">
+					<a target="_blank" href="https://github.com/shuiguang/workerman-crontab" rel="nofollow">workerman-crontab</a>
+				</h4>
+基于wokerman 开发的crontab定时器
+				<a class="btn" target="_blank" href="https://github.com/shuiguang/workerman-crontab" rel="nofollow">下载源代码 »</a>
+			</div>
+		</div>
+		
+		<div class="media">
+			<div class="media-body">
+				<h4 class="media-heading">
+					<a target="_blank" href="https://github.com/acabin/laravoole" rel="nofollow">Laravoole</a>
+				</h4>
+workerman + Laravel框架结合，据说比php-fpm + Laravel快约10倍。
+				<a class="btn" target="_blank" href="https://github.com/acabin/laravoole" rel="nofollow">下载源代码 »</a>
+			</div>
+		</div>
+		
+		<div class="media">
+			<div class="media-body">
+				<h4 class="media-heading">
+					<a target="_blank" href="https://github.com/happyliu2014/Workerman-ThinkPHP-Redis" rel="nofollow">Workerman-ThinkPHP-Redis</a>
+				</h4>
+				ThinkPHP与workerman聊天室结合的例子。
+				<a class="btn" target="_blank" href="https://github.com/happyliu2014/Workerman-ThinkPHP-Redis" rel="nofollow">下载源代码 »</a>
+			</div>
+		</div>
+		
+		<div class="media">
+			<div class="media-body">
+				<h4 class="media-heading">
+					<a target="_blank" href="https://github.com/hprose/hprose-workerman" rel="nofollow">hprose-workerman</a>
+				</h4>
+				workerman作为容器运行hprose。包括自定义协议，桥接和接口。
+				<a class="btn" target="_blank" href="https://github.com/hprose/hprose-workerman" rel="nofollow">下载源代码 »</a>
 			</div>
 		</div>
 		
