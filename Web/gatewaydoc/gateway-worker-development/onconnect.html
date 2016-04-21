@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="8.5.2" data-basepath=".." data-revision="1461243529338">
+    <div class="book"  data-level="8.5.2" data-basepath=".." data-revision="1461245453679">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -861,7 +861,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_436">
+                    <section class="normal" id="section-gitbook_1161">
                     
                         <h1 id="events-onconnect">Events::onConnect</h1>
 <h2 id="-">说明:</h2>
@@ -872,11 +872,13 @@
 <p><code>$client_id</code></p>
 <p>client_id固定为20个字的字符串，用来全局标记一个socket连接，每个客户端连接都会被分配一个全局唯一的client_id。</p>
 <p>如果client_id对应的客户端连接断开了，那么这个client_id也就失效了。当这个客户端再次连接到Gateway时，将会获得一个新的client_id。也就是说client_id和客户端的socket连接生命周期是一致的。</p>
-<p>只要有client_id，并且对应的客户端在线，就可以调用<code>Gateway::sendToClient($client_id, $data);</code>向这个客户端发送数据。</p>
+<p>client_id一旦被使用过，将不会被再次使用，也就是说client_id是不会重复的，即使分布式部署也不会重复。</p>
+<p>只要有client_id，并且对应的客户端在线，就可以调用<code>Gateway::sendToClient($client_id, $data)</code>等方法向这个客户端发送数据。</p>
 <h2 id="-">返回值</h2>
 <p>无返回值，任何返回值都会被视为无效的</p>
 <h2 id="-">注意</h2>
-<p><code>$client_id</code>是自动生成的并且无法自定义。</p>
+<p><code>$client_id</code>是服务端自动生成的并且无法自定义。</p>
+<p>如果开发者有自己的id系统，可以用过<code>Gateway::bindUid($client_id, $uid)</code>把自己系统的id与client_id绑定，绑定后就可以通过<code>Gateway::sendToUid($uid)</code>发送数据，通过<code>Gateway::isUidOnline($uid)</code>用户是否在线了。</p>
 <h2 id="onconnect-">onConnect范例</h2>
 <pre><code class="lang-php"><span class="hljs-keyword">use</span> \<span class="hljs-title">GatewayWorker</span>\<span class="hljs-title">Lib</span>\<span class="hljs-title">Gateway</span>;
 

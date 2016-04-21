@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="8.6.7" data-basepath=".." data-revision="1461243529338">
+    <div class="book"  data-level="8.6.7" data-basepath=".." data-revision="1461245453679">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -861,7 +861,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_433">
+                    <section class="normal" id="section-gitbook_1158">
                     
                         <h1 id="-gatewayworker-lib-gateway-binduid">\GatewayWorker\Lib\Gateway::bindUid</h1>
 <h2 id="-">说明:</h2>
@@ -874,6 +874,7 @@
 <p>3、client_id下线（连接断开）时会自动执行解绑，开发者无需调用Gateway::unbindUid解绑。</p>
 <p>4、如果某个uid对应的所有client_id都下线了，则调用<code>Gateway::isUidOnline($uid)</code>将返回0，即uid不在线。</p>
 <p>5、uid和client_id映射关系存储在Gateway进程内存中。</p>
+<p>6、调用<code>Gateway::bindUid($client_id, $uid)</code>的时机一般是在验证连接合法性的时候。例如客户端连上服务端后，发送的第一个数据包应当包含客户端的鉴权信息(例如用户名密码或者可用于鉴权的token)，服务端通过鉴权信息确定该连接属于哪个uid，然后调用<code>Gateway::bindUid($client_id, $uid)</code>绑定。</p>
 <h2 id="-">参数</h2>
 <ul>
 <li><code>$client_id</code></li>

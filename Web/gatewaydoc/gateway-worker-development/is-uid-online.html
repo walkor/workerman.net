@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="8.6.8" data-basepath=".." data-revision="1461243529338">
+    <div class="book"  data-level="8.6.8" data-basepath=".." data-revision="1461245453679">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -861,21 +861,24 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_431">
+                    <section class="normal" id="section-gitbook_1156">
                     
                         <h1 id="-gatewayworker-lib-gateway-isuidonline">\GatewayWorker\Lib\Gateway::isUidOnline</h1>
 <h2 id="-">说明:</h2>
 <pre><code class="lang-php">int Gateway::isUidOnline(mixed <span class="hljs-variable">$uid</span>);
 </code></pre>
 <p><code>(需要Gateway版本&gt;=2.0.4)</code></p>
-<p>判断$uid是否还在线</p>
+<p>判断<code>$uid</code>是否在线，此方法需要配合<code>Gateway::bindUid($client_uid, $uid)</code>使用。</p>
+<p>如果某uid没有通过<code>Gateway::bindUid($client_uid, $uid)</code>进行任何绑定，那么对该uid调用<code>Gateway::isUidOnline($uid)</code>将返回0。</p>
+<p>如果某uid绑定的client_id都已经下线，那么对该uid调用<code>Gateway::isUidOnline($uid)</code>将返回0。</p>
+<p>如果某uid绑定的client_id有至少有一个在线，那么对该uid调用<code>Gateway::isUidOnline($uid)</code>将返回1。</p>
 <h2 id="-">参数</h2>
 <ul>
 <li><code>$uid</code></li>
 </ul>
 <p>uid，可以是数字或者字符串</p>
 <h2 id="-">返回值</h2>
-<p>在线返回1，不在线返回0</p>
+<p>uid在线返回1，不在线返回0</p>
 <h2 id="-">范例</h2>
 <pre><code class="lang-php"><span class="hljs-keyword">use</span> \<span class="hljs-title">GatewayWorker</span>\<span class="hljs-title">Lib</span>\<span class="hljs-title">Gateway</span>;
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Events</span>
