@@ -361,7 +361,7 @@ workerman + Laravel框架结合，据说比php-fpm + Laravel快约10倍。
 				<h4 class="media-heading">
 					<a target="_blank" href="https://github.com/tmtbe/LoggerSever" rel="nofollow">LoggerSever</a>
 				</h4>
-				基于workerman的日志服务器集成Monolog，采用udp上传日志，对应用性能没有影响，日志服务器支持多进程，符合psr-3日志规范。<br>
+				基于workerman的日志服务器集成Monolog，采用udp上传日志，对应用性能没有影响，日志服务器支持多进程，符合psr-3日志规范。
 				<a class="btn" target="_blank" href="https://github.com/tmtbe/LoggerSever" rel="nofollow">下载源代码 »</a>
 			</div>
 		</div>
@@ -371,7 +371,7 @@ workerman + Laravel框架结合，据说比php-fpm + Laravel快约10倍。
 				<h4 class="media-heading">
 					<a target="_blank" href="https://github.com/forest2087/docker-workerman" rel="nofollow">docker-workerman</a>
 				</h4>
-				Docker For PHP workerman environment<br>
+				Docker For PHP workerman environment
 				<a class="btn" target="_blank" href="https://github.com/forest2087/docker-workerman" rel="nofollow">下载源代码 »</a>
 			</div>
 		</div>
