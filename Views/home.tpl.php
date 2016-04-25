@@ -15,8 +15,12 @@
 				<a class="btn btn-default btn-large" href="/download/workermanzip"><b>下载ZIP压缩文件</b></a> <font class='f11 gray'>下载<?php echo $workerman_download_count;?>次</font>
 				</div>
 				<div class="col-md-5 column">
-				免费Q群：137410824 	<a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=a7255bef60d796f72b1d7f16b2f6a745fd74ab1d15d6c9de6e031f3978817c3c"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="workerman官方群2" title="workerman官方群2"></a>
-				<br>付费Q群：544584915<a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=48fac857de63cfc2847595e14e168040a1416fa5f82ab6f72fdd778e3c67a8fe"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="Workerman 官方收费群1" title="Workerman 官方收费群1"></a>
+					<div class="Q">
+						免费Q群：137410824 	<a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=a7255bef60d796f72b1d7f16b2f6a745fd74ab1d15d6c9de6e031f3978817c3c"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="workerman官方群2" title="workerman官方群2"></a>
+					</div>
+					<div class="Q">
+						付费Q群：544584915 <a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=48fac857de63cfc2847595e14e168040a1416fa5f82ab6f72fdd778e3c67a8fe"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="Workerman 官方收费群1" title="Workerman 官方收费群1"></a>
+					</div>
 				</div>
 		</div>
 	</div>
