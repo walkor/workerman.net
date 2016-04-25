@@ -1,5 +1,6 @@
 <div class="row clearfix">
 	<div class="col-md-7 column">
+	
 		<h2>
 			什么是Workerman
 		</h2>
@@ -7,9 +8,17 @@
 			Workerman是一款<strong class="c4">纯PHP开发</strong>的<strong class="c4">开源</strong><strong class="c2">高性能</strong>的<strong class="c3">PHP socket 服务器框架</strong>。被广泛的用于手机app、手游服务端、网络游戏服务器、聊天室服务器、硬件通讯服务器、智能家居、车联网、物联网等领域的开发。
 			支持TCP长连接，支持Websocket、HTTP等协议，支持自定义协议。基于workerman开发者可以更专注于业务逻辑开发，不必再为PHP Socket底层开发而烦恼。<a class="btn" target="_blank" href="/workerman">查看更多 »</a>
 		</p>
-		<table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table>
-		<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman" target="_blank" rel="nofollow"><b>Fork on Github</b></a>&nbsp;
-		<a class="btn btn-default btn-large" href="/download/workermanzip"><b>下载ZIP压缩文件</b></a> <font class='f11 gray'>下载<?php echo $workerman_download_count;?>次</font>
+		<div class="row clearfix">
+			<div class="col-md-8 column">
+				<table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table>
+				<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman" target="_blank" rel="nofollow"><b>Fork on Github</b></a>&nbsp;
+				<a class="btn btn-default btn-large" href="/download/workermanzip"><b>下载ZIP压缩文件</b></a> <font class='f11 gray'>下载<?php echo $workerman_download_count;?>次</font>
+				</div>
+				<div class="col-md-4 column">
+				QQ群：137410824<br>
+				<a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=a7255bef60d796f72b1d7f16b2f6a745fd74ab1d15d6c9de6e031f3978817c3c"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="workerman官方群2" title="workerman官方群2"></a>
+				</div>
+		</div>
 	</div>
 	<div class="col-md-5 column">
 		<div class="thumbnail">
