@@ -10,7 +10,7 @@
 			<div class="media-body">
 			<div class="thumbnail">
 				<div class="caption-download">
-					<h4>workerman linux版本</h4>
+					<h4>workerman (linux版本)</h4>
 					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
 					<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman" target="_blank" rel="nofollow"><b>Fork on Github</b></a>&nbsp;
 					<a class="btn btn-default btn-large" href="/download/workermanzip"><b>下载ZIP压缩文件</b> </a>
@@ -23,7 +23,7 @@
 			<div class="media-body">
 			<div class="thumbnail">
 				<div class="caption-download">
-					<h4>workerman window版本</h4>
+					<h4>workerman (window版本)</h4>
 					<table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-for-win&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-for-win&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table>
 					<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-for-win" target="_blank" rel="nofollow"><b>Fork on Github</b></a>&nbsp;
 					<a class="btn btn-default btn-large" href="/download/workermanwinzip"><b>下载ZIP压缩文件</b></a> 
@@ -37,7 +37,7 @@
 			<div class="media-body">
 			<div class="thumbnail">
 				<div class="caption-download">
-					<h4>GatewayWorker框架</h4>
+					<h4>GatewayWorker框架(window版本)</h4>
 					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=gatewayworker&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=gatewayworker&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
 					<a class="btn btn-default btn-large" href="https://github.com/walkor/gatewayworker" target="_blank" rel="nofollow"><b>Fork on Github</b></a>&nbsp;
 					<a class="btn btn-default btn-large" href="https://github.com/walkor/GatewayWorker/archive/master.zip"><b>下载ZIP压缩文件</b> </a>
@@ -52,7 +52,7 @@
 			<div class="media-body">
 			<div class="thumbnail">
 				<div class="caption-download">
-					<h4>进程间通讯组件Channel（Linux Windows通用）</h4>
+					<h4>进程间通讯组件Channel(Linux Windows通用)</h4>
 					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=channel&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=channel&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
 					<a class="btn btn-default btn-large" href="https://github.com/walkor/channel" target="_blank" rel="nofollow"><b>Fork on Github</b></a>&nbsp;
 					<a class="btn btn-default btn-large" href="https://github.com/walkor/Channel/archive/master.zip"><b>下载ZIP压缩文件</b> </a>
@@ -65,7 +65,7 @@
 			<div class="media-body">
 			<div class="thumbnail">
 				<div class="caption-download">
-					<h4>进程间变量组件GlobalData（Linux Windows通用）</h4>
+					<h4>进程间变量组件GlobalData(Linux Windows通用)</h4>
 					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=GlobalData&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=GlobalData&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
 					<a class="btn btn-default btn-large" href="https://github.com/walkor/GlobalData" target="_blank" rel="nofollow"><b>Fork on Github</b></a>&nbsp;
 					<a class="btn btn-default btn-large" href="https://github.com/walkor/GlobalData/archive/master.zip"><b>下载ZIP压缩文件</b> </a>
