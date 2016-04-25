@@ -49,7 +49,7 @@
 						QQ群1：257046084(2000人已满)<br>
 						QQ群2：137410824(2000人)<br>
 						QQ群3：527941005(500人)<br>
-						<a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=beb88dc6303c25e893ac433260e7c682b27efd3935eeb060d7ede5b213ff13fc"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="workerman官方群3" title="workerman官方群3"></a>
+						VIP群：544584915 <a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=48fac857de63cfc2847595e14e168040a1416fa5f82ab6f72fdd778e3c67a8fe"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="Workerman 官方收费群1" title="Workerman 官方收费群1"></a>
 						</li>
 						</ul>
 					</div>
