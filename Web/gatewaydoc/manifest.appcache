@@ -1,13 +1,13 @@
 CACHE MANIFEST
-# Revision 1461378691729
+# Revision 1461589036986
 
 CACHE:
-gateway-worker-development/leave-group.html
 gateway-worker-development/README.html
+gateway-worker-development/leave-group.html
 gateway-worker-development/business-worker.html
 gateway-worker-development/close-client.html
-gateway-worker-development/distributed.html
 gateway-worker-development/close-current-client.html
+gateway-worker-development/distributed.html
 gateway-worker-development/event-functions.html
 gateway-worker-development/event-handler.html
 gateway-worker-development/gateway-worker-development.html
@@ -53,11 +53,12 @@ advanced/push.html
 appendices/README.html
 appendices/mysql.html
 appendices/upgrade.html
-faq/get-gateway-port.html
+faq/README.html
 faq/get-gateway-version.html
+faq/get-gateway-port.html
 faq/get-ip.html
-getting-started/README.html
 feature/README.html
+getting-started/README.html
 license/README.html
 preface/README.html
 process-of-communication/README.html
