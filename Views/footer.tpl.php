@@ -51,7 +51,6 @@
 						QQ群3：527941005(500人)<br>
 						VIP群：544584915 <a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=48fac857de63cfc2847595e14e168040a1416fa5f82ab6f72fdd778e3c67a8fe"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="Workerman 官方收费群1" title="Workerman 官方收费群1"></a><br>
 						商务合作联系QQ：2202055656
-						
 						</li>
 						</ul>
 					</div>
