@@ -1,3 +1,12 @@
+<h3>2016-04-29 GatewayWorker2.0.5版本发布</h3>
+<ul>
+<li>增加<a href="http://workerman.net/gatewaydoc/gateway-worker-development/get-session.html">Gateway::Gateway::getSession($client_id)</a>方法，用户获取某个客户端session</li>
+<li>增加<a href="http://workerman.net/gatewaydoc/gateway-worker-development/set-session.html">Gateway::Gateway::setSession($client_id, $session)</a>方法，用于设置某个客户端session</li>
+<li>增加<a href="http://workerman.net/gatewaydoc/gateway-worker-development/update-session.html">Gateway::updateSession($client_id, $session)</a>方法，用来更新某个客户端session某个(些)键的值。</li>
+<li><a href="https://github.com/walkor/GatewayClient" rel="nofollow">GatewayClient</a>同步更新到<a href="https://github.com/walkor/GatewayClient/releases/tag/2.0.5" rel="nofollow">2.0.5版本</a>用于支持GatewayWorker2.0.5</li>
+</ul>
+<hr>
+
 <h3>2016-04-20 GatewayWorker2.0.4版本发布</h3>
 <ul>
 <li>为避免和Event扩展冲突，原Event.php更名为Events.php，类名也同步改为Events</li>

@@ -90,7 +90,7 @@
 			<p>3、双击start_for_win.bat运行</p>
 			<p>4、关闭终端停止</p>
 			<h3>说明</h3>
-			<p>本聊天室业务逻辑非常简单，业务逻辑都在文件./Applications/Chat/Event.php中，开发者可以随意修改，比如增加表情等功能</p>
+			<p>本聊天室业务逻辑非常简单，业务逻辑都在文件./Applications/Chat/Events.php中，开发者可以随意修改，比如增加表情等功能</p>
 			<br>
 		</div>
 	</div>
