@@ -37,7 +37,7 @@
 			<div class="media-body">
 			<div class="thumbnail">
 				<div class="caption-download">
-					<h4>GatewayWorker框架(window版本)</h4>
+					<h4>GatewayWorker框架(Linux版本)</h4>
 					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=gatewayworker&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=gatewayworker&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
 					<a class="btn btn-default btn-large" href="https://github.com/walkor/gatewayworker" target="_blank" rel="nofollow"><b>Fork on Github</b></a>&nbsp;
 					<a class="btn btn-default btn-large" href="https://github.com/walkor/GatewayWorker/archive/master.zip"><b>下载ZIP压缩文件</b> </a>
