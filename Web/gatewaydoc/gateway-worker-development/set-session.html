@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="8.6.19" data-basepath=".." data-revision="1461924449021">
+    <div class="book"  data-level="8.6.19" data-basepath=".." data-revision="1461941350122">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -894,13 +894,14 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_838">
+                    <section class="normal" id="section-gitbook_483">
                     
                         <h1 id="-gatewayworker-lib-gateway-setsession">\GatewayWorker\Lib\Gateway::setSession</h1>
 <h2 id="-">说明:</h2>
 <pre><code class="lang-php">void Gateway::setSession(string <span class="hljs-variable">$client_id</span>, <span class="hljs-keyword">array</span> <span class="hljs-variable">$session</span>);
 </code></pre>
-<p>设置某个client_id对应的session。如果对应client_id已经下线，则会被忽略。</p>
+<p><strong><code>(要求Gateway版本&gt;=2.0.5)</code></strong></p>
+<p>设置某个client_id对应的session。如果对应client_id已经下线或者不存在，则会被忽略。</p>
 <h2 id="-">参数</h2>
 <ul>
 <li><code>$client_id</code></li>
