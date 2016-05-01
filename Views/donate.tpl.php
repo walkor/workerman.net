@@ -13,12 +13,19 @@
 	3、租用更好的主站、社区及示例服务器<br>
 	4、建立人数更多的Workerman QQ群组<br>
 	<br>
+    </div>
+       <div class="col-md-3 column">
+	
+	   </div>
+</div>
+<div class="row clearfix">
+	<div class="col-md-12 column">
 	<table>
 	<tr>
 	<td>
 	<div style="margin:50px">
 	<h4>支付宝捐赠：</h4>
-支付宝帐号：worker-man@qq.com<br>
+支付宝帐号：worker-man@qq.com 姓名:李亮<br>
 可以用手机扫描二位码支付<br>
 <img src="/img/alipay.png">
     </div>
@@ -31,9 +38,22 @@
 <img src="/img/weixin.jpg">
     </div>
     </td>
+    <td>
+    <div style="margin:50px">
+    <h4>QQ捐赠：</h4>
+QQ帐号：2202055656<br>
+可以用手机扫描二位码支付<br>
+<img src="/img/qq.png">
+    </div>
+    </td>
     </tr>
     </table>
-<br>
+    <br>
+    </div>
+</div>
+
+<div class="row clearfix">
+	<div class="col-md-9 column">
 感谢您对Workerman的支持!
 <br><br>
 <h3>捐赠列表</h3>
@@ -41,6 +61,5 @@
 	<br><br>
 	</div>
 	<div class="col-md-3 column">
-	
 	</div>
 </div>
