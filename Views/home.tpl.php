@@ -91,10 +91,22 @@
 			workerman相关应用
 		</h3>
 		<div class="media">
+			 <a href="http://www.meilibo.net/" class="pull-left" target="_blank" ><img src="/img/meilibo.jpg" class="media-object" alt='美丽播截图' /></a>
+			<div class="media-body">
+				<h4 class="media-heading">
+					<a target="_blank" href="http://www.meilibo.net/">美丽播视频直播系统</a>
+				</h4>
+				<p>一个出色的视频直播<a href="http://www.meilibo.net/products.html">秀场程序</a>，包含Web端、安卓客户端和iphone客户端。
+				主要功能包括主播系统，礼物系统，游戏系统，道具系统，代理功能，排行榜，充值系统，个人中心，守护系统等。即时通讯采用workerman，视频流采用rtmp协议利用fms或者cdn分发。
+				<br><a target="_blank" class="btn" href="http://www.meilibo.net/">直播网站源码</a>(注意：此系统源码需要购买，<a href="http://www.meilibo.net/price.html">报价</a>)
+				</p>
+			</div>
+		</div>
+		<div class="media">
 			 <a href="http://kedou.workerman.net/" class="pull-left" target="_blank" ><img src="/img/workerman-todpole.png" class="media-object" alt='PHP 小蝌蚪聊天室界面' /></a>
 			<div class="media-body">
 				<h4 class="media-heading">
-					<a target="_blank" href="http://kedou.workerman.net/">PHP小蝌蚪聊天室</a>&nbsp;&nbsp;<font style="font-size:12px;color:red;">置顶推荐</font>
+					<a target="_blank" href="http://kedou.workerman.net/">PHP小蝌蚪聊天室</a>
 				</h4>
 				<p>使用HTML5+WebSocket+Workerman实时推送技术开发的小蝌蚪聊天室，聊天室中玩家们化身为小蝌蚪，可以自由游动，并且可以实时聊天，非常有趣。
 				<br><a target="_blank" class="btn" href="/workerman-todpole">详情 »</a>
