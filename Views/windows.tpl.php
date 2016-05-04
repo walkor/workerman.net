@@ -5,7 +5,9 @@
 		workerman-for-win是运行在windows平台的版本，开发接口与Linux多进程版本一致，
 		也就是说基于workerman开发的应用程序即可以运行在Linux系统，也可以运行在Windows系统上。
 		<br>
-		<b>注意：windows版本建议使用者用于开发调试，实际部署使用Linux多进程版本。Window版本workerman不依赖任何扩展。
+		<b>注意：Window版本workerman不依赖任何扩展。
+		另外由于windows版本无法做到守护进程，并且无法fork多进程充分利用多cpu资源，所以建议windows版本只用于开发调试，
+		实际部署使用Linux多进程版本。
 		</b>
 	</p>
 	<table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-for-win&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-for-win&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table>
