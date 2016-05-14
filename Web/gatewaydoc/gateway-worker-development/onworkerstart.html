@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="8.5.1" data-basepath=".." data-revision="1462419936314">
+    <div class="book"  data-level="8.5.1" data-basepath=".." data-revision="1463205007323">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -894,7 +894,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_124">
+                    <section class="normal" id="section-gitbook_277">
                     
                         <h1 id="events-onworkerstart">Events::onWorkerStart</h1>
 <h2 id="-">说明:</h2>
@@ -903,6 +903,7 @@
 <p><code>(要求Gateway版本&gt;=2.0.4)</code></p>
 <p>当businessWorker进程启动时触发。每个进程生命周期内都只会触发一次。</p>
 <p>可以在这里为每一个businessWorker进程做一些全局初始化工作，例如设置定时器，初始化redis等连接等。</p>
+<p>注意：<code>$businessworker-&gt;onWorkerStart</code>和<code>Event::onWorkerStart</code>不会互相覆盖，如果两个回调都设置则都会运行。</p>
 <h2 id="-">参数</h2>
 <p><code>$businessWorker</code></p>
 <p>businessWorker进程实例</p>
