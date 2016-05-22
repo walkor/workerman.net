@@ -69,7 +69,7 @@
 							<a href="/doc">手册</a>
 						</li>
 						<li<?php if($html_nav == 'video')echo ' class="active" ';?>>
-							<a href="/video">视频教程</a>
+							<a href="http://video.workerman.net/">视频教程</a>
 						</li>
 						<li<?php if($html_nav == 'group')echo ' class="active" ';?>>
 							<a href="http://wenda.workerman.net" target="_blank">问答</a>
