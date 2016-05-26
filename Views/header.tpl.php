@@ -80,6 +80,9 @@
 						<li<?php if($html_nav == 'windows')echo ' class="active" ';?>>
 							<a href="/windows" >Windows版本</a>
 						</li>
+						<li>
+							<a href="https://github.com/walkor" rel="nofollow">作者</a>
+						</li>
 						<li<?php if($html_nav == 'donate')echo ' class="active" ';?>>
 							<a href="/donate" >捐赠</a>
 						</li>
