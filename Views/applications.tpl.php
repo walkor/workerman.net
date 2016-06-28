@@ -376,5 +376,15 @@ workerman + Laravel框架结合，据说比php-fpm + Laravel快约10倍。
 			</div>
 		</div>
 		
+		<div class="media">
+			<div class="media-body">
+				<h4 class="media-heading">
+					<a target="_blank" href="https://github.com/tmtbe/CI-worker" rel="nofollow">CI-worker</a>
+				</h4>
+				基于workerman翻作的CI框架，与CI框架的函数保持兼容，结构保持一致。目前仅支持CI的model和controll，view并没有做支持。
+				<a class="btn" target="_blank" href="https://github.com/tmtbe/CI-worker" rel="nofollow">下载源代码 »</a>
+			</div>
+		</div>
+		
 		
 <br><?php global $bd_ad_960_90; echo $bd_ad_960_90;?>
