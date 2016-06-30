@@ -1,7 +1,7 @@
 <table class="table">
 	<tbody>
 		<tr class="active"><td>0.01￥</td><td>小龙王</td><td>2016-06-30</td><td>微信</td></tr>
-		<tr class="active"><td>10.0￥</td><td>刘磊</td><td>2016-06-28</td><td>微信</td></tr>
+		<tr class="active"><td>10.0￥</td><td>匿名</td><td>2016-06-28</td><td>微信</td></tr>
 		<tr class="active"><td>99.0￥</td><td>云涛</td><td>2016-06-24</td><td>微信</td></tr>
 		<tr class="active"><td>1.0￥</td><td>了缺</td><td>2016-06-24</td><td>微信</td></tr>
 		<tr class="active"><td>1.0￥</td><td>LVguocai</td><td>2016-06-23</td><td>微信</td></tr>
