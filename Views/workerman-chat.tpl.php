@@ -88,7 +88,8 @@
 			<p>1、点击<a href="https://github.com/walkor/workerman-chat-for-win/archive/master.zip">这里</a>下载windows版本聊天室源码</p>
 			<p>2、参考<a href="/windows" >这里</a>设置PHP环境变量</p>
 			<p>3、双击start_for_win.bat运行</p>
-			<p>4、关闭终端停止</p>
+			<p>4、浏览器访问http://127.0.0.1:55151 （如果服务端不在本地，请把127.0.0.1改成实际服务端ip或者域名）</p>
+			<p>5、关闭终端停止</p>
 			<h3>说明</h3>
 			<p>本聊天室业务逻辑非常简单，业务逻辑都在文件./Applications/Chat/Events.php中，开发者可以随意修改，比如增加表情等功能</p>
 			<br>
