@@ -405,6 +405,12 @@
 		</h4>
 		<ul>
 			<li>
+				<a href="http://www.workerman.net/last_update" rel="nofollow">2016-07-06 workerman3.3.3发布</a>
+			</li>
+			<li>
+				<a href="http://www.workerman.net/last_update" rel="nofollow">2016-07-05 GatewayWorker2.0.7发布</a>
+			</li>
+			<li>
 				<a href="https://github.com/walkor/php-http-proxy" rel="nofollow">2016-04-06 php-http-proxy http代理发布</a>
 			</li>
 			<li>
@@ -522,6 +528,10 @@ if($donate_content)
 echo $donate_list;
                 ?>
                 <a href="/donate_list"><b>全部清单</b></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/donate"><b>我要捐赠</b></a>
+                <h4>微信捐赠：</h4>
+微信帐号：(walkor) workermand<br>
+可以用手机扫描二位码捐赠<br>
+<img src="/img/weixin.jpg">
 		<div class="bd-ad"><?php global $bd_ad_250_250; echo $bd_ad_250_250;?></div>
 	</div>
 </div>

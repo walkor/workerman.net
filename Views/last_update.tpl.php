@@ -1,8 +1,21 @@
-<h3>2016-07-6 GatewayWorker2.0.6版本发布</h3>
+<h3>2016-07-06 workerman3.3.3版本发布</h3>
 <ul>
-<li>增加<a href="http://workerman.net/gatewaydoc/gateway-worker-development/get-session.html">Gateway::getSession($client_id)</a>方法，用于获取某个客户端session</li>
-<li>增加<a href="http://workerman.net/gatewaydoc/gateway-worker-development/set-session.html">Gateway::setSession($client_id, $session)</a>方法，用于设置某个客户端session</li>
-<li>增加<a href="http://workerman.net/gatewaydoc/gateway-worker-development/update-session.html">Gateway::updateSession($client_id, $session)</a>方法，用于更新某个客户端session某个(些)键的值。</li>
+<li>
+<a href="http://doc3.workerman.net/worker-development/async-tcp-connection.html">AsyncTcpConnection</a>增加了ssl支持
+</li>
+<li>支持ipv6</li>
+<li>记录Exception日志、hhvm兼容、减少fread调用次数等优化</li>
+</ul>
+<hr>
+
+<h3>2016-07-05 GatewayWorker2.0.6版本发布</h3>
+<ul>
+<li>
+<a href="http://workerman.net/gatewaydoc/gateway-worker-development/send-to-all.html">Gateway::sendToAll()</a>
+<a href="http://workerman.net/gatewaydoc/gateway-worker-development/send-to-group.html">Gateway::sendToGroup()</a>方法增加$exclude_client_id和$raw参数
+</li>
+<li>Gateway::getClientInfoByGroup更名为Gateway::getClientSessionsByGroup, Gateway::getALLClientInfo更名为Gateway::getAllClientSessions</li>
+<li>一些性能优化</li>
 <li><a href="https://github.com/walkor/GatewayClient" rel="nofollow">GatewayClient</a>同步更新到<a href="https://github.com/walkor/GatewayClient/releases/tag/2.0.6" rel="nofollow">2.0.6版本</a>用于支持GatewayWorker2.0.6</li>
 </ul>
 <hr>

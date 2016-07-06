@@ -26,7 +26,7 @@
 	<div style="margin:50px">
 	<h4>支付宝捐赠：</h4>
 支付宝帐号：(李亮) worker-man@qq.com <br>
-可以用手机扫描二位码支付<br>
+可以用手机扫描二位码捐赠<br>
 <img src="/img/alipay.png">
     </div>
     </td>
@@ -34,7 +34,7 @@
     <div style="margin:50px">
     <h4>微信捐赠：</h4>
 微信帐号：(walkor) workermand<br>
-可以用手机扫描二位码支付<br>
+可以用手机扫描二位码捐赠<br>
 <img src="/img/weixin.jpg">
     </div>
     </td>
@@ -42,7 +42,7 @@
     <div style="margin:50px">
     <h4>QQ捐赠：</h4>
 QQ帐号：(walkor) 2202055656<br>
-可以用手机扫描二位码支付<br>
+可以用手机扫描二位码捐赠<br>
 <img src="/img/qq.png">
     </div>
     </td>
