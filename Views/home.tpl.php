@@ -528,7 +528,7 @@ if($donate_content)
 echo $donate_list;
                 ?>
                 <a href="/donate_list"><b>全部清单</b></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/donate"><b>我要捐赠</b></a>
-                <br>
+                <br><br>
                 <h4>捐赠账号：</h4>
 <img src="/img/weixin.jpg">
 		<div class="bd-ad"><?php global $bd_ad_250_250; echo $bd_ad_250_250;?></div>
