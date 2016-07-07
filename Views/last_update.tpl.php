@@ -8,7 +8,7 @@
 </ul>
 <hr>
 
-<h3>2016-07-05 GatewayWorker2.0.6版本发布</h3>
+<h3>2016-07-05 GatewayWorker2.0.7版本发布</h3>
 <ul>
 <li>
 <a href="http://workerman.net/gatewaydoc/gateway-worker-development/send-to-all.html">Gateway::sendToAll()</a>
@@ -16,7 +16,7 @@
 </li>
 <li>Gateway::getClientInfoByGroup更名为Gateway::getClientSessionsByGroup, Gateway::getALLClientInfo更名为Gateway::getAllClientSessions</li>
 <li>一些性能优化</li>
-<li><a href="https://github.com/walkor/GatewayClient" rel="nofollow">GatewayClient</a>同步更新到<a href="https://github.com/walkor/GatewayClient/releases/tag/2.0.6" rel="nofollow">2.0.6版本</a>用于支持GatewayWorker2.0.6</li>
+<li><a href="https://github.com/walkor/GatewayClient" rel="nofollow">GatewayClient</a>同步更新到<a href="https://github.com/walkor/GatewayClient/releases/tag/2.0.7" rel="nofollow">2.0.7版本</a>用于支持GatewayWorker2.0.7</li>
 </ul>
 <hr>
 

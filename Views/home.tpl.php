@@ -408,7 +408,7 @@
 				<a href="http://www.workerman.net/last_update" rel="nofollow">2016-07-06 workerman3.3.3发布</a>
 			</li>
 			<li>
-				<a href="http://www.workerman.net/last_update" rel="nofollow">2016-07-05 GatewayWorker2.0.6发布</a>
+				<a href="http://www.workerman.net/last_update" rel="nofollow">2016-07-05 GatewayWorker2.0.7发布</a>
 			</li>
 			<li>
 				<a href="https://github.com/walkor/php-http-proxy" rel="nofollow">2016-04-06 php-http-proxy http代理发布</a>
