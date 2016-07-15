@@ -77,7 +77,9 @@ class Store
         {
             touch(self::$dataFile);
         }
+        flock(self::$dataFileHandle, LOCK_EX);
         $cache = include self::$dataFile;
+        flock(self::$dataFileHandle, LOCK_UN);
         if(is_array($cache))
         {
             self::$dataCache = $cache;
