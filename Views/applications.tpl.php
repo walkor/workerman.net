@@ -318,11 +318,12 @@
 		<div class="media">
 			<div class="media-body">
 				<h4 class="media-heading">
-					<a target="_blank" href="http://git.oschina.net/pader/Navigation" rel="nofollow">Navigation</a>
+					<a target="_blank" href="https://github.com/xpader/Navigation" rel="nofollow">Navigation</a>
 				</h4>
 一款基于 Workerman 的 PHP Web 开发框架。 <br>
 在基于 Workerman 为 PHP 提供的常驻执行能力之上，利用特有的优点，提供高性能、易开发维护的 Web 框架。
-				<a class="btn" target="_blank" href="http://git.oschina.net/pader/Navigation" rel="nofollow">下载源代码 »</a>
+				<a class="btn" target="_blank" href="https://github.com/xpader/Navigation" rel="nofollow">下载源代码(github) »</a>
+				<a class="btn" target="_blank" href="http://git.oschina.net/pader/Navigation" rel="nofollow">下载源代码(oschina) »</a>
 			</div>
 		</div>
 		
@@ -404,6 +405,16 @@ workerman + Laravel框架结合，据说比php-fpm + Laravel快约10倍。
 				</h4>
 				基于workerman实现的异步高性能邮件、短信发送服务
 				<a class="btn" target="_blank" href="https://github.com/CloudXNS/mss" rel="nofollow">下载源代码 »</a>
+			</div>
+		</div>
+		
+		<div class="media">
+			<div class="media-body">
+				<h4 class="media-heading">
+					<a target="_blank" href="https://github.com/liliuwli/spider-with-workerman" rel="nofollow">spider-with-workerman</a>
+				</h4>
+				基于workerman的爬虫
+				<a class="btn" target="_blank" href="https://github.com/liliuwli/spider-with-workerman" rel="nofollow">下载源代码 »</a>
 			</div>
 		</div>
 		
