@@ -397,5 +397,14 @@ workerman + Laravel框架结合，据说比php-fpm + Laravel快约10倍。
 			</div>
 		</div>
 		
+		<div class="media">
+			<div class="media-body">
+				<h4 class="media-heading">
+					<a target="_blank" href="https://github.com/CloudXNS/mss" rel="nofollow">CloudXNS/mss</a>
+				</h4>
+				基于workerman实现的异步高性能邮件、短信发送服务
+				<a class="btn" target="_blank" href="https://github.com/CloudXNS/mss" rel="nofollow">下载源代码 »</a>
+			</div>
+		</div>
 		
 <br><?php global $bd_ad_960_90; echo $bd_ad_960_90;?>
