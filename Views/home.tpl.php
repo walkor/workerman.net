@@ -101,6 +101,44 @@
 				</p>
 			</div>
 		</div>
+		
+		<div class="media">
+			 <a href="http://laychat.workerman.net/" class="pull-left"><img src="/img/laychat.png" class="media-object" alt="PHP聊天室 仿QQ"/></a>
+			<div class="media-body">
+				<h4 class="media-heading">
+					<a target="_blank" href="/workerman-chat">LayChat聊天室</a>
+				</h4>
+				<p><a href="http://layim.layui.com/" target="_blank" rel="nofollow">LayIM</a>+Workerman开发的即时通讯项目，支持群聊、私聊、表情、传图、传文件、离线消息、历史消息记录等功能，非常强大。支持分布式部署、支持万人在线。
+				<a class="btn" target="_blank" href="http://layim.layui.com/" rel="nofollow">LayIM源码授权 »</a><a class="btn" target="_blank" href="https://github.com/walkor/laychat" rel="nofollow">服务端源代码 »</a>
+				</p>
+			</div>
+		</div>
+		
+		<div class="media">
+			 <a href="/workerman-chat" class="pull-left"><img src="/img/workerman-chat.png" class="media-object" alt="PHP聊天室"/></a>
+			<div class="media-body">
+				<h4 class="media-heading">
+					<a target="_blank" href="/workerman-chat">聊天室</a>
+				</h4>
+				<p>一个可扩展的php socket的聊天室，服务端采用workerman作为socket服务器框架，支持万人在线，采用web-socket-js作为前端websocket库，支持多浏览器。同样可以用作app聊天室开发。
+				<br><a target="_blank" class="btn" href="/workerman-chat">详情 »</a>
+				<a class="btn" target="_blank" href="https://github.com/walkor/workerman-chat" rel="nofollow">下载源代码 »</a>
+				</p>
+			</div>
+		</div>
+		<div class="media">
+			 <a href="/web-sender" class="pull-left"><img src="/img/web-msg-sender.png" class="media-object" alt="web 消息推送示意图" /></a>
+			<div class="media-body">
+				<h4 class="media-heading">
+					<a target="_blank" href="/web-sender">Web消息推送系统</a>
+				</h4>
+				<p>web消息推送系统，能够通过socket 长连接实时推送消息给所有用户，基于PHPSocketIO开发，客户端使用socket.io客户端，支持各种浏览器。
+				<br><a target="_blank" class="btn" href="/web-sender">详情 »</a>
+				<a class="btn" target="_blank" href="https://github.com/walkor/web-msg-sender" rel="nofollow">下载源代码 »</a>
+				</p>
+			</div>
+		</div>
+		
 		<div class="media">
 			 <a href="http://kedou.workerman.net/" class="pull-left" target="_blank" ><img src="/img/workerman-todpole.png" class="media-object" alt='PHP 小蝌蚪聊天室界面' /></a>
 			<div class="media-body">
@@ -127,30 +165,7 @@
 				</p>
 			</div>
 		</div>
-		<div class="media">
-			 <a href="/workerman-chat" class="pull-left"><img src="/img/workerman-chat.png" class="media-object" alt="PHP聊天室"/></a>
-			<div class="media-body">
-				<h4 class="media-heading">
-					<a target="_blank" href="/workerman-chat">聊天室</a>
-				</h4>
-				<p>一个可扩展的php socket的聊天室，服务端采用workerman作为socket服务器框架，采用web-socket-js作为前端websocket库，支持多浏览器。同样可以用作app聊天室开发。
-				<br><a target="_blank" class="btn" href="/workerman-chat">详情 »</a>
-				<a class="btn" target="_blank" href="https://github.com/walkor/workerman-chat" rel="nofollow">下载源代码 »</a>
-				</p>
-			</div>
-		</div>
-		<div class="media">
-			 <a href="/web-sender" class="pull-left"><img src="/img/web-msg-sender.png" class="media-object" alt="web 消息推送示意图" /></a>
-			<div class="media-body">
-				<h4 class="media-heading">
-					<a target="_blank" href="/web-sender">Web消息推送系统</a>
-				</h4>
-				<p>web消息推送系统，能够通过socket 长连接实时推送消息给所有用户，基于PHPSocketIO开发，客户端使用socket.io客户端，支持各种浏览器。
-				<br><a target="_blank" class="btn" href="/web-sender">详情 »</a>
-				<a class="btn" target="_blank" href="https://github.com/walkor/web-msg-sender" rel="nofollow">下载源代码 »</a>
-				</p>
-			</div>
-		</div>
+		
 		<div class="media">
 			 <a href="https://github.com/walkor/phpsocket.io" class="pull-left" target="_blank" rel="nofollow"><img src="/img/socket.io.png" class="media-object" /></a>
 			<div class="media-body">
