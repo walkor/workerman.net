@@ -108,8 +108,9 @@
 				<h4 class="media-heading">
 					<a target="_blank" href="/workerman-chat">LayChat聊天室</a>
 				</h4>
-				<p><a href="http://layim.layui.com/" target="_blank" rel="nofollow">LayIM</a>+Workerman开发的即时通讯项目，支持群聊、私聊、表情、传图、传文件、离线消息、历史消息记录等功能，非常强大。支持分布式部署、支持万人在线。
-				<a class="btn" target="_blank" href="http://layim.layui.com/" rel="nofollow">LayIM源码授权 »</a><a class="btn" target="_blank" href="https://github.com/walkor/laychat" rel="nofollow">服务端源代码 »</a>
+				<p><a href="http://layim.layui.com/" target="_blank" rel="nofollow">LayIM</a>+Workerman开发的即时通讯项目，支持群聊、私聊、表情、传图、传文件、离线消息、历史消息记录等功能，非常强大。支持分布式部署、支持万人在线。<br>
+				<a class="btn" target="_blank" href="http://laychat.workerman.net/" rel="nofollow">DEMO »</a>
+				<a class="btn" target="_blank" href="http://layim.layui.com/" rel="nofollow">LayIM授权 »</a><a class="btn" target="_blank" href="https://github.com/walkor/laychat" rel="nofollow">服务端源码 »</a>
 				</p>
 			</div>
 		</div>
@@ -417,6 +418,9 @@
 			最近更新
 		</h4>
 		<ul>
+			<li>
+				<a href="http://laychat.workerman.net/" rel="nofollow">2016-08-01 LayChat发布</a>
+			</li>
 			<li>
 				<a href="http://www.workerman.net/last_update" rel="nofollow">2016-07-06 workerman3.3.3发布</a>
 			</li>
