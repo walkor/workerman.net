@@ -73,9 +73,17 @@ class Store
 
     protected static function readDataFromDisk()
     {
-        if(!is_file(self::$dataFile))
+        if(!self::$dataFileHandle)
         {
-            touch(self::$dataFile);
+            if(!is_file(self::$dataFile))
+            {
+                touch(self::$dataFile);
+            }
+            self::$dataFileHandle = fopen(self::$dataFile, 'r+');
+            if(!self::$dataFileHandle)
+            {
+                return false;
+            }
         }
         flock(self::$dataFileHandle, LOCK_EX);
         $cache = include self::$dataFile;
