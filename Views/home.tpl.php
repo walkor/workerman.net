@@ -103,10 +103,10 @@
 		</div>
 		
 		<div class="media">
-			 <a href="http://laychat.workerman.net/" class="pull-left"><img src="/img/laychat.png" class="media-object" alt="PHP聊天室 仿QQ"/></a>
+			 <a href="http://laychat.workerman.net/" class="pull-left" target="_blank"><img src="/img/laychat.png" class="media-object" alt="PHP聊天室 仿QQ"/></a>
 			<div class="media-body">
 				<h4 class="media-heading">
-					<a target="_blank" href="/workerman-chat">LayChat聊天室</a>
+					<a target="_blank" href="http://laychat.workerman.net/" target="_blank">LayChat聊天室</a>
 				</h4>
 				<p><a href="http://layim.layui.com/" target="_blank" rel="nofollow">LayIM</a>+Workerman开发的即时通讯项目，支持群聊、私聊、表情、传图、传文件、离线消息、历史消息记录等功能，非常强大。支持分布式部署、支持万人在线。<br>
 				<a class="btn" target="_blank" href="http://laychat.workerman.net/" rel="nofollow">DEMO »</a><br>
