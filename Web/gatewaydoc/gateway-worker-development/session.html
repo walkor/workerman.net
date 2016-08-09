@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="8.8" data-basepath=".." data-revision="1468853509854">
+    <div class="book"  data-level="8.8" data-basepath=".." data-revision="1470757581095">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -894,7 +894,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_1416">
+                    <section class="normal" id="section-gitbook_1119">
                     
                         <h1 id="-_session-">超全局数组<code>$_SESSION</code></h1>
 <h3 id="-_session-"><code>$_SESSION</code>是什么</h3>
@@ -911,6 +911,28 @@
 </ul>
 <h3 id="-_session-"><code>$_SESSION</code>实现原理</h3>
 <p>在WorkerMan的Gateway/Worker模型中，每个客户端的<code>$_SESSION</code>数据是存储在Gateway进程内存中的，每次Gateway进程转发消息给BusibuessWorker进程时，都会顺便携带上对应客户端的<code>$_SESSION</code>数据给BusibuessWorker进程，这时BusibuessWorker进程就能使用<code>$_SESSION</code>了。而当<code>$_SESSION</code>数据有更改时，BusibuessWorker会将新的<code>$_SESSION</code>数据传递给Gateway进程进行保存。</p>
+<h2 id="-">示例</h2>
+<pre><code class="lang-php"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Events</span>
+{</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onMessage</span><span class="hljs-params">(<span class="hljs-variable">$client_id</span>, <span class="hljs-variable">$data</span>)</span>
+    {</span>
+        <span class="hljs-comment">// data={"type":"login", "uid":"666"}</span>
+        <span class="hljs-variable">$data</span> = json_decode(<span class="hljs-variable">$data</span>, <span class="hljs-keyword">true</span>);
+        <span class="hljs-comment">// 如果没有$_SESSION['uid']说明客户端没有登录</span>
+        <span class="hljs-keyword">if</span>(!<span class="hljs-keyword">isset</span>(<span class="hljs-variable">$_SESSION</span>[<span class="hljs-string">'uid'</span>]))
+        {
+            <span class="hljs-comment">// 消息类型不是登录视为非法请求，关闭连接</span>
+            <span class="hljs-keyword">if</span>(<span class="hljs-variable">$data</span>[<span class="hljs-string">'type'</span>] !== <span class="hljs-string">'login'</span>)
+            {
+                <span class="hljs-keyword">return</span> Gateway::closeClient(<span class="hljs-variable">$client_id</span>);
+            }
+            <span class="hljs-comment">// 设置session，标记该客户端已经登录</span>
+            <span class="hljs-variable">$_SESSION</span>[<span class="hljs-string">'uid'</span>] = <span class="hljs-variable">$data</span>[<span class="hljs-string">'uid'</span>];
+        }
+    }
+
+}
+</code></pre>
 
                     
                     </section>
