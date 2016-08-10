@@ -180,14 +180,14 @@
 			</div>
 		</div>
 		<div class="media">
-			 <a href="https://github.com/walkor/php-socks5" class="pull-left" target="_blank" rel="nofollow"><img src="/img/workerman-vmstat.png" class="media-object" alt="web vmstat"/></a>
+			 <a href="https://github.com/walkor/php-socks5" class="pull-left" target="_blank" rel="nofollow"><img src="/img/socks5-big.png" class="media-object"/></a>
 			<div class="media-body">
 			<div class="thumbnail">
 				<div class="caption-download">
 					<h4>socks5代理服务(Linux版本)</h4>
 					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=php-socks5&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=php-socks5&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
 					<a class="btn btn-default btn-large" href="https://github.com/walkor/php-socks5" target="_blank" rel="nofollow"><b>Fork on Github</b></a>&nbsp;
-					<a class="btn btn-default btn-large" href="/download/vmstatzip"><b>下载ZIP压缩文件</b> </a> 
+					<a class="btn btn-default btn-large" href="https://github.com/walkor/php-socks5/archive/master.zip"><b>下载ZIP压缩文件</b> </a> 
 				</div>
 			</div>
 			</div>
