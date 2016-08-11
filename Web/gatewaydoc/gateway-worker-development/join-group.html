@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="8.6.12" data-basepath=".." data-revision="1470757581095">
+    <div class="book"  data-level="8.6.12" data-basepath=".." data-revision="1470929297215">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -894,19 +894,21 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_1100">
+                    <section class="normal" id="section-gitbook_820">
                     
-                        <h1 id="-gatewayworker-lib-gateway-joingroup">\GatewayWorker\Lib\Gateway::joinGroup</h1>
+                        <h1 id="gateway-joingroup">Gateway::joinGroup</h1>
 <h2 id="-">说明:</h2>
 <pre><code class="lang-php">void Gateway::joinGroup(string <span class="hljs-variable">$client_id</span>, mixed <span class="hljs-variable">$group</span>);
 </code></pre>
 <p>将client_id加入某个组，以便通过<code>Gateway::sendToGroup</code>发送数据。</p>
-<p>可以通过<code>Gateway::getClientInfoByGroup</code>获得该组所有在线成员数据。</p>
+<p>可以通过<code>Gateway::getClientSessionsByGroup($group)</code>获得该组所有在线成员数据。
+可以通过<code>Gateway::getClientCountByGroup($group)</code>获得该组所有在线连接数（人数）。</p>
 <p>该方法对于分组发送数据例如房间广播非常有用。</p>
 <p><strong>注意：</strong></p>
-<p>同一个client_id可以加入多个分组，以便接收不同组发来的数据。</p>
-<p>当client_id下线（连接断开）后，该client_id会自动从该分组中删除，开发者无需调用<code>Gateway::leaveGroup</code>。</p>
-<p>如果对应分组的所有client_id都下线，则对应分组会被自动删除。</p>
+<p>1、同一个client_id<strong>可以</strong>加入多个分组，以便接收不同组发来的数据。</p>
+<p>2、当client_id下线（连接断开）后，该client_id会自动从该分组中删除，开发者无需调用<code>Gateway::leaveGroup</code>。</p>
+<p>3、如果对应分组的所有client_id都下线，则对应分组会被自动删除。</p>
+<p>4、目前没有提供获得所有分组id接口，所有分组名称可以自行存入数据库中。</p>
 <h2 id="-">参数</h2>
 <ul>
 <li><code>$client_id</code></li>

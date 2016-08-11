@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="8.6.13" data-basepath=".." data-revision="1470757581095">
+    <div class="book"  data-level="8.6.13" data-basepath=".." data-revision="1470929297215">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -894,13 +894,13 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_1079">
+                    <section class="normal" id="section-gitbook_799">
                     
-                        <h1 id="-gatewayworker-lib-gateway-leavegroup">\GatewayWorker\Lib\Gateway::leaveGroup</h1>
+                        <h1 id="gateway-leavegroup">Gateway::leaveGroup</h1>
 <h2 id="-">说明:</h2>
 <pre><code class="lang-php">void Gateway::leaveGroup(string <span class="hljs-variable">$client_id</span>, mixed <span class="hljs-variable">$group</span>);
 </code></pre>
-<p>将client_id从某个组中删除，不再接收该分组广播的数据。</p>
+<p>将client_id从某个组中删除，不再接收该分组广播(<code>Gateway::sendToGroup</code>)发送的数据。</p>
 <p>注意：当client_id下线（连接断开）时，client_id会自动从它所属的各个分组中删除，也就是说无需在onClose回调中调用Gateway::leaveGroup</p>
 <h2 id="-">参数</h2>
 <ul>

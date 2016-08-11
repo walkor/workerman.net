@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="8.6.21" data-basepath=".." data-revision="1470757581095">
+    <div class="book"  data-level="8.6.21" data-basepath=".." data-revision="1470929297215">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -894,7 +894,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_1095">
+                    <section class="normal" id="section-gitbook_816">
                     
                         <h1 id="-gatewayworker-lib-gateway-getsession">\GatewayWorker\Lib\Gateway::getSession</h1>
 <h2 id="-">说明:</h2>
@@ -911,16 +911,19 @@
 <p>1、如果对应的client_id下线或者不存在，则返回null</p>
 <p>2、如果对应的client_id在线但是没有设置过session，则返回array()</p>
 <p>3、如果对应的client_id在线并设置了session，则正常返回一个数组</p>
-<h2 id="-">范例</h2>
-<pre><code class="lang-php"><span class="hljs-keyword">use</span> \<span class="hljs-title">GatewayWorker</span>\<span class="hljs-title">Lib</span>\<span class="hljs-title">Gateway</span>;
+<h2 id="-">注意</h2>
+<pre><code class="lang-Gateway::onClose```回调里无法使用```Gateway::getSession```来获得当前用户的session数据，但是仍然可以使用```$_SESSION```变量获得。">
+## 范例
+```php
+use \GatewayWorker\Lib\Gateway;
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Events</span>
-{</span>
+class Events
+{
     ...
-    <span class="hljs-keyword">public</span> onMessage(<span class="hljs-variable">$client_id</span>, <span class="hljs-variable">$message</span>)
+    public onMessage($client_id, $message)
     {
-        Gateway::updateSession(<span class="hljs-variable">$client_id</span>, <span class="hljs-keyword">array</span>(<span class="hljs-string">'key1'</span>=&gt;<span class="hljs-string">'value1'</span>, <span class="hljs-string">'key2'</span>=&gt;<span class="hljs-string">'value2'</span>));
-        var_dump(Gateway::getSession(<span class="hljs-variable">$client_id</span>));
+        Gateway::updateSession($client_id, array(&#39;key1&#39;=&gt;&#39;value1&#39;, &#39;key2&#39;=&gt;&#39;value2&#39;));
+        var_dump(Gateway::getSession($client_id));
     }
     ...
 }

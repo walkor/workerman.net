@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="8.6.19" data-basepath=".." data-revision="1470757581095">
+    <div class="book"  data-level="8.6.19" data-basepath=".." data-revision="1470929297215">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -894,7 +894,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_1120">
+                    <section class="normal" id="section-gitbook_840">
                     
                         <h1 id="-gatewayworker-lib-gateway-setsession">\GatewayWorker\Lib\Gateway::setSession</h1>
 <h2 id="-">说明:</h2>
@@ -902,6 +902,8 @@
 </code></pre>
 <p><strong><code>(要求Gateway版本&gt;=2.0.5)</code></strong></p>
 <p>设置某个client_id对应的session。如果对应client_id已经下线或者不存在，则会被忽略。</p>
+<h2 id="-">注意：</h2>
+<p>不要<code>$_SESSION</code>赋值与Gateway::setSession同时操作同一个<code>$client_id</code>，可能会造成session值与预期效果不符。操作当前用户用<code>$_SESSION[&#39;xx&#39;]=xxx</code>方式赋值即可，操作其他用户<code>session</code>可以使用<code>Gateway::setSession</code>接口。</p>
 <h2 id="-">参数</h2>
 <ul>
 <li><code>$client_id</code></li>
