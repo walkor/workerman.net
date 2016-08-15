@@ -50,7 +50,7 @@
 						QQ群3：527941005(500人)<br>
 						&nbsp;VIP群：544584915 <br>
 						商务合作联系QQ：2202055656
-						<li>邮箱：walkor@workerman.net</li>
+						邮箱：walkor@workerman.net
 						</li>
 						</ul>
 					</div>
