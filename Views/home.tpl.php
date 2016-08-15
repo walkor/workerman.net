@@ -2,7 +2,7 @@
 	<div class="col-md-7 column">
 	
 		<h2>
-			什么是Workerman.
+			什么是Workerman
 		</h2>
 		<p class="f14">
 			Workerman是一款<strong class="c4">纯PHP开发</strong>的<strong class="c4">开源</strong><strong class="c2">高性能</strong>的<strong class="c3">PHP socket 服务器框架</strong>。被广泛的用于手机app、手游服务端、网络游戏服务器、聊天室服务器、硬件通讯服务器、智能家居、车联网、物联网等领域的开发。
