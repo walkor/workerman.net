@@ -44,13 +44,13 @@
 					<div class="col-md-3 column">
 						<b>联系我们</b>
 						<ul class="sub">
-						<li>邮箱：walkor@workerman.net</li>
 						<li>
 						QQ群1：257046084(2000人已满)<br>
 						QQ群2：137410824(2000人)<br>
 						QQ群3：527941005(500人)<br>
 						&nbsp;VIP群：544584915 <br>
 						商务合作联系QQ：2202055656
+						<li>邮箱：walkor@workerman.net</li>
 						</li>
 						</ul>
 					</div>
