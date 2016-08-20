@@ -10,7 +10,7 @@
 	<h2>全新系统参考以下安装教程</h2>
 	<h3>centos系统安装教程 </h3>
 	<a href="/img/gif/centos-install.gif" target="_blank">>>点击这里查看动画教程<<</a><br>
-	<h5>1、命令行运行<code>yum install php-cli php-process  git gcc  php-devel php-pear libevent-devel</code></h5>
+	<h5>1、命令行运行<code>yum install php-cli php-process  git gcc  php-devel php-pear libevent-devel -y</code></h5>
 	<h5>2、命令行运行<code>pecl install channel://pecl.php.net/libevent-0.1.0</code> 提示libevent installation [autodetect]: 时按回车</h5>
 	<h5>3、命令行运行<code>echo extension=libevent.so > /etc/php.d/libevent.ini</code></h5>
 	<h5>4、命令行运行<code>git clone https://github.com/walkor/Workerman</code></h5>
@@ -18,7 +18,7 @@
 	<br>
 	<h3>debian/ubuntu系统安装教程</h3>
 	<a href="/img/gif/ubuntu-install.gif" target="_blank">>>点击这里查看动画教程<<</a><br>
-	<h5>1、命令行运行<code>apt-get install php5-cli git gcc php-pear php5-dev libevent-dev</code></h5>
+	<h5>1、命令行运行<code>apt-get install php5-cli git gcc php-pear php5-dev libevent-dev -y</code></h5>
 	<h5>2、命令行运行<code>pecl install channel://pecl.php.net/libevent-0.1.0</code> 提示libevent installation [autodetect]: 时按回车</h5>
 	<h5>3、命令行运行(需要切换到root用户)<code>echo extension=libevent.so > /etc/php5/cli/conf.d/libevent.ini</code></h5>
 	<h5>4、命令行运行<code>git clone https://github.com/walkor/Workerman</code></h5>
