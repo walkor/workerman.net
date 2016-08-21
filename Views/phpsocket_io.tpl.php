@@ -53,11 +53,11 @@
 			</div>
             <div class="f16">
                 <h3>在线示例</h3>
-                <a class="btn" target="_blank" href="/demos/phpsocketio-chat/" rel="nofollow">在线示例-聊天室 »</a>
+                <a class="btn" target="_blank" href="/demos/phpsocketio-chat/" rel="nofollow">在线示例-聊天室</a> <a href="https://github.com/walkor/phpsocket.io/blob/master/examples/chat/server.php" rel="nofollow" class="btn" target="_blank">示例源码</a>
             </div>
             <div class="f16">
                 <h3>手册</h3>
-                <a class="btn" target="_blank" href="https://github.com/walkor/phpsocket.io/tree/master/docs/zh" rel="nofollow">手册 »</a>
+                <a class="btn" target="_blank" href="https://github.com/walkor/phpsocket.io/tree/master/docs/zh" rel="nofollow">手册</a>
             </div>
             <h3 >
             	安装
@@ -201,5 +201,24 @@
             	<pre style="box-sizing: border-box; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 13.6px; margin-top: 0px; margin-bottom: 0px; font-stretch: normal; line-height: 1.45; word-wrap: normal; padding: 16px; overflow: auto; border-radius: 3px; word-break: normal; background-color: rgb(247, 247, 247);"><span class="pl-s1" style="box-sizing: border-box;"><span class="pl-smi" style="box-sizing: border-box;">$io</span><span class="pl-k" style="box-sizing: border-box; color: rgb(167, 29, 93);">-&gt;</span>to(<span class="pl-s" style="box-sizing: border-box; color: rgb(24, 54, 145);"><span class="pl-pds" style="box-sizing: border-box;">'</span>group name<span class="pl-pds" style="box-sizing: border-box;">'</span></span>)<span class="pl-k" style="box-sizing: border-box; color: rgb(167, 29, 93);">-&gt;</span>emit(<span class="pl-s" style="box-sizing: border-box; color: rgb(24, 54, 145);"><span class="pl-pds" style="box-sizing: border-box;">'</span>event name<span class="pl-pds" style="box-sizing: border-box;">'</span></span>, <span class="pl-smi" style="box-sizing: border-box;">$data</span>);</span></pre>
             </div>
             
+            
+            <h2 style="box-sizing: border-box; margin-top: 24px; margin-bottom: 16px; line-height: 1.25; padding-bottom: 0.3em; border-bottom: 1px solid rgb(238, 238, 238); color: rgb(51, 51, 51); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;;">
+            	一个非常简单的聊天服务端示例
+            </h2>
+            <div class="highlight highlight-text-html-php" style="box-sizing: border-box; margin-bottom: 16px; color: rgb(51, 51, 51); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; line-height: 24px;">
+            	<pre style="box-sizing: border-box; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 13.6px; margin-top: 0px; margin-bottom: 0px; font-stretch: normal; line-height: 1.45; word-wrap: normal; padding: 16px; overflow: auto; border-radius: 3px; word-break: normal; background-color: rgb(247, 247, 247);"><span class="pl-s1" style="box-sizing: border-box;"><span class="pl-k" style="box-sizing: border-box; color: rgb(167, 29, 93);">use</span> <span class="pl-c1" style="box-sizing: border-box; color: rgb(0, 134, 179);">PHPSocketIO\SocketIO</span>;</span>
+            <span class="pl-s1" style="box-sizing: border-box;"></span>
+            <span class="pl-s1" style="box-sizing: border-box;"><span class="pl-c" style="box-sizing: border-box; color: rgb(150, 152, 150);">// listen port 2021 for socket.io client</span></span>
+            <span class="pl-s1" style="box-sizing: border-box;"><span class="pl-smi" style="box-sizing: border-box;">$io</span> <span class="pl-k" style="box-sizing: border-box; color: rgb(167, 29, 93);">=</span> <span class="pl-k" style="box-sizing: border-box; color: rgb(167, 29, 93);">new</span> <span class="pl-c1" style="box-sizing: border-box; color: rgb(0, 134, 179);">SocketIO</span>(<span class="pl-c1" style="box-sizing: border-box; color: rgb(0, 134, 179);">2021</span>);</span>
+            <span class="pl-s1" style="box-sizing: border-box;"><span class="pl-smi" style="box-sizing: border-box;">$io</span><span class="pl-k" style="box-sizing: border-box; color: rgb(167, 29, 93);">-&gt;</span>on(<span class="pl-s" style="box-sizing: border-box; color: rgb(24, 54, 145);"><span class="pl-pds" style="box-sizing: border-box;">'</span>connection<span class="pl-pds" style="box-sizing: border-box;">'</span></span>, <span class="pl-k" style="box-sizing: border-box; color: rgb(167, 29, 93);">function</span>(<span class="pl-smi" style="box-sizing: border-box;">$socket</span>)<span class="pl-k" style="box-sizing: border-box; color: rgb(167, 29, 93);">use</span>(<span class="pl-smi" style="box-sizing: border-box;">$io</span>){</span>
+            <span class="pl-s1" style="box-sizing: border-box;">  <span class="pl-smi" style="box-sizing: border-box;">$socket</span><span class="pl-k" style="box-sizing: border-box; color: rgb(167, 29, 93);">-&gt;</span>on(<span class="pl-s" style="box-sizing: border-box; color: rgb(24, 54, 145);"><span class="pl-pds" style="box-sizing: border-box;">'</span>chat message<span class="pl-pds" style="box-sizing: border-box;">'</span></span>, <span class="pl-k" style="box-sizing: border-box; color: rgb(167, 29, 93);">function</span>(<span class="pl-smi" style="box-sizing: border-box;">$msg</span>)<span class="pl-k" style="box-sizing: border-box; color: rgb(167, 29, 93);">use</span>(<span class="pl-smi" style="box-sizing: border-box;">$io</span>){</span>
+            <span class="pl-s1" style="box-sizing: border-box;">    <span class="pl-smi" style="box-sizing: border-box;">$io</span><span class="pl-k" style="box-sizing: border-box; color: rgb(167, 29, 93);">-&gt;</span>emit(<span class="pl-s" style="box-sizing: border-box; color: rgb(24, 54, 145);"><span class="pl-pds" style="box-sizing: border-box;">'</span>chat message<span class="pl-pds" style="box-sizing: border-box;">'</span></span>, <span class="pl-smi" style="box-sizing: border-box;">$msg</span>);</span>
+            <span class="pl-s1" style="box-sizing: border-box;">  });</span>
+            <span class="pl-s1" style="box-sizing: border-box;">});</span></pre>
+            	<div>
+            		<br />
+            		
+            	</div>
+            </div>
 		</div>
 	</div>
