@@ -52,16 +52,16 @@
 				PHPSocket.IO最大的优势是对各种浏览器的兼容性更好。
 			</div>
             <div class="f16">
-                <b>在线示例</b><br>
+                <h3>在线示例</h3>
                 <a class="btn" target="_blank" href="/demos/phpsocketio-chat/" rel="nofollow">在线示例-聊天室 »</a>
             </div>
             <div class="f16">
-                <b>手册</b>
+                <h3>手册</h3>
                 <a class="btn" target="_blank" href="https://github.com/walkor/phpsocket.io/tree/master/docs/zh" rel="nofollow">手册 »</a>
             </div>
-            <h2 style="box-sizing: border-box; margin-bottom: 16px; line-height: 1.25; padding-bottom: 0.3em; border-bottom: 1px solid rgb(238, 238, 238); color: rgb(51, 51, 51); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; margin-top: 0px !important;">
+            <h3 style="box-sizing: border-box; margin-bottom: 16px; line-height: 1.25; padding-bottom: 0.3em; border-bottom: 1px solid rgb(238, 238, 238); color: rgb(51, 51, 51); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; margin-top: 0px !important;">
 	安装
-</h2>
+</h3>
 <p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 16px; color: rgb(51, 51, 51); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; line-height: 24px;">
 	请使用composer集成phpsocket.io。
 </p>
