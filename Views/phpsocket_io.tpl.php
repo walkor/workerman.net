@@ -47,19 +47,18 @@
 	</div>
 	<div class="row clearfix">
 		<div class="col-md-8 column">
-			<p class="f16">PHPSocket.IO设计的目标是利用PHP构建能够在不同浏览器和移动设备上良好运行的实时应用，如实时分析系统、在线聊天室、在线客服系统、评论系统、WebIM等。
+			<div class="f16">PHPSocket.IO设计的目标是利用PHP构建能够在不同浏览器和移动设备上良好运行的实时应用，如实时分析系统、在线聊天室、在线客服系统、评论系统、WebIM等。
 				PHPSocket.IO与workerman的区别是，PHPSocket.IO基于workerman开发，workerman有的特性PHPSocket.IO都支持。
 				PHPSocket.IO最大的优势是对各种浏览器的兼容性更好。
-			</p>
-            <p class="f16">
+			</div>
+            <div class="f16">
                 <b>在线示例</b><br>
                 <a class="btn" target="_blank" href="/demos/phpsocketio-chat/" rel="nofollow">在线示例-聊天室 »</a>
-            </p>
-            <p class="f16">
+            </div>
+            <div class="f16">
                 <b>手册</b>
                 <a class="btn" target="_blank" href="https://github.com/walkor/phpsocket.io/tree/master/docs/zh" rel="nofollow">手册 »</a>
-            </p>
-            <div>
+            </div>
             <h2 style="box-sizing: border-box; margin-bottom: 16px; line-height: 1.25; padding-bottom: 0.3em; border-bottom: 1px solid rgb(238, 238, 238); color: rgb(51, 51, 51); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; margin-top: 0px !important;">
 	安装
 </h2>
@@ -76,7 +75,7 @@
 	下面服务端的代码略去了这段代码。
 </p>
 <h3 style="box-sizing: border-box; margin-top: 24px; margin-bottom: 16px; font-size: 1.25em; line-height: 1.25; color: rgb(51, 51, 51); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;;">
-	<a id="user-content-服务端和客户端连接" class="anchor" href="https://github.com/walkor/phpsocket.io/tree/master/docs/zh#服务端和客户端连接" aria-hidden="true" style="box-sizing: border-box; color: rgb(64, 120, 192); text-decoration: none; float: left; padding-right: 4px; margin-left: -20px; line-height: 1;"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>服务端和客户端连接
+	服务端和客户端连接
 </h3>
 <p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 16px; color: rgb(51, 51, 51); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; line-height: 24px;">
 	创建一个SocketIO服务端
@@ -105,7 +104,7 @@
 <span class="pl-k" style="box-sizing: border-box; color: rgb(167, 29, 93);">&lt;</span><span class="pl-k" style="box-sizing: border-box; color: rgb(167, 29, 93);">/</span>script<span class="pl-k" style="box-sizing: border-box; color: rgb(167, 29, 93);">&gt;</span></pre>
 </div>
 <h3 style="box-sizing: border-box; margin-top: 24px; margin-bottom: 16px; font-size: 1.25em; line-height: 1.25; color: rgb(51, 51, 51); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;;">
-	<a id="user-content-自定义事件" class="anchor" href="https://github.com/walkor/phpsocket.io/tree/master/docs/zh#自定义事件" aria-hidden="true" style="box-sizing: border-box; color: rgb(64, 120, 192); text-decoration: none; float: left; padding-right: 4px; margin-left: -20px; line-height: 1;"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>自定义事件
+	自定义事件
 </h3>
 <p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 16px; color: rgb(51, 51, 51); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; line-height: 24px;">
 	socket.io主要是通过事件来进行通讯交互的。
@@ -148,7 +147,7 @@
 <span class="pl-k" style="box-sizing: border-box; color: rgb(167, 29, 93);">&lt;</span><span class="pl-k" style="box-sizing: border-box; color: rgb(167, 29, 93);">/</span>script<span class="pl-k" style="box-sizing: border-box; color: rgb(167, 29, 93);">&gt;</span></pre>
 </div>
 <h3 style="box-sizing: border-box; margin-top: 24px; margin-bottom: 16px; font-size: 1.25em; line-height: 1.25; color: rgb(51, 51, 51); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;;">
-	<a id="user-content-分组" class="anchor" href="https://github.com/walkor/phpsocket.io/tree/master/docs/zh#分组" aria-hidden="true" style="box-sizing: border-box; color: rgb(64, 120, 192); text-decoration: none; float: left; padding-right: 4px; margin-left: -20px; line-height: 1;"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>分组
+	分组
 </h3>
 <p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 16px; color: rgb(51, 51, 51); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; line-height: 24px;">
 	socket.io提供分组功能，允许向某个分组发送事件，例如向某个房间广播数据。
@@ -166,7 +165,7 @@
 	<pre style="box-sizing: border-box; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 13.6px; margin-top: 0px; margin-bottom: 0px; font-stretch: normal; line-height: 1.45; word-wrap: normal; padding: 16px; overflow: auto; border-radius: 3px; word-break: normal; background-color: rgb(247, 247, 247);"><span class="pl-s1" style="box-sizing: border-box;"><span class="pl-smi" style="box-sizing: border-box;">$connection</span><span class="pl-k" style="box-sizing: border-box; color: rgb(167, 29, 93);">-&gt;</span>leave(<span class="pl-s" style="box-sizing: border-box; color: rgb(24, 54, 145);"><span class="pl-pds" style="box-sizing: border-box;">'</span>group name<span class="pl-pds" style="box-sizing: border-box;">'</span></span>);</span></pre>
 </div>
 <h2 style="box-sizing: border-box; margin-top: 24px; margin-bottom: 16px; line-height: 1.25; padding-bottom: 0.3em; border-bottom: 1px solid rgb(238, 238, 238); color: rgb(51, 51, 51); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;;">
-	<a id="user-content-向客户端发送事件的各种方法" class="anchor" href="https://github.com/walkor/phpsocket.io/tree/master/docs/zh#向客户端发送事件的各种方法" aria-hidden="true" style="box-sizing: border-box; color: rgb(64, 120, 192); text-decoration: none; float: left; padding-right: 4px; margin-left: -20px; line-height: 1;"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>向客户端发送事件的各种方法
+	向客户端发送事件的各种方法
 </h2>
 <p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 16px; color: rgb(51, 51, 51); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; line-height: 24px;">
 	$io是SocketIO对象。$connection是客户端连接
@@ -201,6 +200,6 @@
 <div class="highlight highlight-text-html-php" style="box-sizing: border-box; margin-bottom: 16px; color: rgb(51, 51, 51); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; line-height: 24px;">
 	<pre style="box-sizing: border-box; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 13.6px; margin-top: 0px; margin-bottom: 0px; font-stretch: normal; line-height: 1.45; word-wrap: normal; padding: 16px; overflow: auto; border-radius: 3px; word-break: normal; background-color: rgb(247, 247, 247);"><span class="pl-s1" style="box-sizing: border-box;"><span class="pl-smi" style="box-sizing: border-box;">$io</span><span class="pl-k" style="box-sizing: border-box; color: rgb(167, 29, 93);">-&gt;</span>to(<span class="pl-s" style="box-sizing: border-box; color: rgb(24, 54, 145);"><span class="pl-pds" style="box-sizing: border-box;">'</span>group name<span class="pl-pds" style="box-sizing: border-box;">'</span></span>)<span class="pl-k" style="box-sizing: border-box; color: rgb(167, 29, 93);">-&gt;</span>emit(<span class="pl-s" style="box-sizing: border-box; color: rgb(24, 54, 145);"><span class="pl-pds" style="box-sizing: border-box;">'</span>event name<span class="pl-pds" style="box-sizing: border-box;">'</span></span>, <span class="pl-smi" style="box-sizing: border-box;">$data</span>);</span></pre>
 </div>
-            </div>
+            
 		</div>
 	</div>
