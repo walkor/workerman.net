@@ -47,10 +47,10 @@
 	</div>
 	<div class="row clearfix">
 		<div class="col-md-8 column">
-			<div class="f16">PHPSocket.IO设计的目标是利用PHP构建能够在不同浏览器和移动设备上良好运行的实时应用，如实时分析系统、在线聊天室、在线客服系统、评论系统、WebIM等。
+			<p class="f16">PHPSocket.IO设计的目标是利用PHP构建能够在不同浏览器和移动设备上良好运行的实时应用，如实时分析系统、在线聊天室、在线客服系统、评论系统、WebIM等。
 				PHPSocket.IO与workerman的区别是，PHPSocket.IO基于workerman开发，workerman有的特性PHPSocket.IO都支持。
 				PHPSocket.IO最大的优势是对各种浏览器的兼容性更好。
-			</div>
+			</p>
             <div class="f16">
                 <h3>在线示例</h3>
                 <a class="btn" target="_blank" href="/demos/phpsocketio-chat/" rel="nofollow">在线示例-聊天室</a> <a href="https://github.com/walkor/phpsocket.io/blob/master/examples/chat/server.php" rel="nofollow" class="btn" target="_blank">示例源码</a>
