@@ -168,10 +168,10 @@
 		</div>
 		
 		<div class="media">
-			 <a href="https://github.com/walkor/phpsocket.io" class="pull-left" target="_blank" rel="nofollow"><img src="/img/socket.io.png" class="media-object" /></a>
+			 <a href="/phpsocket.io" class="pull-left" target="_blank" rel="nofollow"><img src="/img/socket.io.png" class="media-object" /></a>
 			<div class="media-body">
 				<h4 class="media-heading">
-					<a target="_blank" href="https://github.com/walkor/phpsocket.io" rel="nofollow">PHPSocket.IO</a>
+					<a target="_blank" href="/phpsocket.io" rel="nofollow">PHPSocket.IO</a>
 				</h4>
 				<p>
 				PHPSocket.IO是Socket.IO的PHP 服务端版本。PHP版socket.io可用来替代传统nodejs版本socket.io服务端，并且接口与其一致，可用于开发跨浏览器或者安卓、ios等移动端即时通讯应用。
