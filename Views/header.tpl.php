@@ -8,6 +8,7 @@
   <meta name="description" content="<?php if(isset($html_desc))echo $html_desc;?>"/>
   <meta name="author" content=""/>
   <meta name="baidu_union_verify" content="e47ae1f37ead6981de7a997096347250"/>
+  <meta property="qc:admins" content="264222212167723525166654" />
   <meta name="baidu-site-verification" content="9J9K0y1Cxv" />
   <meta name="baidu-site-verification" content="jLodbXMgwV" />
   <meta name="baidu-site-verification" content="NXCSEiOPBB" />
