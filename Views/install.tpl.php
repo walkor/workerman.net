@@ -13,7 +13,7 @@
 	<h3>centos系统安装教程 </h3>
 	<a href="/img/gif/centos-install.gif" target="_blank">>>点击这里查看动画教程<<</a><br>
 	<h5>1、命令行运行<code>yum install php-cli php-process  git gcc  php-devel php-pear libevent-devel -y</code></h5>
-	<h5>2、命令行运行<code>pecl install event</code>如果有安装提示一直按回车即可</h5>
+	<h5>2、命令行运行<code>pecl install event</code>注意提示：<code>Include libevent OpenSSL support [yes] : </code>时输入<code>no</code>回车，其它直接敲回车就行</h5>
 	<h5>3、命令行运行<code>echo extension=event.so > /etc/php.d/event.ini</code></h5>
 	<h5>4、命令行运行<code>git clone https://github.com/walkor/Workerman</code></h5>
 	<h5>5、参考<a href="http://doc3.workerman.net/getting-started/simple-example.html" target="_blank">手册</a>写例子运行或者从主页下载<a href="/applications">demo</a>运行</h5>
@@ -21,7 +21,7 @@
 	<h3>debian/ubuntu系统安装教程</h3>
 	<a href="/img/gif/ubuntu-install.gif" target="_blank">>>点击这里查看动画教程<<</a><br>
 	<h5>1、命令行运行<code>apt-get install php5-cli git gcc php-pear php5-dev libevent-dev -y</code></h5>
-	<h5>2、命令行运行<code>pecl install event</code>如果有安装提示一直按回车即可</h5>
+	<h5>2、命令行运行<code>pecl install event</code>注意提示：<code>Include libevent OpenSSL support [yes] : </code>时输入<code>no</code>回车，其它直接敲回车就行</h5>
 	<h5>3、命令行运行(需要切换到root用户)<code>echo extension=event.so > /etc/php5/cli/conf.d/event.ini</code></h5>
 	<h5>4、命令行运行<code>git clone https://github.com/walkor/Workerman</code></h5>
 	<h5>5、参考<a href="http://doc3.workerman.net/getting-started/simple-example.html" target="_blank">手册</a>写例子运行或者从主页下载<a href="/applications">demo</a>运行</h5>
