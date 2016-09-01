@@ -17,7 +17,7 @@
 				</div>
 				<div class="col-md-5 column">
 					<div class="Q">
-						<b>技术交流群:137410824</b> 	
+						<b>技术交流群:172789145</b> 	
 						<a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=0f93b2c07951fc7fb8134547216e2b24f001c5e7de73a5113a9203a485eba842"><img border="0" src="/img/add_to_qq_group.png" alt="workerman官方4群" title="workerman官方4群"></a>
 					</div>
 				</div>
@@ -512,8 +512,8 @@
 			</li>
 			
 			<li>
-				免费QQ群：137410824
-				<a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=a7255bef60d796f72b1d7f16b2f6a745fd74ab1d15d6c9de6e031f3978817c3c"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="workerman官方群2" title="workerman官方群2"></a>
+				免费QQ群：172789145
+				<a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=0f93b2c07951fc7fb8134547216e2b24f001c5e7de73a5113a9203a485eba842"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="workerman官方4群" title="workerman官方4群"></a>
 			</li>
 			<li>
 			&nbsp;VIPQQ群：544584915 <a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=48fac857de63cfc2847595e14e168040a1416fa5f82ab6f72fdd778e3c67a8fe"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="Workerman 官方收费群1" title="Workerman 官方收费群1"></a>
