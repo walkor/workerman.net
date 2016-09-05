@@ -10,7 +10,7 @@ PHP:      5.5.9
 </code></pre>
 
 <h3>业务逻辑</h3>
-<pre><code><?php
+<pre><code>
 require_once './Workerman/Autoloader.php';
 use Workerman\Worker;
 $worker = new Worker('tcp://0.0.0.0:1234');
