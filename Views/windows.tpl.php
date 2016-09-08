@@ -18,7 +18,9 @@
         <font class="f16">
         windows版本聊天室<a href="https://github.com/walkor/workerman-chat-for-win" rel="nofollow">点击下载workerman-chat-for-win</a><br>
         windows版本小蝌蚪聊天室<a href="https://github.com/walkor/workerman-todpole-for-win" rel="nofollow">点击下载workerman-todpole-for-win</a><br>
+        windows版本web消息推送框架<a href=" https://github.com/walkor/web-msg-sender-for-win/archive/master.zip" rel="nofollow">点击下载web-msg-sender</a><br>
         windows版本GatewayWorker<a href="https://github.com/walkor/GatewayWorker-for-win" rel="nofollow">点击下载GatewayWorker-for-win</a><br>
+       
         以上demo下载后双击start_for_win.bat即可启动（无需安装其它扩展）
         </font>
         <div style="margin:10px 0">提示：如果出现类似"php不是内部或外部命令"的提示，说明没有设置好php环境变量，请参考下面步骤设置</div>

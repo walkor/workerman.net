@@ -70,10 +70,10 @@ content 为消息内容
 	<div class="row clearfix">
 		<div class="col-md-12 column">
 			<h3>
-				Linux环境安装启动
+				安装启动
 			</h3>
-			<p>1、<a href="/download/senderzip" target="_blank">下载</a>web-msg-sender，并解压缩到任意目录</p>
-			<p>2、启动workerman<code>php start.php start -d</code>如下图</p>
+			<p>1、下载web-msg-sender(<a href="/download/senderzip" target="_blank">linux版本点击这里下载</a> <a href="https://github.com/walkor/web-msg-sender-for-win/archive/master.zip" target="_blank">windows版本点击这里下载</a>)，并解压缩到任意目录</p>
+			<p>2、启动workerman，linux系统cd到项目里运行<code>php start.php start -d</code>如下图</p>。windows系统进入到框架目录里双击start_for_win.bat文件启动。
 			<img src="/img/sender-start.png" alt="WEB推送启动示意图"/>
 			<p>3、浏览器访问端口http://ip:2123或者http://域名:2123，例如
 			<a href="http://workerman.net:2123/">http://workerman.net:2123</a>如图：(如果无法访问请检查服务器防火墙)</p>
@@ -128,15 +128,5 @@ var_export($return);';
 echo htmlspecialchars($api_str);
 ?>
 </pre>
-
-<h3>客户端</h3>
-javascript: <a target="_blank" href="https://github.com/socketio/socket.io-client" rel="nofollow">https://github.com/socketio/socket.io-client</a><br>
-安卓：<a target="_blank" href="https://github.com/koush/AndroidAsync" rel="nofollow">https://github.com/koush/AndroidAsync</a><br>
-IOS(objc): <a target="_blank" href="https://github.com/pkyeck/socket.IO-objc" rel="nofollow">https://github.com/pkyeck/socket.IO-objc</a><br>
-IOS(swift):<a target="_blank" href="https://github.com/socketio/socket.io-client-swift" rel="nofollow">https://github.com/socketio/socket.io-client-swift</a><br>
-Java: <a target="_blank" href="https://github.com/socketio/socket.io-client-java" rel="nofollow">https://github.com/socketio/socket.io-client-java</a><br>
-C++: <a target="_blank" href="https://github.com/socketio/socket.io-client-cpp" rel="nofollow">https://github.com/socketio/socket.io-client-cpp</a><br>
-unity3d: <a target="_blank" href="https://github.com/NetEase/UnitySocketIO" rel="nofollow">https://github.com/NetEase/UnitySocketIO</a><br>
-Python: <a target="_blank" href="https://github.com/invisibleroads/socketIO-client" rel="nofollow">https://github.com/invisibleroads/socketIO-client</a><br>
 		</div>
 	</div>
