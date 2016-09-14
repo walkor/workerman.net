@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="8.4" data-basepath=".." data-revision="1473004261072">
+    <div class="book"  data-level="8.4" data-basepath=".." data-revision="1473826084388">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -894,12 +894,14 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_42">
+                    <section class="normal" id="section-gitbook_1298">
                     
                         <h1 id="register-">Register类的使用</h1>
 <p>Register类其实也是基于基础的Worker开发的。Gateway进程和BusinessWorker进程启动后分别向Register进程注册自己的通讯地址，Gateway进程和BusinessWorker通过Register进程得到通讯地址后，就可以建立起连接并通讯了。</p>
+<h2 id="-">注意</h2>
+<p>注意，客户端不要连接Register服务的端口，Register服务是GatewayWorker内部通讯用的。参见<a href="http://workerman.net/gatewaydoc/process-of-communication/README.html" target="_blank">GatewayWorker工作原理</a>。</p>
 <h2 id="register-">Register类可以定制的内容</h2>
-<p>Register类只能定制监听的ip和端口，并且只能使用text协议。</p>
+<p>Register类只能定制监听的ip和端口，并且目前只能使用text协议。</p>
 
                     
                     </section>
