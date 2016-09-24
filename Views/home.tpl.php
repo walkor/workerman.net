@@ -117,6 +117,18 @@
 		</div>
 		
 		<div class="media">
+			 <a href="http://kf.workerman.net/" class="pull-left" target="_blank"><img src="/img/laylive.png" class="media-object" alt="PHP客服系统"/></a>
+			<div class="media-body">
+				<h4 class="media-heading">
+					<a target="_blank" href="http://kf.workerman.net" target="_blank">LayLive客服系统</a>
+				</h4>
+				<p><a href="http://layim.layui.com/" target="_blank" rel="nofollow">LayIM</a>+Workerman开发的客服系统，任何站点引入一段js即可接入，接入成本极低。支持表情、离线消息，支持多站点，支持分布式部署、支持万人在线。<br>
+				<a class="btn" target="_blank" href="http://kf.workerman.net" rel="nofollow">DEMO »</a>
+				</p>
+			</div>
+		</div>
+		
+		<div class="media">
 			 <a href="/workerman-chat" class="pull-left"><img src="/img/workerman-chat.png" class="media-object" alt="PHP聊天室"/></a>
 			<div class="media-body">
 				<h4 class="media-heading">
