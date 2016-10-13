@@ -68,5 +68,24 @@ socket.on('connect', function(){socket.emit('login', '<?php echo session_id();?>
 socket.on('update_online_count', function(count){$('#online_count').html(count);});
 </script>
 
+<script src="http://s.workerman.net/common/swfobject.js"></script>
+<script src="http://s.workerman.net/common/json2.js"></script>
+<script src="http://s.workerman.net/common/web_socket.js"></script>
+<script src="http://s.workerman.net/layui/layui.js"></script>
+<script src="http://s.workerman.net/common/laychat.js"></script>
+<script>
+    laychat.address         = 'ws://laychat.workerman.net:8282';
+    laychat.initUrl         = '/laychat/init.php';
+    laychat.bindUrl         = '/laychat/bind.php';
+    laychat.chatLogUrl      = '/laychat/chat_log.php';
+    laychat.membersUrl      = '/laychat/members.php';
+    laychat.sendMessageUrl  = '/laychat/send_message.php';
+    laychat.uploadFileUrl   = '/laychat/upload_file.php';
+    laychat.uploadImageUrl  = '/laychat/upload_img.php';
+    laychat.setMin          = true;
+    laychat.jq              = $;
+    laychat.open();
+</script>
+
 </body>
 </html>
