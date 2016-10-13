@@ -4,7 +4,7 @@
 	<b>workerman只是一个代码包，如果php环境满足要求，下载后即可使用，实际上没有安装过程。
 	<br>workerman使用的是<a href="http://php.net/manual/zh/features.commandline.php" rel="nofollow">PHP CLI</a>，与Apahce的PHP或者PHP-FPM不冲突。workerman不依赖Apache/nginx或者PHP-FPM，也不影响他们的运行。
 	<br>workerman对php环境的要求是：
-	<br>1、PHP CLI>=5.3.3，可以运行命令 php -v 查看版本
+	<br>1、PHP CLI>=5.4，可以运行命令 php -v 查看版本
 	<br>2、Linux系统要求php安装了posix和pcntl扩展
 	<br>Linux系统可以在命令中运行 <code>curl -Ss http://www.workerman.net/check.php | php </code> 检测本地环境是否满足workerman。
 	<br>Windows系统不需要安装任何扩展，只需要配置php环境变量。windows系统使用workerman请<a href="http://www.workerman.net/windows">参考这里</a>
@@ -37,11 +37,16 @@
 	如果手动下载过了想要的workerman应用程序，则此步骤可以省略。</h5>
 	
 	<h3>mac os 系统安装教程</h3>
-	<h5>mac os 自带PHP，但是可能缺少pcntl扩展</h5>
+	<h5><b>方法一：</b>mac os 自带PHP，但是可能缺少pcntl扩展</h5>
 	<h5>1、参考手册<a href="http://doc3.workerman.net/appendices/install-extension.html" target="_blank">附录-安装扩展</a>一节中方法三源码编译安装pcntl扩展。</h5>
 	<h5>2、参考手册<a href="http://doc3.workerman.net/appendices/install-extension.html" target="_blank">附录-安装扩展</a>一节中方法四利用phpize安装Event扩展（可省略）。</h5>
 	<h5>3、通过<a href="http://www.workerman.net/download/workermanzip" target="_blank">http://www.workerman.net/download/workermanzip</a> 下载WorkerMan主程序，或者到<a href="http://www.workerman.net/" target="_blank">官网</a>下载例子运行。</h5>
 	<br>
+	<h5><b>方法二：</b>用brew安装php及扩展</h5>
+	<h5>1、命令行运行以下命令安装brew工具(如果已经安装过brew可以跳过此步骤)<code>/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</code></h5>
+	<h5>2、命令行运行以下命令安装php7<code>brew install php70</code></h5>
+	<h5>3、命令行运行以下命令安装event扩展<code>brew install php70-event</code></h5>
+	<h5>4、通过<a href="http://www.workerman.net/download/workermanzip" target="_blank">http://www.workerman.net/download/workermanzip</a> 下载WorkerMan主程序，或者到<a href="http://www.workerman.net/" target="_blank">官网</a>下载例子运行。</h5>
 	
 	<h3>关于Event扩展</h3>
 	<p>如果无法安装<a href="http://php.net/manual/zh/book.event.php" target="_blank">Event扩展</a>，可以用<a href="http://php.net/manual/zh/book.libevent.php" target="_blank">libevent扩展</a>代替。</p>
