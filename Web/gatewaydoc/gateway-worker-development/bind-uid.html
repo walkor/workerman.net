@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="8.6.7" data-basepath=".." data-revision="1476342987675">
+    <div class="book"  data-level="8.6.7" data-basepath=".." data-revision="1476803256721">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -905,13 +905,14 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_98">
+                    <section class="normal" id="section-gitbook_1628">
                     
                         <h1 id="-gatewayworker-lib-gateway-binduid">\GatewayWorker\Lib\Gateway::bindUid</h1>
 <h2 id="-">说明:</h2>
 <pre><code class="lang-php">void Gateway::bindUid(string <span class="hljs-variable">$client_id</span>, mixed <span class="hljs-variable">$uid</span>);
 </code></pre>
 <p>将client_id与uid绑定，以便通过<code>Gateway::sendToUid($uid)</code>发送数据，通过<code>Gateway::isUidOnline($uid)</code>用户是否在线。</p>
+<p>uid解释：这里uid泛指用户id或者设备id，用来唯一确定一个客户端用户或者设备。</p>
 <p>注意：</p>
 <p>1、uid与client_id是一对多的关系，系统允许一个uid下有多个client_id。</p>
 <p>2、但是一个client_id只能绑定一个uid，如果绑定多次uid，则只有最后一次绑定有效。</p>
