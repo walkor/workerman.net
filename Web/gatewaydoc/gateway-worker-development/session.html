@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="8.8" data-basepath=".." data-revision="1476803256721">
+    <div class="book"  data-level="8.8" data-basepath=".." data-revision="1476942819902">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -905,7 +905,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_1645">
+                    <section class="normal" id="section-gitbook_256">
                     
                         <h1 id="-_session-">超全局数组<code>$_SESSION</code></h1>
 <h3 id="-_session-"><code>$_SESSION</code>是什么</h3>
@@ -919,6 +919,7 @@
 <li><code>$_SESSION</code>中无法保存资源类型的数据</li>
 <li>当客户端连接断开后，对应的客户端<code>$_SESSION</code>将会清除</li>
 <li>GatewayWorker中的<code>$_SESSION</code>与WebServer(PHP-FPM)中的<code>$_SESSION</code>无法互通</li>
+<li>定时器中不要直接使用<code>$_SESSION</code>变量，因为定时器运行那一刻无法确定<code>$_SESSION</code>变量里存储的值属于哪个client_id。如果定时器里面需要获得session，可以使用<code>Gateway::getSession($client_id)</code>获取</li>
 </ul>
 <h3 id="-_session-"><code>$_SESSION</code>实现原理</h3>
 <p>在WorkerMan的Gateway/Worker模型中，每个客户端的<code>$_SESSION</code>数据是存储在Gateway进程内存中的，每次Gateway进程转发消息给BusibuessWorker进程时，都会顺便携带上对应客户端的<code>$_SESSION</code>数据给BusibuessWorker进程，这时BusibuessWorker进程就能使用<code>$_SESSION</code>了。而当<code>$_SESSION</code>数据有更改时，BusibuessWorker会将新的<code>$_SESSION</code>数据传递给Gateway进程进行保存。</p>
