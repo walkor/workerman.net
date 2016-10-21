@@ -32,7 +32,7 @@
 			</div>
 			</div>
 		</div>
-		<div class="media">
+		<!-- <div class="media">
 			 <a href="http://workerman.net/gatewaydoc/" class="pull-left" target="_blank" ><img src="/img/gatewayworker-big.png" class="media-object" /></a>
 			<div class="media-body">
 			<div class="thumbnail">
@@ -47,6 +47,7 @@
 			</div>
 			</div>
 		</div>
+		-->
 		<div class="media">
 			 <a href="http://doc3.workerman.net/component/channel.html" class="pull-left" target="_blank" ><img src="/img/channel-big.png" class="media-object" /></a>
 			<div class="media-body">
