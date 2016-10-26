@@ -16,7 +16,7 @@
 </li>
 <li>Gateway::getClientInfoByGroup更名为Gateway::getClientSessionsByGroup, Gateway::getALLClientInfo更名为Gateway::getAllClientSessions</li>
 <li>一些性能优化</li>
-<li><a href="https://github.com/walkor/GatewayClient" rel="nofollow">GatewayClient</a>同步更新到<a href="https://github.com/walkor/GatewayClient/releases/tag/2.0.7" rel="nofollow">2.0.7版本</a>用于支持GatewayWorker2.0.7</li>
+<li><a href="https://github.com/walkor/GatewayClient" rel="nofollow">GatewayClient</a>同步更新到<a href="https://github.com/walkor/GatewayClient/releases/tag/v2.0.7" rel="nofollow">2.0.7版本</a>用于支持GatewayWorker2.0.7</li>
 </ul>
 <hr>
 
