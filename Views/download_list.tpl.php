@@ -161,7 +161,7 @@
 					<h4>phptty(Linux版本)</h4>
 					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=phptty&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=phptty&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
 					<a class="btn btn-default btn-large" href="https://github.com/walkor/phptty" target="_blank" rel="nofollow"><b>Fork on Github</b></a>&nbsp;
-					<a class="btn btn-default btn-large" href="https://github.com/walkor/phptty/archive/master.zip" rel="nofollow"><b>下载ZIP压缩文件</b> </a> 
+					<a class="btn btn-default btn-large" href="/download/phptty.zip" rel="nofollow"><b>下载ZIP压缩文件</b> </a> 
 				</div>
 			</div>
 			</div>
@@ -174,7 +174,7 @@
 					<h4>vmstat服务器状态监控服务(Linux版本)</h4>
 					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-vmstat&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-vmstat&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
 					<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-vmstat" target="_blank" rel="nofollow"><b>Fork on Github</b></a>&nbsp;
-					<a class="btn btn-default btn-large" href="/download/vmstatzip"><b>下载ZIP压缩文件</b> </a> 
+					<a class="btn btn-default btn-large" href="/download/workerman-vmstat.zip"><b>下载ZIP压缩文件</b> </a> 
 				</div>
 			</div>
 			</div>
@@ -187,7 +187,7 @@
 					<h4>socks5代理服务(Linux版本)</h4>
 					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=php-socks5&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=php-socks5&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
 					<a class="btn btn-default btn-large" href="https://github.com/walkor/php-socks5" target="_blank" rel="nofollow"><b>Fork on Github</b></a>&nbsp;
-					<a class="btn btn-default btn-large" href="https://github.com/walkor/php-socks5/archive/master.zip"><b>下载ZIP压缩文件</b> </a> 
+					<a class="btn btn-default btn-large" href="/download/php-socks5.zip"><b>下载ZIP压缩文件</b> </a> 
 				</div>
 			</div>
 			</div>
