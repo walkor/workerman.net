@@ -200,7 +200,7 @@
 					<h4>摄像头 ascii 视频流实时传输(Linux版本)</h4>
 					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=live-ascii-camera&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=live-ascii-camera&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
 					<a class="btn btn-default btn-large" href="https://github.com/walkor/live-ascii-camera" target="_blank" rel="nofollow"><b>Fork on Github</b></a>&nbsp;
-					<a class="btn btn-default btn-large" href="https://github.com/walkor/live-ascii-camera/archive/master.zip" rel="nofollow"><b>下载ZIP压缩文件</b> </a> 
+					<a class="btn btn-default btn-large" href="/download/live-ascii-camera.zip" rel="nofollow"><b>下载ZIP压缩文件</b> </a> 
 				</div>
 			</div>
 			</div>
@@ -213,7 +213,7 @@
 					<h4>下载摄像头视频直播代码(Linux版本)</h4>
 					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=live-camera&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=live-camera&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
 					<a class="btn btn-default btn-large" href="https://github.com/walkor/live-camera" target="_blank" rel="nofollow"><b>Fork on Github</b></a>&nbsp;
-					<a class="btn btn-default btn-large" href="/download/camerazip"><b>下载ZIP压缩文件</b> </a> 
+					<a class="btn btn-default btn-large" href="/download/live-camera.zip"><b>下载ZIP压缩文件</b> </a> 
 				</div>
 			</div>
 			</div>
@@ -239,7 +239,7 @@
 					<h4>Thrift RPC远程调用框架(Linux版本)</h4>
 					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-thrift&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-thrift&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
 					<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-thrift" target="_blank" rel="nofollow"><b>Fork on Github</b></a>&nbsp;
-					<a class="btn btn-default btn-large" href="/download/thriftzip"><b>下载ZIP压缩文件</b> </a>
+					<a class="btn btn-default btn-large" href="/download/workerman-thrift-rpc.zip"><b>下载ZIP压缩文件</b> </a>
 				</div>
 			</div>
 			</div>
@@ -252,7 +252,7 @@
 					<h4>Json RPC远程调用框架(Linux版本)</h4>
 					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-jsonrpc&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-jsonrpc&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
 					<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-jsonrpc" target="_blank" rel="nofollow"><b>Fork on Github</b></a>&nbsp;
-					<a class="btn btn-default btn-large" href="/download/jsonrpczip"><b>下载ZIP压缩文件</b></a>
+					<a class="btn btn-default btn-large" href="/download/workerman-jsonrpc.zip"><b>下载ZIP压缩文件</b></a>
 				</div>
 			</div>
 			</div>
@@ -265,7 +265,7 @@
 					<h4>统计监控系统(Linux版本)</h4>
 					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-statistics&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-statistics&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
 					<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-statistics" target="_blank" rel="nofollow"><b>Fork on Github</b></a>&nbsp;
-					<a class="btn btn-default btn-large" href="/download/statisticszip"><b>下载ZIP压缩文件</b> </a>
+					<a class="btn btn-default btn-large" href="/download/workerman-statistics.zip"><b>下载ZIP压缩文件</b> </a>
 				</div>
 			</div>
 			</div>
