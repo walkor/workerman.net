@@ -20,10 +20,12 @@
 			<div class="thumbnail">
 				<div class="caption-download">
 					<h4>下载PHP小蝌蚪游戏</h4>
-					<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-todpole&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-todpole&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
-					<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-todpole" target="_blank" rel="nofollow"><b>Fork on Github</b></a>&nbsp;
-					<a class="btn btn-default btn-large" href="/download/todpolezip"><b>下载ZIP压缩文件</b></a> <font class='f11 gray'>下载<?php echo $todpole_download_count;?>次</font>
-					<p></p>
+					    <p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-todpole&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-todpole&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
+    					<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-todpole" target="_blank" rel="nofollow"><b>Fork on Github</b></a>&nbsp;
+    					<a class="btn btn-default btn-large" href="/download/todpolezip"><b>下载ZIP压缩文件</b></a> 
+    					<br><br>
+    					<h4>Windows版本下载</h4>
+						<a class="btn btn-default btn-large" href="/download/workerman-todpole-for-win.zip"><b>下载Win版本ZIP压缩文件</b> </a> 
 				</div>
 			</div>
 			<h3>
@@ -39,10 +41,6 @@
 			<li>即时聊天</li>
 			<li>独立运行，不依赖Mysql、apache、nginx等软件</li>
 			</ul>
-			<p class="f16">
-			Linux版本GitHub地址：<a href="https://github.com/walkor/workerman-todpole" rel="nofollow">https://github.com/walkor/workerman-todpole</a>
-			<br>Windows版本GitHub地址：<a href="https://github.com/walkor/workerman-todpole-for-win" rel="nofollow">https://github.com/walkor/workerman-todpole-for-win</a>
-			</p>
 			<div class="bd-ad"><?php global $bd_ad_468_60; echo $bd_ad_468_60;?></div>
 		</div>
 		<div class="col-md-5 column text-center">

@@ -42,7 +42,7 @@
 					<a class="btn btn-default btn-large" href="https://github.com/walkor/gatewayworker" target="_blank" rel="nofollow"><b>Fork on Github</b></a>&nbsp;
 					<a class="btn btn-default btn-large" href="/download/GatewayWorker.zip"><b>下载ZIP压缩文件</b> </a>
 					<br><br><h4>Windows版本下载</h4>
-						<a class="btn btn-default btn-large" href="https://github.com/walkor/GatewayWorker-for-win/archive/master.zip"><b>下载Win版本ZIP压缩文件</b> </a>
+						<a class="btn btn-default btn-large" href="/download/GatewayWorker-for-win.zip"><b>下载Win版本ZIP压缩文件</b> </a>
 				</div>
 			</div>
 			</div>
@@ -86,7 +86,7 @@
     					<a class="btn btn-default btn-large" href="/download/todpolezip"><b>下载ZIP压缩文件</b></a> 
     					<br><br>
     					<h4>Windows版本下载</h4>
-						<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-todpole-for-win/archive/master.zip"><b>下载Win版本ZIP压缩文件</b> </a> 
+						<a class="btn btn-default btn-large" href="/download/workerman-todpole-for-win.zip"><b>下载Win版本ZIP压缩文件</b> </a> 
     				</div>
     			</div>
 			</div>
@@ -118,7 +118,7 @@
 					<a class="btn btn-default btn-large" href="/download/chatzip"><b>下载ZIP压缩文件</b> </a> 
 					<br><br>
 					<h4>Windows版本下载</h4>
-					<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-chat-for-win"><b>下载Win版本ZIP压缩文件</b> </a> 
+					<a class="btn btn-default btn-large" href="/download/workerman-chat-for-win.zip"><b>下载Win版本ZIP压缩文件</b> </a> 
 				</div>
 			</div>
 			</div>
@@ -133,7 +133,7 @@
 					<a class="btn btn-default btn-large" href="https://github.com/walkor/web-msg-sender" target="_blank" rel="nofollow"><b>Fork on Github</b></a>&nbsp;
 					<a class="btn btn-default btn-large" href="/download/senderzip"><b>下载ZIP压缩文件</b> </a>
 					<h4>Windows版本下载</h4>
-					<a class="btn btn-default btn-large" href="https://github.com/walkor/web-msg-sender-for-win"><b>下载Win版本ZIP压缩文件</b> </a> 
+					<a class="btn btn-default btn-large" href="/download/web-msg-sender-for-win.zip"><b>下载Win版本ZIP压缩文件</b> </a> 
 				</div>
 			</div>
 			</div>

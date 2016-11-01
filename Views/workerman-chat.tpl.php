@@ -33,7 +33,7 @@
 					<a class="btn btn-default btn-large" href="/download/chatzip"><b>下载ZIP压缩文件</b> </a> <font class='f11 gray'>下载<?php echo $chat_download_count;?>次</font>
 					<br><br>
 					<h4>Windows版本下载</h4>
-					<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-chat-for-win"><b>下载Win版本ZIP压缩文件</b> </a> 
+					<a class="btn btn-default btn-large" href="/download/workerman-chat-for-win.zip"><b>下载Win版本ZIP压缩文件</b> </a> 
 				</div>
 			</div>
 			<h3>

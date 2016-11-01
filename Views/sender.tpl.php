@@ -35,7 +35,7 @@
 					<a class="btn btn-default btn-large" href="https://github.com/walkor/web-msg-sender" target="_blank" rel="nofollow"><b>Fork on Github</b></a>&nbsp;
 					<a class="btn btn-default btn-large" href="/download/senderzip"><b>下载ZIP压缩文件</b> </a> <font class='f11 gray'>下载<?php echo $sender_download_count;?>次</font>
 					<h4>Windows版本下载</h4>
-					<a class="btn btn-default btn-large" href="https://github.com/walkor/web-msg-sender-for-win"><b>下载Win版本ZIP压缩文件</b> </a> 
+					<a class="btn btn-default btn-large" href="/download/web-msg-sender-for-win.zip"><b>下载Win版本ZIP压缩文件</b> </a> 
 				</div>
 			</div>
                         <b>Demo1:</b><br>
