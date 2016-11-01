@@ -97,7 +97,7 @@ function download_thriftzip()
     $count = \WorkerMan\Lib\Store::get($download_thrift_count_key);
     $count = $count >= 0 ? intval($count) : 0;
     \WorkerMan\Lib\Store::set($download_thrift_count_key, ++$count);
-    return _header('Location: https://github.com/walkor/workerman-thrift/archive/master.zip');
+    return _header('Location: /download/workerman-thrift.zip');
 }
 
 /**
@@ -125,7 +125,7 @@ function download_jsonrpczip()
     $count = \WorkerMan\Lib\Store::get($download_jsonrpc_count_key);
     $count = $count >= 0 ? intval($count) : 0;
     \WorkerMan\Lib\Store::set($download_jsonrpc_count_key, ++$count);
-    return _header('Location: https://github.com/walkor/workerman-jsonrpc/archive/master.zip');
+    return _header('Location: /download/workerman-jsonrpc.zip');
 }
 
 /**
@@ -153,7 +153,7 @@ function download_chatzip()
     $count = \WorkerMan\Lib\Store::get($download_chat_count_key);
     $count = $count >= 0 ? intval($count) : 0;
     \WorkerMan\Lib\Store::set($download_chat_count_key, ++$count);
-    return _header('Location: https://github.com/walkor/workerman-chat/archive/master.zip');
+    return _header('Location: /download/workerman-chat.zip');
 }
 
 /**
@@ -173,7 +173,7 @@ function download_statistics()
 }
 
 /**
- * 下载workerman-thrift-rpc.zip
+ * 下载workerman-statistics
  */
 function download_statisticszip()
 {
@@ -181,7 +181,7 @@ function download_statisticszip()
     $count = \WorkerMan\Lib\Store::get($download_statistics_count_key);
     $count = $count >= 0 ? intval($count) : 0;
     \WorkerMan\Lib\Store::set($download_statistics_count_key, ++$count);
-    return _header('Location: https://github.com/walkor/workerman-statistics/archive/master.zip');
+    return _header('Location: /download/workerman-statistics.zip');
 }
 
 /**
@@ -201,7 +201,7 @@ function download_todpole()
 }
 
 /**
- * 下载workerman-thrift-rpc.zip
+ * 下载workerman-todpole
  */
 function download_todpolezip()
 {
@@ -209,11 +209,11 @@ function download_todpolezip()
     $count = \WorkerMan\Lib\Store::get($download_todpole_count_key);
     $count = $count >= 0 ? intval($count) : 0;
     \WorkerMan\Lib\Store::set($download_todpole_count_key, ++$count);
-    return _header('Location: https://github.com/walkor/workerman-todpole/archive/master.zip');
+    return _header('Location: /download/workerman-todpole.zip');
 }
 
 /**
- * 下载workerman-thrift-rpc.zip
+ * 下载workerman-browserquest
  */
 function download_browserquestzip()
 {
@@ -221,7 +221,7 @@ function download_browserquestzip()
     $count = \WorkerMan\Lib\Store::get($download_browserquest_count_key);
     $count = $count >= 0 ? intval($count) : 0;
     \WorkerMan\Lib\Store::set($download_browserquest_count_key, ++$count);
-    return _header('Location: https://github.com/walkor/browserquest-php/archive/master.zip');
+    return _header('Location: /download/BrowserQuest-PHP.zip');
 }
 
 /**
@@ -274,7 +274,7 @@ function download_camerazip()
     $count = \WorkerMan\Lib\Store::get($download_camera_count_key);
     $count = $count >= 0 ? intval($count) : 0;
     \WorkerMan\Lib\Store::set($download_camera_count_key, ++$count);
-    return _header('Location: https://github.com/walkor/live-camera/archive/master.zip');
+    return _header('Location: /download/live-ascii-camera.zip');
 }
 
 /**
@@ -286,7 +286,7 @@ function download_vmstatzip()
     $count = \WorkerMan\Lib\Store::get($download_vmstat_count_key);
     $count = $count >= 0 ? intval($count) : 0;
     \WorkerMan\Lib\Store::set($download_vmstat_count_key, ++$count);
-    return _header('Location: https://github.com/walkor/workerman-vmstat/archive/master.zip');
+    return _header('Location: /download/workerman-vmstat.zip');
 }
 
 function download_senderzip()
@@ -295,7 +295,7 @@ function download_senderzip()
     $count = \WorkerMan\Lib\Store::get($download_sender_count_key);
     $count = $count >= 0 ? intval($count) : 0;
     \WorkerMan\Lib\Store::set($download_sender_count_key, ++$count);
-    return _header('Location: https://github.com/walkor/web-msg-sender/archive/master.zip');
+    return _header('Location: /download/web-msg-sender.zip');
 }
 
 /**
