@@ -274,7 +274,7 @@ function download_camerazip()
     $count = \WorkerMan\Lib\Store::get($download_camera_count_key);
     $count = $count >= 0 ? intval($count) : 0;
     \WorkerMan\Lib\Store::set($download_camera_count_key, ++$count);
-    return _header('Location: /download/live-ascii-camera.zip');
+    return _header('Location: /download/live-camera.zip');
 }
 
 /**
