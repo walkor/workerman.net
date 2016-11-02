@@ -4,7 +4,7 @@
     <head>
         
         <meta charset="UTF-8">
-        <title>isUidOnline | GatewayWorker2.0 手册</title>
+        <title>getUidByClientId | GatewayWorker2.0 手册</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 0.5.2">
@@ -17,10 +17,10 @@
     
     
     
-    <link rel="next" href="../gateway-worker-development/get-client-id-by-uid.html" />
+    <link rel="next" href="../gateway-worker-development/unbind-uid.html" />
     
     
-    <link rel="prev" href="../gateway-worker-development/bind-uid.html" />
+    <link rel="prev" href="../gateway-worker-development/get-client-id-by-uid.html" />
     
 
         
@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="8.6.8" data-basepath=".." data-revision="1478095867938">
+    <div class="book"  data-level="8.6.10" data-basepath=".." data-revision="1478095867938">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -773,7 +773,7 @@
             <div class="page-wrapper" tabindex="-1">
                 <div class="book-progress">
     <div class="bar">
-        <div class="inner" style="width: 54.54545454545455%;min-width: 53.03030303030303%;"></div>
+        <div class="inner" style="width: 57.57575757575758%;min-width: 56.06060606060606%;"></div>
     </div>
     <div class="chapters">
     
@@ -851,9 +851,9 @@
     
         <a href="../gateway-worker-development/is-uid-online.html" title="isUidOnline" class="chapter done " data-progress="8.6.8" style="left: 54.54545454545455%;"></a>
     
-        <a href="../gateway-worker-development/get-client-id-by-uid.html" title="getClientIdByUid" class="chapter  " data-progress="8.6.9" style="left: 56.06060606060606%;"></a>
+        <a href="../gateway-worker-development/get-client-id-by-uid.html" title="getClientIdByUid" class="chapter done " data-progress="8.6.9" style="left: 56.06060606060606%;"></a>
     
-        <a href="../gateway-worker-development/get-uid-by-client-id.html" title="getUidByClientId" class="chapter  " data-progress="8.6.10" style="left: 57.57575757575758%;"></a>
+        <a href="../gateway-worker-development/get-uid-by-client-id.html" title="getUidByClientId" class="chapter done " data-progress="8.6.10" style="left: 57.57575757575758%;"></a>
     
         <a href="../gateway-worker-development/unbind-uid.html" title="unbindUid" class="chapter  " data-progress="8.6.11" style="left: 59.09090909090909%;"></a>
     
@@ -916,53 +916,31 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_998">
+                    <section class="normal" id="section-gitbook_995">
                     
-                        <h1 id="gateway-isuidonline">Gateway::isUidOnline</h1>
-<h2 id="-">说明:</h2>
-<pre><code class="lang-php">int Gateway::isUidOnline(mixed <span class="hljs-variable">$uid</span>);
-</code></pre>
-<p><code>(需要Gateway版本&gt;=2.0.4)</code></p>
-<p>判断<code>$uid</code>是否在线，此方法需要配合<code>Gateway::bindUid($client_uid, $uid)</code>使用。</p>
-<p>如果某uid没有通过<code>Gateway::bindUid($client_uid, $uid)</code>进行任何绑定，那么对该uid调用<code>Gateway::isUidOnline($uid)</code>将返回0。</p>
-<p>如果某uid绑定的client_id都已经下线，那么对该uid调用<code>Gateway::isUidOnline($uid)</code>将返回0。</p>
-<p>如果某uid绑定的client_id有至少有一个在线，那么对该uid调用<code>Gateway::isUidOnline($uid)</code>将返回1。</p>
-<h2 id="-">参数</h2>
-<ul>
-<li><code>$uid</code></li>
-</ul>
-<p>uid，可以是数字或者字符串</p>
-<h2 id="-">返回值</h2>
-<p>uid在线返回1，不在线返回0</p>
-<h2 id="-">范例</h2>
-<pre><code class="lang-php"><span class="hljs-keyword">use</span> \<span class="hljs-title">GatewayWorker</span>\<span class="hljs-title">Lib</span>\<span class="hljs-title">Gateway</span>;
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Events</span>
+                        <h1 id="getuidbyclientid">getUidByClientId</h1>
+<p>目前并没有这个接口，开发者可以将uid存储到session中，获取的时候从session获取即可。</p>
+<p>如果是获取当前请求所属client_id的session，直接使用<code>$_SESSION</code>变量即可。</p>
+<p>如果想获取任意client_id的session，可以通过<code>Gateway::getSession($client_id)</code>获取。</p>
+<pre><code class="lang-php"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Events</span>
 {</span>
-    ...
-
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onMessage</span><span class="hljs-params">(<span class="hljs-variable">$client_id</span>, <span class="hljs-variable">$message</span>)</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onMessage</span><span class="hljs-params">(<span class="hljs-variable">$client_id</span>, <span class="hljs-variable">$data</span>)</span>
     {</span>
-        <span class="hljs-comment">// $message = '{"type":"say_to_one","to_uid":100,"content":"hello"}'</span>
-        <span class="hljs-variable">$req_data</span> = json_decode(<span class="hljs-variable">$message</span>, <span class="hljs-keyword">true</span>);
-        <span class="hljs-variable">$uid</span> = <span class="hljs-variable">$req_data</span>[<span class="hljs-string">'to_uid'</span>];
-        <span class="hljs-comment">// 如果是向某个客户端发送消息</span>
-        <span class="hljs-keyword">if</span>(<span class="hljs-variable">$req_data</span>[<span class="hljs-string">'type'</span>] == <span class="hljs-string">'say_to_one'</span>))
-        {
-            <span class="hljs-comment">// 如果不在线就先存起来</span>
-            <span class="hljs-keyword">if</span>(!Gateway::isUidOnline(<span class="hljs-variable">$uid</span>))
-            {
-                <span class="hljs-comment">// 假设有个your_store_fun函数用来保存未读消息(这个函数要自己实现)</span>
-                your_store_fun(<span class="hljs-variable">$message</span>);
-            }
-            <span class="hljs-keyword">else</span>
-            {
-                <span class="hljs-comment">// 在线就转发消息给对应的uid</span>
-                Gateway::sendToUid(<span class="hljs-variable">$uid</span>, <span class="hljs-variable">$req_data</span>[<span class="hljs-string">'content'</span>]);
-            }
+        <span class="hljs-comment">// session中没有uid，说明没用绑定uid，执行uid绑定并存储uid到session</span>
+        <span class="hljs-keyword">if</span> (!<span class="hljs-keyword">isset</span>(<span class="hljs-variable">$_SESSION</span>[<span class="hljs-string">'uid'</span>])) {
+            <span class="hljs-comment">// 一般是根据$data获取uid，这里为了演示方便随机生成uid</span>
+            <span class="hljs-variable">$uid</span> = rand(<span class="hljs-number">1</span>, <span class="hljs-number">10000</span>);
+            <span class="hljs-comment">// uid用session存储起来，避免重复绑定</span>
+            <span class="hljs-variable">$_SESSION</span>[<span class="hljs-string">'uid'</span>] = <span class="hljs-variable">$uid</span>;
+            <span class="hljs-comment">// 绑定uid</span>
+            Gateway::bindUid(<span class="hljs-variable">$client_id</span>, <span class="hljs-variable">$uid</span>);
+            <span class="hljs-comment">// 通知客户端uid生成并存储成功</span>
+            <span class="hljs-keyword">return</span> Gateway::sendToClient(<span class="hljs-variable">$client_id</span>, <span class="hljs-string">'uid设置成功'</span>.<span class="hljs-variable">$uid</span>);
         }
-    }
 
-    ...
+        <span class="hljs-comment">// session中有uid，证明已经绑定过uid</span>
+        <span class="hljs-keyword">return</span> Gateway::sendToClient(<span class="hljs-variable">$client_id</span>, <span class="hljs-string">'你的uid为'</span>.<span class="hljs-variable">$_SESSION</span>[<span class="hljs-string">'uid'</span>]);
+    }
 }
 </code></pre>
 
@@ -974,10 +952,10 @@
         </div>
 
         
-        <a href="../gateway-worker-development/bind-uid.html" class="navigation navigation-prev " aria-label="Previous page: bindUid"><i class="fa fa-angle-left"></i></a>
+        <a href="../gateway-worker-development/get-client-id-by-uid.html" class="navigation navigation-prev " aria-label="Previous page: getClientIdByUid"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../gateway-worker-development/get-client-id-by-uid.html" class="navigation navigation-next " aria-label="Next page: getClientIdByUid"><i class="fa fa-angle-right"></i></a>
+        <a href="../gateway-worker-development/unbind-uid.html" class="navigation navigation-next " aria-label="Next page: unbindUid"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
