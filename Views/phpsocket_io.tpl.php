@@ -24,7 +24,7 @@
 					<a class="btn btn-default btn-large" href="https://github.com/walkor/phpsocket.io" target="_blank"  rel="nofollow"><b>Fork on Github</b></a>&nbsp;
 					<a class="btn btn-default btn-large" href="/download/phpsocket.io.zip"  rel="nofollow"><b>下载ZIP压缩文件</b> </a>
 					<h4>Windows版本下载</h4>
-					<a class="btn btn-default btn-large" href="https://github.com/walkor/phpsocket.io-for-win/archive/master.zip"><b>下载Win版本ZIP压缩文件</b> </a> 
+					<a class="btn btn-default btn-large" href="/download/phpsocket.io-for-win.zip"><b>下载Win版本ZIP压缩文件</b> </a> 
 				</div>
 			</div>
 			<div class="bd-ad"><?php global $bd_ad_468_60; echo $bd_ad_468_60;?></div>
