@@ -85,7 +85,7 @@
 			<a href="http://chat.workerman.net">http://workerman.net:55151</a>如图：(如果无法访问请检查服务器防火墙)</p>
 			<img src="/img/workerman-chat-page.png" alt="php聊天室使用界面"/>
 			<h3>Windows版本安装启动</h3>
-			<p>1、点击<a href="https://github.com/walkor/workerman-chat-for-win/archive/master.zip">这里</a>下载windows版本聊天室源码</p>
+			<p>1、点击<a href="/download/workerman-chat-for-win.zip">这里</a>下载windows版本聊天室源码</p>
 			<p>2、参考<a href="/windows" >这里</a>设置PHP环境变量</p>
 			<p>3、双击start_for_win.bat运行</p>
 			<p>4、浏览器访问http://127.0.0.1:55151 （如果服务端不在本地，请把127.0.0.1改成实际服务端ip或者域名）</p>
