@@ -360,15 +360,15 @@
 			</div>
 		</div>
 		<div class="media">
-			 <a href="https://github.com/walkor/gatewayworker" class="pull-left" rel="nofollow" target="_blank" ><img src="/img/gatewayworker-big.png" class="media-object" alt="workerman 分布式通讯组件" /></a>
+			 <a href="http://www.workerman.net/gatewaydoc/" class="pull-left" rel="nofollow" target="_blank" ><img src="/img/gatewayworker-big.png" class="media-object" alt="workerman 分布式通讯组件" /></a>
 			<div class="media-body">
 				<h4 class="media-heading">
-					<a target="_blank" href="https://github.com/walkor/gatewayworker" rel="nofollow">GatewayWorker框架</a>
+					<a target="_blank" href="http://www.workerman.net/gatewaydoc/" rel="nofollow">GatewayWorker框架</a>
 				</h4>
 				<p>
 				GatewayWorker是基于Workerman开发的一个可分布式部署的TCP长连接框架，专门用于快速开发TCP长连接应用，例如app推送服务端、即时IM服务端、游戏服务端、物联网、智能家居等等
 				<br>
-				<a class="btn" target="_blank" href="https://github.com/walkor/Channel" rel="nofollow">下载源代码 »</a>
+				<a class="btn" target="_blank" href="http://www.workerman.net/download/GatewayWorker.zip" rel="nofollow">下载源代码 »</a>
 				<a class="btn" target="_blank" href="http://www.workerman.net/gatewaydoc/" rel="nofollow">文档 »</a>
 				</p>
 			</div>
