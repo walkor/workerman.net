@@ -293,7 +293,7 @@
 				<h4 class="media-heading">
 					<a target="_blank" href="https://github.com/xtgxiso/WebWorker" rel="nofollow">WebWorker</a>
 				</h4>
-				基于Workerman实现的自带http server的web开发框架，用于开发高性能的api应用，例如app接口服务端等。
+				基于Workerman实现的自带http server的web开发框架，用于开发高性能的api应用，例如app接口服务端等。<br>
 				<a class="btn" target="_blank" href="https://github.com/xtgxiso/WebWorker" rel="nofollow">下载源代码 »</a>
 				<a class="btn" target="_blank" href="http://doc.webworker.xtgxiso.com/" rel="nofollow">文档 »</a>
 			</div>
