@@ -35,7 +35,7 @@
 					<li>支持热更新及服务器平滑重启</li>
 					<li>支持守护进程化和统计监控模块</li>
 				</ol>
-				<a class="btn" target="_blank" href="/features">查看更多 »</a>
+				<a class="btn" href="/features">查看更多 »</a>
 			</div>
 		</div>
 	</div>
@@ -132,11 +132,11 @@
 			 <a href="/workerman-chat" class="pull-left"><img src="/img/workerman-chat.png" class="media-object" alt="PHP聊天室"/></a>
 			<div class="media-body">
 				<h4 class="media-heading">
-					<a target="_blank" href="/workerman-chat">聊天室</a>
+					<a href="/workerman-chat">聊天室</a>
 				</h4>
 				<p>一个可扩展的php socket的聊天室，服务端采用workerman作为socket服务器框架，支持万人在线，采用web-socket-js作为前端websocket库，支持多浏览器。同样可以用作app聊天室开发。
-				<br><a target="_blank" class="btn" href="/workerman-chat">详情 »</a>
-				<a class="btn" target="_blank" href="https://github.com/walkor/workerman-chat" rel="nofollow">下载源代码 »</a>
+				<br><a class="btn" href="/workerman-chat">详情 »</a>
+				<a class="btn" target="_blank" href="/download/chatzip" rel="nofollow">下载源代码 »</a>
 				</p>
 			</div>
 		</div>
@@ -144,11 +144,11 @@
 			 <a href="/web-sender" class="pull-left"><img src="/img/web-msg-sender.png" class="media-object" alt="web 消息推送示意图" /></a>
 			<div class="media-body">
 				<h4 class="media-heading">
-					<a target="_blank" href="/web-sender">Web消息推送系统</a>
+					<a href="/web-sender">Web消息推送系统</a>
 				</h4>
 				<p>web消息推送系统，能够通过socket 长连接实时推送消息给所有用户，基于PHPSocketIO开发，客户端使用socket.io客户端，支持各种浏览器。
-				<br><a target="_blank" class="btn" href="/web-sender">详情 »</a>
-				<a class="btn" target="_blank" href="https://github.com/walkor/web-msg-sender" rel="nofollow">下载源代码 »</a>
+				<br><a   class="btn" href="/web-sender">详情 »</a>
+				<a class="btn" target="_blank" href="/download/senderzip" rel="nofollow">下载源代码 »</a>
 				</p>
 			</div>
 		</div>
@@ -160,8 +160,8 @@
 					<a target="_blank" href="http://kedou.workerman.net/">PHP小蝌蚪聊天室</a>
 				</h4>
 				<p>使用HTML5+WebSocket+Workerman实时推送技术开发的小蝌蚪聊天室，聊天室中玩家们化身为小蝌蚪，可以自由游动，并且可以实时聊天，非常有趣。
-				<br><a target="_blank" class="btn" href="/workerman-todpole">详情 »</a>
-				<a class="btn" target="_blank" href="http://github.com/walkor/workerman-todpole" rel="nofollow">下载源代码 »</a>
+				<br><a   class="btn" href="/workerman-todpole">详情 »</a>
+				<a class="btn" target="_blank" href="/download/todpolezip" rel="nofollow">下载源代码 »</a>
 				</p>
 			</div>
 		</div>
@@ -174,22 +174,22 @@
 				<p>
 				BrowserQuest是Mozilla发布的一款2D图形的MMO（大型多人在线）游戏，玩家可以聊天、打怪、升级、寻宝、获得成就。这里基于WorkerMan框架重写了BrowserQuest服务端nodejs部分，浏览器与后端同样是基于websocket协议通讯。
 				<br>
-				<a target="_blank" class="btn" href="/browserquest">详情 »</a>
-				<a class="btn" target="_blank" href="https://github.com/walkor/BrowserQuest-PHP" rel="nofollow">下载源代码 »</a>
+				<a  class="btn" href="/browserquest">详情 »</a>
+				<a class="btn" target="_blank" href="/download/browserquestzip" rel="nofollow">下载源代码 »</a>
 				</p>
 			</div>
 		</div>
 		
 		<div class="media">
-			 <a href="/phpsocket_io" class="pull-left" target="_blank" rel="nofollow"><img src="/img/socket.io.png" class="media-object" /></a>
+			 <a href="/phpsocket_io" class="pull-left" rel="nofollow"><img src="/img/socket.io.png" class="media-object" /></a>
 			<div class="media-body">
 				<h4 class="media-heading">
-					<a target="_blank" href="/phpsocket_io" rel="nofollow">PHPSocket.IO</a>
+					<a href="/phpsocket_io" rel="nofollow">PHPSocket.IO</a>
 				</h4>
 				<p>
 				PHPSocket.IO是Socket.IO的PHP 服务端版本。PHP版socket.io可用来替代传统nodejs版本socket.io服务端，并且接口与其一致，可用于开发跨浏览器或者安卓、ios等移动端即时通讯应用。
 				<br>
-				<a class="btn" target="_blank" href="https://github.com/walkor/phpsocket.io" rel="nofollow">下载源代码 »</a>
+				<a class="btn" target="_blank" href=/download/phpsocket.io.zip rel="nofollow">下载源代码 »</a>
 				<a class="btn" target="_blank" href="/demos/phpsocketio-chat/" rel="nofollow">在线示例-聊天室 »</a>
 				<a class="btn" target="_blank" href="https://github.com/walkor/phpsocket.io/tree/master/docs/zh" rel="nofollow">手册 »</a>
 				</p>
@@ -204,7 +204,7 @@
 				<p>
 				一个php写的socks5代理，基于workerman开发。socks5代理不关心应用层协议，是一种通用的代理服务器，可用于做游戏代理、http代理等等。
 				<br>
-				<a class="btn" target="_blank" href="https://github.com/walkor/php-socks5" rel="nofollow">下载源代码 »</a>
+				<a class="btn" target="_blank" href="/download/php-socks5.zip" rel="nofollow">下载源代码 »</a>
 				</p>
 			</div>
 		</div>
@@ -236,16 +236,16 @@
 			</div>
 		</div>
 		<div class="media">
-			 <a href="/demos/vmstat/" class="pull-left" target="_blank"><img src="/img/workerman-vmstat.png" class="media-object" alt="web vmstat"/></a>
+			 <a href="/demos/vmstat/" class="pull-left" ><img src="/img/workerman-vmstat.png" class="media-object" alt="web vmstat"/></a>
 			<div class="media-body">
 				<h4 class="media-heading">
-					<a target="_blank" href="/demos/vmstat/">Web VMStat 监控</a>
+					<a  href="/demos/vmstat/">Web VMStat 监控</a>
 				</h4>
 				<p>
 				一个通过浏览器查看vmstat命令的工具，以更友好的方式实时展示服务器cpu、内存、IO等情况
 				<br>
-				<a target="_blank" class="btn" href="/workerman-vmstat">详情 »</a>
-				<a class="btn" target="_blank" href="https://github.com/walkor/workerman-vmstat" rel="nofollow">下载源代码 »</a>
+				<a class="btn" href="/workerman-vmstat">详情 »</a>
+				<a class="btn" target="_blank" href="/download/vmstatzip" rel="nofollow">下载源代码 »</a>
 				</p>
 			</div>
 		</div>
@@ -258,21 +258,21 @@
 				<p>
 				利用浏览器HTML5捕获摄像头视频并转换成ascii码流，并利用workerman实时转发给其它浏览器展示
 				<br>
-				<a class="btn" target="_blank" href="https://github.com/walkor/live-ascii-camera" rel="nofollow">下载源代码 »</a>
+				<a class="btn" target="_blank" href="/download/live-ascii-camera.zip" rel="nofollow">下载源代码 »</a>
 				</p>
 			</div>
 		</div>
 		<div class="media">
-			 <a href="/camera" class="pull-left" target="_blank"><img src="/img/live-camera.jpg" class="media-object" alt="live-camera 截图"/></a>
+			 <a href="/camera" class="pull-left" ><img src="/img/live-camera.jpg" class="media-object" alt="live-camera 截图"/></a>
 			<div class="media-body">
 				<h4 class="media-heading">
-					<a target="_blank" href="/camera">摄像头视频流实时传输</a>
+					<a href="/camera">摄像头视频流实时传输</a>
 				</h4>
 				<p>
 				网页HTML5调用摄像头，利用websocket将摄像头视频流实时传输给workerman，并实时转发给其它浏览器展示
 				<br>
-				<a target="_blank" class="btn" href="/camera">详情 »</a>
-				<a class="btn" target="_blank" href="https://github.com/walkor/live-camera" rel="nofollow">下载源代码 »</a>
+				<a  class="btn" href="/camera">详情 »</a>
+				<a class="btn" target="_blank" href="/download/camerazip" rel="nofollow">下载源代码 »</a>
 				</p>
 			</div>
 		</div>
@@ -315,10 +315,10 @@
 			 <a href="/workerman-flappybird" class="pull-left"><img src="/img/workerman-flappy-bird.png" class="media-object" alt='多人在线 flappy bird ' /></a>
 			<div class="media-body">
 				<h4 class="media-heading">
-					<a target="_blank" href="/workerman-flappybird">flappy bird 游戏多人在线版</a>
+					<a  href="/workerman-flappybird">flappy bird 游戏多人在线版</a>
 				</h4>
 				<p>多人在线版flappy bird，游戏中你可以看到无数玩家同时控制小鸟前赴后继地向前送死的壮烈(搞笑)场面。
-				<br><a target="_blank" class="btn" href="/workerman-flappybird">详情 »</a>
+				<br><a class="btn" href="/workerman-flappybird">详情 »</a>
 				<a class="btn" target="_blank" href="https://github.com/walkor/workerman-flappy-bird" rel="nofollow">下载源代码 »</a>
 				</p>
 			</div>
@@ -327,11 +327,11 @@
 			 <a href="/workerman-thrift" class="pull-left"><img src="/img/workerman-thrift.png" class="media-object" alt="php thrift RPC模块关系示意图"/></a>
 			<div class="media-body">
 				<h4 class="media-heading">
-					<a target="_blank" href="/workerman-thrift">Thrift RPC远程调用框架</a>
+					<a href="/workerman-thrift">Thrift RPC远程调用框架</a>
 				</h4>
 				 <p>Workerman和Thrift框架相结合，目的是解决异构系统与PHP通信的问题，使你的服务更方便的被其它语言调用。
-				 <br><a target="_blank" class="btn" href="/workerman-thrift">详情 »</a>
-				 <a class="btn" target="_blank" href="https://github.com/walkor/workerman-thrift" rel="nofollow">下载源代码 »</a>
+				 <br><a class="btn" href="/workerman-thrift">详情 »</a>
+				 <a class="btn" target="_blank" href="/download/thriftzip" rel="nofollow">下载源代码 »</a>
 				 </p>
 			</div>
 		</div>
@@ -339,11 +339,11 @@
 			 <a href="/workerman-jsonrpc" class="pull-left"><img src="/img/workerman-json-rpc.png" class="media-object" alt="PHP json RPC模块关系示意图"/></a>
 			<div class="media-body">
 				<h4 class="media-heading">
-					<a target="_blank" href="/workerman-jsonrpc">json RPC远程调用框架</a>
+					<a href="/workerman-jsonrpc">json RPC远程调用框架</a>
 				</h4>
 				 <p>使用json数据格式通讯的远程调用系统，通讯格式简单明了，方便其它语言调用，并集成了监控模块。
-				 <br><a target="_blank" class="btn" href="/workerman-jsonrpc">详情 »</a>
-				 <a class="btn" target="_blank" href="https://github.com/walkor/workerman-jsonrpc" rel="nofollow">下载源代码 »</a>
+				 <br><a  class="btn" href="/workerman-jsonrpc">详情 »</a>
+				 <a class="btn" target="_blank" href="/download/jsonrpczip" rel="nofollow">下载源代码 »</a>
 				 </p>
 			</div>
 		</div>
@@ -351,11 +351,11 @@
 			 <a href="/workerman-statistics" class="pull-left"><img src="/img/workerman-statistics.png" class="media-object" alt="PHP统计系统示意图" /></a>
 			<div class="media-body">
 				<h4 class="media-heading">
-					<a target="_blank" href="/workerman-statistics">分布式统计系统</a>
+					<a href="/workerman-statistics">分布式统计系统</a>
 				</h4>
 				<p>基于php socket开发的一款分布式统计监控系统，udp数据上报，分布式统计，结果自动汇总展示。纯PHP开发、无需安装Mysql、Nginx、Apache等软件。
-				<br><a target="_blank" class="btn" href="/workerman-statistics">详情 »</a>
-				<a class="btn" target="_blank" href="https://github.com/walkor/workerman-statistics" rel="nofollow">下载源代码 »</a>
+				<br><a class="btn" href="/workerman-statistics">详情 »</a>
+				<a class="btn" target="_blank" href="/download/statisticszip" rel="nofollow">下载源代码 »</a>
 				</p>
 			</div>
 		</div>
