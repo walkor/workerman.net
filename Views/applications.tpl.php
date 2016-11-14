@@ -288,7 +288,18 @@
 		<hr>
 		<h3>第三方示例</h3>
 
-               <div class="media">
+		<div class="media">
+			<div class="media-body">
+				<h4 class="media-heading">
+					<a target="_blank" href="https://github.com/xtgxiso/WebWorker" rel="nofollow">WebWorker</a>
+				</h4>
+				基于Workerman实现的自带http server的web开发框架，用于开发高性能的api应用，例如app接口服务端等。
+				<a class="btn" target="_blank" href="https://github.com/xtgxiso/WebWorker" rel="nofollow">下载源代码 »</a>
+				<a class="btn" target="_blank" href="http://doc.webworker.xtgxiso.com/" rel="nofollow">文档 »</a>
+			</div>
+		</div>
+		
+        <div class="media">
 			<div class="media-body">
 				<h4 class="media-heading">
 					<a target="_blank" href="https://github.com/top-think/think-worker" rel="nofollow">think-worker</a>
@@ -344,16 +355,6 @@ ThinkPHP官方提供的ThinkPHP 5.0 Workerman 扩展。
 				</h4>
 workerman + Laravel框架结合，据说比php-fpm + Laravel快约10倍。
 				<a class="btn" target="_blank" href="https://github.com/acabin/laravoole" rel="nofollow">下载源代码 »</a>
-			</div>
-		</div>
-		
-		<div class="media">
-			<div class="media-body">
-				<h4 class="media-heading">
-					<a target="_blank" href="https://github.com/happyliu2014/Workerman-ThinkPHP-Redis" rel="nofollow">Workerman-ThinkPHP-Redis</a>
-				</h4>
-				ThinkPHP与workerman聊天室结合的例子。
-				<a class="btn" target="_blank" href="https://github.com/happyliu2014/Workerman-ThinkPHP-Redis" rel="nofollow">下载源代码 »</a>
 			</div>
 		</div>
 		
