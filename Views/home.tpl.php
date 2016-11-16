@@ -6,7 +6,7 @@
 		</h2>
 		<p class="f14">
 			Workerman是一款<strong class="c4">纯PHP开发</strong>的<strong class="c4">开源</strong><strong class="c2">高性能</strong>的<strong class="c3">PHP socket 服务器框架</strong>。被广泛的用于手机app、手游服务端、网络游戏服务器、聊天室服务器、硬件通讯服务器、智能家居、车联网、物联网等领域的开发。
-			支持TCP长连接，支持Websocket、HTTP等协议，支持自定义协议。基于workerman开发者可以更专注于业务逻辑开发，不必再为PHP Socket底层开发而烦恼。<a class="btn" target="_blank" href="/workerman">查看更多 »</a>
+			支持TCP长连接，支持Websocket、HTTP等协议，支持自定义协议。基于workerman开发者可以更专注于业务逻辑开发，不必再为PHP Socket底层开发而烦恼。<a class="btn" href="/workerman">查看更多 »</a>
 		</p>
 		<div class="row clearfix">
 			<div class="col-md-7 column">
