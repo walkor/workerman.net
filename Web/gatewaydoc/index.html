@@ -30,7 +30,7 @@
 
 
         
-    <div class="book"  data-level="0" data-basepath="." data-revision="1478530189566">
+    <div class="book"  data-level="0" data-basepath="." data-revision="1479289321399">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -897,7 +897,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_48">
+                    <section class="normal" id="section-gitbook_1043">
                     
                         <h1 id="gatewayworker2-0-">GatewayWorker2.0 手册</h1>
 <p>本手册适用于最新版本GatewayWorker2.0(发布时间2015-11-11)。</p>
@@ -919,8 +919,19 @@ GatewayWorker不支持UDP监听，所以UDP服务请选择Workerman。<br></p>
 <p>4、命令行运行 <code>php start.php start</code> 启动GatewayWorker</p>
 <p>5、<strong>新开几个</strong>命令行窗口运行 <code>telnet 127.0.0.1 8282</code>，输入任意字符即可聊天（非本机测试请将127.0.0.1替换成实际ip）。</p>
 <p><strong>注意：</strong>如果telnet超时请检查服务器防火墙(iptables)</p>
-<h2 id="gatewayworker-gatewayworker-">GatewayWorker 源码地址（只包含GatewayWorker内核）</h2>
-<p><a href="https://github.com/walkor/GatewayWorker" target="_blank">https://github.com/walkor/GatewayWorker</a></p>
+<h2 id="windows-demo-">Windows系统快速开始（从一个精简的聊天demo开始）</h2>
+<p>1、<a href="http://www.workerman.net/download/GatewayWorker-for-win.zip" target="_blank">下载demo</a></p>
+<p>2、解压到任意位置</p>
+<p>3、进入GatewayWorker目录</p>
+<p>4、双击start_for_win.bat启动。（如果出现错误请参考<a href="http://www.workerman.net/windows" target="_blank">这里</a>设置php环境变量）</p>
+<p>5、<strong>新开几个</strong>cmd命令行窗口运行 <code>telnet 127.0.0.1 8282</code>，输入任意字符即可聊天（非本机测试请将127.0.0.1替换成实际ip，）。</p>
+<p><strong>注意：</strong><br>
+windows系统telnet可能需要安装，安装方法可以baidu下<br>
+windows系统telnet是逐字符发送的，无法发送整句话请不要奇怪<br>
+如果telnet超时请检查服务器防火墙<br></p>
+<h2 id="gatewayworker-">GatewayWorker 源码地址</h2>
+<p>只包含GatewayWorker内核<br>
+<a href="https://github.com/walkor/GatewayWorker" target="_blank">https://github.com/walkor/GatewayWorker</a></p>
 <h2 id="-gatewayworker-">使用GatewayWorker开发的项目</h2>
 <h2 id="-tadpole-http-kedou-workerman-net-"><a href="http://kedou.workerman.net/" target="_blank">tadpole</a></h2>
 <p><a href="http://kedou.workerman.net/" target="_blank">Live demo</a></p>

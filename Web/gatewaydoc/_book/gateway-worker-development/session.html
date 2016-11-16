@@ -1,0 +1,981 @@
+<!DOCTYPE HTML>
+<html lang="en-US" manifest="../manifest.appcache">
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <title>超全局数组$_SESSION | GatewayWorker2.0 手册</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 0.5.2">
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    
+    
+    
+    <link rel="next" href="../gateway-worker-development/server.html" />
+    
+    
+    <link rel="prev" href="../gateway-worker-development/router.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+<link rel="stylesheet" href="../gitbook/style.css">
+
+
+        
+    <div class="book"  data-level="15" data-basepath=".." data-revision="1479288978188">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
+    
+    <a href="https://github.com/null" target="_blank" class="btn pull-left home-bookmark" aria-label="GitHub home"><i class="fa fa-bookmark-o"></i></a>
+    
+    <a href="#" class="btn pull-left toggle-search" aria-label="Toggle search"><i class="fa fa-search"></i></a>
+    <span id="font-settings-wrapper">
+        <a href="#" class="btn pull-left toggle-font-settings" aria-label="Toggle font settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="btn-group btn-block">
+        <button id="reduce-font-size" class="btn btn-default">A</button>
+        <button id="enlarge-font-size" class="btn btn-default">A</button>
+    </div>
+
+    <ul class="list-group font-family-list">
+        <li class="list-group-item" data-font="0">Serif</li>
+        <li class="list-group-item" data-font="1">Sans</li>
+    </ul>
+
+    <div class="btn-group btn-group-xs btn-block color-theme-list">
+        <button type="button" class="btn btn-default" id="color-theme-preview-0" data-theme="0">White</button>
+        <button type="button" class="btn btn-default" id="color-theme-preview-1" data-theme="1">Sepia</button>
+        <button type="button" class="btn btn-default" id="color-theme-preview-2" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </span>
+
+    <!-- Actions Right -->
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Share on Google Plus"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Share on Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Share on Twitter"><i class="fa fa-twitter"></i></a>
+    
+
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-spinner fa-spin"></i>
+        <a href="../" >GatewayWorker2.0 手册</a>
+    </h1>
+</div>
+
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        
+
+        
+
+        
+
+        
+
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+    
+        <li class="chapter " data-level="1" data-path="license/README.html">
+            
+            <a href="../license/README.html">
+                <i class="fa fa-check"></i> <b>1.</b> 版权信息
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="preface/README.html">
+            
+            <a href="../preface/README.html">
+                <i class="fa fa-check"></i> <b>2.</b> 序言
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="feature/README.html">
+            
+            <a href="../feature/README.html">
+                <i class="fa fa-check"></i> <b>3.</b> 特性
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="getting-started/README.html">
+            
+            <a href="../getting-started/README.html">
+                <i class="fa fa-check"></i> <b>4.</b> 入门指引
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="start-and-stop/README.html">
+            
+            <a href="../start-and-stop/README.html">
+                <i class="fa fa-check"></i> <b>5.</b> 启动与停止
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="process-of-communication/README.html">
+            
+            <a href="../process-of-communication/README.html">
+                <i class="fa fa-check"></i> <b>6.</b> 工作原理
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="protocols/README.html">
+            
+            <a href="../protocols/README.html">
+                <i class="fa fa-check"></i> <b>7.</b> 定制通讯协议
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="gateway-worker-development/gateway-worker-development.html">
+            
+            <a href="../gateway-worker-development/gateway-worker-development.html">
+                <i class="fa fa-check"></i> <b>8.</b> 适用范围
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="gateway-worker-development/gateway.html">
+            
+            <a href="../gateway-worker-development/gateway.html">
+                <i class="fa fa-check"></i> <b>9.</b> Gateway类的使用
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="gateway-worker-development/business-worker.html">
+            
+            <a href="../gateway-worker-development/business-worker.html">
+                <i class="fa fa-check"></i> <b>10.</b> BusinessWorker类的使用
+            </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1" data-path="gateway-worker-development/property-and-callback.html">
+            
+            <a href="../gateway-worker-development/property-and-callback.html">
+                <i class="fa fa-check"></i> <b>10.1.</b> 属性及回调
+            </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1.1" data-path="gateway-worker-development/event-handler.html">
+            
+            <a href="../gateway-worker-development/event-handler.html">
+                <i class="fa fa-check"></i> <b>10.1.1.</b> eventHandler
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.2" data-path="gateway-worker-development/process-timeout.html">
+            
+            <a href="../gateway-worker-development/process-timeout.html">
+                <i class="fa fa-check"></i> <b>10.1.2.</b> processTimeout
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.3" data-path="gateway-worker-development/process-timeout-handler.html">
+            
+            <a href="../gateway-worker-development/process-timeout-handler.html">
+                <i class="fa fa-check"></i> <b>10.1.3.</b> processTimeoutHandler
+            </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="11" data-path="gateway-worker-development/register.html">
+            
+            <a href="../gateway-worker-development/register.html">
+                <i class="fa fa-check"></i> <b>11.</b> Register类的使用
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12" data-path="gateway-worker-development/event-functions.html">
+            
+            <a href="../gateway-worker-development/event-functions.html">
+                <i class="fa fa-check"></i> <b>12.</b> Events类的回调属性
+            </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="12.1" data-path="gateway-worker-development/onworkerstart.html">
+            
+            <a href="../gateway-worker-development/onworkerstart.html">
+                <i class="fa fa-check"></i> <b>12.1.</b> onWorkerStart
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12.2" data-path="gateway-worker-development/onconnect.html">
+            
+            <a href="../gateway-worker-development/onconnect.html">
+                <i class="fa fa-check"></i> <b>12.2.</b> onConnect
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12.3" data-path="gateway-worker-development/onmessage.html">
+            
+            <a href="../gateway-worker-development/onmessage.html">
+                <i class="fa fa-check"></i> <b>12.3.</b> onMessage
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12.4" data-path="gateway-worker-development/onclose.html">
+            
+            <a href="../gateway-worker-development/onclose.html">
+                <i class="fa fa-check"></i> <b>12.4.</b> onClose
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12.5" data-path="gateway-worker-development/onworkerstop.html">
+            
+            <a href="../gateway-worker-development/onworkerstop.html">
+                <i class="fa fa-check"></i> <b>12.5.</b> onWorkerStop
+            </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="13" data-path="gateway-worker-development/lib-gateway-functions.html">
+            
+            <a href="../gateway-worker-development/lib-gateway-functions.html">
+                <i class="fa fa-check"></i> <b>13.</b> Lib\Gateway类提供的接口
+            </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="13.1" data-path="gateway-worker-development/send-to-all.html">
+            
+            <a href="../gateway-worker-development/send-to-all.html">
+                <i class="fa fa-check"></i> <b>13.1.</b> sendToAll
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13.2" data-path="gateway-worker-development/send-to-client.html">
+            
+            <a href="../gateway-worker-development/send-to-client.html">
+                <i class="fa fa-check"></i> <b>13.2.</b> sendToClient
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13.3" data-path="gateway-worker-development/send-to-current-client.html">
+            
+            <a href="../gateway-worker-development/send-to-current-client.html">
+                <i class="fa fa-check"></i> <b>13.3.</b> sendToCurrentClient
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13.4" data-path="gateway-worker-development/close-client.html">
+            
+            <a href="../gateway-worker-development/close-client.html">
+                <i class="fa fa-check"></i> <b>13.4.</b> closeClient
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13.5" data-path="gateway-worker-development/close-current-client.html">
+            
+            <a href="../gateway-worker-development/close-current-client.html">
+                <i class="fa fa-check"></i> <b>13.5.</b> closeCurrentClient
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13.6" data-path="gateway-worker-development/is-online.html">
+            
+            <a href="../gateway-worker-development/is-online.html">
+                <i class="fa fa-check"></i> <b>13.6.</b> isOnline
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13.7" data-path="gateway-worker-development/bind-uid.html">
+            
+            <a href="../gateway-worker-development/bind-uid.html">
+                <i class="fa fa-check"></i> <b>13.7.</b> bindUid
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13.8" data-path="gateway-worker-development/is-uid-online.html">
+            
+            <a href="../gateway-worker-development/is-uid-online.html">
+                <i class="fa fa-check"></i> <b>13.8.</b> isUidOnline
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13.9" data-path="gateway-worker-development/get-client-id-by-uid.html">
+            
+            <a href="../gateway-worker-development/get-client-id-by-uid.html">
+                <i class="fa fa-check"></i> <b>13.9.</b> getClientIdByUid
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13.10" data-path="gateway-worker-development/get-uid-by-client-id.html">
+            
+            <a href="../gateway-worker-development/get-uid-by-client-id.html">
+                <i class="fa fa-check"></i> <b>13.10.</b> getUidByClientId
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13.11" data-path="gateway-worker-development/unbind-uid.html">
+            
+            <a href="../gateway-worker-development/unbind-uid.html">
+                <i class="fa fa-check"></i> <b>13.11.</b> unbindUid
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13.12" data-path="gateway-worker-development/send-to-uid.html">
+            
+            <a href="../gateway-worker-development/send-to-uid.html">
+                <i class="fa fa-check"></i> <b>13.12.</b> sendToUid
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13.13" data-path="gateway-worker-development/join-group.html">
+            
+            <a href="../gateway-worker-development/join-group.html">
+                <i class="fa fa-check"></i> <b>13.13.</b> joinGroup
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13.14" data-path="gateway-worker-development/leave-group.html">
+            
+            <a href="../gateway-worker-development/leave-group.html">
+                <i class="fa fa-check"></i> <b>13.14.</b> leaveGroup
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13.15" data-path="gateway-worker-development/send-to-group.html">
+            
+            <a href="../gateway-worker-development/send-to-group.html">
+                <i class="fa fa-check"></i> <b>13.15.</b> sendToGroup
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13.16" data-path="gateway-worker-development/get-client-count-by-group.html">
+            
+            <a href="../gateway-worker-development/get-client-count-by-group.html">
+                <i class="fa fa-check"></i> <b>13.16.</b> getClientCountByGroup
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13.17" data-path="gateway-worker-development/get-client-sessions-by-group.html">
+            
+            <a href="../gateway-worker-development/get-client-sessions-by-group.html">
+                <i class="fa fa-check"></i> <b>13.17.</b> getClientSessionsByGroup
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13.18" data-path="gateway-worker-development/get-all-client-count.html">
+            
+            <a href="../gateway-worker-development/get-all-client-count.html">
+                <i class="fa fa-check"></i> <b>13.18.</b> getAllClientCount
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13.19" data-path="gateway-worker-development/get-all-client-sessions.html">
+            
+            <a href="../gateway-worker-development/get-all-client-sessions.html">
+                <i class="fa fa-check"></i> <b>13.19.</b> getAllClientSessions
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13.20" data-path="gateway-worker-development/set-session.html">
+            
+            <a href="../gateway-worker-development/set-session.html">
+                <i class="fa fa-check"></i> <b>13.20.</b> setSession
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13.21" data-path="gateway-worker-development/update-session.html">
+            
+            <a href="../gateway-worker-development/update-session.html">
+                <i class="fa fa-check"></i> <b>13.21.</b> updateSession
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13.22" data-path="gateway-worker-development/get-session.html">
+            
+            <a href="../gateway-worker-development/get-session.html">
+                <i class="fa fa-check"></i> <b>13.22.</b> getSession
+            </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="14" data-path="gateway-worker-development/router.html">
+            
+            <a href="../gateway-worker-development/router.html">
+                <i class="fa fa-check"></i> <b>14.</b> 设置路由router
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="15" data-path="gateway-worker-development/session.html">
+            
+            <a href="../gateway-worker-development/session.html">
+                <i class="fa fa-check"></i> <b>15.</b> 超全局数组$_SESSION
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="16" data-path="gateway-worker-development/server.html">
+            
+            <a href="../gateway-worker-development/server.html">
+                <i class="fa fa-check"></i> <b>16.</b> 超全局数组$_SERVER
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="17" data-path="gateway-worker-development/heartbeat.html">
+            
+            <a href="../gateway-worker-development/heartbeat.html">
+                <i class="fa fa-check"></i> <b>17.</b> 心跳检测
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="18" data-path="gateway-worker-development/distributed.html">
+            
+            <a href="../gateway-worker-development/distributed.html">
+                <i class="fa fa-check"></i> <b>18.</b> 分布式部署
+            </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="18.1" data-path="gateway-worker-development/why-distributed.html">
+            
+            <a href="../gateway-worker-development/why-distributed.html">
+                <i class="fa fa-check"></i> <b>18.1.</b> 为什么分布式部署
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="18.2" data-path="gateway-worker-development/how-distributed.html">
+            
+            <a href="../gateway-worker-development/how-distributed.html">
+                <i class="fa fa-check"></i> <b>18.2.</b> 如何分布式部署
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="18.3" data-path="gateway-worker-development/gateway-worker-separation.html">
+            
+            <a href="../gateway-worker-development/gateway-worker-separation.html">
+                <i class="fa fa-check"></i> <b>18.3.</b> Gateway Worker分离部署
+            </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="19" data-path="advanced/README.html">
+            
+            <a href="../advanced/README.html">
+                <i class="fa fa-check"></i> <b>19.</b> 高级应用
+            </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="19.1" data-path="advanced/push.html">
+            
+            <a href="../advanced/push.html">
+                <i class="fa fa-check"></i> <b>19.1.</b> 在其它项目中推送消息
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="19.2" data-path="advanced/multi-protocols.html">
+            
+            <a href="../advanced/multi-protocols.html">
+                <i class="fa fa-check"></i> <b>19.2.</b> 多协议支持
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="19.3" data-path="advanced/multi-gatewayworker-instance.html">
+            
+            <a href="../advanced/multi-gatewayworker-instance.html">
+                <i class="fa fa-check"></i> <b>19.3.</b> 运行多个gatewayWorker实例
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="19.4" data-path="advanced/file-monitor.html">
+            
+            <a href="../advanced/file-monitor.html">
+                <i class="fa fa-check"></i> <b>19.4.</b> 监控文件更新
+            </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="20" data-path="appendices/README.html">
+            
+            <a href="../appendices/README.html">
+                <i class="fa fa-check"></i> <b>20.</b> 附录
+            </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="20.1" data-path="appendices/mysql.html">
+            
+            <a href="../appendices/mysql.html">
+                <i class="fa fa-check"></i> <b>20.1.</b> 使用mysql数据库
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="20.2" data-path="appendices/upgrade.html">
+            
+            <a href="../appendices/upgrade.html">
+                <i class="fa fa-check"></i> <b>20.2.</b> 1.0升级到2.0注意事项
+            </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="21" data-path="faq/README.html">
+            
+            <a href="../faq/README.html">
+                <i class="fa fa-check"></i> <b>21.</b> 常见问题
+            </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="21.1" data-path="faq/get-gateway-version.html">
+            
+            <a href="../faq/get-gateway-version.html">
+                <i class="fa fa-check"></i> <b>21.1.</b> 查看GatewayWorker版本
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="21.2" data-path="faq/get-ip.html">
+            
+            <a href="../faq/get-ip.html">
+                <i class="fa fa-check"></i> <b>21.2.</b> 如何获得客户端ip
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="21.3" data-path="faq/get-gateway-port.html">
+            
+            <a href="../faq/get-gateway-port.html">
+                <i class="fa fa-check"></i> <b>21.3.</b> 多协议如何区分端口
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="21.4" data-path="faq/close-unauthed-connections.html">
+            
+            <a href="../faq/close-unauthed-connections.html">
+                <i class="fa fa-check"></i> <b>21.4.</b> 关闭未认证连接
+            </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="http://www.gitbook.io/" target="blank" class="gitbook-link">Generated using GitBook</a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="page-wrapper" tabindex="-1">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 70.76923076923077%;min-width: 69.23076923076923%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../license/README.html" title="版权信息" class="chapter done new-chapter" data-progress="1" style="left: 1.5384615384615385%;"></a>
+    
+        <a href="../preface/README.html" title="序言" class="chapter done new-chapter" data-progress="2" style="left: 3.076923076923077%;"></a>
+    
+        <a href="../feature/README.html" title="特性" class="chapter done new-chapter" data-progress="3" style="left: 4.615384615384615%;"></a>
+    
+        <a href="../getting-started/README.html" title="入门指引" class="chapter done new-chapter" data-progress="4" style="left: 6.153846153846154%;"></a>
+    
+        <a href="../start-and-stop/README.html" title="启动与停止" class="chapter done new-chapter" data-progress="5" style="left: 7.6923076923076925%;"></a>
+    
+        <a href="../process-of-communication/README.html" title="工作原理" class="chapter done new-chapter" data-progress="6" style="left: 9.23076923076923%;"></a>
+    
+        <a href="../protocols/README.html" title="定制通讯协议" class="chapter done new-chapter" data-progress="7" style="left: 10.76923076923077%;"></a>
+    
+        <a href="../gateway-worker-development/gateway-worker-development.html" title="适用范围" class="chapter done new-chapter" data-progress="8" style="left: 12.307692307692308%;"></a>
+    
+        <a href="../gateway-worker-development/gateway.html" title="Gateway类的使用" class="chapter done new-chapter" data-progress="9" style="left: 13.846153846153847%;"></a>
+    
+        <a href="../gateway-worker-development/business-worker.html" title="BusinessWorker类的使用" class="chapter done " data-progress="10" style="left: 15.384615384615385%;"></a>
+    
+        <a href="../gateway-worker-development/property-and-callback.html" title="属性及回调" class="chapter done " data-progress="10.1" style="left: 16.923076923076923%;"></a>
+    
+        <a href="../gateway-worker-development/event-handler.html" title="eventHandler" class="chapter done " data-progress="10.1.1" style="left: 18.46153846153846%;"></a>
+    
+        <a href="../gateway-worker-development/process-timeout.html" title="processTimeout" class="chapter done " data-progress="10.1.2" style="left: 20%;"></a>
+    
+        <a href="../gateway-worker-development/process-timeout-handler.html" title="processTimeoutHandler" class="chapter done " data-progress="10.1.3" style="left: 21.53846153846154%;"></a>
+    
+        <a href="../gateway-worker-development/register.html" title="Register类的使用" class="chapter done " data-progress="11" style="left: 23.076923076923077%;"></a>
+    
+        <a href="../gateway-worker-development/event-functions.html" title="Events类的回调属性" class="chapter done " data-progress="12" style="left: 24.615384615384617%;"></a>
+    
+        <a href="../gateway-worker-development/onworkerstart.html" title="onWorkerStart" class="chapter done " data-progress="12.1" style="left: 26.153846153846153%;"></a>
+    
+        <a href="../gateway-worker-development/onconnect.html" title="onConnect" class="chapter done " data-progress="12.2" style="left: 27.692307692307693%;"></a>
+    
+        <a href="../gateway-worker-development/onmessage.html" title="onMessage" class="chapter done " data-progress="12.3" style="left: 29.23076923076923%;"></a>
+    
+        <a href="../gateway-worker-development/onclose.html" title="onClose" class="chapter done " data-progress="12.4" style="left: 30.76923076923077%;"></a>
+    
+        <a href="../gateway-worker-development/onworkerstop.html" title="onWorkerStop" class="chapter done " data-progress="12.5" style="left: 32.30769230769231%;"></a>
+    
+        <a href="../gateway-worker-development/lib-gateway-functions.html" title="Lib\Gateway类提供的接口" class="chapter done " data-progress="13" style="left: 33.84615384615385%;"></a>
+    
+        <a href="../gateway-worker-development/send-to-all.html" title="sendToAll" class="chapter done " data-progress="13.1" style="left: 35.38461538461539%;"></a>
+    
+        <a href="../gateway-worker-development/get-uid-by-client-id.html" title="getUidByClientId" class="chapter done " data-progress="13.10" style="left: 36.92307692307692%;"></a>
+    
+        <a href="../gateway-worker-development/unbind-uid.html" title="unbindUid" class="chapter done " data-progress="13.11" style="left: 38.46153846153846%;"></a>
+    
+        <a href="../gateway-worker-development/send-to-uid.html" title="sendToUid" class="chapter done " data-progress="13.12" style="left: 40%;"></a>
+    
+        <a href="../gateway-worker-development/join-group.html" title="joinGroup" class="chapter done " data-progress="13.13" style="left: 41.53846153846154%;"></a>
+    
+        <a href="../gateway-worker-development/leave-group.html" title="leaveGroup" class="chapter done " data-progress="13.14" style="left: 43.07692307692308%;"></a>
+    
+        <a href="../gateway-worker-development/send-to-group.html" title="sendToGroup" class="chapter done " data-progress="13.15" style="left: 44.61538461538461%;"></a>
+    
+        <a href="../gateway-worker-development/get-client-count-by-group.html" title="getClientCountByGroup" class="chapter done " data-progress="13.16" style="left: 46.15384615384615%;"></a>
+    
+        <a href="../gateway-worker-development/get-client-sessions-by-group.html" title="getClientSessionsByGroup" class="chapter done " data-progress="13.17" style="left: 47.69230769230769%;"></a>
+    
+        <a href="../gateway-worker-development/get-all-client-count.html" title="getAllClientCount" class="chapter done " data-progress="13.18" style="left: 49.23076923076923%;"></a>
+    
+        <a href="../gateway-worker-development/get-all-client-sessions.html" title="getAllClientSessions" class="chapter done " data-progress="13.19" style="left: 50.76923076923077%;"></a>
+    
+        <a href="../gateway-worker-development/send-to-client.html" title="sendToClient" class="chapter done " data-progress="13.2" style="left: 52.30769230769231%;"></a>
+    
+        <a href="../gateway-worker-development/set-session.html" title="setSession" class="chapter done " data-progress="13.20" style="left: 53.84615384615385%;"></a>
+    
+        <a href="../gateway-worker-development/update-session.html" title="updateSession" class="chapter done " data-progress="13.21" style="left: 55.38461538461539%;"></a>
+    
+        <a href="../gateway-worker-development/get-session.html" title="getSession" class="chapter done " data-progress="13.22" style="left: 56.92307692307692%;"></a>
+    
+        <a href="../gateway-worker-development/send-to-current-client.html" title="sendToCurrentClient" class="chapter done " data-progress="13.3" style="left: 58.46153846153846%;"></a>
+    
+        <a href="../gateway-worker-development/close-client.html" title="closeClient" class="chapter done " data-progress="13.4" style="left: 60%;"></a>
+    
+        <a href="../gateway-worker-development/close-current-client.html" title="closeCurrentClient" class="chapter done " data-progress="13.5" style="left: 61.53846153846154%;"></a>
+    
+        <a href="../gateway-worker-development/is-online.html" title="isOnline" class="chapter done " data-progress="13.6" style="left: 63.07692307692308%;"></a>
+    
+        <a href="../gateway-worker-development/bind-uid.html" title="bindUid" class="chapter done " data-progress="13.7" style="left: 64.61538461538461%;"></a>
+    
+        <a href="../gateway-worker-development/is-uid-online.html" title="isUidOnline" class="chapter done " data-progress="13.8" style="left: 66.15384615384616%;"></a>
+    
+        <a href="../gateway-worker-development/get-client-id-by-uid.html" title="getClientIdByUid" class="chapter done " data-progress="13.9" style="left: 67.6923076923077%;"></a>
+    
+        <a href="../gateway-worker-development/router.html" title="设置路由router" class="chapter done " data-progress="14" style="left: 69.23076923076923%;"></a>
+    
+        <a href="../gateway-worker-development/session.html" title="超全局数组$_SESSION" class="chapter done " data-progress="15" style="left: 70.76923076923077%;"></a>
+    
+        <a href="../gateway-worker-development/server.html" title="超全局数组$_SERVER" class="chapter  " data-progress="16" style="left: 72.3076923076923%;"></a>
+    
+        <a href="../gateway-worker-development/heartbeat.html" title="心跳检测" class="chapter  " data-progress="17" style="left: 73.84615384615384%;"></a>
+    
+        <a href="../gateway-worker-development/distributed.html" title="分布式部署" class="chapter  " data-progress="18" style="left: 75.38461538461539%;"></a>
+    
+        <a href="../gateway-worker-development/why-distributed.html" title="为什么分布式部署" class="chapter  " data-progress="18.1" style="left: 76.92307692307692%;"></a>
+    
+        <a href="../gateway-worker-development/how-distributed.html" title="如何分布式部署" class="chapter  " data-progress="18.2" style="left: 78.46153846153847%;"></a>
+    
+        <a href="../gateway-worker-development/gateway-worker-separation.html" title="Gateway Worker分离部署" class="chapter  " data-progress="18.3" style="left: 80%;"></a>
+    
+        <a href="../advanced/README.html" title="高级应用" class="chapter  " data-progress="19" style="left: 81.53846153846153%;"></a>
+    
+        <a href="../advanced/push.html" title="在其它项目中推送消息" class="chapter  " data-progress="19.1" style="left: 83.07692307692308%;"></a>
+    
+        <a href="../advanced/multi-protocols.html" title="多协议支持" class="chapter  " data-progress="19.2" style="left: 84.61538461538461%;"></a>
+    
+        <a href="../advanced/multi-gatewayworker-instance.html" title="运行多个gatewayWorker实例" class="chapter  " data-progress="19.3" style="left: 86.15384615384616%;"></a>
+    
+        <a href="../advanced/file-monitor.html" title="监控文件更新" class="chapter  " data-progress="19.4" style="left: 87.6923076923077%;"></a>
+    
+        <a href="../appendices/README.html" title="附录" class="chapter  " data-progress="20" style="left: 89.23076923076923%;"></a>
+    
+        <a href="../appendices/mysql.html" title="使用mysql数据库" class="chapter  " data-progress="20.1" style="left: 90.76923076923077%;"></a>
+    
+        <a href="../appendices/upgrade.html" title="1.0升级到2.0注意事项" class="chapter  " data-progress="20.2" style="left: 92.3076923076923%;"></a>
+    
+        <a href="../faq/README.html" title="常见问题" class="chapter  " data-progress="21" style="left: 93.84615384615384%;"></a>
+    
+        <a href="../faq/get-gateway-version.html" title="查看GatewayWorker版本" class="chapter  " data-progress="21.1" style="left: 95.38461538461539%;"></a>
+    
+        <a href="../faq/get-ip.html" title="如何获得客户端ip" class="chapter  " data-progress="21.2" style="left: 96.92307692307692%;"></a>
+    
+        <a href="../faq/get-gateway-port.html" title="多协议如何区分端口" class="chapter  " data-progress="21.3" style="left: 98.46153846153847%;"></a>
+    
+        <a href="../faq/close-unauthed-connections.html" title="关闭未认证连接" class="chapter  " data-progress="21.4" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_1026">
+                    
+                        <h1 id="-_session-">超全局数组<code>$_SESSION</code></h1>
+<h3 id="-_session-"><code>$_SESSION</code>是什么</h3>
+<p>GatewayWorker中的超全局数组<code>$_SESSION</code>和PHP自身的<code>$_SESSION</code>功能基本相同。每个client_id对应一个<code>$_SESSION</code>数组，<code>$_SESSION</code>数组中可以保存对应客户端的会话数据，对应的client_id的后续请求可以直接使用这个数组中的数据，而不用去反复读取存储。</p>
+<h3 id="-_session-"><code>$_SESSION</code>使用场景</h3>
+<p><strong>(<code>WorkerMan&gt;=2.1.2，Gateway/Worker模型</code>)</strong></p>
+<p>例如客户端链接WorkerMan后，需要发送验证数据让服务端验证是否合法，一般要传递一次用户名和密码数据，然后在<code>Gateway::onMessage($client_id, $message)</code>中通过查询数据库验证<code>$message</code>中的用户名密码是否正确，如果正确就可以将用户的uid写入到<code>$_SESSION</code>中如<code>$_SESSION[&#39;uid&#39;]=$uid;</code>，那么当这个client_id再次发来数据时，要判断这个客户端是否是被验证过的，就可以用<code>$_SESSION[&#39;uid&#39;]</code>是否被设置来判断。</p>
+<h3 id="-_session-"><code>$_SESSION</code>使用注意事项</h3>
+<ul>
+<li>使用<code>$_SESSION</code>时无需调用session_start等函数，可直接使用</li>
+<li><code>$_SESSION</code>中无法保存资源类型的数据</li>
+<li>当客户端连接断开后，对应的客户端<code>$_SESSION</code>将会清除</li>
+<li>GatewayWorker中的<code>$_SESSION</code>与WebServer(PHP-FPM)中的<code>$_SESSION</code>无法互通</li>
+<li>定时器中不要直接使用<code>$_SESSION</code>变量，因为定时器运行那一刻无法确定<code>$_SESSION</code>变量里存储的值属于哪个client_id。如果定时器里面需要获得session，可以使用<code>Gateway::getSession($client_id)</code>获取</li>
+</ul>
+<h3 id="-_session-"><code>$_SESSION</code>实现原理</h3>
+<p>在WorkerMan的Gateway/Worker模型中，每个客户端的<code>$_SESSION</code>数据是存储在Gateway进程内存中的，每次Gateway进程转发消息给BusibuessWorker进程时，都会顺便携带上对应客户端的<code>$_SESSION</code>数据给BusibuessWorker进程，这时BusibuessWorker进程就能使用<code>$_SESSION</code>了。而当<code>$_SESSION</code>数据有更改时，BusibuessWorker会将新的<code>$_SESSION</code>数据传递给Gateway进程进行保存。</p>
+<h2 id="-">示例</h2>
+<pre><code class="lang-php"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Events</span>
+{</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onMessage</span><span class="hljs-params">(<span class="hljs-variable">$client_id</span>, <span class="hljs-variable">$data</span>)</span>
+    {</span>
+        <span class="hljs-comment">// data={"type":"login", "uid":"666"}</span>
+        <span class="hljs-variable">$data</span> = json_decode(<span class="hljs-variable">$data</span>, <span class="hljs-keyword">true</span>);
+        <span class="hljs-comment">// 如果没有$_SESSION['uid']说明客户端没有登录</span>
+        <span class="hljs-keyword">if</span>(!<span class="hljs-keyword">isset</span>(<span class="hljs-variable">$_SESSION</span>[<span class="hljs-string">'uid'</span>]))
+        {
+            <span class="hljs-comment">// 消息类型不是登录视为非法请求，关闭连接</span>
+            <span class="hljs-keyword">if</span>(<span class="hljs-variable">$data</span>[<span class="hljs-string">'type'</span>] !== <span class="hljs-string">'login'</span>)
+            {
+                <span class="hljs-keyword">return</span> Gateway::closeClient(<span class="hljs-variable">$client_id</span>);
+            }
+            <span class="hljs-comment">// 设置session，标记该客户端已经登录</span>
+            <span class="hljs-variable">$_SESSION</span>[<span class="hljs-string">'uid'</span>] = <span class="hljs-variable">$data</span>[<span class="hljs-string">'uid'</span>];
+        }
+    }
+
+}
+</code></pre>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../gateway-worker-development/router.html" class="navigation navigation-prev " aria-label="Previous page: 设置路由router"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../gateway-worker-development/server.html" class="navigation navigation-next " aria-label="Next page: 超全局数组$_SERVER"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
