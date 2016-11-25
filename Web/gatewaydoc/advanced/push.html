@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="19.1" data-basepath=".." data-revision="1479289321399">
+    <div class="book"  data-level="19.1" data-basepath=".." data-revision="1480050457415">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -899,7 +899,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_1048">
+                    <section class="normal" id="section-gitbook_303">
                     
                         <h1 id="-workerman-">在非WorkerMan项目中推送消息</h1>
 <h2 id="-">需求</h2>
@@ -910,15 +910,24 @@
 <p>GatewayWorker1.0请使用<a href="https://github.com/walkor/GatewayClient/releases/tag/v1.0" target="_blank">1.0版本的GatewayClient</a></p>
 <p>GatewayWorker2.0.1-2.0.4请使用<a href="https://github.com/walkor/GatewayClient/releases/tag/2.0.4" target="_blank">2.0.4版本的GatewayClient</a></p>
 <p>GatewayWorker2.0.5-2.0.6版本请使用<a href="https://github.com/walkor/GatewayClient/releases/tag/2.0.6" target="_blank">2.0.6版本的GatewayClient</a></p>
-<p>GatewayWorker2.0.7及以上版本请使用 <a href="https://github.com/walkor/GatewayClient/releases/tag/v2.0.7" target="_blank">2.0.7版本的GatewayClient</a></p>
-<p>查看GatewayWorker版本方法请点击<a href="/gatewaydoc/faq/get-gateway-version.html">点击这里</a></p>
+<p>GatewayWorker2.0.7版本请使用 <a href="https://github.com/walkor/GatewayClient/releases/tag/v2.0.7" target="_blank">2.0.7版本的GatewayClient</a></p>
+<p>GatewayWorker3.0.0及以上版本请使用 <a href="https://github.com/walkor/GatewayClient/releases/tag/v3.0.0" target="_blank">3.0.0版本的GatewayClient</a><br>
+注意：GatewayClient3.0.0开始支持composer并加了命名空间GatewayClient</p>
+<p><br>
+查看GatewayWorker版本方法请点击<a href="/gatewaydoc/faq/get-gateway-version.html">点击这里</a></p>
 <p><strong>注意：</strong></p>
 <p>如果GatewayClient和GatewayWorker不是在同一台服务器上，则需要先将start_gateway.php中的lanIp改成当前服务器的内网ip（如果不在一个内网可改成公网ip）。</p>
 <p>反之如果GatewayClient和GatewayWorker在同一台服务器上运行，则不用做任何更改，直接按照示例使用GatewayClient即可。</p>
-<p>注意：通过GatewayClient发送的数据不会经过Event.php，而是直接经由Gateway进程转发给客户端。</p>
-<p>注意：GatewayClient无法接收客户端发来的数据.</p>
+<p>通过GatewayClient发送的数据不会经过Event.php，而是直接经由Gateway进程转发给客户端。</p>
+<p>GatewayClient无法接收客户端发来的数据。</p>
 <p> <strong>客户端使用示例</strong></p>
 <pre><code class="lang-php"><span class="hljs-keyword">require_once</span> <span class="hljs-string">'/your/path/GatewayClient/Gateway.php'</span>;
+
+<span class="hljs-comment">/**
+ * gatewayClient 3.0.0及以上版本加了命名空间
+ * 而3.0.0以下版本不需要use GatewayClient\Gateway;
+ **/</span>
+<span class="hljs-keyword">use</span> <span class="hljs-title">GatewayClient</span>\<span class="hljs-title">Gateway</span>;
 
 <span class="hljs-comment">/**
  *====这个步骤是必须的====
@@ -932,16 +941,24 @@ Gateway::<span class="hljs-variable">$registerAddress</span> = <span class="hljs
 <span class="hljs-comment">// 以下是调用示例，接口与GatewayWorker环境的接口一致</span>
 <span class="hljs-comment">// 注意除了不支持sendToCurrentClient和closeCurrentClient方法</span>
 <span class="hljs-comment">// 其它方法都支持</span>
-Gateway::sendToAll(<span class="hljs-string">'{"type":"broadcast","content":"hello all"}'</span>);
-
-Gateway::sendToClient(<span class="hljs-variable">$client_id</span>,<span class="hljs-string">'{"type":"say","content":"hello"}'</span>);
-
+Gateway::sendToAll(<span class="hljs-variable">$data</span>);
+Gateway::sendToClient(<span class="hljs-variable">$client_id</span>, <span class="hljs-variable">$data</span>);
+Gateway::closeClient(<span class="hljs-variable">$client_id</span>);
 Gateway::isOnline(<span class="hljs-variable">$client_id</span>);
-
 Gateway::bindUid(<span class="hljs-variable">$client_id</span>, <span class="hljs-variable">$uid</span>);
-
-Gateway::sendToUid(<span class="hljs-variable">$client_id</span>, <span class="hljs-variable">$uid</span>);
-
+Gateway::isUidOnline(<span class="hljs-variable">$uid</span>);
+Gateway::getClientIdByUid(<span class="hljs-variable">$client_id</span>);
+Gateway::unbindUid(<span class="hljs-variable">$client_id</span>, <span class="hljs-variable">$uid</span>);
+Gateway::sendToUid(<span class="hljs-variable">$uid</span>, <span class="hljs-variable">$dat</span>);
+Gateway::joinGroup(<span class="hljs-variable">$client_id</span>, <span class="hljs-variable">$group</span>);
+Gateway::sendToGroup(<span class="hljs-variable">$group</span>, <span class="hljs-variable">$data</span>);
+Gateway::leaveGroup(<span class="hljs-variable">$client_id</span>, <span class="hljs-variable">$group</span>);
+Gateway::getClientCountByGroup(<span class="hljs-variable">$group</span>);
+Gateway::getClientSessionsByGroup(<span class="hljs-variable">$group</span>);
+Gateway::getAllClientCount();
+Gateway::getAllClientSessions();
+Gateway::setSession(<span class="hljs-variable">$client_id</span>, <span class="hljs-variable">$session</span>);
+Gateway::updateSession(<span class="hljs-variable">$client_id</span>, <span class="hljs-variable">$session</span>);
 Gateway::getSession(<span class="hljs-variable">$client_id</span>);
 ...
 </code></pre>
