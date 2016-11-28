@@ -27,7 +27,8 @@
 				<a class="btn" target="_blank" href="/gatewaydoc-1.0/" style="color:#999">GatewayWorker1.0手册</a>
 				<a class="btn" target="_blank" href="/gatewaydoc/">GatewayWorker2.0手册</a>
 				<a class="btn" target="_blank" href="/gatewaydoc/appendices/upgrade.html">2.0与1.0的差异</a>
-				<a class="btn" target="_blank" href="https://github.com/walkor/GatewayWorker/archive/master.zip">点击下载源码</a>
+				<a class="btn" target="_blank" href="http://www.workerman.net/download/GatewayWorker.zip">点击下载源码(Linux版本)</a>
+				<a class="btn" target="_blank" href="http://www.workerman.net/download/GatewayWorker-for-win.zip">点击下载源码(Windows版本)</a>
 				</p>
 			</div>
 		</div>
