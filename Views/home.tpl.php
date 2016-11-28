@@ -134,7 +134,7 @@
 				<h4 class="media-heading">
 					<a href="/workerman-chat">聊天室</a>
 				</h4>
-				<p>一个可扩展的php socket的聊天室，服务端采用workerman作为socket服务器框架，支持万人在线，采用web-socket-js作为前端websocket库，支持多浏览器。同样可以用作app聊天室开发。
+				<p>一个可扩展的php socket的聊天室，服务端采用GatewayWorker作为socket服务器框架，支持万人在线，采用web-socket-js作为前端websocket库，支持多浏览器。同样可以用作app聊天室开发。
 				<br><a class="btn" href="/workerman-chat">详情 »</a>
 				<a class="btn" target="_blank" href="/download/chatzip" rel="nofollow">下载源代码 »</a>
 				</p>
@@ -159,7 +159,7 @@
 				<h4 class="media-heading">
 					<a target="_blank" href="http://kedou.workerman.net/">PHP小蝌蚪聊天室</a>
 				</h4>
-				<p>使用HTML5+WebSocket+Workerman实时推送技术开发的小蝌蚪聊天室，聊天室中玩家们化身为小蝌蚪，可以自由游动，并且可以实时聊天，非常有趣。
+				<p>使用HTML5+WebSocket+GatewayWorker实时推送技术开发的小蝌蚪聊天室，聊天室中玩家们化身为小蝌蚪，可以自由游动，并且可以实时聊天，非常有趣。
 				<br><a   class="btn" href="/workerman-todpole">详情 »</a>
 				<a class="btn" target="_blank" href="/download/todpolezip" rel="nofollow">下载源代码 »</a>
 				</p>
