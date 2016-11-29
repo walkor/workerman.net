@@ -1,3 +1,35 @@
+<h3>2016-11-27 workerman3.3.6版本发布</h3>
+<ul>
+<li>支持<a href="https://github.com/reactphp" target="_balnk" rel="nofollow">ReactPHP</a>同步支持ReactPHP的以下组件</li>
+<li>支持异步Mysql客户端</li>
+<li>支持异步Redis客户端</li>
+<li>支持异步HTTP客户端</li>
+<li>支持异步dns客户端</li>
+<li>支持异步zmq客户端</li>
+<li>支持异步whois客户端</li>
+<li>支持异步RabbitMQ客户端</li>
+<li>支持异步文件系统</li>
+<li>支持异步进程组件</li>
+<li>支持promise</li>
+</ul>
+<hr>
+
+<h3>2016-11-23 workerman3.3.5版本发布</h3>
+<ul>
+<li>AsyncTcpConnection 支持 context，用于设置ssl等参数</li>
+<li>AsyncTcpConnection 支持 reconnect 方法，用于断线时定时重连</li>
+<li>修复 IE10 IE11 websocket兼容性问题</li>
+</ul>
+<hr>
+
+<h3>2016-09-19 workerman3.3.4版本发布</h3>
+<ul>
+<li>WebServer支持了keep-alive</li>
+<li>http协议及websocket协议一些优化</li>
+<li>hhvm兼容优化</li>
+</ul>
+<hr>
+
 <h3>2016-07-06 workerman3.3.3版本发布</h3>
 <ul>
 <li>
