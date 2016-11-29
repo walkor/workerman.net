@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="10" data-basepath=".." data-revision="1480050457415">
+    <div class="book"  data-level="10" data-basepath=".." data-revision="1480428420840">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -136,28 +136,28 @@
             
         </li>
     
-        <li class="chapter " data-level="4" data-path="getting-started/README.html">
-            
-            <a href="../getting-started/README.html">
-                <i class="fa fa-check"></i> <b>4.</b> 入门指引
-            </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="5" data-path="start-and-stop/README.html">
-            
-            <a href="../start-and-stop/README.html">
-                <i class="fa fa-check"></i> <b>5.</b> 启动与停止
-            </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="6" data-path="process-of-communication/README.html">
+        <li class="chapter " data-level="4" data-path="process-of-communication/README.html">
             
             <a href="../process-of-communication/README.html">
-                <i class="fa fa-check"></i> <b>6.</b> 工作原理
+                <i class="fa fa-check"></i> <b>4.</b> 工作原理
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="getting-started/README.html">
+            
+            <a href="../getting-started/README.html">
+                <i class="fa fa-check"></i> <b>5.</b> 入门指引
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="start-and-stop/README.html">
+            
+            <a href="../start-and-stop/README.html">
+                <i class="fa fa-check"></i> <b>6.</b> 启动与停止
             </a>
             
             
@@ -770,11 +770,11 @@
     
         <a href="../feature/README.html" title="特性" class="chapter done new-chapter" data-progress="3" style="left: 4.615384615384615%;"></a>
     
-        <a href="../getting-started/README.html" title="入门指引" class="chapter done new-chapter" data-progress="4" style="left: 6.153846153846154%;"></a>
+        <a href="../process-of-communication/README.html" title="工作原理" class="chapter done new-chapter" data-progress="4" style="left: 6.153846153846154%;"></a>
     
-        <a href="../start-and-stop/README.html" title="启动与停止" class="chapter done new-chapter" data-progress="5" style="left: 7.6923076923076925%;"></a>
+        <a href="../getting-started/README.html" title="入门指引" class="chapter done new-chapter" data-progress="5" style="left: 7.6923076923076925%;"></a>
     
-        <a href="../process-of-communication/README.html" title="工作原理" class="chapter done new-chapter" data-progress="6" style="left: 9.23076923076923%;"></a>
+        <a href="../start-and-stop/README.html" title="启动与停止" class="chapter done new-chapter" data-progress="6" style="left: 9.23076923076923%;"></a>
     
         <a href="../protocols/README.html" title="定制通讯协议" class="chapter done new-chapter" data-progress="7" style="left: 10.76923076923077%;"></a>
     
@@ -899,11 +899,10 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_313">
+                    <section class="normal" id="section-gitbook_1572">
                     
                         <h1 id="businessworker-">BusinessWorker类的使用</h1>
-<p>BusinessWorker类其实也是基于基础的Worker开发的。由于BusinessWorker进程中无法直接操作Gateway进程的连接，也就无法获得连接对象，所以无法使用BusinessWorker的onConnect、onMessage、onClose属性，请开发者不要设置以上回调属性。开发者仍然可以设置onWorkerStart、onWorkerStop属性。</p>
-<p>BusinessWorker的相关回调函数在项目中的Event.php中定义，具体内容参见下一节</p>
+<p>BusinessWorker类其实也是基于基础的Worker开发的。BusinessWorker是运行业务逻辑的进程，BusinessWorker收到Gateway转发来的事件及请求时会默认调用Events.php中的onConnect onMessage onClose方法处理事件及数据，开发者正是通过实现这些回调控制业务及流程。</p>
 <h2 id="businessworker-">BusinessWorker类可以定制的内容</h2>
 <p>1、name</p>
 <p>和Worker一样，可以设置BusinessWorker进程的名称，方便status命令中查看统计</p>

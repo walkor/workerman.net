@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="2" data-basepath=".." data-revision="1480050457415">
+    <div class="book"  data-level="2" data-basepath=".." data-revision="1480428420840">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -136,28 +136,28 @@
             
         </li>
     
-        <li class="chapter " data-level="4" data-path="getting-started/README.html">
-            
-            <a href="../getting-started/README.html">
-                <i class="fa fa-check"></i> <b>4.</b> 入门指引
-            </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="5" data-path="start-and-stop/README.html">
-            
-            <a href="../start-and-stop/README.html">
-                <i class="fa fa-check"></i> <b>5.</b> 启动与停止
-            </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="6" data-path="process-of-communication/README.html">
+        <li class="chapter " data-level="4" data-path="process-of-communication/README.html">
             
             <a href="../process-of-communication/README.html">
-                <i class="fa fa-check"></i> <b>6.</b> 工作原理
+                <i class="fa fa-check"></i> <b>4.</b> 工作原理
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="getting-started/README.html">
+            
+            <a href="../getting-started/README.html">
+                <i class="fa fa-check"></i> <b>5.</b> 入门指引
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="start-and-stop/README.html">
+            
+            <a href="../start-and-stop/README.html">
+                <i class="fa fa-check"></i> <b>6.</b> 启动与停止
             </a>
             
             
@@ -770,11 +770,11 @@
     
         <a href="../feature/README.html" title="特性" class="chapter  new-chapter" data-progress="3" style="left: 4.615384615384615%;"></a>
     
-        <a href="../getting-started/README.html" title="入门指引" class="chapter  new-chapter" data-progress="4" style="left: 6.153846153846154%;"></a>
+        <a href="../process-of-communication/README.html" title="工作原理" class="chapter  new-chapter" data-progress="4" style="left: 6.153846153846154%;"></a>
     
-        <a href="../start-and-stop/README.html" title="启动与停止" class="chapter  new-chapter" data-progress="5" style="left: 7.6923076923076925%;"></a>
+        <a href="../getting-started/README.html" title="入门指引" class="chapter  new-chapter" data-progress="5" style="left: 7.6923076923076925%;"></a>
     
-        <a href="../process-of-communication/README.html" title="工作原理" class="chapter  new-chapter" data-progress="6" style="left: 9.23076923076923%;"></a>
+        <a href="../start-and-stop/README.html" title="启动与停止" class="chapter  new-chapter" data-progress="6" style="left: 9.23076923076923%;"></a>
     
         <a href="../protocols/README.html" title="定制通讯协议" class="chapter  new-chapter" data-progress="7" style="left: 10.76923076923077%;"></a>
     
@@ -899,13 +899,15 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_359">
+                    <section class="normal" id="section-gitbook_1617">
                     
                         <h1 id="-">序言</h1>
-<p>GatewayWorker基于Workerman开发的一个项目，用于快速开发长连接应用，例如移动通讯、物联网、游戏服务端、聊天室等等。</p>
+<p>GatewayWorker基于Workerman开发的一个框架，支持多协议多端口监听，支持分布式多机部署，用于快速开发长连接应用，例如移动通讯、物联网、智能家居、游戏服务端、聊天室等等。</p>
 <h1 id="-">进程模型</h1>
-<p>GatewayWorker分为Gateway进程和Worker进程和register注册服务进程，Gateway进程维持着客户端的连接并转发连接上发来的数据给Worker进程处理；Worker进程只负责处理转发来的客户端数据，并通过Gateway进程推送数据给任意客户端。register注册服务进程负责注册通知Gateway进程和Worker进程之间的通讯地址。</p>
-<p>Gateway只负责网络IO（非阻塞），Worker负责处理业务。</p>
+<p>GatewayWorker分为Gateway服务BusinessWorker服务和Register服务.</p>
+<p>Register服务类似一个全局的地址簿，Gateway进程启动后会到Register注册自己的内部通讯地址，BusinessWorker进程启动后去Register服务注册自己并查询到所有Gateway的内部通讯地址，然后与每个Gateway进程建立长连接用于后续通讯。注意Register服务本身通讯量很低，一般只有在Gateway、BusinessWorker进程启动时才会通讯，所以Register服务本身不会成为系统瓶颈。</p>
+<p>Gateway进程负责接受客户端连接并维持这些连接，当有连接事件或者连接断开事件或者连接上有数据发来时，Gateway进程将这些事件或数据通过Gateway与BusinessWorker之前建立的连接转发给BusinessWorker，BusinessWorker进程内部根据事件及数据会默认调用Events.php的onConnect onClose onMessage 回调处理（开发者需实现onConnect onClose onMessage 里面的业务逻辑），如果有需要可以在这些回调中调用接口通过Gateway进程推送数据给任意客户端。具体接口参见《Lib\Gateway类提供的接口》一章。</p>
+<p>Gateway只负责网络IO（非阻塞），BusinessWorker负责处理业务。由于Gateway和BusinessWorker之间是tcp长连接通讯，所以Gateway和BusinessWorker可以多机部署(分布式部署)，多机部署时只需要向一个统一的Register服务注册即可，也就是一个GatewayWorker集群只对应一个register服务，参见《分布式部署》一章。</p>
 <h1 id="-">客户端</h1>
 <p>GatewayWorker的通信协议是开放的，又是可定制的，因此，理论上GatewayWorker可以与使用任意协议的任意平台的客户端进行通信。当用户开发客户端时，可以根据相应的通信协议完成与服务端的通信。</p>
 <h1 id="-">本手册作用范围</h1>

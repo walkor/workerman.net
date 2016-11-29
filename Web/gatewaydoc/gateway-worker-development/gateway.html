@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="9" data-basepath=".." data-revision="1480050457415">
+    <div class="book"  data-level="9" data-basepath=".." data-revision="1480428420840">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -136,28 +136,28 @@
             
         </li>
     
-        <li class="chapter " data-level="4" data-path="getting-started/README.html">
-            
-            <a href="../getting-started/README.html">
-                <i class="fa fa-check"></i> <b>4.</b> 入门指引
-            </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="5" data-path="start-and-stop/README.html">
-            
-            <a href="../start-and-stop/README.html">
-                <i class="fa fa-check"></i> <b>5.</b> 启动与停止
-            </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="6" data-path="process-of-communication/README.html">
+        <li class="chapter " data-level="4" data-path="process-of-communication/README.html">
             
             <a href="../process-of-communication/README.html">
-                <i class="fa fa-check"></i> <b>6.</b> 工作原理
+                <i class="fa fa-check"></i> <b>4.</b> 工作原理
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="getting-started/README.html">
+            
+            <a href="../getting-started/README.html">
+                <i class="fa fa-check"></i> <b>5.</b> 入门指引
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="start-and-stop/README.html">
+            
+            <a href="../start-and-stop/README.html">
+                <i class="fa fa-check"></i> <b>6.</b> 启动与停止
             </a>
             
             
@@ -770,11 +770,11 @@
     
         <a href="../feature/README.html" title="特性" class="chapter done new-chapter" data-progress="3" style="left: 4.615384615384615%;"></a>
     
-        <a href="../getting-started/README.html" title="入门指引" class="chapter done new-chapter" data-progress="4" style="left: 6.153846153846154%;"></a>
+        <a href="../process-of-communication/README.html" title="工作原理" class="chapter done new-chapter" data-progress="4" style="left: 6.153846153846154%;"></a>
     
-        <a href="../start-and-stop/README.html" title="启动与停止" class="chapter done new-chapter" data-progress="5" style="left: 7.6923076923076925%;"></a>
+        <a href="../getting-started/README.html" title="入门指引" class="chapter done new-chapter" data-progress="5" style="left: 7.6923076923076925%;"></a>
     
-        <a href="../process-of-communication/README.html" title="工作原理" class="chapter done new-chapter" data-progress="6" style="left: 9.23076923076923%;"></a>
+        <a href="../start-and-stop/README.html" title="启动与停止" class="chapter done new-chapter" data-progress="6" style="left: 9.23076923076923%;"></a>
     
         <a href="../protocols/README.html" title="定制通讯协议" class="chapter done new-chapter" data-progress="7" style="left: 10.76923076923077%;"></a>
     
@@ -899,12 +899,12 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_321">
+                    <section class="normal" id="section-gitbook_1580">
                     
                         <h1 id="gateway-">Gateway类的使用</h1>
 <p>文件位置：GatewayWorker/Gateway.php</p>
-<p>Gateway类用于初始化Gateway进程。Gateway进程是暴露给客户端的让其连接的进程。所有客户端的请求都是由Gateway接收然后分发给Worker处理，同样Worker也会将要发给客户端的响应通过Gateway转发出去。</p>
-<p>Gateway类是基于基础的Worker开发的。可以给Gateway对象的onWorkerStart、onWorkerStop、onConnect、onClose设置回调函数，但是无法给设置onMessage回调。Gateway的onMessage行为固定为将客户端数据转发给Worker。</p>
+<p>Gateway类用于初始化Gateway进程。Gateway进程是暴露给客户端的让其连接的进程。所有客户端的请求都是由Gateway接收然后分发给BusinessWorker处理，同样BusinessWorker也会将要发给客户端的响应通过Gateway转发出去。</p>
+<p>Gateway类是基于基础的Worker开发的。可以给Gateway对象的onWorkerStart、onWorkerStop、onConnect、onClose设置回调函数，但是无法给设置onMessage回调。Gateway的onMessage行为固定为将客户端数据转发给BusinessWorker。</p>
 <h2 id="gateway-">Gateway类可以定制的内容</h2>
 <p>1、 协议</p>
 <p>和Worker一样，在初始化Gateway对象时设置Gateway的协议，例如下面设置Gateway的通讯协议为websocket</p>

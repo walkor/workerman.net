@@ -30,7 +30,7 @@
 
 
         
-    <div class="book"  data-level="0" data-basepath="." data-revision="1480050457415">
+    <div class="book"  data-level="0" data-basepath="." data-revision="1480428420840">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -134,28 +134,28 @@
             
         </li>
     
-        <li class="chapter " data-level="4" data-path="getting-started/README.html">
-            
-            <a href="./getting-started/README.html">
-                <i class="fa fa-check"></i> <b>4.</b> 入门指引
-            </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="5" data-path="start-and-stop/README.html">
-            
-            <a href="./start-and-stop/README.html">
-                <i class="fa fa-check"></i> <b>5.</b> 启动与停止
-            </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="6" data-path="process-of-communication/README.html">
+        <li class="chapter " data-level="4" data-path="process-of-communication/README.html">
             
             <a href="./process-of-communication/README.html">
-                <i class="fa fa-check"></i> <b>6.</b> 工作原理
+                <i class="fa fa-check"></i> <b>4.</b> 工作原理
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="getting-started/README.html">
+            
+            <a href="./getting-started/README.html">
+                <i class="fa fa-check"></i> <b>5.</b> 入门指引
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="start-and-stop/README.html">
+            
+            <a href="./start-and-stop/README.html">
+                <i class="fa fa-check"></i> <b>6.</b> 启动与停止
             </a>
             
             
@@ -768,11 +768,11 @@
     
         <a href="./feature/README.html" title="特性" class="chapter  new-chapter" data-progress="3" style="left: 4.615384615384615%;"></a>
     
-        <a href="./getting-started/README.html" title="入门指引" class="chapter  new-chapter" data-progress="4" style="left: 6.153846153846154%;"></a>
+        <a href="./process-of-communication/README.html" title="工作原理" class="chapter  new-chapter" data-progress="4" style="left: 6.153846153846154%;"></a>
     
-        <a href="./start-and-stop/README.html" title="启动与停止" class="chapter  new-chapter" data-progress="5" style="left: 7.6923076923076925%;"></a>
+        <a href="./getting-started/README.html" title="入门指引" class="chapter  new-chapter" data-progress="5" style="left: 7.6923076923076925%;"></a>
     
-        <a href="./process-of-communication/README.html" title="工作原理" class="chapter  new-chapter" data-progress="6" style="left: 9.23076923076923%;"></a>
+        <a href="./start-and-stop/README.html" title="启动与停止" class="chapter  new-chapter" data-progress="6" style="left: 9.23076923076923%;"></a>
     
         <a href="./protocols/README.html" title="定制通讯协议" class="chapter  new-chapter" data-progress="7" style="left: 10.76923076923077%;"></a>
     
@@ -897,21 +897,22 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_298">
+                    <section class="normal" id="section-gitbook_1556">
                     
                         <h1 id="gatewayworker2-0-">GatewayWorker2.0 手册</h1>
 <p>本手册适用于最新版本GatewayWorker2.0(发布时间2015-11-11)。</p>
 <h2 id="gatewayworker-">GatewayWorker 手册</h2>
 <p>GatewayWorker基于Workerman开发的一个项目框架，用于快速开发TCP长连接应用，例如app推送服务端、即时IM服务端、游戏服务端、物联网、智能家居等等</p>
-<p>GatewayWorker使用经典的Gateway和Worker进程模型。Gateway进程负责维持客户端连接，并转发客户端的数据给Worker进程处理；Worker进程负责处理实际的业务逻辑，并将结果推送给对应的客户端。Gateway服务和Worker服务可以分开部署在不同的服务器上，实现分布式集群。</p>
+<p>GatewayWorker使用经典的Gateway和Worker进程模型。Gateway进程负责维持客户端连接，并转发客户端的数据给BusinessWorker进程处理，BusinessWorker进程负责处理实际的业务逻辑（默认调用Events.php处理业务），并将结果推送给对应的客户端。Gateway服务和BusinessWorker服务可以分开部署在不同的服务器上，实现分布式集群。</p>
 <p>GatewayWorker提供非常方便的API，可以全局广播数据、可以向某个群体广播数据、也可以向某个特定客户端推送数据。配合Workerman的定时器，也可以定时推送数据。</p>
 <h2 id="gatewayworker-workerman-">GatewayWorker 与 Workerman的关系</h2>
-<p>Workerman可以看做是一个纯粹的socket类库，可以开发几乎所有的网络应用，不管是TCP的还是UDP的，长连接的还是短连接的。Workerman代码精简，功能强大，使用灵活，能够快速开发出各种网络应用。</p>
-<p>因为绝大多数开发者的目标是基于Workerman开发TCP长连接应用，而长连接应用服务端有很多共同之处，例如它们有相同的进程模型以及单发、群发、广播等接口需求。所以才有了GatewayWorker框架，GatewayWorker是基于Workerman开发的一个TCP长连接框架，实现了单发、群送、广播等长连接必用的接口，并且内置了MySql类库。GatewayWorker框架实现了Gateway Worker进程模型，天然支持分布式部署，扩容缩容非常方便，能够应对海量并发连接。可以说GatewayWorker是基于Workerman实现的一个更完善的专门用于实现TCP长连接的项目框架。</p>
+<p>Workerman可以看做是一个纯粹的socket类库，可以开发几乎所有的网络应用，不管是TCP的还是UDP的，长连接的还是短连接的。Workerman代码精简，功能强大，使用灵活，能够快速开发出各种网络应用。同时也Workerman相比GatewayWorker也更底层，需要开发者有一定的多进程编程经验。</p>
+<p>因为绝大多数开发者的目标是基于Workerman开发TCP长连接应用，而长连接应用服务端有很多共同之处，例如它们有相同的进程模型以及单发、群发、广播等接口需求。所以才有了GatewayWorker框架，GatewayWorker是基于Workerman开发的一个TCP长连接框架，实现了单发、群送、广播等长连接必用的接口，并且内置了MySql类库。GatewayWorker框架实现了Gateway Worker进程模型，天然支持分布式多服务器部署，扩容缩容非常方便，能够应对海量并发连接。可以说GatewayWorker是基于Workerman实现的一个更完善的专门用于实现TCP长连接的项目框架。</p>
 <h2 id="-gatewayworker-workerman-">用GatewayWorker还是Workerman？</h2>
 <p>如果你的项目是长连接并且需要客户端与客户端之间通讯，建议使用GatewayWorker。<br>
 短连接或者不需要客户端与客户端之间通讯的项目建议使用Workerman。<br>
-GatewayWorker不支持UDP监听，所以UDP服务请选择Workerman。<br></p>
+GatewayWorker不支持UDP监听，所以UDP服务请选择Workerman。<br>
+如果你是一个有多进程socket编程经验的人，喜欢定制自己的进程模型，可以选择Workerman。</p>
 <h2 id="linux-demo-">Linux系统快速开始（从一个精简的聊天demo开始）</h2>
 <p>1、<a href="http://www.workerman.net/download/GatewayWorker.zip" target="_blank">下载demo</a></p>
 <p>2、命令行运行 <code>unzip GatewayWorker.zip</code> 解压缩GatewayWorker.zip</p>

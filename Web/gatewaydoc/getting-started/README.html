@@ -20,7 +20,7 @@
     <link rel="next" href="../start-and-stop/README.html" />
     
     
-    <link rel="prev" href="../feature/README.html" />
+    <link rel="prev" href="../process-of-communication/README.html" />
     
 
         
@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="4" data-basepath=".." data-revision="1480050457415">
+    <div class="book"  data-level="5" data-basepath=".." data-revision="1480428420840">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -136,28 +136,28 @@
             
         </li>
     
-        <li class="chapter " data-level="4" data-path="getting-started/README.html">
-            
-            <a href="../getting-started/README.html">
-                <i class="fa fa-check"></i> <b>4.</b> 入门指引
-            </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="5" data-path="start-and-stop/README.html">
-            
-            <a href="../start-and-stop/README.html">
-                <i class="fa fa-check"></i> <b>5.</b> 启动与停止
-            </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="6" data-path="process-of-communication/README.html">
+        <li class="chapter " data-level="4" data-path="process-of-communication/README.html">
             
             <a href="../process-of-communication/README.html">
-                <i class="fa fa-check"></i> <b>6.</b> 工作原理
+                <i class="fa fa-check"></i> <b>4.</b> 工作原理
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="getting-started/README.html">
+            
+            <a href="../getting-started/README.html">
+                <i class="fa fa-check"></i> <b>5.</b> 入门指引
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="start-and-stop/README.html">
+            
+            <a href="../start-and-stop/README.html">
+                <i class="fa fa-check"></i> <b>6.</b> 启动与停止
             </a>
             
             
@@ -758,7 +758,7 @@
             <div class="page-wrapper" tabindex="-1">
                 <div class="book-progress">
     <div class="bar">
-        <div class="inner" style="width: 6.153846153846154%;min-width: 4.615384615384615%;"></div>
+        <div class="inner" style="width: 7.6923076923076925%;min-width: 6.153846153846154%;"></div>
     </div>
     <div class="chapters">
     
@@ -770,11 +770,11 @@
     
         <a href="../feature/README.html" title="特性" class="chapter done new-chapter" data-progress="3" style="left: 4.615384615384615%;"></a>
     
-        <a href="../getting-started/README.html" title="入门指引" class="chapter done new-chapter" data-progress="4" style="left: 6.153846153846154%;"></a>
+        <a href="../process-of-communication/README.html" title="工作原理" class="chapter done new-chapter" data-progress="4" style="left: 6.153846153846154%;"></a>
     
-        <a href="../start-and-stop/README.html" title="启动与停止" class="chapter  new-chapter" data-progress="5" style="left: 7.6923076923076925%;"></a>
+        <a href="../getting-started/README.html" title="入门指引" class="chapter done new-chapter" data-progress="5" style="left: 7.6923076923076925%;"></a>
     
-        <a href="../process-of-communication/README.html" title="工作原理" class="chapter  new-chapter" data-progress="6" style="left: 9.23076923076923%;"></a>
+        <a href="../start-and-stop/README.html" title="启动与停止" class="chapter  new-chapter" data-progress="6" style="left: 9.23076923076923%;"></a>
     
         <a href="../protocols/README.html" title="定制通讯协议" class="chapter  new-chapter" data-progress="7" style="left: 10.76923076923077%;"></a>
     
@@ -899,7 +899,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_357">
+                    <section class="normal" id="section-gitbook_1615">
                     
                         <h1 id="-">入门指引</h1>
 <h2 id="-">重要的事情说三遍</h2>
@@ -923,7 +923,7 @@
 </pre>
 
 <h2 id="-">说明</h2>
-<p>一般来说开发者只需要关注Applications/YourApp/Events.php。因为所有业务代码都在这里开始的。其它目录如GatewayWorker和Workerman目录为框架目录，开发者不要改动，也不用去理解。</p>
+<p>一般来说开发者只需要关注Applications/YourApp/Events.php。因为所有业务代码都在这里开始的。vendor目录为框架目录，开发者不要改动，也不用去理解。</p>
 <p>其它start_gateway.php start_businessworker.php start_register.php分别是进程启动脚本，开发者一般不需要改动这三个文件。三个脚本统一由根目录的start.php启动。</p>
 <h2 id="events-php">Events.php</h2>
 <p>例如下面是一个简单的聊天室示例</p>
@@ -996,7 +996,7 @@
 <p>start_gateway.php为gateway进程启动脚本，主要定义了客户端连接的端口号、协议等信息，具体参见 Gateway类的使用一节。</p>
 <p>客户端连接的就是start_gateway.php中初始化的Gateway端口。</p>
 <h2 id="start_businessworker-php">start_businessworker.php</h2>
-<p>start_businessworker.php为businessWorker进程启动脚本，也即是业务处理进程，具体参见 BusinessWorker类的使用一节。</p>
+<p>start_businessworker.php为businessWorker进程启动脚本，也即是调用Events.php的业务处理进程，具体参见 BusinessWorker类的使用一节。</p>
 <h2 id="start_register-php">start_register.php</h2>
 <p>start_register.php为注册服务启动脚本，用于协调GatewayWorker集群内部Gateway与Worker的通信，参见Register类使用一节。</p>
 <p><code>注意：客户端不要连接Register服务端口，客户端应该连接Gateway端口</code></p>
@@ -1009,7 +1009,7 @@
         </div>
 
         
-        <a href="../feature/README.html" class="navigation navigation-prev " aria-label="Previous page: 特性"><i class="fa fa-angle-left"></i></a>
+        <a href="../process-of-communication/README.html" class="navigation navigation-prev " aria-label="Previous page: 工作原理"><i class="fa fa-angle-left"></i></a>
         
         
         <a href="../start-and-stop/README.html" class="navigation navigation-next " aria-label="Next page: 启动与停止"><i class="fa fa-angle-right"></i></a>

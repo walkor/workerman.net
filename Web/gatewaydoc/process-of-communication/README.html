@@ -17,10 +17,10 @@
     
     
     
-    <link rel="next" href="../protocols/README.html" />
+    <link rel="next" href="../getting-started/README.html" />
     
     
-    <link rel="prev" href="../start-and-stop/README.html" />
+    <link rel="prev" href="../feature/README.html" />
     
 
         
@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="6" data-basepath=".." data-revision="1480050457415">
+    <div class="book"  data-level="4" data-basepath=".." data-revision="1480428420840">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -136,28 +136,28 @@
             
         </li>
     
-        <li class="chapter " data-level="4" data-path="getting-started/README.html">
-            
-            <a href="../getting-started/README.html">
-                <i class="fa fa-check"></i> <b>4.</b> 入门指引
-            </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="5" data-path="start-and-stop/README.html">
-            
-            <a href="../start-and-stop/README.html">
-                <i class="fa fa-check"></i> <b>5.</b> 启动与停止
-            </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="6" data-path="process-of-communication/README.html">
+        <li class="chapter " data-level="4" data-path="process-of-communication/README.html">
             
             <a href="../process-of-communication/README.html">
-                <i class="fa fa-check"></i> <b>6.</b> 工作原理
+                <i class="fa fa-check"></i> <b>4.</b> 工作原理
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="getting-started/README.html">
+            
+            <a href="../getting-started/README.html">
+                <i class="fa fa-check"></i> <b>5.</b> 入门指引
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="start-and-stop/README.html">
+            
+            <a href="../start-and-stop/README.html">
+                <i class="fa fa-check"></i> <b>6.</b> 启动与停止
             </a>
             
             
@@ -758,7 +758,7 @@
             <div class="page-wrapper" tabindex="-1">
                 <div class="book-progress">
     <div class="bar">
-        <div class="inner" style="width: 9.23076923076923%;min-width: 7.6923076923076925%;"></div>
+        <div class="inner" style="width: 6.153846153846154%;min-width: 4.615384615384615%;"></div>
     </div>
     <div class="chapters">
     
@@ -770,11 +770,11 @@
     
         <a href="../feature/README.html" title="特性" class="chapter done new-chapter" data-progress="3" style="left: 4.615384615384615%;"></a>
     
-        <a href="../getting-started/README.html" title="入门指引" class="chapter done new-chapter" data-progress="4" style="left: 6.153846153846154%;"></a>
+        <a href="../process-of-communication/README.html" title="工作原理" class="chapter done new-chapter" data-progress="4" style="left: 6.153846153846154%;"></a>
     
-        <a href="../start-and-stop/README.html" title="启动与停止" class="chapter done new-chapter" data-progress="5" style="left: 7.6923076923076925%;"></a>
+        <a href="../getting-started/README.html" title="入门指引" class="chapter  new-chapter" data-progress="5" style="left: 7.6923076923076925%;"></a>
     
-        <a href="../process-of-communication/README.html" title="工作原理" class="chapter done new-chapter" data-progress="6" style="left: 9.23076923076923%;"></a>
+        <a href="../start-and-stop/README.html" title="启动与停止" class="chapter  new-chapter" data-progress="6" style="left: 9.23076923076923%;"></a>
     
         <a href="../protocols/README.html" title="定制通讯协议" class="chapter  new-chapter" data-progress="7" style="left: 10.76923076923077%;"></a>
     
@@ -899,19 +899,19 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_360">
+                    <section class="normal" id="section-gitbook_1618">
                     
                         <h1 id="-">工作原理</h1>
-<p>1、Register、Gateway、Worker进程启动</p>
-<p>2、Gateway、Worker进程启动后向Register服务进程发起长连接注册自己</p>
+<p>1、Register、Gateway、BusinessWorker进程启动</p>
+<p>2、Gateway、BusinessWorker进程启动后向Register服务进程发起长连接注册自己</p>
 <p>3、Register服务收到Gateway的注册后，把所有Gateway的通讯地址保存在内存中</p>
-<p>4、Register服务收到Worker的注册后，把内存中所有的Gateway的通讯地址广播给Worker</p>
-<p>5、Worker进程得到所有的Gateway内部通讯地址后尝试连接Gateway</p>
-<p>6、如果运行过程中有新的Gateway服务注册到Register（一般是分布式部署加机器），则将新的Gateway内部通讯地址列表将广播给所有Worker，Worker收到后建立连接</p>
-<p>7、如果有Gateway下线，则Register服务会收到通知，会将对应的内部通讯地址删除，然后广播新的内部通讯地址列表给所有Worker，Worker不再连接下线的Gateway</p>
-<p>8、至此Gateway与Worker通过Register已经建立起长连接</p>
-<p>9、客户端发的数据全部由Gateway转发给Worker处理，Worker将处理结果再由Gateway返回给客户端</p>
-<p>10、Worker的业务逻辑入口全部在Events.php中，包括onWorkerStart进程启动事件、onConnect连接事件、onMessage消息事件、onClose连接关闭事件、onWorkerStop进程退出事件</p>
+<p>4、Register服务收到BusinessWorker的注册后，把内存中所有的Gateway的通讯地址发给BusinessWorker</p>
+<p>5、BusinessWorker进程得到所有的Gateway内部通讯地址后尝试连接Gateway</p>
+<p>6、如果运行过程中有新的Gateway服务注册到Register（一般是分布式部署加机器），则将新的Gateway内部通讯地址列表将广播给所有BusinessWorker，BusinessWorker收到后建立连接</p>
+<p>7、如果有Gateway下线，则Register服务会收到通知，会将对应的内部通讯地址删除，然后广播新的内部通讯地址列表给所有BusinessWorker，BusinessWorker不再连接下线的Gateway</p>
+<p>8、至此Gateway与BusinessWorker通过Register已经建立起长连接</p>
+<p>9、客户端的事件及数据全部由Gateway转发给BusinessWorker处理，BusinessWorker默认调用Events.php中的onConnect onMessage onClose处理业务逻辑。</p>
+<p>10、BusinessWorker的业务逻辑入口全部在Events.php中，包括onWorkerStart进程启动事件(进程事件)、onConnect连接事件(客户端事件)、onMessage消息事件（客户端事件）、onClose连接关闭事件（客户端事件）、onWorkerStop进程退出事件（进程事件）</p>
 
                     
                     </section>
@@ -921,10 +921,10 @@
         </div>
 
         
-        <a href="../start-and-stop/README.html" class="navigation navigation-prev " aria-label="Previous page: 启动与停止"><i class="fa fa-angle-left"></i></a>
+        <a href="../feature/README.html" class="navigation navigation-prev " aria-label="Previous page: 特性"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../protocols/README.html" class="navigation navigation-next " aria-label="Next page: 定制通讯协议"><i class="fa fa-angle-right"></i></a>
+        <a href="../getting-started/README.html" class="navigation navigation-next " aria-label="Next page: 入门指引"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
