@@ -433,6 +433,9 @@
 		</h4>
 		<ul>
 			<li>
+				<a href="http://www.workerman.net/last_update" rel="nofollow">2016-11-27 支持ReactPHP，支持异步Mysql异步Redis等组件</a>
+			</li>
+			<li>
 				<a href="http://laychat.workerman.net/" rel="nofollow">2016-08-01 LayChat发布</a>
 			</li>
 			<li>
