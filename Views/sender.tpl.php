@@ -80,7 +80,7 @@ content 为消息内容
 			<br>
 			<h3>前端测试：</h3>
 			<p>支持跨域推送，测试时开发者可以不用建立服务端，直接使用workerman官网线上的推送服务(地址http://workerman.net:2120)测试(注意仅能用于测试)，例如在任意站点中加入如下代码即可收到消息并统计数据：</p>
-			<p>注意workerman官网的在线推送服务仅用于测试，正式环境请不要使用，否则因为变更引起的问题请自行承担</p>
+			<p>注意workerman官网的在线推送服务仅用于测试，正式环境请不要使用，否则出现的任何问题自行承担</p>
 			<pre>
 &lt;script src='http://cdn.bootcss.com/socket.io/1.3.7/socket.io.js'&gt;&lt;/script&gt;
 &lt;script&gt;
