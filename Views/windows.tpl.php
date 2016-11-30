@@ -18,7 +18,7 @@
         <font class="f16">
         windows版本聊天室<a href="/download/workerman-chat-for-win.zip" rel="nofollow">点击下载workerman-chat-for-win</a><br>
         windows版本小蝌蚪聊天室<a href="/download/workerman-todpole-for-win.zip" rel="nofollow">点击下载workerman-todpole-for-win</a><br>
-        windows版本web消息推送框架<a href=" /download/web-msg-sender-for-win.zip" rel="nofollow">点击下载web-msg-sender</a><br>
+        windows版本web消息推送框架<a href="/download/web-msg-sender-for-win.zip" rel="nofollow">点击下载web-msg-sender</a><br>
         windows版本GatewayWorker<a href="/download/GatewayWorker-for-win.zip" rel="nofollow">点击下载GatewayWorker-for-win</a><br>
        
         以上demo下载后双击start_for_win.bat即可启动（无需安装其它扩展）
@@ -31,16 +31,6 @@
 	<br><br>
 	<img src="/img/gif/install-php.gif" alt="PHP环境变量设置示意图">
 	<br><hr>
-	<h3>主页其它demo如何用windows版本workerman运行</h3>
-	总的来讲就是下载windows版本workerman，替换源码中的Workerman目录，<br>
-	以<a href="https://github.com/walkor/workerman-chat" rel="nofollow">workerman-chat</a>为例
-<h5>1、进入源代码删除Workerman目录包括文件</h5>
-<h5>2、下载windows版本workerman，zip地址 <a href="https://github.com/walkor/workerman-for-win/archive/master.zip">https://github.com/walkor/workerman-for-win/archive/master.zip</a></h5>
-<h5>3、解压到原Workerman目录所在位置，同时目录workerman-for-win-master重命名为Workerman，完成Workerman目录的替换</h5>
-<h5>4、cd Applications/Chat/，运行 php start_register.php start_gateway.php start_businessworker.php start_web.php start_web.php 完成启动</h5>
-<h5>5、浏览器访问地址 http://127.0.0.1:55151（workerman-chat默认55151是http端口，其他应用根据启动界面查看http协议端口）</h5>
-	<br><hr>
-
         <h3>workerman的Windows版本与Linux版本异同</h3>
         1、win版本count属性无效，全部为单进程<br>
         2、不支持start stop reload restart status命令<br>

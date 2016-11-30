@@ -1,7 +1,5 @@
 			<div class="row clearfix">
-				<div class="col-md-12 column">
-				<br/><br/><br/><hr>
-				</div>
+				<br>
 			</div>
 			<div class="row clearfix">
 					<div class="col-md-1 column">
