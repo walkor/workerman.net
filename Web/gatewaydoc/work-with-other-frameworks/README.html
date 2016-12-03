@@ -4,7 +4,7 @@
     <head>
         
         <meta charset="UTF-8">
-        <title>Events类的回调属性 | GatewayWorker2.0 手册</title>
+        <title>与ThinkPHP等框架结合 | GatewayWorker2.0 手册</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 0.5.2">
@@ -17,10 +17,10 @@
     
     
     
-    <link rel="next" href="../gateway-worker-development/onworkerstart.html" />
+    <link rel="next" href="../protocols/README.html" />
     
     
-    <link rel="prev" href="../gateway-worker-development/register.html" />
+    <link rel="prev" href="../start-and-stop/README.html" />
     
 
         
@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="13" data-basepath=".." data-revision="1480779475667">
+    <div class="book"  data-level="7" data-basepath=".." data-revision="1480779475667">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -767,7 +767,7 @@
             <div class="page-wrapper" tabindex="-1">
                 <div class="book-progress">
     <div class="bar">
-        <div class="inner" style="width: 25.757575757575758%;min-width: 24.242424242424242%;"></div>
+        <div class="inner" style="width: 10.606060606060606%;min-width: 9.090909090909092%;"></div>
     </div>
     <div class="chapters">
     
@@ -787,25 +787,25 @@
     
         <a href="../work-with-other-frameworks/README.html" title="与ThinkPHP等框架结合" class="chapter done new-chapter" data-progress="7" style="left: 10.606060606060606%;"></a>
     
-        <a href="../protocols/README.html" title="定制通讯协议" class="chapter done new-chapter" data-progress="8" style="left: 12.121212121212121%;"></a>
+        <a href="../protocols/README.html" title="定制通讯协议" class="chapter  new-chapter" data-progress="8" style="left: 12.121212121212121%;"></a>
     
-        <a href="../gateway-worker-development/gateway-worker-development.html" title="适用范围" class="chapter done new-chapter" data-progress="9" style="left: 13.636363636363637%;"></a>
+        <a href="../gateway-worker-development/gateway-worker-development.html" title="适用范围" class="chapter  new-chapter" data-progress="9" style="left: 13.636363636363637%;"></a>
     
-        <a href="../gateway-worker-development/gateway.html" title="Gateway类的使用" class="chapter done " data-progress="10" style="left: 15.151515151515152%;"></a>
+        <a href="../gateway-worker-development/gateway.html" title="Gateway类的使用" class="chapter  " data-progress="10" style="left: 15.151515151515152%;"></a>
     
-        <a href="../gateway-worker-development/business-worker.html" title="BusinessWorker类的使用" class="chapter done " data-progress="11" style="left: 16.666666666666668%;"></a>
+        <a href="../gateway-worker-development/business-worker.html" title="BusinessWorker类的使用" class="chapter  " data-progress="11" style="left: 16.666666666666668%;"></a>
     
-        <a href="../gateway-worker-development/property-and-callback.html" title="属性及回调" class="chapter done " data-progress="11.1" style="left: 18.181818181818183%;"></a>
+        <a href="../gateway-worker-development/property-and-callback.html" title="属性及回调" class="chapter  " data-progress="11.1" style="left: 18.181818181818183%;"></a>
     
-        <a href="../gateway-worker-development/event-handler.html" title="eventHandler" class="chapter done " data-progress="11.1.1" style="left: 19.696969696969695%;"></a>
+        <a href="../gateway-worker-development/event-handler.html" title="eventHandler" class="chapter  " data-progress="11.1.1" style="left: 19.696969696969695%;"></a>
     
-        <a href="../gateway-worker-development/process-timeout.html" title="processTimeout" class="chapter done " data-progress="11.1.2" style="left: 21.21212121212121%;"></a>
+        <a href="../gateway-worker-development/process-timeout.html" title="processTimeout" class="chapter  " data-progress="11.1.2" style="left: 21.21212121212121%;"></a>
     
-        <a href="../gateway-worker-development/process-timeout-handler.html" title="processTimeoutHandler" class="chapter done " data-progress="11.1.3" style="left: 22.727272727272727%;"></a>
+        <a href="../gateway-worker-development/process-timeout-handler.html" title="processTimeoutHandler" class="chapter  " data-progress="11.1.3" style="left: 22.727272727272727%;"></a>
     
-        <a href="../gateway-worker-development/register.html" title="Register类的使用" class="chapter done " data-progress="12" style="left: 24.242424242424242%;"></a>
+        <a href="../gateway-worker-development/register.html" title="Register类的使用" class="chapter  " data-progress="12" style="left: 24.242424242424242%;"></a>
     
-        <a href="../gateway-worker-development/event-functions.html" title="Events类的回调属性" class="chapter done " data-progress="13" style="left: 25.757575757575758%;"></a>
+        <a href="../gateway-worker-development/event-functions.html" title="Events类的回调属性" class="chapter  " data-progress="13" style="left: 25.757575757575758%;"></a>
     
         <a href="../gateway-worker-development/onworkerstart.html" title="onWorkerStart" class="chapter  " data-progress="13.1" style="left: 27.272727272727273%;"></a>
     
@@ -910,10 +910,151 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_4500">
+                    <section class="normal" id="section-gitbook_4561">
                     
-                        <h1 id="events-">Events类的回调属性</h1>
-<p><code>(注意：Gateway 2.0.4版本以前业务处理类为Event，为了避免和Event扩展冲突，2.0.4版本以后统一改成Events类)</code></p>
+                        <h1 id="-thinkphp-">与ThinkPHP等框架结合</h1>
+<p>使用GatewayWorker时开发者最关心的是如何与现有mvc框架(ThinkPHP Yii laravel等)整合，以下是官方推荐的整合方式。见示意图：</p>
+<p><br>
+<img src="http://www.workerman.net/img/doc/work-with-other-mvc-framework.png" alt=""></p>
+<p><br></p>
+<h2 id="-">总体原则:</h2>
+<p>现有mvc框架项目与GatewayWorker<strong>独立</strong>部署互不干扰</p>
+<p><strong>所有</strong>的业务逻辑都由网站页面post/get到mvc框架中完成</p>
+<p>GatewayWorker不接受客户端发来的数据，即GatewayWorker不处理任何业务逻辑，GatewayWorker仅仅当做一个<strong>单向</strong>的推送通道</p>
+<p>仅当mvc框架需要向浏览器主动推送数据时才在mvc框架中调用Gateway的API(<a href="https://github.com/walkor/GatewayClient" target="_blank">GatewayClient</a>)完成推送</p>
+<h2 id="-">具体实现步骤</h2>
+<p>1、网站页面建立与GatewayWorker的websocket连接</p>
+<p>2、GatewayWorker发现有页面发起连接时，将对应连接的client_id发给网站页面</p>
+<p>3、网站页面收到client_id后触发一个ajax请求(假设是<code>bind.php</code>)将client_id发到mvc后端</p>
+<p>4、mvc后端<code>bind.php</code>收到client_id后利用GatewayClient调用<code>Gateway::bindUid($client_id, $uid)</code>将client_id与当前uid(用户id或者客户端唯一标识)绑定。如果有群组、群发功能，也可以利用<code>Gateway::joinGroup($client_id, $group_id)</code>将client_id加入到对应分组</p>
+<p>5、页面发起的所有请求都直接post/get到mvc框架统一处理，包括发送消息</p>
+<p>6、mvc框架处理业务过程中需要向某个uid或者某个群组发送数据时，直接调用GatewayClient的接口<code>Gateway::sendToUid Gateway::sendToGroup</code> 等发送即可</p>
+<h2 id="-">示例代码</h2>
+<p>GatewayWorker中Events.php代码（只有个onConnect回调设置）</p>
+<pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
+<span class="hljs-keyword">use</span> \<span class="hljs-title">GatewayWorker</span>\<span class="hljs-title">Lib</span>\<span class="hljs-title">Gateway</span>;
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Events</span>.<span class="hljs-title">php</span>
+{</span>
+    <span class="hljs-comment">// 当有客户端连接时，将client_id返回，让mvc框架判断当前uid并执行绑定</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onConnect</span><span class="hljs-params">(<span class="hljs-variable">$client_id</span>)</span>
+    {</span>
+        Gateway::sendToClient(<span class="hljs-variable">$client_id</span>, json_encode(<span class="hljs-keyword">array</span>(
+            <span class="hljs-string">'type'</span>      =&gt; <span class="hljs-string">'init'</span>,
+            <span class="hljs-string">'client_id'</span> =&gt; <span class="hljs-variable">$client_id</span>
+        )));
+    }
+
+    <span class="hljs-comment">// GatewayWorker不做任何业务逻辑，onMessage留空即可</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onMessage</span><span class="hljs-params">(<span class="hljs-variable">$client_id</span>, <span class="hljs-variable">$message</span>)</span>
+    {</span>
+
+    }
+}
+</code></pre>
+<p><strong>网站页面js片段</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// 与GatewayWorker建立websocket连接，域名和端口改为你实际的域名端口</span>
+ws = <span class="hljs-keyword">new</span> WebSocket(<span class="hljs-string">"ws://your_domain.com:7272"</span>);
+<span class="hljs-comment">// 服务端主动推送消息时会触发这里的onmessage</span>
+ws.onmessage = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(e)</span>{</span>
+    <span class="hljs-comment">// json数据转换成js对象</span>
+    <span class="hljs-keyword">var</span> data = <span class="hljs-built_in">eval</span>(<span class="hljs-string">"("</span>+e.data+<span class="hljs-string">")"</span>);
+    <span class="hljs-keyword">var</span> type = data.type || <span class="hljs-string">''</span>;
+    <span class="hljs-keyword">switch</span>(type){
+        <span class="hljs-comment">// Events.php中返回的init类型的消息，将client_id发给后台进行uid绑定</span>
+        <span class="hljs-keyword">case</span> <span class="hljs-string">'init'</span>:
+            <span class="hljs-comment">// 利用jquery发起ajax请求，将client_id发给后端进行uid绑定</span>
+            $.post(<span class="hljs-string">'./bind.php'</span>, {client_id: data.client_id}, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(data)</span>{</span>}, <span class="hljs-string">'json'</span>);
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-comment">// 当mvc框架调用GatewayClient发消息时直接alert出来</span>
+        <span class="hljs-keyword">default</span> :
+            alert(e.data);
+    }
+};
+</code></pre>
+<p><strong>mvc后端uid绑定代码片段</strong><br>
+bind.php</p>
+<pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
+<span class="hljs-comment">//加载GatewayClient</span>
+<span class="hljs-keyword">require_once</span> <span class="hljs-string">'/your/path/GatewayClient/Gateway.php'</span>;
+<span class="hljs-comment">// GatewayClient 3.0.0版本开始要使用命名空间</span>
+<span class="hljs-keyword">use</span> <span class="hljs-title">GatewayClient</span>\<span class="hljs-title">Gateway</span>;
+<span class="hljs-comment">// 设置GatewayWorker服务的Register服务ip和端口，请根据实际情况改成实际值</span>
+Gateway::<span class="hljs-variable">$registerAddress</span> = <span class="hljs-string">'127.0.0.1:1236'</span>;
+
+<span class="hljs-comment">// 假设用户已经登录，用户uid和群组id在session中</span>
+<span class="hljs-variable">$uid</span>      = <span class="hljs-variable">$_SESSION</span>[<span class="hljs-string">'uid'</span>];
+<span class="hljs-variable">$group_id</span> = <span class="hljs-variable">$_SESSION</span>[<span class="hljs-string">'group'</span>];
+<span class="hljs-comment">// client_id与uid绑定</span>
+Gateway::bindUid(<span class="hljs-variable">$client_id</span>, <span class="hljs-variable">$uid</span>);
+<span class="hljs-comment">// 加入某个群组（可调用多次加入多个群组）</span>
+Gateway::joinGroup(<span class="hljs-variable">$client_id</span>, <span class="hljs-variable">$group_id</span>);
+</code></pre>
+<p><strong>mvc后端发消息代码片段</strong><br>
+send_message.php</p>
+<pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
+<span class="hljs-comment">//加载GatewayClient</span>
+<span class="hljs-keyword">require_once</span> <span class="hljs-string">'/your/path/GatewayClient/Gateway.php'</span>;
+<span class="hljs-comment">// GatewayClient 3.0.0版本开始要使用命名空间</span>
+<span class="hljs-keyword">use</span> <span class="hljs-title">GatewayClient</span>\<span class="hljs-title">Gateway</span>;
+<span class="hljs-comment">// 设置GatewayWorker服务的Register服务ip和端口，请根据实际情况改成实际值</span>
+Gateway::<span class="hljs-variable">$registerAddress</span> = <span class="hljs-string">'127.0.0.1:1236'</span>;
+
+<span class="hljs-comment">// 向任意uid的网站页面发送数据</span>
+Gateway::sendToUid(<span class="hljs-variable">$uid</span>, <span class="hljs-variable">$message</span>);
+<span class="hljs-comment">// 向任意群组的网站页面发送数据</span>
+Gateway::sendToGroup(<span class="hljs-variable">$group</span>, <span class="hljs-variable">$message</span>);
+</code></pre>
+<h2 id="-gatewayclient">关于GatewayClient</h2>
+<p><strong>源码：</strong></p>
+<p><a href="https://github.com/walkor/GatewayClient" target="_blank">https://github.com/walkor/GatewayClient</a></p>
+<p><strong>注意：</strong></p>
+<p>如果GatewayClient和GatewayWorker不是在同一台服务器上，则需要先将start_gateway.php中的lanIp改成当前服务器的内网ip（如果不在一个内网可改成公网ip）。</p>
+<p>如果GatewayClient和GatewayWorker在同一台服务器上运行，则不用做任何更改，直接按照示例使用GatewayClient即可。</p>
+<p>通过GatewayClient发送的数据不会经过Event.php，而是直接经由Gateway进程转发给客户端。</p>
+<p>GatewayClient无法接收客户端发来的数据。</p>
+<p> <strong>客户端使用示例</strong></p>
+<pre><code class="lang-php"><span class="hljs-keyword">require_once</span> <span class="hljs-string">'/your/path/GatewayClient/Gateway.php'</span>;
+
+<span class="hljs-comment">/**
+ * gatewayClient 3.0.0及以上版本加了命名空间
+ * 而3.0.0以下版本不需要use GatewayClient\Gateway;
+ **/</span>
+<span class="hljs-keyword">use</span> <span class="hljs-title">GatewayClient</span>\<span class="hljs-title">Gateway</span>;
+
+<span class="hljs-comment">/**
+ *====这个步骤是必须的====
+ *这里填写Register服务的ip（通常是运行GatewayWorker的服务器ip）和端口
+ *注意Register服务端口在start_register.php中可以找到（chat默认是1236）
+ *这里假设GatewayClient和Register服务都在一台服务器上，ip填写127.0.0.1
+ **/</span>
+Gateway::<span class="hljs-variable">$registerAddress</span> = <span class="hljs-string">'127.0.0.1:1236'</span>;
+
+
+<span class="hljs-comment">// 以下是调用示例，接口与GatewayWorker环境的接口一致</span>
+<span class="hljs-comment">// 接口具体使用方法见《Lib\Gateway类提供的接口》一章</span>
+<span class="hljs-comment">// 注意除了不支持sendToCurrentClient和closeCurrentClient方法</span>
+<span class="hljs-comment">// 其它方法都支持</span>
+Gateway::sendToAll(<span class="hljs-variable">$data</span>);
+Gateway::sendToClient(<span class="hljs-variable">$client_id</span>, <span class="hljs-variable">$data</span>);
+Gateway::closeClient(<span class="hljs-variable">$client_id</span>);
+Gateway::isOnline(<span class="hljs-variable">$client_id</span>);
+Gateway::bindUid(<span class="hljs-variable">$client_id</span>, <span class="hljs-variable">$uid</span>);
+Gateway::isUidOnline(<span class="hljs-variable">$uid</span>);
+Gateway::getClientIdByUid(<span class="hljs-variable">$client_id</span>);
+Gateway::unbindUid(<span class="hljs-variable">$client_id</span>, <span class="hljs-variable">$uid</span>);
+Gateway::sendToUid(<span class="hljs-variable">$uid</span>, <span class="hljs-variable">$dat</span>);
+Gateway::joinGroup(<span class="hljs-variable">$client_id</span>, <span class="hljs-variable">$group</span>);
+Gateway::sendToGroup(<span class="hljs-variable">$group</span>, <span class="hljs-variable">$data</span>);
+Gateway::leaveGroup(<span class="hljs-variable">$client_id</span>, <span class="hljs-variable">$group</span>);
+Gateway::getClientCountByGroup(<span class="hljs-variable">$group</span>);
+Gateway::getClientSessionsByGroup(<span class="hljs-variable">$group</span>);
+Gateway::getAllClientCount();
+Gateway::getAllClientSessions();
+Gateway::setSession(<span class="hljs-variable">$client_id</span>, <span class="hljs-variable">$session</span>);
+Gateway::updateSession(<span class="hljs-variable">$client_id</span>, <span class="hljs-variable">$session</span>);
+Gateway::getSession(<span class="hljs-variable">$client_id</span>);
+...
+</code></pre>
 
                     
                     </section>
@@ -923,10 +1064,10 @@
         </div>
 
         
-        <a href="../gateway-worker-development/register.html" class="navigation navigation-prev " aria-label="Previous page: Register类的使用"><i class="fa fa-angle-left"></i></a>
+        <a href="../start-and-stop/README.html" class="navigation navigation-prev " aria-label="Previous page: 启动与停止"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../gateway-worker-development/onworkerstart.html" class="navigation navigation-next " aria-label="Next page: onWorkerStart"><i class="fa fa-angle-right"></i></a>
+        <a href="../protocols/README.html" class="navigation navigation-next " aria-label="Next page: 定制通讯协议"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
