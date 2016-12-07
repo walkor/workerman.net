@@ -1,4 +1,4 @@
-<h3>2016-11-27 workerman3.3.6版本发布</h3>
+<h3>2016-12-06 workerman3.3.6版本发布</h3>
 <ul>
 <li>支持<a href="https://github.com/reactphp" target="_balnk" rel="nofollow">ReactPHP</a>同步支持ReactPHP的以下组件</li>
 <li>支持异步Mysql客户端</li>
