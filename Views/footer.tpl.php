@@ -80,6 +80,7 @@ socket.on('update_online_count', function(count){$('#online_count').html(count);
     laychat.sendMessageUrl  = '/laychat/send_message.php';
     laychat.uploadFileUrl   = '/laychat/upload_file.php';
     laychat.uploadImageUrl  = '/laychat/upload_img.php';
+    laychat.updateSignUrl   = '/laychat/update_sign.php';
     laychat.setMin          = true;
     laychat.jq              = $;
     laychat.open();
