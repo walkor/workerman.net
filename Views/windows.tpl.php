@@ -16,10 +16,10 @@
 	<br><hr>
 	<h3>直接下载可用的windows demo</h3>
         <font class="f16">
-        windows版本聊天室<a href="/download/workerman-chat-for-win.zip" rel="nofollow">点击下载workerman-chat-for-win</a><br>
-        windows版本小蝌蚪聊天室<a href="/download/workerman-todpole-for-win.zip" rel="nofollow">点击下载workerman-todpole-for-win</a><br>
-        windows版本web消息推送框架<a href="/download/web-msg-sender-for-win.zip" rel="nofollow">点击下载web-msg-sender</a><br>
-        windows版本GatewayWorker<a href="/download/GatewayWorker-for-win.zip" rel="nofollow">点击下载GatewayWorker-for-win</a><br>
+        windows版本聊天室<a href="/download/workerman-chat-for-win.zip" rel="nofollow">点击下载workerman-chat-for-win</a> 详情参见<a href="/workerman-chat">这里</a><br>
+        windows版本小蝌蚪聊天室<a href="/download/workerman-todpole-for-win.zip" rel="nofollow">点击下载workerman-todpole-for-win</a> 详情参见<a href="/workerman-todpole">这里</a><br><br>
+        windows版本web消息推送框架<a href="/download/web-msg-sender-for-win.zip" rel="nofollow">点击下载web-msg-sender</a> 详情参见<a href="/web-sender">这里</a><br><br>
+        windows版本GatewayWorker<a href="/download/GatewayWorker-for-win.zip" rel="nofollow">点击下载GatewayWorker-for-win</a> 详情参见<a href="http://www.workerman.net/gatewaydoc/" rel="nofollow">这里</a><br><br>
        
         以上demo下载后双击start_for_win.bat即可启动（无需安装其它扩展）
         </font>
