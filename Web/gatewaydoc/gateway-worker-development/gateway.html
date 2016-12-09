@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="10" data-basepath=".." data-revision="1481248732702">
+    <div class="book"  data-level="10" data-basepath=".." data-revision="1481254662414">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -910,12 +910,32 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_40">
+                    <section class="normal" id="section-gitbook_900">
                     
                         <h1 id="gateway-">Gateway类的使用</h1>
 <p>文件位置：GatewayWorker/Gateway.php</p>
 <p>Gateway类用于初始化Gateway进程。Gateway进程是暴露给客户端的让其连接的进程。所有客户端的请求都是由Gateway接收然后分发给BusinessWorker处理，同样BusinessWorker也会将要发给客户端的响应通过Gateway转发出去。</p>
 <p>Gateway类是基于基础的Worker开发的。可以给Gateway对象的onWorkerStart、onWorkerStop、onConnect、onClose设置回调函数，但是无法给设置onMessage回调。Gateway的onMessage行为固定为将客户端数据转发给BusinessWorker。</p>
+<h2 id="-">初始化</h2>
+<p>初始化Gateway进程类似下面的代码</p>
+<pre><code class="lang-php"><span class="hljs-variable">$gateway</span> = <span class="hljs-keyword">new</span> Gateway(<span class="hljs-string">'protocol://ip:port'</span>);
+</code></pre>
+<p>其中参数各参数含义入下：</p>
+<p><strong>protocol：</strong></p>
+<p>为应用层协议，目前支持的协议有<br>
+1、<a href="http://doc3.workerman.net/appendices/about-websocket.html" target="_blank">websocket协议</a><br>
+2、<a href="http://doc3.workerman.net/appendices/about-text.html" target="_blank">text协议</a><br>
+3、<a href="http://doc3.workerman.net/appendices/about-frame.html" target="_blank">Frame协议</a><br>
+4、<a href="http://doc3.workerman.net/protocols/how-protocols.html" target="_blank">自定义通讯协议</a><br>
+5、<a href="http://baike.baidu.com/item/TCP/33012" target="_blank">tcp</a>，直接裸tcp，不推荐，见<a href="http://doc3.workerman.net/protocols/why-protocols.html" target="_blank">通讯协议作用</a>。</p>
+<p><code>注意</code>:GatewayWorker不支持监听Http协议和ws协议。但是可以在业务中以客户端的形式通过http协议(比如curl)或者ws协议(配合<a href="http://doc3.workerman.net/appendices/about-ws.html" target="_blank">AsyncTcpConnection</a>)访问远程服务器。</p>
+<p><strong>ip：</strong></p>
+<p>1、如果写0.0.0.0代表监听本机所有网卡，也就是内网、外网、本机都可以访问到</p>
+<p>2、如果是127.0.0.1，代表只能本机通过127.0.0.1访问，外网和内网都访问不到</p>
+<p>3、如果是内网ip例如:192.168.10.11，代表只能通过192.168.10.11访问，也就是只能内网访问，本机127.0.0.1也访问不了（如果监听的ip不属于本机则会报错）</p>
+<p>4、如果是外网ip例如110.110.110.110，代表只能通过外网ip 110.110.110.110访问，内网和本机127.0.0.1都访问不了(如果监听的ip不属于本机则会报错)</p>
+<p><strong>port：</strong></p>
+<p>端口不能大于65535，请确认端口没有被其它程序占用，否则启动会报错。如果端口小于1024，需要root权限运行GatewayWorker才能有权限监听，否则报错没有权限。</p>
 <h2 id="gateway-">Gateway类可以定制的内容</h2>
 <p>1、 协议</p>
 <p>和Worker一样，在初始化Gateway对象时设置Gateway的协议，例如下面设置Gateway的通讯协议为websocket</p>
