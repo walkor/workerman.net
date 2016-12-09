@@ -340,6 +340,7 @@
 				<a class="btn" target="_blank" href="http://doc.webworker.xtgxiso.com/" rel="nofollow">文档 »</a>
 			</div>
 		</div>
+
 		
         <div class="media">
 			<div class="media-body">
@@ -350,6 +351,17 @@ ThinkPHP官方提供的ThinkPHP 5.0 Workerman 扩展。
 				<a class="btn" target="_blank" href="https://github.com/top-think/think-worker" rel="nofollow">下载源代码 »</a>
 			</div>
 		</div>
+
+                <div class="media">
+			<div class="media-body">
+				<h4 class="media-heading">
+					<a target="_blank" href="https://github.com/moxiaobai/scheduledTask-workerman" rel="nofollow">scheduledTask-workerman</a>
+				</h4>
+				基于workerman和yaf开发的计划任务系统。web端管理计划任务，查看任务日志，异常报警。 如果计划任务很少，直接用linux的crontab即可。<br>
+				<a class="btn" target="_blank" href="https://github.com/moxiaobai/scheduledTask-workermanr" rel="nofollow">下载源代码 »</a>
+			</div>
+		</div>
+
 		<div class="media">
 			<div class="media-body">
 				<h4 class="media-heading">
