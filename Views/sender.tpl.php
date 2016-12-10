@@ -38,8 +38,11 @@
 					<a class="btn btn-default btn-large" href="/download/web-msg-sender-for-win.zip"><b>下载Win版本ZIP压缩文件</b> </a> 
 				</div>
 			</div>
-			<h3><a href="https://github.com/walkor/phpsocket.io/tree/master/docs/zh" rel="nofollow">PHPSocket.IO开发手册</a></h3>
-                        <b>Demo1:</b><br>
+			<h3>PHPSocket.IO开发手册</h3>
+			<a href="https://github.com/walkor/phpsocket.io/tree/master/docs/zh" rel="nofollow">PHPSocket.IO开发手册</a>			
+                        
+			<h3>Demo:</h3>
+			
                         <p class="f16">接收消息页面：<a rel="nofollow" href="http://www.workerman.net:2123/">http://www.workerman.net:2123/</a></p>
 			<p class="f16">推送接口url：<a rel="nofollow" href="http://www.workerman.net:2121/?type=publish&to=&content=content">http://www.workerman.net:2121/?type=publish&to=uid&content=content</a><br>
 其中to为接收消息的uid，如果传空则向所有人推送消息
