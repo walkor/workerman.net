@@ -12,7 +12,7 @@
 				WEB消息推送框架
 			</h2>
 			<p class="f16">
-				web-msg-sender是一款web长连接推送框架，采用PHPSocket.IO开发，基于WebSocket长连接通讯，如果浏览器不支持WebSocket则自动转用comet推送。
+				web-msg-sender是一款web长连接推送框架，采用<a href="/phpsocket_io">PHPSocket.IO开发</a>，基于WebSocket长连接通讯，如果浏览器不支持WebSocket则自动转用comet推送。
 				通过后台推送消息，消息可以即时推送到客户端，非轮询，实时性非常好，性能很高。
 			</p>
 			<div class="f16">
@@ -38,6 +38,7 @@
 					<a class="btn btn-default btn-large" href="/download/web-msg-sender-for-win.zip"><b>下载Win版本ZIP压缩文件</b> </a> 
 				</div>
 			</div>
+			<h3><a href="https://github.com/walkor/phpsocket.io/tree/master/docs/zh" rel="nofollow">PHPSocket.IO开发手册</a></h3>
                         <b>Demo1:</b><br>
                         <p class="f16">接收消息页面：<a rel="nofollow" href="http://www.workerman.net:2123/">http://www.workerman.net:2123/</a></p>
 			<p class="f16">推送接口url：<a rel="nofollow" href="http://www.workerman.net:2121/?type=publish&to=&content=content">http://www.workerman.net:2121/?type=publish&to=uid&content=content</a><br>
