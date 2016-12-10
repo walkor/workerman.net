@@ -42,14 +42,14 @@
 			<a href="https://github.com/walkor/phpsocket.io/tree/master/docs/zh" rel="nofollow">PHPSocket.IO开发手册</a>			
                         
 			<h3>Demo:</h3>
-			
+			<b>效果1:<b>
                         <p class="f16">接收消息页面：<a rel="nofollow" href="http://www.workerman.net:2123/">http://www.workerman.net:2123/</a></p>
 			<p class="f16">推送接口url：<a rel="nofollow" href="http://www.workerman.net:2121/?type=publish&to=&content=content">http://www.workerman.net:2121/?type=publish&to=uid&content=content</a><br>
 其中to为接收消息的uid，如果传空则向所有人推送消息
 content 为消息内容
 			</p>
                         <br>
-                        <b>Demo2:</b><br>
+                        <b>效果2:</b><br>
                         <p class="f16">见本页面页脚在线统计部分，支持实时的在线人数和在线页面统计</p>
 			<div class="bd-ad"><?php global $bd_ad_468_60; echo $bd_ad_468_60;?></div>
 		</div>
