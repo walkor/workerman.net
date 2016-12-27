@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="19.3" data-basepath=".." data-revision="1482415441350">
+    <div class="book"  data-level="19.3" data-basepath=".." data-revision="1482811520843">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -910,13 +910,13 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_238">
+                    <section class="normal" id="section-gitbook_199">
                     
                         <h1 id="gateway-worker-">gateway worker 分离部署</h1>
 <h2 id="-gateway-worker-">什么是Gateway Worker分离部署</h2>
-<p>GatewayWorker模式有两组进程，Gateway进程负责网络IO，BusinessWorker进程负责业务处理，Gateway与BusinessWorker之间使用TCP长连接通讯。我们可以把Gateway BusinessWorker分开部署在不同的服务器上，当业务进程BusinessWorker出现瓶颈时，单独增加BusinessWorker服务器提升系统负载能力。同理，如果Gateway进程出现瓶颈，则增加Gateway服务器。</p>
+<p>GatewayWorker有三种进程，Gateway进程负责网络IO，BusinessWorker进程负责业务处理，Register进程负责协调Gateway与BusinessWorker之间建立TCP长连接通讯。我们可以把Gateway BusinessWorker Register分开部署在不同的服务器上，当业务进程BusinessWorker出现瓶颈时，单独增加BusinessWorker服务器提升系统负载能力。同理，如果Gateway进程出现瓶颈，则增加Gateway服务器。而Register服务一个集群只需要部署一台服务器，Register服务只有在进程启动的时候协调Gateway与BusinessWorker建立TCP连接，集群运行起来后通讯量极低，不会成为系统瓶颈。</p>
 <h1 id="-">部署示例</h1>
-<p>以Applications/Todpole为例，假如需要部署三台服务器提供高可用服务。瓶颈在BusinessWorker进程，则可使用1台作为gateway服务器，另外两台做BusinessWorker服务器。（如果瓶颈在gateway进程（一般是带宽瓶颈），则可以2台gateway机器，1台BusinessWorker机器，部署方法类似）。</p>
+<p>以Applications/Todpole为例，假如需要部署三台服务器提供高可用服务。瓶颈在BusinessWorker进程，则可使用1台作为gateway服务器，另外两台做BusinessWorker服务器。（如果瓶颈在gateway进程（一般是带宽瓶颈），则可以2台gateway机器，1台BusinessWorker机器，部署方法类似）。Register服务可以部署在任意一台服务器上。</p>
 <h2 id="gateway-worker-">gateway worker 分离部署扩容步骤</h2>
 <p>1、由于一个集群只需要一台服务器运行Register服务，这里选择192.168.0.1，端口是1236（端口为start_register.php中监听的端口），其它服务器中start_register.php中的代码可以注释掉。</p>
 <p>2、将进程切分，将Gateway进程部署在一台机器上(假设内网ip为192.168.0.1)，这台服务器也运行着集群的Register服务，而BusinessWorker部署在另外两台机器上（内网ip为192.168.0.2/3）。</p>
