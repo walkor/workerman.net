@@ -88,6 +88,15 @@ socket.on('update_online_count', function(count){$('#online_count').html(count);
     laychat.jq              = $;
     laychat.open();
 </script>
+<style>
+.layui-layim-list li p {
+    display: block;
+    line-height: 18px;
+    font-size: 12px;
+    color: #999;
+    text-indent: 0;
+}
+</style>
 
 </body>
 </html>
