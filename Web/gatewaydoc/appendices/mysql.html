@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="21.1" data-basepath=".." data-revision="1482811520843">
+    <div class="book"  data-level="21.1" data-basepath=".." data-revision="1483589227789">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -910,7 +910,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_243">
+                    <section class="normal" id="section-gitbook_506">
                     
                         <h2 id="gateway-worker-">Gateway/Worker模型 数据库使用示例</h2>
 <h2 id="-">说明</h2>
@@ -918,12 +918,18 @@
 <h2 id="-">提示</h2>
 <p>该mysql类依赖<a href="http://php.net/manual/zh/book.pdo.php" target="_blank">pdo</a>和<a href="http://php.net/manual/zh/ref.pdo-mysql.php" target="_blank">pdo_mysql</a>两个扩展，缺少扩展会报<code>Undefined class constant &#39;MYSQL_ATTR_INIT_COMMAND&#39; in ....</code>错误。</p>
 <p>命令行运行<code>php -m</code>会列出所有php cli已安装的扩展，如果没有pdo 或者 pdo_mysql，请自行安装。</p>
-<p>centos系统</p>
+<p><strong>centos系统</strong></p>
 <pre><code>yum install php-pdo
 yum install php-mysql
-</code></pre><p>ubuntu/debian系统</p>
+</code></pre><p>如果找不到包名，请尝试用<code>yum search php mysql</code>查找</p>
+<p><strong>ubuntu/debian系统</strong></p>
+<p>PHP5.x</p>
 <pre><code>apt-get install php5-mysql
-</code></pre><p>如果以上方法无法安装，请参考<a href="http://doc3.workerman.net/appendices/install-extension.html" target="_blank">workerman手册-附录-扩展安装</a>一节安装。</p>
+</code></pre><p>PHP7.x</p>
+<pre><code>apt-get install php7.0-mysql
+</code></pre><p>如果找不到包名，请尝试用<code>apt-cache search php mysql</code>查找</p>
+<p><strong>以上方法无法安装？</strong></p>
+<p>如果以上方法无法安装，请参考<a href="http://doc3.workerman.net/appendices/install-extension.html" target="_blank">workerman手册-附录-扩展安装-方法三源码编译安装</a>。</p>
 <h2 id="-">注意</h2>
 <p>请在<code>onXXXX</code>回调中使用数据库类。在<code>Worker::runAll();</code>前初始化数据库单例会导致数据错乱，参看下面例子中错误用法部分和正确用法部分。</p>
 <pre><code class="lang-php"><span class="hljs-keyword">use</span> \<span class="hljs-title">Workerman</span>\<span class="hljs-title">Worker</span>;
