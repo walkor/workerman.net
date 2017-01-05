@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# Revision 1483589227790
+# Revision 1483590618434
 
 CACHE:
 gateway-worker-development/leave-group.html
@@ -17,8 +17,8 @@ gateway-worker-development/get-all-client-sessions.html
 gateway-worker-development/get-client-count-by-group.html
 gateway-worker-development/get-client-id-by-uid.html
 gateway-worker-development/get-client-sessions-by-group.html
-gateway-worker-development/get-session.html
 gateway-worker-development/get-uid-by-client-id.html
+gateway-worker-development/get-session.html
 gateway-worker-development/heartbeat.html
 gateway-worker-development/how-distributed.html
 gateway-worker-development/is-online.html
@@ -48,8 +48,8 @@ gateway-worker-development/unbind-uid.html
 gateway-worker-development/update-session.html
 gateway-worker-development/why-distributed.html
 index.html
-advanced/README.html
 advanced/file-monitor.html
+advanced/README.html
 advanced/multi-gatewayworker-instance.html
 advanced/multi-protocols.html
 advanced/push.html

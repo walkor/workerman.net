@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="21.1" data-basepath=".." data-revision="1483589227789">
+    <div class="book"  data-level="21.1" data-basepath=".." data-revision="1483590618433">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -910,7 +910,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_506">
+                    <section class="normal" id="section-gitbook_872">
                     
                         <h2 id="gateway-worker-">Gateway/Worker模型 数据库使用示例</h2>
 <h2 id="-">说明</h2>
@@ -947,7 +947,7 @@ Autoloader::setRootPath(<span class="hljs-keyword">__DIR__</span>);
  * 子进程会继承这个数据库单例(包括其中的数据库链接资源)，
  * 当mysql返回数据时，所有子进程都可以通过这个连接读取返回数据，
  * 导致数据错乱。
- * 同理：其它单例的连接资源(memcache\redis等)也不能在Worker::runAll前初始化。
+ * 同理：其它单例的连接资源(memcache\redis等)也不能在Worker::runAll运行前初始化。
  */</span>
 Db::instance(<span class="hljs-string">'db1'</span>)-&gt;select(<span class="hljs-string">'name,age'</span>)-&gt;from(<span class="hljs-string">'users'</span>)-&gt;where(<span class="hljs-string">'age&gt;12'</span>)-&gt;query();
 
@@ -1003,6 +1003,7 @@ Db::instance(<span class="hljs-string">'db1'</span>)-&gt;select(<span class="hlj
     );
 }
 </code></pre>
+<p><strong>注意：</strong>上面配置中<code>Config/Db::$db1</code>是数据库配置名，获取实例的方法与其对应是<code>Db::instance(&#39;db1&#39;)</code>，而不是<code>Db::instance(&#39;your_db_name&#39;)</code>。</p>
 <p>2、项目/Event.php</p>
 <pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
 <span class="hljs-keyword">use</span> \<span class="hljs-title">GatewayWorker</span>\<span class="hljs-title">Lib</span>\<span class="hljs-title">Gateway</span>;
@@ -1029,7 +1030,7 @@ Db::instance(<span class="hljs-string">'db1'</span>)-&gt;select(<span class="hlj
             Gateway::sendToClient(<span class="hljs-variable">$client_id</span>, <span class="hljs-string">"unknown commend\n"</span>);
             <span class="hljs-keyword">return</span>;
         }
-        <span class="hljs-comment">// 获取用户列表（这里是临时的一个测试数据库）</span>
+        <span class="hljs-comment">// 注意，这里的db1对应的是Config/Db::$db1 的配置</span>
         <span class="hljs-variable">$ret</span> = Db::instance(<span class="hljs-string">'db1'</span>)-&gt;select(<span class="hljs-string">'*'</span>)-&gt;from(<span class="hljs-string">'users'</span>)-&gt;where(<span class="hljs-string">'uid&gt;3'</span>)-&gt;offset(<span class="hljs-number">5</span>)-&gt;limit(<span class="hljs-number">2</span>)-&gt;query();
         <span class="hljs-comment">// 打印结果</span>
         <span class="hljs-keyword">return</span> Gateway::sendToClient(<span class="hljs-variable">$client_id</span>, var_export(<span class="hljs-variable">$ret</span>, <span class="hljs-keyword">true</span>));
@@ -1068,7 +1069,9 @@ Db::instance(<span class="hljs-string">'db1'</span>)-&gt;select(<span class="hlj
 </code></pre>
 <h2 id="-">使用方法</h2>
 <pre><code class="lang-php"><span class="hljs-keyword">use</span> \<span class="hljs-title">GatewayWorker</span>\<span class="hljs-title">Lib</span>\<span class="hljs-title">Db</span>;
+<span class="hljs-comment">// 注意，这里的db1对应的是Config/Db::$db1 的配置</span>
 <span class="hljs-variable">$db1</span> = Db::instance(<span class="hljs-string">'db1'</span>);
+<span class="hljs-comment">// 注意，这里的db2对应的是Config/Db::$db2 的配置</span>
 <span class="hljs-variable">$db2</span> = Db::instance(<span class="hljs-string">'db2'</span>);
 
 <span class="hljs-comment">// 获取所有数据</span>
@@ -1123,6 +1126,11 @@ y(<span class="hljs-string">'age'</span> =&gt; <span class="hljs-number">13</spa
 <span class="hljs-variable">$row_count</span> = <span class="hljs-variable">$db1</span>-&gt;delete(<span class="hljs-string">'Persons'</span>)-&gt;where(<span class="hljs-string">'ID=9'</span>)-&gt;query();
 <span class="hljs-comment">// 等价于</span>
 <span class="hljs-variable">$row_count</span> = <span class="hljs-variable">$db1</span>-&gt;query(<span class="hljs-string">"DELETE FROM `Persons` WHERE ID=9"</span>);
+
+<span class="hljs-comment">// 事务</span>
+<span class="hljs-variable">$db1</span>-&gt;beginTrans();
+....
+<span class="hljs-variable">$db1</span>-&gt;commitTrans(); <span class="hljs-comment">// or $db1-&gt;rollBackTrans();</span>
 </code></pre>
 
                     
