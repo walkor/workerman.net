@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="21.1" data-basepath=".." data-revision="1484033474802">
+    <div class="book"  data-level="21.1" data-basepath=".." data-revision="1484055786069">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -910,7 +910,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_244">
+                    <section class="normal" id="section-gitbook_340">
                     
                         <h2 id="gateway-worker-">Gateway/Worker模型 数据库使用示例</h2>
 <h2 id="-">说明</h2>
@@ -1079,7 +1079,7 @@ Db::instance(<span class="hljs-string">'db1'</span>)-&gt;select(<span class="hlj
 <span class="hljs-comment">//等价于</span>
 <span class="hljs-variable">$db1</span>-&gt;select(<span class="hljs-string">'ID,Sex'</span>)-&gt;from(<span class="hljs-string">'Persons'</span>)-&gt;where(<span class="hljs-string">"sex= 'F' "</span>)-&gt;query();
 <span class="hljs-comment">//等价于</span>
-<span class="hljs-variable">$db1</span>-&gt;query(<span class="hljs-string">"SELECT ID,Sex FROM `Persons` WHERE sex=‘M’"</span>);
+<span class="hljs-variable">$db1</span>-&gt;query(<span class="hljs-string">"SELECT ID,Sex FROM `Persons` WHERE sex='M'"</span>);
 
 
 <span class="hljs-comment">// 获取一行数据</span>
@@ -1087,7 +1087,7 @@ Db::instance(<span class="hljs-string">'db1'</span>)-&gt;select(<span class="hlj
 <span class="hljs-comment">//等价于</span>
 <span class="hljs-variable">$db1</span>-&gt;select(<span class="hljs-string">'ID,Sex'</span>)-&gt;from(<span class="hljs-string">'Persons'</span>)-&gt;where(<span class="hljs-string">"sex= 'F' "</span>)-&gt;row();
 <span class="hljs-comment">//等价于</span>
-<span class="hljs-variable">$db1</span>-&gt;row(<span class="hljs-string">"SELECT ID,Sex FROM `Persons` WHERE sex=‘M’"</span>);
+<span class="hljs-variable">$db1</span>-&gt;row(<span class="hljs-string">"SELECT ID,Sex FROM `Persons` WHERE sex='M'"</span>);
 
 
 <span class="hljs-comment">// 获取一列数据</span>
@@ -1095,7 +1095,7 @@ Db::instance(<span class="hljs-string">'db1'</span>)-&gt;select(<span class="hlj
 <span class="hljs-comment">//等价于</span>
 <span class="hljs-variable">$db1</span>-&gt;select(<span class="hljs-string">'ID'</span>)-&gt;from(<span class="hljs-string">'Persons'</span>)-&gt;where(<span class="hljs-string">"sex= 'F' "</span>)-&gt;column();
 <span class="hljs-comment">//等价于</span>
-<span class="hljs-variable">$db1</span>-&gt;column(<span class="hljs-string">"SELECT `ID` FROM `Persons` WHERE sex=‘M’"</span>);
+<span class="hljs-variable">$db1</span>-&gt;column(<span class="hljs-string">"SELECT `ID` FROM `Persons` WHERE sex='M'"</span>);
 
 <span class="hljs-comment">// 获取单个值</span>
 <span class="hljs-variable">$db1</span>-&gt;select(<span class="hljs-string">'ID,Sex'</span>)-&gt;from(<span class="hljs-string">'Persons'</span>)-&gt;where(<span class="hljs-string">'sex= :sex'</span>)-&gt;bindValues(<span class="hljs-keyword">array</span>(<span class="hljs-string">'sex'</span>=&gt;<span class="hljs-string">'M'</span>))-&gt;single();
@@ -1105,7 +1105,7 @@ Db::instance(<span class="hljs-string">'db1'</span>)-&gt;select(<span class="hlj
 <span class="hljs-variable">$db1</span>-&gt;single(<span class="hljs-string">"SELECT ID,Sex FROM `Persons` WHERE sex='M'"</span>);
 
 <span class="hljs-comment">// 复杂查询</span>
-<span class="hljs-variable">$db1</span>-&gt;select(<span class="hljs-string">'*'</span>)-&gt;from(<span class="hljs-string">'table1'</span>)-&gt;innerJoin(<span class="hljs-string">'table2'</span>,<span class="hljs-string">'table1.uid = table2.uid'</span>)-&gt;where(<span class="hljs-string">'age &gt; :age'</span>)-&gt;groupBy(<span class="hljs-keyword">array</span>(<span class="hljs-string">'aid'</span>))-&gt;having(<span class="hljs-string">'foo="foo"'</span>)-&gt;orderBy(<span class="hljs-keyword">array</span>(<span class="hljs-string">'did'</span>))-&gt;limit(<span class="hljs-number">10</span>)-&gt;offset(<span class="hljs-number">20</span>)-&gt;bindValues(arra
+<span class="hljs-variable">$db1</span>-&gt;select(<span class="hljs-string">'*'</span>)-&gt;from(<span class="hljs-string">'table1'</span>)-&gt;innerJoin(<span class="hljs-string">'table2'</span>,<span class="hljs-string">'table1.uid = table2.uid'</span>)-&gt;where(<span class="hljs-string">'age &gt; :age'</span>)-&gt;groupBy(<span class="hljs-keyword">array</span>(<span class="hljs-string">'aid'</span>))-&gt;having(<span class="hljs-string">'foo="foo"'</span>)-&gt;orderByASC<span class="hljs-comment">/*orderByDESC*/</span>(<span class="hljs-keyword">array</span>(<span class="hljs-string">'did'</span>))-&gt;limit(<span class="hljs-number">10</span>)-&gt;offset(<span class="hljs-number">20</span>)-&gt;bindValues(arra
 y(<span class="hljs-string">'age'</span> =&gt; <span class="hljs-number">13</span>));
 <span class="hljs-comment">// 等价于</span>
 <span class="hljs-variable">$db1</span>-&gt;query(SELECT * FROM `table1` INNER JOIN `table2` ON `table1`.`uid` = `table2`.`uid` WHERE age &gt; <span class="hljs-number">13</span> GROUP BY aid HAVING foo=<span class="hljs-string">"foo"</span> ORDER BY did LIMIT <span class="hljs-number">10</span> OFFSET <span class="hljs-number">20</span>“);
