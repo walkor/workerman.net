@@ -17,7 +17,6 @@
 	<!--script src="/js/less-1.3.3.min.js"></script-->
 	<!--append ‘#!watch’ to the browser URL, then refresh the page. -->
 
-    <link rel="stylesheet" href="http://s.workerman.net/layui/css/layui.css">
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/css/style.css" rel="stylesheet">
 
