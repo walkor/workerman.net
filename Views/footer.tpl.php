@@ -65,6 +65,8 @@ socket.on('connect', function(){socket.emit('login', '<?php echo session_id();?>
 socket.on('update_online_count', function(count){$('#online_count').html(count);});
 </script>
 <link rel="stylesheet" href="http://s.workerman.net/layui/css/layui.css">
+<link href="/css/bootstrap.min.css" rel="stylesheet">
+<link href="/css/style.css" rel="stylesheet">
 <script src="http://s.workerman.net/common/swfobject.js"></script>
 <script src="http://s.workerman.net/common/json2.js"></script>
 <script src="http://s.workerman.net/common/web_socket.js"></script>
