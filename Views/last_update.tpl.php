@@ -1,3 +1,9 @@
+<h3>2017-02-05 workerman3.3.7版本发布</h3>
+<ul>
+<li>原生支持<a href="http://doc3.workerman.net/worker-development/transport.html" target="_balnk" rel="nofollow">SSL</a>，用来支持https以及wss</li>
+</ul>
+<hr>
+
 <h3>2016-12-06 workerman3.3.6版本发布</h3>
 <ul>
 <li>支持<a href="https://github.com/reactphp" target="_balnk" rel="nofollow">ReactPHP</a>同步支持ReactPHP的以下组件</li>
