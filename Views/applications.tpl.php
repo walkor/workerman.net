@@ -1,4 +1,4 @@
-<ul class="breadcrumb">
+<ul class="breadcrumb"> 
 	<li class="active">
 		相关应用
 	</li>
