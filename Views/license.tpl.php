@@ -21,7 +21,9 @@
 <div class="row clearfix">
 	<div class="col-md-9 column">
 	<h3>协议许可的权利</h3>
+		<br><br>
 		Workerman是开源免费的自由软件，授权协议是<a href="https://opensource.org/licenses/MIT">MIT</a>.
+		<br><br><br><br><br><br><br><br>
         </div>
 	<div class="col-md-3 column">
 	
