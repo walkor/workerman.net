@@ -3,7 +3,7 @@
 		相关应用
 	</li>
 </ul>
-		<div class="media">
+		<div class="media"> 
 			 <a href="http://www.meilibo.net/" class="pull-left" target="_blank" ><img src="/img/meilibo.jpg" class="media-object" alt='美丽播截图' /></a>
 			<div class="media-body">
 				<h4 class="media-heading">
