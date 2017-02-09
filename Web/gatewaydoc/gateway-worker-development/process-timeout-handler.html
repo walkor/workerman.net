@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="10.1.3" data-basepath=".." data-revision="1486464193720">
+    <div class="book"  data-level="10.1.3" data-basepath=".." data-revision="1486613193344">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -937,15 +937,17 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_218">
+                    <section class="normal" id="section-gitbook_123">
                     
                         <h1 id="processtimeouthandler">processTimeoutHandler</h1>
 <h2 id="-">说明:</h2>
 <pre><code class="lang-php">callback BusinessWorker::<span class="hljs-variable">$processTimeoutHandler</span>
 </code></pre>
-<p><strong>(注意：此特性需要GatewayWorker版本&gt;=2.0.2，如何查看版本号参考《常见问题》一章)</strong></p>
-<p>(此属性一般不用设置)</p>
+<p><code>(需要GatewayWorker版本&gt;=2.0.2)</code></p>
 <p>设置超时处理函数，即当发生超时事件时执行的回调函数，默认值为<code>Workerman\\Worker::log</code>，即记录日志到<code>GatewayWorker/workerman.log</code>（可以设置<code>Worker::$logFile</code>更改日志文件）</p>
+<p><strong>注意：</strong></p>
+<p>1、需要GatewayWorker版本&gt;=2.0.2，如何查看版本号参考《常见问题》一章</p>
+<p>2、不支持windows系统</p>
 <h2 id="-">回调函数参数</h2>
 <p><code>$trace_str</code></p>
 <p>字符串类型，内容是超时的调用栈。</p>

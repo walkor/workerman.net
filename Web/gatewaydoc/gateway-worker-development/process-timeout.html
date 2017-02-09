@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="10.1.2" data-basepath=".." data-revision="1486464193720">
+    <div class="book"  data-level="10.1.2" data-basepath=".." data-revision="1486613193344">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -937,17 +937,19 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_219">
+                    <section class="normal" id="section-gitbook_124">
                     
                         <h1 id="processtimeout">processTimeout</h1>
 <h2 id="-">说明:</h2>
 <pre><code class="lang-php">int BusinessWorker::<span class="hljs-variable">$processTimeout</span>
 </code></pre>
-<p><strong>(注意：此特性需要GatewayWorker版本&gt;=2.0.2，如何查看版本号参考《常见问题》一章)</strong></p>
-<p>(此属性一般不用设置)</p>
+<p><code>(需要GatewayWorker版本&gt;=2.0.2)</code></p>
 <p>设置监控服务端业务超时时间（单位秒）。不设置默认是30秒，设置为0表示不监控。</p>
 <p>此属性用于监控<code>Events::onConnect Events::onMessage Events::onClose</code>的执行时间，单次执行时间如果超过<code>BusinessWorker::$processTimeout</code>设定的值，则记录一条日志到workerman.log，日志中包含超时的调用栈，这对于排查业务长时间阻塞以及死循环等问题非常有帮助。</p>
-<p>注意：此属性需要在Events.php文件头部设置一条语句<code>declare(ticks=1);</code>才能生效，见下面示例。</p>
+<p><strong>注意：</strong></p>
+<p>1、需要GatewayWorker版本&gt;=2.0.2，如何查看版本号参考《常见问题》一章</p>
+<p>2、不支持windows系统</p>
+<p>3、此属性需要在Events.php文件头部设置一条语句<code>declare(ticks=1);</code>才能生效，见下面示例。</p>
 <h2 id="-">范例</h2>
 <p>start_businessworker.php</p>
 <pre><code class="lang-php"><span class="hljs-keyword">use</span> \<span class="hljs-title">Workerman</span>\<span class="hljs-title">Worker</span>;
