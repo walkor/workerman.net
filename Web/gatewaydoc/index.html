@@ -30,7 +30,7 @@
 
 
         
-    <div class="book"  data-level="0" data-basepath="." data-revision="1487387488212">
+    <div class="book"  data-level="0" data-basepath="." data-revision="1487387777803">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -935,7 +935,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_205">
+                    <section class="normal" id="section-gitbook_277">
                     
                         <h1 id="gatewayworker2-x-3-x-">GatewayWorker2.x 3.x 手册</h1>
 <p>本手册适用于GatewayWorker2.x版本以及3.x版本。</p>
@@ -944,7 +944,7 @@
 <p>GatewayWorker使用经典的Gateway和Worker进程模型。Gateway进程负责维持客户端连接，并转发客户端的数据给BusinessWorker进程处理，BusinessWorker进程负责处理实际的业务逻辑（默认调用Events.php处理业务），并将结果推送给对应的客户端。Gateway服务和BusinessWorker服务可以分开部署在不同的服务器上，实现分布式集群。</p>
 <p>GatewayWorker提供非常方便的API，可以全局广播数据、可以向某个群体广播数据、也可以向某个特定客户端推送数据。配合Workerman的定时器，也可以定时推送数据。</p>
 <h2 id="gatewayworker-workerman-">GatewayWorker 与 Workerman的关系</h2>
-<p>Workerman可以看做是一个纯粹的socket类库，可以开发几乎所有的网络应用，不管是TCP的还是UDP的，长连接的还是短连接的。Workerman代码精简，功能强大，使用灵活，能够快速开发出各种网络应用。同时也Workerman相比GatewayWorker也更底层，需要开发者有一定的多进程编程经验。</p>
+<p>Workerman可以看做是一个纯粹的socket类库，可以开发几乎所有的网络应用，不管是TCP的还是UDP的，长连接的还是短连接的。Workerman代码精简，功能强大，使用灵活，能够快速开发出各种网络应用。同时Workerman相比GatewayWorker也更底层，需要开发者有一定的多进程编程经验。</p>
 <p>因为绝大多数开发者的目标是基于Workerman开发TCP长连接应用，而长连接应用服务端有很多共同之处，例如它们有相同的进程模型以及单发、群发、广播等接口需求。所以才有了GatewayWorker框架，GatewayWorker是基于Workerman开发的一个TCP长连接框架，实现了单发、群送、广播等长连接必用的接口，并且内置了MySql类库。GatewayWorker框架实现了Gateway Worker进程模型，天然支持分布式多服务器部署，扩容缩容非常方便，能够应对海量并发连接。可以说GatewayWorker是基于Workerman实现的一个更完善的专门用于实现TCP长连接的项目框架。</p>
 <h2 id="-gatewayworker-workerman-">用GatewayWorker还是Workerman？</h2>
 <p>如果你的项目是长连接并且需要客户端与客户端之间通讯，建议使用GatewayWorker。<br>
