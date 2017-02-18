@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="7" data-basepath=".." data-revision="1487138558924">
+    <div class="book"  data-level="7" data-basepath=".." data-revision="1487387488212">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -937,7 +937,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_81">
+                    <section class="normal" id="section-gitbook_229">
                     
                         <h1 id="-thinkphp-">与ThinkPHP等框架结合</h1>
 <p>使用GatewayWorker时开发者最关心的是如何与现有mvc框架(ThinkPHP Yii laravel等)整合，以下是官方推荐的整合方式。见示意图：</p>
@@ -971,7 +971,7 @@
         )));
     }
 
-    <span class="hljs-comment">// GatewayWorker不做任何业务逻辑，onMessage留空即可</span>
+    <span class="hljs-comment">// GatewayWorker建议不做任何业务逻辑，onMessage留空即可</span>
     <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onMessage</span><span class="hljs-params">(<span class="hljs-variable">$client_id</span>, <span class="hljs-variable">$message</span>)</span>
     {</span>
 
@@ -979,7 +979,12 @@
 }
 </code></pre>
 <p><strong>网站页面js片段</strong></p>
-<pre><code class="lang-javascript"><span class="hljs-comment">// 与GatewayWorker建立websocket连接，域名和端口改为你实际的域名端口</span>
+<pre><code class="lang-javascript"><span class="hljs-comment">/**
+ * 与GatewayWorker建立websocket连接，域名和端口改为你实际的域名端口，
+ * 其中端口为Gateway端口，即start_gateway.php指定的端口。
+ * start_gateway.php 中需要指定websocket协议，像这样
+ * $gateway = new Gateway(websocket://0.0.0.0:7272);
+ */</span>
 ws = <span class="hljs-keyword">new</span> WebSocket(<span class="hljs-string">"ws://your_domain.com:7272"</span>);
 <span class="hljs-comment">// 服务端主动推送消息时会触发这里的onmessage</span>
 ws.onmessage = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(e)</span>{</span>
