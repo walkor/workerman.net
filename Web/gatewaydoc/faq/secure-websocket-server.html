@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="21.11" data-basepath=".." data-revision="1487387777803">
+    <div class="book"  data-level="21.11" data-basepath=".." data-revision="1487591311623">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -937,7 +937,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_292">
+                    <section class="normal" id="section-gitbook_78">
                     
                         <h1 id="-wss-">创建wss服务</h1>
 <p><strong>准备工作：</strong></p>
@@ -947,8 +947,9 @@
 <p><strong>start_gateway.php中设置以下代码。</strong></p>
 <pre><code class="lang-php"><span class="hljs-variable">$context</span> = <span class="hljs-keyword">array</span>(
     <span class="hljs-string">'ssl'</span> =&gt; <span class="hljs-keyword">array</span>(
-        <span class="hljs-string">'local_cert'</span> =&gt; <span class="hljs-string">'/etc/nginx/conf.d/ssl/server.pem'</span>, <span class="hljs-comment">// 或者crt文件</span>
-        <span class="hljs-string">'local_pk'</span>   =&gt; <span class="hljs-string">'/etc/nginx/conf.d/ssl/server.key'</span>,
+        <span class="hljs-string">'local_cert'</span>  =&gt; <span class="hljs-string">'/etc/nginx/conf.d/ssl/server.pem'</span>, <span class="hljs-comment">// 或者crt文件</span>
+        <span class="hljs-string">'local_pk'</span>    =&gt; <span class="hljs-string">'/etc/nginx/conf.d/ssl/server.key'</span>,
+        <span class="hljs-string">'verify_peer'</span> =&gt; <span class="hljs-keyword">false</span>
     )
 );
 <span class="hljs-comment">// websocket协议</span>
