@@ -87,6 +87,7 @@ socket.on('update_online_count', function(count){$('#online_count').html(count);
     laychat.agreeUrl        = '/laychat/agree.php'; 
     laychat.setMin          = true;
     laychat.jq              = $;
+    laychat.enableVoice     = false;
     laychat.open();
 </script>
 <style>
