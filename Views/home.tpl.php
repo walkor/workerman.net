@@ -17,8 +17,8 @@
 				</div>
 				<div class="col-md-5 column">
 					<div class="Q">
-						<b>技术交流群:172789145</b> 	
-						<a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=0f93b2c07951fc7fb8134547216e2b24f001c5e7de73a5113a9203a485eba842"><img border="0" src="/img/add_to_qq_group.png" alt="workerman官方4群" title="workerman官方4群"></a>
+						<b>技术交流群:605328640</b> 	
+						<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=e5d83d7eae0aab41fbca8e29f454de958b4ea3e506f2938ab23f401cf0ed8dec"><img border="0" src="/img/add_to_qq_group.png" alt="workerman官方5群" title="workerman官方5群"></a>
 					</div>
 				</div>
 		</div>
