@@ -527,12 +527,10 @@
 			</li>
 			
 			<li>
-				免费QQ群：172789145
-				<a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=0f93b2c07951fc7fb8134547216e2b24f001c5e7de73a5113a9203a485eba842"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="workerman官方4群" title="workerman官方4群"></a>
+				技术交流群：605328640
+				<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=e5d83d7eae0aab41fbca8e29f454de958b4ea3e506f2938ab23f401cf0ed8dec"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="workerman官方5群" title="workerman官方5群"></a>
 			</li>
-			<li>
-			&nbsp;VIPQQ群：544584915 <a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=48fac857de63cfc2847595e14e168040a1416fa5f82ab6f72fdd778e3c67a8fe"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="Workerman 官方收费群1" title="Workerman 官方收费群1"></a>
-			</li>
+		
 			<li>
 			商务合作联系QQ：2202055656
 			</li>
