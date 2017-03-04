@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# Revision 1488293409534
+# Revision 1488616498547
 
 CACHE:
 gateway-worker-development/leave-group.html
@@ -65,10 +65,10 @@ faq/more-faq.html
 faq/secure-websocket-server.html
 feature/README.html
 getting-started/README.html
-preface/README.html
 license/README.html
-protocols/README.html
+preface/README.html
 process-of-communication/README.html
+protocols/README.html
 start-and-stop/README.html
 timer/README.html
 work-with-other-frameworks/README.html

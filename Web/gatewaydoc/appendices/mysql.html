@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="21.6" data-basepath=".." data-revision="1488293409534">
+    <div class="book"  data-level="21.6" data-basepath=".." data-revision="1488616498546">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -937,110 +937,31 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_58">
+                    <section class="normal" id="section-gitbook_2268">
                     
                         <h2 id="gateway-worker-">Gateway/Worker模型 数据库使用示例</h2>
-<h2 id="-">说明</h2>
-<p>常驻内存的程序在使用mysql时经常会遇到<code>mysql gone away</code>的错误，这个是由于程序与mysql的连接长时间没有通讯，连接被mysql服务端踢掉导致。GatewayWorker提供了一个mysql类，可以解决这个问题，当发生<code>mysql gone away</code>错误时，会自动重试一次。</p>
-<h2 id="-">提示</h2>
-<p>该mysql类依赖<a href="http://php.net/manual/zh/book.pdo.php" target="_blank">pdo</a>和<a href="http://php.net/manual/zh/ref.pdo-mysql.php" target="_blank">pdo_mysql</a>两个扩展，缺少扩展会报<code>Undefined class constant &#39;MYSQL_ATTR_INIT_COMMAND&#39; in ....</code>错误。</p>
-<p>命令行运行<code>php -m</code>会列出所有php cli已安装的扩展，如果没有pdo 或者 pdo_mysql，请自行安装。</p>
-<p><strong>centos系统</strong></p>
-<pre><code>yum install php-pdo
-yum install php-mysql
-</code></pre><p>如果找不到包名，请尝试用<code>yum search php mysql</code>查找</p>
-<p><strong>ubuntu/debian系统</strong></p>
-<p>PHP5.x</p>
-<pre><code>apt-get install php5-mysql
-</code></pre><p>PHP7.x</p>
-<pre><code>apt-get install php7.0-mysql
-</code></pre><p>如果找不到包名，请尝试用<code>apt-cache search php mysql</code>查找</p>
-<p><strong>以上方法无法安装？</strong></p>
-<p>如果以上方法无法安装，请参考<a href="http://doc3.workerman.net/appendices/install-extension.html" target="_blank">workerman手册-附录-扩展安装-方法三源码编译安装</a>。</p>
-<h2 id="-">注意</h2>
-<p>请在<code>onXXXX</code>回调中使用数据库类。在<code>Worker::runAll();</code>前初始化数据库单例会导致数据错乱，参看下面例子中错误用法部分和正确用法部分。</p>
-<pre><code class="lang-php"><span class="hljs-keyword">use</span> \<span class="hljs-title">Workerman</span>\<span class="hljs-title">Worker</span>;
-<span class="hljs-keyword">use</span> \<span class="hljs-title">GatewayWorker</span>\<span class="hljs-title">BusinessWorker</span>;
-<span class="hljs-keyword">use</span> \<span class="hljs-title">Workerman</span>\<span class="hljs-title">Autoloader</span>;
-<span class="hljs-keyword">use</span> \<span class="hljs-title">GatewayWorker</span>\<span class="hljs-title">Lib</span>\<span class="hljs-title">Db</span>;
-
-<span class="hljs-keyword">require_once</span> <span class="hljs-keyword">__DIR__</span> . <span class="hljs-string">'/../../Workerman/Autoloader.php'</span>;
-Autoloader::setRootPath(<span class="hljs-keyword">__DIR__</span>);
-
-<span class="hljs-comment">/*
- * ## 错误用法 ###
- * 没有在onXXX回调环境中(在Worker::runAll()之前)实例化单例数据库会导致数据库错误风险
- * 原因：这部分代码属于主进程部分，主进程初始化了数据库单例，
- * 子进程会继承这个数据库单例(包括其中的数据库链接资源)，
- * 当mysql返回数据时，所有子进程都可以通过这个连接读取返回数据，
- * 导致数据错乱。
- * 同理：其它单例的连接资源(memcache\redis等)也不能在Worker::runAll运行前初始化。
- */</span>
-Db::instance(<span class="hljs-string">'db1'</span>)-&gt;select(<span class="hljs-string">'name,age'</span>)-&gt;from(<span class="hljs-string">'users'</span>)-&gt;where(<span class="hljs-string">'age&gt;12'</span>)-&gt;query();
-
-<span class="hljs-variable">$worker</span> = <span class="hljs-keyword">new</span> BusinessWorker();
-<span class="hljs-variable">$worker</span>-&gt;name = <span class="hljs-string">'YourAppBusinessWorker'</span>;
-<span class="hljs-variable">$worker</span>-&gt;count = <span class="hljs-number">4</span>;
-<span class="hljs-variable">$worker</span>-&gt;registerAddress = <span class="hljs-string">'127.0.0.1:1238'</span>;
-
-<span class="hljs-comment">/*
- * ## 正确用法 ##
- * onXXX中是可以使用数据库单例，
- * 因为onXXX都是在Worker::runAll()之后运行的，属于子进程代码。
- * 这里初始化的数据库单例只属于当前子进程自己所有，
- * 不会因为进程继承导致的连接上数据错乱。
- *
- * Event:onXXX也是运行在子进程的，可以安全的使用数据库类。
- */</span>
-<span class="hljs-variable">$worker</span>-&gt;onWorkerStart = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span>
-{</span>
-    Db::instance(<span class="hljs-string">'db1'</span>)-&gt;select(<span class="hljs-string">'name,age'</span>)-&gt;from(<span class="hljs-string">'users'</span>)-&gt;where(<span class="hljs-string">'age&gt;12'</span>)-&gt;query();
-};
-
-<span class="hljs-comment">// 如果不是在根目录启动，则运行runAll方法</span>
-<span class="hljs-keyword">if</span>(!defined(<span class="hljs-string">'GLOBAL_START'</span>))
-{
-    Worker::runAll();
-}
-</code></pre>
-<h2 id="-">数据库使用方法</h2>
-<p>1、数据库配置Applications/项目/Config/Db.php（如果没有此文件请手动创建），例如聊天室的话就是Applications/Chat/Config/Db.php</p>
-<pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
-<span class="hljs-keyword">namespace</span> <span class="hljs-title">Config</span>;
-<span class="hljs-comment">/**
- * mysql配置
- *<span class="hljs-phpdoc"> @author</span> walkor
- */</span>
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Db</span>
-{</span>
-    <span class="hljs-comment">/**
-     * 数据库的一个实例配置，则使用时像下面这样使用
-     * $user_array = Db::instance('db1')-&gt;select('name,age')-&gt;from('users')-&gt;where('age&gt;12')-&gt;query();
-     * 等价于
-     * $user_array = Db::instance('db1')-&gt;query('SELECT `name`,`age` FROM `users` WHERE `age`&gt;12');
-     *<span class="hljs-phpdoc"> @var</span> array
-     */</span>
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-variable">$db1</span> = <span class="hljs-keyword">array</span>(
-        <span class="hljs-string">'host'</span>    =&gt; <span class="hljs-string">'127.0.0.1'</span>,
-        <span class="hljs-string">'port'</span>    =&gt; <span class="hljs-number">3306</span>,
-        <span class="hljs-string">'user'</span>    =&gt; <span class="hljs-string">'your_user_name'</span>,
-        <span class="hljs-string">'password'</span> =&gt; <span class="hljs-string">'your_password'</span>,
-        <span class="hljs-string">'dbname'</span>  =&gt; <span class="hljs-string">'your_db_name'</span>,
-        <span class="hljs-string">'charset'</span>    =&gt; <span class="hljs-string">'utf8'</span>,
-    );
-}
-</code></pre>
-<p><strong>注意：</strong>上面配置中<code>Config/Db::$db1</code>是数据库配置名，获取实例的方法与其对应是<code>Db::instance(&#39;db1&#39;)</code>，而不是<code>Db::instance(&#39;your_db_name&#39;)</code>。</p>
-<p>2、项目/Event.php</p>
+<h2 id="-">使用示例</h2>
+<p>项目/Events.php</p>
 <pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
 <span class="hljs-keyword">use</span> \<span class="hljs-title">GatewayWorker</span>\<span class="hljs-title">Lib</span>\<span class="hljs-title">Gateway</span>;
-<span class="hljs-keyword">use</span> \<span class="hljs-title">GatewayWorker</span>\<span class="hljs-title">Lib</span>\<span class="hljs-title">Db</span>;
 
 <span class="hljs-comment">/**
  * 数据库示例，假设有个your_db_name库，里面有个user表
  */</span>
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Event</span>
 {</span>
+    <span class="hljs-comment">/**
+     * 新建一个类的静态成员，用来保存数据库实例
+     */</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-variable">$db</span> = <span class="hljs-keyword">null</span>;
+
+    <span class="hljs-comment">/**
+     * 进程启动后初始化数据库连接
+     */</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onWorkerStart</span><span class="hljs-params">(<span class="hljs-variable">$worker</span>)</span>
+    {</span>
+        <span class="hljs-keyword">self</span>::<span class="hljs-variable">$db</span> = <span class="hljs-keyword">new</span> Workerman\MySQL\Connection(<span class="hljs-string">'host'</span>, <span class="hljs-string">'port'</span>, <span class="hljs-string">'user'</span>, <span class="hljs-string">'password'</span>, <span class="hljs-string">'db_name'</span>);
+    }
 
    <span class="hljs-comment">/**
     * 有消息时触发该方法，根据发来的命令打印2个用户信息
@@ -1057,108 +978,16 @@ Db::instance(<span class="hljs-string">'db1'</span>)-&gt;select(<span class="hlj
             Gateway::sendToClient(<span class="hljs-variable">$client_id</span>, <span class="hljs-string">"unknown commend\n"</span>);
             <span class="hljs-keyword">return</span>;
         }
-        <span class="hljs-comment">// 注意，这里的db1对应的是Config/Db::$db1 的配置</span>
-        <span class="hljs-variable">$ret</span> = Db::instance(<span class="hljs-string">'db1'</span>)-&gt;select(<span class="hljs-string">'*'</span>)-&gt;from(<span class="hljs-string">'users'</span>)-&gt;where(<span class="hljs-string">'uid&gt;3'</span>)-&gt;offset(<span class="hljs-number">5</span>)-&gt;limit(<span class="hljs-number">2</span>)-&gt;query();
+        <span class="hljs-comment">// 使用数据库实例</span>
+        <span class="hljs-keyword">self</span>::<span class="hljs-variable">$db</span>-&gt;select(<span class="hljs-string">'*'</span>)-&gt;from(<span class="hljs-string">'users'</span>)-&gt;where(<span class="hljs-string">'uid&gt;3'</span>)-&gt;offset(<span class="hljs-number">5</span>)-&gt;limit(<span class="hljs-number">2</span>)-&gt;query();
         <span class="hljs-comment">// 打印结果</span>
         <span class="hljs-keyword">return</span> Gateway::sendToClient(<span class="hljs-variable">$client_id</span>, var_export(<span class="hljs-variable">$ret</span>, <span class="hljs-keyword">true</span>));
    }
 
 }
 </code></pre>
-<h1 id="-">数据库类使用的一些示例</h1>
-<h2 id="-">配置</h2>
-<p>在Config/Db.php中配置数据库信息，如果有多个数据库，可以在Db.php中配置多个实例
-例如下面配置了两个数据库实例</p>
-<pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
-<span class="hljs-keyword">namespace</span> <span class="hljs-title">Config</span>;
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Db</span>
-{</span>
-    <span class="hljs-comment">// 数据库实例1</span>
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-variable">$db1</span> = <span class="hljs-keyword">array</span>(
-        <span class="hljs-string">'host'</span>    =&gt; <span class="hljs-string">'127.0.0.1'</span>,
-        <span class="hljs-string">'port'</span>    =&gt; <span class="hljs-number">3306</span>,
-        <span class="hljs-string">'user'</span>    =&gt; <span class="hljs-string">'mysql_user'</span>,
-        <span class="hljs-string">'password'</span> =&gt; <span class="hljs-string">'mysql_password'</span>,
-        <span class="hljs-string">'dbname'</span>  =&gt; <span class="hljs-string">'database_name1'</span>,
-        <span class="hljs-string">'charset'</span>    =&gt; <span class="hljs-string">'utf8'</span>,
-    );
-
-    <span class="hljs-comment">// 数据库实例2</span>
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-variable">$db2</span> = <span class="hljs-keyword">array</span>(
-        <span class="hljs-string">'host'</span>    =&gt; <span class="hljs-string">'127.0.0.1'</span>,
-        <span class="hljs-string">'port'</span>    =&gt; <span class="hljs-number">3306</span>,
-        <span class="hljs-string">'user'</span>    =&gt; <span class="hljs-string">'mysql_user'</span>,
-        <span class="hljs-string">'password'</span> =&gt; <span class="hljs-string">'mysql_password'</span>,
-        <span class="hljs-string">'dbname'</span>  =&gt; <span class="hljs-string">'database_name2'</span>,
-        <span class="hljs-string">'charset'</span>    =&gt; <span class="hljs-string">'utf8'</span>,
-    );
-}
-</code></pre>
-<h2 id="-">使用方法</h2>
-<pre><code class="lang-php"><span class="hljs-keyword">use</span> \<span class="hljs-title">GatewayWorker</span>\<span class="hljs-title">Lib</span>\<span class="hljs-title">Db</span>;
-<span class="hljs-comment">// 注意，这里的db1对应的是Config/Db::$db1 的配置</span>
-<span class="hljs-variable">$db1</span> = Db::instance(<span class="hljs-string">'db1'</span>);
-<span class="hljs-comment">// 注意，这里的db2对应的是Config/Db::$db2 的配置</span>
-<span class="hljs-variable">$db2</span> = Db::instance(<span class="hljs-string">'db2'</span>);
-
-<span class="hljs-comment">// 获取所有数据</span>
-<span class="hljs-variable">$db1</span>-&gt;select(<span class="hljs-string">'ID,Sex'</span>)-&gt;from(<span class="hljs-string">'Persons'</span>)-&gt;where(<span class="hljs-string">'sex= :sex'</span>)-&gt;bindValues(<span class="hljs-keyword">array</span>(<span class="hljs-string">'sex'</span>=&gt;<span class="hljs-string">'M'</span>))-&gt;query();
-<span class="hljs-comment">//等价于</span>
-<span class="hljs-variable">$db1</span>-&gt;select(<span class="hljs-string">'ID,Sex'</span>)-&gt;from(<span class="hljs-string">'Persons'</span>)-&gt;where(<span class="hljs-string">"sex= 'F' "</span>)-&gt;query();
-<span class="hljs-comment">//等价于</span>
-<span class="hljs-variable">$db1</span>-&gt;query(<span class="hljs-string">"SELECT ID,Sex FROM `Persons` WHERE sex='M'"</span>);
-
-
-<span class="hljs-comment">// 获取一行数据</span>
-<span class="hljs-variable">$db1</span>-&gt;select(<span class="hljs-string">'ID,Sex'</span>)-&gt;from(<span class="hljs-string">'Persons'</span>)-&gt;where(<span class="hljs-string">'sex= :sex'</span>)-&gt;bindValues(<span class="hljs-keyword">array</span>(<span class="hljs-string">'sex'</span>=&gt;<span class="hljs-string">'M'</span>))-&gt;row();
-<span class="hljs-comment">//等价于</span>
-<span class="hljs-variable">$db1</span>-&gt;select(<span class="hljs-string">'ID,Sex'</span>)-&gt;from(<span class="hljs-string">'Persons'</span>)-&gt;where(<span class="hljs-string">"sex= 'F' "</span>)-&gt;row();
-<span class="hljs-comment">//等价于</span>
-<span class="hljs-variable">$db1</span>-&gt;row(<span class="hljs-string">"SELECT ID,Sex FROM `Persons` WHERE sex='M'"</span>);
-
-
-<span class="hljs-comment">// 获取一列数据</span>
-<span class="hljs-variable">$db1</span>-&gt;select(<span class="hljs-string">'ID'</span>)-&gt;from(<span class="hljs-string">'Persons'</span>)-&gt;where(<span class="hljs-string">'sex= :sex'</span>)-&gt;bindValues(<span class="hljs-keyword">array</span>(<span class="hljs-string">'sex'</span>=&gt;<span class="hljs-string">'M'</span>))-&gt;column();
-<span class="hljs-comment">//等价于</span>
-<span class="hljs-variable">$db1</span>-&gt;select(<span class="hljs-string">'ID'</span>)-&gt;from(<span class="hljs-string">'Persons'</span>)-&gt;where(<span class="hljs-string">"sex= 'F' "</span>)-&gt;column();
-<span class="hljs-comment">//等价于</span>
-<span class="hljs-variable">$db1</span>-&gt;column(<span class="hljs-string">"SELECT `ID` FROM `Persons` WHERE sex='M'"</span>);
-
-<span class="hljs-comment">// 获取单个值</span>
-<span class="hljs-variable">$db1</span>-&gt;select(<span class="hljs-string">'ID,Sex'</span>)-&gt;from(<span class="hljs-string">'Persons'</span>)-&gt;where(<span class="hljs-string">'sex= :sex'</span>)-&gt;bindValues(<span class="hljs-keyword">array</span>(<span class="hljs-string">'sex'</span>=&gt;<span class="hljs-string">'M'</span>))-&gt;single();
-<span class="hljs-comment">//等价于</span>
-<span class="hljs-variable">$db1</span>-&gt;select(<span class="hljs-string">'ID,Sex'</span>)-&gt;from(<span class="hljs-string">'Persons'</span>)-&gt;where(<span class="hljs-string">"sex= 'F' "</span>)-&gt;single();
-<span class="hljs-comment">//等价于</span>
-<span class="hljs-variable">$db1</span>-&gt;single(<span class="hljs-string">"SELECT ID,Sex FROM `Persons` WHERE sex='M'"</span>);
-
-<span class="hljs-comment">// 复杂查询</span>
-<span class="hljs-variable">$db1</span>-&gt;select(<span class="hljs-string">'*'</span>)-&gt;from(<span class="hljs-string">'table1'</span>)-&gt;innerJoin(<span class="hljs-string">'table2'</span>,<span class="hljs-string">'table1.uid = table2.uid'</span>)-&gt;where(<span class="hljs-string">'age &gt; :age'</span>)-&gt;groupBy(<span class="hljs-keyword">array</span>(<span class="hljs-string">'aid'</span>))-&gt;having(<span class="hljs-string">'foo="foo"'</span>)-&gt;orderByASC<span class="hljs-comment">/*orderByDESC*/</span>(<span class="hljs-keyword">array</span>(<span class="hljs-string">'did'</span>))-&gt;limit(<span class="hljs-number">10</span>)-&gt;offset(<span class="hljs-number">20</span>)-&gt;bindValues(arra
-y(<span class="hljs-string">'age'</span> =&gt; <span class="hljs-number">13</span>));
-<span class="hljs-comment">// 等价于</span>
-<span class="hljs-variable">$db1</span>-&gt;query(SELECT * FROM `table1` INNER JOIN `table2` ON `table1`.`uid` = `table2`.`uid` WHERE age &gt; <span class="hljs-number">13</span> GROUP BY aid HAVING foo=<span class="hljs-string">"foo"</span> ORDER BY did LIMIT <span class="hljs-number">10</span> OFFSET <span class="hljs-number">20</span>“);
-
-<span class="hljs-comment">// 插入</span>
-<span class="hljs-variable">$insert_id</span> = <span class="hljs-variable">$db1</span>-&gt;insert(<span class="hljs-string">'Persons'</span>)-&gt;cols(<span class="hljs-keyword">array</span>(<span class="hljs-string">'Firstname'</span>=&gt;<span class="hljs-string">'abc'</span>, <span class="hljs-string">'Lastname'</span>=&gt;<span class="hljs-string">'efg'</span>, <span class="hljs-string">'Sex'</span>=&gt;<span class="hljs-string">'M'</span>, <span class="hljs-string">'Age'</span>=&gt;<span class="hljs-number">13</span>))-&gt;query();
-等价于
-<span class="hljs-variable">$insert_id</span> = <span class="hljs-variable">$db1</span>-&gt;query(<span class="hljs-string">"INSERT INTO `Persons` ( `Firstname`,`Lastname`,`Sex`,`Age`) VALUES ( 'abc', 'efg', 'M', 13)"</span>);
-
-<span class="hljs-comment">// 更新</span>
-<span class="hljs-variable">$row_count</span> = <span class="hljs-variable">$db1</span>-&gt;update(<span class="hljs-string">'Persons'</span>)-&gt;cols(<span class="hljs-keyword">array</span>(<span class="hljs-string">'sex'</span>))-&gt;where(<span class="hljs-string">'ID=1'</span>)-&gt;bindValue(<span class="hljs-string">'sex'</span>, <span class="hljs-string">'F'</span>)-&gt;query();
-<span class="hljs-comment">// 等价于</span>
-<span class="hljs-variable">$row_count</span> = <span class="hljs-variable">$db1</span>-&gt;update(<span class="hljs-string">'Persons'</span>)-&gt;cols(<span class="hljs-keyword">array</span>(<span class="hljs-string">'sex'</span>=&gt;<span class="hljs-string">'F'</span>))-&gt;where(<span class="hljs-string">'ID=1'</span>)-&gt;query();
-<span class="hljs-comment">// 等价于</span>
-<span class="hljs-variable">$row_count</span> = <span class="hljs-variable">$db1</span>-&gt;query(<span class="hljs-string">"UPDATE `Persons` SET `sex` = 'F' WHERE ID=1"</span>);
-
-<span class="hljs-comment">// 删除</span>
-<span class="hljs-variable">$row_count</span> = <span class="hljs-variable">$db1</span>-&gt;delete(<span class="hljs-string">'Persons'</span>)-&gt;where(<span class="hljs-string">'ID=9'</span>)-&gt;query();
-<span class="hljs-comment">// 等价于</span>
-<span class="hljs-variable">$row_count</span> = <span class="hljs-variable">$db1</span>-&gt;query(<span class="hljs-string">"DELETE FROM `Persons` WHERE ID=9"</span>);
-
-<span class="hljs-comment">// 事务</span>
-<span class="hljs-variable">$db1</span>-&gt;beginTrans();
-....
-<span class="hljs-variable">$db1</span>-&gt;commitTrans(); <span class="hljs-comment">// or $db1-&gt;rollBackTrans();</span>
-</code></pre>
+<h2 id="-">安装使用</h2>
+<p>具体安装使用参见 <a href="http://doc3.workerman.net/component/workerman-mysql.html" target="_blank">Workerman手册 Workerman/MySQL</a></p>
 
                     
                     </section>
