@@ -64,7 +64,7 @@
 							<a href="/download">下载</a>
 						</li>
 						<li<?php if($html_nav == 'install')echo ' class="active" ';?>>
-							<a href="/install">安装</a>
+							<a href="http://doc3.workerman.net/install/install.html">安装</a>
 						</li>
 						<li<?php if($html_nav == 'doc')echo ' class="active" ';?>>
 							<a href="/doc">手册</a>
