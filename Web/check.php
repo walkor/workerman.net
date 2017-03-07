@@ -4,7 +4,7 @@ header("Content-Type: application/octet-stream");
 
 echo '<?php
 $version_ok = $pcntl_loaded = $posix_loaded = false;
-if(version_compare(phpversion(), "5.4", ">="))
+if(version_compare(phpversion(), "5.3.3", ">="))
 {
   $version_ok = true;
 }
@@ -29,7 +29,7 @@ function check($val)
     }
 }
 
-echo "PHP Version >= 5.4                   " . check($version_ok);
+echo "PHP Version >= 5.3.3                 " . check($version_ok);
 
 echo "Extension pcntl check                " . check($pcntl_loaded);
 
