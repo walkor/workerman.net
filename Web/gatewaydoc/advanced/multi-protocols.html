@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="21.3" data-basepath=".." data-revision="1488770390862">
+    <div class="book"  data-level="21.3" data-basepath=".." data-revision="1488942144936">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -937,7 +937,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_59">
+                    <section class="normal" id="section-gitbook_56">
                     
                         <h1 id="-">多协议支持</h1>
 <h2 id="-">需求</h2>
@@ -945,7 +945,7 @@
 <h2 id="-">如何支持多协议</h2>
 <p>在WorkerMan中最简单的实现方法是开启多个端口，每个端口使用一种协议。不同客户端使用各自的协议去连特定的端口。</p>
 <h2 id="-">示例（小蝌蚪）</h2>
-<p><a href="https://github.com/walkor/workerman-todpole" target="_blank">小蝌蚪</a>应用程序是运行在PC浏览器里面的，使用Websocket协议与WorkerMan通讯，当我们需要把它移植到手机App上却有没有合适的客户端Websocket库时，我们可以使用更简单的协议来实现App与WorkerMan通讯，例如Text文本协议(协议规则为 文本+换行符)。</p>
+<p><a href="https://github.com/walkor/workerman-todpole" target="_blank">小蝌蚪</a>应用程序是运行在PC浏览器里面的，使用Websocket协议与WorkerMan通讯，当我们需要把它移植到手机App上却没有合适的客户端Websocket库时，我们可以使用更简单的协议来实现App与WorkerMan通讯，例如Text文本协议(协议规则为 文本+换行符)。</p>
 <p>下面是开启多端口支持多协议示例</p>
 <p>创建新文件 Applications/Todpole/start_text_gateway.php</p>
 <pre><code class="lang-php"><span class="hljs-keyword">use</span> \<span class="hljs-title">Workerman</span>\<span class="hljs-title">Worker</span>;
