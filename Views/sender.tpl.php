@@ -83,12 +83,10 @@ content 为消息内容
 			<img src="/img/web-msg-sender-demo.png" alt="WEB推送使用界面"/>
 			<br>
 			<h3>前端测试：</h3>
-			<p>支持跨域推送，测试时开发者可以不用建立服务端，直接使用workerman官网线上的推送服务(地址http://workerman.net:2120)测试(注意仅能用于测试)，例如在任意站点中加入如下代码即可收到消息并统计数据：</p>
-			<p>注意workerman官网的在线推送服务仅用于测试，正式环境请不要使用，否则出现的任何问题自行承担</p>
 			<pre>
 &lt;script src='http://cdn.bootcss.com/socket.io/1.3.7/socket.io.js'&gt;&lt;/script&gt;
 &lt;script&gt;
-    // 连接服务端
+    // 连接服务端，workerman.net:2120换成实际部署web-msg-sender服务的域名或者ip
     var socket = io('http://workerman.net:2120');
     // uid可以是自己网站的用户id，以便针对uid推送以及统计在线人数
     uid = 123;
@@ -112,7 +110,7 @@ content 为消息内容
   $api_str = '<?php
 // 指明给谁推送，为空表示向所有在线用户推送
 $to_uid = "";
-// 推送的url地址，上线时改成自己的服务器地址
+// 推送的url地址，使用自己的服务器地址
 $push_api_url = "http://workerman.net:2121/";
 $post_data = array(
    "type" => "publish",
