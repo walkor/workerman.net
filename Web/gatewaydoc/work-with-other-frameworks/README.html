@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="7" data-basepath=".." data-revision="1488942144936">
+    <div class="book"  data-level="7" data-basepath=".." data-revision="1490707761249">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -937,7 +937,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_75">
+                    <section class="normal" id="section-gitbook_296">
                     
                         <h1 id="-thinkphp-">与ThinkPHP等框架结合</h1>
 <p>使用GatewayWorker时开发者最关心的是如何与现有mvc框架(ThinkPHP Yii laravel等)整合，以下是官方推荐的整合方式。见示意图：</p>
@@ -955,7 +955,7 @@
 <p>3、网站页面收到client_id后触发一个ajax请求(假设是<code>bind.php</code>)将client_id发到mvc后端</p>
 <p>4、mvc后端<code>bind.php</code>收到client_id后利用GatewayClient调用<code>Gateway::bindUid($client_id, $uid)</code>将client_id与当前uid(用户id或者客户端唯一标识)绑定。如果有群组、群发功能，也可以利用<code>Gateway::joinGroup($client_id, $group_id)</code>将client_id加入到对应分组</p>
 <p>5、页面发起的所有请求都直接post/get到mvc框架统一处理，包括发送消息</p>
-<p>6、mvc框架处理业务过程中需要向某个uid或者某个群组发送数据时，直接调用GatewayClient的接口<code>Gateway::sendToUid Gateway::sendToGroup</code> 等发送即可</p>
+<p>6、mvc框架处理业务过程中需要向某个uid或者某个群组发送数据时，直接调用<a href="https://github.com/walkor/GatewayClient" target="_blank">GatewayClient</a>的接口<code>Gateway::sendToUid Gateway::sendToGroup</code> 等发送即可</p>
 <h2 id="-">示例代码</h2>
 <p>GatewayWorker中Events.php代码（只有个onConnect回调设置）</p>
 <pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
@@ -1004,9 +1004,9 @@ ws.onmessage = <span class="hljs-function"><span class="hljs-keyword">function</
 };
 </code></pre>
 <p><strong>mvc后端uid绑定代码片段</strong><br>
-bind.php</p>
+bind.php (利用<a href="https://github.com/walkor/GatewayClient" target="_blank">GatewayClient</a>绑定)</p>
 <pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
-<span class="hljs-comment">//加载GatewayClient</span>
+<span class="hljs-comment">//加载GatewayClient。关于GatewayClient参见本页面底部介绍</span>
 <span class="hljs-keyword">require_once</span> <span class="hljs-string">'/your/path/GatewayClient/Gateway.php'</span>;
 <span class="hljs-comment">// GatewayClient 3.0.0版本开始要使用命名空间</span>
 <span class="hljs-keyword">use</span> <span class="hljs-title">GatewayClient</span>\<span class="hljs-title">Gateway</span>;
@@ -1022,9 +1022,9 @@ Gateway::bindUid(<span class="hljs-variable">$client_id</span>, <span class="hlj
 Gateway::joinGroup(<span class="hljs-variable">$client_id</span>, <span class="hljs-variable">$group_id</span>);
 </code></pre>
 <p><strong>mvc后端发消息代码片段</strong><br>
-send_message.php</p>
+send_message.php (利用<a href="https://github.com/walkor/GatewayClient" target="_blank">GatewayClient</a>发送)</p>
 <pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
-<span class="hljs-comment">//加载GatewayClient</span>
+<span class="hljs-comment">//加载GatewayClient。关于GatewayClient参见本页面底部介绍</span>
 <span class="hljs-keyword">require_once</span> <span class="hljs-string">'/your/path/GatewayClient/Gateway.php'</span>;
 <span class="hljs-comment">// GatewayClient 3.0.0版本开始要使用命名空间</span>
 <span class="hljs-keyword">use</span> <span class="hljs-title">GatewayClient</span>\<span class="hljs-title">Gateway</span>;

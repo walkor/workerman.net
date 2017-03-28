@@ -32,7 +32,7 @@
 
 
         
-    <div class="book"  data-level="21.6" data-basepath=".." data-revision="1488942144936">
+    <div class="book"  data-level="21.6" data-basepath=".." data-revision="1490707761249">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -937,13 +937,16 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_54">
+                    <section class="normal" id="section-gitbook_278">
                     
                         <h2 id="gateway-worker-">Gateway/Worker模型 数据库使用示例</h2>
+<h2 id="-">安装</h2>
+<p>具体安装使用参见 <a href="http://doc3.workerman.net/component/workerman-mysql.html" target="_blank">Workerman手册 Workerman/MySQL</a></p>
 <h2 id="-">使用示例</h2>
 <p>项目/Events.php</p>
 <pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
 <span class="hljs-keyword">use</span> \<span class="hljs-title">GatewayWorker</span>\<span class="hljs-title">Lib</span>\<span class="hljs-title">Gateway</span>;
+<span class="hljs-keyword">require_once</span> <span class="hljs-string">'/your/path/of/mysql-master/src/Connection.php'</span>;
 
 <span class="hljs-comment">/**
  * 数据库示例，假设有个your_db_name库，里面有个user表
@@ -986,8 +989,6 @@
 
 }
 </code></pre>
-<h2 id="-">安装使用</h2>
-<p>具体安装使用参见 <a href="http://doc3.workerman.net/component/workerman-mysql.html" target="_blank">Workerman手册 Workerman/MySQL</a></p>
 
                     
                     </section>
