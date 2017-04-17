@@ -342,13 +342,23 @@
 		</div>
 
 		
-        <div class="media">
+        	<div class="media">
 			<div class="media-body">
 				<h4 class="media-heading">
 					<a target="_blank" href="https://github.com/top-think/think-worker" rel="nofollow">think-worker</a>
 				</h4>
 ThinkPHP官方提供的ThinkPHP 5.0 Workerman 扩展。
 				<a class="btn" target="_blank" href="https://github.com/top-think/think-worker" rel="nofollow">下载源代码 »</a>
+			</div>
+		</div>
+
+		<div class="media">
+			<div class="media-body">
+				<h4 class="media-heading">
+					<a target="_blank" href="https://github.com/kiddyuchina/Beanbun" rel="nofollow">Beanbun</a>
+				</h4>
+Beanbun 是用 PHP 编写的多进程网络爬虫框架，具有良好的开放性、高可扩展性，基于 Workerman。
+				<a class="btn" target="_blank" href="https://github.com/kiddyuchina/Beanbun" rel="nofollow">下载源代码 »</a>
 			</div>
 		</div>
 
