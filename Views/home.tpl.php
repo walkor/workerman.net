@@ -231,7 +231,7 @@
 				phptty是一个基于浏览器的Linux终端模拟器，可以在浏览器里面控制Linux终端程序。服务端基于workerman开发。phptty可以实现很多有意思的功能，例如利用htop命令查看服务器负载，tail -f 实时服务器错误日志等等。
 				<br>
 				<a class="btn" target="_blank" href="https://github.com/walkor/phptty" rel="nofollow">下载源代码 »</a>
-				<a class="btn" target="_blank" href="http://172.31.78.141:7779/" rel="nofollow">在线示例-htop »</a>
+				<a class="btn" target="_blank" href="http://wiki.workerman.net:7779/" rel="nofollow">在线示例-htop »</a>
 				</p>
 			</div>
 		</div>
