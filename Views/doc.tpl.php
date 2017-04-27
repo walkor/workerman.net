@@ -6,10 +6,10 @@
 		<div class="media">
 			<div class="media-body">
 				<h4 class="media-heading">
-					<a target="_blank" href="http://doc3.workerman.net/">Workerman3.x版本手册</a>
+					<a target="_blank" href="http://doc.workerman.net/">Workerman3.x版本手册</a>
 				</h4>
 				<p>Workerman是一个高性能的socket服务器通讯框架，用于快速开发各种网络应用，包括tcp的、udp的、长连接、短连接应用。
-				<br><a target="_blank" class="btn" href="http://doc3.workerman.net/">在线手册 »</a>
+				<br><a target="_blank" class="btn" href="http://doc.workerman.net/">在线手册 »</a>
 				</p>
 			</div>
 		</div>
