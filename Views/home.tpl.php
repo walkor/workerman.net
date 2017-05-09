@@ -132,7 +132,7 @@
 			 <a href="/workerman-chat" class="pull-left"><img src="/img/workerman-chat.png" class="media-object" alt="PHP聊天室"/></a>
 			<div class="media-body">
 				<h4 class="media-heading">
-					<a href="/workerman-chat">聊天室</a>
+					<a href="/workerman-chat">workerman-chat PHP聊天室</a>
 				</h4>
 				<p>一个可扩展的php socket的聊天室，服务端采用GatewayWorker作为socket服务器框架，支持万人在线，采用web-socket-js作为前端websocket库，支持多浏览器。同样可以用作app聊天室开发。
 				<br><a class="btn" href="/workerman-chat">详情 »</a>
