@@ -89,6 +89,19 @@
 		<h3>
 			workerman相关应用
 		</h3>
+		
+		<div class="media">
+			 <a href="http://laychat.workerman.net/" class="pull-left" target="_blank"><img src="/img/laychat.png" class="media-object" alt="PHP聊天室 仿QQ"/></a>
+			<div class="media-body">
+				<h4 class="media-heading">
+					<a target="_blank" href="http://laychat.workerman.net/" target="_blank">LayChat聊天室</a> <font style="color:red;font-size:13px">推荐</font>
+				</h4>
+				<p><a href="http://layim.layui.com/" target="_blank" rel="nofollow">LayIM</a>+Workerman开发的即时通讯项目，支持群聊、私聊、表情、传图、传文件、离线消息、历史消息记录等功能，非常强大。支持分布式部署、支持万人在线。<br>
+				<a class="btn" target="_blank" href="http://laychat.workerman.net/" rel="nofollow">DEMO »</a>
+				</p>
+			</div>
+		</div>
+		
 		<div class="media">
 			 <a href="http://www.meilibo.net/" class="pull-left" target="_blank" ><img src="/img/meilibo.jpg" class="media-object" alt='美丽播截图' /></a>
 			<div class="media-body">
@@ -99,18 +112,6 @@
 				主要功能包括主播系统，礼物系统，游戏系统，道具系统，代理功能，排行榜，充值系统，个人中心，守护系统等。即时通讯采用workerman，视频流采用rtmp协议利用fms或者cdn分发。
 				(此<a target="_blank" href="http://www.meilibo.net/">直播网站源码</a>需要<a href="http://www.meilibo.net/price.html" target="_blank" >购买</a>，<a target="_blank"  href="http://www.meilibo.net/about.html">联系方式</a>)
 				<br><a target="_blank" class="btn" href="http://www.meilibo.net/">详情 »</a>
-				</p>
-			</div>
-		</div>
-		
-		<div class="media">
-			 <a href="http://laychat.workerman.net/" class="pull-left" target="_blank"><img src="/img/laychat.png" class="media-object" alt="PHP聊天室 仿QQ"/></a>
-			<div class="media-body">
-				<h4 class="media-heading">
-					<a target="_blank" href="http://laychat.workerman.net/" target="_blank">LayChat聊天室</a>
-				</h4>
-				<p><a href="http://layim.layui.com/" target="_blank" rel="nofollow">LayIM</a>+Workerman开发的即时通讯项目，支持群聊、私聊、表情、传图、传文件、离线消息、历史消息记录等功能，非常强大。支持分布式部署、支持万人在线。<br>
-				<a class="btn" target="_blank" href="http://laychat.workerman.net/" rel="nofollow">DEMO »</a>
 				</p>
 			</div>
 		</div>
