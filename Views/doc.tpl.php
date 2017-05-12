@@ -1,6 +1,6 @@
 <ul class="breadcrumb">
 	<li class="active">
-		相关应用
+		文档手册
 	</li>
 </ul>
 		<div class="media">
