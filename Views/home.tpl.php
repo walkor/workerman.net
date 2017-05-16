@@ -136,7 +136,7 @@
 				</h4>
 				<p>一个可扩展的php socket的聊天室，服务端采用GatewayWorker作为socket服务器框架，支持万人在线，采用web-socket-js作为前端websocket库，支持多浏览器。同样可以用作app聊天室开发。
 				<br><a class="btn" href="/workerman-chat">详情 »</a>
-				<a class="btn" target="_blank" href="/download/chatzip" rel="nofollow">下载源代码 »</a>
+				<a class="btn" target="_blank" href="/workerman-chat" rel="nofollow">下载源代码 »</a>
 				</p>
 			</div>
 		</div>
@@ -148,7 +148,7 @@
 				</h4>
 				<p>web消息推送系统，能够通过socket 长连接实时推送消息给所有用户，基于PHPSocketIO开发，客户端使用socket.io客户端，支持各种浏览器。
 				<br><a   class="btn" href="/web-sender">详情 »</a>
-				<a class="btn" target="_blank" href="/download/senderzip" rel="nofollow">下载源代码 »</a>
+				<a class="btn" target="_blank" href="/web-sender" rel="nofollow">下载源代码 »</a>
 				</p>
 			</div>
 		</div>
@@ -161,7 +161,7 @@
 				</h4>
 				<p>使用HTML5+WebSocket+GatewayWorker实时推送技术开发的小蝌蚪聊天室，聊天室中玩家们化身为小蝌蚪，可以自由游动，并且可以实时聊天，非常有趣。
 				<br><a   class="btn" href="/workerman-todpole">详情 »</a>
-				<a class="btn" target="_blank" href="/download/todpolezip" rel="nofollow">下载源代码 »</a>
+				<a class="btn" target="_blank" href="/workerman-todpole" rel="nofollow">下载源代码 »</a>
 				</p>
 			</div>
 		</div>
@@ -175,7 +175,7 @@
 				BrowserQuest是Mozilla发布的一款2D图形的MMO（大型多人在线）游戏，玩家可以聊天、打怪、升级、寻宝、获得成就。这里基于WorkerMan框架重写了BrowserQuest服务端nodejs部分，浏览器与后端同样是基于websocket协议通讯。
 				<br>
 				<a  class="btn" href="/browserquest">详情 »</a>
-				<a class="btn" target="_blank" href="/download/browserquestzip" rel="nofollow">下载源代码 »</a>
+				<a class="btn" target="_blank" href="/browserquest" rel="nofollow">下载源代码 »</a>
 				</p>
 			</div>
 		</div>
@@ -189,7 +189,7 @@
 				<p>
 				PHPSocket.IO是Socket.IO的PHP 服务端版本。PHP版socket.io可用来替代传统nodejs版本socket.io服务端，并且接口与其一致，可用于开发跨浏览器或者安卓、ios等移动端即时通讯应用。
 				<br>
-				<a class="btn" target="_blank" href=/download/phpsocket.io.zip rel="nofollow">下载源代码 »</a>
+				<a class="btn" target="_blank" href=/phpsocket_io rel="nofollow">下载源代码 »</a>
 				<a class="btn" target="_blank" href="/demos/phpsocketio-chat/" rel="nofollow">在线示例-聊天室 »</a>
 				<a class="btn" target="_blank" href="https://github.com/walkor/phpsocket.io/tree/master/docs/zh" rel="nofollow">手册 »</a>
 				</p>
