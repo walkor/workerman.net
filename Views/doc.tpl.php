@@ -16,7 +16,7 @@
 		<div class="media">
 			<div class="media-body">
 				<h4 class="media-heading">
-					<a target="_blank" href="/gatewaydoc/">GatewayWorker手册</a>
+					<a target="_blank" href="http://doc2.workerman.net/">GatewayWorker手册</a>
 				</h4>
 				<p>
 				GatewayWorker是基于Workerman开发的一套<b>TCP长连接</b>的应用框架，<br>
@@ -24,7 +24,7 @@
 				GatewayWorker分为Gateway进程和Worker进程，天然支持分布式部署，能够支持庞大的连接数（百万甚至千万连接级别的应用）。<br>
 				可用于开发IM聊天应用、移动通讯、游戏后台、物联网、智能家居后台等等。<br>
 				<br>
-				<a class="btn" target="_blank" href="/gatewaydoc/">GatewayWorker2.0手册</a>
+				<a class="btn" target="_blank" href="http://doc2.workerman.net/">GatewayWorker2.0手册</a>
 				<a class="btn" target="_blank" href="http://www.workerman.net/download/GatewayWorker.zip">点击下载源码(Linux版本)</a>
 				<a class="btn" target="_blank" href="http://www.workerman.net/download/GatewayWorker-for-win.zip">点击下载源码(Windows版本)</a>
 				</p>
