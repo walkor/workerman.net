@@ -5,6 +5,25 @@
     <li>HTTP协议时Session支持php7</li>
     <li>其它一些优化</li>
 </ul>
+
+<h3>2017-06-19 Gateway 3.0.5版本发布</h3>
+<ul>
+    <li>修复session延迟导致session数据不是最新的问题</li>
+</ul>
+<hr>
+
+<h3>2017-06-19 Gateway 3.0.4版本发布</h3>
+<ul>
+    <li>修复Register类日志类找不到问题</li>
+</ul>
+<hr>
+
+<h3>2017-06-04 Gateway 3.0.3版本发布</h3>
+<ul>
+    <li>Gateway::closeClient($msg)支持参数$msg，可以在关闭客户端链接前发送一段数据</li>
+</ul>
+<hr>
+
 <h3>2017-05-04 workerman3.4.2版本发布</h3>
 <ul>
     <li>修复开SSL后发送大数据失败问题</li>
@@ -46,19 +65,27 @@
 </ul>
 <hr>
 
+<h3>2017-01-13 Gateway 3.0.1版本发布</h3>
+<ul>
+    <li>增加gateway->sendToWorkerBufferSize属性，用来设置Gateway到businessWorker的缓冲区大小</li>
+    <li>增加gateway->sendToClientBufferSize属性，用来设置gateway到客户端的缓冲区大小</li>
+    <li>增加businessWorker->sendToGatewayBufferSize属性，用来设置businessWorker到Gateway的缓冲区大小</li>
+</ul>
+<hr>
+
 <h3>2016-12-06 workerman3.3.6版本发布</h3>
 <ul>
-<li>支持<a href="https://github.com/reactphp" target="_balnk" rel="nofollow">ReactPHP</a>同步支持ReactPHP的以下组件</li>
-<li>支持异步Mysql客户端</li>
-<li>支持异步Redis客户端</li>
-<li>支持异步HTTP客户端</li>
-<li>支持异步dns客户端</li>
-<li>支持异步zmq客户端</li>
-<li>支持异步whois客户端</li>
-<li>支持异步RabbitMQ客户端</li>
-<li>支持异步文件系统</li>
-<li>支持异步进程组件</li>
-<li>支持promise</li>
+    <li>支持<a href="https://github.com/reactphp" target="_balnk" rel="nofollow">ReactPHP</a>同步支持ReactPHP的以下组件</li>
+    <li>支持异步Mysql客户端</li>
+    <li>支持异步Redis客户端</li>
+    <li>支持异步HTTP客户端</li>
+    <li>支持异步dns客户端</li>
+    <li>支持异步zmq客户端</li>
+    <li>支持异步whois客户端</li>
+    <li>支持异步RabbitMQ客户端</li>
+    <li>支持异步文件系统</li>
+    <li>支持异步进程组件</li>
+    <li>支持promise</li>
 </ul>
 <hr>
 
