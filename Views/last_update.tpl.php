@@ -5,6 +5,7 @@
     <li>HTTP协议时Session支持php7</li>
     <li>其它一些优化</li>
 </ul>
+<hr>
 
 <h3>2017-06-19 Gateway 3.0.5版本发布</h3>
 <ul>
@@ -29,10 +30,13 @@
     <li>修复开SSL后发送大数据失败问题</li>
     <li>HTTP协议的一些优化</li>
 </ul>
+<hr>
+
 <h3>2017-04-21 workerman3.4.1版本发布</h3>
 <ul>
     <li>修复AsyncTcpConnection开SSL时无法通讯的bug</li>
 </ul>
+<hr>
 
 <h3>2017-02-15 workerman3.4.0版本发布</h3>
 <ul>
