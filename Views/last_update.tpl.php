@@ -1,3 +1,45 @@
+
+<h3>2017-06-20 workerman3.4.3版本发布</h3>
+<ul>
+    <li><a href="https://github.com/walkor/Workerman/issues/166" rel="nofollow">修复HTTP协议OPTIONS和HEAD请求包长计算错误问题</a></li>
+    <li>HTTP协议时Session支持php7</li>
+    <li>其它一些优化</li>
+</ul>
+<h3>2017-05-04 workerman3.4.2版本发布</h3>
+<ul>
+    <li>修复开SSL后发送大数据失败问题</li>
+    <li>HTTP协议的一些优化</li>
+</ul>
+<h3>2017-04-21 workerman3.4.1版本发布</h3>
+<ul>
+    <li>修复AsyncTcpConnection开SSL时无法通讯的bug</li>
+</ul>
+
+<h3>2017-02-15 workerman3.4.0版本发布</h3>
+<ul>
+    <li><a href="https://github.com/walkor/Workerman/issues/146" rel="nofollow">检查sys_getloadavg函数是否存在，避免status时发生FatalError</a></li>
+    <li><a href="https://github.com/walkor/Workerman/pull/148" rel="nofollow">$_SERVER中新增REQUEST_TIME</a></li>
+    <li><a href="https://github.com/walkor/Workerman/issues/119" rel="nofollow"> 支持指定事件轮询库</a></li>
+    <li><a href="https://github.com/walkor/Workerman/pull/153" rel="nofollow">Http协议上传文件$_FILES增加name和file_type数据</a> </li>
+    <li><a href="https://github.com/walkor/Workerman/pull/158" rel="nofollow">支持运行过程中stdoutFile和logFile动态重定向，例如按照日期分割日志等</a></li>
+</ul>
+<hr>
+
+<h3>2017-02-15 workerman3.3.9版本发布</h3>
+<ul>
+    <li>支持非阻塞SSL握手</li>
+    <li>支持SSLv2 SSLv3</li>
+    <li>AysncTcpConnection支持unix socket</li>
+</ul>
+<hr>
+
+<h3>2017-02-09 workerman3.3.8版本发布</h3>
+<ul>
+    <li>修复当使用ReactPHP时定时器Timer::add()方法返回值为对象的bug</li>
+</ul>
+<hr>
+
+
 <h3>2017-02-05 workerman3.3.7版本发布</h3>
 <ul>
 <li>原生支持<a href="http://doc3.workerman.net/worker-development/transport.html" target="_balnk" rel="nofollow">SSL</a>，用来支持https以及wss</li>
