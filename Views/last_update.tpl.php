@@ -1,4 +1,11 @@
 
+<h3>2017-06-27 Gateway 3.0.6版本发布</h3>
+<ul>
+    <li>修复3.0.5/3.0.6版本使用GatewayClient操作session后，导致onClose无法获得$_SESSION的bug</li>
+</ul>
+<hr>
+
+
 <h3>2017-06-20 workerman3.4.3版本发布</h3>
 <ul>
     <li><a href="https://github.com/walkor/Workerman/issues/166" rel="nofollow">修复HTTP协议OPTIONS和HEAD请求包长计算错误问题</a></li>
