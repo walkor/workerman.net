@@ -528,8 +528,8 @@
 			</li>
 			
 			<li>
-				技术交流群：605328640
-				<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=e5d83d7eae0aab41fbca8e29f454de958b4ea3e506f2938ab23f401cf0ed8dec"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="workerman官方5群" title="workerman官方5群"></a>
+				技术交流群：137410824
+				<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=9dd75fbf13523b6b5a518beadf6c726305e415e9e1ba75bdc3afc0cecefe7673"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="workerman官方群2" title="workerman官方群2"></a>
 			</li>
 		
 			<li>
