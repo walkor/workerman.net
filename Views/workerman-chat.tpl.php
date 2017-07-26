@@ -78,7 +78,7 @@
 			<h3>
 				linux环境安装启动
 			</h3>
-			<p>首先：参考手册[检查/安装workerman环境](http://doc.workerman.net/315116)</p>
+			<p>首先：参考手册<a href="http://doc.workerman.net/315116">检查/安装workerman环境</a></p>
 			<p>1、<a href="/download/chatzip" target="_blank">下载</a>workerman-chat，并解压缩到任意目录</p>
 			<p>2、启动workerman<code>php start.php start -d</code>如下图。</p>
 			<img src="/img/workerman-chat-start.png" alt="php聊天室启动示意图"/>
