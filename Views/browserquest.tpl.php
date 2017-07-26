@@ -65,6 +65,7 @@
 			<h3>
 				安装启动
 			</h3>
+			<p>首先：参考手册 <a href="http://doc.workerman.net/315116">检查/安装workerman环境</a></p>
 			<p>1、<a href="/download/browserquestzip" target="_blank">下载BrowserQuest-PHP</a>，并解压缩到任意目录</p>
 			<p>2、进入目录并启动workerman<code>php start.php start -d</code>如下图</p>
 			<img src="/img/browserquest-start.png" alt="browserquest启动示意图"/>
