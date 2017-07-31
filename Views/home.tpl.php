@@ -17,8 +17,8 @@
 				</div>
 				<div class="col-md-5 column">
 					<div class="Q">
-						<b>技术交流群:137410824</b>
-						<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=9dd75fbf13523b6b5a518beadf6c726305e415e9e1ba75bdc3afc0cecefe7673"><img border="0" src="/img/add_to_qq_group.png" alt="workerman官方群2" title="workerman官方群2"></a>
+						<b>技术交流群:532976970</b>
+						<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=eb36ff0d60deab935296623e0e39072a30f14688f7e16978ff1cb44e0ffd18e0"><img border="0" src="/img/add_to_qq_group.png" alt="workerman官方6群" title="workerman官方6群"></a>
 					</div>
 				</div>
 		</div>
@@ -527,8 +527,8 @@
 			</li>
 			
 			<li>
-				技术交流群：137410824
-				<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=9dd75fbf13523b6b5a518beadf6c726305e415e9e1ba75bdc3afc0cecefe7673"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="workerman官方群2" title="workerman官方群2"></a>
+				技术交流群：532976970
+				<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=eb36ff0d60deab935296623e0e39072a30f14688f7e16978ff1cb44e0ffd18e0"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="workerman官方6群" title="workerman官方6群"></a>
 			</li>
 		
 			<li>
