@@ -1,6 +1,6 @@
 <table class="table">
 	<tbody>
-		<tr class="active"><td>1.88¥</td><td>哈利路亞</td><td>2017-09-09</td><td>支付宝</td></tr>
+		<tr class="active"><td>1.88¥</td><td>匿名</td><td>2017-09-09</td><td>微信</td></tr>
 		<tr class="active"><td>1¥</td><td>哈利路亞</td><td>2017-09-07</td><td>支付宝</td></tr>
 		<tr class="active"><td>1.88¥</td><td>Udie</td><td>2017-09-07</td><td>QQ钱包</td></tr>
 		<tr class="active"><td>1¥</td><td>匿名</td><td>2017-09-07</td><td>微信</td></tr>
