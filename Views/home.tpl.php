@@ -287,17 +287,7 @@
 				<a target="_blank" class="btn" href="http://www.10ss.net/" rel="nofollow">本应用来自www.10ss.net</a></p>
 			</div>
 		</div>
-		<div class="media">
-			<a href="http://www.yuchats.com/" class="pull-left" target="_blank" rel="nofollow"><img src="/img/app-ya.png" class="media-object" alt='php服务端手机app 萌mark' /></a>
-			<div class="media-body">
-				<h4 class="media-heading">
-					<a target="_blank" href="http://www.yuchats.com/" rel="nofollow">手机app萌Mark</a>
-				</h4>
-				<p>
-				一款有趣的手机app，后端基于workerman开发
-				<a target="_blank" class="btn" href="http://www.yuchats.com/" rel="nofollow">本应用由www.yuchats.com提供</a></p>
-			</div>
-		</div>
+	
 		<div class="media">
 			 <a href="http://j.yunleyou.com/" class="pull-left" target="_blank" rel="nofollow"><img src="/img/jinglingweiji.jpg" class="media-object" alt="workerman手机游戏"/></a>
 			<div class="media-body">
