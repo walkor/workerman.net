@@ -16,6 +16,7 @@
 	<!--link rel="stylesheet/less" href="/less/responsive.less" type="text/css" /-->
 	<!--script src="/js/less-1.3.3.min.js"></script-->
 	<!--append ‘#!watch’ to the browser URL, then refresh the page. -->
+	<link href="/css/bootstrap.min.css?v3.1" rel="stylesheet">
 
   <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
