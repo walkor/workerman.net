@@ -64,10 +64,10 @@
 							<a href="http://wenda.workerman.net" target="_blank">问答</a>
 						</li>
 						<li>
-							<a href="http://www.woker.cc/shop" target="_blank">应用市场</a>
+							<a href="http://www.woker.cc/shop" target="_blank">应用市场<span class="red-point"></span></a>
 						</li>
 						<li>
-							<a href="http://www.woker.cc" target="_blank">蜗壳即时通讯云</a>
+							<a href="http://www.woker.cc" target="_blank">蜗壳即时通讯云<span class="red-point"></span></a>
 						</li>
 					</ul>
 				</div>
