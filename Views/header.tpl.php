@@ -18,7 +18,7 @@
 	<!--append ‘#!watch’ to the browser URL, then refresh the page. -->
 
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
-	<link href="/css/style.css" rel="stylesheet">
+	<link href="/css/style.css?v=3.1" rel="stylesheet">
 
   <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
