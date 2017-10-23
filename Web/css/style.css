@@ -246,6 +246,6 @@ height:220px;padding:20px;font-size:14px;text-align: left;border:none;
     position: absolute;
     z-index: 1000;
     right: 0%;
-    margin-right: -10px;
+    margin-right: 1px;
     margin-top: -1px;
 }
