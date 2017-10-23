@@ -18,13 +18,13 @@
 						<b>相关连接</b>
 						<ul class="sub">
 						<li><a href="/download">下载</a></li>
-						<li><a href="/applications">相关应用</a></li>
-						<li><a href="/bench">压力测试</a></li>
 						<li><a href="http://doc.workerman.net/315116" rel="nofollow">安装</a></li>
 						<li><a href="http://doc.workerman.net/" rel="nofollow">workerman手册</a></li>
 						<li><a href="http://doc2.workerman.net/" rel="nofollow">gatewayWorker手册</a></li>
 						<li><a href="http://video.workerman.net/">workerman视频教程</a></li>
 						<li><a href="http://wenda.workerman.net/">问答</a></li>
+						<li><a href="/applications">相关应用</a></li>
+						<li><a href="/bench">压力测试</a></li>
 						<li><a href="/last_update">最近更新</a></li>
 						<li><a href="/windows">windows用户</a></li>
 						<li><a href="https://github.com/walkor/Workerman/graphs/contributors" rel="nofollow">开发者</a></li>
