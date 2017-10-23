@@ -17,15 +17,18 @@
 					<div class="col-md-4 column">
 						<b>相关连接</b>
 						<ul class="sub">
-						<li><a href="/download/workerman">Workerman Linux多进程版本（稳定）</a></li>
-						<li><a href="/windows">Workerman Windows版本</a></li>
-						<li><a href="/download/todpole">flappy bird 多人在线版</a></li>
-						<li><a href="/download/todpole">小蝌蚪聊天室</a></li>
-						<li><a href="/download/thrift">Thrift Rpc远程调用框架</a></li>
-						<li><a href="/download/jsonrpc">Json Rpc远程调用框架</a></li>
-						<li><a href="/download/chat">PHP 聊天室</a></li>
-						<li><a href="/download/statistics">分布式统计监控系统</a></li>
-						<li><a href="http://www.workerman.net/gatewaydoc/">GatewayWorker手册</a></li>
+						<li><a href="/download">下载</a></li>
+						<li><a href="/applications">相关应用</a></li>
+						<li><a href="/bench">压力测试</a></li>
+						<li><a href="http://doc.workerman.net/315116" rel="nofollow">安装</a></li>
+						<li><a href="http://doc.workerman.net/" rel="nofollow">workerman手册</a></li>
+						<li><a href="http://doc2.workerman.net/" rel="nofollow">gatewayWorker手册</a></li>
+						<li><a href="http://video.workerman.net/">workerman视频教程</a></li>
+						<li><a href="http://wenda.workerman.net/">问答</a></li>
+						<li><a href="/last_update">最近更新</a></li>
+						<li><a href="/windows">windows用户</a></li>
+						<li><a href="https://github.com/walkor/Workerman/graphs/contributors" rel="nofollow">开发者</a></li>
+						<li><a href="/donate">捐赠</a></li>
 						</ul>
 						<div class="center">
 						<p class="gray" id="online_count"></p>
