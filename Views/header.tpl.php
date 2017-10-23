@@ -51,9 +51,6 @@
 				</div>
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
-						<li<?php if($html_nav == 'applications')echo ' class="active" ';?>>
-							<a href="/applications">相关应用</a>
-						</li>
 						<li<?php if($html_nav == 'install')echo ' class="active" ';?>>
 							<a href="http://doc.workerman.net/315116">安装</a>
 						</li>
@@ -65,6 +62,12 @@
 						</li>
 						<li<?php if($html_nav == 'group')echo ' class="active" ';?>>
 							<a href="http://wenda.workerman.net" target="_blank">问答</a>
+						</li>
+						<li>
+							<a href="http://www.woker.cc/shop" target="_blank">应用市场</a>
+						</li>
+						<li>
+							<a href="http://www.woker.cc" target="_blank">蜗壳即时通讯云</a>
 						</li>
 					</ul>
 				</div>
