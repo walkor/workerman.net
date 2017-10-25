@@ -94,7 +94,7 @@
 			 <a href="http://laychat.workerman.net/" class="pull-left" target="_blank"><img src="/img/laychat.png" class="media-object" alt="PHP聊天室 仿QQ"/></a>
 			<div class="media-body">
 				<h4 class="media-heading">
-					<a target="_blank" href="http://laychat.workerman.net/" target="_blank">LayChat聊天室</a> <font style="color:red;font-size:13px">推荐</font>
+					<a target="_blank" href="http://laychat.workerman.net/" target="_blank">LayChat聊天室源码</a> <font style="color:red;font-size:13px">推荐</font>
 				</h4>
 				<p>LayIM+Workerman开发的即时通讯项目，支持群聊、私聊、表情、传图、传文件、离线消息、历史消息记录等功能，非常强大。支持分布式部署、支持万人在线。<br>
 				<a class="btn" target="_blank" href="http://laychat.workerman.net/" rel="nofollow">DEMO »</a>
@@ -120,7 +120,7 @@
 			 <a href="https://www.wolive.cc/" class="pull-left" target="_blank"><img src="/img/wolive.png" class="media-object" alt="在线客服系统"/></a>
 			<div class="media-body">
 				<h4 class="media-heading">
-					<a target="_blank" href="https://www.wolive.cc" target="_blank">WoLive在线客服系统</a>
+					<a target="_blank" href="https://www.wolive.cc" target="_blank">WoLive在线客服系统源码</a>
 				</h4>
 				<p>Workerman开发的客服系统，任何站点引入一段js即可接入，接入成本极低。支持web站点和移动站点，支持表情、传图、传文件、粘贴截图、离线消息、客服管理、留言、历史记录、会话统计，支持多站点，支持分布式部署、支持万人在线。<br>
 				<a class="btn" target="_blank" href="https://www.wolive.cc/#contact" rel="nofollow">在线客服系统源码</a>
