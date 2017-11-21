@@ -144,7 +144,7 @@
 			 <a href="/web-sender" class="pull-left"><img src="/img/web-msg-sender.png" class="media-object" alt="web 消息推送示意图" /></a>
 			<div class="media-body">
 				<h4 class="media-heading">
-					<a href="/web-sender">Web消息推送系统</a>
+					<a href="/web-sender">Web消息推送系统 web-msg-sender</a>
 				</h4>
 				<p>web消息推送系统，能够通过socket 长连接实时推送消息给所有用户，基于PHPSocketIO开发，客户端使用socket.io客户端，支持各种浏览器。
 				<br><a   class="btn" href="/web-sender">详情 »</a>
