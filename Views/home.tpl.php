@@ -289,19 +289,6 @@
 		</div>
 	
 		<div class="media">
-			 <a href="http://j.yunleyou.com/" class="pull-left" target="_blank" rel="nofollow"><img src="/img/jinglingweiji.jpg" class="media-object" alt="workerman手机游戏"/></a>
-			<div class="media-body">
-				<h4 class="media-heading">
-					<a target="_blank" href="http://j.yunleyou.com/" rel="nofollow">手机游戏 精灵危机</a>
-				</h4>
-				<p>
-				基于workerman开发的一款手机游戏
-				<br>
-				<a class="btn" target="_blank" href="http://j.yunleyou.com/" rel="nofollow">本游戏由云乐游平台提供 »</a>
-				</p>
-			</div>
-		</div>
-		<div class="media">
 			 <a href="/workerman-flappybird" class="pull-left"><img src="/img/workerman-flappy-bird.png" class="media-object" alt='多人在线 flappy bird ' /></a>
 			<div class="media-body">
 				<h4 class="media-heading">
