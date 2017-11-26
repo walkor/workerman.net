@@ -66,7 +66,7 @@
 </div>
 <script src='//cdn.bootcss.com/socket.io/1.3.7/socket.io.js'></script>
 <script>
-var socket = io('http://'+document.domain+':3120');
+var socket = io('https://laychat.workerman.net:3121');
 socket.on('connect', function(){socket.emit('login', '<?php echo session_id();?>');});
 socket.on('update_online_count', function(count){$('#online_count').html(count);});
 </script>
