@@ -28,7 +28,7 @@
 			</h3>
 				workerman Thrift Rpc是一款开源的Rpc远程调用框架，该框架使用workerman作为进程管理器，基于thrift协议，支持跨语言调用。
 				<a class="btn"  href="/workerman-thrift">详细介绍 »</a>
-				<p></p><table><tbody><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-thrift&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-thrift&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table>
+				<p></p><table><tbody><tr><td><iframe src="https://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-thrift&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="https://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-thrift&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table>
 				<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-thrift" target="_blank" rel="nofollow"><b>Fork on Github</b></a>&nbsp;
 				<a class="btn btn-default btn-large" href="/download/thriftzip"><b>下载ZIP压缩文件</b></a> <font class='f11 gray'>下载<?php echo $thrift_download_count;?>次</font>
 		</div>
