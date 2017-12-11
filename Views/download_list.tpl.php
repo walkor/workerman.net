@@ -92,7 +92,7 @@
 			</div>
 		</div>
 		<div class="media">
-			 <a href="https://demos.workerman.net/browserquest/" class="pull-left" target="_blank"><img src="/img/browserquest.jpg" class="media-object" alt="browserquest php 版本示意图"/></a>
+			 <a href="http://demos.workerman.net/browserquest/" class="pull-left" target="_blank"><img src="/img/browserquest.jpg" class="media-object" alt="browserquest php 版本示意图"/></a>
 			<div class="media-body">
 				<div class="thumbnail">
 				<div class="caption-download">
@@ -167,7 +167,7 @@
 			</div>
 		</div>
 		<div class="media">
-			 <a href="https://demos.workerman.net/vmstat/" class="pull-left" target="_blank" ><img src="/img/workerman-vmstat.png" class="media-object" alt="web vmstat"/></a>
+			 <a href="http://demos.workerman.net/vmstat/" class="pull-left" target="_blank" ><img src="/img/workerman-vmstat.png" class="media-object" alt="web vmstat"/></a>
 			<div class="media-body">
 			<div class="thumbnail">
 				<div class="caption-download">

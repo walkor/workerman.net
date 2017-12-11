@@ -53,7 +53,7 @@
 			</p>
             <div class="f16">
                 <h3>在线示例</h3>
-                <a class="btn" target="_blank" href="https://demos.workerman.net/phpsocketio-chat/" rel="nofollow">在线示例-聊天室</a> <a href="https://github.com/walkor/phpsocket.io/tree/master/examples/chat" rel="nofollow" class="btn" target="_blank">示例源码</a>
+                <a class="btn" target="_blank" href="http://demos.workerman.net/phpsocketio-chat/" rel="nofollow">在线示例-聊天室</a> <a href="https://github.com/walkor/phpsocket.io/tree/master/examples/chat" rel="nofollow" class="btn" target="_blank">示例源码</a>
             </div>
             <div class="f16">
                 <h3>手册</h3>
