@@ -52,6 +52,9 @@
 						<li<?php if($html_nav == 'install')echo ' class="active" ';?>>
 							<a href="http://doc.workerman.net/315116">安装</a>
 						</li>
+						<li<?php if($html_nav == 'download')echo ' class="active" ';?>>
+							<a href="/download">安装</a>
+						</li>
 						<li<?php if($html_nav == 'doc')echo ' class="active" ';?>>
 							<a href="/doc">手册</a>
 						</li>
