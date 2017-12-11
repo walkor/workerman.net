@@ -29,7 +29,7 @@
 				</div>
 			</div>
 			
-			<p class="f16">线上Demo示例：<a href="/demos/vmstat/" target="_blank">http://www.workerman.net/demos/vmstat/</a></p>
+			<p class="f16">线上Demo示例：<a href="https://demos.workerman.net/vmstat/" target="_blank">https://demos.workerman.net/vmstat/</a></p>
 			<div class="bd-ad"><?php global $bd_ad_468_60; echo $bd_ad_468_60;?></div>
 		</div>
 		<div class="col-md-5 column text-center">

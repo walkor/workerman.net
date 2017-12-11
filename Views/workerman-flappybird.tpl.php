@@ -14,7 +14,7 @@
 			<p class="f16">
 				workerman-flappy-bird采用PHP(workerman框架)+HTML5技术开发，是一款以workerman作为应用服务器，workerman-flappy-bird是一个以workerman作为应用服务器，前端采用HTML5+WebSocket开发的即时交互游戏，flappy bird （像素小鸟）游戏多人在线版。
 			</p>
-			<p><a href="/demos/flappy-bird/" target="_blank">在线DEMO点击这里</a></p>
+			<p><a href="https://demos.workerman.net/flappy-bird/" target="_blank">在线DEMO点击这里</a></p>
 			<h3>下载</h3>
 			<div class="thumbnail">
 				<div class="caption-download">
@@ -36,7 +36,7 @@
 			<li>独立运行，不依赖Mysql、apache、nginx等软件</li>
 			</ul>
 			<div class="bd-ad"><?php global $bd_ad_468_60; echo $bd_ad_468_60;?></div>
-			<p>	<a href="/demos/flappy-bird/" target="_blank"><img src="/img/workerman-flappy-bird.png" alt="php 多人在线flappy bird小游戏浏览器界面" /></a></p>
+			<p>	<a href="https://demos.workerman.net/flappy-bird/" target="_blank"><img src="/img/workerman-flappy-bird.png" alt="php 多人在线flappy bird小游戏浏览器界面" /></a></p>
 		</div>
 		<div class="col-md-5 column text-center">
 			<h3>其它应用</h3>
@@ -70,7 +70,7 @@
 			<h4>4、终端运行<code> cd /home/ && git clone https://github.com/walkor/workerman-flappy-bird</code></h4>
 			<h4>5、终端运行<code>cd workerman-flappy-bird &&  ./workerman/bin/workermand start</code></h4>
 			<h4>6、大功告成！浏览器访问 http://ip:8484 如图:（如果不知道自己服务器ip，则运行 <code>ip addr | grep eth1 | grep inet</code>查看）</h4>
-			<a href="/demos/flappy-bird/" target="_blank"><img src="/img/workerman-flappy-bird.png" alt="php 多人在线flappy bird小游戏浏览器界面" /></a>
+			<a href="https://demos.workerman.net/flappy-bird/" target="_blank"><img src="/img/workerman-flappy-bird.png" alt="php 多人在线flappy bird小游戏浏览器界面" /></a>
 			<br><br>
 			<h3>阿里云详细安装教程之centos系统</h3>
 			<h4>1、<code>yum install php-cli php-process git</code></h4>
@@ -78,6 +78,6 @@
 			<h4>3、<code>cd workerman-flappy-bird &&  ./workerman/bin/workermand start</code></h4>
 			<h4>4、大功告成！浏览器访问 http://ip:8484 (如果无法访问请检查服务器防火墙)</h4>
 			<br>
-			<p><a href="/demos/flappy-bird/" target="_blank">多人在线 flappy bird DEMO点击这里</a></p>
+			<p><a href="https://demos.workerman.net/flappy-bird/" target="_blank">多人在线 flappy bird DEMO点击这里</a></p>
 		</div>
 	</div>

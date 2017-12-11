@@ -92,10 +92,10 @@
 			</div>
 		</div>
 		<div class="media">
-			 <a href="/demos/browserquest/" class="pull-left" target="_blank"><img src="/img/browserquest.jpg" class="media-object" alt="browserquest php 版本示意图"/></a>
+			 <a href="https://demos.workerman.net/browserquest/" class="pull-left" target="_blank"><img src="/img/browserquest.jpg" class="media-object" alt="browserquest php 版本示意图"/></a>
 			<div class="media-body">
 				<h4 class="media-heading">
-					<a target="_blank" href="/demos/browserquest/">BrowserQuest WorkerMan版本</a>
+					<a target="_blank" href="https://demos.workerman.net/browserquest/">BrowserQuest WorkerMan版本</a>
 				</h4>
 				<p>
 				BrowserQuest是Mozilla发布的一款2D图形的MMO（大型多人在线）游戏，玩家可以聊天、打怪、升级、寻宝、获得成就。这里基于WorkerMan框架重写了BrowserQuest服务端nodejs部分，浏览器与后端同样是基于websocket协议通讯。
@@ -116,7 +116,7 @@
 				PHPSocket.IO是Socket.IO的PHP 服务端版本。PHP版socket.io可用来替代传统nodejs版本socket.io服务端，并且接口与其一致，可用于开发跨浏览器或者安卓、ios等移动端即时通讯应用。
 				<br>
 				<a class="btn" target="_blank" href=/download/phpsocket.io.zip rel="nofollow">下载源代码 »</a>
-				<a class="btn" target="_blank" href="/demos/phpsocketio-chat/" rel="nofollow">在线示例-聊天室 »</a>
+				<a class="btn" target="_blank" href="https://demos.workerman.net/phpsocketio-chat/" rel="nofollow">在线示例-聊天室 »</a>
 				<a class="btn" target="_blank" href="https://github.com/walkor/phpsocket.io/tree/master/docs/zh" rel="nofollow">手册 »</a>
 				</p>
 			</div>
@@ -162,10 +162,10 @@
 			</div>
 		</div>
 		<div class="media">
-			 <a href="/demos/vmstat/" class="pull-left" ><img src="/img/workerman-vmstat.png" class="media-object" alt="web vmstat"/></a>
+			 <a href="https://demos.workerman.net/vmstat/" class="pull-left" ><img src="/img/workerman-vmstat.png" class="media-object" alt="web vmstat"/></a>
 			<div class="media-body">
 				<h4 class="media-heading">
-					<a  href="/demos/vmstat/">Web VMStat 监控</a>
+					<a  href="https://demos.workerman.net/vmstat/">Web VMStat 监控</a>
 				</h4>
 				<p>
 				一个通过浏览器查看vmstat命令的工具，以更友好的方式实时展示服务器cpu、内存、IO等情况
