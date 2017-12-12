@@ -72,7 +72,7 @@ socket.on('update_online_count', function(count){$('#online_count').html(count);
 
 <link href="/css/bootstrap.min.css" rel="stylesheet">
 <link href="/css/style.css?v3.1" rel="stylesheet">
-<!--
+
 <link rel="stylesheet" href="http://s.workerman.net/layui/css/layui.css">
 <script src="http://s.workerman.net/common/swfobject.js"></script>
 <script src="http://s.workerman.net/common/json2.js"></script>
@@ -106,7 +106,6 @@ socket.on('update_online_count', function(count){$('#online_count').html(count);
     text-indent: 0;
 }
 </style>
--->
 
 </body>
 </html>
