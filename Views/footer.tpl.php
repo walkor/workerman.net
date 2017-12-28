@@ -73,7 +73,7 @@ socket.on('update_online_count', function(count){$('#online_count').html(count);
 <link href="/css/bootstrap.min.css" rel="stylesheet">
 <link href="/css/style.css?v3.1" rel="stylesheet">
 <script type="text/javascript" src='https://laychatx.workerman.net/assets/libs/layui/layui.js'></script>
-<script src="https://laychatx.workerman.net/laychat.js"></script>
+<script src="https://laychatx.workerman.net/laychat.js?v3.7"></script>
 <script>
     laychat.app_key = 'b054014693241bcd9c20';
     laychat.initUrl = 'https://www.workerman.net/laychat/init.php';
@@ -81,41 +81,5 @@ socket.on('update_online_count', function(count){$('#online_count').html(count);
     laychat.enableAudio = true;
     laychat.open();
 </script>
-
-<!--
-<link rel="stylesheet" href="http://s.workerman.net/layui/css/layui.css">
-<script src="http://s.workerman.net/common/swfobject.js"></script>
-<script src="http://s.workerman.net/common/json2.js"></script>
-<script src="http://s.workerman.net/common/web_socket.js"></script>
-<script src="http://s.workerman.net/layui/layui.js"></script>
-<script src="http://s.workerman.net/common/laychat.js"></script>
-<script>
-    laychat.address         = 'ws://laychat.workerman.net:9292';
-    laychat.initUrl         = '/laychat/init.php';
-    laychat.bindUrl         = '/laychat/bind.php';
-    laychat.chatLogUrl      = '/laychat/chat_log.php';
-    laychat.membersUrl      = '/laychat/members.php';
-    laychat.sendMessageUrl  = '/laychat/send_message.php';
-    laychat.uploadFileUrl   = '/laychat/upload_file.php';        
-    laychat.uploadImageUrl  = '/laychat/upload_img.php';      
-    laychat.updateSignUrl   = '/laychat/update_sign.php';    
-    laychat.msgBoxUrl       = '/laychat/msg_box.php';     
-    laychat.getNoticeUrl    = '/laychat/get_notice.php'; 
-    laychat.agreeUrl        = '/laychat/agree.php'; 
-    laychat.setMin          = true;
-    laychat.jq              = $;
-    laychat.voice     = false;
-    laychat.open();
-</script>
-<style>
-.layui-layim-list li p {
-    display: block;
-    line-height: 18px;
-    font-size: 12px;
-    color: #999;
-    text-indent: 0;
-}
-</style>
--->
 </body>
 </html>
