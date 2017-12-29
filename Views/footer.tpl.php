@@ -73,7 +73,7 @@ socket.on('update_online_count', function(count){$('#online_count').html(count);
 <link href="/css/bootstrap.min.css" rel="stylesheet">
 <link href="/css/style.css?v3.1" rel="stylesheet">
 <script type="text/javascript" src='https://laychatx.workerman.net/assets/libs/layui/layui.js'></script>
-<script src="https://laychatx.workerman.net/laychat.js?v3.7"></script>
+<script src="https://laychatx.workerman.net/laychat.js?v3.7.5"></script>
 <script>
     laychat.app_key = 'b054014693241bcd9c20';
     laychat.initUrl = 'https://www.workerman.net/laychat/init.php';
