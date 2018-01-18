@@ -50,8 +50,17 @@ QQ帐号：(walkor) 2202055656<br>
     </table>
     <br>
 	<h4>数字货币捐赠地址：</h4>
-		<b>DOGE(狗狗币)：</b>DRqHZNGHhCijsQS2qMtfwNtZRwMZBYEpY6
-		
+		<b>BTC(比特币)：</b>1MhC27KePnpTLQFS6mu7PcixYodFrYGmhu<br>
+		<b>LTC(莱特币)：</b>Lfv9HKdUUT4WbCwbGutQfdnim1zY3VTbhK<br>
+		<b>ETH(以太币)：</b>0x61F341f7685E9CaA4eAa884174f136Ad57a0D696<br>
+		<b>BCH(比特币现金)：</b>1MhC27KePnpTLQFS6mu7PcixYodFrYGmhu<br>
+		<b>ETC(以太经典)：</b>0x61F341f7685E9CaA4eAa884174f136Ad57a0D696<br>
+		<b>QTUM(量子链)：</b>QhJB8QcMaFhGmYLTX7DbWtWb44Zy4dQUmT<br>
+		<b>EOS(EOS)：</b>0x61F341f7685E9CaA4eAa884174f136Ad57a0D696<br>
+		<b>BTM(比原链)：</b>0x61F341f7685E9CaA4eAa884174f136Ad57a0D696<br>
+		<b>AE(Aeternity)：0x61F341f7685E9CaA4eAa884174f136Ad57a0D696</b><br>
+		<b>KNC(Kyber)：</b>0x61F341f7685E9CaA4eAa884174f136Ad57a0D696<br>
+		<b>DOGE(狗狗币)：</b>DRqHZNGHhCijsQS2qMtfwNtZRwMZBYEpY6<br>
     <br><br><br>
     </div>
 </div>
