@@ -58,7 +58,7 @@ QQ帐号：(walkor) 2202055656<br>
 		<b>QTUM(量子链)：</b>QhJB8QcMaFhGmYLTX7DbWtWb44Zy4dQUmT<br>
 		<b>EOS(EOS)：</b>0x61F341f7685E9CaA4eAa884174f136Ad57a0D696<br>
 		<b>BTM(比原链)：</b>0x61F341f7685E9CaA4eAa884174f136Ad57a0D696<br>
-		<b>AE(Aeternity)：0x61F341f7685E9CaA4eAa884174f136Ad57a0D696</b><br>
+		<b>AE(Aeternity)：</b>0x61F341f7685E9CaA4eAa884174f136Ad57a0D696<br>
 		<b>KNC(Kyber)：</b>0x61F341f7685E9CaA4eAa884174f136Ad57a0D696<br>
 		<b>DOGE(狗狗币)：</b>DRqHZNGHhCijsQS2qMtfwNtZRwMZBYEpY6<br>
     <br><br><br>
