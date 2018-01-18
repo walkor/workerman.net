@@ -50,14 +50,15 @@ QQ帐号：(walkor) 2202055656<br>
     </table>
     <br>
 	<b>数字货币捐赠地址：</b><br>
-	DOGE(狗狗币):DRqHZNGHhCijsQS2qMtfwNtZRwMZBYEpY6	
-    <br>
+	DOGE(狗狗币)：DRqHZNGHhCijsQS2qMtfwNtZRwMZBYEpY6
+		
+    <br><br><br>
     </div>
 </div>
 
 <div class="row clearfix">
 	<div class="col-md-9 column">
-感谢您对Workerman的支持!
+
 <br><br>
 <h3>捐赠列表</h3>
         <?php include __DIR__ . '/__donate_list.tpl.php';?>
