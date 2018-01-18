@@ -49,7 +49,7 @@ QQ帐号：(walkor) 2202055656<br>
     </tr>
     </table>
     <br>
-	<h4>数字货币捐赠地址：</h4><br>
+	<h4>数字货币捐赠地址：</h4>
 		<b>DOGE(狗狗币)：</b>DRqHZNGHhCijsQS2qMtfwNtZRwMZBYEpY6
 		
     <br><br><br>
