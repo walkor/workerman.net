@@ -1,9 +1,10 @@
 <?php
 namespace WorkerMan\Modules;
-header('HTTP/1.1 404 Not Found');
-die;
+
 function install()
 {
+    header('HTTP/1.1 404 Not Found');
+    die;
     $html_title = 'workerman 详细安装教程';
     $html_nav = 'install';
     $html_keywords = 'workerman安装';
