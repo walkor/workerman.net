@@ -79,7 +79,7 @@ socket.on('update_online_count', function(count){$('#online_count').html(count);
     laychat.app_key = 'b054014693241bcd9c20';
     laychat.initUrl = 'https://www.workerman.net/laychat/init.php';
     laychat.sendMessageUrl = 'https://www.workerman.net/laychat/send_message.php';
-    laychat.membersUrl = 'https://www.workerman.net/laychat/membsers.php';
+    laychat.membersUrl = 'https://www.workerman.net/laychat/members.php';
     laychat.enableAudio = true;
     laychat.open();
 </script>
