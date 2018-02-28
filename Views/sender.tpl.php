@@ -44,7 +44,7 @@
 			<h3>Demo:</h3>
 			<b>效果1:<b>
                         <p class="f16">接收消息页面：<a rel="nofollow" href="http://demos.workerman.net/web-sender">http://demos.workerman.net/web-sender/</a></p>
-			<p class="f16">推送接口url：<a rel="nofollow" href="http://demos.workerman.net:2121/?type=publish&to=&content=content">http://www.workerman.net:2121/?type=publish&to=uid&content=content</a><br>
+			<p class="f16">推送接口url：<a rel="nofollow" href="http://demos.workerman.net:2121/?type=publish&to=&content=content">http://demos.workerman.net:2121/?type=publish&to=uid&content=content</a><br>
 其中to为接收消息的uid，如果传空则向所有人推送消息
 content 为消息内容
 			</p>
