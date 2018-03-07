@@ -26,8 +26,8 @@
 				<br>
 				<a class="btn" target="_blank" href="http://doc2.workerman.net/">GatewayWorker2.0手册</a>
 				<a href="http://www.workerman.net/gatewaydoc/" target="_blank" rel="nofollow" class="btn">手册备用地址 »</a>
-				<a class="btn" target="_blank" href="http://www.workerman.net/download/GatewayWorker.zip">点击下载源码(Linux版本)</a>
-				<a class="btn" target="_blank" href="http://www.workerman.net/download/GatewayWorker-for-win.zip">点击下载源码(Windows版本)</a>
+				<a target="_blank" rel="nofollow" class="btn" href="https://www.kancloud.cn/walkor/gateway-worker">离线手册 »</a>
+					
 				</p>
 			</div>
 		</div>
