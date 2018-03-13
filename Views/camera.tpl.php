@@ -62,10 +62,11 @@
 			观看页面：http://ip:8088/ (如果无法访问请检查服务器防火墙)</div>
 			<img src="/img/camera.jpg" alt="网页摄像头直播使用界面"/>
 			
-			<h3>提示：<h3/>
+			<h3>提示：</h3>
 				<p>此demo实际是将摄像头的视频转化成图片分发给所有浏览器，所以没有办法支持声音，并且占用带宽较大，不适合生产环境</p>
 				<p>蜗壳市场有人开发出带声音的直播，可用于生产环境。</p>
 				<p><a href="http://www.woker.cc/shop/index/application-detail?application_id=37">Flash rtmp 一对一视频对话</p>
 				<p><a href="http://www.woker.cc/shop/index/application-detail?application_id=36">WebRTC一对一视频通话私</p>
 		</div>
 	</div>
+<hr>
