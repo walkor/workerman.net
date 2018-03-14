@@ -1,6 +1,6 @@
 <table class="table">
 	<tbody>
-		<tr class="active"><td>16¥</td><td>广生</td><td>2018-03-14</td><td>支付宝</td></tr>
+		<tr class="active"><td>16.8¥</td><td>广生</td><td>2018-03-14</td><td>支付宝</td></tr>
 		<tr class="active"><td>66¥</td><td>甘亮</td><td>2018-03-14</td><td>支付宝</td></tr>
 		<tr class="active"><td>3¥</td><td>我爱狼</td><td>2018-03-12</td><td>支付宝</td></tr>
 		<tr class="active"><td>10¥</td><td>杰强</td><td>2018-03-10</td><td>支付宝</td></tr>
