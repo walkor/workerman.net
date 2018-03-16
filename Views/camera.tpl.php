@@ -14,6 +14,7 @@
 			<p class="f16">
 				LiveCamera是一款基于HTML5+WebSocket+PHP的视频直播系统，通过网页(HTML5)调用摄像头，通过websocket传输给PHP后端(workerman)，
 				再由后端广播给所有在线播放网页，观看者可以通过这个播放页面实时观看摄像头拍摄的内容。此应用支持部分手机浏览器调用摄像头直播摄像头视频流。
+			        <br>注意：目前不支持部署在windows系统
 			</p>
 			<h3>下载</h3>
 			<div class="thumbnail">
@@ -59,7 +60,7 @@
 			<p>2、进入目录启动workerman<code>php start.php start -d</code>如下图</p>
 			<img src="/img/camera-start.png" alt="网页摄像头直播启动示意图"/>
 			<div>3、录像页面：http://ip:8088/camera.html(ip为运行liveCamera服务的ip或者域名)<br>
-			观看页面：http://ip:8088/ (如果无法访问请检查服务器防火墙)</div>
+			观看页面：http://ip:8088/ <br>提示：如果无法访问请检查服务器防火墙，如果是云服务器还要设置安全组，端口为8080 8008 8088三个</div>
 			<img src="/img/camera.jpg" alt="网页摄像头直播使用界面"/>
 			
 			<h3>提示：</h3>
