@@ -59,7 +59,7 @@
 			<p>2、启动workerman<code>php start.php start -d</code>如下图</p>
 			<img src="/img/vmstat-start.png" alt="vmstat服务启动示意图"/>
 			<p>3、浏览器访问端口http://ip:55555或者http://域名:55555，例如
-			<a href="http://workerman.net:55555">http://workerman.net:55555</a>如图：(如果无法访问请检查服务器防火墙)</p>
+			<a href="http://workerman.net:55555">http://workerman.net:55555</a>如图：(如果无法访问请检查服务器防火墙，如果是云服务器还要设置安全组)</p>
 			<img src="/img/vmstat.png" alt="vmstat服务使用界面"/>
 		</div>
 	</div>
