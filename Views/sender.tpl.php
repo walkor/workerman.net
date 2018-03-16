@@ -80,7 +80,7 @@ content 为消息内容
 			<p>1、下载：选择版本并下载(<a href="/download/senderzip" target="_blank">linux版本</a>、<a href="/download/web-msg-sender-for-win.zip" target="_blank">windows版本</a>)web-msg-sender，并解压缩到任意目录</p>
 			<p>2、启动：linux系统cd到到框架目录里运行<code>php start.php start -d</code>。windows系统进入到框架目录里双击start_for_win.bat文件启动。</p>
 			<p>3、测试：浏览器访问端口http://ip:2123或者http://域名:2123，例如
-			<a href="http://workerman.net:2123/">http://workerman.net:2123</a>如图：(如果无法访问请检查服务器防火墙)</p>
+			<a href="http://workerman.net:2123/">http://workerman.net:2123</a>如图：(如果无法访问请检查服务器防火墙，如果是云服务器还要设置安全组)</p>
 			<img src="/img/web-msg-sender-demo.png" alt="WEB推送使用界面"/>
 			<br>
 			<h3>前端测试：</h3>
