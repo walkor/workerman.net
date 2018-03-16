@@ -75,7 +75,7 @@
 			<h4>4、下载 workerman-todpole 并解压到任意目录（下载地址在本页面上方）</h4>
 			<h4>5、终端运行<code>cd workerman-todpole && php start.php start -d</code>如图</h4>
 			<img src="/img/workerman-todpole-start-without-libevent.png" alt="php蝌蚪小游戏启动界面" />
-			<h4>6、大功告成！浏览器访问 http://ip:8383 如图:（如果无法访问请检查服务器防火墙）</h4>
+			<h4>6、大功告成！浏览器访问 http://ip:8383 如图:（如果无法访问请检查服务器防火墙，如果是云服务器还要设置安全组）</h4>
 			<a href="http://kedou.workerman.net" target="_blank"><img src="/img/workerman-todpole-browser.png" alt="php蝌蚪小游戏浏览器界面" /></a>
 			<br><br>
 			<h3>阿里云详细安装教程之centos系统</h3>
