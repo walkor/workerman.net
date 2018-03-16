@@ -76,7 +76,7 @@
 			<h4>1、<code>yum install php-cli php-process git</code></h4>
 			<h4>2、<code>cd /home/ && git clone https://github.com/walkor/workerman-flappy-bird</code></h4>
 			<h4>3、<code>cd workerman-flappy-bird &&  ./workerman/bin/workermand start</code></h4>
-			<h4>4、大功告成！浏览器访问 http://ip:8484 (如果无法访问请检查服务器防火墙)</h4>
+			<h4>4、大功告成！浏览器访问 http://ip:8484 (如果无法访问请检查服务器防火墙，如果是云服务器还要设置安全组)</h4>
 			<br>
 			<p><a href="http://demos.workerman.net/flappy-bird/" target="_blank">多人在线 flappy bird DEMO点击这里</a></p>
 		</div>
