@@ -67,9 +67,10 @@
 			</h3>
 			<p>首先：参考手册 <a href="http://doc.workerman.net/315116">检查/安装workerman环境</a></p>
 			<p>1、<a href="/download/browserquestzip" target="_blank">下载BrowserQuest-PHP</a>，并解压缩到任意目录</p>
-			<p>2、linux用户进入目录并启动workerman<code>php start.php start -d</code>，windows用户双击start_for_win.bat。启动界面类似</p>
+			<p>2、Web/config/config_local.json里面的host改成本机ip或者域名</p>
+			<p>3、linux用户进入目录并启动workerman<code>php start.php start -d</code>，windows用户双击start_for_win.bat。启动界面类似</p>
 			<img src="/img/browserquest-start.png" alt="browserquest启动示意图"/>
-			<p>3、浏览器访问端口http://ip:8787或者http://域名:8787，例如
+			<p>4、浏览器访问端口http://ip:8787或者http://域名:8787，例如
 			<a href="http://demos.workerman.net/browserquest/">http://workerman.net:8787</a>如图：(如果无法访问请检查服务器防火墙，如果是云服务器还要设置安全组)</p>
 			<img src="/img/browserquest.png" alt="browserquest使用界面"/>
 			<h3>说明</h3>
