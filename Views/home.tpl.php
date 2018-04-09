@@ -410,6 +410,22 @@
 		</h4>
 		<ul>
 			<li>
+				<a href="http://www.workerman.net/last_update" rel="nofollow">2018-04-03 workerman3.5.5发布，增加AsyncUdpConnection类</a>
+			</li>
+			<li>
+				<a href="http://www.workerman.net/last_update" rel="nofollow">2016-12-04 workerman3.5.3发布，linux版本兼容windows系统</a>
+			</li>
+			<li>
+				<a href="http://www.workerman.net/last_update" rel="nofollow">2017-11-02 Workerman 3.5.2发布，增加unlisten等接口、qps统计等特性</a>
+			</li>
+			<li>
+				<a href="http://www.workerman.net/last_update" rel="nofollow">2017-08-25 Workerman 3.5.0发布，支持connections命令</a>
+			</li>
+			
+			<li>
+				<a href="http://www.workerman.net/last_update" rel="nofollow">2016-08-08 workerman3.4.7发布，status支持定时器统计</a>
+			</li>
+			<li>
 				<a href="http://www.workerman.net/last_update" rel="nofollow">2016-11-27 支持ReactPHP，支持异步Mysql异步Redis等组件</a>
 			</li>
 			<li>
