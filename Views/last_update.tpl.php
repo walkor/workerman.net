@@ -1,10 +1,87 @@
+<h3>2018-04-03 Workerman 3.5.5版本发布</h3>
+<ul>
+    <li>支持swoole-eventloop</li>
+    <li>status支持Summary统计</li>
+    <li>WebServer支持Custom 404 page 和 Custom Headers</li>
+    <li>增加AsyncUdpConnection类</li>
+    <li>AsyncTcpConnection支持非阻塞ssl</li>
+</ul>
+<hr>
+
+
+<h3>2017-12-06 Workerman 3.5.4版本发布</h3>
+<ul>
+    <li>修改composer.json，去掉强依赖ext-pcntl ext-posix，因为它们不支持windows系统</li>
+</ul>
+<hr>
+
+<h3>2017-12-04 Workerman 3.5.3版本发布</h3>
+<ul>
+    <li>Linux版本兼容windows系统</li>
+</ul>
+<hr>
+
+<h3>2017-12-04 Workerman 3.5.3版本发布</h3>
+<ul>
+    <li>Linux版本兼容windows系统</li>
+</ul>
+<hr>
+
+<h3>2017-11-02 Workerman 3.5.2版本发布</h3>
+<ul>
+    <li>status 支持qps统计</li>
+    <li>增加unlisten pauseAccept resumeAccept接口</li>
+    <li>支持-g参数优雅reload/stop服务</li>
+    <li>作为websocket客户端支持子协议</li>
+    <li>修复SSL Reconnect问题</li>
+    <li>修复作为websocket客户端心跳问题</li>
+</ul>
+<hr>
+
+<h3>2017-08-25 Workerman 3.5.1版本发布</h3>
+<ul>
+    <li>修复udp协议错误</li>
+</ul>
+<hr>
+
+<h3>2017-08-25 Workerman 3.5.0版本发布</h3>
+<ul>
+    <li>增加connections命令，用于查看连接统计</li>
+</ul>
+<hr>
+
+<h3>2017-08-08 Workerman 3.4.7版本发布</h3>
+<ul>
+    <li>status命令增加定时器统计</li>
+</ul>
+<hr>
+
+
+<h3>2017-07-24 Workerman 3.4.6版本发布</h3>
+<ul>
+    <li>修复使用ReactPHP的StreamSelectLoop时内存泄漏问题</li>
+</ul>
+<hr>
+
+
+<h3>2017-07-14 Workerman 3.4.5版本发布</h3>
+<ul>
+    <li>http协议支持多文件上传</li>
+</ul>
+<hr>
+
+
+<h3>2017-07-06 Workerman 3.4.4版本发布</h3>
+<ul>
+    <li>修复select-eventloop定时器嵌套bug</li>
+</ul>
+<hr>
 
 <h3>2017-06-27 Gateway 3.0.6版本发布</h3>
 <ul>
     <li>修复3.0.5/3.0.6版本使用GatewayClient操作session后，导致onClose无法获得$_SESSION的bug</li>
 </ul>
 <hr>
-
 
 <h3>2017-06-20 workerman3.4.3版本发布</h3>
 <ul>
