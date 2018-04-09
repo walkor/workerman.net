@@ -21,12 +21,6 @@
 </ul>
 <hr>
 
-<h3>2017-12-04 Workerman 3.5.3版本发布</h3>
-<ul>
-    <li>Linux版本兼容windows系统</li>
-</ul>
-<hr>
-
 <h3>2017-11-02 Workerman 3.5.2版本发布</h3>
 <ul>
     <li>status 支持qps统计</li>
