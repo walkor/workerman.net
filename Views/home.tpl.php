@@ -91,13 +91,13 @@
 		</h3>
 		
 		<div class="media">
-			 <a href="http://laychat.workerman.net/" class="pull-left" target="_blank"><img src="/img/laychat.png" class="media-object" alt="PHP聊天室 仿QQ"/></a>
+			 <a href="https://www.laychat.net/" class="pull-left" target="_blank"><img src="/img/laychat.png" class="media-object" alt="PHP聊天室 仿QQ"/></a>
 			<div class="media-body">
 				<h4 class="media-heading">
-					<a target="_blank" href="http://laychat.workerman.net/" target="_blank">LayChat聊天室源码</a> <font style="color:red;font-size:13px">推荐</font>
+					<a target="_blank" href="https://www.laychat.net/" target="_blank">来聊WebIM网页聊天插件源码</a> <font style="color:red;font-size:13px">推荐</font>
 				</h4>
-				<p>LayIM+Workerman开发的即时通讯项目，支持群聊、私聊、表情、传图、传文件、离线消息、历史消息记录等功能，非常强大。支持分布式部署、支持万人在线。<br>
-				<a class="btn" target="_blank" href="http://laychat.workerman.net/" rel="nofollow">DEMO »</a>
+				<p>一套功能强大的WebIM源码，支持群聊、私聊、视频、语音、表情、传图、传文件、离线消息、历史消息记录等功能。几行js便可接入网页聊天，支持万人在线。<br>
+				<a class="btn" target="_blank" href="https://www.laychat.net/" rel="nofollow">DEMO »</a>
 				</p>
 			</div>
 		</div>
