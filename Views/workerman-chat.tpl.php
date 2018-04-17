@@ -96,7 +96,7 @@
 			<br>
 			<h3>其它php聊天室相关案例</h3>
 			<p>
-			<a href="https://www.laychat.net" target="_blank">来聊网页聊天室源码</a>
+			<a href="https://www.laychat.net" target="_blank">来聊网页聊天源码</a>
 			</p>
 			<br>
 		</div>
