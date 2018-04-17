@@ -94,5 +94,10 @@
 			<h3>说明</h3>
 			<p>本聊天室业务逻辑非常简单，业务逻辑都在文件./Applications/Chat/Events.php中，开发者可以随意修改，比如增加表情等功能</p>
 			<br>
+			<h3>其它php聊天室相关案例</h3>
+			<p>
+			<a href="https://www.laychat.net" target="_blank">来聊网页聊天室源码</a>
+			</p>
+			<br>
 		</div>
 	</div>
