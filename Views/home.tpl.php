@@ -413,7 +413,7 @@
 				<a href="http://www.workerman.net/last_update" rel="nofollow">2018-04-03 workerman3.5.5发布，增加AsyncUdpConnection类</a>
 			</li>
 			<li>
-				<a href="http://www.workerman.net/last_update" rel="nofollow">2016-12-04 workerman3.5.3发布，linux版本兼容windows系统</a>
+				<a href="http://www.workerman.net/last_update" rel="nofollow">2017-12-04 workerman3.5.3发布，linux版本兼容windows系统</a>
 			</li>
 			<li>
 				<a href="http://www.workerman.net/last_update" rel="nofollow">2017-11-02 Workerman 3.5.2发布，增加unlisten等接口、qps统计等特性</a>
