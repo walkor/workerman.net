@@ -410,6 +410,9 @@
 		</h4>
 		<ul>
 			<li>
+				<a href="http://www.workerman.net/last_update" rel="nofollow">2018-05-10 gatewayWorker3.0.8发布，增加一些常用uid接口</a>
+			</li>
+			<li>
 				<a href="http://www.workerman.net/last_update" rel="nofollow">2018-04-03 workerman3.5.5发布，增加AsyncUdpConnection类</a>
 			</li>
 			<li>
