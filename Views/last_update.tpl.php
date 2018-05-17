@@ -1,3 +1,9 @@
+<h3>2018-04-03 GatewayWorker 3.0.8版本发布</h3>
+<ul>
+    <li>支持 getClientIdByUid getUidListByGroup getUidCountByGroup getAllUidList getAllUidCount 等接口</li>
+</ul>
+<hr>
+
 <h3>2018-04-03 Workerman 3.5.5版本发布</h3>
 <ul>
     <li>支持swoole-eventloop</li>
