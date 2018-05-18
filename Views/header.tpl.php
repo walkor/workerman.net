@@ -64,6 +64,9 @@
 						<li<?php if($html_nav == 'group')echo ' class="active" ';?>>
 							<a href="http://wenda.workerman.net" target="_blank">问答</a>
 						</li>
+						<li<?php if($html_nav == 'related_projects')echo ' class="active" ';?>>
+							<a href="http://wenda.workerman.net/related_projects" target="_blank">第三方项目</a>
+						</li>
 						<li>
 							<a href="http://www.woker.cc/shop" target="_blank">应用市场<span class="red-point"></span></a>
 						</li>
