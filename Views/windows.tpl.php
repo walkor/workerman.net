@@ -2,13 +2,14 @@
 	<div class="col-md-10 column">
 	<h2>workerman-for-win</h2>
 	<p class="f14">
-		workerman-for-win是运行在windows平台的版本，开发接口与Linux多进程版本一致，
+		<h2> 注意：workerman从3.5.3版本开始同时支持linux系统和windows系统，不再区分linux版本和windows版本。原window版本不再维护。<h2>
+		<s>workerman-for-win是运行在windows平台的版本，开发接口与Linux多进程版本一致，
 		也就是说基于workerman开发的应用程序即可以运行在Linux系统，也可以运行在Windows系统上。
 		<br>
 		<b>注意：Window版本workerman不依赖任何扩展。
 		另外由于windows版本无法做到守护进程，并且无法fork多进程充分利用多cpu资源，所以建议windows版本只用于开发调试，
 		实际部署使用Linux多进程版本。
-		</b>
+			</b></s>
 	</p>
 	<table><tbody><tr><td><iframe src="https://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-for-win&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="https://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-for-win&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table>
 		<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-for-win" target="_blank" rel="nofollow"><b>Fork on Github</b></a>&nbsp;
