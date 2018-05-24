@@ -2,7 +2,7 @@
 	<div class="col-md-10 column">
 	<h2>workerman-for-win</h2>
 	<p class="f14">
-		<h2> 注意：workerman从3.5.3版本开始同时支持linux系统和windows系统，不再区分linux版本和windows版本。原window版本不再维护。<h2>
+		<h2> 注意：workerman从3.5.3版本开始同时支持linux系统和windows系统，不再区分linux版本和windows版本。原window版本不再维护。</h2>
 		<s>workerman-for-win是运行在windows平台的版本，开发接口与Linux多进程版本一致，
 		也就是说基于workerman开发的应用程序即可以运行在Linux系统，也可以运行在Windows系统上。
 		<br>
