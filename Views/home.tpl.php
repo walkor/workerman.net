@@ -12,8 +12,8 @@
 			<div class="col-md-7 column">
 				<table><tbody><tr><td><iframe src="https://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="https://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table>
 				<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman" target="_blank" rel="nofollow"><b>Fork on Github</b></a>&nbsp;
-				<a class="btn btn-default btn-large" href="/download/workermanzip"><b>Linux版下载</b></a>&nbsp;
-				<a class="btn btn-default btn-large" href="/download/workermanwinzip"><b>Win版下载</b></a>
+				<a class="btn btn-default btn-large" href="/download/workermanzip"><b>下载workerman</b></a><!--&nbsp;
+				<a class="btn btn-default btn-large" href="/download/workermanwinzip"><b>Win版下载</b></a>-->
 				</div>
 				<div class="col-md-5 column">
 					<div class="Q">
