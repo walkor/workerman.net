@@ -3,19 +3,19 @@
 	<h2>workerman-for-win</h2>
 	<p class="f14">
 		<h2> 注意：workerman从3.5.3版本开始同时支持linux系统和windows系统，不再区分linux版本和windows版本。原windows版本不再维护。</h2>
-		<s>workerman-for-win是运行在windows平台的版本，开发接口与Linux多进程版本一致，
+		<!--<s>workerman-for-win是运行在windows平台的版本，开发接口与Linux多进程版本一致，
 		也就是说基于workerman开发的应用程序即可以运行在Linux系统，也可以运行在Windows系统上。
 		<br>
 		<b>注意：Window版本workerman不依赖任何扩展。
 		另外由于windows版本无法做到守护进程，并且无法fork多进程充分利用多cpu资源，所以建议windows版本只用于开发调试，
 		实际部署使用Linux多进程版本。
-			</b></s>
+			</b></s>-->
 	</p>
-	<table><tbody><tr><td><iframe src="https://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-for-win&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="https://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-for-win&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table>
+	<!--<table><tbody><tr><td><iframe src="https://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-for-win&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="https://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-for-win&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table>
 		<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-for-win" target="_blank" rel="nofollow"><b>Fork on Github</b></a>&nbsp;
 		<a class="btn btn-default btn-large" href="/download/workermanwinzip"><b>下载ZIP压缩文件</b></a> <font class='f11 gray'>下载<?php echo $workermanwin_download_count;?>次</font>
-	<br><hr>
-	<h3>直接下载可用的windows demo</h3>
+	<br><hr>-->
+	<!--<h3>直接下载可用的windows demo</h3>
         <font class="f16">
         windows版本聊天室<a href="/download/workerman-chat-for-win.zip" rel="nofollow">点击下载workerman-chat-for-win</a> 详情参见<a href="/workerman-chat">这里</a><br>
         windows版本小蝌蚪聊天室<a href="/download/workerman-todpole-for-win.zip" rel="nofollow">点击下载workerman-todpole-for-win</a> 详情参见<a href="/workerman-todpole">这里</a><br>
@@ -23,7 +23,7 @@
         windows版本GatewayWorker<a href="/download/GatewayWorker-for-win.zip" rel="nofollow">点击下载GatewayWorker-for-win</a> 详情参见<a href="http://www.workerman.net/gatewaydoc/" rel="nofollow">这里</a><br>
        
         以上demo下载后双击start_for_win.bat即可启动（无需安装其它扩展）
-        </font>
+        </font>-->
         <div style="margin:10px 0">提示：如果出现类似"php不是内部或外部命令"的提示，说明没有设置好php环境变量，请参考下面步骤设置</div>
         <hr>
 	<h4>PHP的环境变量设置</h4>
