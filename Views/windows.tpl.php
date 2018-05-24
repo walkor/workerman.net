@@ -32,7 +32,7 @@
 	<br><br>
 	<img src="/img/gif/install-php.gif" alt="PHP环境变量设置示意图">
 	<br><hr>
-        <h3>workerman的Windows版本与Linux版本异同</h3>
+        <h3>workerman的在Windows下与Linux下区别</h3>
         1、win版本count属性无效，全部为单进程<br>
         2、不支持start stop reload restart status命令<br>
         3、cmd命令行启动，后面可接多个文件，例如 php start_web.php start_gateway.php start_worker.php<br>
