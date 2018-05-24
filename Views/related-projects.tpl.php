@@ -15,6 +15,11 @@
     项目主页：<a href="https://github.com/hetao29/slightphp" target="_blank" rel="nofollow">https://github.com/hetao29/slightphp</a><br>
     项目文档：<a href="https://github.com/hetao29/slightphp" target="_blank" rel="nofollow">https://github.com/hetao29/slightphp</a>
 <hr>
+<h3>SimplerWorker</h3>
+    基于Thinkphp和workerman、gateway开发的高并发、可分布式部署的高性能及时通讯框架<br>
+    项目主页：<a href="https://gitee.com/SimplerWorker/SimplerWorker" target="_blank" rel="nofollow">https://gitee.com/SimplerWorker/SimplerWorker</a><br>
+    项目文档：<a href="https://gitee.com/SimplerWorker/SimplerWorker" target="_blank" rel="nofollow">https://gitee.com/SimplerWorker/SimplerWorker</a>
+<hr>
 <h3>hide2/api</h3>
     基于Workerman的高性能API服务<br>
     项目主页：<a href="https://github.com/hide2/api" target="_blank" rel="nofollow">https://github.com/hide2/api</a><br>
