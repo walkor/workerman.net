@@ -10,7 +10,7 @@
 			<div class="media-body">
 			<div class="thumbnail">
 				<div class="caption-download">
-					<h4>workerman内核 (linux版本)</h4>
+					<h4>workerman内核 (Linux Windows通用)</h4>
 					<p></p><table><tbody><tr><td><iframe src="https://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="https://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
 					<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman" target="_blank" rel="nofollow"><b>Fork on Github</b></a>&nbsp;
 					<a class="btn btn-default btn-large" href="/download/workermanzip"><b>下载ZIP压缩文件</b> </a>
@@ -18,7 +18,7 @@
 			</div>
 			</div>
 		</div>
-		<div class="media">
+		<!--<div class="media">
 			 <a href="http://doc3.workerman.net/" class="pull-left" target="_blank" ><img src="/img/workerman-for-win-big.png" class="media-object" /></a>
 			<div class="media-body">
 			<div class="thumbnail">
@@ -31,18 +31,18 @@
 				</div>
 			</div>
 			</div>
-		</div>
+		</div> -->
 		<div class="media"> 
 			 <a href="http://workerman.net/gatewaydoc/" class="pull-left" target="_blank" ><img src="/img/gatewayworker-big.png" class="media-object" /></a>
 			<div class="media-body">
 			<div class="thumbnail">
 				<div class="caption-download">
-					<h4>GatewayWorker框架(Linux版本)</h4>
+					<h4>GatewayWorker框架(Linux Windows通用)</h4>
 					<p></p><table><tbody><tr><td><iframe src="https://ghbtns.com/github-btn.html?user=walkor&amp;repo=gatewayworker&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="https://ghbtns.com/github-btn.html?user=walkor&amp;repo=gatewayworker&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
 					<a class="btn btn-default btn-large" href="https://github.com/walkor/gatewayworker" target="_blank" rel="nofollow"><b>Fork on Github</b></a>&nbsp;
 					<a class="btn btn-default btn-large" href="/download/GatewayWorker.zip"><b>下载ZIP压缩文件</b> </a>
-					<br><br><h4>Windows版本下载</h4>
-						<a class="btn btn-default btn-large" href="/download/GatewayWorker-for-win.zip"><b>下载Win版本ZIP压缩文件</b> </a>
+					<!--<br><br><h4>Windows版本下载</h4>
+						<a class="btn btn-default btn-large" href="/download/GatewayWorker-for-win.zip"><b>下载Win版本ZIP压缩文件</b> </a>-->
 				</div>
 			</div>
 			</div>
@@ -79,14 +79,14 @@
 				<div class="thumbnail">
     				<div class="caption-download">
         				<h4 class="media-heading">
-        					PHP小蝌蚪聊天室(Linux版本)
+        					PHP小蝌蚪聊天室(Linux Windows通用)
         				</h4>
     					<p></p><table><tbody><tr><td><iframe src="https://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-todpole&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="https://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-todpole&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
     					<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-todpole" target="_blank" rel="nofollow"><b>Fork on Github</b></a>&nbsp;
     					<a class="btn btn-default btn-large" href="/download/todpolezip"><b>下载ZIP压缩文件</b></a> 
     					<br><br>
-    					<h4>Windows版本下载</h4>
-						<a class="btn btn-default btn-large" href="/download/workerman-todpole-for-win.zip"><b>下载Win版本ZIP压缩文件</b> </a> 
+    					<!--<h4>Windows版本下载</h4>
+						<a class="btn btn-default btn-large" href="/download/workerman-todpole-for-win.zip"><b>下载Win版本ZIP压缩文件</b> </a> --> 
     				</div>
     			</div>
 			</div>
@@ -97,7 +97,7 @@
 				<div class="thumbnail">
 				<div class="caption-download">
 					<h4 class="media-heading">
-    					BrowserQuest PHP版本(Linux版本)
+    					BrowserQuest PHP版本(Linux Windows通用)
     				</h4>
 					<p></p><table><tbody><tr><td><iframe src="https://ghbtns.com/github-btn.html?user=walkor&amp;repo=browserquest-php&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="https://ghbtns.com/github-btn.html?user=walkor&amp;repo=browserquest-php&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
 					<a class="btn btn-default btn-large" href="https://github.com/walkor/browserquest-php" target="_blank" rel="nofollow"><b>Fork on Github</b></a>&nbsp;
@@ -112,13 +112,13 @@
 			<div class="media-body">
 			<div class="thumbnail">
 				<div class="caption-download">
-					<h4>workerman-chat PHP 聊天室框架(Linux版本)</h4>
+					<h4>workerman-chat PHP 聊天室框架(Linux Windows通用)</h4>
 					<p></p><table><tbody><tr><td><iframe src="https://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-chat&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="https://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-chat&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
 					<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-chat" target="_blank" rel="nofollow"><b>Fork on Github</b></a>&nbsp;
 					<a class="btn btn-default btn-large" href="/download/chatzip"><b>下载ZIP压缩文件</b> </a> 
 					<br><br>
-					<h4>Windows版本下载</h4>
-					<a class="btn btn-default btn-large" href="/download/workerman-chat-for-win.zip"><b>下载Win版本ZIP压缩文件</b> </a> 
+					<!--<h4>Windows版本下载</h4>
+					<a class="btn btn-default btn-large" href="/download/workerman-chat-for-win.zip"><b>下载Win版本ZIP压缩文件</b> </a>--> 
 				</div>
 			</div>
 			</div>
@@ -128,12 +128,12 @@
 			<div class="media-body">
 			<div class="thumbnail">
 				<div class="caption-download">
-					<h4>WEB消息推送框架(Linux版本)</h4>
+					<h4>WEB消息推送框架(Linux Windows通用)</h4>
 					<p></p><table><tbody><tr><td><iframe src="https://ghbtns.com/github-btn.html?user=walkor&amp;repo=web-msg-sender&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="https://ghbtns.com/github-btn.html?user=walkor&amp;repo=web-msg-sender&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
 					<a class="btn btn-default btn-large" href="https://github.com/walkor/web-msg-sender" target="_blank" rel="nofollow"><b>Fork on Github</b></a>&nbsp;
 					<a class="btn btn-default btn-large" href="/download/senderzip"><b>下载ZIP压缩文件</b> </a>
-					<h4>Windows版本下载</h4>
-					<a class="btn btn-default btn-large" href="/download/web-msg-sender-for-win.zip"><b>下载Win版本ZIP压缩文件</b> </a> 
+					<!--<h4>Windows版本下载</h4>
+					<a class="btn btn-default btn-large" href="/download/web-msg-sender-for-win.zip"><b>下载Win版本ZIP压缩文件</b> </a> -->
 				</div>
 			</div>
 			</div>
@@ -143,12 +143,12 @@
 			<div class="media-body">
 			<div class="thumbnail">
 				<div class="caption-download">
-					<h4>PHPSocket.IO(Linux版本)</h4>
+					<h4>PHPSocket.IO(Linux Windows通用)</h4>
 					<p></p><table><tbody><tr><td><iframe src="https://ghbtns.com/github-btn.html?user=walkor&amp;repo=phpsocket.io&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="https://ghbtns.com/github-btn.html?user=walkor&amp;repo=phpsocket.io&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
 					<a class="btn btn-default btn-large" href="https://github.com/walkor/phpsocket.io" target="_blank"  rel="nofollow"><b>Fork on Github</b></a>&nbsp;
 					<a class="btn btn-default btn-large" href="/download/phpsocket.io.zip"  rel="nofollow"><b>下载ZIP压缩文件</b> </a>
-					<h4>Windows版本下载</h4> 
-					<a class="btn btn-default btn-large" href="/download/phpsocket.io-for-win.zip"><b>下载Win版本ZIP压缩文件</b> </a> 
+					<!--<h4>Windows版本下载</h4> 
+					<a class="btn btn-default btn-large" href="/download/phpsocket.io-for-win.zip"><b>下载Win版本ZIP压缩文件</b> </a> -->
 				</div>
 			</div>
 			</div>
@@ -158,7 +158,7 @@
 			<div class="media-body">
 			<div class="thumbnail">
 				<div class="caption-download">
-					<h4>phptty(Linux版本)</h4>
+					<h4>phptty(Linux Windows通用)</h4>
 					<p></p><table><tbody><tr><td><iframe src="https://ghbtns.com/github-btn.html?user=walkor&amp;repo=phptty&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="https://ghbtns.com/github-btn.html?user=walkor&amp;repo=phptty&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
 					<a class="btn btn-default btn-large" href="https://github.com/walkor/phptty" target="_blank" rel="nofollow"><b>Fork on Github</b></a>&nbsp;
 					<a class="btn btn-default btn-large" href="/download/phptty.zip" rel="nofollow"><b>下载ZIP压缩文件</b> </a> 
@@ -184,7 +184,7 @@
 			<div class="media-body">
 			<div class="thumbnail">
 				<div class="caption-download">
-					<h4>socks5代理服务(Linux版本)</h4>
+					<h4>socks5代理服务(Linux Windows通用)</h4>
 					<p></p><table><tbody><tr><td><iframe src="https://ghbtns.com/github-btn.html?user=walkor&amp;repo=php-socks5&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="https://ghbtns.com/github-btn.html?user=walkor&amp;repo=php-socks5&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
 					<a class="btn btn-default btn-large" href="https://github.com/walkor/php-socks5" target="_blank" rel="nofollow"><b>Fork on Github</b></a>&nbsp;
 					<a class="btn btn-default btn-large" href="/download/php-socks5.zip"><b>下载ZIP压缩文件</b> </a> 
