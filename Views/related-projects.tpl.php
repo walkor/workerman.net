@@ -5,6 +5,11 @@
     项目主页：<a href="http://thinkworker.cn/" target="_blank" rel="nofollow">http://thinkworker.cn/</a><br>
     项目文档：<a href="http://docs.thinkworker.cn/" target="_blank" rel="nofollow">http://docs.thinkworker.cn/</a>
 <hr>
+<h3>Beanbun</h3>
+    Beanbun 是用 PHP 编写的多进程网络爬虫框架，具有良好的开放性、高可扩展性，基于 Workerman。<br>
+    项目主页：<a href="http://www.beanbun.org" target="_blank" rel="nofollow">http://www.beanbun.org</a><br>
+    项目文档：<a href="http://www.beanbun.org" target="_blank" rel="nofollow">http://www.beanbun.org</a>
+<hr>
 <h3>think-worker</h3>
     ThinkPHP官方开发的ThinkPHP5的workerman扩展<br>
     项目主页：<a href="https://github.com/top-think/think-worker" target="_blank" rel="nofollow">https://github.com/top-think/think-worker</a><br>
@@ -35,12 +40,6 @@
     项目主页：<a href="http://ask.webworker.xtgxiso.com/" target="_blank" rel="nofollow">http://ask.webworker.xtgxiso.com/</a><br>
     项目文档：<a href="http://doc.webworker.xtgxiso.com/" target="_blank" rel="nofollow">http://doc.webworker.xtgxiso.com/</a>
 <hr>
-<h3>Beanbun</h3>
-    Beanbun 是用 PHP 编写的多进程网络爬虫框架，具有良好的开放性、高可扩展性，基于 Workerman。<br>
-    项目主页：<a href="http://www.beanbun.org" target="_blank" rel="nofollow">http://www.beanbun.org</a><br>
-    项目文档：<a href="http://www.beanbun.org" target="_blank" rel="nofollow">http://www.beanbun.org</a>
-<hr>
-
 <h3>Workerman_cor_ape</h3>
     Workerman_cor_ape是php框架 Workerman 的强化版，在不影响任何使用方式，稳定性，性能前提下，增加了异步任务组件。<br>
     项目主页：<a href="https://github.com/zyfei/workerman_cor_ape" target="_blank" rel="nofollow">https://github.com/zyfei/workerman_cor_ape</a><br>
@@ -118,4 +117,9 @@
     a Push Server for Nova Framework<br>
     项目主页：<a href="https://github.com/nova-framework/quasar" target="_blank" rel="nofollow">https://github.com/nova-framework/quasar</a><br>
     项目文档：<a href="https://github.com/nova-framework/quasar" target="_blank" rel="nofollow">https://github.com/nova-framework/quasar</a>
+<hr>
+<h3>Beanbun</h3>
+    workermvc 是一个基于 workerman 的 mvc 框架，使用thinkphp5的composer包,使用习惯尽量做到原来的配方、原来的味道<br>
+    项目主页：<a href="https://github.com/lobtao/workermvc" target="_blank" rel="nofollow">https://github.com/lobtao/workermvc</a><br>
+    项目文档：<a href="https://github.com/lobtao/workermvc_demo" target="_blank" rel="nofollow">https://github.com/lobtao/workermvc_demo</a>
 <hr>
