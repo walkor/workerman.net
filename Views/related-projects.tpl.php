@@ -118,7 +118,7 @@
     项目主页：<a href="https://github.com/nova-framework/quasar" target="_blank" rel="nofollow">https://github.com/nova-framework/quasar</a><br>
     项目文档：<a href="https://github.com/nova-framework/quasar" target="_blank" rel="nofollow">https://github.com/nova-framework/quasar</a>
 <hr>
-<h3>Beanbun</h3>
+<h3>workermvc</h3>
     workermvc 是一个基于 workerman 的 mvc 框架，使用thinkphp5的composer包,使用习惯尽量做到原来的配方、原来的味道<br>
     项目主页：<a href="https://github.com/lobtao/workermvc" target="_blank" rel="nofollow">https://github.com/lobtao/workermvc</a><br>
     项目文档：<a href="https://github.com/lobtao/workermvc_demo" target="_blank" rel="nofollow">https://github.com/lobtao/workermvc_demo</a>
