@@ -13,6 +13,11 @@ else
 
 $host_name = 'www.workerman.net';
 
+if(empty($_SERVER['HTTPS']) ||  strtolower($_SERVER['HTTPS']) == 'off')
+{
+    return _header('Location: https://' . $host_name .$_SERVER['REQUEST_URI'], true, 301);
+}
+
 if(0 !== strpos($_SERVER['HTTP_HOST'],$host_name))
 {
     return _header('Location: https://' . $host_name .$_SERVER['REQUEST_URI'], true, 301);
