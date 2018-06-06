@@ -15,7 +15,7 @@ $host_name = 'www.workerman.net';
 
 if(0 !== strpos($_SERVER['HTTP_HOST'],$host_name))
 {
-    return _header('Location: http://' . $host_name .$_SERVER['REQUEST_URI'], true, 301);
+    return _header('Location: https://' . $host_name .$_SERVER['REQUEST_URI'], true, 301);
 }
 
 if(!empty($_GET))
@@ -23,7 +23,7 @@ if(!empty($_GET))
     $url_data = parse_url($_SERVER['REQUEST_URI']);
     if(isset($url_data['path']))
     {
-        return _header('Location: http://' . $host_name .$url_data['path'], true, 301);
+        return _header('Location: https://' . $host_name .$url_data['path'], true, 301);
     }
 }
 
