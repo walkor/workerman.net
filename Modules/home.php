@@ -7,7 +7,7 @@ function home()
     {
         return _header('Location: /', 301);
     }
-    $html_title = 'workerman高性能PHPSocket服务器框架';
+    $html_title = 'workerman一个高性能PHPSocket服务器框架';
     $html_keywords = 'workerman, php socket';
     $html_desc = 'Workerman是一款纯PHP开发的开源高性能的PHP socket服务器框架。支持TCP长连接，支持Websocket等诸多协议。被广泛的用于手机app、手游服务端、网络游戏服务器、聊天室、硬件通讯、智能家居、车联网、物联网等领域的开发。';
     $html_nav = 'home';
