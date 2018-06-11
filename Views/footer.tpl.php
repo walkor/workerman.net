@@ -36,7 +36,7 @@
 							document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F609dc2f866ce0133cdf405ea1a45f492' type='text/javascript'%3E%3C/script%3E"));
 						</script>
 						<p class="gray">
-							<a href="http://www.miitbeian.gov.cn/" rel="nofollow" target="_blank">蜀ICP备17016206号-5</a>
+							<a href="http://www.miitbeian.gov.cn/" rel="nofollow" target="_blank">蜀ICP备17016206号-2</a>
 						</p>
 						</div>
 					</div>
