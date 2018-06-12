@@ -29,6 +29,9 @@
 						<li><a href="https://www.wolive.cc">在线客服系统源码</a></li>
 						</ul>
 						<div class="center">
+						<p class="gray">
+							<a href="http://www.miitbeian.gov.cn/" rel="nofollow" target="_blank">蜀ICP备17016206号-2</a>
+						</p>
 						<p class="gray" id="online_count"></p>
 						<p class="gray" style="font-size:11px"> Powered by <a href="http://www.workerman.net/web-sender" target="_blank"><strong>web-msg-sender!</strong></a></p>
 						<script type="text/javascript">
