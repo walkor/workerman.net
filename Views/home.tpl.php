@@ -519,7 +519,7 @@
 		<h4 class="btl">更多帮助</h4>
 		<ul>
 			<li>
-				技术交流群：812483358
+				技术交流群：812483358<br>
 				<img src="/img/add-qun8.png" width="160px">
 			</li>
 		
