@@ -519,17 +519,10 @@
 		<h4 class="btl">更多帮助</h4>
 		<ul>
 			<li>
-				<a href="http://wenda.workerman.net" class="c2"><b>去社区提问</b></a>
-			</li>
-			
-			<li>
-				技术交流群：532976970
-				<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=eb36ff0d60deab935296623e0e39072a30f14688f7e16978ff1cb44e0ffd18e0"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="workerman官方6群" title="workerman官方6群"></a>
+				技术交流群：812483358
+				<img src="/img/add-qun8.png" width="160px">
 			</li>
 		
-			<li>
-			商务合作联系QQ：2202055656
-			</li>
 		</ul>
 		<br>
 		<h4><a href="/donate_list"><b>捐赠墙</b></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/donate" style="font-size:14px"><b>我要捐赠</b></a></h4>
