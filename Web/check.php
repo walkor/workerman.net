@@ -51,7 +51,7 @@ foreach($check_func_map as $func)
     if(isset($disable_func_map[$func]))
     {
         echo "\n\033[31;40mFunction $func may be disabled. Please check disable_functions in php.ini\n";
-        echo "see http://doc3.workerman.net/faq/disable-function-check.html\033[0m\n";
+        echo "see http://doc.workerman.net/faq/disable-function-check.html\033[0m\n";
         exit;
     }
 }
