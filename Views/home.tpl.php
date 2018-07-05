@@ -393,6 +393,43 @@
 	</div>
 	<div class="col-md-5 column">
 		<h3></h3>
+		<h4 class="btl">更多帮助</h4>
+		<ul>
+			<li>
+				技术交流群：812483358<br>
+				<img src="/img/add-qun8.png" width="160px">
+			</li>
+		
+		</ul>
+		<br>
+		<h4><a href="/donate_list"><b>捐赠墙</b></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/donate" style="font-size:14px"><b>我要捐赠</b></a></h4>
+                <?php /*include __DIR__ . '/__donate_list.tpl.php';*/?>
+                <?php
+$donate_file = __DIR__ . '/__donate_list.tpl.php';
+$donate_content = file_get_contents($donate_file);
+$display_count = 54;
+$donate_list = "";
+if($donate_content)
+{
+    $line_list = explode("\n", $donate_content);
+    foreach($line_list as $line)
+    {
+        if($display_count-- <= 0)
+        {
+            break;
+        }
+        $donate_list .= $line."\n";
+    }
+    $donate_list .= "   </tbody>
+</table>";
+}
+echo $donate_list;
+                ?>
+                <a href="/donate_list"><b>全部清单</b></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/donate"><b>我要捐赠</b></a>
+                <br><br>
+                <h4>捐赠账号(walkor) ：</h4>
+<img src="/img/weixin.jpg">
+		<br>
 		<h4>问答动态</h4>
 		<ul>
 			<li>
@@ -446,112 +483,9 @@
 			<li>
 				<a href="http://doc3.workerman.net/component/global-data.html">2016-02-26 GlobalData 进程变量共享组件发布</a>
 			</li>
-			<li>
-				2016-02-16 phptty发布
-			</li>
-			<li>
-				2016-01-18 分布式进程间通讯组件Channel发布
-			</li>
-			<li>
-				2015-11-11 GatewayWorker2.0发布
-			</li>
- 			<li>
-				2015-10-14 web-msg-sender(web消息推送)改版
-			</li>
-			<li>
-				2015-09-10 phpsocket.io发布
-			</li>
-			<li>
-				2015-04-07 workerman3.x windows版本 发布
-			</li>
-			<li>
-				2015-03-30 摄像头视频流直播demo发布
-			</li>
-			<li>
-				2015-03-25 摄像头视频流转ascii码流实时传输demo发布
-			</li>
-			<li>
-				2015-03-23 web vmstat工具发布
-			</li>
-			<li>
-				2015-03-22 BrowserQuest php版本发布
-			</li>
-			<li>
-				2015-01-31 workerman-3.0 发布
-			</li>
-			<li>
-				2014-11-2 workerman-MT多线程版本发布，同时支持Linux Windows平台
-			</li>
-			<li>
-				2014-08-30 聊天室支持分房间等功能
-			</li>
-			<li>
-				2014-07-23 workerman 手册发布
-			</li>
-			<li>
-				2014-06-10 workerman windows 平台多线程测试版本发布
-			</li>
-			<li>
-				2014-06-07 社区功能上线
-			</li>
-			<li>
-				2014-06-03 flappy bird 多人在线版发布
-			</li>
-		    <li>
-				2014-05-01 PHP小蝌蚪游戏发布
-			</li>
-			<li>
-				2014-03-25 聊天室发布
-			</li>
-			<li>
-				2014-01-03 分布式监控系统发布
-			</li>
-			<li>
-				2013-10-05 Thrif Rpc框架发布
-			</li>
-			<li>
-				2013-09-11 Json Rpc 框架发布
-			</li>
-			<li>
-				2013-03-01 workerman 框架发布
-			</li>
+			
 		</ul>
-		<h4 class="btl">更多帮助</h4>
-		<ul>
-			<li>
-				技术交流群：812483358<br>
-				<img src="/img/add-qun8.png" width="160px">
-			</li>
 		
-		</ul>
-		<br>
-		<h4><a href="/donate_list"><b>捐赠墙</b></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/donate" style="font-size:14px"><b>我要捐赠</b></a></h4>
-                <?php /*include __DIR__ . '/__donate_list.tpl.php';*/?>
-                <?php
-$donate_file = __DIR__ . '/__donate_list.tpl.php';
-$donate_content = file_get_contents($donate_file);
-$display_count = 54;
-$donate_list = "";
-if($donate_content)
-{
-    $line_list = explode("\n", $donate_content);
-    foreach($line_list as $line)
-    {
-        if($display_count-- <= 0)
-        {
-            break;
-        }
-        $donate_list .= $line."\n";
-    }
-    $donate_list .= "   </tbody>
-</table>";
-}
-echo $donate_list;
-                ?>
-                <a href="/donate_list"><b>全部清单</b></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/donate"><b>我要捐赠</b></a>
-                <br><br>
-                <h4>捐赠账号(walkor) ：</h4>
-<img src="/img/weixin.jpg">
 		<div class="bd-ad"><?php global $bd_ad_250_250; echo $bd_ad_250_250;?></div>
 	</div>
 </div>
