@@ -435,6 +435,7 @@ echo $donate_list;
                 ?>
 		<a href="https://www.workerman.net/donate_list">» 所有清单</a>
                 <br>
+		<br>
 		<h4>问答动态</h4>
 		<ul>
 			<li>
