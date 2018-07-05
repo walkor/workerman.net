@@ -141,7 +141,8 @@ ul .sub
 
 p
 {
-    text-indent:2em	
+    text-indent:2em;
+    margin: 0;
 }
 
 .about-nav {
