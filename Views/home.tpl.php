@@ -393,19 +393,19 @@
 	</div>
 	<div class="col-md-5 column">
 		<h3></h3>
-		<h4 class="btl">更多帮助</h4>
+		<h4 class="btl">二维码</h4>
 		<div class="row clearfix">
 			<div class="col-md-4 column">
 				技术交流群：812483358<br>
-				<img src="/img/add-qun8.png" width="120px">
+				<img src="/img/add-qun8.png" width="140px">
 			</div>
 			<div class="col-md-4 column">
 				微信捐赠<br>
-				<img src="/img/weixin.jpg" width="120px">
+				<img src="/img/weixin.jpg" width="140px">
 			</div>
 			<div class="col-md-4 column">
 				支付宝捐赠<br>
-				<img src="/img/alipay.png" width="120px">
+				<img src="/img/alipay.png" width="140px">
 			</div>
 		</div>
 		
