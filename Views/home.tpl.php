@@ -396,16 +396,16 @@
 		<h4 class="btl">二维码</h4>
 		<div class="row clearfix">
 			<div class="col-md-4 column">
-				技术交流群：812483358<br>
-				<img src="/img/add-qun8.png" width="140px">
+				技术交流群：<br>812483358
+				<img src="/img/add-qun8.png" width="150px">
 			</div>
 			<div class="col-md-4 column">
-				微信捐赠<br>
-				<img src="/img/weixin.jpg" width="140px">
+				微信捐赠<br><br>
+				<img src="/img/weixin.jpg" width="150px">
 			</div>
 			<div class="col-md-4 column">
-				支付宝捐赠<br>
-				<img src="/img/alipay.png" width="140px">
+				支付宝捐赠<br><br>
+				<img src="/img/alipay.png" width="150px">
 			</div>
 		</div>
 		
@@ -433,7 +433,7 @@ if($donate_content)
 }
 echo $donate_list;
                 ?>
-                <a href="/donate_list"><b>全部清单</b></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/donate"><b>我要捐赠</b></a>
+                
                 <br>
 		<h4>问答动态</h4>
 		<ul>
