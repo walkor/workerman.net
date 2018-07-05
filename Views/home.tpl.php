@@ -396,15 +396,15 @@
 		<h4 class="btl">二维码</h4>
 		<div class="row clearfix">
 			<div class="col-md-4 column">
-				<p>技术交流群：</p><p>812483358</p>
+				<p>技术交流群</p>
 				<img src="/img/add-qun8.png" width="145px">
 			</div>
 			<div class="col-md-4 column">
-				<br><p>微信捐赠</p>
+				<p>微信捐赠</p>
 				<img src="/img/weixin.jpg" width="145px">
 			</div>
 			<div class="col-md-4 column">
-				<br><p>支付宝捐赠</p>
+				<p>支付宝捐赠</p>
 				<img src="/img/alipay.png" width="145px">
 			</div>
 		</div>
