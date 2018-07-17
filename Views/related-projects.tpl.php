@@ -54,7 +54,7 @@
 <h3>WorkerA</h3>
     a http framework for workerman<br>
     项目主页：<a href="https://github.com/wazsmwazsm/WorkerA" target="_blank" rel="nofollow">https://github.com/wazsmwazsm/WorkerA</a><br>
-    项目文档：<a href="https://github.com/wazsmwazsm/WorkerA/blob/master/README_CN.md" target="_blank" rel="nofollow">https://github.com/wazsmwazsm/WorkerA/blob/master/README_CN.md</a>
+    项目文档：<a href="https://www.kancloud.cn/wazsmwazsm/workera/691859" target="_blank" rel="nofollow">https://www.kancloud.cn/wazsmwazsm/workera</a>
 <hr>
 <h3>Workerman-Amp</h3>
     本项目用于将Amp的event-loop应用于Workerman，从而可以在Workerman中使用基于Amp的高性能组件，例如异步MySQL，异步Redis，异步HTTP客户端等。<br>
