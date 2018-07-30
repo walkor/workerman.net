@@ -24,9 +24,9 @@
     					<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-todpole" target="_blank" rel="nofollow"><b>Fork on Github</b></a>&nbsp;
     					<a class="btn btn-default btn-large" href="/download/todpolezip"><b>下载ZIP压缩文件</b></a> 
     					<br><br>
-    					<h4>Windows版本下载</h4>
+    					<!--<h4>Windows版本下载</h4>
 						<a class="btn btn-default btn-large" href="/download/workerman-todpole-for-win.zip"><b>下载Win版本ZIP压缩文件</b> </a> 
-				</div>
+				--></div>
 			</div>
 			<h3>
 				特性
