@@ -40,6 +40,11 @@
     项目主页：<a href="http://ask.webworker.xtgxiso.com/" target="_blank" rel="nofollow">http://ask.webworker.xtgxiso.com/</a><br>
     项目文档：<a href="http://doc.webworker.xtgxiso.com/" target="_blank" rel="nofollow">http://doc.webworker.xtgxiso.com/</a>
 <hr>
+<h3>php-signaler</h3>
+    This is an object build with Workerman to support hlsjs-p2p-engine signaler service. Written in full pure PHP. High performance and support cluster.<br>
+    项目主页：<a href="https://github.com/RayP2P/php-signaler" target="_blank" rel="nofollow">https://github.com/RayP2P/php-signaler</a><br>
+    项目文档：<a href="https://github.com/RayP2P/php-signaler" target="_blank" rel="nofollow">https://github.com/RayP2P/php-signaler</a>
+<hr>
 <h3>Workerman_cor_ape</h3>
     Workerman_cor_ape是php框架 Workerman 的强化版，在不影响任何使用方式，稳定性，性能前提下，增加了异步任务组件。<br>
     项目主页：<a href="https://github.com/zyfei/workerman_cor_ape" target="_blank" rel="nofollow">https://github.com/zyfei/workerman_cor_ape</a><br>
