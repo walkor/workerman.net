@@ -94,7 +94,7 @@
 			 <a href="https://www.wolive.cc/" class="pull-left" target="_blank"><img src="/img/wolive.png" class="media-object" alt="在线客服系统"/></a>
 			<div class="media-body">
 				<h4 class="media-heading">
-					<a target="_blank" href="https://www.wolive.cc">WoLive在线客服系统源码</a>
+					<a target="_blank" href="https://www.wolive.cc">WoLive在线客服系统源码</a> <font style="color:red;font-size:13px">推荐</font>
 				</h4>
 				<p>Workerman开发的客服系统，任何站点引入一段js即可接入，接入成本极低。支持web站点和移动站点，支持表情、传图、传文件、粘贴截图、离线消息、客服管理、留言、历史记录、会话统计，支持多站点、支持万人在线。<br>
 				<a class="btn" target="_blank" href="https://www.wolive.cc/" >在线客服系统源码</a>
@@ -106,7 +106,7 @@
 			 <a href="https://www.laychat.net/?wm_home" class="pull-left" target="_blank"><img src="/img/laychat.png" class="media-object" alt="PHP聊天室 仿QQ"/></a>
 			<div class="media-body">
 				<h4 class="media-heading">
-					<a target="_blank" href="https://www.laychat.net/?wm_home">来聊WebIM网页聊天插件源码</a> <font style="color:red;font-size:13px">推荐</font>
+					<a target="_blank" href="https://www.laychat.net/?wm_home">来聊WebIM网页聊天插件源码</a>
 				</h4>
 				<p>一套功能强大的WebIM源码，支持群聊、私聊、视频、语音、表情、传图、传文件、离线消息、历史消息记录等功能。几行js便可接入网页聊天，支持万人在线。<br>
 				<a class="btn" target="_blank" href="https://www.laychat.net/?wm_home" rel="nofollow">DEMO »</a>
