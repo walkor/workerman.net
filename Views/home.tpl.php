@@ -115,7 +115,7 @@
 		</div>
 		
 		<div class="media">
-			 <a href="https://www.xixi.ai/service.html" class="pull-left" target="_blank" ><img src="/img/xixi.png" class="media-object" alt=""/></a>
+			 <a href="https://www.xixi.ai/service.html" class="pull-left" target="_blank" ><img src="/img/xixi.png" class="media-object" alt="智能客服"/></a>
 			<div class="media-body">
 				<h4 class="media-heading">
 					<a target="_blank" href="https://www.xixi.ai/service.html">息息&wolive智能客服机器人系统</a>
