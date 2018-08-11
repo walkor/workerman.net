@@ -55,6 +55,9 @@
 						<li<?php if($html_nav == 'download')echo ' class="active" ';?>>
 							<a href="/download">下载</a>
 						</li>
+						<li<?php if($html_nav == 'bench')echo ' class="active" ';?>>
+							<a href="/bench">压力测试</a>
+						</li>
 						<li<?php if($html_nav == 'doc')echo ' class="active" ';?>>
 							<a href="/doc">手册</a>
 						</li>
