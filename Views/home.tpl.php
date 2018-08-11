@@ -114,6 +114,18 @@
 			</div>
 		</div>
 		
+		<div class="media">
+			 <a href="https://www.xixi.ai/service.html" class="pull-left" target="_blank" ><img src="/img/xixi.png" class="media-object" alt="智能客服"/></a>
+			<div class="media-body">
+				<h4 class="media-heading">
+					<a target="_blank" href="https://www.xixi.ai/service.html">息息&wolive智能客服机器人系统</a>
+				</h4>
+				<p>一套基于<a href="https://www.wolive.cc/"  target="_blank">wolive客服系统</a>开发的智能的人机交互<a href="https://www.xixi.ai" target="_blank" >智能客服</a>系统，基于<a href="https://www.xixi.ai" target="_blank">人工智能</a>机器学习开发的实时、简单、高效率（7*24小时服务）、安全低成本的智能客服机器人系统。该系统适用于互联网、金融、旅游、教育、政府、等各行各业。在降低企业成本，提高顾客满意度方面有起重要作用。
+<br>
+				</p>
+			</div>
+		</div>
+		
 		<!--<div class="media">
 			 <a href="http://www.meilibo.net/" class="pull-left" target="_blank" ><img src="/img/meilibo.jpg" class="media-object" alt='美丽播截图' /></a>
 			<div class="media-body">
