@@ -65,7 +65,7 @@
 							<a href="http://video.workerman.net/">视频教程</a>
 						</li>
 						<li<?php if($html_nav == 'group')echo ' class="active" ';?>>
-							<a href="http://wenda.workerman.net" target="_blank">问答</a>
+							<a href="https://segmentfault.com/t/workerman" target="_blank" rel="nofollow">提问</a>
 						</li>
 						<li<?php if($html_nav == 'related_projects')echo ' class="active" ';?>>
 							<a href="http://www.workerman.net/related_projects" target="_blank">第三方项目</a>
