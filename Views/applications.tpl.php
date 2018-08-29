@@ -3,20 +3,6 @@
 		相关应用
 	</li>
 </ul>
-		<div class="media"> 
-			 <a href="http://www.meilibo.net/" class="pull-left" target="_blank" ><img src="/img/meilibo.jpg" class="media-object" alt='美丽播截图' /></a>
-			<div class="media-body">
-				<h4 class="media-heading">
-					<a target="_blank" href="http://www.meilibo.net/">美丽播视频直播系统</a>
-				</h4>
-				<p>一个出色的视频直播<a href="http://www.meilibo.net/products.html" target="_blank" >秀场程序</a>，包含Web端、安卓客户端和iphone客户端。
-				主要功能包括主播系统，礼物系统，游戏系统，道具系统，代理功能，排行榜，充值系统，个人中心，守护系统等。即时通讯采用workerman，视频流采用rtmp协议利用fms或者cdn分发。
-				(此<a target="_blank" href="http://www.meilibo.net/">直播网站源码</a>需要<a href="http://www.meilibo.net/price.html" target="_blank" >购买</a>，<a target="_blank"  href="http://www.meilibo.net/about.html">联系方式</a>)
-				<br><a target="_blank" class="btn" href="http://www.meilibo.net/">详情 »</a>
-				</p>
-			</div>
-		</div>
-		
 		<div class="media">
 			 <a href="http://laychat.workerman.net/" class="pull-left" target="_blank"><img src="/img/laychat.png" class="media-object" alt="PHP聊天室 仿QQ"/></a>
 			<div class="media-body">
