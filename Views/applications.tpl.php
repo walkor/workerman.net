@@ -3,6 +3,7 @@
 		相关应用
 	</li>
 </ul>
+<!--
 		<div class="media">
 			 <a href="http://laychat.workerman.net/" class="pull-left" target="_blank"><img src="/img/laychat.png" class="media-object" alt="PHP聊天室 仿QQ"/></a>
 			<div class="media-body">
@@ -212,6 +213,7 @@
 				</p>
 			</div>
 		</div>
+-->
 		<div class="media">
 			 <a href="/workerman-thrift" class="pull-left"><img src="/img/workerman-thrift.png" class="media-object" alt="php thrift RPC模块关系示意图"/></a>
 			<div class="media-body">
