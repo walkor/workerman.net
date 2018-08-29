@@ -101,7 +101,7 @@
 				</p>
 			</div>
 		</div>
-		
+	<!--	
 		<div class="media">
 			 <a href="https://www.laychat.net/?wm_home" class="pull-left" target="_blank"><img src="/img/laychat.png" class="media-object" alt="PHP聊天室 仿QQ"/></a>
 			<div class="media-body">
@@ -113,7 +113,7 @@
 				</p>
 			</div>
 		</div>
-		
+	-->	
 		<div class="media">
 			 <a href="https://www.xixi.ai/service.html" class="pull-left" target="_blank" ><img src="/img/xixi.png" class="media-object" alt="智能客服"/></a>
 			<div class="media-body">
@@ -139,7 +139,7 @@
 				</p>
 			</div>
 		</div>-->
-		
+<!--		
 		<div class="media">
 			 <a href="/workerman-chat" class="pull-left"><img src="/img/workerman-chat.png" class="media-object" alt="PHP聊天室"/></a>
 			<div class="media-body">
@@ -207,6 +207,7 @@
 				</p>
 			</div>
 		</div>
+-->
 		<div class="media">
 			 <a href="https://github.com/walkor/php-socks5" class="pull-left" target="_blank" rel="nofollow"><img src="/img/socks5-big.png" class="media-object" /></a>
 			<div class="media-body">
