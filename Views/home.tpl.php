@@ -5,15 +5,14 @@
 			什么是Workerman
 		</h2>
 		<p class="f14">
-			Workerman是一款<strong class="c4">纯PHP开发</strong>的<strong class="c4">开源</strong><strong class="c2">高性能</strong>的<strong class="c3">PHP socket 服务器框架</strong>。被广泛的用于手机app、移动通讯，微信小程序，手游服务端、网络游戏、PHP聊天室、硬件通讯、智能家居、车联网、物联网等领域的开发。
-			支持TCP长连接，支持Websocket、HTTP等协议，支持自定义协议。拥有异步Mysql、异步Redis、异步Http、mqtt物联网客户端、异步消息队列等众多高性能组件。<a class="btn" href="/workerman">查看更多 »</a>
+			Workerman是一款<strong class="c4">纯PHP开发</strong>的<strong class="c4">开源</strong><strong class="c2">高性能异步</strong>的<strong class="c3">PHP socket框架</strong>。被广泛的用于手机app、移动通讯，微信小程序，手游服务端、网络游戏、PHP聊天室、硬件通讯、智能家居、车联网、物联网等领域的开发。
+			支持TCP长连接，支持Websocket、HTTP等协议，支持自定义协议。拥有异步Mysql、异步Redis、异步Http、MQTT物联网客户端、异步消息队列等众多高性能组件。<a class="btn" href="/workerman">查看更多 »</a>
 		</p>
 		<div class="row clearfix">
 			<div class="col-md-7 column">
 				<table><tbody><tr><td><iframe src="https://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="https://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table>
 				<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman" target="_blank" rel="nofollow"><b>Fork on Github</b></a>&nbsp;
-				<a class="btn btn-default btn-large" href="/download/workermanzip"><b>下载workerman</b></a><!--&nbsp;
-				<a class="btn btn-default btn-large" href="/download/workermanwinzip"><b>Win版下载</b></a>-->
+				<a class="btn btn-default btn-large" href="/download/workermanzip"><b>下载workerman</b></a>
 				</div>
 				<div class="col-md-5 column">
 					<div class="Q">
