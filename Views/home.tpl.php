@@ -5,7 +5,7 @@
 			什么是Workerman
 		</h2>
 		<p class="f14">
-			Workerman是一款<strong class="c4">纯PHP开发</strong>的<strong class="c4">开源</strong><strong class="c2">高性能异步</strong>的<strong class="c3">PHP socket框架</strong>。被广泛的用于手机app、移动通讯，微信小程序，手游服务端、网络游戏、PHP聊天室、硬件通讯、智能家居、车联网、物联网等领域的开发。
+			Workerman是一款<strong class="c4">纯PHP开发</strong>的<strong class="c4">开源</strong><strong class="c2">高性能异步</strong><strong class="c3">PHP socket框架</strong>。支持高并发，超高稳定性，被广泛的用于手机app、移动通讯，微信小程序，手游服务端、网络游戏、PHP聊天室、硬件通讯、智能家居、车联网、物联网等领域的开发。
 			支持TCP长连接，支持Websocket、HTTP等协议，支持自定义协议。拥有异步Mysql、异步Redis、异步Http、MQTT物联网客户端、异步消息队列等众多高性能组件。<a class="btn" href="/workerman">查看更多 »</a>
 		</p>
 		<div class="row clearfix">
