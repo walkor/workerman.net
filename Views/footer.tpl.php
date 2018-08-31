@@ -17,6 +17,7 @@
 					<div class="col-md-4 column">
 						<b>相关连接</b>
 						<ul class="sub">
+						<li><a href="http://wenda.workerman.net">原问答入口</a></li>
 						<li><a href="/download">下载</a></li>
 						<li><a href="http://www.workerman.net/doc" rel="nofollow">手册</a></li>
 						<li><a href="http://video.workerman.net/">workerman视频教程</a></li>
