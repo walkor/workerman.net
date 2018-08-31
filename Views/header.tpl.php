@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
   <meta charset="utf-8">
-  <title><?php if(isset($html_title))echo $html_title;else echo 'workerman一个高性能PHP Socket服务器框架';?></title>
+  <title><?php if(isset($html_title))echo $html_title;else echo 'workerman 高性能PHP Socket/WebSocket框架';?></title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="keywords" content="<?php if(isset($html_keywords))echo $html_keywords;?>"/>
   <meta name="description" content="<?php if(isset($html_desc))echo $html_desc;?>"/>
@@ -65,7 +65,7 @@
 							<a href="http://video.workerman.net/">视频教程</a>
 						</li>
 						<li<?php if($html_nav == 'group')echo ' class="active" ';?>>
-							<a href="http://wenda.workerman.net" target="_blank">问答</a>
+							<a target="_blank" rel="nofollow" href="https://segmentfault.com/t/workerman" target="_blank">问答</a>
 						</li>
 				
 						<li<?php if($html_nav == 'related_projects')echo ' class="active" ';?>>
