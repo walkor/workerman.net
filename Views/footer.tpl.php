@@ -21,13 +21,13 @@
 						<li><a href="/download">下载</a></li>
 						<li><a href="http://www.workerman.net/doc" rel="nofollow">手册</a></li>
 						<li><a href="http://video.workerman.net/">workerman视频教程</a></li>
-						<li><a href="http://wenda.workerman.net/">问答</a></li>
 						<li><a href="/applications">相关应用</a></li>
 						<li><a href="/bench">压力测试</a></li>
 						<li><a href="/last_update">最近更新</a></li>
 						<li><a href="/donate">捐赠</a></li>
 						<li><a href="https://www.laychat.net">来聊WebIM源码</a></li>
-						<li><a href="https://www.wolive.cc">在线客服系统源码</a></li>
+						<li><a href="https://www.wolive.cc">wolive在线客服系统源码</a></li>
+						<li><a href="https://www.99kf.com">99在线客服系统源码</a></li>
 						</ul>
 						<div class="center">
 						<p class="gray">
