@@ -3,7 +3,7 @@ namespace WorkerMan\Modules;
 
 function install()
 {
-    header('Location: http://doc.workerman.net/315116', true, 301);
+    header('Location: http://doc.workerman.net/install/install.html', true, 301);
     die;
     $html_title = 'workerman 详细安装教程';
     $html_nav = 'install';
