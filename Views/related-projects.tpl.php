@@ -20,6 +20,11 @@
     项目主页：<a href="https://github.com/hetao29/slightphp" target="_blank" rel="nofollow">https://github.com/hetao29/slightphp</a><br>
     项目文档：<a href="https://github.com/hetao29/slightphp" target="_blank" rel="nofollow">https://github.com/hetao29/slightphp</a>
 <hr>
+<h3>php_desktop</h3>
+    像开发网站一样开发桌面应用软件<br>
+    项目主页：<a href="https://github.com/lobtao/php_desktop" target="_blank" rel="nofollow">https://github.com/lobtao/php_desktop</a><br>
+    项目文档：<a href="https://github.com/lobtao/php_desktop" target="_blank" rel="nofollow">https://github.com/lobtao/php_desktop</a>
+<hr>
 <h3>SimplerWorker</h3>
     基于Thinkphp和workerman、gateway开发的高并发、可分布式部署的高性能及时通讯框架<br>
     项目主页：<a href="https://gitee.com/SimplerWorker/SimplerWorker" target="_blank" rel="nofollow">https://gitee.com/SimplerWorker/SimplerWorker</a><br>
