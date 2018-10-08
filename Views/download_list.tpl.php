@@ -6,7 +6,7 @@
 <div class="row clearfix">
 		<div class="col-md-9 column">
 		<div class="media">
-			 <a href="http://doc3.workerman.net/" class="pull-left" target="_blank" ><img src="/img/workerman-big.png" class="media-object" /></a>
+			 <a href="http://doc.workerman.net/" class="pull-left" target="_blank" ><img src="/img/workerman-big.png" class="media-object" /></a>
 			<div class="media-body">
 			<div class="thumbnail">
 				<div class="caption-download">
@@ -48,7 +48,7 @@
 			</div>
 		</div>
 		<div class="media">
-			 <a href="http://doc3.workerman.net/component/channel.html" class="pull-left" target="_blank" ><img src="/img/channel-big.png" class="media-object" /></a>
+			 <a href="http://doc.workerman.net/components/channel.html" class="pull-left" target="_blank" ><img src="/img/channel-big.png" class="media-object" /></a>
 			<div class="media-body">
 			<div class="thumbnail">
 				<div class="caption-download">
@@ -61,7 +61,7 @@
 			</div>
 		</div>
 		<div class="media">
-			 <a href="http://doc3.workerman.net/component/global-data.html" class="pull-left" target="_blank" ><img src="/img/globaldata-big.png" class="media-object" /></a>
+			 <a href="http://doc.workerman.net/components/global-data.html" class="pull-left" target="_blank" ><img src="/img/globaldata-big.png" class="media-object" /></a>
 			<div class="media-body">
 			<div class="thumbnail">
 				<div class="caption-download">
