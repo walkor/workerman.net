@@ -50,7 +50,7 @@
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
 						<li<?php if($html_nav == 'install')echo ' class="active" ';?>>
-							<a href="http://doc.workerman.net/315116">安装</a>
+							<a href="http://doc.workerman.net/install/install.html">安装</a>
 						</li>
 						<li<?php if($html_nav == 'download')echo ' class="active" ';?>>
 							<a href="/download">下载</a>
