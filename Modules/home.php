@@ -7,7 +7,7 @@ function home()
     {
         return _header('Location: /', 301);
     }
-    $html_title = 'workerman 高性能异步PHP Socket框架';
+    $html_title = 'workerman 高性能PHP Socket即时通讯框架';
     $html_keywords = 'workerman, php socket, php websocket, php异步';
     $html_desc = 'Workerman是一款纯PHP开发的开源高性能的异步PHP socket框架。支持TCP长连接，支持websocket、MQTT等诸多协议。被广泛的用于手机app、手游服务端、网络游戏服务器、聊天室、硬件通讯、智能家居、车联网、物联网等领域的开发。';
     $html_nav = 'home';
