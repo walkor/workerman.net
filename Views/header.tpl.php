@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
   <meta charset="utf-8">
-  <title><?php if(isset($html_title))echo $html_title;else echo 'workerman 高性能PHP Socket/WebSocket框架';?></title>
+  <title><?php if(isset($html_title))echo $html_title;else echo 'workerman 高性能PHP Socket即时通讯框架';?></title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="keywords" content="<?php if(isset($html_keywords))echo $html_keywords;?>"/>
   <meta name="description" content="<?php if(isset($html_desc))echo $html_desc;?>"/>
