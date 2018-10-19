@@ -413,7 +413,7 @@
                 <?php
 $donate_file = __DIR__ . '/__donate_list.tpl.php';
 $donate_content = file_get_contents($donate_file);
-$display_count = 10;
+$display_count = 20;
 $donate_list = "";
 if($donate_content)
 {
