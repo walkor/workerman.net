@@ -66,7 +66,7 @@
 			<h3>提示：</h3>
 				<p>此demo实际是将摄像头的视频转化成图片分发给所有浏览器，所以没有办法支持声音，并且占用带宽较大，不适合生产环境</p>
 				<p>相关项目：</p>
-				<p><a href="https://wenda.workerman.net/article/65">WebRTC 一对一视频聊天</a>
+				<p><a href="https://wenda.workerman.net/article/65">WebRTC 一对一视频聊天</a></p>
 				<p><a href="http://www.woker.cc/shop/index/application-detail?application_id=37">Flash rtmp 一对一视频对话</p>
 				<p><a href="http://www.woker.cc/shop/index/application-detail?application_id=36">WebRTC一对一视频通话私</p>
 		</div>
