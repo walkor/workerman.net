@@ -437,11 +437,14 @@ echo $donate_list;
 		<h4>问答动态</h4>
 		<ul>
 			<li>
-				<a href="http://wenda.workerman.net/?/question/29">workerman 工作流程，如进程，子进程，socket等关系，是如何运作的？</a>
+				<a href="https://wenda.workerman.net/question/29">workerman 工作流程，如进程，子进程，socket等关系，是如何运作的？</a>
 			</li>
 			
 			<li>
-			<a href="http://wenda.workerman.net/?/question/358">如何使用worker进程处理繁重的业务</a>
+				<a href="https://wenda.workerman.net/question/358">如何使用worker进程处理繁重的业务</a>
+			</li>
+			<li>
+				<a href="https://wenda.workerman.net/article/65">workerman webrtc一对一视频聊天源码</a>
 			</li>
 		</ul>
 		<h4>
