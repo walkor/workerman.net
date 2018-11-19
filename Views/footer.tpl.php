@@ -87,7 +87,7 @@ socket.on('update_online_count', function(count){$('#online_count').html(count);
 	laychat.isMobile = true;
 	laychat.appName = '<i class="layui-icon layim-chat-back" id="laychat-back">&#xe603;</i> 来聊';
 	// 打开聊天面板
-	laychat.open();
+	/*laychat.open();
 	layui.use('mobile', function(){
                 layui.mobile.layim.on('ready', function(){
                     layui.zepto('#laychat-back').on('click', function(){layui.zepto('#layui-m-layer0').toggle();layui.zepto('#laychat-min').toggle();
@@ -95,7 +95,7 @@ socket.on('update_online_count', function(count){$('#online_count').html(count);
                 Woker.instances[0].on('getmessage', function(data){console.log(data);});
              });
             layui.zepto('#laychat-min').on('click', function(){layui.zepto('#laychat-min').toggle();layui.zepto('#layui-m-layer0').toggle();});
-        });
+        });*/
     } else {
         laychat.open();
     }
