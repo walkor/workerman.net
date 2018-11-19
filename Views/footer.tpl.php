@@ -82,7 +82,24 @@ socket.on('update_online_count', function(count){$('#online_count').html(count);
     laychat.sendMessageUrl = 'https://www.workerman.net/laychat/send_message.php';
     laychat.membersUrl = 'https://www.workerman.net/laychat/members.php';
     laychat.enableAudio = true;
-    laychat.open();
+    if(layui.device().ios || layui.device().android) {
+	// 开启手机面板
+	laychat.isMobile = true;
+	laychat.appName = '<i class="layui-icon layim-chat-back" id="laychat-back">&#xe603;</i> 来聊';
+	// 打开聊天面板
+	laychat.open();
+	layui.use('mobile', function(){
+                layui.mobile.layim.on('ready', function(){
+                    layui.zepto('#laychat-back').on('click', function(){layui.zepto('#layui-m-layer0').toggle();layui.zepto('#laychat-min').toggle();
+		});
+                Woker.instances[0].on('getmessage', function(data){console.log(data);});
+             });
+            layui.zepto('#laychat-min').on('click', function(){layui.zepto('#laychat-min').toggle();layui.zepto('#layui-m-layer0').toggle();});
+        });
+    } else {
+        laychat.open();
+    }
 </script>
+<div style="font-size:18px;display:none;padding:8px;position:fixed;right:8px;bottom:0px;border:1px solid #CCC;background:#36373C;color:#FFF" id="laychat-min">来聊</div>
 </body>
 </html>
