@@ -281,8 +281,8 @@
 					<a target="_blank" href="http://www.10ss.net/" rel="nofollow">高扩展云打印机</a>
 				</h4>
 				<p>
-				易联云平台是依托移动互联网的超远程打印解决方案，包含了设备管理中心、互联网API等模块。能够有效的实现易联云和应用之间的对接，帮助用户和开发者方便的使用超远程打印的构架和功能。
-				<a target="_blank" class="btn" href="http://www.10ss.net/" rel="nofollow">本应用来自www.10ss.net</a></p>
+				易联云是一个跨地域跨网络的一个云打印平台。依托于workerman的强大的GatewayWorker分布式架构，实现了包括打印机状态、打印机信息、打印数据统计、打印订单统计、打印机温度、打印机重打、按键打印等特色功能。 对外提供接口方式打印，目前有医院、ktv、餐饮、商城、酒店、加油站等场景得到应用，包括目前最火的三大外卖平台提供打印应用，物流货运订单打印应用。
+				<a target="_blank" class="btn" href="https://www.yilianyun.net/" rel="nofollow">本应用来自www.yilianyun.net</a></p>
 			</div>
 		</div>
 	
