@@ -3,7 +3,7 @@ namespace WorkerMan\Modules;
 
 function workerman_chat()
 {
-    $html_title = 'workerman-chat | 一个高性能的PHP 聊天室框架';
+    $html_title = 'workerman-chat | PHP开源分布式聊天室框架';
     $html_nav = 'applications';
     $github_repo = 'workerman-chat';
     $html_keywords = 'php聊天室,php websocket聊天室';
