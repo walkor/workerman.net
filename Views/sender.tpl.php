@@ -131,5 +131,7 @@ var_export($return);';
 echo htmlspecialchars($api_str);
 ?>
 </pre>
+			<h3>HTTPS支持设置：</h3>
+			<div>参考手册<a href="https://github.com/walkor/phpsocket.io/tree/master/docs/zh#%E6%94%AF%E6%8C%81sslhttps-wss">https://github.com/walkor/phpsocket.io/tree/master/docs/zh#%E6%94%AF%E6%8C%81sslhttps-wss</div>
 		</div>
 	</div>
