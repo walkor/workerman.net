@@ -75,7 +75,7 @@ socket.on('update_online_count', function(count){$('#online_count').html(count);
 
 <link href="/css/bootstrap.min.css" rel="stylesheet">
 <link href="/css/style.css?v3.1" rel="stylesheet">
-<script type="text/javascript" src='https://laychatx.workerman.net/assets/libs/layui/layui.js'></script>
+<!-- <script type="text/javascript" src='https://laychatx.workerman.net/assets/libs/layui/layui.js'></script>
 <script src="https://laychatx.workerman.net/laychat.js?v3.7.8"></script>
 <script>
     laychat.app_key = 'b054014693241bcd9c20';
@@ -100,7 +100,7 @@ socket.on('update_online_count', function(count){$('#online_count').html(count);
     } else {
         laychat.open();
     }
-</script>
+</script> -->
 <div style="font-size:18px;display:none;padding:8px;position:fixed;right:8px;bottom:0px;border:1px solid #CCC;background:#36373C;color:#FFF" id="laychat-min">来聊</div>
 </body>
 </html>
