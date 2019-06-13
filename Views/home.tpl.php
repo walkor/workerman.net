@@ -102,13 +102,13 @@
 		</div>
 			
 		<div class="media">
-			 <a href="https://www.laychat.net/?wm_home" class="pull-left" target="_blank"><img src="/img/laychat.png" class="media-object" alt="PHP聊天室 仿QQ"/></a>
+			 <a href="https://www.popoim.cn/?wm_home" class="pull-left" target="_blank"><img src="/img/popoim.png" class="media-object" alt="PHP聊天室 仿QQ"/></a>
 			<div class="media-body">
 				<h4 class="media-heading">
-					<a target="_blank" href="https://www.laychat.net/?wm_home">来聊WebIM H5网页聊天源码</a>
+					<a target="_blank" href="https://www.popoim.cn/?wm_home">WebIM H5网页聊天源码-泡泡IM</a>
 				</h4>
-				<p>来聊一款功能强大的WebIM源码，支持H5网页聊天，支持群聊、私聊、视频、语音、表情、传图、传文件、离线消息、历史消息记录等功能。几行js便可接入网页聊天，支持万人在线。<br>
-				<a class="btn" target="_blank" href="https://www.laychat.net/?wm_home" rel="nofollow">WebIM H5网页聊天»</a>
+				<p>泡泡IM一款功能强大的WebIM源码，支持H5网页聊天，支持通讯录、群聊、私聊、表情、传图、传文件、离线消息、历史消息记录等功能。支持万人在线。<br>
+				<a class="btn" target="_blank" href="https://www.popoim.cn/?wm_home" rel="nofollow">WebIM H5网页聊天源码»</a>
 				</p>
 			</div>
 		</div>
