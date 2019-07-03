@@ -93,7 +93,10 @@
 			<br>
 			<h3>其它php聊天室相关案例</h3>
 			<p>
-			<a href="https://www.popoim.cn" target="_blank"><img src="https://www.popoim.cn/images/home1.jpg"></a>
+			<table>
+				<tr><td><a href="https://www.popoim.cn" target="_blank"><img src="https://www.popoim.cn/images/home1.jpg"></a></td><td><a href="https://www.popoim.cn" target="_blank"><img src="https://www.popoim.cn/images/home4.jpg></a></td></tr>
+			</table>
+			<br>
 			<a href="https://www.popoim.cn" target="_blank">泡泡WebIM聊天源码</a>
 			</p>
 			<br>
