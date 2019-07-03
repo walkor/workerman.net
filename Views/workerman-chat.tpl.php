@@ -93,7 +93,8 @@
 			<br>
 			<h3>其它php聊天室相关案例</h3>
 			<p>
-			<a href="https://www.laychat.net" target="_blank">来聊网页聊天源码</a>
+			<a href="https://www.popoim.cn" target="_blank"><img src="https://www.popoim.cn/images/home1.jpg"></a>
+			<a href="https://www.popoim.cn" target="_blank">泡泡WebIM聊天源码</a>
 			</p>
 			<br>
 		</div>
