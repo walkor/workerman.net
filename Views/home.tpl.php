@@ -395,7 +395,7 @@
 		<div class="row clearfix">
 			<div class="col-md-4 column">
 				<p>技术交流群</p>
-				<img src="/img/add-qun4.png" width="145px">
+				<img src="/img/add-qun5.png" width="145px">
 			</div>
 			<div class="col-md-4 column">
 				<p>微信捐赠</p>
