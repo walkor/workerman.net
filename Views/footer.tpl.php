@@ -25,7 +25,7 @@
 						<li><a href="/bench">压力测试</a></li>
 						<li><a href="/last_update">最近更新</a></li>
 						<li><a href="/donate">捐赠</a></li>
-						<li><a href="https://www.laychat.net">来聊WebIM源码</a></li>
+						<li><a href="https://www.popoim.cn">html5 php im聊天源码</a></li>
 						<li><a href="https://www.wolive.cc">客服系统源码</a></li>
 						</ul>
 						<div class="center">
