@@ -12,6 +12,7 @@
   <meta name="baidu-site-verification" content="9J9K0y1Cxv" />
   <meta name="baidu-site-verification" content="jLodbXMgwV" />
   <meta name="baidu-site-verification" content="NXCSEiOPBB" />
+  <meta name="baidu-site-verification" content="kRP2XWnQRG" />
 	<!--link rel="stylesheet/less" href="/less/bootstrap.less" type="text/css" /-->
 	<!--link rel="stylesheet/less" href="/less/responsive.less" type="text/css" /-->
 	<!--script src="/js/less-1.3.3.min.js"></script-->
