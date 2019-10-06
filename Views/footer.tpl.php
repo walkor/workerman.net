@@ -25,9 +25,9 @@
 						<li><a href="/bench">压力测试</a></li>
 						<li><a href="/last_update">最近更新</a></li>
 						<li><a href="/donate">捐赠</a></li>
-						<li><a href="https://www.popoim.cn">php即时通讯源码</a></li>
-						<li><a href="https://www.wolive.cc">客服系统源码</a></li>
-						<li><a href="https://www.99kf.com">99客服</a></li>
+						<li><a href="https://www.popoim.cn" target="_blank">php即时通讯源码</a></li>
+						<li><a href="https://www.wolive.cc" target="_blank">客服系统源码</a></li>
+						<li><a href="https://www.99kf.com" target="_blank">99客服</a></li>
 						</ul>
 						<div class="center">
 						<p class="gray">
@@ -77,32 +77,7 @@ socket.on('update_online_count', function(count){$('#online_count').html(count);
 
 <link href="/css/bootstrap.min.css" rel="stylesheet">
 <link href="/css/style.css?v3.1" rel="stylesheet">
-<!-- <script type="text/javascript" src='https://laychatx.workerman.net/assets/libs/layui/layui.js'></script>
-<script src="https://laychatx.workerman.net/laychat.js?v3.7.8"></script>
-<script>
-    laychat.app_key = 'b054014693241bcd9c20';
-    laychat.initUrl = 'https://www.workerman.net/laychat/init.php';
-    laychat.sendMessageUrl = 'https://www.workerman.net/laychat/send_message.php';
-    laychat.membersUrl = 'https://www.workerman.net/laychat/members.php';
-    laychat.enableAudio = true;
-    if(layui.device().ios || layui.device().android) {
-	// 开启手机面板
-	laychat.isMobile = true;
-	laychat.appName = '<i class="layui-icon layim-chat-back" id="laychat-back">&#xe603;</i> 来聊';
-	// 打开聊天面板
-	/*laychat.open();
-	layui.use('mobile', function(){
-                layui.mobile.layim.on('ready', function(){
-                    layui.zepto('#laychat-back').on('click', function(){layui.zepto('#layui-m-layer0').toggle();layui.zepto('#laychat-min').toggle();
-		});
-                Woker.instances[0].on('getmessage', function(data){console.log(data);});
-             });
-            layui.zepto('#laychat-min').on('click', function(){layui.zepto('#laychat-min').toggle();layui.zepto('#layui-m-layer0').toggle();});
-        });*/
-    } else {
-        laychat.open();
-    }
-</script> -->
+
 <div style="font-size:18px;display:none;padding:8px;position:fixed;right:8px;bottom:0px;border:1px solid #CCC;background:#36373C;color:#FFF" id="laychat-min">来聊</div>
 </body>
 </html>
