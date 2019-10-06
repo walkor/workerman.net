@@ -27,6 +27,7 @@
 						<li><a href="/donate">捐赠</a></li>
 						<li><a href="https://www.popoim.cn">php即时通讯源码</a></li>
 						<li><a href="https://www.wolive.cc">客服系统源码</a></li>
+						<li><a href="https://www.99kf.com">99客服</a></li>
 						</ul>
 						<div class="center">
 						<p class="gray">
