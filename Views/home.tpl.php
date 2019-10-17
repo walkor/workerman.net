@@ -441,7 +441,7 @@ echo $donate_list;
 			</li>
 			
 			<li>
-				<a href="https://wenda.workerman.net/question/358">如何使用worker进程处理繁重的业务</a>
+				<a href="https://wenda.workerman.net/article/1160">仿微信h5+vue+php即时通讯聊天源码</a>
 			</li>
 			<li>
 				<a href="https://wenda.workerman.net/article/65">workerman webrtc一对一视频聊天源码</a>
