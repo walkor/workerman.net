@@ -1,3 +1,15 @@
+<h3>2019-10-24 新增异步http客户端</h3>
+<ul>
+    <li>[异步http客户端文档地址](http://doc.workerman.net/components/workerman-http-client.html)</li>
+</ul>
+<hr>
+
+<h3>2018-07-20 新增物联网 异步mqtt客户端</h3>
+<ul>
+    <li>[mqtt文档地址](http://doc.workerman.net/components/workemran-mqtt.html)</li>
+</ul>
+<hr>
+
 <h3>2018-04-03 GatewayWorker 3.0.8版本发布</h3>
 <ul>
     <li>支持 getClientIdByUid getUidListByGroup getUidCountByGroup getAllUidList getAllUidCount 等接口</li>
