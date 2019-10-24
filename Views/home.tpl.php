@@ -452,6 +452,9 @@ echo $donate_list;
 		</h4>
 		<ul>
 			<li>
+				<a href="https://github.com/walkor/http-client" rel="nofollow">2019-10-24 新增异步http客户端</a>
+			</li>
+			<li>
 				<a href="https://github.com/walkor/mqtt" rel="nofollow">2018-07-20 新增物联网 mqtt客户端</a>
 			</li>
 			<li>
