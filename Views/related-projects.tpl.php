@@ -1,10 +1,5 @@
 <h2>workerman相关第三方项目</h2>
 <a href="http://wenda.workerman.net/?/question/2797">+添加自己的项目</a>
-<h3>thinkworker</h3>
-    基于Workerman的高性能网站/API开发框架<br>
-    项目主页：<a href="http://thinkworker.cn/" target="_blank" rel="nofollow">http://thinkworker.cn/</a><br>
-    项目文档：<a href="http://docs.thinkworker.cn/" target="_blank" rel="nofollow">http://docs.thinkworker.cn/</a>
-<hr>
 <h3>Beanbun</h3>
     Beanbun 是用 PHP 编写的多进程网络爬虫框架，具有良好的开放性、高可扩展性，基于 Workerman。<br>
     项目主页：<a href="http://www.beanbun.org" target="_blank" rel="nofollow">http://www.beanbun.org</a><br>
@@ -147,4 +142,25 @@
     a rpc simple framework for workerman<br>
     项目主页：<a href="https://github.com/MengyangRen/workerman-tlvrpc" target="_blank" rel="nofollow">https://github.com/MengyangRen/workerman-tlvrpc</a><br>
     项目文档：<a href="https://github.com/MengyangRen/workerman-tlvrpc/blob/master/README.md" target="_blank" rel="nofollow">https://github.com/MengyangRen/workerman-tlvrpc/blob/master/README.md</a>
+<hr>
+<h3>Navi</h3>
+    项目介绍：在基于 Workerman 为 PHP 提供的常驻执行能力之上，利用特有的优点，提供高性能、易开发维护的 Web 框架。<br>
+    项目主页：<a href="https://github.com/xpader/Navigation" target="_blank" rel="nofollow">https://github.com/xpader/Navigation</a><br>
+    项目文档：<a href="https://github.com/xpader/Navigation/tree/master/Navigation" target="_blank" rel="nofollow">https://github.com/xpader/Navigation/tree/master/Navigation</a>
+<hr>
+
+<h3>web-chat-im</h3>
+    项目介绍：基本Workerman开发的开源web端即时聊天应用<br>
+    项目主页：<a href="http://im.skeep.cc/" target="_blank" rel="nofollow">http://im.skeep.cc/</a><br>
+    项目文档：<a href="https://github.com/aiqq363927173/chat-im" target="_blank" rel="nofollow">https://github.com/aiqq363927173/chat-im</a>
+<hr>
+<h3>Hserver</h3>
+    项目介绍：Hserver 是一个基于 workerman 的 web服务器框架，是一个高性能，简介的框架，支持模板输出，api接口，静态文件。<br>
+    项目主页：<a href="https://gitee.com/heixiaomas/HServer" target="_blank" rel="nofollow">https://gitee.com/heixiaomas/HServer</a><br>
+    项目文档：<a href="https://gitee.com/heixiaomas/HServer" target="_blank" rel="nofollow">https://gitee.com/heixiaomas/HServer</a>
+<hr>
+<h3>phptimer</h3>
+    项目介绍：phptimer现在是一个定时器项目，参考了workerman里面的源码，剥离了网络和多进程，保留了毫秒定时器，基于stream_select和event的阻塞超时实现。<br>
+    项目主页：<a href="https://github.com/mrtwenty/timer" target="_blank" rel="nofollow">https://github.com/mrtwenty/timer</a><br>
+    项目文档：<a href="https://github.com/mrtwenty/timer" target="_blank" rel="nofollow">https://github.com/mrtwenty/timer</a>
 <hr>
