@@ -60,9 +60,6 @@
 						<li<?php if($html_nav == 'doc')echo ' class="active" ';?>>
 							<a href="/doc">手册</a>
 						</li>
-						<li<?php if($html_nav == 'video')echo ' class="active" ';?>>
-							<a href="http://video.workerman.net/">视频教程</a>
-						</li>
 						<li<?php if($html_nav == 'group')echo ' class="active" ';?>>
 							<a target="_blank" href="https://wenda.workerman.net" target="_blank">问答</a>
 						</li>
