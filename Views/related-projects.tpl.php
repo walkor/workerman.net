@@ -42,8 +42,8 @@
 <hr>
 <h3>webworker</h3>
     基于Workerman实现的自带http server的web开发框架<br>
-    项目主页：<a href="http://ask.webworker.xtgxiso.com/" target="_blank" rel="nofollow">http://ask.webworker.xtgxiso.com/</a><br>
-    项目文档：<a href="http://doc.webworker.xtgxiso.com/" target="_blank" rel="nofollow">http://doc.webworker.xtgxiso.com/</a>
+    项目主页：<a href="https://github.com/xtgxiso/WebWorker" target="_blank" rel="nofollow">http://ask.webworker.xtgxiso.com/</a><br>
+    项目文档：<a href="https://github.com/xtgxiso/WebWorker" target="_blank" rel="nofollow">http://doc.webworker.xtgxiso.com/</a>
 <hr>
 <h3>php-signaler</h3>
     This is an object build with Workerman to support hlsjs-p2p-engine signaler service. Written in full pure PHP. High performance and support cluster.<br>
