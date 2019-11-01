@@ -2,8 +2,8 @@
 <a href="http://wenda.workerman.net/question/2797">+添加自己的项目</a>
 <h3>Beanbun</h3>
     Beanbun 是用 PHP 编写的多进程网络爬虫框架，具有良好的开放性、高可扩展性，基于 Workerman。<br>
-    项目主页：<a href="http://www.beanbun.org" target="_blank" rel="nofollow">http://www.beanbun.org</a><br>
-    项目文档：<a href="http://www.beanbun.org" target="_blank" rel="nofollow">http://www.beanbun.org</a>
+    项目主页：<a href="https://github.com/kiddyuchina/Beanbun" target="_blank" rel="nofollow">http://www.beanbun.org</a><br>
+    项目文档：<a href="https://github.com/kiddyuchina/Beanbun" target="_blank" rel="nofollow">https://github.com/kiddyuchina/Beanbun</a>
 <hr>
 <h3>think-worker</h3>
     ThinkPHP官方开发的ThinkPHP5的workerman扩展<br>
