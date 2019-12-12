@@ -20,6 +20,11 @@
     项目主页：<a href="https://github.com/blogdaren/PHPForker" target="_blank" rel="nofollow">https://github.com/blogdaren/PHPForker</a><br>
     项目文档：<a href="https://github.com/blogdaren/PHPForker" target="_blank" rel="nofollow">https://github.com/blogdaren/PHPForker</a>
 <hr>
+<h3>EZNAT</h3>
+    基于workerman开发的内网穿透，史上最简单的内网穿透软件，部署简单，web界面管理，使用简单，传输稳定。<br>
+    项目主页：<a href="https://gitee.com/FYDEV/eznat" target="_blank" rel="nofollow">https://gitee.com/FYDEV/eznat</a><br>
+    项目文档：<a href="https://gitee.com/FYDEV/eznat/wikis/pages" target="_blank" rel="nofollow">https://gitee.com/FYDEV/eznat/wikis/pages</a>
+<hr>
 <h3>php_desktop</h3>
     像开发网站一样开发桌面应用软件<br>
     项目主页：<a href="https://github.com/lobtao/php_desktop" target="_blank" rel="nofollow">https://github.com/lobtao/php_desktop</a><br>
