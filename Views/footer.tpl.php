@@ -32,9 +32,9 @@
 						<div class="center">
 						<p class="gray">
 							<a href="http://www.miitbeian.gov.cn/" rel="nofollow" target="_blank">蜀ICP备17016206号-2</a>
-						</p><br>
+						</p>
 						<p>版权所有 成都风禾网络科技有限公司</p>
-						
+						<br>
 						<p class="gray" id="online_count"></p>
 						<p class="gray" style="font-size:11px"> Powered by <a href="http://www.workerman.net/web-sender" target="_blank"><strong>web-msg-sender!</strong></a></p>
 						<script type="text/javascript">
