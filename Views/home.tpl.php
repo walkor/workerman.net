@@ -113,7 +113,7 @@
 			</div>
 		</div>
 			
-		<div class="media">
+		<!--<div class="media">
 			 <a href="https://www.xixi.ai/service.html" class="pull-left" target="_blank" ><img src="/img/xixi.png" class="media-object" alt="智能客服"/></a>
 			<div class="media-body">
 				<h4 class="media-heading">
@@ -123,7 +123,7 @@
 <br>
 				</p>
 			</div>
-		</div>
+		</div>-->
 		
 		<div class="media">
 			 <a href="/workerman-chat" class="pull-left"><img src="/img/workerman-chat.png" class="media-object" alt="PHP聊天室"/></a>
