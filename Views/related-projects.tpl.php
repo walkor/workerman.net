@@ -11,10 +11,17 @@
     项目文档：<a href="https://www.kancloud.cn/manual/thinkphp5/235128" target="_blank" rel="nofollow">https://www.kancloud.cn/manual/thinkphp5/235128</a>
 <hr>
 <h3>SlightPHP</h3>
-    SlightPHP 高效的PHP敏捷开发框架<br>
+    php-signaler 是一个基于 Workerman 运行的信令服务器，适用于 hlsjs-p2p-engine 的信令服务，理论上适用于所有的WebRTC信令服务<br>
     项目主页：<a href="https://github.com/hetao29/slightphp" target="_blank" rel="nofollow">https://github.com/hetao29/slightphp</a><br>
     项目文档：<a href="https://github.com/hetao29/slightphp" target="_blank" rel="nofollow">https://github.com/hetao29/slightphp</a>
 <hr>
+
+<h3>php-signaler</h3>
+    SlightPHP 高效的PHP敏捷开发框架<br>
+    项目主页：<a href="https://github.com/RayP2P/php-signaler" target="_blank" rel="nofollow">https://github.com/RayP2P/php-signaler</a><br>
+    项目文档：<a href="https://github.com/RayP2P/php-signaler/blob/master/README_CN.md" target="_blank" rel="nofollow">https://github.com/RayP2P/php-signaler/blob/master/README_CN.md</a>
+<hr>
+
 <h3>EZNAT</h3>
     基于workerman开发的内网穿透，史上最简单的内网穿透软件，部署简单，web界面管理，使用简单，传输稳定。<br>
     项目主页：<a href="https://gitee.com/FYDEV/eznat_server" target="_blank" rel="nofollow">https://gitee.com/FYDEV/eznat_server</a><br>
