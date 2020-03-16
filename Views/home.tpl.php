@@ -452,6 +452,9 @@ echo $donate_list;
 		</h4>
 		<ul>
 			<li>
+				<a href="http://www.workerman.net/last_update" rel="nofollow">2020-03-13 发布workerman4.x</a>
+			</li>
+			<li>
 				<a href="https://github.com/walkor/http-client" rel="nofollow">2019-10-24 新增异步http客户端</a>
 			</li>
 			<li>
