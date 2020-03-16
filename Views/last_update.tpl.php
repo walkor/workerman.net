@@ -1,6 +1,9 @@
-<h3>2019-10-24 新增异步http客户端</h3>
+
+<h3>2020-03-13 workerman4.x版本发布</h3>
 <ul>
-    <li>[异步http客户端文档地址](http://doc.workerman.net/components/workerman-http-client.html)</li>
+    <li><a href="http://doc.workerman.net/http/request.html">相比workerman3.x，workerman4.x增强了http服务功能，增加了请求类、响应类、session类、SSE等特性</a></li>
+    <li>移除了webserver，后续会增加一个完整的mvc框架代替webserver</li>
+    <li>注意：workerman4.x除了http相关特性不兼容workerman3.x，其余特性全部兼容</li>
 </ul>
 <hr>
 
