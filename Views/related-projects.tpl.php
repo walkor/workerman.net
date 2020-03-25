@@ -42,6 +42,13 @@
     项目主页：<a href="https://github.com/blogdaren/PHPForker" target="_blank" rel="nofollow">https://github.com/blogdaren/PHPForker</a><br>
     项目文档：<a href="https://github.com/blogdaren/PHPForker" target="_blank" rel="nofollow">https://github.com/blogdaren/PHPForker</a>
 <hr>
+
+<h3>zqphp</h3>
+    zqphp结合workerman从4.x版本开发,轻量级php框架。<br>
+    项目主页：<a href="https://gitee.com/zhqings/zqphp" target="_blank" rel="nofollow">https://gitee.com/zhqings/zqphp</a><br>
+    项目文档：<a href="http://zqphp.zhqing.com" target="_blank" rel="nofollow">http://zqphp.zhqing.com</a>
+<hr>
+
 <h3>php_desktop</h3>
     像开发网站一样开发桌面应用软件<br>
     项目主页：<a href="https://github.com/lobtao/php_desktop" target="_blank" rel="nofollow">https://github.com/lobtao/php_desktop</a><br>
