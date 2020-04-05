@@ -78,7 +78,7 @@ socket.on('update_online_count', function(count){$('#online_count').html(count);
 </script>
 
 <link href="/css/bootstrap.min.css" rel="stylesheet">
-<link href="/css/style.css?v3.1" rel="stylesheet">
+<link href="/css/style.css?v3.2" rel="stylesheet">
 
 <div style="font-size:18px;display:none;padding:8px;position:fixed;right:8px;bottom:0px;border:1px solid #CCC;background:#36373C;color:#FFF" id="laychat-min">来聊</div>
 </body>
