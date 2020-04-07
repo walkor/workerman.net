@@ -79,6 +79,13 @@
     项目主页：<a href="https://github.com/RayP2P/php-signaler" target="_blank" rel="nofollow">https://github.com/RayP2P/php-signaler</a><br>
     项目文档：<a href="https://github.com/RayP2P/php-signaler" target="_blank" rel="nofollow">https://github.com/RayP2P/php-signaler</a>
 <hr>
+
+<h3>cathy</h3>
+    workerman内容管理系统后台demo示例 基于框架jessica<br>
+    项目主页：<a href="https://gitee.com/songzhenghe/cathy" target="_blank" rel="nofollow">https://gitee.com/songzhenghe/cathy</a><br>
+    项目文档：<a href="https://gitee.com/songzhenghe/cathy" target="_blank" rel="nofollow">https://gitee.com/songzhenghe/cathy</a>
+<hr>
+
 <h3>Workerman_cor_ape</h3>
     Workerman_cor_ape是php框架 Workerman 的强化版，在不影响任何使用方式，稳定性，性能前提下，增加了异步任务组件。<br>
     项目主页：<a href="https://github.com/zyfei/workerman_cor_ape" target="_blank" rel="nofollow">https://github.com/zyfei/workerman_cor_ape</a><br>
