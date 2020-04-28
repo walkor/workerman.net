@@ -16,6 +16,12 @@
     项目文档：<a href="https://github.com/hetao29/slightphp" target="_blank" rel="nofollow">https://github.com/hetao29/slightphp</a>
 <hr>
 
+<h3>phpshow</h3>
+    基于workerman轻量级高性能框架，为项目快速开发而生<br>
+    项目主页：<a href="https://github.com/showx/phpshow" target="_blank" rel="nofollow">https://github.com/showx/phpshow</a><br>
+    项目文档：<a href="https://github.com/showx/phpshow" target="_blank" rel="nofollow">https://github.com/showx/phpshow</a>
+<hr>
+
 <h3>php-signaler</h3>
     php-signaler 是一个基于 Workerman 运行的信令服务器，适用于 hlsjs-p2p-engine 的信令服务，理论上适用于所有的WebRTC信令服务<br>
     项目主页：<a href="https://github.com/RayP2P/php-signaler" target="_blank" rel="nofollow">https://github.com/RayP2P/php-signaler</a><br>
