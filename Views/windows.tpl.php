@@ -2,7 +2,7 @@
 	<div class="col-md-10 column">
 	<h2>workerman-for-win</h2>
 	<p class="f14">
-		<h2> 注意：workerman从3.5.3版本开始同时支持linux系统和windows系统，不再区分linux版本和windows版本。原windows版本不再维护。</h2>
+		<h2> 注意：workerman从3.5.3版本开始同时支持linux系统和windows系统，不再区分linux版本和windows版本。</h2>
 		<!--<s>workerman-for-win是运行在windows平台的版本，开发接口与Linux多进程版本一致，
 		也就是说基于workerman开发的应用程序即可以运行在Linux系统，也可以运行在Windows系统上。
 		<br>
@@ -33,11 +33,12 @@
 	<img src="/img/gif/install-php.gif" alt="PHP环境变量设置示意图">
 	<br><hr>
         <h3>workerman的在Windows下与Linux下区别</h3>
-        1、win版本count属性无效，全部为单进程<br>
-        2、不支持start stop reload restart status命令<br>
-        3、cmd命令行启动，后面可接多个文件，例如 php start_web.php start_gateway.php start_worker.php<br>
-        4、无法守护进程，cmd窗口关掉后服务即停止<br>
-        5、每个启动文件只能实例化一个容器(Worker/WebServer/Gateway/BusinessWorker)，需要实例化多个容器时<br>
+	1、win版本单个进程只支持200+个连接<br>
+        2、win版本count属性无效，全部为单进程<br>
+        3、不支持start stop reload restart status命令<br>
+        4、cmd命令行启动，后面可接多个文件，例如 php start_web.php start_gateway.php start_worker.php<br>
+        5、无法守护进程，cmd窗口关掉后服务即停止<br>
+        6、每个启动文件只能实例化一个容器(Worker/WebServer/Gateway/BusinessWorker)，需要实例化多个容器时<br>
         需要拆成多个文件，例如 start_web.php start_gateway.php start_worker.php 分别初始化web gateway worker<br>
         <br><br>
         <h3>Windows版本workerman的启动与停止</h3>
