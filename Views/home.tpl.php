@@ -504,7 +504,7 @@ echo $donate_list;
 	</div>
 </div>
 
-<div class="row clearfix">
+<!-- <div class="row clearfix">
 	<div class="col-md-12 column">
 		<h4 class="btl">用户案例</h4>
 		<table class="anli">
@@ -524,4 +524,4 @@ echo $donate_list;
 		</tr>
 		</table>
 	</div>
-</div>
+</div> -->
