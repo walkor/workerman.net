@@ -22,7 +22,7 @@
     项目文档：<a href="https://github.com/showx/phpshow" target="_blank" rel="nofollow">https://github.com/showx/phpshow</a>
 <hr>
 
-<h3>phpshow</h3>
+<h3>candyphp</h3>
     candyphp 是一个基于 workerman 的 mvc 框架，轻量级MVC框架基于workerman从4.x版本开发,支持Workerman Apache Nginx iis Cli 访问<br>
     项目主页：<a href="https://gitee.com/minicloud/candyphp" target="_blank" rel="nofollow">https://gitee.com/minicloud/candyphp</a><br>
     项目文档：<a href="https://gitee.com/minicloud/candyphp" target="_blank" rel="nofollow">https://gitee.com/minicloud/candyphp</a>
