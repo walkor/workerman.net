@@ -5,7 +5,7 @@
 			什么是Workerman
 		</h2>
 		<p class="f14">
-			Workerman是一款<strong class="c4">开源</strong><strong class="c2">高性能异步</strong><strong class="c3">PHP socket即时通讯框架</strong>。支持高并发，超高稳定性，被广泛的用于手机app、移动通讯，微信小程序，手游服务端、网络游戏、PHP聊天室、硬件通讯、智能家居、车联网、物联网等领域的开发。
+			Workerman是一款<strong class="c4">开源</strong><strong class="c2">高性能异步</strong><strong class="c3">PHP socket框架</strong>。支持高并发，超高稳定性，被广泛的用于手机app、移动通讯，微信小程序，手游服务端、网络游戏、PHP聊天室、硬件通讯、智能家居、车联网、物联网等领域的开发。
 			支持TCP长连接，支持Websocket、HTTP等协议，支持自定义协议。拥有异步Mysql、异步Redis、异步Http、MQTT物联网客户端、异步消息队列等众多高性能组件。<a class="btn" href="/workerman">查看更多 »</a>
 		</p>
 		<div class="row clearfix">
@@ -124,6 +124,19 @@
 				</p>
 			</div>
 		</div>-->
+		
+		<div class="media">
+			 <a href="/doc/webman" class="pull-left"><img src="/img/webman.png" class="media-object" alt="PHP http框架"/></a>
+			<div class="media-body">
+				<h4 class="media-heading">
+					<a href="/workerman-chat">webman-高性能http服务框架</a>
+				</h4>
+				<p>webman是一款基于workerman开发的http服务框架，用于开发web站点或者http接口。支持路由、中间件、自动注入、多应用、自定义进程、无需更改直接兼容现有composer项目组件等诸多特性。具有学习成本低、简单易用、超高性能、超高稳定性等特点。
+				<br><a class="btn" href="/doc/webman">手册 »</a>
+				<a class="btn" target="_blank" href="https://github.com/walkor/webman" rel="nofollow">项目地址 »</a>
+				</p>
+			</div>
+		</div>
 		
 		<div class="media">
 			 <a href="/workerman-chat" class="pull-left"><img src="/img/workerman-chat.png" class="media-object" alt="PHP聊天室"/></a>
