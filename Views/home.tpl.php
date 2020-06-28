@@ -129,7 +129,7 @@
 			 <a href="/doc/webman" class="pull-left"><img src="/img/webman.png" class="media-object" alt="PHP http框架"/></a>
 			<div class="media-body">
 				<h4 class="media-heading">
-					<a href="/workerman-chat">webman-高性能http服务框架</a>
+					<a href="/doc/webman">webman-高性能http服务框架</a>
 				</h4>
 				<p>webman是一款基于workerman开发的http服务框架，用于开发web站点或者http接口。支持路由、中间件、自动注入、多应用、自定义进程、无需更改直接兼容现有composer项目组件等诸多特性。具有学习成本低、简单易用、超高性能、超高稳定性等特点。
 				<br><a class="btn" href="/doc/webman">手册 »</a>
