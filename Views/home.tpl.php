@@ -95,7 +95,7 @@
 				<h4 class="media-heading">
 					<a target="_blank" href="https://www.popoim.cn/?wm_home">WebIM H5网页聊天源码-泡泡IM</a> <font style="color:red;font-size:13px">推荐</font>
 				</h4>
-				<p>泡泡IM一款功能强大的WebIM源码，支持H5网页聊天，支持通讯录、群聊、私聊、表情、传图、传文件、离线消息、历史消息记录等功能。支持万人在线。<br>
+				<p>泡泡IM一款功能强大的WebIM源码，支持H5网页聊天，支持通讯录、群聊、私聊、表情、传图、传文件、离线消息、历史消息记录等功能。<br>
 				<a class="btn" target="_blank" href="https://www.popoim.cn/?wm_home" rel="nofollow">WebIM H5网页聊天源码»</a>
 				</p>
 			</div>
