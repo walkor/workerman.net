@@ -464,6 +464,10 @@ echo $donate_list;
 			最近更新
 		</h4>
 		<ul>
+			
+			<li>
+				<a href="https://www.workerman.net/doc/webman" rel="nofollow">2020-06-28 超高性能http框架webman发布</a>
+			</li>
 			<li>
 				<a href="http://www.workerman.net/last_update" rel="nofollow">2020-03-13 发布workerman4.x</a>
 			</li>
