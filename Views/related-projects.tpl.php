@@ -35,6 +35,12 @@
     项目文档：<a href="https://github.com/RayP2P/php-signaler/blob/master/README_CN.md" target="_blank" rel="nofollow">https://github.com/RayP2P/php-signaler/blob/master/README_CN.md</a>
 <hr>
 
+<h3>php-signaler</h3>
+    php-log-replication 是一个基于 Workerman 的 分布式日志复制工具，类似于 Mysql 的 Binlog 同步模式<br>
+    项目主页：<a href="https://github.com/linkec/php-log-replication" target="_blank" rel="nofollow">https://github.com/linkec/php-log-replication</a><br>
+    项目文档：<a href="https://github.com/linkec/php-log-replication" target="_blank" rel="nofollow">https://github.com/linkec/php-log-replication</a>
+<hr>
+
 <h3>EZNAT</h3>
     基于workerman开发的内网穿透，史上最简单的内网穿透软件，部署简单，web界面管理，使用简单，传输稳定。<br>
     项目主页：<a href="https://gitee.com/FYDEV/eznat_server" target="_blank" rel="nofollow">https://gitee.com/FYDEV/eznat_server</a><br>
