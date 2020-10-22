@@ -39,6 +39,21 @@ $check_func_map = array(
     "stream_socket_server",
     "stream_socket_client",
     "pcntl_signal_dispatch",
+    "pcntl_signal",
+    "pcntl_alarm",
+    "pcntl_fork",
+    "posix_getuid",
+    "posix_getpwuid",
+    "posix_kill",
+    "posix_setsid",
+    "posix_getpid",
+    "posix_getpwnam",
+    "posix_getgrnam",
+    "posix_getgid",
+    "posix_setgid",
+    "posix_initgroups",
+    "posix_setuid",
+    "posix_isatty",
 );
 // 获取php.ini中设置的禁用函数
 if($disable_func_string = ini_get("disable_functions"))
