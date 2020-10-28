@@ -27,9 +27,9 @@
 			<div class="caption">
 				<h3>Workerman支持的特性</h3>
 				<ol>
-					<li>纯PHP开发，多进程支持，支持php7，支持hhvm</li>
-					<li>支持TCP/UDP，单机可支持数百万以上TCP长连接</li>
-					<li>支持分布式部署，集群能支持数百万甚至更高的并发TCP连接</li>
+					<li>纯PHP开发，多进程支持，支持php8</li>
+					<li>支持TCP/UDP，单机可支持十万TCP长连接</li>
+					<li>支持分布式部署，集群能支持百万甚至更高的并发TCP连接</li>
 					<li>支持libevent事件触发网络库</li>
 					<li>支持热更新及服务器平滑重启</li>
 					<li>拥有异步Mysql、Redis、Dns等众多高性能组件</li>
