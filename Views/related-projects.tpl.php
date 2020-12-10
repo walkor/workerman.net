@@ -68,6 +68,12 @@
     项目文档：<a href="http://zqphp.zhqing.com" target="_blank" rel="nofollow">http://zqphp.zhqing.com</a>
 <hr>
 
+<h3>noya</h3>
+    webman内容管理系统后台demo示例。登录账号密码 admin 123456。<br>
+    项目主页：<a href="https://gitee.com/songzhenghe/noya" target="_blank" rel="nofollow">https://gitee.com/songzhenghe/noya</a><br>
+    项目文档：<a href="https://gitee.com/songzhenghe/noya" target="_blank" rel="nofollow">https://gitee.com/songzhenghe/noya</a>
+<hr>
+
 <h3>php_desktop</h3>
     像开发网站一样开发桌面应用软件<br>
     项目主页：<a href="https://github.com/lobtao/php_desktop" target="_blank" rel="nofollow">https://github.com/lobtao/php_desktop</a><br>
