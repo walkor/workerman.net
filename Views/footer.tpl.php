@@ -31,7 +31,7 @@
 						</ul>
 						<div class="center">
 						<p class="gray">
-							<a href="http://www.miitbeian.gov.cn/" rel="nofollow" target="_blank">蜀ICP备17016206号-2</a>
+							<a href="https://beian.miit.gov.cn" rel="nofollow" target="_blank">蜀ICP备17016206号-2</a>
 						</p>
 						<p class="gray">版权所有 成都风禾网络科技有限公司</p>
 						<br>
