@@ -93,7 +93,7 @@
 			 <a href="https://www.popoim.cn/?wm_home" class="pull-left" target="_blank"><img src="/img/popoim.png" class="media-object" alt="IM源码 仿微信"/></a>
 			<div class="media-body">
 				<h4 class="media-heading">
-					<a target="_blank" href="https://www.popoim.cn/?wm_home">WebIM H5网页聊天源码-泡泡IM</a> <font style="color:red;font-size:13px">推荐</font>
+					<a target="_blank" href="https://www.popoim.cn/?wm_home">WebIM H5网页聊天源码-泡泡IM</a> <font style="color:red;font-size:13px">商业</font>
 				</h4>
 				<p>泡泡IM一款功能强大的WebIM源码，支持H5网页聊天，支持通讯录、群聊、私聊、表情、传图、传文件、离线消息、历史消息记录等功能。<br>
 				<a class="btn" target="_blank" href="https://www.popoim.cn/?wm_home" rel="nofollow">WebIM H5网页聊天源码»</a>
@@ -102,13 +102,13 @@
 		</div>
 		
 		<div class="media">
-			 <a href="https://www.wolive.cc/" class="pull-left" target="_blank"><img src="/img/wolive.png" class="media-object" alt="在线客服系统"/></a>
+			 <a href="https://www.99kf.com/" class="pull-left" target="_blank"><img src="/img/99kf.png" class="media-object" alt="在线客服系统源码"/></a>
 			<div class="media-body">
 				<h4 class="media-heading">
-					<a target="_blank" href="https://www.wolive.cc">WoLive开源客服系统源码</a> <font style="color:red;font-size:13px">推荐</font>
+					<a target="_blank" href="https://www.99kf.com/">客服系统源码</a> <font style="color:red;font-size:13px">商业</font>
 				</h4>
-				<p>Workerman开发的客服系统，任何站点引入一段js即可接入，接入成本极低。支持web站点和移动站点，支持表情、传图、传文件、粘贴截图、离线消息、客服管理、留言、历史记录、会话统计，支持多站点。<br>
-				<a class="btn" target="_blank" href="https://www.wolive.cc/" >开源客服系统源码</a>
+				<p>99客服是基于Workerman开发的客服系统源码，任何站点引入一段js即可接入，接入成本极低。客服系统源码未加密，可以二开。支持web站点和移动站点，支持表情、传图、传文件、粘贴截图、离线消息、客服管理、留言、历史记录、会话统计，支持多站点。<br>
+				<a class="btn" target="_blank" href="https://www.99kf.com/" >客服系统源码</a>
 				</p>
 			</div>
 		</div>
