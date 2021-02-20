@@ -68,6 +68,12 @@
     项目文档：<a href="http://zqphp.zhqing.com" target="_blank" rel="nofollow">http://zqphp.zhqing.com</a>
 <hr>
 
+<h3>flysocket</h3>
+    lysocket是一款基于GatewayWorker的长连接MVC开发框架,开发初衷是为了实现客户端（包括浏览器web，APP，小程序，物联网设备）与服务端通信使用统一的socket长连接接口,开发一套接口用于多种客户端，服务器与客户端保持长连接，解决传统http模式每次连接都要初始化浪费系统资源的问题。<br>
+    项目主页：<a href="https://github.com/feixuekeji/flysocket" target="_blank" rel="nofollow">https://github.com/feixuekeji/flysocket</a><br>
+    项目文档：<a href="https://www.kancloud.cn/xiongfeifei/ver1" target="_blank" rel="nofollow">https://www.kancloud.cn/xiongfeifei/ver1</a>
+<hr>
+
 <h3>noya</h3>
     webman内容管理系统后台demo示例。登录账号密码 admin 123456。<br>
     项目主页：<a href="https://gitee.com/songzhenghe/noya" target="_blank" rel="nofollow">https://gitee.com/songzhenghe/noya</a><br>
