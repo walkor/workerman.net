@@ -26,8 +26,7 @@
 						<li><a href="/last_update">最近更新</a></li>
 						<li><a href="/donate">捐赠</a></li>
 						<li><a href="https://www.popoim.cn" target="_blank">php即时通讯源码</a></li>
-						<li><a href="https://www.wolive.cc" target="_blank">客服系统源码</a></li>
-						<li><a href="https://www.99kf.com" target="_blank">99客服</a></li>
+						<li><a href="https://www.99kf.com" target="_blank">客服系统源码</a></li>
 						</ul>
 						<div class="center">
 						<p class="gray">
