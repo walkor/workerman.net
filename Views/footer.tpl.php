@@ -25,6 +25,7 @@
 						<li><a href="/bench">压力测试</a></li>
 						<li><a href="/last_update">最近更新</a></li>
 						<li><a href="/donate">捐赠</a></li>
+						<li><a href="https://www.wolive.cc" target="_blank">客服系统代码</a></li>
 						<li><a href="https://www.popoim.com" target="_blank">手机app聊天源码</a></li>
 						<li><a href="https://www.99kf.com" target="_blank">客服系统源码</a></li>
 						</ul>
