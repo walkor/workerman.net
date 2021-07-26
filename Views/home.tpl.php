@@ -93,10 +93,10 @@
 			 <a href="https://www.popoim.com/?wm_home" class="pull-left" target="_blank"><img src="/img/popoim.png" class="media-object" alt="IM源码 仿微信"/></a>
 			<div class="media-body">
 				<h4 class="media-heading">
-					<a target="_blank" href="https://www.popoim.com/?wm_home">WebIM H5网页聊天源码-泡泡IM</a> <font style="color:red;font-size:13px">商业</font>
+					<a target="_blank" href="https://www.popoim.com/?wm_home">手机APP聊天源码-泡泡IM</a> <font style="color:red;font-size:13px">商业</font>
 				</h4>
-				<p>泡泡IM一款功能强大的WebIM源码，支持手机H5网页聊天，可打包成app或者桌面软件。支持通讯录、群聊、私聊、表情、传图、传文件、离线消息、历史消息记录等功能。<br>
-				<a class="btn" target="_blank" href="https://www.popoim.com/?wm_home" rel="nofollow">WebIM H5网页聊天源码»</a>
+				<p>泡泡IM一款功能强大的手机APP聊天源码，支持手机H5网页聊天，微信小程序聊天，可打包成app或者桌面软件。支持通讯录、群聊、私聊、表情、传图、传文件、离线消息、历史消息记录等功能。<br>
+				<a class="btn" target="_blank" href="https://www.popoim.com/?wm_home" rel="nofollow">APP聊天源码»</a>
 				</p>
 			</div>
 		</div>
