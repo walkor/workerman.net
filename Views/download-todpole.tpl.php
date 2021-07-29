@@ -3,7 +3,7 @@
 				<a href="/download">下载</a> <span class="divider"></span>
 		</li>
 		<li class="active">
-				PHP小蝌蚪实时交互游戏
+				PHP小蝌蚪聊天室
 		</li>
 </ul>
 <div class="row clearfix">
@@ -15,7 +15,7 @@
 			<a class="list-group-item" href="/download/chat">聊天室框架 下载</a>
 			<a class="list-group-item" href="/download/statistics">统计监控系统 下载</a>
 			<div class="list-group-item active">
-				PHP小蝌蚪实时交互游戏 下载
+				PHP小蝌蚪聊天室 下载
 			</div>
 			<a class="list-group-item" href="/download/flappybird">flappy bird 多人在线版 下载</a>
 		</div>
@@ -24,9 +24,9 @@
 	<div class="col-md-9 column">
 		<div class="jumbotron">
 			<h3>
-				PHP小蝌蚪实时交互游戏
+				PHP小蝌蚪聊天室
 			</h3>
-				workerman-todpole是一款PHP+HTML5+WebSocket开发的即时交互小游戏，玩家们可以实时互动、即时聊天。
+				workerman-todpole是一款PHP+HTML5+WebSocket开发的即时聊天室，玩家们可以实时互动、即时聊天。
 				<a class="btn"  href="/workerman-todpole">安装教程&&详细介绍 »</a>
 				<p></p><table><tbody><tr><td><iframe src="https://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-todpole&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="https://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-todpole&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table>
 				<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-todpole" target="_blank" rel="nofollow"><b>Fork on Github</b></a>&nbsp;
@@ -116,6 +116,6 @@
 				</tr>
 		</tbody>
 		</table>
-		<a class="btn"  href="/workerman-todpole">PHP小蝌蚪游戏安装教程及详细介绍 »</a>
+		<a class="btn"  href="/workerman-todpole">PHP小蝌蚪聊天室安装教程及详细介绍 »</a>
 	</div>
 </div>
