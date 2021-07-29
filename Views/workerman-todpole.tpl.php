@@ -3,7 +3,7 @@
 		<a href="/applications">相关应用</a> <span class="divider"></span>
 	</li>
 	<li class="active">
-		PHP小蝌蚪实时交互游戏
+		PHP小蝌蚪聊天室
 	</li>
 </ul>
 <div class="row clearfix">
@@ -12,14 +12,14 @@
 				workerman-todpole
 			</h2>
 			<p class="f16">
-				workerman-todpole采用PHP(workerman框架)+HTML5技术开发，是一款以workerman作为应用服务器，前端采用HTML5+WebSocket开发的小蝌蚪即时交互游戏。
+				workerman-todpole采用PHP(workerman框架)+HTML5技术开发，是一款以workerman作为应用服务器，前端采用HTML5+WebSocket开发的小蝌蚪即时交互聊天室。
 				游戏交互很简单，点击屏幕小蝌蚪可以自由游动，其它玩家可以看到周围玩家的游动状态，并且可以即时聊天。
 			</p>
 			<p><a href="http://workerman.net:8383" target="_blank"><h4>线上DEMO效果点击这里</h4></a></p>
 			<h3>下载</h3>
 			<div class="thumbnail">
 				<div class="caption-download">
-					<h4>下载PHP小蝌蚪游戏</h4>
+					<h4>下载PHP小蝌蚪聊天室</h4>
 					    <p></p><table><tbody><tr><td><iframe src="https://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-todpole&amp;type=watch&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td><td><iframe src="https://ghbtns.com/github-btn.html?user=walkor&amp;repo=workerman-todpole&amp;type=fork&amp;count=true&amp;size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:150px; height: 30px;" allowtransparency="true"></iframe></td></tr></tbody></table><p></p>
     					<a class="btn btn-default btn-large" href="https://github.com/walkor/workerman-todpole" target="_blank" rel="nofollow"><b>Fork on Github</b></a>&nbsp;
     					<a class="btn btn-default btn-large" href="/download/todpolezip"><b>下载ZIP压缩文件</b></a> 
@@ -55,7 +55,7 @@
 				<a class="list-group-item" href="/workerman-chat">聊天室框架</a>
 				<a class="list-group-item" href="/workerman-statistics">统计监控系统</a>
 				<div class="list-group-item active">
-					PHP小蝌蚪实时交互游戏
+					PHP小蝌蚪聊天室
 				</div>
 				<a class="list-group-item" href="/workerman-flappybird">flappy bird 多人在线版游戏</a>
 			</div>
@@ -98,5 +98,10 @@
 			<p>小蝌蚪游戏交互比较简单，只包含了游动和聊天功能，开发者可以基于这个程序开发出自己的更为丰富的游戏应用。</p>
 			<p>游戏原型来自<a href="https://github.com/danielmahal/Rumpetroll">rumpetroll.com</a>，后端代码由原来的ruby改成PHP。整个游戏后台包括Web服务全部由workerman来支撑。</p>
 			<p><a href="http://kedou.workerman.net" target="_blank">小蝌蚪游戏DEMO点击这里</a></p>
+			
+			<br><br>
+			<h3>相关项目：</h3>
+			<a href="https://www.popoim.com">APP聊天源码</a>
+			<br>
 		</div>
 	</div>
