@@ -95,7 +95,7 @@
 			<h4>4、浏览器访问 http://ip:8383 （如果无法访问请检查服务器防火墙）</h4>
 			<br>
 			<h3>说明：</h3>
-			<p>小蝌蚪游戏交互比较简单，只包含了游动和聊天功能，开发者可以基于这个程序开发出自己的更为丰富的游戏应用。</p>
+			<p>小蝌蚪聊天室交互比较简单，只包含了游动和聊天功能，开发者可以基于这个程序开发出自己的更为丰富的游戏应用。</p>
 			<p>游戏原型来自<a href="https://github.com/danielmahal/Rumpetroll">rumpetroll.com</a>，后端代码由原来的ruby改成PHP。整个游戏后台包括Web服务全部由workerman来支撑。</p>
 			<p><a href="http://kedou.workerman.net" target="_blank">小蝌蚪游戏DEMO点击这里</a></p>
 			
