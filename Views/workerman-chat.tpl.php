@@ -96,10 +96,10 @@
 			<table>
 			    <tr>
 	                        <td>
-				    <a href="https://www.popoim.com" target="_blank"><img width="300px" src="https://www.popoim.com/images/chat_list.jpg"></a>
+				    <a href="https://www.popoim.com" target="_blank"><img style="margin:20px" width="300px" src="https://www.popoim.com/images/chat_list.jpg"></a>
 				 </td>
 				<td>
-				    <a href="https://www.popoim.com" target="_blank"><img width="300px" src="https://www.popoim.com/images/chat_voice_file.jpg"></a>
+				    <a href="https://www.popoim.com" target="_blank"><img style="margin:20px"  width="300px" src="https://www.popoim.com/images/chat_voice_file.jpg"></a>
 				</td>
 			    </tr>
 	                </table>
