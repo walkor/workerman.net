@@ -33,7 +33,7 @@
 			</div>
 		</div> -->
 		<div class="media"> 
-			 <a href="http://workerman.net/gatewaydoc/" class="pull-left" target="_blank" ><img src="/img/gatewayworker-big.png" class="media-object" /></a>
+			 <a href="http://doc2.workerman.net/" class="pull-left" target="_blank" ><img src="/img/gatewayworker-big.png" class="media-object" /></a>
 			<div class="media-body">
 			<div class="thumbnail">
 				<div class="caption-download">
