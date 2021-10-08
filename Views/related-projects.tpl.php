@@ -47,6 +47,12 @@
     项目文档：<a href="https://gitee.com/FYDEV/eznat/wikis/pages" target="_blank" rel="nofollow">https://gitee.com/FYDEV/eznat/wikis/pages</a>
 <hr>
 
+<h3>Workerman 极简内网穿透</h3>
+    服务端和客户端加起来131行，支持80端口访问，不用推代码到服务器上，可用于本地测试。<br>
+    项目主页：<a href="https://github.com/jc91715/workerman-chuantou" target="_blank" rel="nofollow">https://github.com/jc91715/workerman-chuantou</a><br>
+    项目文档：<a href="https://github.com/jc91715/workerman-chuantou" target="_blank" rel="nofollow">https://github.com/jc91715/workerman-chuantou</a>
+<hr>
+
 <h3>PHPCreeper（爬山虎）</h3>
     基于workerman全新一代多进程异步事件驱动PHP爬虫引擎<br>
     主页地址：<a href="http://www.phpcreeper.com" target="_blank" rel="nofollow">http://www.phpcreeper.com</a><br>
@@ -184,6 +190,11 @@
     Dynamic crontab for php, power by workerman<br>
     项目主页：<a href="https://github.com/shuiguang/workerman-crontab" target="_blank" rel="nofollow">https://github.com/shuiguang/workerman-crontab</a><br>
     项目文档：<a href="https://github.com/shuiguang/workerman-crontab" target="_blank" rel="nofollow">https://github.com/shuiguang/workerman-crontab</a>
+<hr>
+<h3>cronshow</h3>
+    基于workerman定时任务控制台,Linux 定时任务控制，比linux自带的cronjob增加秒级功能和web监控。<br>
+    项目主页：<a href="https://github.com/showx/cronshow" target="_blank" rel="nofollow">https://github.com/showx/cronshow</a><br>
+    项目文档：<a href="https://github.com/showx/cronshow" target="_blank" rel="nofollow">https://github.com/showx/cronshow</a>
 <hr>
 <h3>Workerman-ThinkPHP-Redis</h3>
     workerman-chat+ThinkPHP+Redis<br>
